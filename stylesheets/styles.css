@@ -32,6 +32,10 @@ h3, h4, h5, h6 {
   color:#494949;
 }
 
+h4, h5, h6 {
+	margin: 0px;
+}
+
 a {
   color:#39c;
   font-weight:400;
