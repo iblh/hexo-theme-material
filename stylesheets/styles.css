@@ -32,14 +32,14 @@ h3, h4, h5, h6 {
   color:#494949;
 }
 
-h4, h5, h6 {
-	margin: 0px;
-}
-
 a {
   color:#39c;
   font-weight:400;
   text-decoration:none;
+}
+
+a:hover {
+  color:#069;
 }
 
 a small {
@@ -47,6 +47,10 @@ a small {
   color:#777;
   margin-top:-0.6em;
   display:block;
+}
+
+a:hover small {
+  color:#777;
 }
 
 .wrapper {
@@ -62,7 +66,7 @@ blockquote {
 }
 
 code, pre {
-  font-family:Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal;
+  font-family:Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal, monospace;
   color:#333;
   font-size:12px;
 }
@@ -105,7 +109,7 @@ header {
   position:fixed;
 }
 
-header ul {
+header ul, div.download ul {
   list-style:none;
   height:40px;
   
@@ -125,21 +129,45 @@ header ul {
   width:270px;
 }
 
-header li {
+header li, div.download li{
   width:89px;
   float:left;
   border-right:1px solid #d2d2d2;
   height:40px;
 }
 
-header ul a {
+header li:first-child a, div.download li:first-child a {
+  border-radius:5px 0 0 5px;
+}
+
+header li:last-child a, div.download li:last-child {
+  border-radius:0 5px 5px 0;
+}
+
+header ul a, div.download ul a {
   line-height:1;
   font-size:11px;
   color:#999;
   display:block;
   text-align:center;
   padding-top:6px;
-  height:40px;
+  height:34px;
+}
+
+header ul a:hover, div.download ul a:hover {
+  color:#999;
+  background: -moz-linear-gradient(top, #fff 0%, #ddd 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fff), color-stop(100%,#ddd));
+  background: -webkit-linear-gradient(top, #fff 0%,#ddd 100%);
+  background: -o-linear-gradient(top, #fff 0%,#ddd 100%);
+  background: -ms-linear-gradient(top, #fff 0%,#ddd 100%);
+  background: linear-gradient(top, #fff 0%,#ddd 100%);
+}
+
+header ul a:active, div.download ul a:active {
+  -webkit-box-shadow: inset 0px 2px 2px 0px #ddd;
+  -moz-box-shadow: inset 0px 2px 2px 0px #ddd;
+  box-shadow: inset 0px 2px 2px 0px #ddd;
 }
 
 strong {
@@ -147,17 +175,17 @@ strong {
   font-weight:700;
 }
 
-header ul li + li {
+header ul li + li, div.download ul li + li {
   width:88px;
   border-left:1px solid #fff;
 }
 
-header ul li + li + li {
+header ul li + li + li, div.download ul li + li + li {
   border-right:none;
   width:89px;
 }
 
-header ul a strong {
+header ul a strong, div.download ul a strong {
   font-size:14px;
   display:block;
   color:#222;
@@ -257,4 +285,3 @@ footer {
     color:#444;
   }
 }
-
