@@ -15,8 +15,9 @@
     <body>
         <div class="wrapper">
             <header>
-                <h1>iocast</h1>
-                <p class="view"><a href="/projects.html">Projects <small>by iocast</small></a></p>
+                <h1>iocast <a href="/"><small>iocast.github.io</small></a></h1>
+                
+                <p class="view"><a href="/projects/">Projects <small>by iocast</small></a></p>
                 <p class="view"><a href="/posts.html">Posts</a></p>
                 
                 {% if page.repository_url %}
@@ -41,6 +42,12 @@
                 {% endif %}
                 
                 
+                <h2>Find me on ...</h2>
+                <p class"view"><a href="http://github.com/iocast">GitHub</a><br/>
+                <a href="http://bitbucket.org/iocast">BitBucket</a><br/>
+                <a href="http://twitter.com/MichelOtt2">Twitter</a></p>
+                
+                
                 
                 
             </header>
@@ -48,7 +55,6 @@
                 {{ content }}
             </section>
             <footer>
-                <p>This project is maintained by <a href="http://github.com/orderedlist">Steve Smith</a></p>
                 <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
             </footer>
         </div>
