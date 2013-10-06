@@ -4,22 +4,22 @@ layout: nil
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
- <title>Moz Morris</title>
- <link href="http://mozmorris.com/atom.xml" rel="self"/>
- <link href="http://mozmorris.com/"/>
+ <title>Corey Donohoe - atmos.org</title>
+ <link href="http://www.atmos.org/atom.xml" rel="self"/>
+ <link href="http://www.atmos.org"/>
  <updated>{{ site.time | date_to_xmlschema }}</updated>
- <id>http://mozmorris.com/</id>
+ <id>http://www.atmos.org/</id>
  <author>
-   <name>Moz Morris</name>
-   <email>moz@earthview.co.uk</email>
+   <name>Corey Donohoe</name>
+   <email>atmos@atmos.org</email>
  </author>
 
  {% for post in site.posts %}
  <entry>
    <title>{{ post.title }}</title>
-   <link href="http://mozmorris.com{{ post.url }}"/>
+   <link href="http://www.atmos.org{{ post.url }}"/>
    <updated>{{ post.date | date_to_xmlschema }}</updated>
-   <id>http://mozmorris.com{{ post.id }}</id>
+   <id>http://www.atmos.org{{ post.id }}</id>
    <content type="html">{{ post.content | xml_escape }}</content>
  </entry>
  {% endfor %}

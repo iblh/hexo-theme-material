@@ -1,0 +1,12 @@
+---
+layout: default
+title: atmos.org ~ Corey Donohoe on the Internet
+---
+
+<h1>Random Things I Typed Out</h1>
+<hr/>
+
+{% for post in site.posts %}
+  <small>{{ post.date | date_to_string }}</small>
+  <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+{% endfor %}

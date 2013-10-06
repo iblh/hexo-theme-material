@@ -1,0 +1,84 @@
+---
+layout: default
+title: Cinderella ~ managing all your OSX development needs
+gem_url: http://rubygems.org/gems/cinderella
+repository_url: https://github.com/atmos/cinderella/
+issue_url: https://github.com/atmos/cinderella/issues/new
+---
+<h1>Cinderella for Mac OSX</h1>
+<hr/>
+
+<h2><strong>Use <a href="https://github.com/boxen/boxen">boxen</a> instead of this project.</strong></h2>
+
+<hr/>
+
+
+<h2>What It Gives You</h2>
+
+<div class="half-width">
+  <h4>Languages</h4>
+  <ul>
+    <li><a href="http://www.ruby-lang.org">ruby</a> (1.9.3) via <a href="https://github.com/sstephenson/rbenv">rbenv</a></li>
+    <li><a href="http://python.org">python</a> (2.7.2) with <a href="http://pypi.python.org/pypi/pip">pip</a></li>
+    <li><a href="http://nodejs.org">node.js</a> (0.6.8) with <a href="http://github.com/isaacs/npm">npm</a></li>
+    <li><a href="http://www.erlang.org/">erlang</a> (R15)</li>
+  </ul>
+</div>
+
+<div class="half-width">
+  <h4>Databases</h4>
+  <ul>
+    <li><a href="http://dev.mysql.com">MySQL</a></li>
+    <li><a href="http://postgresql.org">PostgreSQL</a></li>
+    <li><a href="http://code.google.com/p/redis/">Redis</a></li>
+    <li><a href="http://basho.com/products/riak-overview/">Riak</a></li>
+    <li><a href="http://www.elasticsearch.org/">Elastic Search</a></li>
+    <li><a href="http://memcached.org/">Memcached</a></li>
+    <li><a href="http://www.mongodb.org">mongoDB</a></li>
+  </ul>
+</div>
+
+<div class="clear-fix"></div>
+
+<h2>Getting Started</h2>
+<p>
+  Cinderella is a fully managed development environment for open source
+  hacking on Mac OSX.  It's powered by
+  <a href="http://mxcl.github.com/homebrew/" target="_none">homebrew</a> and
+  <a href="http://wiki.opscode.com/display/chef/Home" target="_none">chef</a>.
+  You only need
+  <a href="http://developer.apple.com/technologies/xcode.html">Xcode 4.3 Standalone CLI Tools</a>.
+  to get started.
+</p>
+
+<p>
+  Cinderella builds everything up in ~/Developer by default.  It won't stomp on
+  any of your current installations so you don't have to commit your entire
+  machine immediately.  It's simple to rollback if you really want to.
+</p>
+
+<h2>Install</h2>
+<p>
+  Open up a terminal and run the following commands.
+</p>
+<pre class="terminal">% sudo /usr/bin/gem install cinderella --no-rdoc --no-ri
+% /usr/bin/cinderella
+</pre>
+
+<p>
+  Cinderella can manage itself from here.  Open up a new shell and you're
+  ready to hack.
+</p>
+
+<h2>Uninstall</h2>
+<p>If for some reason you don't find cinderella to be amazing then you can easily uninstall it.  </p>
+<pre class="terminal">% cinderella --uninstall </pre>
+
+<h2>Philosophy</h2>
+<p>This project resulted from helping countless designers set things up. Watching more and more people stumble through something that should be simple enough. Here's a few of the things that influenced how cinderella came about.</p>
+<ul>
+  <li>Setup should require sourcing 1 file.</li>
+  <li>Get a designer up and running in under an hour</li>
+  <li>Handle local development needs where VMs aren't required</li>
+  <li>Your development environment is disposable and reproducible.</li>
+</ul>
