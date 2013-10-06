@@ -1,54 +1,57 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title></title>
-
-    <link rel="stylesheet" href="https://github.com/themes/minimal/stylesheets/styles.css">
-    <script src="https://github.com/themes/minimal/javascripts/scale.fix.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1><a href="/">iocast.github.io</a></h1>
-
-        <p class="view"><a href="/projects.html">Open Source Projects<small>Code that Might be Useful to You</small></a></p>
-        <p class="view"><a href="/speaking.html">Talks I've Given<small>On Technologies and Ideas</small></a></p>
-
-
-        <h3>Follow Me On</h3>
-        <p class="view"><a href="https://github.com/atmos" target="tab">GitHub<small>If coding is your thing</small></a></li>
-        <p class="view"><a href="https://twitter.com/atmos" target="tab">Twitter<small>If you tweet</small></a></li>
-        <p class="view"><a href="http://tumblr.atmos.org" target="tab">Tumblr<small>If you're ADD</small></a></li>
-        <p class="view"><a href="http://flickr.com/photos/atmos" target="tab">Flickr<small>If you like photos</small></a></li>
-
-      </header>
-      <section id="main">
-        {{ content }}
-      </section>
-      <footer>
-        <!-- <p>This is the site of Corey Donohoe</p> -->
-        <p><small>Hosted on <a href="http://pages.github.com">GitHub Pages</a> &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
-    </div>
-
-    <script type="text/javascript">
-      var _gauges = _gauges || [];
-      (function() {
-        var t   = document.createElement('script');
-        t.type  = 'text/javascript';
-        t.async = true;
-        t.id    = 'gauges-tracker';
-        t.setAttribute('data-site-id', '4eb74c9f613f5d3567000004');
-        t.src = '//secure.gaug.es/track.js';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(t, s);
-      })();
-    </script>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script>
-    <!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
-  </body>
+    <head>
+        <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="chrome=1">
+                <title>{{ page.title }}</title>
+                
+                <link rel="stylesheet" href="stylesheets/styles.css">
+                    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+                        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+                            <!--[if lt IE 9]>
+                             <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+                             <![endif]-->
+                            </head>
+    <body>
+        <div class="wrapper">
+            <header>
+                <h1>iocast</h1>
+                <p class="view"><a href="/projects.html">Projects <small>by iocast</small></a></p>
+                <p class="view"><a href="/posts.html">Posts</a></p>
+                
+                {% if page.repository_url %}
+                <h3>Project Info</h3>
+                <ul>
+                    {% if page.zip_url %}
+                    <li><a href="{{ page.zip_url }}">Download <strong>ZIP File</strong></a></li>
+                    {% endif %}
+                    {% if page.tar_url %}
+                    <li><a href="{{ page.tar_url }}">Download <strong>TAR Ball</strong></a></li>
+                    {% endif %}
+                    {% if page.gem_url %}
+                    <li><a href="{{ page.gem_url }}">Download <strong>Rubygem</strong></a></li>
+                    {% endif %}
+                    {% if page.issue_url %}
+                    <li><a href="{{ page.issue_url }}">Report<strong>An Issue</strong></a></li>
+                    {% endif %}
+                    {% if page.repository_url %}
+                    <li><a href="{{ page.repository_url }}">Fork On <strong>GitHub</strong></a></li>
+                    {% endif %}
+                </ul>
+                {% endif %}
+                
+                
+                
+                
+            </header>
+            <section>
+                {{ content }}
+            </section>
+            <footer>
+                <p>This project is maintained by <a href="http://github.com/orderedlist">Steve Smith</a></p>
+                <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+            </footer>
+        </div>
+        <script src="javascripts/scale.fix.js"></script>
+    </body>
 </html>
