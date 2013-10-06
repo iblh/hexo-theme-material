@@ -1,0 +1,52 @@
+---
+layout: default
+title: iocast ~ bottle-i18n
+zip_url: https://github.com/iocast/bottle-i18n/zipball/master
+issue_url: https://github.com/iocast/bottle-i18n/issues/new
+repository_url: http://github.com/iocast/bottle-i18n
+---
+
+<h1>bottle-i18n</h1>
+
+<p>The bottle-i18n plugin integrates the multilingual internationalization services <code>gettext</code> from Python with your Bottle application.</p>
+
+<p>Usage example:</p>
+{% highlight python %}
+#!/usr/bin/python
+
+import bottle
+from bottle.ext.i18n import I18NPlugin, I18NMiddleware, i18n_defaults
+
+i18n_defaults(bottle.SimpleTemplate, bottle.request)
+
+def get():
+app = bottle.Bottle()
+
+@app.route('/')
+def index():
+return bottle.template("<b>{{_('hello')}} I18N<b/>?")
+    
+    
+    sub_app = bottle.Bottle()
+    
+    @sub_app.route('/')
+    def sub():
+    return bottle.template("current language is {{lang()}}")
+    
+    
+    app.mount(app = sub_app , prefix = '/sub', skip = None)
+    
+    return I18NMiddleware(app, I18NPlugin(domain='messages', default='en', locale_dir='./locale'))
+    
+    
+    if __name__ == '__main__':
+    bottle.run(app=get(), host='localhost', port='8000', quiet=False, reloader=True)
+{% endhighlight %}
+    
+<p>Running the above example it automatically loads the default language <code>en</code> if in the URL the langauge code or the <code>HTTP_ACCEPT_LANGUAGE</code> sent from the browser is missing.</p>
+    
+<p>The URL structure is as follow
+{% highlight python %}
+http://localhost:8000/<language-code>/<route>
+{% endhighlight %}
+</p>

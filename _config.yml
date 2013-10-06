@@ -1,5 +1,5 @@
 destination: ./_site
-lsi:         false
+lsi:         true
 pygments:    true
 markdown:    rdiscount
 permalink:   date
