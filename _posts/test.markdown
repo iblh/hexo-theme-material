@@ -1,3 +1,16 @@
+---
+layout: post
+title: Simple Facebook Like Gate
+location: Southampton, England
+image: headers/sf_city_limits.jpg
+color: 994738
+---
+
+{{ page.title }}
+================
+
+
+
             <section id="featureserver">
                 <h2>FeatureServer</h2>
                 <p>is an implementation of a RESTful Geographic Feature Service using standard HTTP methods, you can fetch a representation of a feature or a collection of features, add new data to the service, or delete data from the service. Use it as an aggregator -- post your GeoRSS feeds to it, and then browse them using WFS. Use it as a translator: use the OGR DataSource to load a shapefile and open it in Google Earth. Currently it is under massive development.</p>
