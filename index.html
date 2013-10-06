@@ -5,7 +5,7 @@ title: Projects
 
 <p>index test</p>
 
-{% for project in paginator.projects %}
+{% for post in paginator.posts %}
 <article>
     {{ post.content | truncatewords: 60 }} <a href="{{ project.url }}">read more</a></p>
 </article>
