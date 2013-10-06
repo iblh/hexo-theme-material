@@ -50,3 +50,6 @@ xcuserdata/
 # build products
 *.build
 DerivedData/
+
+# Jekyll
+_site/
