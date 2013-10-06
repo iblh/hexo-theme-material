@@ -1,0 +1,272 @@
+/*------------------------------------*\
+    Imports
+\*------------------------------------*/
+
+@import "normalize";
+@import "h5bp";
+@import "syntax";
+
+
+/*------------------------------------*\
+    Typography
+\*------------------------------------*/
+
+html {
+    font: 20px/30px Georgia, Cambria, "Times New Roman", Times, serif;
+    position: relative;
+}
+
+body {
+    background-color: #f2f2f0;
+}
+
+a {
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+h1 {
+    line-height: 1em;
+}
+
+/* Hide text while TypeKit fonts load async */
+.wf-loading {
+    .main {
+        p,
+        ul li,
+        ol li,
+        h1,
+        h2,
+        h3,
+        h4 {
+            visibility: hidden;
+        }
+    }
+
+    nav a {
+        visibility: hidden;
+    }
+}
+
+.wf-active {
+    font-family: "calluna-sans-1", "calluna-sans-2";
+    font-weight: 400;
+
+    strong,
+    b {
+        font-weight: 700;
+    }
+}
+
+
+/*------------------------------------*\
+    Navigation
+\*------------------------------------*/
+
+nav {
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    z-index: 10;
+
+    ul {
+    background-color: #333332;
+    padding: 0;
+    margin: 0;
+
+    -webkit-transition: background-color .2s;
+       -moz-transition: background-color .2s;
+        -ms-transition: background-color .2s;
+         -o-transition: background-color .2s;
+            transition: background-color .2s;
+
+        &:hover {
+            background-color: rgba(51,51,50,0.5);
+        }
+
+        a {
+            color: #fff;
+            display: block;
+            line-height: 20px;
+            padding: 8px;
+
+            &:hover {
+               text-decoration: none;
+            }
+        }
+    }
+}
+
+
+/*------------------------------------*\
+    Banner Photography
+\*------------------------------------*/
+
+.image-wrapper {
+    max-height: 537px;
+    position: relative;
+
+    .image {
+        background-position: 50% 33%;
+        background-size: cover;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+}
+
+.scale img {
+    width: 100%;
+}
+
+/*------------------------------------*\
+    Layout
+\*------------------------------------*/
+
+.wrapper {
+    max-width: 680px;
+    margin: 0 auto 70px;
+}
+
+article {
+    margin-bottom: 50px;
+}
+
+.main {
+    color: #333332;
+    margin: 0 20px;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+
+    pre {
+        border: 1px solid #ddd;
+        padding: 0 .4em;
+
+    }
+
+    ul,
+    ol {
+        margin-left: 1.35em;
+        padding: 0;
+    }
+
+    code {
+        border: 1px solid #ddd;
+        line-height: 1.3em;
+        font-size: 85%;
+        padding: 0 0.2em;
+    }
+
+    pre code {
+        border: none;
+    }
+
+    pre.terminal {
+        border: 1px solid black;
+        background-color: #333;
+        color: white;
+    }
+
+    pre.terminal code {
+        background-color: #333;
+    }
+}
+
+pre code {
+    display: block;
+}
+
+pre,
+code {
+    overflow-x: auto;
+}
+
+
+.date {
+    border-bottom: 1px solid #dededc;
+
+    p {
+        margin-bottom: 12px;
+    }
+}
+
+.author {
+    border: solid #dededc;
+    border-width: 2px 0;
+    padding: 20px 0;
+    margin-bottom: 10px;
+
+    .clip {
+        float: left;
+        height: 75px;
+        margin-right: 20px;
+        overflow: hidden;
+        width: 75px;
+        -webkit-border-radius: 75px;
+           -moz-border-radius: 75px;
+                border-radius: 75px;
+    }
+
+    h3 {
+        font-size: 1em;
+        margin: 10px 0 0;
+    }
+
+    p {
+        font-size: 0.8em;
+        margin: 0;
+    }
+}
+
+.contact {
+    float: left;
+
+    &.right {
+        float: right;
+        text-align: right;
+    }
+
+    p {
+        font-size: 0.7em;
+        margin: 0;
+    }
+}
+
+
+/*------------------------------------*\
+    Media Queries
+\*------------------------------------*/
+
+@media only screen and (max-width: 780px) {
+
+    html {
+        font-size: 18px;
+        line-height: 27px;
+    }
+
+    nav {
+        position: absolute;
+    }
+
+    .typekit-badge {
+        position: absolute !important;
+    }
+
+}
+
+@media only screen and (max-width: 480px) {
+
+    .contact {
+        float: none;
+
+        &.right {
+            float: none;
+            text-align: left;
+        }
+    }
+}

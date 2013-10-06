@@ -1,18 +1,20 @@
 ---
 layout: default
-title: hmmmm
+title: Moz Morris
+image: headers/desk.jpg
+color: 880706
 ---
 
-<p>index test</p>
+<section class="date">
+  <p>
+    <span>Home</span>
+  </p>
+</section>
 
+<h1>Blog posts</h1>
 
-{% for post in site.posts %}
-<li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-{% endfor %}
-
-
-{% for post in paginator.posts %}
-<article>
-    {{ post.content | truncatewords: 60 }} <a href="{{ project.url }}">read more</a></p>
-</article>
-{% endfor %}
+<ul class="posts">
+  {% for post in site.posts %}
+    <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+  {% endfor %}
+</ul>
