@@ -8,7 +8,7 @@ layout: nil
     <link href="http://iocast.github.io/atom.xml" rel="self"/>
     <link href="http://iocast.github.io"/>
     <updated>{{ site.time | date_to_xmlschema }}</updated>
-    <id>http://iocast.github.io</id>
+    <id>http://iocast.github.io/</id>
     <author>
         <name>iocast</name>
         <email>iocast@me.com</email>
