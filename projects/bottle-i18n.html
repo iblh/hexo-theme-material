@@ -1,54 +1,105 @@
----
-layout: default
-title: iocast ~ bottle-i18n
-zip_url: https://github.com/iocast/bottle-i18n/zipball/master
-issue_url: https://github.com/iocast/bottle-i18n/issues/new
-repository_url: http://github.com/iocast/bottle-i18n
----
-
-<h1>bottle-i18n</h1>
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+        <title>iocast ~ bottle-i18n</title>
+        
+        <link rel="stylesheet" href="/stylesheets/styles.css" />
+        <link rel="stylesheet" href="/stylesheets/pygment_trac.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <!--[if lt IE 9]>
+         <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+         <![endif]-->
+    </head>
+    <body>
+        <div class="wrapper">
+            <header>
+                <h1>iocast <a href="/"><small>iocast.github.io</small></a></h1>
+                
+                <p class="view"><a href="/projects.html">Projects <small>by iocast</small></a></p>
+                <p class="view"><a href="/posts.html">Posts</a> <a href="/atom.xml"><small>atom feed</small></a></p>
+                
+                
+                <h3>Project Info</h3>
+                <ul>
+                    
+                    <li><a href="https://github.com/iocast/bottle-i18n/zipball/master">Download <strong>ZIP File</strong></a></li>
+                    
+                    
+                    
+                    
+                    <li><a href="https://github.com/iocast/bottle-i18n/issues/new">Report<strong>An Issue</strong></a></li>
+                    
+                    
+                    <li><a href="http://github.com/iocast/bottle-i18n">Fork On <strong>GitHub</strong></a></li>
+                    
+                </ul>
+                
+                
+                
+                <h3>Find me on ...</h3>
+                <p class"view"><a href="http://github.com/iocast">GitHub</a><br/>
+                <a href="http://bitbucket.org/iocast">BitBucket</a><br/>
+                <a href="http://twitter.com/MichelOtt2">Twitter</a><br/>
+                <a href="http://osrc.dfm.io/iocast">Open Source Report Card</a><br/></p>
+                
+            </header>
+            <section>
+                <h1>bottle-i18n</h1>
 
 <p>The bottle-i18n plugin integrates the multilingual internationalization services <code>gettext</code> from Python with your Bottle application.</p>
 
 <p>bottle-i18n is maintained oder the Python Package Index (pypi). Hence you can use <code>pip</code> to install this extension as follow <code>pip install bottle-i18n</code>.</p>
 
 <p>Usage example:</p>
-{% highlight python %}
-#!/usr/bin/python
+<div class="highlight"><pre><code class="python"><span class="c">#!/usr/bin/python</span>
 
-import bottle
-from bottle.ext.i18n import I18NPlugin, I18NMiddleware, i18n_defaults
+<span class="kn">import</span> <span class="nn">bottle</span>
+<span class="kn">from</span> <span class="nn">bottle.ext.i18n</span> <span class="kn">import</span> <span class="n">I18NPlugin</span><span class="p">,</span> <span class="n">I18NMiddleware</span><span class="p">,</span> <span class="n">i18n_defaults</span>
 
-i18n_defaults(bottle.SimpleTemplate, bottle.request)
+<span class="n">i18n_defaults</span><span class="p">(</span><span class="n">bottle</span><span class="o">.</span><span class="n">SimpleTemplate</span><span class="p">,</span> <span class="n">bottle</span><span class="o">.</span><span class="n">request</span><span class="p">)</span>
 
-def get():
-app = bottle.Bottle()
+<span class="k">def</span> <span class="nf">get</span><span class="p">():</span>
+<span class="n">app</span> <span class="o">=</span> <span class="n">bottle</span><span class="o">.</span><span class="n">Bottle</span><span class="p">()</span>
 
-@app.route('/')
-def index():
-return bottle.template("<b>{{_('hello')}} I18N<b/>?")
+<span class="nd">@app.route</span><span class="p">(</span><span class="s">&#39;/&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
+<span class="k">return</span> <span class="n">bottle</span><span class="o">.</span><span class="n">template</span><span class="p">(</span><span class="s">&quot;&lt;b&gt; I18N&lt;b/&gt;?&quot;</span><span class="p">)</span>
     
     
-    sub_app = bottle.Bottle()
+    <span class="n">sub_app</span> <span class="o">=</span> <span class="n">bottle</span><span class="o">.</span><span class="n">Bottle</span><span class="p">()</span>
     
-    @sub_app.route('/')
-    def sub():
-    return bottle.template("current language is {{lang()}}")
-    
-    
-    app.mount(app = sub_app , prefix = '/sub', skip = None)
-    
-    return I18NMiddleware(app, I18NPlugin(domain='messages', default='en', locale_dir='./locale'))
+    <span class="nd">@sub_app.route</span><span class="p">(</span><span class="s">&#39;/&#39;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">sub</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">bottle</span><span class="o">.</span><span class="n">template</span><span class="p">(</span><span class="s">&quot;current language is &quot;</span><span class="p">)</span>
     
     
-    if __name__ == '__main__':
-    bottle.run(app=get(), host='localhost', port='8000', quiet=False, reloader=True)
-{% endhighlight %}
+    <span class="n">app</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="n">app</span> <span class="o">=</span> <span class="n">sub_app</span> <span class="p">,</span> <span class="n">prefix</span> <span class="o">=</span> <span class="s">&#39;/sub&#39;</span><span class="p">,</span> <span class="n">skip</span> <span class="o">=</span> <span class="bp">None</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">I18NMiddleware</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">I18NPlugin</span><span class="p">(</span><span class="n">domain</span><span class="o">=</span><span class="s">&#39;messages&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="s">&#39;en&#39;</span><span class="p">,</span> <span class="n">locale_dir</span><span class="o">=</span><span class="s">&#39;./locale&#39;</span><span class="p">))</span>
+    
+    
+    <span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">bottle</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">app</span><span class="o">=</span><span class="n">get</span><span class="p">(),</span> <span class="n">host</span><span class="o">=</span><span class="s">&#39;localhost&#39;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="s">&#39;8000&#39;</span><span class="p">,</span> <span class="n">quiet</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">reloader</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</code></pre>
+</div>
+
     
 <p>Running the above example it automatically loads the default language <code>en</code> if in the URL the langauge code or the <code>HTTP_ACCEPT_LANGUAGE</code> sent from the browser is missing.</p>
     
 <p>The URL structure is as follow
-{% highlight python %}
-http://localhost:8000/<language-code>/<route>
-{% endhighlight %}
+<div class="highlight"><pre><code class="python"><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">8000</span><span class="o">/&lt;</span><span class="n">language</span><span class="o">-</span><span class="n">code</span><span class="o">&gt;/&lt;</span><span class="n">route</span><span class="o">&gt;</span>
+</code></pre>
+</div>
+
 </p>
+
+            </section>
+            <footer>
+                <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+            </footer>
+        </div>
+        <script src="/javascripts/scale.fix.js"></script>
+    </body>
+</html>
