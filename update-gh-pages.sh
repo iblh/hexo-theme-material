@@ -1,6 +1,8 @@
 if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
   echo -e "Starting to update gh-pages\n"
 
+  ls -ali
+
   cp -R _site $HOME/_site
 
   cd $HOME
