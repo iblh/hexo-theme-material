@@ -6,7 +6,7 @@ if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
   cd $HOME
   git config --global user.email "iocast@me.com"
   git config --global user.name "iocast"
-  git clone --quiet --branch=gh-pages https://${GH_TOKEN}@github.com:iocast/iocast.github.io.git gh-pages > /dev/null
+  git clone --quiet --branch=gh-pages https://${GH_TOKEN}@github.com/iocast/iocast.github.io.git gh-pages > /dev/null
 
   cd gh-pages
   cp -Rf $HOME/coverage/* .
