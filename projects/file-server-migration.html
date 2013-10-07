@@ -1,0 +1,98 @@
+---
+layout: default
+title: iocast ~ file-server-migration
+zip_url: https://github.com/iocast/file-server-migration/zipball/master
+issue_url: https://github.com/iocast/file-server-migration/issues/new
+repository_url: http://github.com/iocast/file-server-migration
+---
+
+<h1>file server migration tool</h1>
+
+<p>This bash scripts conntects to a server, syncs all configured folders to the local machines and sets on the local folders the defined permissons. The intention of this tool is to automate a migration or "data clone" of a Mac OS X file server, e.g. to move to a Active Directory bassed login mechanism.</p>
+
+<p>The cornerstones are <code>rsync</code> and bash json reader called <a href="http://stedolan.github.io/jq/">jq</a> which is included in this repository.</p>
+
+<p>NOTE: This script can also be used to <strong>propagate the posix and/or ACLs</strong> on a system without using the sync and share mechanism.</p>
+
+
+<h2>Preperation</h2>
+
+The following steps need to be done antecedent:
+
+<ol>
+    <li>rsa key creation</li>
+    <ul>
+        <li><code>cd ~/.ssh/</code> (goes to the default key location)</li>
+        <li><code>ssh-keygen -t rsa -C "mail address"</code> (creates a new rsa key pair)</li>
+        <li><code>pbcopy < ~/.ssh/id_rsa.pub</code> (copies the public key to the clipboard)</li>
+    </ul>
+    <li>configuration of the source server</li>
+    <ul>
+        <li><code>vim ~/.ssh/authorized_keys</code> (edits/creates a new authorized key file)</li>
+        <li>paste the clipboard (rsa public key) to the <code>authorized_keys</code> file</li>
+    </ul>
+    <li>changing rsync rights on the source server</li>
+    <ul>
+        <li><code>sudo visudo</code> (edits the sudoers)</li>
+        <li><code>&gt;user&lt; ALL= NOPASSWD:/usr/bin/rsync</code> (add this to the appropriate position in the file)</li>
+    </ul>
+</ol>
+    
+    
+<h2>Configuration</h2>
+    
+<p>The configuration file is a ``json`` file, which consists of four sections. First the ``source`` need to be defined which is the server from where you want to copy. Next thing is the ``destination`` from where you run this script and want to sync the files to. Then we have some configuration parts like ``rsa`` which holds the path to the private key created in the [preperation section](#preperation) and the prefix for the ``log`` file.</p>
+    
+<p>The last section defines all the folders/shares to be synced from the source to the destination server. The ``folder`` defines the folder name on the source system, ``name`` the share name to be created. If it is empty it will use the ``folder`` name as share name. Next you define a list of ACLs. Here you define the ``group``, ``access``, and ``permisson`` according to the [chmod man page](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/chmod.1.html).</p>
+    
+<p>In addition you can define for each folder/share if it need to be synced from the source to the destination, if the posix or ACLs rights need to be propagated or if you want to create a share. Set for that the desired boolean value on the appropriate attriubte. For more information about OS X sharing consider the [sharing man page](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/sharing.1.html).</p>
+    
+<p>Following a example how to define a configuration file:</p>
+    
+{% highlight json %}
+{
+	"source": {
+		"uri": "<server>:/<path>",
+		"user": "root"
+	},
+	"destination": {
+		"uri": "/<path>",
+		"user": "root",
+		"group": "staff",
+		"modus": "Du=rwx,Dg=,Do=,Fu=rwx,Fg=,Fo="
+	},
+	"rsa": "/<path-to-private-rsa-key>",
+	"log": "./<log-prefix>",
+	"shares": [{
+		"folder": "test_folder",
+		"name": "test",
+		"acl" : [{
+			"group": "group:D\\group-admin",
+			"access": "allow",
+			"permisson": "readattr,writeattr,readextattr,writeextattr,readsecurity,writesecurity,list,search,add_file,add_subdirectory,delete_child,read,write,append,execute,file_inherit,directory_inherit,chown"
+		},
+		{
+			"group": "group:D\\group-employees",
+			"access": "allow",
+			"permisson": "readattr,readextattr,readsecurity,list,search,add_file,add_subdirectory,read,file_inherit,directory_inherit"
+		}],
+		"sync": true,
+		"posix": true,
+		"share": true,
+		"acl": true
+	},
+	{
+		"folder": "other_folder",
+		"name": "",
+		"acl" : [{
+			"group": "group:D\\group-employees",
+			"access": "allow",
+			"permisson": "readattr,writeattr,readextattr,writeextattr,readsecurity,writesecurity,list,search,add_file,add_subdirectory,delete_child,read,write,append,execute,file_inherit,directory_inherit,chown"
+		}],
+		"sync": true,
+		"posix": true,
+		"share": true,
+		"acl": true
+	}]
+}
+{% endhighlight %}

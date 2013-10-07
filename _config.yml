@@ -5,7 +5,9 @@ markdown:    rdiscount
 permalink:   date
 rdiscount:
   extensions: [smart]
-tag_page_layout: tag_page
-tag_page_dir: tag
+
 exclude:
 - README.md
+
+tag_page_dir:    tag
+tag_page_layout: tag_page

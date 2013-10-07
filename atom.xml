@@ -4,14 +4,14 @@ layout: nil
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
- <title>Corey Donohoe - atmos.org</title>
+ <title>iocast - iocast.github.io</title>
  <link href="http://www.atmos.org/atom.xml" rel="self"/>
  <link href="http://www.atmos.org"/>
  <updated>{{ site.time | date_to_xmlschema }}</updated>
- <id>http://www.atmos.org/</id>
+ <id>http://iocast.github.io</id>
  <author>
-   <name>Corey Donohoe</name>
-   <email>atmos@atmos.org</email>
+   <name>iocast</name>
+   <email>iocast@me.com</email>
  </author>
 
  {% for post in site.posts %}
