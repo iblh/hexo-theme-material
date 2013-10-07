@@ -4,9 +4,9 @@ if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
   cp -R coverage $HOME/coverage
 
   cd $HOME
-  git config --global user.email "travis@travis-ci.org"
-  git config --global user.name "Travis"
-  git clone --quiet --branch=gh-pages https://$(GH_TOKEN)@github.com:iocast/iocast.github.io.git gh-pages > /dev/null
+  git config --global user.email "iocast@me.com"
+  git config --global user.name "iocast"
+  git clone --quiet --branch=gh-pages https://${GH_TOKEN}@github.com:iocast/iocast.github.io.git gh-pages > /dev/null
 
   cd gh-pages
   cp -Rf $HOME/coverage/* .
