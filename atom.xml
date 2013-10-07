@@ -5,8 +5,8 @@ layout: nil
 <feed xmlns="http://www.w3.org/2005/Atom">
     
     <title>iocast - iocast.github.io</title>
-    <link href="http://www.atmos.org/atom.xml" rel="self"/>
-    <link href="http://www.atmos.org"/>
+    <link href="http://iocast.github.io/atom.xml" rel="self"/>
+    <link href="http://iocast.github.io"/>
     <updated>{{ site.time | date_to_xmlschema }}</updated>
     <id>http://iocast.github.io</id>
     <author>
@@ -19,7 +19,7 @@ layout: nil
         <title>{{ post.title }}</title>
         <link href="http://www.atmos.org{{ post.url }}"/>
         <updated>{{ post.date | date_to_xmlschema }}</updated>
-        <id>http://www.atmos.org{{ post.id }}</id>
+        <id>http://iocast.github.io{{ post.id }}</id>
         <content type="html">{{ post.content | xml_escape }}</content>
     </entry>
     {% endfor %}
