@@ -4,7 +4,7 @@ layout: default
 
 <article>
 <h1>{{page.title}}</h1>
-{% include post_meta.html post=page %}
-<hr/>
+{% if page.date %}{% include post_meta.md %}{% endif %}
+
 {{content}}
 </article>

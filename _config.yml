@@ -9,5 +9,3 @@ rdiscount:
 exclude:
 - README.md
 
-tag_page_dir:    tag
-tag_page_layout: tag_page
