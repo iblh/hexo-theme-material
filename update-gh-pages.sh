@@ -8,7 +8,7 @@ if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
   git config --global user.name "iocast"
   git clone --quiet --branch=master https://${GH_TOKEN}@github.com/iocast/iocast.github.io.git master > /dev/null
 
-  cd gh-pages
+  cd master
   cp -Rf $HOME/_site/* .
 
   git add -f .
