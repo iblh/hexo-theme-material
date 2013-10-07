@@ -1,27 +1,27 @@
+---
+layout: nil
+---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     
     <title>iocast - iocast.github.io</title>
     <link href="http://iocast.github.io/atom.xml" rel="self"/>
     <link href="http://iocast.github.io"/>
-    <updated>2013-10-07T15:56:20+02:00</updated>
+    <updated>{{ site.time | date_to_xmlschema }}</updated>
     <id>http://iocast.github.io/</id>
     <author>
         <name>iocast</name>
         <email>iocast@me.com</email>
     </author>
     
-    
+    {% for post in site.posts %}
     <entry>
-        <title>Mac OS X file server migration</title>
-        <link href="http://iocast.github.io/blog/2013/10/09/osx_file_server_migration.html"/>
-        <updated>2013-10-09T00:00:00+02:00</updated>
-        <id>http://iocast.github.io/blog/2013/10/09/osx_file_server_migration</id>
-        <content type="html">&lt;p&gt;under construction&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;/projects/file-server-migration.html&quot;&gt;server migration tool&lt;/a&gt;&lt;/p&gt;
-</content>
+        <title>{{ post.title }}</title>
+        <link href="http://iocast.github.io{{ post.url }}"/>
+        <updated>{{ post.date | date_to_xmlschema }}</updated>
+        <id>http://iocast.github.io{{ post.id }}</id>
+        <content type="html">{{ post.content | xml_escape }}</content>
     </entry>
-    
+    {% endfor %}
     
 </feed>

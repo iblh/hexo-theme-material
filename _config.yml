@@ -1,0 +1,10 @@
+destination: ./_site
+lsi:         true
+pygments:    true
+markdown:    rdiscount
+permalink:   date
+rdiscount:
+  extensions: [smart]
+
+exclude: ['Gemfile', 'Gemfile.lock', 'Rakefile', 'README.md']
+
