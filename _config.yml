@@ -6,6 +6,5 @@ permalink:   date
 rdiscount:
   extensions: [smart]
 
-exclude:
-- README.md
+exclude: ['Gemfile', 'Gemfile.lock', 'Rakefile', 'README.md']
 
