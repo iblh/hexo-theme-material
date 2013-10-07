@@ -1,5 +1,5 @@
 #!/usr/bin/env rake
 
 task :travis do
-  system("rspec spec")
+  system("jekyll build")
 end
