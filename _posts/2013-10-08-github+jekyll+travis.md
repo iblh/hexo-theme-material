@@ -102,7 +102,7 @@ Lastly we need to create a ```bash``` script to push the compiled [jekyll][] pag
 
 {% highlight bash %}
 curl -X POST -u <your_github_username> -H "Content-Type: application/json" -d "{\"scopes\":[\"public_repo\"],\"note\":\"token for pushing from travis\"}" https://api.github.com/authorizations
-{% highlight %}
+{% endhighlight %}
 
 and copy the ```token``` key from the json result.
 
@@ -111,7 +111,7 @@ Now install the travis gem, encrypt the values of environment variables and add 
 {% highlight bash %}
 gem install travis
 travis encrypt -r <user>/<repository> GH_TOKEN=<token> --add env.global
-{% highlight %}
+{% endhighlight %}
 
 Lastly you need to create a bash file which pushes the update to he ```master``` branch using the ```GH_TOKEN``` which was encrytped before and need to be registered in the ```.travis.yml``` as ```after_success``` task:
 
