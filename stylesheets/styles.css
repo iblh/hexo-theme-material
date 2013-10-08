@@ -311,3 +311,15 @@ a.tag_list_link{border-left: 1px solid #ccc;color:#888;font-size:14px;font-varia
 a.tag_list_link:first-child{border:0}
 a.tag_list_link:hover{color:#444;}
 
+
+
+/* Ajax Loading Indicator
+-------------------------------------------------- */
+.ajax-loader-small {
+    background-image: url("/images/ajax-loader-small.gif");
+    background-repeate: no-repeat;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+}
+

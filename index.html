@@ -3,4 +3,46 @@ layout: default
 title: iocast.github.io ~ iocast
 ---
 
+
+<script type="text/javascript">
+	$(function() {
+		var repos = [
+		'featureserver',
+		'vectorformats',
+		'bottle-i18n',
+		'file-server-migration'
+		]
+		var posts = 10;
+		var loaded = false;
+		
+		for(repo in repos) {
+			$.getJSON('https://api.github.com/repos/iocast/' + repo + '/events?callback=?', function(data) {
+				var list = $('#github-events');
+				var i = 0;
+				
+				if(!loaded) {
+					$(list).next().remove();
+					loaded = true;
+				}
+				
+				$.each(data.data, function(key, val) {
+					if (val.type == "PushEvent") {
+						$.each(val.payload.commits, function(key2, val2) {
+							if(i <= posts) {
+								list.append('<p id="' + key + '.' + key2 + '"><a href="https://github.com/iocast/' + repo + '/commit/' + val2.sha + '" target="_new">' + val2.message + '</a> [' + val.actor.login + ' @ ' + val.created_at + ']</p>');
+							}
+							i++;
+						});
+					}
+				});
+			});
+		}
+	});
+</script>
+
 <p>I'm ...</p>
+
+
+<h3>Whats going on ...</h3>
+<p id="github-events"><div><span class="ajax-loader"></span> Loading events ...</div></p>
+
