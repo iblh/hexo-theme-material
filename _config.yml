@@ -1,4 +1,5 @@
 destination: ./_site
+future:      false
 lsi:         true
 pygments:    true
 markdown:    rdiscount
