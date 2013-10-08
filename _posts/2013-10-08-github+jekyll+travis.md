@@ -18,7 +18,7 @@ Hence this post is going to discuss the a simple workflow using [Github's][githu
 
 First setup a new user page on Github using for example the page generator or simply setting up a new repository called ```username.github.io```. Github will automatically create a new ```master``` branch which is used for deploying the content to the web server. In our case, we need to have a seperate branch for our blog which is setup using [jekyll][]. Therefore create a new branch e.g. called ```develop``` as follow
 
-```bash
+{% highlight bash %}
 # Creates our branch, without any parents (it's an orphan!)
 git checkout --orphan develop
 # Remove all files from the old working tree
@@ -28,7 +28,8 @@ echo "My GitHub Page" > index.html
 git add index.html
 git commit -a -m "First pages commit"
 git push origin develop
-```
+{% endhighlight %}
+
 
 Now we are ready to add our [jekyll][] page to this ```develop``` branch.
 
