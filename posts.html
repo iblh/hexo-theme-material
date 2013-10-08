@@ -8,7 +8,7 @@ title: iocast ~ some notes ...
 <div class="meta_wrapper">
     <ul class="tag_list_in_post">
         {% for tag in site.tags %}
-        <li class="inline tag_list_item"><a class="tag_list_link" href="/tag/{{ tag }}">{{ tag }}</a></li>
+        <li class="inline tag_list_item"><a class="tag_list_link" href="/tag/{{ tag[0] }}">{{ tag[0] }}</a></li>
         {% endfor %}
     </ul>
 </div>
