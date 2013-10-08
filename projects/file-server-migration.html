@@ -15,7 +15,7 @@ repository_url: http://github.com/iocast/file-server-migration
 <p>NOTE: This script can also be used to <strong>propagate the posix and/or ACLs</strong> on a system without using the sync and share mechanism.</p>
 
 
-<h2>Preperation</h2>
+<h2 id="preperation">Preperation</h2>
 
 The following steps need to be done antecedent:
 
@@ -41,11 +41,11 @@ The following steps need to be done antecedent:
     
 <h2>Configuration</h2>
     
-<p>The configuration file is a ``json`` file, which consists of four sections. First the ``source`` need to be defined which is the server from where you want to copy. Next thing is the ``destination`` from where you run this script and want to sync the files to. Then we have some configuration parts like ``rsa`` which holds the path to the private key created in the [preperation section](#preperation) and the prefix for the ``log`` file.</p>
+<p>The configuration file is a ``json`` file, which consists of four sections. First the ``source`` need to be defined which is the server from where you want to copy. Next thing is the ``destination`` from where you run this script and want to sync the files to. Then we have some configuration parts like ``rsa`` which holds the path to the private key created in the <a href="#preperation">preperation section</a> and the prefix for the ``log`` file.</p>
     
-<p>The last section defines all the folders/shares to be synced from the source to the destination server. The ``folder`` defines the folder name on the source system, ``name`` the share name to be created. If it is empty it will use the ``folder`` name as share name. Next you define a list of ACLs. Here you define the ``group``, ``access``, and ``permisson`` according to the [chmod man page](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/chmod.1.html).</p>
+<p>The last section defines all the folders/shares to be synced from the source to the destination server. The ``folder`` defines the folder name on the source system, ``name`` the share name to be created. If it is empty it will use the ``folder`` name as share name. Next you define a list of ACLs. Here you define the ``group``, ``access``, and ``permisson`` according to the <a href="https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/chmod.1.html">chmod man page</a>.</p>
     
-<p>In addition you can define for each folder/share if it need to be synced from the source to the destination, if the posix or ACLs rights need to be propagated or if you want to create a share. Set for that the desired boolean value on the appropriate attriubte. For more information about OS X sharing consider the [sharing man page](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/sharing.1.html).</p>
+<p>In addition you can define for each folder/share if it need to be synced from the source to the destination, if the posix or ACLs rights need to be propagated or if you want to create a share. Set for that the desired boolean value on the appropriate attriubte. For more information about OS X sharing consider the <a href="https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/sharing.1.html">sharing man page</a>.</p>
     
 <p>Following a example how to define a configuration file:</p>
     
