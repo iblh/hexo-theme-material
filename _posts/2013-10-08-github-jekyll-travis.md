@@ -129,6 +129,7 @@ if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
   git clone --quiet --branch=master https://${GH_TOKEN}@github.com/iocast/iocast.github.io.git master > /dev/null
 
   cd master
+  rm -rf ./*
   cp -Rf $HOME/_site/* .
 
   git add -f .
