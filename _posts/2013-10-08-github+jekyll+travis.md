@@ -134,7 +134,8 @@ if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
   git push -fq origin master > /dev/null
 
   echo -e "Done magic with coverage\n"
-fi{% highlight %}
+fi
+{% endhighlight %}
 
 and add the following lines to the end of the ```.travis.yml``` file:
 
