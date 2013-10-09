@@ -46,8 +46,8 @@
                 
                 <h3>Tags</h3>
                 <ul class="tags">
-                    {% for tag in post.tags %}
-                    <li class="inline"><a class="tag_list_link" href="/tag/{{ tag }}">{{tag}}</a></li>
+                    {% for tag in site.tags %}
+                    <li class="inline"><a class="tag_list_link" href="/tag/{{ tag[0] }}">{{tag[0]}}</a></li>
                     {% endfor %}
                 </ul>
                 

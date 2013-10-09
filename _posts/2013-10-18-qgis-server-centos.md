@@ -2,7 +2,7 @@
 layout: post
 title: Setting up a QGIS server on CentOS 6
 author: iocast
-excerpt: 
+excerpt: asdf
 categories: blog
 tags:
 - osx
