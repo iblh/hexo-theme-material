@@ -50,12 +50,7 @@ yum install qgis*
 
 The files are installed on CentOS:
 
-| file                                  | description     |
-|:--------------------------------------|:----------------|
-| /usr/libexec/qgis/qgis_mapserv.fcgi   | main fast cgi script (OGC capabilities) |
-| /etc/httpd/conf.d/qgis-mapserver.conf | qgis mapserver httpd configuration file |
 
-  : important files and scripts 
 
 
 
