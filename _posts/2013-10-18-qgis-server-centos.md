@@ -1,6 +1,6 @@
 ---
 layout: post
-title: qgis-server on CentOS
+title: Setting up a QGIS server on CentOS 6
 author: iocast
 excerpt: 
 categories: blog
@@ -10,6 +10,55 @@ tags:
 - rsync
 ---
 
+QGIS server provides a web map server (WMS) by simply copying a QGIS project int the server directory.
+
+## Installation
+
+First you need a running CentOS on a machine. In the default CentOS software repository ```qgis-server``` is not available. So you need first to add extra packages for enterprise linux (EPEL) repository as follow:
+
+<% highlight bash %>
+wget http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-<version>.noarch.rpm
+rpm -Uvh epel-release-<version>.noarch.rpm
+<% endhighlight %>
+
+where the version I have tested it was ```6-8```.
+
+
+Add the ELGIS repositories
+
+<% highlight bash %>
+wget http://elgis.argeo.org/repos/6/elgis-release-<version>.noarch.rpm
+rpm -Uvh elgis-release-6-6_0.noarch.rpm
+<% endhighlight %>
+
+where the version I have tested it was ```6-6_0```.
+
+
+Now install QGIS server:
+
+<% highlight bash %>
+yum install qgis-mapserver.x86_64
+<% endhighlight %>
+
+
+If you want to have QGIS libraries, QGIS Desktop run the following command
+
+<% highlight bash %>
+yum install qgis*
+<% endhighlight %>
+
+
+The files are installed on CentOS:
+
+| file                                  | description     |
+|:--------------------------------------|:----------------|
+| /usr/libexec/qgis/qgis_mapserv.fcgi   | main fast cgi script (OGC capabilities) |
+| /etc/httpd/conf.d/qgis-mapserver.conf | qgis mapserver httpd configuration file |
+
+  : important files and scripts 
+
+
+
 
 ## Setting up qgis-web-client on CentOS
 
@@ -17,7 +66,7 @@ Download the latest version from [qgis/QGIS-Web-Client](https://github.com/qgis/
 
 Copy the file ```apache-conf/qgis-web-client.conf.tmpl``` to ```apache-conf/qgis-web-client.conf``` and change the directories and server names according to your server setup or you could add an entry like this ```127.0.0.1 qgis-web-client.localhost``` to ```/etc/hosts```.
 
-In addition you need to change the log pathes as follow
+In addition you need to change the log paths as follow
 
 <% highlight apache %>
 ErrorLog /var/log/httpd/qgis-web-client-error.log
