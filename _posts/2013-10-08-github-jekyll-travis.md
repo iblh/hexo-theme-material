@@ -9,16 +9,16 @@ tags:
 - jekyll
 - travis
 - bash
-- continous integration
+- continuous integration
 ---
 
-Github offers at the tme of writing three differnt types of pages: for [users, organizations and projects][github-pages]. For th users and organizations the ```master``` branch is going to be used to deploy as static web page. For projects, means in a repository which is not called ```username.github.io```, a subpath of the user pages would be created ```username.github.io/projectname```.
+Github offers at the time of writing three different types of pages: for [users, organizations and projects][github-pages]. For the users and organizations the ```master``` branch is going to be used to deploy as static web page. For projects, means in a repository which is not called ```username.github.io```, a subpath of the user pages would be created ```username.github.io/projectname```.
 
-Hence this post is going to discuss the a simple workflow using [Github's][github] user pages, [jekyll][] as blog and pseudo dynamic page, [travis][] as our continous integration solution for deployment purposes.
+Hence this post is going to discuss the a simple workflow using [Github's][github] user pages, [jekyll][] as blog and pseudo dynamic page, [travis][] as our continuous integration solution for deployment purposes.
 
 ## Github
 
-First setup a new user page on Github using for example the page generator or simply setting up a new repository called ```username.github.io```. Github will automatically create a new ```master``` branch which is used for deploying the content to the web server. In our case, we need to have a seperate branch for our blog which is setup using [jekyll][]. Therefore create a new branch e.g. called ```develop``` as follow
+First setup a new user page on Github using for example the page generator or simply setting up a new repository called ```username.github.io```. Github will automatically create a new ```master``` branch which is used for deploying the content to the web server. In our case, we need to have a separate branch for our blog which is setup using [jekyll][]. Therefore create a new branch e.g. called ```develop``` as follow
 
 {% highlight bash %}
 # Creates our branch, without any parents (it's an orphan!)
@@ -36,9 +36,9 @@ Now we are ready to add our [jekyll][] page to this ```develop``` branch.
 
 ## Jekyll
 
-Now that we have a ```master``` and ```develop``` branch, former for the [jekyll][] compliation and later for your source, we can setup our blog. As described in the [jekyll documentation][jekyll-doc] we need to have at least a ```_layouts``` directory for the templates that wrap posts, a ```_posts``` for dynamic content and the rest of html and other files for you layout.
+Now that we have a ```master``` and ```develop``` branch, former for the [jekyll][] compilation and later for your source, we can setup our blog. As described in the [jekyll documentation][jekyll-doc] we need to have at least a ```_layouts``` directory for the templates that wrap posts, a ```_posts``` for dynamic content and the rest of html and other files for you layout.
 
-In addition we need to setup a ```_config.yml``` file to tell [jekyll][] the compliation options. A example could look like the following:
+In addition we need to setup a ```_config.yml``` file to tell [jekyll][] the compilation options. A example could look like the following:
 
 {% highlight yaml %}
 destination: ./_site
@@ -78,7 +78,7 @@ branches:
 script: rake travis
 {% endhighlight %}
 
-As you can see in the ```.travis.yml``` file the [jekyll][] doployment starts with the command ```rake travis``` which is implmented in the ```Rakefile``` file which uses the ```Gemfile``` for ruby libraray dependencies. So create the files ```Gemfile``` and ```Rakefile``` in the root directory of the ```develop``` branch.
+As you can see in the ```.travis.yml``` file the [jekyll][] deployment starts with the command ```rake travis``` which is implemented in the ```Rakefile``` file which uses the ```Gemfile``` for ruby library dependencies. So create the files ```Gemfile``` and ```Rakefile``` in the root directory of the ```develop``` branch.
 
 For the above ```_config.yml` configuration add the follwoing RubyGem dependencies to the ```Gemfile```:
 
@@ -115,7 +115,7 @@ gem install travis
 travis encrypt -r <user>/<repository> GH_TOKEN=<token> --add env.global
 {% endhighlight %}
 
-Lastly you need to create a bash file which pushes the update to he ```master``` branch using the ```GH_TOKEN``` which was encrytped before and need to be registered in the ```.travis.yml``` as ```after_success``` task:
+Lastly you need to create a bash file which pushes the update to he ```master``` branch using the ```GH_TOKEN``` which was encrypted before and need to be registered in the ```.travis.yml``` as ```after_success``` task:
 
 {% highlight bash %}
 if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then

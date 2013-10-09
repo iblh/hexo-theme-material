@@ -45,7 +45,7 @@ return bottle.template("<b>{{_('hello')}} I18N<b/>?")
     bottle.run(app=get(), host='localhost', port='8000', quiet=False, reloader=True)
 {% endhighlight %}
     
-<p>Running the above example it automatically loads the default language <code>en</code> if in the URL the langauge code or the <code>HTTP_ACCEPT_LANGUAGE</code> sent from the browser is missing.</p>
+<p>Running the above example it automatically loads the default language <code>en</code> if in the URL the language code or the <code>HTTP_ACCEPT_LANGUAGE</code> sent from the browser is missing.</p>
     
 <p>The URL structure is as follow
 {% highlight python %}
