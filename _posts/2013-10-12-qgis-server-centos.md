@@ -172,7 +172,5 @@ Script / Config                       | Purpose
 /etc/httpd/conf.d/qgis-mapserver.conf | qgis mapserver httpd configuration file
 
 
-
-
 {% bibliography --cited %}
 

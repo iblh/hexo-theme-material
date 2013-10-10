@@ -13,16 +13,8 @@ exclude: ['Gemfile', 'Gemfile.lock', 'Rakefile', 'README.md', 'update-gh-pages.s
 scholar:
   style: apa
   locale: en
-
-  sort_by: none
-  order: ascending
-
   source: ./_bibliography
   bibliography: references.bib
-  bibliography_template: {reference}
 
   details_dir:    bibliography
-  details_layout: bibtex.html
-  details_link:   Details
-
   query: "@*"

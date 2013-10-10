@@ -378,7 +378,7 @@ ul.tags li:first-child {
 /* Ajax Loading Indicator
 -------------------------------------------------- */
 .ajax-loader-small {
-    background-image: url("/images/ajax-loader-small.gif");
+    background-image: url("/assets/images/ajax-loader-small.gif");
     background-repeate: no-repeat;
     display: inline-block;
     width: 16px;
