@@ -3,10 +3,10 @@ future:      false
 lsi:         true
 pygments:    true
 permalink:   date
-markdown:    redcarpet
+markdown:    rdiscount
 
-redcarpet:
-  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
+rdiscount:
+  extensions: [autolink, footnotes, smart, generate_toc]
 
 exclude: ['Gemfile', 'Gemfile.lock', 'Rakefile', 'README.md', 'update-gh-pages.sh']
 
