@@ -26,10 +26,10 @@ where the version I have tested it was ```6-8```.
 
 Add the ELGIS repositories
 
-```Shell
+{% highlight bash %}
 wget http://elgis.argeo.org/repos/6/elgis-release-<version>.noarch.rpm
 rpm -Uvh elgis-release-6-6_0.noarch.rpm
-```
+{% endhighlight %}
 
 where the version I have tested it was ```6-6_0```.
 
@@ -43,9 +43,9 @@ yum install qgis-mapserver.x86_64
 
 If you want to have QGIS libraries, QGIS Desktop run the following command
 
-```bash
+<% highlight bash %>
 yum install qgis*
-```
+<% endhighlight %>
 
 
 The files are installed on CentOS:
@@ -54,14 +54,6 @@ Script / Config                      | Purpose
 :-----------------------------------  |:----------------------------------------
 /usr/libexec/qgis/qgis_mapserv.fcgi    | main fast cgi script (OGC capabilities)
 /etc/httpd/conf.d/qgis-mapserver.conf  | qgis mapserver httpd configuration file
-
-
-```ruby
-require 'redcarpet'
-markdown = Redcarpet.new("Hello World!")
-puts markdown.to_html
-```
-
 
 
 

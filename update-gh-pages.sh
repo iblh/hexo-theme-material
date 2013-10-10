@@ -12,7 +12,7 @@ if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
   rm -rf ./*
   cp -Rf $HOME/_site/* .
 
-  git add -f .
+  git add -f -A .
   git commit -m "Travis build $TRAVIS_BUILD_NUMBER pushed to master"
   git push -fq origin master > /dev/null
 
