@@ -1,5 +1,5 @@
 destination: ./_site
-future:      false
+future:      true
 lsi:         true
 pygments:    true
 permalink:   date
@@ -10,3 +10,21 @@ rdiscount:
 
 exclude: ['Gemfile', 'Gemfile.lock', 'Rakefile', 'README.md', 'update-gh-pages.sh']
 
+
+
+scholar:
+  style: apa
+  locale: en
+
+  sort_by: none
+  order: ascending
+
+  source: ./_bibliography
+  bibliography: references.bib
+  bibliography_template: %{reference}
+
+  details_dir:    bibliography
+  details_layout: bibtex.html
+  details_link:   Details
+
+  query: "@*"
