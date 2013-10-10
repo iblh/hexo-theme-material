@@ -43,13 +43,15 @@ yum install qgis-mapserver.x86_64
 
 If you want to have QGIS libraries, QGIS Desktop run the following command
 
-<% highlight bash %>
+```bash
 yum install qgis*
-<% endhighlight %>
+```
 
 
 The files are installed on CentOS:
 
+| Script / Config                       | Purpose                                 |
+|:--------------------------------------|:----------------------------------------|
 | /usr/libexec/qgis/qgis_mapserv.fcgi   | main fast cgi script (OGC capabilities) |
 | /etc/httpd/conf.d/qgis-mapserver.conf | qgis mapserver httpd configuration file |
 

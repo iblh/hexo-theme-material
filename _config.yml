@@ -2,10 +2,11 @@ destination: ./_site
 future:      false
 lsi:         true
 pygments:    true
-markdown:    rdiscount
 permalink:   date
-rdiscount:
-  extensions: [smart]
+markdown:    redcarpet2
+
+redcarpet:
+  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
 
 exclude: ['Gemfile', 'Gemfile.lock', 'Rakefile', 'README.md', 'update-gh-pages.sh']
 

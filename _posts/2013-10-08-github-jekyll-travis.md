@@ -63,7 +63,7 @@ For that we need first to get [travis][] access to our Github repository. If you
 
 The next step is to configure the build process. For that create a new file called ```.travis.yml``` in the root directory of the ```develop``` branch and add the ```master``` branch to the blacklist and the ```develop``` branch to the whitelist.
 
-{% highlight yaml %}
+```yaml
 language: ruby
 rvm: 1.9.3
 
@@ -76,11 +76,11 @@ branches:
     - develop
 
 script: rake travis
-{% endhighlight %}
+```
 
 As you can see in the ```.travis.yml``` file the [jekyll][] deployment starts with the command ```rake travis``` which is implemented in the ```Rakefile``` file which uses the ```Gemfile``` for ruby library dependencies. So create the files ```Gemfile``` and ```Rakefile``` in the root directory of the ```develop``` branch.
 
-For the above ```_config.yml` configuration add the follwoing RubyGem dependencies to the ```Gemfile```:
+For the above ```_config.yml``` configuration add the following RubyGem dependencies to the ```Gemfile```:
 
 {% highlight ruby %}
 source 'http://rubygems.org'
