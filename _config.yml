@@ -10,8 +10,6 @@ rdiscount:
 
 exclude: ['Gemfile', 'Gemfile.lock', 'Rakefile', 'README.md', 'update-gh-pages.sh']
 
-
-
 scholar:
   style: apa
   locale: en
