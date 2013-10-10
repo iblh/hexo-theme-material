@@ -1,12 +1,12 @@
 destination: ./_site
-future:      false
+future:      true
 lsi:         true
 pygments:    true
 permalink:   date
 markdown:    rdiscount
 
 rdiscount:
-  extensions: [autolink, footnotes, smart, generate_toc]
+  extensions: [autolink, footnotes, generate_toc]
 
 exclude: ['Gemfile', 'Gemfile.lock', 'Rakefile', 'README.md', 'update-gh-pages.sh']
 
