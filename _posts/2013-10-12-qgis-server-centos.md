@@ -17,9 +17,7 @@ QGIS server provides a web map server (WMS) by simply copying a QGIS project int
 
 ## PostgreSQL and PostGIS
 
-The following instructions are adapted from {% cite wiki:aa %} and {% cite PostGIS:aa %}
-
-source: based on [YUM installation - PostgreSQL wiki](http://wiki.postgresql.org/wiki/YUM_Installation#Configure_your_YUM_repository) and [UsersWikiuPostGIS20CentOS6pgdg - PostGIS](http://trac.osgeo.org/postgis/wiki/UsersWikiPostGIS20CentOS6pgdg)
+The following instructions are adapted from  [YUM installation - PostgreSQL wiki](http://wiki.postgresql.org/wiki/YUM_Installation#Configure_your_YUM_repository) and [UsersWikiuPostGIS20CentOS6pgdg - PostGIS](http://trac.osgeo.org/postgis/wiki/UsersWikiPostGIS20CentOS6pgdg).
 
 ### Configuration
 
@@ -89,7 +87,7 @@ File / Application                       | Purpose
 
 In the ```pg_hba.conf``` file comment out the ```ident``` lines except for unix domain socket and add two new lines for ```md5 encryption```
 
-{% highlight conf %}
+{% highlight yaml %}
 # IPv4 local connections:
 #host    all             all             127.0.0.1/32            ident
 host    all             all             127.0.0.1/32            md5

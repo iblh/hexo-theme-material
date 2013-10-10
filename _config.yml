@@ -1,14 +1,14 @@
 destination: ./_site
-future:      true
+future:      false
 lsi:         true
-pygments:    true
 permalink:   date
+pygments:    true
 markdown:    rdiscount
+
+exclude: ['Gemfile', 'Gemfile.lock', 'Rakefile', 'README.md', 'update-gh-pages.sh']
 
 rdiscount:
   extensions: [autolink, footnotes, generate_toc]
-
-exclude: ['Gemfile', 'Gemfile.lock', 'Rakefile', 'README.md', 'update-gh-pages.sh']
 
 scholar:
   style: apa
@@ -17,4 +17,8 @@ scholar:
   bibliography: references.bib
 
   details_dir:    bibliography
+  details_layout: bibliography_detail.html
+  details_link: '>>'
   query: "@*"
+
+
