@@ -1,5 +1,5 @@
 destination: ./_site
-future:      true
+future:      false
 lsi:         true
 pygments:    true
 permalink:   date

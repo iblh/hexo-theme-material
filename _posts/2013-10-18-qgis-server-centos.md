@@ -16,7 +16,7 @@ QGIS server provides a web map server (WMS) by simply copying a QGIS project int
 
 First you need a running CentOS on a machine. In the default CentOS software repository ```qgis-server``` is not available. So you need first to add extra packages for enterprise linux (EPEL) repository as follow:
 
-<% highlight bash %>
+{% highlight bash %}
 wget http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-<version>.noarch.rpm
 rpm -Uvh epel-release-<version>.noarch.rpm
 <% endhighlight %>
