@@ -19,17 +19,17 @@ First you need a running CentOS on a machine. In the default CentOS software rep
 {% highlight bash %}
 wget http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-<version>.noarch.rpm
 rpm -Uvh epel-release-<version>.noarch.rpm
-<% endhighlight %>
+{% endhighlight %}
 
 where the version I have tested it was ```6-8```.
 
 
 Add the ELGIS repositories
 
-<% highlight bash %>
+```Shell
 wget http://elgis.argeo.org/repos/6/elgis-release-<version>.noarch.rpm
 rpm -Uvh elgis-release-6-6_0.noarch.rpm
-<% endhighlight %>
+```
 
 where the version I have tested it was ```6-6_0```.
 
@@ -51,11 +51,16 @@ yum install qgis*
 The files are installed on CentOS:
 
 Script / Config                      | Purpose
-:-----------------------------------    |:----------------------------------------
-/usr/libexec/qgis/qgis_mapserv.fcgi   | main fast cgi script (OGC capabilities)
-/etc/httpd/conf.d/qgis-mapserver.conf | qgis mapserver httpd configuration file
+:-----------------------------------  |:----------------------------------------
+/usr/libexec/qgis/qgis_mapserv.fcgi    | main fast cgi script (OGC capabilities)
+/etc/httpd/conf.d/qgis-mapserver.conf  | qgis mapserver httpd configuration file
 
-  : important files and scripts 
+
+```ruby
+require 'redcarpet'
+markdown = Redcarpet.new("Hello World!")
+puts markdown.to_html
+```
 
 
 
