@@ -59,7 +59,10 @@ The following steps need to be done antecedent:
 		"uri": "/<path>",
 		"user": "root",
 		"group": "staff",
-		"modus": "Du=rwx,Dg=,Do=,Fu=rwx,Fg=,Fo="
+		"modus": {
+            "rsync": "Du=rwx,Dg=,Do=,Fu=rwx,Fg=,Fo=",
+            "chmod": "0700"
+		}
 	},
 	"rsa": "/<path-to-private-rsa-key>",
 	"log": "./<log-prefix>",
