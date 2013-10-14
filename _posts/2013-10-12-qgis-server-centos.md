@@ -2,7 +2,7 @@
 layout: post
 title: icoast ~ Setting up a QGIS server and PostGIS on CentOS 6
 author: iocast
-excerpt: asdf
+excerpt: This post describes how to setup a QGSI server and PostGIS on CentOS 6.
 categories: blog
 tags:
 - centos
