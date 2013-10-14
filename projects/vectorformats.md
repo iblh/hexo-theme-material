@@ -7,6 +7,6 @@ repository_url: http://github.com/iocast/vectorformats
 ---
 
 
-<h1>VectorFormats</h1>
+#VectorFormats
 
-<p>is a library for easy serialization and deserialization of geographic features into various formats.</p>
+is a library for easy serialization and deserialization of geographic features into various formats.
