@@ -113,7 +113,7 @@ Login into the database create a user and set a encrypted password
 {% highlight bash %}
 psql gis
 CREATE USER gis WITH SUPERUSER LOGIN PASSWORD 'gis';
-ALTER USER gis WITH ENCRYPTED PASSWORD 'gis
+ALTER USER gis WITH ENCRYPTED PASSWORD 'gis';
 {% endhighlight %}
 
 
