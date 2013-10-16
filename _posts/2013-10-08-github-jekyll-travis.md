@@ -59,7 +59,7 @@ exclude: ['Gemfile', 'Gemfile.lock', 'Rakefile', 'README.md', 'update-gh-pages.s
 
 For that we need first to get [travis][] access to our Github repository. If you do not have a [travis][] account register one on the homepage. On The [travis][] homepage go to the account settings and get access to the appropriate repository like in the image below:
 
-![alt text](/images/travis_repository_access.png "Travis Repository Access")
+![alt text](/assets/images/travis_repository_access.png "Travis Repository Access")
 
 The next step is to configure the build process. For that create a new file called ```.travis.yml``` in the root directory of the ```develop``` branch and add the ```master``` branch to the blacklist and the ```develop``` branch to the whitelist.
 
