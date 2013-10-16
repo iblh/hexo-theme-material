@@ -98,5 +98,5 @@ Following a example how to define a configuration file:
 ```
 
 
-  [jq]: http://stedolan.github.io/jq/        "./jq"
+[jq]: http://stedolan.github.io/jq/        "./jq"
 

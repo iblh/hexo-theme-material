@@ -63,7 +63,7 @@ yum list postgres*
 Installation:
 
 {% highlight bash %}
-yum install postgresql93-libs.x86_64 postgresql93-server.x86_64 postgis2_93
+yum install postgresql93-libs.x86_64 postgresql93-server.x86_64 postgresql93-devel.x86_64 postgis2_93
 {% endhighlight %}
 
 ### Configuration
@@ -71,9 +71,9 @@ yum install postgresql93-libs.x86_64 postgresql93-server.x86_64 postgis2_93
 Now perform a few post-installation setup commands, in the order: (1) Initialize the database cluster (required), (2) start database (recommended, if you want to use it straight away), (3) allow it to start-up automatically on reboot (recommended):
 
 {% highlight bash %}
-service postgresql-9.2 initdb
-service postgresql-9.2 start
-chkconfig postgresql-9.2 on
+service postgresql-9.3 initdb
+service postgresql-9.3 start
+chkconfig postgresql-9.3 on
 {% endhighlight %}
 
 
