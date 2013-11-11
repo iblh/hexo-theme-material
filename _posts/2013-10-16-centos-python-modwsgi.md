@@ -1,6 +1,6 @@
 ---
 layout: post
-title: icoast ~ How to install python 2.7.x on a CentOS 6 and compiling mod_wsgi against Python 2.7.x
+title: How to install python 2.7.x on a CentOS 6 and compiling mod_wsgi against Python 2.7.x
 author: iocast
 excerpt: 
 categories: blog
