@@ -16,11 +16,13 @@ tags:
 ## Removing preinstalled packages
 
 First we need to check which PostgreSQL, PostGIS and GDAL versions are installed. To do so check your Debian package management system (dpkg).
+
 ```bash
 dpkg -l | grep 'postgres\|gdal'
 ```
 
 You should get a list like the following one:
+
 ```bash
 ii  libgdal-dev                        1.10.0-1~precise1                 Geospatial Data Abstraction Library - Development files
 ii  libgdal1-dev                       1.10.0-1~precise1                 Geospatial Data Abstraction Library - Development files
@@ -35,6 +37,7 @@ ii  postgresql-contrib-9.1             9.1.10-0ubuntu12.04               additio
 ```
 
 If you want, you could remove these packages as follow:
+
 ```bash
 apt-get purge libgdal-dev libgdal1-dev libgdal1h postgresql-9.1 postgresql-9.1-postgis-2.0 postgresql-9.1-postgis-2.0-scripts postgresql-client-9.1 postgresql-client-common postgresql-common
 apt-get autoremove
@@ -44,6 +47,7 @@ apt-get autoclean
 ## Installing PostgreSQL 9.3
 
 First you need to find out your release code name:
+
 ```bash
 lsb_release -c
 ```
@@ -51,21 +55,25 @@ lsb_release -c
 which get you something like that ```Codename:	precise```
 
 Create a new file ```codename-pgdg.list``` in ```/etc/apt/sources.list.d``` according to the [PostgreSQL wiki page][pgsql].
+
 ```bash
 vi /etc/apt/sources.list.d/precise-pgdg.list
 ```
 
 and add the following line
+
 ```bash
 deb http://apt.postgresql.org/pub/repos/apt/ precise-pgdg main
 ```
 
 Now we need to import the repository key from
+
 ```bash
 wget --quiet -O - http://apt.postgresql.org/pub/repos/apt/ACCC4CF8.asc | sudo apt-key add -
 ```
 
 Now we can a update the repository and install the required packages from the PostgreSQL repository.
+
 ```bash
 apt-get update
 apt-get install postgresql-9.3 postgresql-contrib-9.3 postgresql-server-dev-9.3
@@ -77,6 +85,7 @@ apt-get install postgresql-9.3 postgresql-contrib-9.3 postgresql-server-dev-9.3
 To install PostGIS 2.1 it is important that ```postgresql-server-dev-x.x``` is installed, because we need to compile PostGIS against these source files. We are going the install the precompiled ```libgdal``` 1.10.0 version from ubuntugis.
 
 Install ```python-software-properties``` and add the apt sources (repositories):
+
 ```bash
 apt-get install python-software-properties
 add-apt-repository ppa:ubuntugis/ubuntugis-unstable
@@ -84,12 +93,14 @@ apt-get update
 ```
 
 Now install the new GDAL library called ```libgdal1h``` and its' development package
+
 ```bash
 apt-get install libgdal1h
 apt-cache showpkg libgdal-dev*
 ```
 
 which gets you something like that:
+
 ```bash
 ...
 Provides: 
@@ -99,16 +110,19 @@ Provides:
 ```
 
 You can install a version using the ```-f``` flag
+
 ```bash
 apt-get install -f libgdal-dev=1.10.0-1~precise1
 ```
 
 Before installing the PostGIS from source we install the required dependencies.
+
 ```bash
 apt-get install make gcc checkinstall libxml2-dev libproj-dev libgeos-dev
 ```
 
 Download the latest PostGIS source and compile it
+
 ```bash
 wget http://download.osgeo.org/postgis/source/postgis-2.1.0.tar.gz
 tar xzvf postgis-2.1.0.tar.gz 
@@ -152,6 +166,7 @@ cd postgis-2.1.0
 ```
 
 use ```checkinstall```, which runs ```make install``` and registers the package in ```dpkg```.
+
 ```bash
 make
 checkinstall
@@ -161,14 +176,17 @@ checkinstall
 ## R 3.0.2 and PL/R for PostgreSQL
 
 Before we can install PL/R extension for PostgreSQL 9.3 we need to install R 3.0.2 as describe on the [R-Project][cran] site. First edit the
+
 ```bash
 vi /etc/apt/sources.list
 ```
 and add the following line and do a update
+
 ```bash
 deb http://cran.r-project.org/bin/linux/ubuntu precise/
 ```
 as well as the key
+
 ```bash
 apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9
 apt-get update
@@ -184,6 +202,7 @@ apt-get install -f r-base=3.0.2-1precise0
 
 
 Lastly we can install the PL/R extension for PostgreSQL from the PostgreSQL apt repository
+
 ```bash
 apt-get install postgresql-9.3-plr
 ```
