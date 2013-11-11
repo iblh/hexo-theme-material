@@ -21,7 +21,7 @@ dpkg -l | grep 'postgres\|gdal'
 ```
 
 You should get a list like the following one:
-```
+```bash
 ii  libgdal-dev                        1.10.0-1~precise1                 Geospatial Data Abstraction Library - Development files
 ii  libgdal1-dev                       1.10.0-1~precise1                 Geospatial Data Abstraction Library - Development files
 ii  libgdal1h                          1.10.0-1~precise1                 Geospatial Data Abstraction Library
