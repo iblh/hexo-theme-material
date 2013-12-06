@@ -10,12 +10,12 @@ title: iocast.github.io ~ iocast
 		'featureserver',
 		'vectorformats',
 		'bottle-i18n',
-		'file-server-migration'
+		'file-server-management'
 		]
 		var posts = 10;
 		var loaded = false;
 		
-		for(index in repos) {
+		for(idx in repos) {
 			$.getJSON('https://api.github.com/repos/iocast/' + repos[index] + '/events?callback=?', function(data) {
 				var list = $('#github-events');
 				var i = 0;
