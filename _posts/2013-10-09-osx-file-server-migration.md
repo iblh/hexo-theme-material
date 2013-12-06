@@ -19,5 +19,5 @@ So to solve these problems and many more I created a little bash script which is
 * creating optionally a share point for each folder to be synced
 * propagating ACLs on a share point or on a individual directory.
 
-Each of these feature can be used independently. For more information see the project description: [server migration tool](/projects/file-server-migration.html)
+Each of these feature can be used independently. For more information see the project description: [server migration tool](/projects/file-server-management.html)
 
