@@ -16,7 +16,7 @@ title: iocast.github.io ~ iocast
 		var loaded = false;
 		
 		for(idx in repos) {
-			$.getJSON('https://api.github.com/repos/iocast/' + repos[index] + '/events?callback=?', function(data) {
+			$.getJSON('https://api.github.com/repos/iocast/' + repos[idx] + '/events?callback=?', function(data) {
 				var list = $('#github-events');
 				var i = 0;
 				
@@ -29,7 +29,7 @@ title: iocast.github.io ~ iocast
 					if (val.type == "PushEvent") {
 						$.each(val.payload.commits, function(key2, val2) {
 							if(i <= posts) {
-								list.append('<p id="' + key + '.' + key2 + '"><a href="https://github.com/iocast/' + repos[index] + '/commit/' + val2.sha + '" target="_new">' + val2.message + '</a> [' + val.actor.login + ' @ ' + val.created_at + ']</p>');
+								list.append('<p id="' + key + '.' + key2 + '"><a href="https://github.com/iocast/' + repos[idx] + '/commit/' + val2.sha + '" target="_new">' + val2.message + '</a> [' + val.actor.login + ' @ ' + val.created_at + ']</p>');
 							}
 							i++;
 						});
