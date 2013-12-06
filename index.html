@@ -33,7 +33,7 @@ title: iocast.github.io ~ iocast
 					if (val.type == "ReleaseEvent") {
 						if(iReleases < numReleases) {
 							releases.append('<p id="' + key + '"><a href="' + val.payload.release.html_url + '" target="_new">[' + val.payload.release.name + '] ' + val.payload.release.body + '</a> [' + val.actor.login + ' @ ' + val.created_at + ']</p>');
-							iReleases++:
+							iReleases++;
 						}
 					} else if (val.type == "PushEvent") {
 						$.each(val.payload.commits, function(key2, val2) {
