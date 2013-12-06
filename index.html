@@ -18,7 +18,7 @@ title: iocast.github.io ~ iocast
 		
 		for(idx in repos) {
 			$.getJSON('https://api.github.com/repos/iocast/' + repos[idx] + '/events?callback=?', function(data) {
-				var releases = $('#github-events');
+				var releases = $('#github-releases');
 				var events = $('#github-events');
 				var iReleases = 0;
 				var iEvents = 0;
