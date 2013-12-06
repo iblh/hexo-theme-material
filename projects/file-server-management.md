@@ -151,7 +151,7 @@ Maybe you have seen in the [file server migration](#file_server_migration) descr
 
 ## <a id="share_management"></a>Share Management
 
-The same procedure as in [share management](#share_management) takes here place. To (re-)create the shares on a OS X Server you simple need to set the attributes ```sync```, ```posix```, and ```acl``` to ```false``` for all folders and run this script again.
+The same procedure as in [permission propagation](#permission_propagation) takes place here. To (re-)create the shares on a OS X Server you simple need to set the attributes ```sync```, ```posix```, and ```acl``` to ```false``` for all folders and run this script again.
 
 ## <a id="user_network_share"></a>User Network Share
 
