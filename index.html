@@ -14,35 +14,43 @@ title: iocast.github.io ~ iocast
 		]
 		var numEvents = 10;
 		var numReleases = 5;
-		var loaded = false;
+		var loadedCommits = false;
+		var loadedReleases = false;
 		
 		for(idx in repos) {
-			$.getJSON('https://api.github.com/repos/iocast/' + repos[idx] + '/events?callback=?', function(data) {
+			$.getJSON('https://api.github.com/repos/iocast/' + repos[idx] + '/releases?callback=?', function(data) {
 				var releases = $('#github-releases');
-				var events = $('#github-events');
 				var iReleases = 0;
+				
+				if(!loadedReleases) {
+					$(releases).next().remove();
+					loadedReleases = true;
+				}
+
+				
+				$.each(data.data, function(key, val) {
+					if(iReleases < numReleases) {
+						releases.append('<p id="' + val.id + '"><a href="' + val.html_url + '" target="_new">[' + val.name + '] ' + val.body + '</a> @ ' + val.created_at + ']</p>');
+						iReleases++;
+					}
+				}
+			});
+			
+			
+			$.getJSON('https://api.github.com/repos/iocast/' + repos[idx] + '/commits?callback=?', function(data) {
+				var events = $('#github-events');
 				var iEvents = 0;
 				
-				if(!loaded) {
+				if(!loadedReleases) {
 					$(events).next().remove();
-					$(releases).next().remove();
-					loaded = true;
+					loadedReleases = true;
 				}
 				
 				$.each(data.data, function(key, val) {
-					if (val.type == "ReleaseEvent") {
-						if(iReleases < numReleases) {
-							releases.append('<p id="' + key + '"><a href="' + val.payload.release.html_url + '" target="_new">[' + val.payload.release.name + '] ' + val.payload.release.body + '</a> [' + val.actor.login + ' @ ' + val.created_at + ']</p>');
-							iReleases++;
-						}
-					} else if (val.type == "PushEvent") {
-						$.each(val.payload.commits, function(key2, val2) {
-							if(iEvents < numEvents) {
-								events.append('<p id="' + key + '.' + key2 + '"><a href="https://github.com/' + val.repo.name + '/commit/' + val2.sha + '" target="_new">' + val2.message + '</a> [' + val.actor.login + ' @ ' + val.created_at + ']</p>');
-							}
-							iEvents++;
-						});
+					if(iEvents < numEvents) {
+						events.append('<p id="' + val.sha + '"><a href="' + val.commit.html_url + '" target="_new">' + val.commit.message + '</a> [' + val.commit.committer.name + ' @ ' + val.commit.committer.date + ']</p>');
 					}
+					iEvents++;
 				});
 			});
 		}
