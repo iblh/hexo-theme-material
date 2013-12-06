@@ -31,13 +31,7 @@ title: iocast.github.io ~ iocast
 				
 				$.each(data.data, function(key, val) {
 					if (val.type == "ReleaseEvent") {
-						$.each(val.payload.release, function(key2, val2) {
-							if(iReleases <= numReleases) {
-								events.append('<p id="' + key + '.' + key2 + '"><a href="' + val2.html_url + '" target="_new">[' + val2.tag_name + '] ' + val2.body + '</a> [' + val.actor.login + ' @ ' + val.created_at + ']</p>');
-							}
-							iReleases++;
-						});
-
+						iReleases.append('<p id="' + key + '"><a href="' + val.payload.release.html_url + '" target="_new">[' + val.payload.release.tag_name + '] ' + val.payload.release.body + '</a> [' + val.actor.login + ' @ ' + val.created_at + ']</p>');
 					} else if (val.type == "PushEvent") {
 						$.each(val.payload.commits, function(key2, val2) {
 							if(iEvents < numEvents) {
