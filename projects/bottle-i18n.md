@@ -29,7 +29,7 @@ def get():
     
     @app.route('/world')
     def variable():
-        return bottle.template("<b>{{_('hello %(variable)s', {'variable': world})}}<b/>?", {'world': app._('world')})
+        return bottle.template("<b>{{_('hello %(variable)s', \{'variable': world\})}}<b/>?", {'world': app._('world')})
     
 	@app.route('/view')
     @i18n_view('hello', function="i18n_view")
