@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Installation of PostgreSQL 9.3, PostGIS 2.1, PLR with R 3.0.2 and libgdal1h (libgdal >= 1.10.0) on Ubuntu 12.03 LTS (precise)
+title: PGSQL 9.3 with PostGIS 2.1 and PL/R against libgdal1h from scratch
 author: iocast
-excerpt: 
+excerpt: In this post I am going to describe how you could install PostgreSQL 9.3 and compile PostGIS 2.1 against libgdal1h. It also describes how to install the latest R environment 3.0.2 and the PL/R extension for PostgreSQL.
 categories: blog
 tags:
 - server
