@@ -20,16 +20,18 @@ from bottle.ext.i18n import I18NPlugin, I18NMiddleware, i18n_defaults, i18n_view
 
 i18n_defaults(bottle.SimpleTemplate, bottle.request)
 
+
+
 def get():
     app = bottle.Bottle()
     
     @app.route('/')
     def index():
-    return bottle.template("<b>{ {_('hello')} } I18N<b/>?")
+    return bottle.template("<b>{% raw %}{{_('hello')}}{% endraw %} I18N<b/>?")
     
     @app.route('/world')
     def variable():
-        return bottle.template("<b>{ {_('hello %(variable)s', {'variable': world})} }<b/>?", {'world': app._('world')})
+        return bottle.template("<b>{% raw %}{{_('hello %(variable)s', {'variable': world})}}{% endraw %}<b/>?", {'world': app._('world')})
     
     @app.route('/view')
     @i18n_view('hello', function="i18n_view")
@@ -45,7 +47,7 @@ def get():
     
     @lang_app.route('/')
     def sub():
-        return bottle.template("current language is { {lang()} }")
+        return bottle.template("current language is {% raw %}{{lang()}}{% endraw %}")
     
     app.mount(app = lang_app, prefix = '/lang', skip = None)
     
