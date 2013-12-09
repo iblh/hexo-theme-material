@@ -5,11 +5,10 @@ author: iocast
 excerpt: This post shortly outlines how you could join a Active Directory under linux.
 categories: blog
 tags:
-- centos
-- qgis
+- active directory
+- likewise-open
+- ubuntu
 - server
-- postgresql
-- postgis
 ---
 
 The easiest way, at least for me, is to use the ```likewise-open``` package. You can find the official documentation [here](https://help.ubuntu.com/community/LikewiseOpen). Under Ubuntu you can simple install this package using ```apt-get```.
