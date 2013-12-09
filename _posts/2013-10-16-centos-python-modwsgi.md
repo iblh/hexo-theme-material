@@ -2,7 +2,7 @@
 layout: post
 title: Python 2.7.x and mos_wsgi on a CentOS 6
 author: iocast
-excerpt: Read how to install Python 2.7.x on CentOS 6 and compile ```mod_wsgi``` against Python 2.7.x.
+excerpt: Read how to install Python 2.7.x on CentOS 6 and compile mod_wsgi against Python 2.7.x.
 categories: blog
 tags:
 - centos
