@@ -48,7 +48,7 @@ title: iocast.github.io ~ iocast
 				
 				$.each(data.data, function(key, val) {
 					if(iEvents < numEvents) {
-						events.append('<p id="' + val.sha + '"><a href="' + val.commit.html_url + '" target="_new">' + val.commit.message + '</a> [' + val.commit.committer.name + ' @ ' + val.commit.committer.date + ']</p>');
+						events.append('<p id="' + val.sha + '"><a href="' + val.html_url + '" target="_new">' + val.commit.message + '</a> [' + val.commit.committer.name + ' @ ' + val.commit.committer.date + ']</p>');
 					}
 					iEvents++;
 				});
