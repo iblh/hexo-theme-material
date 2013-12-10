@@ -28,7 +28,7 @@ where you need to define the path to your organization unit, which is displayed 
 Without any configuration, all AD users have login rights to your server. At first login, each user is getting a personal user folder under ```/home/likewise-open``` and then a subfolder named as his username.
 
 
-### Restricting access to specific groups
+## Restricting access to specific groups
 
 By default, LikewiseOpen allows all AD users to logon. To limit this to specific groups you need to add required membership settings as follow:
 
@@ -44,4 +44,11 @@ If you forget which groups have access to you server, you could check it by runn
 lwconfig --detail RequireMembershipOf
 ```
 
+## Login
+
+Now you are able to login to your server using active directory authentication:
+
+```bash
+ssh <ad_domain>\\<user>@<server>
+```
 
