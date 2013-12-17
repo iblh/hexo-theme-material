@@ -6,6 +6,7 @@ issue_url: https://github.com/iocast/file-server-management/issues/new
 repository_url: http://github.com/iocast/file-server-management
 ---
 
+
 # File Server Migration Tool
 
 This repository is a collection of several "helper" scripts for analyzing directory structures, migrating a file server, creating automatic user network directories based on a active directory group, propagating POSIX and ACL permissions, and refresh applications using a git repository. Each task is assigned to an individual bash script, which can be glued together by creating an own wrapper.
@@ -14,8 +15,8 @@ The following scripts (tasks) are available:
 
 * **[directory analyses](#directory_analyses)**: currently only determining directory size (script: ```folder_size.sh```)
 * **[file server migration](#file_server_migration)**: using ```rsync``` to migrate data. Defining network shares only available for OS X Servers (script: ```migrate_data.sh```)
-* **[permission propagation](#permission_propagation)**: Propagating permission and manage shares (script: ```file_server_migration.sh```)
-* **[share management](#share_management)**: Propagating permission and manage shares (script: ```file_server_migration.sh```)
+* **[permission propagation](#permission_propagation)**: Propagating permission and manage shares (script: ```perms_share_mgmt.sh```)
+* **[share management](#share_management)**: Propagating permission and manage shares (script: ```perms_share_mgmt.sh```)
 * **[user network directory](#user_network_share)**: connects to a active directory and checks if network share is available (script: ```user_network_share.sh```)
 * **[application update](#application_updater)**: connects to git repositories and clones it to the local directory (scrip: ```git_repo_udpater.sh```)
 
@@ -148,6 +149,11 @@ where the ```excludes.txt``` consists of files and folders the be excluded durin
 
 Maybe you have seen in the [file server migration](#file_server_migration) description that for each folder the attributes ```posix``` and ```acl``` as well as the ```acls``` exists. If you want for example to propagate your POSIXs and ACLs again, you can simple set the attributes ```sync``` and ```share``` to ```false``` for all folders and run the script again.
 
+When using the ```migrate_data.sh``` script as described in [file server migration](#file_server_migration) the problem is, that it always asks for confirmation. Because of that, the ```perms_share_mgmt.sh``` script is also able to propagate permissions and create new shares, based on the same configuration file as in [file server migration](#file_server_migration).
+
+```bash
+./perms_share_mgmt.sh --config configs/shares.json
+```
 
 ## <a id="share_management"></a>Share Management
 
@@ -160,6 +166,65 @@ The idea of this script is create a folder for each user in a active directory g
 ```bash
 ./user_network_share.sh
 ```
+
+Optionally you could also silently run this script using a configuration  file.
+
+```bash
+./user_network_share.sh --config configs/network_share.json
+```
+
+where ```network_share.json``` holds all the configuration information which you need to provide when using the onscreen prompt mode.
+
+```json
+{
+	"datasource" : {
+		"credentials": {
+			"username": "ad_user",
+			"password": "ad_password"
+		},
+		"path": "/Active Directory/D/All Domains",
+		"group": "employee-group",
+		"home": "/home/",
+		"archive": "/media/archive/"
+	},
+	"posix": {
+		"username": "root",
+		"group": "root",
+		"modus": "0700",
+	},
+	"propagation": {
+		"posix": true,
+		"acl": true
+	}
+}
+```
+
+If you want, you could automate this script using a ```cron``` job or under Mac OS X Server using the provided property list configuration file ```configs/iocast.network.share.active-directory.plist```.
+
+Before you can install it, you need to change the working directory, to the path where you have installed this application.
+
+```xml
+...
+<key>WorkingDirectory</key>
+<string>/opt/file-server-management</string>
+...
+```
+
+Then **install** and load it as follow.
+
+```bash
+ln -s /opt/file-server-management/configs/iocast.network.share.active-directory.plist /Library/LaunchDaemons/
+launchctl load -w /Library/LaunchDaemons/iocast.network.share.active-directory.plist
+launchctl start iocast.network.share.active-directory
+```
+
+To **uninstall** it run these commands
+
+```bash
+launchctl unload /Library/LaunchDaemons/iocast.network.share.active-directory.plist
+rm -f /Library/LaunchDaemons/iocast.network.share.active-directory.plist
+```
+
 
 ## <a id="application_updater"></a>Application Updater
 
