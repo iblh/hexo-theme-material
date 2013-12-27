@@ -14,7 +14,7 @@ title: iocast.github.io ~ iocast
 		]
 		var numEvents = 10;
 		var numReleases = 5;
-		var loadedCommits = false;
+		var loadedEvents = false;
 		var loadedReleases = false;
 		
 		for(idx in repos) {
@@ -41,9 +41,9 @@ title: iocast.github.io ~ iocast
 				var events = $('#github-events');
 				var iEvents = 0;
 				
-				if(!loadedReleases) {
+				if(!loadedEvents) {
 					$(events).next().remove();
-					loadedReleases = true;
+					loadedEvents = true;
 				}
 				
 				$.each(data.data, function(key, val) {
