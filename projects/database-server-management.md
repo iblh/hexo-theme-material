@@ -60,7 +60,7 @@ and add the following lines for a daily backup on 5 mintues after midnight
 5  0    * * *   root    /opt/repos/database-server-management/<database>/<db>_backup_rotated.sh
 ```
 
-where ```<database>``` is *postgresql* or **mariadb** and ```<db>``` could be **pg** or **mariadb**.
+where ```<database>``` is **postgresql** or **mariadb** and ```<db>``` could be **pg** or **mariadb**.
 
 Lastly we need to restart ```cron```
 
