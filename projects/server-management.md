@@ -298,7 +298,7 @@ rm -f /Library/LaunchDaemons/iocast.network.share.active-directory.plist
 
 You can automate this script by adding the following line to the ```crontab```
 
-``
+```
 # m h dom mon dow user  command
 0  *    * * *   root    /opt/repos/git_repo_updater.sh
 ```
