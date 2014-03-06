@@ -326,6 +326,7 @@ Run ```server-management/backup/linux/backup_over_cifs.sh initialize --destinati
 
 To run in periodical, you can create a crontab entry, e.g. 5 min past 4 in the morning:
 
+```
 # m h dom mon dow user  command
 05 4    * * *   root    server-management/backup/linux/backup_over_cifs.sh backup --destination server.example.com
-
+```
