@@ -1,13 +1,79 @@
 ---
 layout: default
-title: iocast ~ file-server-management
-zip_url: https://github.com/iocast/file-server-management/zipball/master
-issue_url: https://github.com/iocast/file-server-management/issues/new
-repository_url: http://github.com/iocast/file-server-management
+title: iocast ~ server-management
+zip_url: https://github.com/iocast/server-management/zipball/master
+issue_url: https://github.com/iocast/server-management/issues/new
+repository_url: http://github.com/iocast/server-management
 ---
 
+# Server Management
 
-# File Server Migration Tool
+This repository holds a collection of scripts to automatically backup databases, such as PostgreSQL or MariaDB, to migrate a Windows or OS X file server and backup files to a SMB share. Currently it consists of three different parts.
+
+## Database Server Management Tool
+
+The repository holds a bunch of script to manage databases. Currently you are able to automatically backup **PostgreSQL** and **MariaDB** as well as **MySQL** database servers. These scripts are based on the example scripts found in the [PostgreSQL wiki](http://wiki.postgresql.org/wiki/Automated_Backup_on_Linux) from Thom, Chronos, Kesslernetworks and Marcp.
+
+### Databases
+
+Currently I support PostgreSQL and MariaDB. Both are based on the same logic and more or less same configuration file.
+
+#### PostgreSQL
+
+First we need to change the permission of the ```pgpass.conf``` file, because otherwise PostgreSQL would not consider it and the username and password.
+
+``` bash
+chmod 0600 postgresql/pgpass.conf
+vi postgresql/pgpass.conf
+```
+
+Now change the configuration file according to your needs. Note that the user defined in ```pgpass.conf``` should be the same as the one in the configuration file
+
+``` bash
+vi postgresql/pg_backup.conf
+```
+
+
+#### MariaDB
+
+Change the configuration file according to your needs
+
+``` bash
+vi mariadb/mariadb_backup.config
+```
+
+Now define the password for the configured user in the ```my.cnf``` file. If you do not have defined a user, then the scripts takes the default user ```root```.
+
+``` bash
+vi mariadb/my.cnf
+```
+
+
+### Scheduling
+
+To run automatic backups you could use your preferred the schedulling management engine installed on your system. In my cause, I use ```cron``` under a Linux system. Because of simplycity I directly change the master ```crontab``` file and add my changes there. You could also you the **daily**, **weekly** directory under ```/etc``` if you system provides that.
+
+``` bash
+vi /etc/crontab
+```
+
+and add the following lines for a daily backup on 5 mintues after midnight
+
+```
+# m h dom mon dow user  command
+5  0    * * *   root    /opt/repos/database-server-management/<database>/<db>_backup_rotated.sh
+```
+
+where ```<database>``` is **postgresql** or **mariadb** and ```<db>``` could be **pg** or **mariadb**.
+
+Lastly we need to restart ```cron```
+
+``` bash
+service cron restart
+```
+
+
+## File Server Migration Tool
 
 This repository is a collection of several "helper" scripts for analyzing directory structures, migrating a file server, creating automatic user network directories based on a active directory group, propagating POSIX and ACL permissions, and refresh applications using a git repository. Each task is assigned to an individual bash script, which can be glued together by creating an own wrapper.
 
@@ -21,7 +87,7 @@ The following scripts (tasks) are available:
 * **[application update](#application_updater)**: connects to git repositories and clones it to the local directory (scrip: ```git_repo_udpater.sh```)
 
 
-## <a name="directory_analyses"></a>Directory Analyses
+### <a name="directory_analyses"></a>Directory Analyses
 
 The ```folder_size.sh``` script analysis a directory structure and excerpts each directory size. Run it as follow
 
@@ -52,11 +118,11 @@ where the configuration json file consists of all folders to analyze including t
 
 In the ```"subfolders"``` attribute you can define subdirectories of a parent folder that need to be listed separately in the output.
 
-## <a id="file_server_migration"></a>File Server Migration
+### <a id="file_server_migration"></a>File Server Migration
 
 The file server migration script ```migrate_data.sh``` synchronizes directories from a remote server to the local server using ```rsync```. In addition it can automatically set new POSIX rights, adding extended ACL attributes ([permission propagation](#permission_propagation)) and [creating a shares](#share_management).
 
-### Preparation for unattended synchronization
+#### Preparation for unattended synchronization
 
 The following steps need to be done antecedent:
 
@@ -72,7 +138,7 @@ The following steps need to be done antecedent:
 	* ```<user> ALL= NOPASSWD:/usr/bin/rsync``` (add this to the appropriate position in the file)
 
 
-### Configuration
+#### Configuration
 
 The configuration file is a ```json``` file, which consists of four sections. First the ```source``` need to be defined which is the server from where you want to copy (remote server). Next is the ```destination``` from where you run this script and want to sync the files to. Then we have some configuration parts like ```rsa``` which holds the path to the private key created in the [preparation section](#preparation) and the prefix for the ```log``` file.
 
@@ -134,7 +200,7 @@ Following a example how to define a configuration file:
 }
 ```
 
-### Run it
+#### Run it
 
 Now you can run it as follow:
 
@@ -145,7 +211,7 @@ Now you can run it as follow:
 where the ```excludes.txt``` consists of files and folders the be excluded during the synchronization process.
 
 
-## <a id="permission_propagation"></a>Permission propagation
+### <a id="permission_propagation"></a>Permission propagation
 
 Maybe you have seen in the [file server migration](#file_server_migration) description that for each folder the attributes ```posix``` and ```acl``` as well as the ```acls``` exists. If you want for example to propagate your POSIXs and ACLs again, you can simple set the attributes ```sync``` and ```share``` to ```false``` for all folders and run the script again.
 
@@ -155,11 +221,11 @@ When using the ```migrate_data.sh``` script as described in [file server migrati
 ./perms_share_mgmt.sh --config configs/shares.json
 ```
 
-## <a id="share_management"></a>Share Management
+### <a id="share_management"></a>Share Management
 
 The same procedure as in [permission propagation](#permission_propagation) takes place here. To (re-)create the shares on a OS X Server you simple need to set the attributes ```sync```, ```posix```, and ```acl``` to ```false``` for all folders and run this script again.
 
-## <a id="user_network_share"></a>User Network Share
+### <a id="user_network_share"></a>User Network Share
 
 The idea of this script is create a folder for each user in a active directory group named by its username and propagate POSIX and ACL rights. All you need to do is to run the script ```user_network_share.sh``` an follow the onscreen prompts.
 
@@ -226,13 +292,13 @@ rm -f /Library/LaunchDaemons/iocast.network.share.active-directory.plist
 ```
 
 
-## <a id="application_updater"></a>Application Updater
+### <a id="application_updater"></a>Application Updater
 
 ```git_repo_updater.sh``` scans a defined directory for each subfolder and runs a ```git pull``` inside each folder.
 
 You can automate this script by adding the following line to the ```crontab```
 
-```
+``
 # m h dom mon dow user  command
 0  *    * * *   root    /opt/repos/git_repo_updater.sh
 ```
@@ -250,4 +316,16 @@ automatically starts the ```ssh-agent``` in the background.
 
 
 [jq]: http://stedolan.github.io/jq/        "./jq"
+
+
+## Backup Scripts
+
+Currently a script is included to backup a machine using rsync to a SMB share. It is located under ```linux/backup_over_cifs.sh```.
+
+Run ```server-management/backup/linux/backup_over_cifs.sh initialize --destination server.exmaple.com``` to initialize a configuration file called ```.smbcredentials_server.example.com``` which will be stored under the **home directory** of the **current user**. After this file has been created you can run the backup ```server-management/backup/linux//backup_over_cifs.sh backup --destination server.exmaple.com ```. Note that you need to run the backup under the same user as the initialization script.
+
+To run in periodical, you can create a crontab entry, e.g. 5 min past 4 in the morning:
+
+# m h dom mon dow user  command
+05 4    * * *   root    server-management/backup/linux/backup_over_cifs.sh backup --destination server.example.com
 
