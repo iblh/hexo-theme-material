@@ -82,7 +82,7 @@ apt-get install postgresql-9.3 postgresql-contrib-9.3 postgresql-server-dev-9.3
 
 ## Compiling PostGIS 2.1 against libgdal >= 1.10.0
 
-To install PostGIS 2.1 it is important that ```postgresql-server-dev-x.x``` is installed, because we need to compile PostGIS against these source files. We are going the install the precompiled ```libgdal``` 1.10.0 version from ubuntugis.
+To install PostGIS 2.1 it is important that ```postgresql-server-dev-x.x``` is installed, because we need to compile PostGIS against these source files. We are going the install the precompiled ```libgdal``` 1.10.0 version from **ubuntugis**.
 
 Install ```python-software-properties``` and add the apt sources (repositories):
 
