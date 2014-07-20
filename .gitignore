@@ -53,3 +53,7 @@ DerivedData/
 
 # Jekyll
 _site/
+
+# Pelican
+output/
+cache/

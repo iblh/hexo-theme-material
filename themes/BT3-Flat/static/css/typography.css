@@ -1,0 +1,139 @@
+/** ************************************* **
+	@Author			Dorin Grigoras
+	@Website		www.stepofweb.com
+	@Last Update	9:12 AM Saturday, January 11, 2014
+
+	TABLE CONTENTS
+	---------------------------
+		01. Typography
+		02. Spacing
+		03. Responsive
+	---------------------------
+	
+ ** ************************************* **/
+
+/** 01. Typography
+ **************************************************************** **/
+ body {
+  color: #666;
+  background:#fff;
+  font-family:'Open Sans', sans-serif;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 300;
+  padding: 0px !important;
+  margin: 0px !important;
+  border: 0px !important;
+  height: 100%;
+  line-height: 1.5;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family:'Dosis';
+  font-weight: 300;
+  padding:0;
+  margin:0;
+  color:#181818;
+}
+h1 {
+  font-size:45px;
+  line-height: 45px;
+}
+h2 {
+  font-size:35px;
+  line-height: 35px;
+}
+h3 {
+  font-size:30px;
+  line-height: 30px;
+}
+h4 {
+  font-size:24px;
+  line-height: 24px;
+}
+a, a:hover, a:focus {
+  cursor: pointer;
+  text-decoration:none;
+  -webkit-transition: background 300ms;
+  -moz-transition: background 300ms;
+  -o-transition: background 300ms;
+  transition: background 300ms;
+}
+iframe {
+  border:0 !important;
+  margin:0;
+  padding:0;
+}
+/* blockquote */
+ blockquote {
+  display: block;
+  margin:20px 0;
+}
+blockquote p {
+  padding:0 0 6px 0;
+  margin:0;
+}
+/* quote */
+ hr {
+  border:0;
+  border-bottom:#fff 1px solid;
+  border-top:#ddd 1px solid;
+  margin-bottom:60px;
+}
+/* ---------- SECTION ---------- */
+ footer, section {
+  position:relative;
+  display:block;
+  background-color:#fff;
+  z-index:1;
+  /* footer fixed = 0 */
+}
+section header p {
+  font-family:'Dosis';
+}
+section ul, section ul li {
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+/* ---------- /SECTION ---------- */
+
+/** 02. Spacing
+ **************************************************************** **/
+ header {
+  margin:0 0 40px 0;
+  text-transform:uppercase;
+}
+p {
+  margin:0;
+  padding:10px 0;
+  line-height:26px;
+}
+header p {
+  padding:0;
+}
+section {
+  padding:110px 0;
+}
+section header p {
+  margin:0;
+  padding:0;
+}
+section article {
+  margin-bottom:40px;
+}
+section article:last-child {
+  margin-bottom:0;
+}
+pre {
+  margin:20px 0;
+}
+/** 03. Responsive
+ **************************************************************** **/
+ @media only screen and (max-width: 960px) {
+  html, body {
+    font-size:15px;
+  }
+  p {
+    line-height:22px;
+  }
+}

@@ -1,5 +1,16 @@
-language: ruby
-rvm: 1.9.3
+language: python
+python:
+  - "2.6"
+  - "2.7"
+  - "3.2"
+  - "3.3"
+
+
+# command to install dependencies
+install:
+  - "pip install -r requirements.txt"
+
+
 env:
   global:
     - secure: gUVSU/Eu2rRJ4WZzvlDPseTbCIV/Nv/xNkAeSyMSqsCcdbP57y22YrArQGYLJ7UB4lNlQDDCtQTaMtoE28GCHjPWBDsX22X2hTJQxhS0fTFN9aIpPea2dcCiKTnNIS2Jh9qmV23Ly3XuI0YvDLuIs3YK9E4NtH/msz6IiUUmN9w=
@@ -12,6 +23,6 @@ branches:
   only:
     - develop
 
-script: rake travis
+script: pelican -o output/ -s pelicanconf.py
 
 after_success: ./update-gh-pages.sh

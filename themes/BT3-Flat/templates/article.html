@@ -1,0 +1,99 @@
+{% import "macros.html" as m %}
+{% extends "blog_base.html" %}
+<!-- BLOG -->
+{%block content_area %}
+  <!-- article title -->
+  <header>
+    {% if article.link %}
+      <a href="{{ article.link }}" rel="bookmark" title="External Link to {{ article.title|striptags|e }}"><h1>{{ article.title }} <i class="fa fa-external-link"></i></h1></a>
+    {% else %}
+      <h1>{{ article.title }}</h1>
+    {% endif %}
+    <small class="fsize13">
+      {% if article.category %}
+        {% for category, articles in categories %}
+          {% if category.url == article.category.url %}
+            {% set article_counter = articles|length() %}
+            <a href="{{ SITEURL }}/{{ article.category.url }}" rel="tag tooltip" class="label label-default light" data-placement="right" data-original-title="{{ article_counter }} article{{ 's' if article_counter > 1 else '' }} in this category"><i class="fa fa-dot-circle-o"></i> {{ article.category }}</a>
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+      <a href="{{ SITEURL }}/{{article.url}}#disqus_thread" class="scrollTo label label-default light" data-disqus-identifier="{{article.url}}"><i class="fa fa-comment-o"></i> ?? Comments</a>
+      <span class="label label-default light">{{ article.locale_date }}</span> 
+    </small>
+  </header>
+
+  <article class='content'>
+    {% if article.featured %}
+      {% if article.type|lower =='image' %}
+        <figure>
+          <img src="{{article.featured}}" class="img-responsive" data-src="holder.js/820x500/#676767:#555555/auto/" alt="img" />
+        </figure>
+      {% elif article.type|lower =='video' %}
+        <iframe class="fitvids" src="{{article.featured}}" width="800" height="450"></iframe>
+      {% elif article.type|lower =='audio'%}
+        <iframe class="fullwidth" height="166" src="{{article.featured}}"></iframe> 
+      {% endif %}
+    {% endif %}
+    {{ article.content }}
+  </article>
+
+  {% if article.related_posts %}
+    <h3>Related content</h3>
+    <!-- TODO: Use fancier related layout, as in http://kevin.deldycke.com/2012/04/beautify-contextual-related-posts-wordpress-plugin/ -->
+    <ul>
+      {% for related_post in article.related_posts %}
+        <li><a href="{{ SITEURL }}/{{ related_post.url }}">{{ related_post.title }}</a></li>
+      {% endfor %}
+      </ul>
+  {% endif %}
+  <div class="divider"><!-- lines divider --></div>
+
+  <!-- SOCIAL -->
+  {% include "_includes/share_post.html" %}
+  
+
+  <!-- TAGS -->
+  <p class="fsize16"> Tags:
+    {% if article.tags %}
+      {% set article_tags = [] %}
+      {% for tag, articles in tags %}
+        {% for t in article.tags %}
+          {% if tag.url == t.url %}
+            {% if article_tags.append({'name': tag.name, 'url': tag.url, 'articles': articles|length()}) %}{% endif %}
+          {% endif %}
+        {% endfor %}
+      {% endfor %}
+      {% for tag in article_tags|sort(reverse = True, attribute = 'articles') %}
+        {{ m.render_tag(tag) }}
+      {% endfor %}
+    {% endif %}
+  </p>
+
+  <hr /><!-- divider -->
+
+  {% if SITEURL and DISQUS_SITENAME %}
+    <div id="comments" class="comments">
+      <div id="disqus_thread"></div>
+      <script type="text/javascript">
+        var disqus_shortname = '{{ DISQUS_SITENAME }}';
+        var disqus_identifier = "{{ article.url }}";
+        var disqus_title = "{{ article.title|striptags|e }}";
+        var disqus_url = "{{ SITEURL }}/{{ article.url }}";
+        (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus</a>.</noscript>
+    </div>
+  {% endif %}
+{%endblock%}
+
+
+
+
+
+
+

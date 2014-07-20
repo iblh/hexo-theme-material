@@ -1,0 +1,460 @@
+/** ************************************* **
+	@Author			Dorin Grigoras
+	@Website		www.stepofweb.com
+	@Last Update	10:05 AM Sunday, January 12, 2014
+
+	TABLE CONTENTS
+	---------------------------
+		01. Globals
+		02. Nav Bar
+		03. Slider
+		04. Content
+		05. Contact
+		06. About Me
+		07. Util
+		09. Price Table
+		10. Tabs
+		11. Footer
+		12. Portfolio
+		13. Services
+		14. Responsive
+ ** ************************************* **/
+
+/** 01. Globals
+ **************************************************************** **/
+ html, body {
+  overflow-x:hidden;
+  overflow-x:hidden;
+}
+.container {
+  position:relative;
+}
+.label {
+  display:inline-block;
+  margin:6px 1px 0 0;
+  padding:5px 6px;
+  -moz-border-radius:0;
+  border-radius:0;
+}
+.label.light {
+  color:#888;
+  background-color:#eee;
+}
+div.divider {
+  height: 4px;
+  width: 220px;
+  border-top:#ccc 1px solid;
+  border-bottom:#ccc 1px solid;
+  margin:auto;
+  margin-top:2px;
+  margin-bottom:60px;
+  text-align:center;
+}
+.big-paragraph, .big-paragraph p {
+  font-size:25px;
+  line-height:35px;
+}
+.plusNav {
+  width: 36px;
+  height: 36px;
+  display: inline-block;
+  border: 6px double #fff;
+  background:#ccc;
+  text-align:center;
+  line-height:23px;
+  font-size:30px;
+  color:#fff;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-transition: all 300ms !important;
+  -moz-transition: all 300ms !important;
+  -o-transition: all 300ms !important;
+  transition: all 300ms !important;
+}
+.plusNav:hover {
+  border:6px solid #fff;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1), 0 0 10px 10px #ccc, 0 0 0 10px rgba(255, 255, 255, 0.5);
+  opacity:0.7;
+}
+section header h1, section header h2, section header h3 {
+  color:#0F1113;
+}
+section {
+  background:#ffffff;
+}
+section.arrow-down {
+  background:#ffffff url('../images/down_white.png') no-repeat top center
+}
+section.alternate {
+  background:#F6F6F6;
+}
+section.alternate.arrow-down {
+  background:#F6F6F6 url('../img/down_alternate.png') no-repeat top center
+}
+/* BUTTONS - BOOTSTRAP REWRITE */
+ section .btn {
+  margin-top:30px;
+  text-shadow:none;
+}
+.btn:hover {
+  border:rgba(0, 0, 0, 0.5) 2px solid !important;
+}
+/** 02. Nav Bar
+ **************************************************************** **/
+ #header {
+  margin:0;
+  padding:0;
+  position:relative;
+  height:60px;
+  margin-top:-60px;
+  left:0;
+  right:0;
+  top:0;
+  color:#fff;
+  z-index:99;
+}
+#header .navbar {
+  margin:0;
+  padding:0;
+}
+#header a.navbar-brand {
+  padding:0;
+  color:#fff;
+  height:60px;
+  line-height:60px;
+  font-size:25px;
+  font-weight:400;
+  text-transform:uppercase;
+  padding-left:15px;
+}
+#header a.navbar-brand img {
+  margin:0;
+  padding:0;
+  margin-top:-7px;
+  margin-right:6px;
+}
+#header .navbar-inverse {
+  border:0;
+  border-radius:0;
+  background:#0F1113;
+}
+#header .navbar-inverse ul.nav {
+  margin-right:20px;
+}
+#header .navbar-inverse ul.nav a {
+  color:#fff;
+  text-transform:uppercase;
+  font-size:14px;
+  letter-spacing:.1em;
+  font-weight:400;
+  padding-top:20px;
+  padding-bottom:20px;
+}
+#header .navbar-inverse ul.nav li.active a, #header .navbar-inverse ul.nav a:hover {
+  color:#ABA798;
+}
+#header .navbar-collapse {
+  padding:0;
+}
+#mobileMenu {
+  color:#fff;
+  display:none;
+}
+/* white */
+ #header a.btn-fullscreen {
+  display:inline-block;
+  float:right;
+  font-size:26px;
+  background:#232428;
+  color:#ABA798;
+  right:0;
+  top:0;
+  bottom:0;
+  width:60px;
+  text-align:center;
+  line-height:60px;
+  display:none;
+  /* visible via javascript */
+}
+/** 03. Slider
+**************************************************************** **/
+ #home.full-screen {
+  background:#f6f6f6;
+  height:100%;
+  overflow:hidden;
+  margin:0;
+  padding:0;
+}
+#slider .fullscreen-img {
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  width: 100%;
+  height: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#slider li {
+  display:none;
+}
+.image-caption {
+  text-align:center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top:-30px;
+  /* header height/2 */
+  display: inline-block;
+  max-width: 900px;
+  z-index:1;
+  color:#fff;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+#home .image-caption hr {
+  width: 220px;
+  height: 1px;
+  background: #fff;
+  margin: 2px auto;
+  border: 0;
+}
+#home .image-caption h1, #home .image-caption h2 {
+  font-family:'Open Sans', sans-serif;
+  font-weight:800;
+  font-size:600%;
+  line-height:95%;
+  text-transform:uppercase;
+  text-shadow:none;
+  color:#fff;
+  display:block;
+}
+#home .image-caption .inner {
+  display:block;
+  padding:40px 0;
+}
+#home .overlay {
+  position:absolute;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+  background:rgba(0, 0, 0, 0.3);
+  z-index:0;
+}
+/* custom */
+ #home.full-screen, #home.half-screen {
+  background:#F0F0F0 url('../img/loading.gif') no-repeat center;
+}
+/** 04. Content
+ **************************************************************** **/
+
+/* 
+	Isotope CSS3 transitions 
+*/
+ .isotope, .isotope .isotope-item {
+  -webkit-transition-duration: 0.8s;
+  -moz-transition-duration: 0.8s;
+  -ms-transition-duration: 0.8s;
+  -o-transition-duration: 0.8s;
+  transition-duration: 0.8s;
+}
+.isotope {
+  -webkit-transition-property: height, width;
+  -moz-transition-property: height, width;
+  -ms-transition-property: height, width;
+  -o-transition-property: height, width;
+  transition-property: height, width;
+}
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+  -moz-transition-property: -moz-transform, opacity;
+  -ms-transition-property: -ms-transform, opacity;
+  -o-transition-property: -o-transform, opacity;
+  transition-property: transform, opacity;
+}
+/** 06. About Me
+ **************************************************************** **/
+ #about .me-picture {
+  position:relative;
+  display:block;
+  margin-bottom:60px;
+}
+#about .me-picture .item {
+  border:#fff 20px solid;
+  display:inline-block;
+  position:relative;
+  z-index:1;
+  overflow:hidden;
+}
+#about .me-picture img {
+  border:#F6F6F6 10px solid;
+  width:240px;
+  height:240px;
+  -moz-border-radius:50%;
+  border-radius:50%;
+}
+#about .me-picture hr {
+  margin:0 !important;
+  position:absolute;
+  top:50%;
+  width:100%;
+  z-index:0;
+}
+/** 11. Footer
+ **************************************************************** **/
+ footer {
+  padding:10px 0;
+  font-size:13px;
+  background:#0F1113;
+  position:relative;
+}
+footer .copyright {
+  padding-top:10px;
+}
+footer a.social {
+  width:40px;
+  height:40px;
+  line-height:42px;
+}
+footer a.toTop {
+  position:absolute;
+  left:50%;
+  top:-23px;
+  margin-left:-20px;
+  background:rgba(0, 0, 0, 0.5);
+  padding:10px 16px;
+  bottom:0;
+  font-size:23px;
+  z-index:100;
+  color:#fff;
+  -webkit-border-top-right-radius: 9px;
+  -webkit-border-top-left-radius: 9px;
+  -moz-border-radius-topright: 9px;
+  -moz-border-radius-topleft: 9px;
+  border-top-right-radius: 9px;
+  border-top-left-radius: 9px;
+}
+/** 12. Portfolio
+ **************************************************************** **/
+ #portfolio .isotope-item {
+  max-width:360px;
+  display:inline-block;
+  margin:8px;
+  -webkit-transition: all 300ms !important;
+  -moz-transition: all 300ms !important;
+  -o-transition: all 300ms !important;
+  transition: all 300ms !important;
+}
+#portfolio .isotope-item a {
+  display:block;
+  position:relative;
+  overflow:hidden;
+}
+#portfolio .isotope-item .caption {
+  position:relative;
+  display:block;
+  background:#fff;
+  padding:40px 20px 20px 20px;
+  text-align:center;
+}
+#portfolio .isotope-item .caption h3 {
+  font-family:'Open Sans';
+  font-size:14px;
+  line-height:14px;
+  font-weight:700;
+}
+#portfolio .isotope-item .caption p {
+  font-size:12px;
+  padding:0;
+  text-transform:uppercase;
+  display:inline-block;
+  color:#999;
+  border-top:#999 1px dashed;
+  margin-top:6px;
+}
+#portfolio .isotope-item .caption i.fa {
+  background:#333;
+  padding:14px;
+  color:#fff;
+  position:absolute;
+  width:50px;
+  height:50px;
+  margin-top:-66px;
+  margin-left:-25px;
+  left:50%;
+  background:#fff;
+  color:#0F1113;
+  border:#fff 2px solid;
+}
+#portfolio .isotope-item a:hover i.fa {
+  color:#2A2F36;
+}
+/* responsive - special resolutions */
+ @media only screen and (max-width: 1200px) {
+  #portfolio .isotope-item {
+    max-width:280px;
+  }
+}
+@media only screen and (max-width: 640px) {
+  #portfolio .isotope-item {
+    max-width:360px;
+  }
+}
+/** 14. Responsive
+ **************************************************************** **/
+ @media only screen and (max-width: 768px) {
+  section {
+    text-align:center;
+  }
+  #home .image-caption h1, #home .image-caption h2 {
+    font-size:450%;
+  }
+  #mobileMenu {
+    display:block;
+    width:50px;
+    height:60px;
+    float:right;
+    margin-right:15px;
+    font-size:24px;
+    text-align:right;
+  }
+  #header a.btn-fullscreen {
+    display:none !important;
+  }
+  #header .navbar-inverse ul.nav a {
+    padding:10px 30px;
+  }
+  footer a.toTop {
+    bottom:auto;
+    -moz-border-radius:8px;
+    border-radius:8px;
+  }
+  footer .copyright {
+    padding-top:30px;
+    padding-bottom:30px;
+  }
+  footer div.text-right, footer {
+    text-align:center;
+    !important;
+  }
+}
+@media only screen and (max-width: 479px) {
+  #home .image-caption h1, #home .image-caption h2 {
+    font-size:45px;
+    line-height:45px;
+  }
+  #header {
+    position:fixed !important;
+    left:0;
+    top:0;
+    right:0;
+    margin-top:0 !important;
+  }
+  ul.bstrap-tabs li {
+    margin-bottom:1px;
+  }
+}

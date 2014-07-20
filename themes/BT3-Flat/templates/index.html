@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    {% include "_includes/header.html" %}
+  </head>
+
+  <body>
+
+    <!-- HOME -->
+    <section id="home" class="full-screen"><!-- full-screen or half-screen (550px height) -->
+
+      <div id="slider">
+
+        <ul class="slides-container">
+
+          <!-- Item 1 -->
+          <li>
+            <div class="image-caption">
+              <hr /><hr />
+              <div class="inner">
+                <h2 class="bigtext strtoupper nomargin">{{ SITENAME|e }}</h2>
+              </div>
+              <hr /><hr />
+            </div>
+            <span class="overlay"></span>
+            <div style="background-image: url('assets/images/masterhead.png');" class="fullscreen-img"></div>
+            
+          </li>
+        </ul>
+
+      </div>
+
+    </section>
+    <!-- /HOME -->
+
+
+
+    <!-- Main Nav -->
+    <header id="header">
+
+      <nav class="navbar navbar-inverse" role="navigation">
+        <div class="container">
+
+          <!-- Mobile Menu Button -->
+          <button id="mobileMenu" class="fa fa-bars" type="button" data-toggle="collapse" data-target=".navbar-collapse"></button>
+
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <a class="navbar-brand scrollTo" href="#home">
+              <img src="/assets/images/logo_inverted.png" alt="" width="50" height="50" /> 
+              <span class="hidden-xs">{{ SITENAME|e }}</span>
+            </a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+            <!-- Fullscreen Button - Unavailable for IE -->
+            <a href="#" class="btn-fullscreen"><i class="fa fa-external-link"></i></a>
+
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#home" class="scrollTo">Home</a></li>
+              <li><a href="#about" class="scrollTo">About</a></li>
+              <li><a href="#work" class="scrollTo">Work</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              {% if LINKS %}
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Links <b class="caret"></b></a>
+                  <ul class="dropdown-menu" style="background-color:#000">
+                  {% for site_title, site_link in LINKS %}
+                    <li style="background-color:#000"><a href="{{site_link}}" target="_blank">{{site_title}}</a></li>
+                  {% endfor %}
+                  </ul>
+                </li>
+              {% endif %}
+            </ul>
+          </div><!-- /.navbar-collapse -->
+
+        </div>
+      </nav>
+
+    </header>
+    <!-- /Main Nav -->
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="container">
+        <header class="text-center">
+          <h1>ABOUT ME</h1>
+        </header>
+
+        <div class="divider"><!-- lines divider --></div>
+
+        {% if PERSONAL_INFO %}
+          <article class="text-center big-paragraph">
+            <p>{{PERSONAL_INFO}}</p>
+          </article>
+        {% endif %}
+
+        {% if PERSONAL_PHOTO %}
+          <div class="me-picture text-center">
+            <div class="item">
+              <img class="img-responsive" src="{{PERSONAL_PHOTO}}" width="200" height="200" alt="" />
+            </div><hr />
+          </div>
+        {% endif %}
+
+        <!-- <article>
+          <div class="row text-left"> -->
+
+            <!-- Passion -->
+           <!--  <div class="col-md-4">
+              <h3>Passion</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque. Ut enim massa, sodales tempor convallis et, iaculis ac massa. Etiam suscipit nisl eget lorem pellentesque quis iaculis mi mattis.</p>
+            </div> -->
+
+
+            <!-- Precision -->
+            <!-- <div class="col-md-4">
+              <h3>Precision</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque. Ut enim massa, sodales tempor convallis et, iaculis ac massa. Etiam suscipit nisl eget lorem pellentesque quis iaculis mi mattis.</p>
+            </div> -->
+
+
+            <!-- Simplicity -->
+            <!-- <div class="col-md-4">
+              <h3>Simplicity</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque. Ut enim massa, sodales tempor convallis et, iaculis ac massa. Etiam suscipit nisl eget lorem pellentesque quis iaculis mi mattis.</p>
+            </div> -->
+
+          <!-- </div>
+        </article> -->
+
+      </div>
+    </section>
+    <!-- /ABOUT -->
+
+    <!-- WORK -->
+    <section id="work" class="alternate arrow-down">
+      <div class="container">
+        <header class="text-center">
+          <h1>MY WORK</h1>
+        </header>
+
+        <div class="divider"><!-- lines divider --></div>
+
+        {% if WORK_DESCRIPTION %}
+        <article>
+          <p>
+            {{WORK_DESCRIPTION}}
+          </p>
+        </article>
+        {% endif %}
+
+
+        <div id="portfolio" class="text-center animate_fade_in">
+
+          <div class="row">
+
+            <ul class="sort-destination isotope" data-sort-id="isotope-list">
+
+              {% for work_type, work_cover_link, work_title, work_description, work_link in WORK_LIST %}
+                {% if work_type == 'link' %}
+                  <li class="isotope-item col-sm-6 col-md-4 brand"><!-- item -->
+                    <a class="external" href="{{work_link}}" target="_blank">
+                      <img src="{{work_cover_link}}" class="img-responsive" alt="img" />
+                      <div class="caption">
+                        <i class="rounded fa fa-link"></i>
+                        <h3>{{work_title}}</h3>
+                        <p>{{work_description}}</p>
+                      </div>
+                    </a>
+                  </li>
+                {% endif %}
+              {% endfor %}
+
+              <!-- item -->
+              <!-- <li class="isotope-item col-sm-6 col-md-4 image">
+                <a class="popup-image" href="http://stepofweb.gweb.io/.templates/IsisOne/HTML/assets/images/preview/content/portfolio/p1.jpg">
+                  <img src="http://stepofweb.gweb.io/.templates/IsisOne/HTML/assets/images/preview/content/portfolio/p1.jpg" class="img-responsive" alt="img" />
+                  <div class="caption">
+                    <i class="rounded fa fa-camera"></i>
+                    <h3>PROJECT TITLE</h3>
+                    <p>Image Popup</p>
+                  </div>
+                </a>
+              </li> -->
+
+              <!-- item -->
+              <!-- <li class="isotope-item col-sm-6 col-md-4 video">
+                <a class="popup-video" href="http://www.youtube.com/watch?v=kh29_SERH0Y?rel=0">
+                  <img src="http://stepofweb.gweb.io/.templates/IsisOne/HTML/assets/images/preview/content/portfolio/p2.jpg" class="img-responsive" alt="img" />
+                  <div class="caption">
+                    <i class="rounded fa fa-film"></i>
+                    <h3>PROJECT TITLE</h3>
+                    <p>Youtube Videofdafdsf
+                    fadsfaf
+                    fasdfadsfa
+                    fasdfadf
+                    afadsfa</p>
+                  </div>
+                </a>
+              </li> -->
+
+              <!-- item -->
+              <!-- <li class="isotope-item col-sm-6 col-md-4 video brand">
+                <a class="popup-video" href="http://vimeo.com/23630702">
+                  <img src="http://stepofweb.gweb.io/.templates/IsisOne/HTML/assets/images/preview/content/portfolio/p3.jpg" class="img-responsive" alt="img" />
+                  <div class="caption">
+                    <i class="rounded fa fa-film"></i>
+                    <h3>PROJECT TITLE</h3>
+                    <p>Vimeo Video</p>
+                  </div>
+                </a>
+              </li> -->
+
+              <!-- item -->
+              <!-- <li class="isotope-item col-sm-6 col-md-4 brand">
+                <a class="external ajax-project" href="project-external-1.html">
+                  <img src="http://stepofweb.gweb.io/.templates/IsisOne/HTML/assets/images/preview/content/portfolio/p4.jpg" class="img-responsive" alt="img" />
+                  <div class="caption">
+                    <i class="rounded fa fa-link"></i>
+                    <h3>PROJECT TITLE</h3>
+                    <p>External Project 1</p>
+                  </div>
+                </a>
+              </li> -->
+
+              <!-- item -->
+              <!-- <li class="isotope-item col-sm-6 col-md-4 brand">
+                <a class="external ajax-project" href="project-external-2.html">
+                  <img src="http://stepofweb.gweb.io/.templates/IsisOne/HTML/assets/images/preview/content/portfolio/p5.jpg" class="img-responsive" alt="img" />
+                  <div class="caption">
+                    <i class="rounded fa fa-link"></i>
+                    <h3>PROJECT TITLE</h3>
+                    <p>External Project 2</p>
+                  </div>
+                </a>
+              </li> -->
+
+              <!-- item -->
+              <!-- <li class="isotope-item col-sm-6 col-md-4 brand">
+                <a class="external ajax-project" href="project-external-3.html">
+                  <img src="http://stepofweb.gweb.io/.templates/IsisOne/HTML/assets/images/preview/content/portfolio/p6.jpg" class="img-responsive" alt="img" />
+                  <div class="caption">
+                    <i class="rounded fa fa-link"></i>
+                    <h3>PROJECT TITLE</h3>
+                    <p>External Project 3</p>
+                  </div>
+                </a>
+              </li> -->
+
+            </ul>
+          </div>
+
+        </div>
+
+      
+      </div>
+    </section>
+    <!-- /WORK -->
+
+    <!-- BLOG -->
+    <section id="quick-blog" class="alternate">
+      <div class="container">
+
+        <header class="text-center">
+          <h1>BLOG</h1>
+          <p>RECENT ENTRIES</p>
+        </header>
+
+        <div class="divider"><!-- lines divider --></div>
+
+        <article>
+          <div class="row animate_fade_in">
+
+            {% for article in articles[:3] %}
+              <div class="col-md-4 quick-hover">
+                <div class="quick-item">
+                {% if article.featured %}
+                  <figure class="media-preview">
+                  {% if article.type|lower=='image' %}
+                    <img src="{{article.featured}}" class="img-responsive" data-src="holder.js/360x200/#676767:#555555/auto/" alt="img" />
+                  {%elif article.type|lower=='video'%}
+                    <iframe class="fitvids" src="{{article.featured}}" width="800" height="450"></iframe>
+                  {%elif article.type|lower=='audio'%}
+                    <iframe class="fullwidth" height="166" src="{{article.featured}}"></iframe> 
+                  {% endif %}
+                  </figure>
+                {% endif %}
+                  {% if article.link %}
+                    <h4><a href="{{ article.link }}">{{article.title}} <i class="fa fa-external-link" target="_blank"></i></a></h4>
+                  {%else%}
+                    <h4><a href="{{ SITEURL }}/{{ article.url }}">{{article.title}}</a></h4>
+                  {%endif%}
+                  <p>{{article.summary}}</p>
+                  <a href="{{ SITEURL }}/{{ article.url }}" class="btn btn-xs"><i class="fa fa-sign-out"></i> READ MORE</a>
+                </div>
+              </div>
+            {% endfor %} 
+
+          </div>
+        </article>
+
+        <div class="divider"><!-- lines divider --></div>
+
+        <article class="text-center" data-animation="bounceIn">
+          <a href="blog.html" class="plusNav" title="more from blog">+</a> 
+        </article>
+
+      </div>
+    </section>
+    <!-- /BLOG -->
+
+    {% include "_includes/footer.html" %}
+
+  </body>
+</html>

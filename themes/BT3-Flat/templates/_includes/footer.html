@@ -1,0 +1,88 @@
+<!-- FOOTER -->
+<footer>
+
+  <!-- SCROOL TO TOP -->
+  <a href="#toTop" class="fa fa-arrow-up toTop"></a>
+
+  <div class="container">
+
+    <div class="row">
+
+        <div class="col-md-6 copyright">
+            {{ SITENAME|e }}
+            <br />2014 &copy; All Rights Reserved.
+        </div>
+
+        <div class="col-md-6 text-right">
+            {% for group_title, group_link in SOCIAL %}
+              <a href="{{group_link}}" class="social fa fa-{{group_title|lower}}"></a>
+            {% endfor %}
+        </div>
+
+    </div>
+
+  </div>
+</footer>
+<!-- /FOOTER -->
+
+
+
+<!-- CORE FILES -->
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="{{SITEURL}}/theme/js/jquery.isotope.js"></script>
+<script type="text/javascript" src="{{SITEURL}}/theme/js/masonry.js"></script>
+
+<!-- PLUGINS -->
+<script type="text/javascript" src="{{SITEURL}}/theme/js/jquery.fitvids.min.js"></script>
+<script type="text/javascript" src="{{SITEURL}}/theme/js/jquery.appear.js"></script>
+<script type="text/javascript" src="{{SITEURL}}/theme/js/jquery.superslides.min.js"></script>
+<script type="text/javascript" src="{{SITEURL}}/theme/js/owl.carousel.min.js"></script>
+<script type="text/javascript" src="{{SITEURL}}/theme/js/jquery.carouFredSel-6.2.1-packed.js"></script>
+<script type="text/javascript" src="{{SITEURL}}/theme/js/jquery.countTo.js"></script>
+<script type="text/javascript" src="{{SITEURL}}/theme/js/jquery.magnific-popup.min.js"></script>
+<script type="text/javascript" src="{{SITEURL}}/theme/js/holder.js"></script>
+<!-- delete on production -->
+
+<!-- js scripts -->
+<script async type="text/javascript" src="{{SITEURL}}/theme/js/scripts.js"></script>
+
+<script type="text/javascript" src="{{ SITEURL }}/theme/js/ImageAutoResize.js"></script>
+<script type="text/javascript" src="{{ SITEURL }}/theme/js/application.js"></script>
+
+
+{% if GOOGLE_ANALYTICS %}
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', '{{ GOOGLE_ANALYTICS }}']);
+    {% if GOOGLE_ANALYTICS_DOMAIN %}
+      _gaq.push(['_setDomainName', '{{ GOOGLE_ANALYTICS_DOMAIN }}']);
+    {% endif %}
+    _gaq.push(['_setAllowLinker', true]);
+    _gaq.push(['_trackPageview']);
+    setTimeout(function() {
+      window.onscroll = function() {
+        window.onscroll = null; // Only track the event once
+        _gaq.push(['_trackEvent', 'scroll', 'read']);
+      }
+    }, 5000);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+{% endif %}
+
+<script type="text/javascript">
+  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+  var disqus_shortname = '{{ DISQUS_SITENAME }}'; // required: replace example with your forum shortname
+
+  /* * * DON'T EDIT BELOW THIS LINE * * */
+  (function () {
+  var s = document.createElement('script'); s.async = true;
+  s.type = 'text/javascript';
+  s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+  (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+  }());
+</script>

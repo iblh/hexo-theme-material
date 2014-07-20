@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+  {{ page.title|striptags }}
+{% endblock %}
+
+
+{% block top_center %}
+  <h1>
+    <a href="{{ SITEURL }}/{{ page.url }}" rel="bookmark" title="Permalink to {{ page.title|striptags|e }}">{{ page.title }}</a>
+  </h1>
+{% endblock %}
+
+
+{% block content %}
+  {% import 'translations.html' as translations with context %}
+  {{ translations.translations_for(page) }}
+  <div>
+    {{ page.content }}
+  </div>
+{% endblock %}

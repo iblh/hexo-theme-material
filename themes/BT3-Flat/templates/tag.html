@@ -1,0 +1,17 @@
+{% extends "blog_base.html" %}
+
+{% block content_area %}
+  <div class="item">
+      <div class="item-title">
+        <h2>{{tag}}</h2>
+      </div>
+      {% for article in articles %}
+        {% if article.link %}
+          <p><a href="{{ article.link }}"><span class="label label-default light">{{article.locale_date}}</span> {{article.title}} <i class="fa fa-external-link" target="_blank"></i></a></p>
+        {%else%}
+          <p><a href="{{ SITEURL }}/{{ article.url }}"><span class="label label-default light">{{article.locale_date}}</span> {{article.title}}</a></p>
+        {%endif%}
+      {% endfor %}
+  </div>
+{% endblock %}
+    
