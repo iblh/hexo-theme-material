@@ -223,7 +223,7 @@ section.alternate.arrow-down {
   border: 0;
 }
 #home .image-caption h1, #home .image-caption h2 {
-  font-family:'Open Sans', sans-serif;
+  font-family:'Aldrich';
   font-weight:800;
   font-size:600%;
   line-height:95%;
@@ -442,6 +442,9 @@ footer a.toTop {
     !important;
   }
 }
+
+
+
 @media only screen and (max-width: 479px) {
   #home .image-caption h1, #home .image-caption h2 {
     font-size:45px;

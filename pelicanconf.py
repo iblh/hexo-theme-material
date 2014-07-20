@@ -93,7 +93,7 @@ THEME = "themes/BT3-Flat"
 
 # GOOGLE_SEARCH = '013542728820335073314:dcpel18vrey'
 #SWIFTYPE = ''
-SITE_THUMBNAIL = 'assets/images/logo.png'
+SITE_THUMBNAIL = 'assets/images/logo_icon.png'
 #SITE_THUMBNAIL_TEXT = 'Network Tsukkomi'
 #SITESUBTITLE = 'Not only about network'
 
@@ -102,9 +102,9 @@ SITE_THUMBNAIL = 'assets/images/logo.png'
 #GOOGLE_ANALYTICS_DOMAIN = 'networktsukkomi.me'
 
 
-FAVICON = 'assets/images/logo.png'
-ICON = 'assets/images/logo.png'
-SHORTCUT_ICON = 'assets/images/logo.png'
+FAVICON = 'assets/images/logo_icon.png'
+ICON = 'assets/images/logo_icon.png'
+SHORTCUT_ICON = 'assets/images/logo_icon.png'
 
 #PERSONAL_PHOTO = "https://dl.dropboxusercontent.com/u/299446/thumb-400x400.png"
 PERSONAL_INFO = """In principio erat Verbum et Verbum erat ...

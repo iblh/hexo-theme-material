@@ -12,6 +12,19 @@
 	
  ** ************************************* **/
 
+@font-face {
+	font-family: 'Aldrich';
+		src:  url('/assets/fonts/aldrich/Aldrich.ttf.woff') format('woff'),
+		url('/assets/fonts/aldrich/Aldrich.ttf.svg#Aldrich') format('svg'),
+		url('/assets/fonts/aldrich/Aldrich.ttf.eot'),
+		url('/assets/fonts/aldrich/Aldrich.eot?#iefix') format('embedded-opentype'); 
+		font-weight: normal;
+		font-style: normal;
+}
+.logo-font {
+	font-family: 'Aldrich';  
+}
+
 /** 01. Typography
  **************************************************************** **/
  body {
@@ -127,6 +140,7 @@ section article:last-child {
 pre {
   margin:20px 0;
 }
+
 /** 03. Responsive
  **************************************************************** **/
  @media only screen and (max-width: 960px) {
