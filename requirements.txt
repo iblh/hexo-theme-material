@@ -1,1 +1,3 @@
 pelican
+markdown
+jinja2
