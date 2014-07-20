@@ -1,7 +1,7 @@
 if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
   echo -e "Starting to update master\n"
 
-  cp -R content $HOME/content
+  cp -R output $HOME/output
 
   cd $HOME
   git config --global user.email "iocast@me.com"
@@ -10,7 +10,7 @@ if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
 
   cd master
   rm -rf ./*
-  cp -Rf $HOME/content/* .
+  cp -Rf $HOME/output/* .
 
   git add -f -A .
   git commit -m "Travis build $TRAVIS_BUILD_NUMBER pushed to master"
