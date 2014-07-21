@@ -2,7 +2,6 @@ language: python
 python:
   - "2.7"
 
-
 # command to install dependencies
 install:
   - "pip install -r requirements.txt"
@@ -20,6 +19,7 @@ branches:
   only:
     - develop
 
+# export LC_ALL=en_US.UTF-8 &&  export LANG=en_US.UTF-8
 script: pelican -o output/ -s pelicanconf.py
 
 after_success: ./update-gh-pages.sh

@@ -1,6 +1,6 @@
 Title: node-webkit desktop application and 3rd party libraries
 Author: iocast
-Date: 2014-04-30
+Date: ongoing
 Summary: In this post I want to describe how you create a platform independent application using node-webkit including 3rd party libraries such as node-sqlite3. It shows you, how you setup a development environment, rebuild your dependencies and build your platform specific versions of your application on the basis of the [time edition project][]
 Category: Desktop Application
 Tags: development, javascript, nodejs, node-webkit, node-sqlite3, sqlite
