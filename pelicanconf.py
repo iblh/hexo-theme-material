@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = u'iocast'
 SITENAME = u'iocast'
-SITEURL = 'iocast.github.io'
+SITEURL = 'http://iocast.github.io'
 
 PATH = 'content'
 
