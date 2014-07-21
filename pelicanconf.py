@@ -97,7 +97,7 @@ SITE_THUMBNAIL = 'assets/images/logo_icon.png'
 #SITE_THUMBNAIL_TEXT = 'Network Tsukkomi'
 #SITESUBTITLE = 'Not only about network'
 
-#DISQUS_SITENAME = 'networktsukkomime'
+DISQUS_SITENAME = 'iocast'
 #GOOGLE_ANALYTICS = ''
 #GOOGLE_ANALYTICS_DOMAIN = 'networktsukkomi.me'
 
