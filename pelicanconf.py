@@ -13,7 +13,7 @@ TIMEZONE = 'Europe/Zurich'
 DEFAULT_LANG = u'en'
 
 # Do not publish articles set in the future
-WITH_FUTURE_DATES = False
+WITH_FUTURE_DATES = True
 TEMPLATE_PAGES = {'blog.html': 'blog.html'}
 STATIC_PATHS = ['assets',]
 #EXTRA_PATH_METADATA = {}

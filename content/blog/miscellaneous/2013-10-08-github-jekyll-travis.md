@@ -4,7 +4,7 @@ Date: 2013-10-08
 Summary: Github overs gh-pages to create a own site for personal or project usage. Together with jekyll you are able to create your own blog and using Travis CI enables automatic building of your blog.
 Category: Miscellaneous
 Tags: github, jekyll, travis, bash, continuous integration
-Slug: githup-pages-with-jekyll-and-travis
+Slug: github-pages-with-jekyll-and-travis
 
 
 Github offers at the time of writing three different types of pages: for [users, organizations and projects][github-pages]. For the users and organizations the ```master``` branch is going to be used to deploy as static web page. For projects, means in a repository which is not called ```username.github.io```, a subpath of the user pages would be created ```username.github.io/projectname```.

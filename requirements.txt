@@ -1,3 +1,11 @@
-pelican
+python-dateutil
+unidecode
+pytz
 markdown
+blinker
+six
+docutils
+pygments
+feedgenerator
 jinja2
+pelican

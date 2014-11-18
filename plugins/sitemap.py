@@ -1,4 +1,4 @@
-﻿# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 '''
 Sitemap
 -------
@@ -14,6 +14,7 @@ import os.path
 from datetime import datetime
 from logging import warning, info
 from codecs import open
+from pytz import timezone
 
 from pelican import signals, contents
 from pelican.utils import get_date
@@ -46,7 +47,7 @@ XML_FOOTER = """
 
 def format_date(date):
     if date.tzinfo:
-        tz = date.strftime('%s')
+        tz = date.strftime('%z')
         tz = tz[:-2] + ':' + tz[-2:]
     else:
         tz = "-00:00"
@@ -60,6 +61,11 @@ class SitemapGenerator(object):
         self.context = context
         self.now = datetime.now()
         self.siteurl = settings.get('SITEURL')
+
+
+        self.default_timezone = settings.get('TIMEZONE', 'UTC')
+        self.timezone = getattr(self, 'timezone', self.default_timezone)
+        self.timezone = timezone(self.timezone)
 
         self.format = 'xml'
 
@@ -128,6 +134,10 @@ class SitemapGenerator(object):
         if getattr(page, 'status', 'published') != 'published':
             return
 
+        # We can disable categories/authors/etc by using False instead of ''
+        if not page.save_as:
+            return
+
         page_path = os.path.join(self.output_path, page.save_as)
         if not os.path.exists(page_path):
             return
@@ -166,11 +176,11 @@ class SitemapGenerator(object):
 
     def set_url_wrappers_modification_date(self, wrappers):
         for (wrapper, articles) in wrappers:
-            lastmod = datetime.min
+            lastmod = datetime.min.replace(tzinfo=self.timezone)
             for article in articles:
-                lastmod = max(lastmod, article.date)
+                lastmod = max(lastmod, article.date.replace(tzinfo=self.timezone))
                 try:
-                    modified = self.get_date_modified(article, datetime.min);
+                    modified = self.get_date_modified(article, datetime.min).replace(tzinfo=self.timezone)
                     lastmod = max(lastmod, modified)
                 except ValueError:
                     # Supressed: user will be notified.

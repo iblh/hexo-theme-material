@@ -7,7 +7,7 @@ Tags: development, javascript, nodejs, node-webkit, node-sqlite3, sqlite
 Slug: node-webkit-desktop-application
 
 
-**To the readers**: I anticipate, that you know what nodejs, node-webkit is and their concept.
+**To the readers**: I anticipate, that you know what nodejs, node-webkit is and there concept behind it.
 
 ## Preparation
 
