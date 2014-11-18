@@ -18,8 +18,8 @@ TEMPLATE_PAGES = {'blog.html': 'blog.html'}
 STATIC_PATHS = ['assets',]
 #EXTRA_PATH_METADATA = {}
 
-PAGE_EXCLUDES = ['wiki', 'projects']
-ARTICLE_EXCLUDES = ['wiki', 'projects']
+PAGE_EXCLUDES = ['wiki', 'projects', 'cheatsheets', '_to_write']
+ARTICLE_EXCLUDES = ['wiki', 'projects', 'cheatsheets', '_to_write']
 
 # Feed generation is usually not desired when developing
 FEED_RSS = 'feed/index.html'
