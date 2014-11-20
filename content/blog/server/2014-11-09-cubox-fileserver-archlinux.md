@@ -194,10 +194,10 @@ If you use [afraid.org](http://www.afraid.org) as your dynamic DNS service you c
 	
 	3,8,13,18,23,28,33,38,43,48,53,58 * * * * sleep 37 ; wget -O - http://freedns.afraid.org/dynamic/update.php?key= >> /tmp/freedns_pasithee_mooo_com.log 2>&1 &
 
-On Arch Linux you need to do the following changes to use it with `systemd/Timers`. First we need to create a new timer `vim /etc/systemd/system/afraid.org.timer` and add the following lines
+On Arch Linux you need to do the following changes to use it with `systemd/Timers` (see [here](https://wiki.archlinux.org/index.php/Systemd/Timers)). First we need to create a new timer `vim /etc/systemd/system/afraid.org.timer` and add the following lines
 
 	[Unit]
-	Description=afraid.org for pasithee.mooo.com
+	Description=timer for service afraid.org.timer
 	Requires=network-online.target
 	Requires=network.target
 	After=dhcpcd.service
@@ -205,8 +205,28 @@ On Arch Linux you need to do the following changes to use it with `systemd/Timer
 	[Timer]
 	OnCalendar=*:3,8,13,18,23,28,33,38,43,48,53,58
 	
+	[Install]
+	WantedBy=multi-user.target
+
+
+Then create a service file of the same name `/etc/systemd/system/afraid.org.service` and add the following lines
+
+	[Unit]
+	Description=service for afraid.org for pasithee.mooo.com
+	
 	[Service]
 	Type=simple
-	ExecStart=/usr/bin/wget -O - http://freedns.afraid.org/dynamic/update.php?key= >> /tmp/freedns_pasithee_mooo_com.log 2>&1
+	ExecStart=/usr/bin/curl -k http://freedns.afraid.org/dynamic/update.php?key= >> /tmp/freedns_pasithee_mooo_com.log 2>&1
 
+
+Now you can test the service.
+
+	# test service
+	systemctl start afraid.org.service
+	systemctl stop afraid.org.service
+
+As soon as it works you can enable the timer
+
+	systemctl enable afraid.org.timer
+	systemctl start afraid.org.timer
 
