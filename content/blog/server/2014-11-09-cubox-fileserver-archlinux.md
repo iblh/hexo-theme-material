@@ -143,8 +143,9 @@ On my Cubox I use the following configuration (`/etc/samba/smb.conf`):
 	public = no
 	writable = yes
 	guest ok = no
-	valid users = michel
+	valid users = michel karolina
 	write list = michel
+	read list = karolina
 	
 	[michel backup]
 	comment = data disk backup
