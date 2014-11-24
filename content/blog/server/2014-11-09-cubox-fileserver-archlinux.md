@@ -58,7 +58,6 @@ Else, you may not obtain a lease since the DHCP server may not read your DHCPv6-
 To automatically start the DCHP daemon at start up you have to enable it.
 
 	systemctl enable dhcpcd
-	systemctl enable dhcpcd@eth0.service
 
 
 
