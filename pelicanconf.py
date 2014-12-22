@@ -14,12 +14,12 @@ DEFAULT_LANG = u'en'
 
 # Do not publish articles set in the future
 WITH_FUTURE_DATES = True
-TEMPLATE_PAGES = {'blog.html': 'blog.html'}
+TEMPLATE_PAGES = { 'blog.html': 'blog.html', 'cheatsheets.html': 'pages/cheatsheets.html' }
 STATIC_PATHS = ['assets',]
 #EXTRA_PATH_METADATA = {}
 
-PAGE_EXCLUDES = ['wiki', 'projects', 'cheatsheets', '_to_write']
-ARTICLE_EXCLUDES = ['wiki', 'projects', 'cheatsheets', '_to_write']
+PAGE_EXCLUDES = ['wiki', 'projects', '_to_write']
+ARTICLE_EXCLUDES = ['wiki', 'projects', '_to_write']
 
 # Feed generation is usually not desired when developing
 FEED_RSS = 'feed/index.html'

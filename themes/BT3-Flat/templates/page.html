@@ -1,22 +1,50 @@
-{% extends "base.html" %}
+{% if page.type == 'cheatsheet' %}
+	{% extends "cheatsheet_base.html" %}
+	
+	
+	{%block content_area %}
+	
+		<header>
+		{% if page.link %}
+			<a href="{{ page.link }}" rel="bookmark" title="External Link to {{ page.title|striptags|e }}"><h1>{{ page.title }} <i class="fa fa-external-link"></i></h1></a>
+		{% else %}
+			<h1>{{ page.title }}</h1>
+		{% endif %}
+			<small class="fsize13">
+      			<a href="{{ SITEURL }}/{{page.url}}#disqus_thread" class="scrollTo label label-default light" data-disqus-identifier="{{page.url}}"><i class="fa fa-comment-o"></i> ?? Comments</a>
+      			<span class="label label-default light">{{ page.locale_date }}</span> 
+   			</small>
+
+		</header>
+		
+		
+		<article class='content'>
+    		{{ page.content }}
+  		</article>
+		
+  		<hr /><!-- divider -->
+
+  		{% if SITEURL and DISQUS_SITENAME %}
+    		<div id="comments" class="comments">
+      		<div id="disqus_thread"></div>
+     			<script type="text/javascript">
+        			var disqus_shortname = '{{ DISQUS_SITENAME }}';
+        			var disqus_identifier = "{{ page.url }}";
+       				var disqus_title = "{{ page.title|striptags|e }}";
+        			var disqus_url = "{{ SITEURL }}/{{ page.url }}";
+        			(function() {
+          				var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          				dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+						(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        			})();
+      			</script>
+      			<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus</a>.</noscript>
+    		</div>
+ 		{% endif %}
 
 
-{% block title %}
-  {{ page.title|striptags }}
-{% endblock %}
-
-
-{% block top_center %}
-  <h1>
-    <a href="{{ SITEURL }}/{{ page.url }}" rel="bookmark" title="Permalink to {{ page.title|striptags|e }}">{{ page.title }}</a>
-  </h1>
-{% endblock %}
-
-
-{% block content %}
-  {% import 'translations.html' as translations with context %}
-  {{ translations.translations_for(page) }}
-  <div>
-    {{ page.content }}
-  </div>
-{% endblock %}
+	{%endblock%}
+	
+	
+{% else %}
+{% endif %}

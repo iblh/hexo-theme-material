@@ -41,11 +41,39 @@ The default login is user `root` with password `root`.
 
 Now lets configure some basic stuff, like date and time, DHCP, etc.
 
-## Clientid
+## Network
+
+Create the `/etc/systemd/network/eth0.network` file so that it resembles the example below. Be sure to change the IP addresses to reflect the values shown under the “Remote Access” tab of the Linode Manager.
+
+
+**for DHCP**
+
+	[Match]
+	Name=eth0
+
+	[Network]
+	DHCP=both
+
+
+**for fixed IP**
+
+	[Match]
+	Name=eth0
+
+	[Network]
+	Address=10.0.1.2/24
+	Gateway=10.0.1.1
+
+Restart systemd-networkd. To do so, run this command:
+
+	systemctl restart systemd-networkd
+
+
+### Clientid
 
 If you are on a network with DHCPv4 that filters Client IDs based on MAC addresses, you may need to change the following line in `/etc/dhcpcd.conf`:
 
-	# Use the same DUID + IAID as set in DHCPv6 for DHCPv4 Client ID as per RFC4361. 
+	# Use the same DUID + IAID as set in DHCPv6 for DHCPv4 Client ID as per RFC4361.
 	duid
 
 to:
@@ -58,7 +86,6 @@ Else, you may not obtain a lease since the DHCP server may not read your DHCPv6-
 To automatically start the DCHP daemon at start up you have to enable it.
 
 	systemctl enable dhcpcd
-
 
 
 ## System Upgrade
@@ -125,7 +152,7 @@ Adding a user to the samba group
 
 
 On my Cubox I use the following configuration (`/etc/samba/smb.conf`):
-	
+
 	[global]
 	workgroup = iocast
 	server string = file server
@@ -135,7 +162,7 @@ On my Cubox I use the following configuration (`/etc/samba/smb.conf`):
 	directory mask = 02775
 	force directory mode = 02775
 	force group = sambashare
-	
+
 	[michel]
 	comment = data disk
 	path = /storage/data/
@@ -145,7 +172,7 @@ On my Cubox I use the following configuration (`/etc/samba/smb.conf`):
 	valid users = michel karolina
 	write list = michel
 	read list = karolina
-	
+
 	[michel backup]
 	comment = data disk backup
 	path = /storage/backup/
@@ -154,7 +181,7 @@ On my Cubox I use the following configuration (`/etc/samba/smb.conf`):
 	guest ok = no
 	valid users = michel
 	write list = michel
-	
+
 	[ninalaki]
 	comment = data disk1
 	path = /storage/data1/
@@ -163,7 +190,7 @@ On my Cubox I use the following configuration (`/etc/samba/smb.conf`):
 	guest ok = no
 	valid users = michel karolina
 	write list = michel karolina
-	
+
 	[ninalaki backup]
 	comment = data disk1 backup
 	path = /storage/backup1/
@@ -191,7 +218,7 @@ Run `lsblk -f` or `ls -l /dev/disk/by-uuid` to list the partitions / disks. Edit
 If you use [afraid.org](http://www.afraid.org) as your dynamic DNS service you can get an example `cron` entry from the **Dynamic DNS** menu entry. It look likes the following
 
 	PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin
-	
+
 	3,8,13,18,23,28,33,38,43,48,53,58 * * * * sleep 37 ; wget -O - http://freedns.afraid.org/dynamic/update.php?key= >> /tmp/freedns_pasithee_mooo_com.log 2>&1 &
 
 On Arch Linux you need to do the following changes to use it with `systemd/Timers` (see [here](https://wiki.archlinux.org/index.php/Systemd/Timers)). First we need to create a new timer `vim /etc/systemd/system/afraid.org.timer` and add the following lines
@@ -201,10 +228,10 @@ On Arch Linux you need to do the following changes to use it with `systemd/Timer
 	Requires=network-online.target
 	Requires=network.target
 	After=dhcpcd.service
-	
+
 	[Timer]
 	OnCalendar=*:3,8,13,18,23,28,33,38,43,48,53,58
-	
+
 	[Install]
 	WantedBy=multi-user.target
 
@@ -213,7 +240,7 @@ Then create a service file of the same name `/etc/systemd/system/afraid.org.serv
 
 	[Unit]
 	Description=service for afraid.org for pasithee.mooo.com
-	
+
 	[Service]
 	Type=simple
 	ExecStart=/usr/bin/curl -k http://freedns.afraid.org/dynamic/update.php?key= >> /tmp/freedns_pasithee_mooo_com.log 2>&1
@@ -229,4 +256,3 @@ As soon as it works you can enable the timer
 
 	systemctl enable afraid.org.timer
 	systemctl start afraid.org.timer
-

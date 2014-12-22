@@ -1,0 +1,30 @@
+{% extends "cheatsheet_base.html" %}
+
+{%block content_area %}
+
+
+{#
+this can be replaced by 
+{% for page in pages|selectattr("type", "equalto", "cheatsheet")|list %}
+{% endfor %}
+as soon Jinja 2.8 is available
+#}
+
+{% set cheatsheets = [] %}
+<table>
+	<tbody>
+{% for page in pages|sort(attribute='title') %}
+	{% if page.type == 'cheatsheet' %}
+
+				<tr>
+					<td><a href="{{ SITEURL }}/{{ page.url }}">{{page.title}}</a></td>
+					<td style="padding-left: 20px;">{{page.summary}}</td>
+				</tr>
+
+	{% endif %}
+
+{% endfor %}
+	</tbody>
+</table>
+
+{%endblock%}

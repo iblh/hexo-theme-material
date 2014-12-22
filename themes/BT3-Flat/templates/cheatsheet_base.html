@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+  {% include "_includes/header.html" %}
+</head>
+
+<body>
+
+  {% include "_includes/nav.html" %}
+  <section id="blog">
+    <article class="container">
+
+      <div class="row">
+        <div id="blog_main_area" class="left col-md-9" count={{articles|length}}>
+          {% block content_area %} {% endblock %}
+        </div>
+
+        <!-- SIDEBAR -->
+        <div class="right col-md-3">
+          {% if SWIFTYPE %}
+          <!-- blog search -->
+          <div class="widget">
+
+            <h3>Blog Search</h3>
+
+            <form action="#" method="get" class="blog-search col-lg-12 nomargin nopadding">
+              <div class="input-group input-group-lg">
+                <input type="text" class="form-control" name="s" id="st-search-input" placeholder="..." />
+                <script type="text/javascript">
+                var Swiftype = window.Swiftype ||
+                {};
+                (function()
+                {
+                  Swiftype.key = '{{SWIFTYPE}}';
+
+                  /** DO NOT EDIT BELOW THIS LINE **/
+                  var script = document.createElement('script');
+                  script.type = 'text/javascript';
+                  script.async = true;
+                  script.src = "//s.swiftypecdn.com/embed.js";
+                  var entry = document.getElementsByTagName('script')[0];
+                  entry.parentNode.insertBefore(script, entry);
+                }());
+                </script>
+              </div>
+            </form>
+          </div>
+          {% endif %}
+
+        </div>
+        <!-- /SIDEBAR -->
+
+      </div>
+
+    </article>
+  </section>
+  <!-- /BLOG -->
+
+  {% include "_includes/footer.html" %}
+
+</body>
+
+</html>
