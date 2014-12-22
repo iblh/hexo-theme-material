@@ -23,7 +23,7 @@ Summary: Python PyPi commands
 `sdist`
 : create a source distribution (tarball, zip file, etc.)
 
-
+	:::bash
 	python setup.py sdist upload
 
 

@@ -46,15 +46,16 @@ create database
 `--locale=<locale>`
 : (This is equivalent to specifying both --lc-collate and --lc-ctype)
 
---lc-collate='<locale>'`
-: 
+`--lc-collate='<locale>'`
+: collation order
 
 `--lc-ctype='<locale>'`
-: 
+: character classification
 
-`-T` template
-: 
+`-T`
+: template
 
+	:::bash
 	createdb -U postgres <database>
 
 
