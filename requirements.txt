@@ -9,3 +9,4 @@ pygments
 feedgenerator
 jinja2
 pelican
+beautifulsoup4

@@ -7,6 +7,8 @@ Authors: iocast
 Summary: PostgreSQL commands
 
 
+[TOC]
+
 ## Basics
 
 login as postgres use r

@@ -8,6 +8,8 @@ Summary: Windows commands
 
 
 
+[TOC]
+
 ## Desktop
 
 For all the command in this section I used ''command line prompt''.

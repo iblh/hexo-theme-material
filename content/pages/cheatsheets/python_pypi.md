@@ -7,6 +7,8 @@ Authors: iocast
 Summary: Python PyPi commands
 
 
+[TOC]
+
 ## Comands
 
 ### registration

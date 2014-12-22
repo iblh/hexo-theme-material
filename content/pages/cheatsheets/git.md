@@ -7,6 +7,9 @@ Authors: iocast
 Summary: Git commands
 
 
+[TOC]
+
+
 ## Settings
 ### Username
 
@@ -197,3 +200,6 @@ switch to develop and merge hotfix into it
 and delete hotfix
 
 	git branch -d hotfix-1.2.1
+
+
+

@@ -6,6 +6,7 @@ Slug: cheatsheet/irc
 Authors: iocast
 Summary: IRC commands
 
+[TOC]
 
 ## User
 
