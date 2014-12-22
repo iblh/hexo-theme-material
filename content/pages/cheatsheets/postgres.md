@@ -69,12 +69,16 @@ create user
 
 `-D`
 : (The new user will not be allowed to create databases.)
+
 `-P`
 : (If given, createuser will issue a prompt for the password of the new user. This is not necessary if you do not plan on using password authentication.)
+
 `-S`
 : (The new user will not be a superuser.)
+
 `-E`
 : (Encrypts the user's password stored in the database. If not specified, the default password behavior is used.)
+
 
 	createuser -D -S -E -P <name>
 
@@ -86,6 +90,7 @@ create user
 	COPY (<sql>) TO '<file>' CSV
 
 ## Commands
+
 load environment
 
 	psql
@@ -126,11 +131,13 @@ and connect to it
 	\c mydatabase
 
 ### Hstore
+
 creates / loads hstore extension for the current database
 
 	CREATE EXTENSION hstore;
 
 ### PostGIS
+
 creates / load postgis extension for the current database
 
 	CREATE EXTENSION postgis;
@@ -145,6 +152,7 @@ grant access
 ## Issues
 
 ### Full Disk
+
 Locate the directory which uses that much space on the disk. On a standard installation it is somewhere in the `/var/lib/` directory. If found the PostgreSQL data directory (here as example `/var/lib/pgsql` run the following command to find out which directory needs how much space on the disk
 
 	du -h

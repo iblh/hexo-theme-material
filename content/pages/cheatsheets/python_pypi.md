@@ -19,10 +19,13 @@ Summary: Python PyPi commands
 
 `bdist`
 : create a built (binary) distribution<br/>
+
 `sdist`
 : create a source distribution (tarball, zip file, etc.)
 
+
 	python setup.py sdist upload
+
 
 ### configuration file
 

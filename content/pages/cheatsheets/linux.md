@@ -59,8 +59,10 @@ template command is as follow, where the first character after `s` is used as se
 
 `-h`
 : human readable file size
+
 `-s`
 : sum all subfolders
+
 
 	du <directory>
 
@@ -77,6 +79,7 @@ template command is as follow, where the first character after `s` is used as se
 
 
 ### Synchronization
+
 Synchronization
 
 	#! /bin/bash
@@ -85,6 +88,7 @@ Synchronization
 
 ### Cloning
 burning image to disk (also usb drives)
+
 optional use `bs=8192`
 
 	dd if=<path>.iso of=<disk>
