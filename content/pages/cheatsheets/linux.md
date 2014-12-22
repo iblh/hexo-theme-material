@@ -63,9 +63,9 @@ template command is as follow, where the first character after `s` is used as se
 `-s`
 : sum all subfolders
 
-	:::bash
-	du <directory>
-
+```bash
+du <directory>
+```
 
 ### Compression
 

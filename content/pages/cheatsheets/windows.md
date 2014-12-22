@@ -29,22 +29,23 @@ For all the command below I used **PowerShell**.
 
 **list** of all connected users
 
-	:::powershell
-	Get-SmbSession
-
+```powershell
+Get-SmbSession
+```
 
 for **command line** use
 
-	:::powershell
-	net session
-
+```powershell
+net session
+```
 
 **closing** a session can be done using the session id, computer name or user name as follow:
 
-	:::powershell
-	Close-SmbSession -SessionId 171798691989
-	Close-SmbSession –ClientComputerName \\192.168.0.20
-	Close-SmbSession –ClientUserName Domain\Username
+```powershell
+Close-SmbSession -SessionId 171798691989
+Close-SmbSession –ClientComputerName \\192.168.0.20
+Close-SmbSession –ClientUserName Domain\Username
+```
 
 
 ## Miscellaneous

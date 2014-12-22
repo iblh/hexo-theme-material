@@ -44,7 +44,7 @@ create database
 : echo
 
 `--locale=<locale>`
-: (This is equivalent to specifying both --lc-collate and --lc-ctype)
+: (This is equivalent to specifying both `--lc-collate` and `--lc-ctype`)
 
 `--lc-collate='<locale>'`
 : collation order
@@ -55,9 +55,10 @@ create database
 `-T`
 : template
 
-	:::bash
-	createdb -U postgres <database>
 
+```bash
+createdb -U postgres <database>
+```
 
 ### Drop
 
@@ -87,8 +88,9 @@ create user
 `-E`
 : (Encrypts the user's password stored in the database. If not specified, the default password behavior is used.)
 
-
-	createuser -D -S -E -P <name>
+```bash
+createuser -D -S -E -P <name>
+```
 
 
 ### Export To File
