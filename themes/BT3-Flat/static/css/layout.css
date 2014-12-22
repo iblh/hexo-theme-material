@@ -101,7 +101,7 @@ section.alternate.arrow-down {
 }
 dt {
 	float: left !important;
-	margin-left: 20px !important;
+	margin-right: 20px !important;
 }
 /** 02. Nav Bar
  **************************************************************** **/

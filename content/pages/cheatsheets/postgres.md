@@ -33,20 +33,27 @@ create database
 
 `-O`
 : owner
+
 `-U`
 : username
+
 `-E`
 : encoding
+
 `-e`
 : echo
+
 `--locale=<locale>`
 : (This is equivalent to specifying both --lc-collate and --lc-ctype)
 
-: --lc-collate='<locale>'`
+--lc-collate='<locale>'`
+: 
 
-: `--lc-ctype='<locale>'`
+`--lc-ctype='<locale>'`
+: 
 
-: `-T` template
+`-T` template
+: 
 
 	createdb -U postgres <database>
 
