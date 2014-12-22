@@ -46,14 +46,9 @@
 	
 	
 	{% block content_toc %}
-	{% if page.toc %}
-    
-    {{ page.toc }}
-    
-    {% else %}
-     <p>toc missing</p>
-	{% endif %}
-	
+		{% if page.toc %}
+	    	{{ page.toc }}
+		{% endif %}
 	{% endblock %}
 	
 	

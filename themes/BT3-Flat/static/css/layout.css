@@ -99,6 +99,10 @@ section.alternate.arrow-down {
 .btn:hover {
   border:rgba(0, 0, 0, 0.5) 2px solid !important;
 }
+dt {
+	float: left !important;
+	margin-left: 20px !important;
+}
 /** 02. Nav Bar
  **************************************************************** **/
  #header {

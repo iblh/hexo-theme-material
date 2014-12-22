@@ -12,7 +12,7 @@ Summary: Windows commands
 
 ## Desktop
 
-For all the command in this section I used ''command line prompt''.
+For all the command in this section I used **command line prompt**.
 
 ### Sharing
 
@@ -23,21 +23,21 @@ remove a network share
 
 ## Server
 
-For all the command below I used ''PowerShell''.
+For all the command below I used **PowerShell**.
 
 ### Sharing
 
-''list'' of all connected users
+**list** of all connected users
 
 	Get-SmbSession
 
 
-for ''command line'' use
+for **command line** use
 
 	net session
 
 
-''closing'' a session can be done using the session id, computer name or user name as follow:
+**closing** a session can be done using the session id, computer name or user name as follow:
 
 	Close-SmbSession -SessionId 171798691989
 	Close-SmbSession –ClientComputerName \\192.168.0.20
@@ -48,11 +48,12 @@ for ''command line'' use
 
 ### Synchronization
 
-''mirror''
+**mirror**
 
 	robocopy <source> <destination> /MIR /XD "<source>/<path>/<to>/<folder>"
 
-`XD`: exluding directories
+`XD`
+: exluding directories
 
 
 

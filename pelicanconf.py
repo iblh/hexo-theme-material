@@ -63,12 +63,12 @@ ARTICLE_URL = "blog/{date:%Y}/{date:%m}/{date:%d}-{slug}.html"
 ARTICLE_SAVE_AS = "blog/{date:%Y}/{date:%m}/{date:%d}-{slug}.html"
 
 
-MD_EXTENSIONS = (['toc'])
+MD_EXTENSIONS = ['codehilite(css_class=highlight)', 'extra', 'headerid', 'toc']
 
 # Plugins
 
-#PLUGIN_PATHS = ['plugins/sitemap', 'plugins/neighbors', 'plugins/related_posts', 'plugins/extract_toc.py']
-PLUGINS = ['plugins.sitemap', 'plugins.neighbors', 'plugins.related_posts', 'plugins.extract_toc']
+PLUGIN_PATHS = ['plugins']
+PLUGINS = ['sitemap', 'neighbors', 'related_posts', 'extract_toc']
 
 
 ### Plugin-specific settings

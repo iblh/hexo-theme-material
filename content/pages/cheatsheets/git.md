@@ -61,7 +61,8 @@ list all branches
 
 Options:
 
-: `-a` lists all branches
+`-a`
+: lists all branches
 
 	git branch [options]
 

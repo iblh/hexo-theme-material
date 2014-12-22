@@ -13,7 +13,7 @@ Summary: Linux commands
 
 
 Purpose            | Command
--------------------|--------------------------------
+------------------ | -------------------------------
 new group          | `groupadd sambashare`
 new user           | `useradd -m -g users -G sambashare -s /bin/bash unix_user`
 change password    | `passwd unix_user`
@@ -24,7 +24,7 @@ change password    | `passwd unix_user`
 
 
 Purpose            | Command
--------------------|--------------------------------
+------------------ | -------------------------------
 new user           | `pdbedit -a -u samba_user`
 change password    | `smbpasswd samba_user`
 
@@ -57,8 +57,10 @@ template command is as follow, where the first character after `s` is used as se
 
 ### Folder size
 
-* `-h` human readable file size
-* `-s` sum all subfolders
+`-h`
+: human readable file size
+`-s`
+: sum all subfolders
 
 	du <directory>
 

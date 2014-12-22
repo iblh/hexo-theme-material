@@ -31,13 +31,21 @@ lists all databases
 
 create database
 
-: `-O` owner
-: `-U` username
-: `-E` encoding
-: `-e` echo
-: `--locale=<locale>` (This is equivalent to specifying both --lc-collate and --lc-ctype)
-: `--lc-collate='<locale>'`
+`-O`
+: owner
+`-U`
+: username
+`-E`
+: encoding
+`-e`
+: echo
+`--locale=<locale>`
+: (This is equivalent to specifying both --lc-collate and --lc-ctype)
+
+: --lc-collate='<locale>'`
+
 : `--lc-ctype='<locale>'`
+
 : `-T` template
 
 	createdb -U postgres <database>
@@ -59,10 +67,14 @@ create database
 
 create user
 
-: `-D` (The new user will not be allowed to create databases.)
-: `-P` (If given, createuser will issue a prompt for the password of the new user. This is not necessary if you do not plan on using password authentication.)
-: `-S` (The new user will not be a superuser.)
-: `-E` (Encrypts the user's password stored in the database. If not specified, the default password behavior is used.)
+`-D`
+: (The new user will not be allowed to create databases.)
+`-P`
+: (If given, createuser will issue a prompt for the password of the new user. This is not necessary if you do not plan on using password authentication.)
+`-S`
+: (The new user will not be a superuser.)
+`-E`
+: (Encrypts the user's password stored in the database. If not specified, the default password behavior is used.)
 
 	createuser -D -S -E -P <name>
 
