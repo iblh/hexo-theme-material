@@ -2,7 +2,7 @@ Title: My personal file server on a Cubox from SolidRun using Arch Linux
 Author: iocast
 Date: 2014-11-09
 Summary: Who does not dream from a fast electric saving home server. In this blog I'm going to describe, how to setup a headless file server using Arch Linux on the Cubox from SolidRun.
-Category: server
+Category: Server
 Tags: server, arch linux, file server, samba, dyndns
 Slug: cubox-fileserver-archlinux
 

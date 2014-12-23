@@ -2,6 +2,7 @@ Title: Tunneling over an intermediate to overcome demilitarized zone
 Author: iocast
 Date: 2011-12-03
 Summary: Often you want to connect to a computer inside a network that is hidden from the outside. This "private" network, aka demilitarized zone (DMZ), can be overcome by having a computer inside the DMZ that opens a connection to an other "open" network or computer. This article describes roughly how to do that using Linux.
+Category: Miscellaneous
 Tags: linux, bash, networking, ssh
 Slug: tunelling-over-an-intermediat
 
