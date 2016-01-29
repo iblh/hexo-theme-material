@@ -1,0 +1,5 @@
+{
+  "devDependencies": {
+    "hexo-cli": "^0.1.9"
+  }
+}

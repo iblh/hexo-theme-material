@@ -1,10 +1,11 @@
-language: python
-python:
-  - "2.7"
+language: nodejs
 
-# command to install dependencies
-install:
-  - "pip install -r requirements.txt"
+sudo: false
+
+cache:
+  apt: true
+  directories:
+    - node_modules
 
 
 env:
@@ -13,13 +14,26 @@ env:
 
 branches:
   except:
-    - master
+  - master
 
 branches:
   only:
-    - develop
+  - develop
 
-# export LC_ALL=en_US.UTF-8 &&  export LANG=en_US.UTF-8
-script: pelican -o output/ -s pelicanconf.py
+before_install:
+- npm install -g hexo
 
-after_success: ./update-gh-pages.sh
+install
+- npm install
+
+before_script
+- cd page
+
+script:
+- hexo generate
+
+after_script:
+
+after_success:
+- cd ..
+- ./script/update-gh-pages.sh

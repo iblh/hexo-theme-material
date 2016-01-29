@@ -1,0 +1,23 @@
+
+<div class="wrapper cf">
+	<div class="content article-entry">
+		<header>
+			<h1><%- page.title %></h1>
+		</header>
+		<small>
+			<% page.categories.forEach(function(ele, i) { %>
+				<a href="<%- ele.permalink %>" rel="tag tooltip" class="label light" data-placement="right" data-original-title="2 articles in this category"><i class="fa fa-dot-circle-o"></i> <%- ele.name %></a>
+			<% }) %>
+      <a href="<%- page.permalink %>#disqus_thread" class="scrollTo label label-default light" data-disqus-identifier="blog/2014/07/21-javascript-internationalization-part1.html"><i class="fa fa-comment-o"></i> ?? Comments</a>
+      <span class="label label-default light">21/Jul/2014 Mon</span>
+    </small>
+
+		<%- page.more %>
+	</div>
+	<div id="sidebar" class="sidebar">
+		<h3>Table of Content</h3>
+		<nav class="toc">
+			<%- toc(page.content, {'class': 'toc-item', 'list_number': false}) %>
+		</nav>
+	</div>
+</div>

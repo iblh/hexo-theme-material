@@ -1,0 +1,40 @@
+body {
+	margin: 0;
+	padding: 0;
+
+	height: 100vh;
+
+	font-family: 'Open Sans', sans-serif;
+	color: #fff;
+
+	background: #222;
+
+	.container {
+		height: inherit;
+		width: 100%;
+
+		/* webkit hack */
+		background-color: inherit;
+		/* end hack */
+	}
+}
+
+menu {
+	position: absolute;
+	top: 20px;
+	right: 40px;
+	z-index: 900;
+
+	margin: 0;
+	padding: 0;
+}
+
+.sticky {
+}
+
+.fixed {
+	position: fixed;
+	top: 0;
+	background-color: rgba(0, 0, 0, 0.92);
+	z-index: 100;
+}
