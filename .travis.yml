@@ -20,11 +20,13 @@ branches:
   only:
   - develop
 
-before_install:
-- npm install -g hexo
+#before_install:
+#- npm install -g hexo
 
 install:
-- npm install
+- npm install -g
+
+#after_install:
 
 before_script:
 - cd page
@@ -32,7 +34,7 @@ before_script:
 script:
 - hexo generate
 
-after_script:
+#after_script:
 
 after_success:
 - cd ..
