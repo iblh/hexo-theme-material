@@ -20,11 +20,11 @@ branches:
   only:
   - develop
 
-#before_install:
-#- npm install -g hexo
+before_install:
+- npm install -g hexo-cli
 
 install:
-- npm install -g
+- npm install
 
 #after_install:
 
