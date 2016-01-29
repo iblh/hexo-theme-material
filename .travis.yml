@@ -30,6 +30,7 @@ install:
 
 before_script:
 - cd page
+- npm install
 
 script:
 - hexo generate
