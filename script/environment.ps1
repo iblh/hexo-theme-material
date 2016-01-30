@@ -1,7 +1,7 @@
-$version = '3.3.1'
+$version = '4.2.6'
 $arch = 'x64'
 
-$iojs = (get-psprovider filesystem).Home + '\virtualenv\iojs\' + $version + '\' + $arch + '\iojs.exe'
+$node = (get-psprovider filesystem).Home + '\virtualenv\nodejs\' + $version + '\' + $arch + '\node.exe'
 
 
 $name = $MyInvocation.MyCommand.Name;
@@ -10,15 +10,15 @@ $path = $MyInvocation.MyCommand.Path;
 If (Test-Path Alias:node) {
   Remove-Item alias:node
 }
-New-Alias node $iojs
+New-Alias node $node
 
 
 function npm {
-  . node ((get-psprovider filesystem).Home + '\virtualenv\iojs\' + $version + '\' + $arch  + '\npm\bin\npm-cli.js') $args
+  . node ((get-psprovider filesystem).Home + '\virtualenv\nodejs\' + $version + '\' + $arch  + '\npm\bin\npm-cli.js') $args
 }
 
 function node-gyp {
-  . node ((get-psprovider filesystem).Home + '\virtualenv\iojs\' + $version + '\' + $arch  + '\npm\node_modules\node-gyp\bin\node-gyp.js') $args
+  . node ((get-psprovider filesystem).Home + '\virtualenv\node\' + $version + '\' + $arch  + '\npm\node_modules\node-gyp\bin\node-gyp.js') $args
 }
 
 function hexo {
