@@ -3,7 +3,6 @@ $arch = 'x64'
 
 $node = (get-psprovider filesystem).Home + '\virtualenv\nodejs\' + $version + '\' + $arch + '\node.exe'
 
-
 $name = $MyInvocation.MyCommand.Name;
 $path = $MyInvocation.MyCommand.Path;
 
