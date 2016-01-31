@@ -10,7 +10,11 @@ cache:
 
 env:
   global:
-    - secure: gUVSU/Eu2rRJ4WZzvlDPseTbCIV/Nv/xNkAeSyMSqsCcdbP57y22YrArQGYLJ7UB4lNlQDDCtQTaMtoE28GCHjPWBDsX22X2hTJQxhS0fTFN9aIpPea2dcCiKTnNIS2Jh9qmV23Ly3XuI0YvDLuIs3YK9E4NtH/msz6IiUUmN9w=
+    - GH_REF: github.com/iocast/iocast.github.io.git
+    - secure: V3HL23jYNDx/SZASdpS149swCLifDH3eMPv6as+PxS3ovA/tvu1Jmk5e9fKtD3b5TCDQyvtNGXg22BOq859rQqr0cy8vyoHBrofh76pDQmiXqfp4DPrJBmCNonBgqzVNaXMPiq62L8RvzJwA0WwGTJ979ZwFBehOUbhjfu18/e8=
+    - secure: RtaVWjgPnReQeqkp5dvBNgXlOEMFqOxtnC5k8V3V8yEJxtC4BbKWYhvta5z0kKCOVawgDqYClKa54bm14g5CMyDAoGUdDe0cjUtM7J06DxeRk8K/0dEI2pbu1WmrLMonCUCu6OJsGJPVPO6H/SNvTzKRX2R2A2z6/l03lNG3EEE=
+    - secure: iXUQRlaX0oyBgMKJPbYdB+zjQi9Agy+dzEBMtucZSNUa2hCHV51JgNO1Z2LD5C6aNUYSrGpZhE5tuUUwOL47uT4T+n8lNj9t50JpEhX3Sv+oH7kfH0cSEyyNLW8kxBM5fcztW005P7Qpr3dTzd6+GXiqkLQb3Jf18vaf+THVFcE=
+
 
 branches:
   except:
