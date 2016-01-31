@@ -11,6 +11,7 @@ If (Test-Path Alias:node) {
 }
 New-Alias node $node
 
+$env:PYTHON = "C:\Python\Python27\python.exe"
 
 function npm {
   . node ((get-psprovider filesystem).Home + '\virtualenv\nodejs\' + $version + '\' + $arch  + '\npm\bin\npm-cli.js') $args
