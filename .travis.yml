@@ -43,4 +43,5 @@ script:
 
 after_success:
 - cd ..
+- chmod a+x ./script/update-gh-pages.sh
 - ./script/update-gh-pages.sh
