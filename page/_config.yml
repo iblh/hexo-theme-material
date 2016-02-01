@@ -6,8 +6,10 @@
 title: iocast's blog
 subtitle:
 description:
-author: Iocast
+author: iocast
 language:
+  - en
+  - de
 timezone:
 
 # URL
@@ -36,7 +38,7 @@ external_link: true # Open external links in new tab
 filename_case: 0
 render_drafts: false
 post_asset_folder: true
-relative_link: false
+relative_link: true
 future: true
 highlight:
   enable: true
@@ -65,6 +67,9 @@ pagination_dir: page
 ## Plugins: http://hexo.io/plugins/
 ## Themes: http://hexo.io/themes/
 theme: mission-control
+
+
+disqus_shortname: iocast-blog
 
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html

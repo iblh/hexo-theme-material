@@ -15,27 +15,22 @@
 		<%- page.more %>
 
 
-		<% if (!index && post.comments && config.disqus_shortname){ %>
+		<% if (page.comments && config.disqus_shortname){ %>
 		<section id="comments">
-		  <div id="disqus_thread">
-		    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-		  </div>
-
-
 			<div id="disqus_thread"></div>
 			<script>
 			var disqus_config = function () {
 				this.page.url = '<%- page.permalink %>;'
-				this.page.identifier = '<%- url_for(page.path) %>'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+				this.page.identifier = '<%- page.lang %>/<%- page.slug %>';
 			};
 
 			(function() {
-			var d = document, s = d.createElement('script');
+				var d = document, s = d.createElement('script');
 
-			s.src = '//iocast.disqus.com/embed.js';
+				s.src = '//<%- config.disqus_shortname %>.disqus.com/embed.js';
 
-			s.setAttribute('data-timestamp', +new Date());
-			(d.head || d.body).appendChild(s);
+				s.setAttribute('data-timestamp', +new Date());
+				(d.head || d.body).appendChild(s);
 			})();
 			</script>
 			<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
