@@ -8,11 +8,43 @@
 			<% page.categories.forEach(function(ele, i) { %>
 				<a href="<%- ele.permalink %>" rel="tag tooltip" class="label light" data-placement="right" data-original-title="2 articles in this category"><i class="fa fa-dot-circle-o"></i> <%- ele.name %></a>
 			<% }) %>
-      <a href="<%- page.permalink %>#disqus_thread" class="scrollTo label label-default light" data-disqus-identifier="blog/2014/07/21-javascript-internationalization-part1.html"><i class="fa fa-comment-o"></i> ?? Comments</a>
-      <span class="label label-default light">21/Jul/2014 Mon</span>
+      <a href="<%- page.permalink %>#disqus_thread" class="scrollTo label label-default light" data-disqus-identifier=""><i class="fa fa-comment-o"></i> ?? Comments</a>
+      <span class="label label-default light"><%- page.date %></span>
     </small>
 
 		<%- page.more %>
+
+
+		<% if (!index && post.comments && config.disqus_shortname){ %>
+		<section id="comments">
+		  <div id="disqus_thread">
+		    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+		  </div>
+
+
+			<div id="disqus_thread"></div>
+			<script>
+			var disqus_config = function () {
+				this.page.url = '<%- page.permalink %>;'
+				this.page.identifier = '<%- url_for(page.path) %>'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+			};
+
+			(function() {
+			var d = document, s = d.createElement('script');
+
+			s.src = '//iocast.disqus.com/embed.js';
+
+			s.setAttribute('data-timestamp', +new Date());
+			(d.head || d.body).appendChild(s);
+			})();
+			</script>
+			<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+			<script id="dsq-count-scr" src="//iocast.disqus.com/count.js" async></script>
+		</section>
+		<% } %>
+
 	</div>
 	<div id="sidebar" class="sidebar">
 		<h3>Table of Content</h3>
