@@ -16,7 +16,7 @@ tags:
 
 First of all check if you have already a **personal access token**.
 
-![GitHub personal access tokens](/assets/blog/github_personal_access_tokens.png "GitHub personal access tokens")
+![GitHub personal access tokens](github_personal_access_tokens.png "GitHub personal access tokens")
 
 If not, you can follow these [instructions]({% post_url 2013-10-08-github-jekyll-travis %})
 
