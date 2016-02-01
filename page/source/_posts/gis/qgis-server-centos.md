@@ -32,7 +32,7 @@ Configure yum repository
 and add the following excludes to `base` and `updates` sections:
 
 ```yaml
-	exclude=postgresql*
+exclude=postgresql*
 ```
 
 ### Install PGDG RPM file
@@ -115,10 +115,10 @@ Login into the database create a user and set a encrypted password
 
 Now test your configuration and install PostGIS extension
 
-	:::bash
-	psql -h localhost -d gis -U gis -W
-	CREATE EXTENSION postgis;
-
+```bash
+psql -h localhost -d gis -U gis -W
+CREATE EXTENSION postgis;
+```
 
 
 ## Installation QGIS
@@ -135,24 +135,25 @@ where the version I have tested it was `6-8`.
 
 Add the ELGIS repositories
 
-	:::bash
-	wget http://elgis.argeo.org/repos/6/elgis-release-<version>.noarch.rpm
-	rpm -Uvh elgis-release-6-6_0.noarch.rpm
+```bash
+wget http://elgis.argeo.org/repos/6/elgis-release-<version>.noarch.rpm
+rpm -Uvh elgis-release-6-6_0.noarch.rpm
+```
 
 where the version I have tested it was `6-6_0`.
 
 
 Now install QGIS server:
 
-	:::bash
-	yum install qgis-mapserver.x86_64
-
+```bash
+yum install qgis-mapserver.x86_64
+```
 
 If you want to have QGIS libraries, QGIS Desktop run the following command
 
-	:::bash
-	yum install qgis*
-
+```bash
+yum install qgis*
+```
 
 The scripts and configs are installed on CentOS:
 

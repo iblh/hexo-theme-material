@@ -33,32 +33,34 @@ curl -X GET -u <your_github_username> https://api.github.com/authorizations
 
 You should get a JSON response which looks like this
 
-	:::json
-	...
-	{
-		"id": 1234567,
-		"url": "https://api.github.com/authorizations/1234567",
-		"app": {
-			"name": "travis: token for pushing from travis (API)",
-			"url": "http://developer.github.com/v3/oauth_authorizations/",
-			"client_id": "00000000000000000000"
-			},
-		"token": "1abc234d56efghi789",
-		"note": "travis: token for pushing from travis",
-		"note_url": null,
-		"created_at": "2014-01-01T12:00:00Z",
-		"updated_at": "2014-01-01T12:00:00Z",
-		"scopes": [
-			"public_repo"
-		]
-	},
-	...
+```json
+...
+{
+	"id": 1234567,
+	"url": "https://api.github.com/authorizations/1234567",
+	"app": {
+		"name": "travis: token for pushing from travis (API)",
+		"url": "http://developer.github.com/v3/oauth_authorizations/",
+		"client_id": "00000000000000000000"
+		},
+	"token": "1abc234d56efghi789",
+	"note": "travis: token for pushing from travis",
+	"note_url": null,
+	"created_at": "2014-01-01T12:00:00Z",
+	"updated_at": "2014-01-01T12:00:00Z",
+	"scopes": [
+		"public_repo"
+	]
+},
+...
+```
 
 
 So we are ready to generate the secure string for Travis. Be sure that you have installed `travis` rubygem using the following command `gem install travis`. Open a terminal and go to the folder where `.travis.yml` lays and add the secure string to it
 
-	:::bash
-	cd /path/to/the/.travsi.yml/file
-	travis encrypt -r <user>/<repository> GH_TOKEN=<token> --add env.global
+```bash
+cd /path/to/the/.travsi.yml/file
+travis encrypt -r <user>/<repository> GH_TOKEN=<token> --add env.global
+```
 
 That's all the magic. You are done and can push your changes to the GitHub repository which automatically deploys it on Travis CI.

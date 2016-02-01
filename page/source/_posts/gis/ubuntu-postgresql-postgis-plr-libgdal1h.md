@@ -53,9 +53,9 @@ First you need to find out your release code name:
 lsb_release -c
 ```
 
-which get you something like that ```Codename:	precise```
+which get you something like that `Codename:	precise`
 
-Create a new file ```codename-pgdg.list``` in ```/etc/apt/sources.list.d``` according to the [PostgreSQL wiki page][pgsql].
+Create a new file `codename-pgdg.list` in `/etc/apt/sources.list.d` according to the [PostgreSQL wiki page][pgsql].
 
 ```bash
 vi /etc/apt/sources.list.d/precise-pgdg.list
@@ -83,9 +83,9 @@ apt-get install postgresql-9.3 postgresql-contrib-9.3 postgresql-server-dev-9.3
 
 ## Compiling PostGIS 2.1 against libgdal >= 1.10.0
 
-To install PostGIS 2.1 it is important that ```postgresql-server-dev-x.x``` is installed, because we need to compile PostGIS against these source files. We are going the install the precompiled ```libgdal``` 1.10.0 version from **ubuntugis**.
+To install PostGIS 2.1 it is important that `postgresql-server-dev-x.x` is installed, because we need to compile PostGIS against these source files. We are going the install the precompiled `libgdal` 1.10.0 version from **ubuntugis**.
 
-Install ```python-software-properties``` and add the apt sources (repositories):
+Install `python-software-properties` and add the apt sources (repositories):
 
 ```bash
 apt-get install python-software-properties
@@ -93,7 +93,7 @@ add-apt-repository ppa:ubuntugis/ubuntugis-unstable
 apt-get update
 ```
 
-Now install the new GDAL library called ```libgdal1h``` and its' development package
+Now install the new GDAL library called `libgdal1h` and its' development package
 
 ```bash
 apt-get install libgdal1h
@@ -166,7 +166,7 @@ cd postgis-2.1.0
  mathml2.dtd:          http://www.w3.org/Math/DTD/mathml2/mathml2.dtd
 ```
 
-use ```checkinstall```, which runs ```make install``` and registers the package in ```dpkg```.
+use `checkinstall`, which runs `make install` and registers the package in `dpkg`.
 
 ```bash
 make
