@@ -1,22 +1,5 @@
 	<meta charset="utf-8" />
-	<%
-  var title = page.title;
-
-  if (is_archive()){
-    title = 'Archives';
-
-    if (is_month()){
-      title += ': ' + page.year + '/' + page.month;
-    } else if (is_year()){
-      title += ': ' + page.year;
-    }
-  } else if (is_category()){
-    title = 'Category: ' + page.category;
-  } else if (is_tag()){
-    title = 'Tag: ' + page.tag;
-  }
-  %>
-  <title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
+  <title><%= page_title() %></title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
@@ -45,7 +28,7 @@
 	<% if(page.layout == 'post') { %>
 		<%- css('fancybox/jquery.fancybox') %>
 		<%- js('fancybox/jquery.fancybox.pack') %>
-		
+
 		<%- css(['css/post']) %>
 		<%- js(['js/post.js']) %>
 	<% } else { %>
