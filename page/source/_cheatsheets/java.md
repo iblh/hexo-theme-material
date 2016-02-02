@@ -1,5 +1,0 @@
----
-layout: cheatsheet
----
-
-# test

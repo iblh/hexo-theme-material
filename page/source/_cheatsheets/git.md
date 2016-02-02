@@ -1,13 +1,12 @@
-Title: Git
-Type: cheatsheet
-Date: 2014-12-22 10:30
-Modified: 2014-12-22 11:41
-Slug: cheatsheet/git
-Authors: iocast
-Summary: Git commands
-
-
-[TOC]
+---
+title: Git
+author: iocast
+date: 2014/12/22
+excerpt: Git commands
+categories:
+- cheatsheet
+layout: cheatsheet
+---
 
 
 ## Settings
@@ -201,6 +200,3 @@ switch to develop and merge hotfix into it
 and delete hotfix
 
 	git branch -d hotfix-1.2.1
-
-
-
