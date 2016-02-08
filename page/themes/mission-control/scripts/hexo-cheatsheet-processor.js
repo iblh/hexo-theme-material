@@ -4,13 +4,17 @@ var Promise = require('bluebird');
 var yfm = require('hexo-front-matter');
 var slugize = require('hexo-util').slugize;
 
+
+var Cheatsheet = require('./hexo-cheatsheet-model');
+
 hexo.locals.set('cheatsheets', function() {
 	return hexo.database.model('Cheatsheet');
 });
 
+
 hexo.extend.processor.register('_cheatsheets/:file', function(file) {
 
-	var Model = this.model("Cheatsheet", new Schema());
+	var Model = this.model("Cheatsheet", new Cheatsheet());
 	var doc = Model.findOne({
 		source: file.path
 	});
@@ -35,7 +39,6 @@ hexo.extend.processor.register('_cheatsheets/:file', function(file) {
 		var data = yfm(content);
 		data.source = file.path;
 		data.raw = content;
-    data.layout = "cheatsheet";
 
 		if (data.permalink) {
 			data.slug = data.permalink;
