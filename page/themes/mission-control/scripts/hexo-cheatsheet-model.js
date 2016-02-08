@@ -1,4 +1,4 @@
-'use strict';
+//'use strict';
 
 var Schema = require('warehouse').Schema;
 var moment = require('moment');
