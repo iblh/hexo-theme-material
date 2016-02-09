@@ -1,8 +1,7 @@
 //https://github.com/hgcummings/hexo-processor-types
-var Schema = require('warehouse').Schema;
-var Promise = require('bluebird');
-var yfm = require('hexo-front-matter');
-var slugize = require('hexo-util').slugize;
+var Promise = require('hexo/node_modules/bluebird');
+var yfm = require('hexo/node_modules/hexo-front-matter');
+var slugize = require('hexo/node_modules/hexo-util').slugize;
 
 
 var cs = require('./hexo-cheatsheet-model');

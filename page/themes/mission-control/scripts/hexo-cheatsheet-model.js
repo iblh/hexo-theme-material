@@ -1,10 +1,10 @@
 //'use strict';
 
-var Schema = require('warehouse').Schema;
-var moment = require('moment');
+var Schema = require('hexo/node_modules/warehouse').Schema;
+var moment = require('hexo/node_modules/moment');
 var pathFn = require('path');
-var Promise = require('bluebird');
-var _ = require('lodash');
+var Promise = require('hexo/node_modules/bluebird');
+var _ = require('hexo/node_modules/lodash');
 var Moment = require('hexo/lib/models/types/moment');
 
 function pickID(data) {
