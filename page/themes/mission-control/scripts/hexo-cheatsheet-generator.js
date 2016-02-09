@@ -8,8 +8,6 @@ hexo.extend.generator.register('cheatsheet', function(locals) {
 		var path = cheatsheet.path;
 		cheatsheet.content = cheatsheet._content;
 
-		console.dir(cheatsheet);
-
 		if (!layout || layout === 'false') {
 			return {
 				path: path,

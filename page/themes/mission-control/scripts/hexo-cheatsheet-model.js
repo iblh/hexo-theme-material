@@ -19,7 +19,7 @@ function removeEmptyTag(tags) {
   });
 }
 
-module.exports = function(ctx) {
+module.exports.Cheatsheet = function(ctx) {
   var Cheatsheet = new Schema({
     id: String,
     title: {type: String, default: ''},

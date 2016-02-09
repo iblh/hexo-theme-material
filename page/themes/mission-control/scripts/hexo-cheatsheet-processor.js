@@ -5,16 +5,16 @@ var yfm = require('hexo-front-matter');
 var slugize = require('hexo-util').slugize;
 
 
-var Cheatsheet = require('./hexo-cheatsheet-model');
+var cs = require('./hexo-cheatsheet-model');
 
 hexo.locals.set('cheatsheets', function() {
-	return hexo.database.model('Cheatsheet');
+	return hexo.database.model('Cheatsheet', cs.Cheatsheet(hexo));
 });
 
 
 hexo.extend.processor.register('_cheatsheets/:file', function(file) {
 
-	var Model = this.model("Cheatsheet", new Cheatsheet());
+	var Model = this.model("Cheatsheet");
 	var doc = Model.findOne({
 		source: file.path
 	});
@@ -47,7 +47,7 @@ hexo.extend.processor.register('_cheatsheets/:file', function(file) {
 			data.slug = createSlug(file.path);
 		}
 
-		data.path = 'cheatsheets/' + data.slug + '/';
+		data.path = 'cheatsheets/' + data.slug + '.html';
 
 		if (doc) {
 			return doc.replace(data);
