@@ -1,4 +1,4 @@
-$version = '4.2.6'
+$version = '4.3.0'
 $arch = 'x64'
 
 $node = (get-psprovider filesystem).Home + '\virtualenv\nodejs\' + $version + '\' + $arch + '\node.exe'
