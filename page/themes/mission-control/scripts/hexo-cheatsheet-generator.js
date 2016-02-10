@@ -1,5 +1,7 @@
-hexo.extend.generator.register('cheatsheet', function(locals) {
+"use strict";
 
+hexo.extend.generator.register('cheatsheet', function(locals) {
+	console.dir("generator");
 	var cheatsheets = locals.cheatsheets.sort('-title').toArray();
 	var length = cheatsheets.length;
 
@@ -29,14 +31,4 @@ hexo.extend.generator.register('cheatsheet', function(locals) {
 			data: cheatsheet
 		};
 	});
-
-	/*
-		return locals.cheatsheets.map(function(cheatsheet){
-	    return {
-	      path: cheatsheet.path,
-	      data: cheatsheet,
-	      layout: 'cheatsheet'
-	    };
-	  });
-		*/
 });

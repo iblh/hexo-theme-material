@@ -19,7 +19,8 @@ function removeEmptyTag(tags) {
   });
 }
 
-module.exports.Cheatsheet = function(ctx) {
+module.exports = function(ctx) {
+  console.dir("model");
   var Cheatsheet = new Schema({
     id: String,
     title: {type: String, default: ''},
