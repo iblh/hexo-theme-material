@@ -7,14 +7,13 @@ var slugize = require('hexo/node_modules/hexo-util').slugize;
 //var model = require('./hexo-cheatsheet-model');
 
 hexo.locals.set('cheatsheets', function() {
-	console.log("hmmm");
 	//return hexo.database.model('Cheatsheet', model.Cheatsheet(hexo));
-	var abc = hexo.database.model('Cheatsheet', require('./hexo-cheatsheet-model')(hexo));
-	console.dir(abc);
-	return abc;
+	return hexo.database.model('Cheatsheet', require('./hexo-cheatsheet-model')(hexo));
 });
 
-hexo.extend.processor.register('_cheatsheets/:file', function(file) {
+hexo.locals.get('cheatsheets');
+
+hexo.extend.processor.register('_cheatsheets', function(file) {
 	var Cheatsheet = hexo.model("Cheatsheet");
 	var doc = Cheatsheet.findOne({
 		source: file.path
@@ -24,7 +23,9 @@ hexo.extend.processor.register('_cheatsheets/:file', function(file) {
 	console.dir(doc);
 	console.dir(file.path);
 	*/
-	console.dir(Cheatsheet.layout);
+	console.dir(Cheatsheet);
+	console.dir(doc);
+	console.dir(file);
 
 	if (file.type === 'skip' && doc) {
 		return;
@@ -38,9 +39,10 @@ hexo.extend.processor.register('_cheatsheets/:file', function(file) {
 		}
 	}
 
+	/*
 	return file.changed().then(function(changed) {
 		if (!changed && doc) return;
-
+		*/
 		return Promise.all([
 			file.stat(),
 			file.read()
@@ -65,7 +67,7 @@ hexo.extend.processor.register('_cheatsheets/:file', function(file) {
 			return Cheatsheet.insert(data);
 		});
 
-	});
+	//});
 
 });
 

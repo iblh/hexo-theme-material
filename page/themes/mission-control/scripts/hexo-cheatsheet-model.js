@@ -1,4 +1,4 @@
-//'use strict';
+'use strict';
 
 var Schema = require('hexo/node_modules/warehouse').Schema;
 var moment = require('hexo/node_modules/moment');
@@ -20,7 +20,6 @@ function removeEmptyTag(tags) {
 }
 
 module.exports = function(ctx) {
-  console.dir("model");
   var Cheatsheet = new Schema({
     id: String,
     title: {type: String, default: ''},

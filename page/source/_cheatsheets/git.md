@@ -5,6 +5,7 @@ date: 2014/12/22
 excerpt: Git commands
 categories:
 - cheatsheet
+layout: cheatsheet
 ---
 
 
