@@ -1,0 +1,50 @@
+<%- partial("_partial/back_button") %>
+
+<!-- Article module -->
+<div class="demo-blog--blogpost">
+    <div class="demo-blog__posts mdl-grid">
+        <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+            <!-- Article title -->
+            <div class="mdl-card__media mdl-color-text--grey-50">
+                <p class="article-headline-p">
+                    <%- page.title%>
+                </p>
+            </div>
+
+
+            <!-- Articli info -->
+            <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+                <!-- Author avatar -->
+                <div id="author-avatar"></div>
+                <div>
+                    <!-- Author name -->
+                    <span class="author-name-span"></span>
+                    <!-- Articel date -->
+                    <span></span>
+                </div>
+                <div class="section-spacer"></div>
+                <div class="meta__favorites">
+                    425 <i class="material-icons" role="presentation">favorite</i>
+                    <span class="visuallyhidden">favorites</span>
+                </div>
+                <div>
+                    <i class="material-icons" role="presentation">bookmark</i>
+                    <span class="visuallyhidden">bookmark</span>
+                </div>
+                <div>
+                    <i class="material-icons" role="presentation">share</i>
+                    <span class="visuallyhidden">share</span>
+                </div>
+            </div>
+
+            <!-- Articel content -->
+            <div id="article-content-div" class="mdl-color-text--grey-700 mdl-card__supporting-text post-article-content">
+                <%- page.content %>
+            </div>
+
+            <!-- Article comments -->
+            <%- partial("_partial/comment") %>
+        </div>
+    </div>
+</div>

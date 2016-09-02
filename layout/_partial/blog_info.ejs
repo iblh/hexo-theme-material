@@ -1,0 +1,29 @@
+<div class="mdl-card something-else mdl-cell mdl-cell--8-col mdl-cell--4-col-desktop index-top-block">
+    <!-- Search -->
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable" method="post" action="">
+        <label id="search-label" class="mdl-button mdl-js-ripple-effect mdl-js-button mdl-button--fab mdl-color--accent mdl-shadow--4dp" for="search">
+        <!-- For modern browsers. -->
+        <i class="material-icons mdl-color-text--white" role="presentation">search</i>
+    </label>
+        <form id="search-form" method="post" action="" class="mdl-textfield__expandable-holder">
+            <input class="mdl-textfield__input search-input" type="text" name="s" id="search">
+            <label id="search-form-label" class="mdl-textfield__label" for="search">Enter your query...</label>
+        </form>
+    </div>
+
+    <!-- LOGO -->
+    <div class="something-else-logo mdl-color--white mdl-color-text--grey-600">
+        <a href="#">
+            <img src="<%- ("img/logo.png") %>" alt="logo" />
+        </a>
+    </div>
+
+    <!-- Infomation -->
+    <div class="mdl-card__supporting-text meta meta--fill mdl-color-text--grey-600">
+        <div>
+            <strong><%- config.title %></strong>
+        </div>
+        <div class="section-spacer"></div>
+
+    </div>
+</div>

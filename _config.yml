@@ -1,0 +1,9 @@
+# Header
+menu:
+    Home: /
+    Archives: /archives
+    rss: /atom.xml
+
+# Set image
+    logo: img/logo.png
+    avatar: img/avatar.png

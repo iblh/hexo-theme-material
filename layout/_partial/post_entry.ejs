@@ -1,0 +1,25 @@
+<div class="mdl-card mdl-cell mdl-cell--12-col article-module">
+    <!-- Article link & title -->
+    <div class="mdl-card__media mdl-color-text--grey-50">
+        <h3><a href="<%- url_for(post.path) %>"><%- post.title %></a></h3>
+    </div>
+    <!-- Article excerpt -->
+    <div class="mdl-color-text--grey-600 mdl-card__supporting-text index-article-content">
+        <%if(post.excerpt){%>
+          <%- strip_html(post.excerpt) %>
+        <%}else{%>
+          <%- strip_html(truncate(post.content,{length:150})) %>
+        <%}%>
+    </div>
+    <!-- Article info-->
+    <div id="article-info">
+        <div class="mdl-card__supporting-text meta mdl-color-text--grey-600 " id="article-author-date">
+            <!-- Author avatar -->
+            <div class="minilogo"></div>
+            <div>
+                <strong>The Newist</strong>
+                <span><%- date(post.date, 'YYYY/M/D') %></span>
+            </div>
+        </div>
+    </div>
+</div>

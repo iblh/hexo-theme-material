@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+    <%- partial('_partial/head') %>
+    <body>
+        <div class="demo-blog mdl-layout mdl-js-layout has-drawer is-upgraded">
+            <main class="mdl-layout__content" id="main">
+                <div id="top"></div>
+                <!-- Sidebar hamburger button -->
+                <button class="MD-burger-icon sidebar-toggle">
+                    <span class="MD-burger-layer"></span>
+                </button>
+                <%- body %>
+            </main>
+        </div>
+        <%- partial('_partial/footer') %>
+    </body>
+</html>
