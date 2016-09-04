@@ -1,9 +1,9 @@
 <div class="mdl-card mdl-cell mdl-cell--12-col article-module">
-    <!-- Article link & title -->
+    <!-- Article Link & Title -->
     <div class="mdl-card__media mdl-color-text--grey-50">
         <h3><a href="<%- url_for(post.path) %>"><%- post.title %></a></h3>
     </div>
-    <!-- Article excerpt -->
+    <!-- Article Excerpt -->
     <div class="mdl-color-text--grey-600 mdl-card__supporting-text index-article-content">
         <%if(post.excerpt){%>
           <%- strip_html(post.excerpt) %>
@@ -11,7 +11,7 @@
           <%- strip_html(truncate(post.content,{length:150})) %>
         <%}%>
     </div>
-    <!-- Article info-->
+    <!-- Article Info-->
     <div id="article-info">
         <div class="mdl-card__supporting-text meta mdl-color-text--grey-600 " id="article-author-date">
             <!-- Author avatar -->

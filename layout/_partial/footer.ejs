@@ -7,27 +7,27 @@
 </div>
 <!--Footer-->
 <footer class="mdl-mini-footer" id="bottom">
-    <!--footer-left-section-->
+    <!--Footer Left Section-->
     <div class="mdl-mini-footer--left-section">
         <div class="mdl-mini-footer--left-section">
-            <a href="https://twitter.com/viosey" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__twitter" style="background-image: url(<%- ("img/footer/footer-ico-twitter.png") %>);">
+            <a href="https://twitter.com/viosey" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__twitter" style="background-image: url(<%= theme.img.footerico %>twitter.png);">
                 <span class="visuallyhidden">Twitter</span>
             </button></a>
 
-           <a href="https://www.facebook.com/viosey" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__facebook" style="background-image: url(<%- ("img/footer/footer-ico-facebook.png") %>);">
+           <a href="https://www.facebook.com/viosey" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__facebook" style="background-image: url(<%= theme.img.footerico %>facebook.png);">
                 <span class="visuallyhidden">Facebook</span>
             </button></a>
 
-           <a href="https://plus.google.com/116465253856896614917" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__gplus" style="background-image: url(<%- ("img/footer/footer-ico-gplus.png") %>);">
+           <a href="https://plus.google.com/116465253856896614917" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__gplus" style="background-image: url(<%= theme.img.footerico %>gplus.png);">
                 <span class="visuallyhidden">Google Plus</span>
             </button></a>
         </div>
     </div>
 
-    <!--copyright-->
+    <!--Copyright-->
     <div id="copyright">Copyright&nbsp;©&nbsp;2016&nbsp;<%- config.title %></div>
 
-    <!--footer-right-section-->
+    <!--Footer Right Section-->
     <div class="mdl-mini-footer--right-section">
         <div>
             <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
@@ -36,4 +36,4 @@
     </div>
 
 <%- js("js/jquery.min") %>
-<!-- <%- js("js/js-dev") %> -->
+<%- js("js/js-dev") %>

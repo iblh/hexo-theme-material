@@ -1,11 +1,11 @@
 <%- partial("_partial/back_button") %>
 
-<!-- Article module -->
+<!-- Article Module -->
 <div class="demo-blog--blogpost">
     <div class="demo-blog__posts mdl-grid">
         <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
 
-            <!-- Article title -->
+            <!-- Article Title -->
             <div class="mdl-card__media mdl-color-text--grey-50">
                 <p class="article-headline-p">
                     <%- page.title%>
@@ -13,14 +13,14 @@
             </div>
 
 
-            <!-- Articli info -->
+            <!-- Article Info -->
             <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
-                <!-- Author avatar -->
+                <!-- Author Avatar -->
                 <div id="author-avatar"></div>
                 <div>
-                    <!-- Author name -->
+                    <!-- Author Name -->
                     <span class="author-name-span"></span>
-                    <!-- Articel date -->
+                    <!-- Articel Date -->
                     <span></span>
                 </div>
                 <div class="section-spacer"></div>
@@ -38,12 +38,12 @@
                 </div>
             </div>
 
-            <!-- Articel content -->
+            <!-- Article Content -->
             <div id="article-content-div" class="mdl-color-text--grey-700 mdl-card__supporting-text post-article-content">
                 <%- page.content %>
             </div>
 
-            <!-- Article comments -->
+            <!-- Article Comments -->
             <%- partial("_partial/comment") %>
         </div>
     </div>

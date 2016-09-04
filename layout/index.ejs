@@ -1,7 +1,8 @@
+<!-- Index Module -->
 <div class="demo-blog__posts mdl-grid">
     <%- partial("_partial/daily_pic") %>
     <%- partial("_partial/blog_info") %>
     <% site.posts.sort("date", "desc").each(function(post){ %>
     <%- partial("_partial/post_entry", {post: post}) %>
     <% }) %>
-</div>    
+</div>

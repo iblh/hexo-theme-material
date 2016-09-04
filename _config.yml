@@ -5,5 +5,10 @@ menu:
     rss: /atom.xml
 
 # Set image
-    logo: img/logo.png
-    avatar: img/avatar.png
+img:
+    logo: /img/logo.png
+    avatar: /img/avatar.png
+    daily_pic: /img/daily_pic.png
+    sidebar_header: /img/sidebar_header.png
+    footerico: /img/footer/footer_ico-
+    upyun_logo: /img/upyun_logo.png    
