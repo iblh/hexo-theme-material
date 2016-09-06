@@ -4,6 +4,9 @@ menu:
     Archives: /archives
     rss: /atom.xml
 
+random_amount: 5
+per_page: 2
+
 # Set image
 img:
     logo: /img/logo.png
@@ -11,4 +14,5 @@ img:
     daily_pic: /img/daily_pic.png
     sidebar_header: /img/sidebar_header.png
     footerico: /img/footer/footer_ico-
-    upyun_logo: /img/upyun_logo.png    
+    upyun_logo: /img/upyun_logo.png
+    random_thumbnail: /img/random/
