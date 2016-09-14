@@ -5,4 +5,5 @@
     <% site.posts.sort("date", "desc").each(function(post){ %>
         <%- partial("_partial/post_entry", {post: post}) %>
     <% }) %>
+    <%- partial('_partial/thumbnail') %>
 </div>
