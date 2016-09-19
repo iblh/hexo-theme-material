@@ -1,7 +1,11 @@
 <div class="mdl-card mdl-cell mdl-cell--12-col article-module">
     
     <!-- Article Thumbnail -->
-    <div class="post_thumbnail mdl-card__media mdl-color-text--grey-50">
+    <% if(post.thumbnail == undefined){ %>
+        <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50" style="background-image:url(<%= post.thumbnail %>)">
+    <% }else{ %>
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(<%= post.thumbnail %>)">
+    <% } %>
         <!-- Article Title -->
         <h3><a href="<%- url_for(post.path) %>"><%- post.title %></a></h3>
     </div>

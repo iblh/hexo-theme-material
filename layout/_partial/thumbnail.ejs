@@ -5,10 +5,11 @@
     
     var locatePost = $(".something-else").next();
     for(var i=0;i<<%= theme.per_page %>;i++){
+        
         randomNum = Math.floor(Math.random() * number_of_banners + 1);
         
-        locatePost.children(".post_thumbnail").attr('id', 'post_thumbnail-'+randomNum);
-        locatePost.children(".post_thumbnail").css('background-image', 'url(' + '<%= theme.img.random_thumbnail %>' + randomNum + '.jpg' + ')')
+        locatePost.children(".post_thumbnail-random").attr('id', 'random_thumbnail-'+randomNum);
+        locatePost.children(".post_thumbnail-random").css('background-image', 'url(' + '<%= theme.img.random_thumbnail %>' + randomNum + '.jpg' + ')')
         
         locatePost = locatePost.next();
     }
