@@ -1,12 +1,11 @@
 <script>
     
-    var number_of_banners = 5;
     var randomNum;
     
     var locatePost = $(".something-else").next();
     for(var i=0;i<<%= theme.per_page %>;i++){
         
-        randomNum = Math.floor(Math.random() * number_of_banners + 1);
+        randomNum = Math.floor(Math.random() * <%= theme.random_amount %> + 1);
         
         locatePost.children(".post_thumbnail-random").attr('id', 'random_thumbnail-'+randomNum);
         locatePost.children(".post_thumbnail-random").css('background-image', 'url(' + '<%= theme.img.random_thumbnail %>' + randomNum + '.jpg' + ')')
@@ -14,5 +13,5 @@
         locatePost = locatePost.next();
     }
     
-
+    
 </script>

@@ -1,7 +1,7 @@
 # Header
 menu:
-    Home: /
-    Archives: /archives
+    home: /
+    archives: /archives
     rss: /atom.xml
 
 random_amount: 5
