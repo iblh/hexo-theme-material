@@ -5,9 +5,14 @@ menu:
     rss: /atom.xml
 
 random_amount: 5
-per_page: 2
 
-# Set image
+# Set Background
+background:
+    purecolor: F5F5F5
+    bgimg: #/img/bg.png
+
+
+# Set Image
 img:
     logo: /img/logo.png
     avatar: /img/avatar.png
@@ -16,3 +21,11 @@ img:
     footerico: /img/footer/footer_ico-
     upyun_logo: /img/upyun_logo.png
     random_thumbnail: /img/random/
+
+
+# Set SNS
+sns:
+    twitter: https://twitter.com/viosey
+    facebook: https://www.facebook.com/viosey
+    googleplus: https://plus.google.com/100042884044425428980
+    weibo: 

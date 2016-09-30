@@ -7,7 +7,7 @@
         <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(<%= post.thumbnail %>)">
     <% } %>
         <!-- Article Title -->
-        <h3><a href="<%- url_for(post.path) %>"><%- post.title %></a></h3>
+        <p class="article-headline-p"><a href="<%- url_for(post.path) %>"><%- post.title %></a></p>
     </div>
     <!-- Article Excerpt -->
     <div class="mdl-color-text--grey-600 mdl-card__supporting-text index-article-content">

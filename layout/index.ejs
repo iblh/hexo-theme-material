@@ -2,8 +2,19 @@
 <div class="demo-blog__posts mdl-grid">
     <%- partial("_partial/daily_pic") %>
     <%- partial("_partial/blog_info") %>
-    <% site.posts.sort("date", "desc").each(function(post){ %>
-        <%- partial("_partial/post_entry", {post: post}) %>
-    <% }) %>
+    
+    <% page.posts.each(function(post) { %>
+        <%- partial('_partial/post_entry', { post: post, index: true }) %>
+    <% });
+    
+    if (page.total > 1) { %>
+        <nav class="demo-nav mdl-cell mdl-cell--12-col">
+            <%- paginator({
+                prev_text: __('<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons" role="presentation">arrow_back</i></button>'),
+                next_text: __('<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons" role="presentation">arrow_forward</i></button>')
+            }) %>
+        </nav>
+    <% } %>
+    
     <%- partial('_partial/thumbnail') %>
 </div>
