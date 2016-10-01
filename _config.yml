@@ -1,12 +1,17 @@
-# Header
+# Blog info
 menu:
     home: /
     archives: /archives
     rss: /atom.xml
+    
+# Author info
+author:
+    name: 
+    email: 
 
 random_amount: 5
 
-# Set Background
+# Background
 background:
     purecolor: F5F5F5
     bgimg: #/img/bg.png

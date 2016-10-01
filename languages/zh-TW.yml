@@ -1,0 +1,28 @@
+sidebar:
+	profile: "使用者概要"
+	setting: "設置外觀"
+	homepage: "網站首頁"
+	imlucky: "手氣不錯"
+	article: "最新文章"
+	comment: "最新評論"
+	archive: "按月歸檔"
+	pages: "獨立頁面"
+	tags: "熱門標籤"
+	links: "友情鏈接"
+	article_num: "文章總數"
+	theme_github: "主题 Github"
+	help: "説明 & 支援"
+	feedback: "意見回饋"
+	about_theme: "關於主題"
+post_entry:
+	continue: "繼續閱讀"
+	views:
+		zero: "暫無瀏覽"
+		one: "1 瀏覽量"
+		other: "%d 瀏覽量"
+share:
+	article_rss: "文章 RSS"
+	comment_rss: "評論 RSS"
+	toTwitter: "分享到 Twitter"
+	toGplus: "分享到 Google+"
+	newtab: "新標籤頁打開"

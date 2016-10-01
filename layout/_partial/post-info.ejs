@@ -1,0 +1,64 @@
+<div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+    
+    <!-- Author Avatar -->
+    <div id="author-avatar"></div>
+    <div>
+        <!-- Author Name -->
+        <span class="author-name-span"></span>
+        <!-- Articel Date -->
+        <span></span>
+    </div>
+    
+    <div class="section-spacer"></div>
+    
+    <!-- Favorite -->
+    <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+        <i class="material-icons" role="presentation">favorite</i>
+        <span class="visuallyhidden">favorites</span>
+    </button>
+    
+    <!-- Tags (bookmark) -->
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <a class="md-menu-list-a" href="#">
+            <li class="mdl-menu__item">
+                
+            </li>
+        </a>
+    </ul>
+    
+     <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">share</i>
+        <span class="visuallyhidden">share</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+        <!-- Views -->
+        <a class="md-menu-list-a" href="#">
+            <li class="mdl-menu__item">
+                <%= _p('post_entry.views', 3) %>
+            </li>
+        </a>
+        <!-- New Tab -->
+        <a class="md-menu-list-a" href="#">
+            <li class="mdl-menu__item">
+                <%= __('share.newtab') %>
+            </li>
+        </a>
+        <!-- Share Twitter -->
+        <a class="md-menu-list-a" href="#">
+            <li class="mdl-menu__item">
+                <%= __('share.toTwitter') %>
+            </li>
+        </a>
+        <!-- Share Google+ -->
+        <a class="md-menu-list-a" href="#">
+            <li class="mdl-menu__item">
+                <%= __('share.toGplus') %>
+            </li>
+        </a>
+    </ul>
+</div>

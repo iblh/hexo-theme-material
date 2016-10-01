@@ -1,0 +1,10 @@
+<% if(page.thumbnail == undefined){ %>
+    <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+    <%- partial('_partial/post-thumbnail') %>
+<% }else{ %>
+    <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(<%- page.thumbnail %>)">
+<% } %>
+        <p class="article-headline-p">
+            <%- page.title%>
+        </p>
+    </div>

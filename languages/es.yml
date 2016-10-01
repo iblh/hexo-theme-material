@@ -1,0 +1,28 @@
+sidebar:
+    profile: "Perfil"
+    setting: "Ajustes"
+    homepage: " Página principal"
+    imlucky: "Voy a tener suerte"
+    article: "El más reciente artículo"
+    comment: "Lo nuevo Comentarios"
+    archive: "Archivo"
+    pages: "Páginas"
+    tags: "Etiquetas populares"
+    links: "Enlaces"
+    article_num: "Número de artículo"
+    theme_github: "Theme en Github"
+    help: "Ayuda & Apoyo"
+    feedback: "Realimentación"
+    about_theme: "sobre el tema"
+post_entry:
+    continue: "Sigue leyendo"
+    views:
+        zero: "No Vista"
+        one: "1 Vista"
+        other: "%d Vista"
+share:
+    article_rss: "Artículo RSS"
+    comment_rss: "Comentario RSS"
+    toTwitter: "Compartir en Twitter"
+    toGplus: "Compartir en Google+"
+    newtab: "Abrir en una pestaña nueva"

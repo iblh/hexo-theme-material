@@ -21,6 +21,7 @@
 
         <!-- Sidebar brand name -->
         <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+            <%= theme.author.email %>
             <b class="caret"></b>
         </a>
     </div>
@@ -33,25 +34,13 @@
                     <li>
                         <a href="#" tabindex="-1">
                             <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">account_circle</i>
-                             Profile
+                             <%= __('sidebar.profile') %>
                         </a>
                     </li>
                     <li>
                         <a href="#" tabindex="-1">
                             <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">settings</i>
-                             Settings
-                        </a>
-                    </li>
-                                        <li>
-                        <a href="#" class="md-menu-list-a" tabindex="-1">
-                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">fingerprint</i>
-                             Login
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="md-menu-list-a" tabindex="-1">
-                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">person_add</i>
-                             Register
+                             <%= __('sidebar.setting') %>
                         </a>
                     </li>
                 </ul>
@@ -61,7 +50,7 @@
             <li id="sidebar-first-li">
                 <a href="<%= theme.menu.home %>" target="_self">
                     <i class="material-icons sidebar-material-icons">home</i>
-                     Homepage
+                     <%= __('sidebar.homepage') %>
                 </a>
             </li>
 
@@ -69,7 +58,7 @@
             <li class="dropdown">
                 <a href="#" target="_self">
                     <i class="material-icons sidebar-material-icons">explore</i>
-                     I'm Feeling Lucky
+                     <%= __('sidebar.imlucky') %>
                 </a>
             </li>
 
@@ -77,7 +66,7 @@
             <li class="dropdown">
                 <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
                     <i class="material-icons sidebar-material-icons">library_books</i>
-                     Newest Article
+                     <%= __('sidebar.article') %>
                     <b class="caret"></b>
                 </a>
                 <ul class="dropdown-menu">
@@ -105,7 +94,7 @@
             <li class="dropdown">
                 <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
                     <i class="material-icons sidebar-material-icons">forum</i>
-                     Newest Comments
+                     <%= __('sidebar.comment') %>
                     <b class="caret"></b>
                 </a>
                 <ul class="dropdown-menu">
@@ -133,7 +122,7 @@
             <li class="dropdown">
                 <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
                     <i class="material-icons sidebar-material-icons">inbox</i>
-                     Archives
+                     <%= __('sidebar.archive') %>
                     <b class="caret"></b>
                 </a>
                 <ul class="dropdown-menu">
@@ -152,7 +141,7 @@
             <!-- Pages  -->
             <li class="dropdown">
                 <a class="ripple-effect dropdown-toggle" href="#" data-toggle="dropdown">
-                     Pages
+                     <%= __('sidebar.pages') %>
                     <b class="caret"></b>
                 </a>
                 <ul class="dropdown-menu">
@@ -177,7 +166,7 @@
             <!-- Hot tags  -->
             <li class="dropdown">
                 <a class="ripple-effect dropdown-toggle" href="#" data-toggle="dropdown">
-                     Hot Tags
+                     <%= __('sidebar.tags') %>
                     <b class="caret"></b>
                 </a>
                 <ul class="dropdown-menu">
@@ -205,7 +194,7 @@
             <!-- Links -->
             <li class="dropdown">
                 <a class="ripple-effect dropdown-toggle" href="#" data-toggle="dropdown">
-                    Links
+                    <%= __('sidebar.links') %>
                     <b class="caret"></b>
                 </a>
                 <ul class="dropdown-menu">
@@ -226,13 +215,13 @@
             <!-- Article Numebr  -->
             <li>
                 <a href="#">
-                     Article Number
+                     <%= __('sidebar.article_num') %>
                      <span class="sidebar-badge">20</span>
                 </a>
             </li>
             <li>
                 <a href="https://github.com/viosey/typecho-theme-material" target="_blank">
-                     Theme in Github
+                     <%= __('sidebar.theme_github') %>
                     <span class="sidebar-badge badge-circle">i</span>
                 </a>
             </li>
@@ -243,17 +232,17 @@
         <!-- Sidebar bottom text -->
         <a href="mailto:hiviosey@gmail.com" class="sidebar-footer-text-a">
             <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
-                 Help&amp;Support
+                 <%= __('sidebar.help') %>
                             <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></div>
         </a>
         <a href="https://github.com/viosey/typecho-theme-material/issues" target="_blank" class="sidebar-footer-text-a">
             <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
-                 Feedback
+                 <%= __('sidebar.feedback') %>
                             <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></div>
         </a>
         <a href="https://blog.viosey.com/index.php/Material.html" target="_blank" class="sidebar-footer-text-a">
             <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
-                 About Theme
+                 <%= __('sidebar.about_theme') %>
                 <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></div>
         </a>
 

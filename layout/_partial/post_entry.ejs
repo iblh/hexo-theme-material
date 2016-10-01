@@ -1,25 +1,29 @@
-<div class="mdl-card mdl-cell mdl-cell--12-col article-module">
+<div class="mdl-card mdl-cell mdl-cell--12-col post_entry-module">
     
-    <!-- Article Thumbnail -->
+    <!-- Post Thumbnail -->
     <% if(post.thumbnail == undefined){ %>
-        <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50" style="background-image:url(<%= post.thumbnail %>)">
+        <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
     <% }else{ %>
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(<%= post.thumbnail %>)">
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(<%- post.thumbnail %>)">
     <% } %>
-        <!-- Article Title -->
-        <p class="article-headline-p"><a href="<%- url_for(post.path) %>"><%- post.title %></a></p>
+        <!-- Post Title -->
+        <p class="article-headline-p"><a href="<%= url_for(post.path) %>"><%= post.title %></a></p>
     </div>
-    <!-- Article Excerpt -->
+    <!-- Post Excerpt -->
     <div class="mdl-color-text--grey-600 mdl-card__supporting-text index-article-content">
         <%if(post.excerpt){%>
           <%- strip_html(post.excerpt) %>
         <%}else{%>
           <%- strip_html(truncate(post.content,{length:150})) %>
         <%}%>
+        &nbsp;&nbsp;&nbsp;
+        <span>
+            <a href="<%= url_for(post.path) %>" target="_self"><%= __('post_entry.continue') %></a>
+        </span>
     </div>
-    <!-- Article Info-->
-    <div id="article-info">
-        <div class="mdl-card__supporting-text meta mdl-color-text--grey-600 " id="article-author-date">
+    <!-- Post_entry Info-->
+    <div id="post_entry-info">
+        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
             <!-- Author avatar -->
             <div class="minilogo"></div>
             <div>
@@ -27,5 +31,28 @@
                 <span><%- date(post.date, 'YYYY/M/D') %></span>
             </div>
         </div>
+        <div id="post_entry-right-info">
+            <!-- Category -->
+            <span class="post_entry-category">
+                <%- list_categories(post.categories, {
+                    show_count: false,
+                    class: 'post-category',
+                    style: 'none'
+                }) %>
+            </span>&nbsp;|&nbsp;
+            
+            <!-- Comment Number -->
+            <span class="post_entry-comment" >
+                <a href="#">
+                    暂无评论
+                </a>
+            </span>&nbsp;|&nbsp;
+            
+            <!-- Post Views -->
+            <span class="post_entry-views">
+                <%= _p('post_entry.views', 3) %>
+            </span>
+        </div>
     </div>
+            
 </div>

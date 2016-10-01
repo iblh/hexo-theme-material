@@ -20,9 +20,67 @@
 
     <!-- Infomation -->
     <div class="mdl-card__supporting-text meta meta--fill mdl-color-text--grey-600">
+        <!-- Blog Title -->
         <div>
             <strong><%= config.title %></strong>
         </div>
         <div class="section-spacer"></div>
+        
+        <!-- Pages button -->
+        <button id="show-pages-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+            <i class="material-icons" role="presentation">view_carousel</i>
+            <span class="visuallyhidden">Pages</span>
+        </button>
+        <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="show-pages-button">
+            <a class="md-menu-list-a" href="#">
+                <li class="mdl-menu__item mdl-js-ripple-effect">
+                </li>
+            </a>
+        </ul>
+        
+        <!-- Category button -->
+        <button id="show-category-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+            <i class="material-icons" role="presentation">apps</i>
+            <span class="visuallyhidden">Category</span>
+        </button>
+        <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="show-category-button">
+            <a class="md-menu-list-a" href="#">
+                <li class="mdl-menu__item mdl-js-ripple-effect">
+                </li>
+            </a>
+        </ul>
+        
+        <!--  Menu button-->
+        <button id="menubtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+            <i class="material-icons" role="presentation">more_vert</i>
+            <span class="visuallyhidden">show menu</span>
+        </button>
+        <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="menubtn">
+            <a class="md-menu-list-a" href="#">
+                <li class="mdl-menu__item mdl-js-ripple-effect">
+                    <%= __('share.article_rss') %>
+                </li>
+            </a>
+            <a class="md-menu-list-a" href="#">
+                <li class="mdl-menu__item mdl-js-ripple-effect">
+                    <%= __('share.comment_rss') %>
+                </li>
+            </a>
+            <a class="md-menu-list-a" href="#">
+                <li class="mdl-menu__item mdl-js-ripple-effect">
+                    <%= __('share.toTwitter') %>
+                </li>
+            </a>
+            <a class="md-menu-list-a" href="#">
+                <li class="mdl-menu__item mdl-js-ripple-effect">
+                    <%= __('share.toGplus') %>
+                </li>
+            </a>
+            <a class="md-menu-list-a" href="#">
+                <li class="mdl-menu__item mdl-js-ripple-effect">
+                    <%= __('share.newtab') %>
+                </li>
+            </a>
+        </ul>
     </div>
 </div>

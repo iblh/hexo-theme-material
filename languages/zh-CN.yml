@@ -1,0 +1,28 @@
+sidebar:
+	profile: "用户概要"
+	setting: "设置外观"
+	homepage: "网站首页"
+	imlucky: "手气不错"
+	article: "最新文章"
+	comment: "最新评论"
+	archive: "按月归档"
+	pages: "独立页面"
+	tags: "热门标签"
+	links: "友情链接"
+	article_num: "文章总数"
+	theme_github: "主题 Github"
+	help: "帮助 & 支持"
+	feedback: "意见反馈"
+	about_theme: "关于主题"
+post_entry:
+	continue: "继续阅读"
+	views:
+		zero: "暂无浏览"
+		one: "1 浏览量"
+		other: "%d 浏览量"
+share:
+	article_rss: "文章 RSS"
+	comment_rss: "评论 RSS"
+	toTwitter: "分享到 Twitter"
+	toGplus: "分享到 Google+"
+	newtab: "新标签页打开"

@@ -1,0 +1,28 @@
+sidebar:
+    profile: "Profile"
+    setting: "Settings"
+    homepage: "Homepage"
+    imlucky: "I'm Feeling Lucky"
+    article: "Newest Article"
+    comment: "Newest Comments"
+    archive: "Archives"
+    pages: "Pages"
+    tags: "Hot Tags"
+    links: "Links"
+    article_num: "Article Number"
+    theme_github: "Theme in Github"
+    help: "Help & Support"
+    feedback: "Feedback"
+    about_theme: "About Theme"
+post_entry:
+    continue: "Continue Reading"
+    views:
+        zero: "No Views"
+        one: "1 View"
+        other: "%d Views"
+share:
+    article_rss: "Article RSS"
+    comment_rss: "Comment RSS"
+    toTwitter: "Share to Twitter"
+    toGplus: "Share to Google+"
+    newtab: "Open in New Tab"
