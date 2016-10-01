@@ -5,7 +5,7 @@
     var locatePost = $(".something-else").next();
     for(var i=0; i < <%= config.per_page %>; i++){
         
-        randomNum = Math.floor(Math.random() * <%= theme.random_amount %> + 1);
+        randomNum = Math.floor(Math.random() * <%= theme.thumbnail.random_amount %> + 1);
         
         locatePost.children(".post_thumbnail-random").attr('id', 'random_thumbnail-'+randomNum);
         locatePost.children(".post_thumbnail-random").css('background-image', 'url(' + '<%= theme.img.random_thumbnail %>' + randomNum + '.jpg' + ')')

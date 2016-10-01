@@ -14,7 +14,7 @@
         <%if(post.excerpt){%>
           <%- strip_html(post.excerpt) %>
         <%}else{%>
-          <%- strip_html(truncate(post.content,{length:150})) %>
+          <%- strip_html(truncate(post.content,{length:80})) %>
         <%}%>
         &nbsp;&nbsp;&nbsp;
         <span>
@@ -39,14 +39,14 @@
                     class: 'post-category',
                     style: 'none'
                 }) %>
-            </span>&nbsp;|&nbsp;
+            </span>|
             
             <!-- Comment Number -->
             <span class="post_entry-comment" >
                 <a href="#">
                     暂无评论
                 </a>
-            </span>&nbsp;|&nbsp;
+            </span>|
             
             <!-- Post Views -->
             <span class="post_entry-views">

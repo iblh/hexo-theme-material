@@ -1,5 +1,5 @@
-# Blog info
-menu:
+# Blog url
+url:
     home: /
     archives: /archives
     rss: /atom.xml
@@ -7,9 +7,22 @@ menu:
 # Author info
 author:
     name: 
+    avatar: 
     email: 
 
-random_amount: 5
+# UI Color
+uicolor:
+    theme_color: 
+    hyperlink_color: 
+    android_chrome_color: 
+    
+# Daily_pic & Blog_info
+
+
+# Thumbnail
+thumbnail:
+    purecolor: 
+    random_amount: 5
 
 # Background
 background:
