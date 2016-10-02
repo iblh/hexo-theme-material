@@ -1,22 +1,20 @@
 # Blog url
 url:
-    home: "/"
-    archives: "/archives"
-    rss: "/atom.xml"
+    home: /
+    archives: /archives
+    rss: /atom.xml
     
 # Author info
 author:
+    name: 
     avatar: 
     email: 
 
-# UI & UX
-uiux:
+# UI Color
+uicolor:
     theme_color: 
     hyperlink_color: 
     android_chrome_color: 
-    fade_effect: true
-    nprogress_color: "#000"
-    nprogress_buffer: "800"
     
 # Daily_pic & Blog_info
 
@@ -28,24 +26,24 @@ thumbnail:
 
 # Background
 background:
-    purecolor: "#F5F5F5"
-    bgimg: #"/img/bg.png"
+    purecolor: F5F5F5
+    bgimg: #/img/bg.png
 
 
 # Set Image
 img:
-    logo: "/img/logo.png"
-    avatar: "/img/avatar.png"
-    daily_pic: "/img/daily_pic.png"
-    sidebar_header: "/img/sidebar_header.png"
-    footerico: "/img/footer/footer_ico-"
-    upyun_logo: "/img/upyun_logo.png"
-    random_thumbnail: "/img/random/"
+    logo: /img/logo.png
+    avatar: /img/avatar.png
+    daily_pic: /img/daily_pic.png
+    sidebar_header: /img/sidebar_header.png
+    footerico: /img/footer/footer_ico-
+    upyun_logo: /img/upyun_logo.png
+    random_thumbnail: /img/random/
 
 
 # Set SNS
 sns:
-    twitter: "https://twitter.com/viosey"
-    facebook: "https://www.facebook.com/viosey"
-    googleplus: "https://plus.google.com/100042884044425428980"
+    twitter: https://twitter.com/viosey
+    facebook: https://www.facebook.com/viosey
+    googleplus: https://plus.google.com/100042884044425428980
     weibo: 
