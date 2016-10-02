@@ -1,0 +1,20 @@
+<div class="sidebar-header header-cover" style="background-image: url(<%= theme.img.sidebar_header %>);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+    <i class="material-icons">clear_all</i>
+    <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></button>
+
+    <!-- Sidebar brand image -->
+    <div class="sidebar-image">
+        <img src="<%= theme.img.logo %>">
+    </div>
+
+    <!-- Sidebar brand name -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        <%= theme.author.email %>
+        <b class="caret"></b>
+    </a>
+</div>

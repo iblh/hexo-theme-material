@@ -4,4 +4,12 @@
     <%- css("css/material.min") %>
     <%- css("css/style.min") %>
     <%- js("js/jquery.min") %>
+    
+    <% if(theme.uiux.fade_effect == true){ %>
+        <style>
+            .fade.out{
+                opacity: 0;
+            }
+        </style>
+    <% } %>
 </head>

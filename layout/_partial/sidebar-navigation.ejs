@@ -1,0 +1,199 @@
+<ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            <li>
+                <a href="#" tabindex="-1">
+                    <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">account_circle</i>
+                     <%= __('sidebar.profile') %>
+                </a>
+            </li>
+            <li>
+                <a href="#" tabindex="-1">
+                    <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">settings</i>
+                     <%= __('sidebar.setting') %>
+                </a>
+            </li>
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    <li id="sidebar-first-li">
+        <a href="<%= theme.url.home %>" target="_self">
+            <i class="material-icons sidebar-material-icons">home</i>
+             <%= __('sidebar.homepage') %>
+        </a>
+    </li>
+
+    <!-- I'm Feeling Lucky -->
+    <li class="dropdown">
+        <a href="#" target="_self">
+            <i class="material-icons sidebar-material-icons">explore</i>
+             <%= __('sidebar.imlucky') %>
+        </a>
+    </li>
+
+    <!-- Newest Article  -->
+    <li class="dropdown">
+        <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+            <i class="material-icons sidebar-material-icons">library_books</i>
+             <%= __('sidebar.article') %>
+            <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+            <li>
+                <a href="#" tabindex="-1">
+                    Web APIs & DOM
+                </a>
+            </li>
+
+            <li>
+                <a href="#" tabindex="-1">
+                    Mozilla Docs
+                </a>
+            </li>
+
+            <li>
+                <a href="#" tabindex="-1">
+                    Connect
+                </a>
+            </li>
+        </ul>
+    </li>
+
+    <!-- Newest Comments  -->
+    <li class="dropdown">
+        <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+            <i class="material-icons sidebar-material-icons">forum</i>
+             <%= __('sidebar.comment') %>
+            <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+
+            <li>
+                <a href="#" tabindex="-1">
+                    This is the second in a series of interviews about web compatibility with web practitioners.
+                </a>
+            </li>
+
+            <li>
+                <a href="#" tabindex="-1">
+                    This week we caught up with Chris Coyier (@chriscoyier)
+                </a>
+            </li>
+
+            <li>
+                <a href="#" tabindex="-1">
+                    Digging Into WordPress, and the ShopTalk Show
+                </a>
+            </li>
+        </ul>
+    </li>
+    <!-- Archives  -->
+    <li class="dropdown">
+        <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+            <i class="material-icons sidebar-material-icons">inbox</i>
+             <%= __('sidebar.archive') %>
+            <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+
+            <li>
+                <a href="#" tabindex="-1">
+                    August 2016
+                </a>
+            </li>
+        </ul>
+    </li>
+
+    <!-- divider -->
+    <li class="divider"></li>
+
+    <!-- Pages  -->
+    <li class="dropdown">
+        <a class="ripple-effect dropdown-toggle" href="#" data-toggle="dropdown">
+             <%= __('sidebar.pages') %>
+            <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+            <li>
+                <a href="#" title="友情链接" tabindex="-1">
+                    友情链接
+                </a>
+            </li>
+            <li>
+                <a href="#" title="独立归档" tabindex="-1">
+                    独立归档
+                </a>
+            </li>
+            <li>
+                <a href="#" title="About" tabindex="-1">
+                    About
+                </a>
+            </li>
+        </ul>
+    </li>
+
+    <!-- Hot tags  -->
+    <li class="dropdown">
+        <a class="ripple-effect dropdown-toggle" href="#" data-toggle="dropdown">
+             <%= __('sidebar.tags') %>
+            <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+            <li>
+                <a href="#" tabindex="-1">
+                    Ubuntu
+                    <span class="sidebar-badge">3</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" tabindex="-1">
+                    Viosey
+                    <span class="sidebar-badge">3</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" tabindex="-1">
+                    Hexo
+                    <span class="sidebar-badge">3</span>
+                </a>
+            </li>
+        </ul>
+    </li>
+
+    <!-- Links -->
+    <li class="dropdown">
+        <a class="ripple-effect dropdown-toggle" href="#" data-toggle="dropdown">
+            <%= __('sidebar.links') %>
+            <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+            <li>
+                <a href="https://viosey.com" target="_blank" itle="">
+                    Viosey
+                </a>
+            </li>
+
+            <li>
+                <a href="https://viosey.com" target="_blank" itle="">
+                    Viosey
+                </a>
+            </li>
+        </ul>
+    </li>
+
+    <!-- Article Numebr  -->
+    <li>
+        <a href="#">
+             <%= __('sidebar.article_num') %>
+             <span class="sidebar-badge">20</span>
+        </a>
+    </li>
+    <li>
+        <a href="https://github.com/viosey/typecho-theme-material" target="_blank">
+             <%= __('sidebar.theme_github') %>
+            <span class="sidebar-badge badge-circle">i</span>
+        </a>
+    </li>
+</ul>

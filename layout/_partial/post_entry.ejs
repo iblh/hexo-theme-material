@@ -1,4 +1,4 @@
-<div class="mdl-card mdl-cell mdl-cell--12-col post_entry-module">
+<div class="post_entry-module mdl-card mdl-cell mdl-cell--12-col fade out">
     
     <!-- Post Thumbnail -->
     <% if(post.thumbnail == undefined){ %>
@@ -27,8 +27,8 @@
             <!-- Author avatar -->
             <div class="minilogo"></div>
             <div>
-                <strong>The Newist</strong>
-                <span><%- date(post.date, 'YYYY/M/D') %></span>
+                <strong><%= config.author %></strong>
+                <span><%= date(post.date, 'MMM DD, YYYY') %></span>
             </div>
         </div>
         <div id="post_entry-right-info">
@@ -36,7 +36,7 @@
             <span class="post_entry-category">
                 <%- list_categories(post.categories, {
                     show_count: false,
-                    class: 'post-category',
+                    class: 'post_category',
                     style: 'none'
                 }) %>
             </span>|
