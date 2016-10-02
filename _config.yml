@@ -1,49 +1,58 @@
+# Head
+head:
+    favicon: 
+    high_res_favicon: 
+    apple_touch_icon: 
+    keywords: 
+
 # Blog url
 url:
-    home: /
-    archives: /archives
-    rss: /atom.xml
+    home: "/"
+    archives: "/archives"
+    rss: "/atom.xml"
     
 # Author info
 author:
-    name: 
     avatar: 
     email: 
 
-# UI Color
-uicolor:
-    theme_color: 
-    hyperlink_color: 
-    android_chrome_color: 
+# UI & UX
+uiux:
+    theme_color: "#039BE5"
+    hyperlink_color: "#039BE5"
+    android_chrome_color: "#039BE5"
+    fade_effect: true
+    nprogress_color: "#000"
+    nprogress_buffer: "800"
     
 # Daily_pic & Blog_info
 
 
 # Thumbnail
 thumbnail:
-    purecolor: 
+    purecolor: "#000"
     random_amount: 5
 
 # Background
 background:
-    purecolor: F5F5F5
-    bgimg: #/img/bg.png
+    purecolor: "#F5F5F5"
+    bgimg: #"/img/bg.png"
 
 
 # Set Image
 img:
-    logo: /img/logo.png
-    avatar: /img/avatar.png
-    daily_pic: /img/daily_pic.png
-    sidebar_header: /img/sidebar_header.png
-    footerico: /img/footer/footer_ico-
-    upyun_logo: /img/upyun_logo.png
-    random_thumbnail: /img/random/
+    logo: "/img/logo.png"
+    avatar: "/img/avatar.png"
+    daily_pic: "/img/daily_pic.png"
+    sidebar_header: "/img/sidebar_header.png"
+    footerico: "/img/footer/footer_ico-"
+    upyun_logo: "/img/upyun_logo.png"
+    random_thumbnail: "/img/random/"
 
 
 # Set SNS
 sns:
-    twitter: https://twitter.com/viosey
-    facebook: https://www.facebook.com/viosey
-    googleplus: https://plus.google.com/100042884044425428980
+    twitter: "https://twitter.com/viosey"
+    facebook: "https://www.facebook.com/viosey"
+    googleplus: "https://plus.google.com/100042884044425428980"
     weibo: 

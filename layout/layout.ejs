@@ -2,7 +2,7 @@
     <%- partial('_partial/head') %>
 
     <% if(theme.background.bgimg == undefined){ %>
-    <body style="background-color: #<%= theme.background.purecolor %>;">
+    <body style="background-color: <%= theme.background.purecolor %>;">
         <style>
             .demo-blog .something-else .mdl-card__supporting-text{
                 background-color: #fff;
@@ -17,21 +17,21 @@
     <% } else{ %>
     <body style="background-image: url(<%= theme.background.bgimg %>);">
     <% } %>
-        <div class="mdl-layout__container">
-            <div class="demo-blog mdl-layout mdl-js-layout has-drawer is-upgraded">
-                <!-- Main Container -->
-                <main class="mdl-layout__content" id="main">
-                    <!-- Top Anchor -->
-                    <div id="top"></div>
-                    <!-- Hamburger Button -->
-                    <button class="MD-burger-icon sidebar-toggle">
-                        <span class="MD-burger-layer"></span>
-                    </button>
-                    <%- body %>
-                    <%- partial('_partial/sidebar') %>
-                    <%- partial('_partial/footer') %>
-                </main>
-            </div>
+        
+
+        <div class="demo-blog mdl-layout mdl-js-layout has-drawer is-upgraded">
+            <!-- Main Container -->
+            <main class="mdl-layout__content" id="main">
+                <!-- Top Anchor -->
+                <div id="top"></div>
+                <!-- Hamburger Button -->
+                <button class="MD-burger-icon sidebar-toggle">
+                    <span class="MD-burger-layer"></span>
+                </button>
+                <%- body %>
+                <%- partial('_partial/sidebar') %>
+                <%- partial('_partial/footer') %>
+            </main>
         </div>
     </body>
 </html>

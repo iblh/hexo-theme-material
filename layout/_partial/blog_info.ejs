@@ -27,13 +27,13 @@
         </div>
         <div class="section-spacer"></div>
         
-        <!-- Pages button -->
+        <!-- Pages Button -->
         <button id="show-pages-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
             <i class="material-icons" role="presentation">view_carousel</i>
             <span class="visuallyhidden">Pages</span>
         </button>
         <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="show-pages-button">
-            <a class="md-menu-list-a" href="#">
+            <a class="index_share-link" href="#">
                 <li class="mdl-menu__item mdl-js-ripple-effect">
                 </li>
             </a>
@@ -45,10 +45,13 @@
             <span class="visuallyhidden">Category</span>
         </button>
         <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="show-category-button">
-            <a class="md-menu-list-a" href="#">
-                <li class="mdl-menu__item mdl-js-ripple-effect">
-                </li>
-            </a>
+            <li class="mdl-menu__item">
+            <%- list_categories({
+                show_count: false,
+                class: 'index_category',
+                style: 'none',
+                separator: '<li class="mdl-menu__item">'
+            }) %>
         </ul>
         
         <!--  Menu button-->
@@ -57,29 +60,29 @@
             <span class="visuallyhidden">show menu</span>
         </button>
         <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="menubtn">
-            <a class="md-menu-list-a" href="#">
+            <a class="index_share-link" href="#">
                 <li class="mdl-menu__item mdl-js-ripple-effect">
                     <%= __('share.article_rss') %>
                 </li>
             </a>
-            <a class="md-menu-list-a" href="#">
+            <a class="index_share-link" href="#">
                 <li class="mdl-menu__item mdl-js-ripple-effect">
                     <%= __('share.comment_rss') %>
                 </li>
             </a>
-            <a class="md-menu-list-a" href="#">
+            <a class="index_share-link" href="https://twitter.com/intent/tweet?text=<%= config.title %>&url=<%- config.url %>&via=<%= config.author %>" target="_blank">
                 <li class="mdl-menu__item mdl-js-ripple-effect">
                     <%= __('share.toTwitter') %>
                 </li>
             </a>
-            <a class="md-menu-list-a" href="#">
+            <a class="index_share-link" href="https://plus.google.com/share?url=<%- config.url %>" target="_blank">
                 <li class="mdl-menu__item mdl-js-ripple-effect">
                     <%= __('share.toGplus') %>
                 </li>
             </a>
-            <a class="md-menu-list-a" href="#">
+            <a class="index_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=<%= config.title %>&url=<%- config.url %>&pic=&searchPic=false&style=simple" target="_blank">
                 <li class="mdl-menu__item mdl-js-ripple-effect">
-                    <%= __('share.newtab') %>
+                    <%= __('share.toWeibo') %>
                 </li>
             </a>
         </ul>
