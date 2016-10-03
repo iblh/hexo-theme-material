@@ -1,15 +1,9 @@
-
 .DS_Store
-
-source/js/js-dev.js
-
-source/css/style-dev.css
 
 source/js/js.js
 
 source/css/style.css
 
+source/css/duoshuo.css
 
 _config.yml
-
-source/css/duoshuo.css
