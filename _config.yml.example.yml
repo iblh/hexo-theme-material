@@ -45,3 +45,10 @@ sns:
     weibo: 
     instagram: 
     tumblr: 
+    github: 
+    
+# Comment
+comment:
+    use: 
+    duoshuo_short_name: 
+    dsembed_js_url: "https://static.duoshuo.com/embed.js"

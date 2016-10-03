@@ -10,19 +10,19 @@
         </li>
     </a>
     <!-- Share Twitter -->
-    <a class="post_share-link" href="https://twitter.com/intent/tweet?text=<%= page.title %>&url=<%- config.url + url_for(path) %>&via=<%= config.author %>" target="_blank">
+    <a class="post_share-link" href="https://twitter.com/intent/tweet?text=<%= page.title %>&url=<%- config.url + config.root + url_for(path) %>&via=<%= config.author %>" target="_blank">
         <li class="mdl-menu__item">
             <%= __('share.toTwitter') %>
         </li>
     </a>
     <!-- Share Google+ -->
-    <a class="post_share-link" href="https://plus.google.com/share?url=<%- config.url + url_for(path) %>" target="_blank">
+    <a class="post_share-link" href="https://plus.google.com/share?url=<%- config.url + config.root + url_for(path) %>" target="_blank">
         <li class="mdl-menu__item">
             <%= __('share.toGplus') %>
         </li>
     </a>
     <!-- Share Weibo -->
-    <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=<%= page.title %>&url=<%- config.url + url_for(path) %>&pic=&searchPic=false&style=simple" target="_blank">
+    <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=<%= page.title %>&url=<%- config.url + config.root + url_for(path) %>&pic=&searchPic=false&style=simple" target="_blank">
         <li class="mdl-menu__item">
             <%= __('share.toWeibo') %>
         </li>

@@ -45,9 +45,9 @@
             
             <!-- Comment Number -->
             <span class="post_entry-comment" >
-                <a href="#">
-                    暂无评论
-                </a>
+                <% if(theme.comment.use == "duoshuo"){ %>
+                    <span class="ds-thread-count" data-thread-key="<%= post.id %>" data-count-type="comments"></span>
+                <% } %>
             </span>|
             
             <!-- Post Views -->
