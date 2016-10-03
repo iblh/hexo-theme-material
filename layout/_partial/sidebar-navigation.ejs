@@ -19,7 +19,7 @@
 
     <!-- Homepage -->
     <li id="sidebar-first-li">
-        <a href="<%= theme.url.home %>" target="_self">
+        <a href="<%= config.url + config.root %>" target="_self">
             <i class="material-icons sidebar-material-icons">home</i>
              <%= __('sidebar.homepage') %>
         </a>
@@ -42,10 +42,12 @@
         </a>
         <ul class="dropdown-menu">
             <li>
-                <a href="#" tabindex="-1">
-                    Web APIs & DOM
-                </a>
-            </li>
+            <%- list_posts({
+                amount: 5,
+                class: 'sidebar_posts',
+                style: 'none',
+                separator: '</li><li>'
+            }) %>
         </ul>
     </li>
 

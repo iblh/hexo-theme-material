@@ -3,38 +3,7 @@
 <!--Footer-->
 <footer class="mdl-mini-footer" id="bottom">
     <!--Footer Left Section-->
-    <div class="mdl-mini-footer--left-section">
-        <div class="mdl-mini-footer--left-section">
-            
-            <% if(theme.sns.twitter == undefined){ %>
-            <% } else{ %>
-            <a href="<%= theme.sns.twitter %>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__twitter" style="background-image: url(<%= theme.img.footerico %>twitter.png);">
-                <span class="visuallyhidden">Twitter</span>
-            </button></a>
-            <% } %>
-            
-            <% if(theme.sns.facebook == undefined){ %>
-            <% }else{ %>
-            <a href="<%= theme.sns.facebook %>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__facebook" style="background-image: url(<%= theme.img.footerico %>facebook.png);">
-                <span class="visuallyhidden">Facebook</span>
-            </button></a>
-            <% } %>
-
-            <% if(theme.sns.googleplus == undefined){ %>
-            <% }else{ %>
-            <a href="<%= theme.sns.googleplus %>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__gplus" style="background-image: url(<%= theme.img.footerico %>gplus.png);">
-                <span class="visuallyhidden">Google Plus</span>
-            </button></a>
-            <% } %>
-            
-            <% if(theme.sns.weibo == undefined){ %>
-            <% }else{ %>
-            <a href="<%= theme.sns.weibo %>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__gplus" style="background-image: url(<%= theme.img.footerico %>gplus.png);">
-                <span class="visuallyhidden">Google Plus</span>
-            </button></a>
-            <% } %>
-        </div>
-    </div>
+    <%- partial("_partial/footer-left") %>
 
     <!--Copyright-->
     <div id="copyright">Copyright&nbsp;©&nbsp;<script type="text/javascript">var fd = new Date();document.write(fd.getFullYear());</script>&nbsp;<%- config.title %></div>
@@ -47,7 +16,7 @@
         </div>
     </div>
 
-<!-- import js file -->
+<!-- Import File -->
 <%- js("js/js.min") %>
 <%- partial("_partial/nprogress") %>
 <%- js("js/smoothscroll") %>
