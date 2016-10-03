@@ -12,9 +12,8 @@ uiux:
     hyperlink_color: "#039BE5"
     android_chrome_color: "#039BE5"
     fade_effect: true
-    nprogress_color: "#000"
+    nprogress_color: "#FF4081"
     nprogress_buffer: "800"
-
 
 # Thumbnail settings
 thumbnail:
@@ -50,5 +49,19 @@ sns:
 # Comment
 comment:
     use: 
-    duoshuo_short_name: 
-    dsembed_js_url: "https://static.duoshuo.com/embed.js"
+    duoshuo_short_name: #多说 short_name
+    duoshuo_embed_js_url: "https://static.duoshuo.com/embed.js"
+    
+# Leancloud Views
+leancloud:
+    enable: false
+    app_id: #你的app_id
+    app_key: #你的app_key
+    av_core_mini: "https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"
+    
+# Busuanzi 不蒜子 Views
+busuanzi:
+    enable: true
+    all_site_uv: true
+    post_pv: true
+    busuanzi_pure_mini_js: "https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"

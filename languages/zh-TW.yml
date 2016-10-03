@@ -14,12 +14,10 @@ sidebar:
 	help: "説明 & 支援"
 	feedback: "意見回饋"
 	about_theme: "關於主題"
-post_entry:
+post:
+	visitor: "訪客"
+	views: "瀏覽量"
 	continue: "繼續閱讀"
-	views:
-		zero: "暫無瀏覽"
-		one: "1 瀏覽量"
-		other: "%d 瀏覽量"
 share:
 	article_rss: "文章 RSS"
 	comment_rss: "評論 RSS"

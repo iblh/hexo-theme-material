@@ -14,12 +14,10 @@ sidebar:
     help: "助けて & サポート"
     feedback: "フィードバック"
     about_theme: "テーマについて"
-post_entry:
+post:
+    visitor: "訪問者"    
+    views: "ビュー"
     continue: "読み続けて"
-    views:
-        zero: "空のビュー"
-        one: "1 ビュー"
-        other: "%d ビュー"
 share:
     article_rss: "記事 RSS"
     comment_rss: "コメント RSS"

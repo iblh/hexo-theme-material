@@ -17,23 +17,8 @@
     </div>
 </footer>
 
-<% if(theme.comment.use == "duoshuo"){ %>
-<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-    <script type="text/javascript">
-    var duoshuoQuery = {short_name:"<%= theme.comment.duoshuo_short_name %>"};
-        (function() {
-            var ds = document.createElement('script');
-            ds.type = 'text/javascript';ds.async = true;
-            ds.src = '<%= theme.comment.dsembed_js_url %>';
-            ds.charset = 'UTF-8';
-            (document.getElementsByTagName('head')[0] 
-             || document.getElementsByTagName('body')[0]).appendChild(ds);
-        })();
-    </script>
-<!-- 多说公共JS代码 end -->
-<% } %>
-
 <!-- Import File -->
 <%- js("js/js.min") %>
 <%- partial("_partial/nprogress") %>
 <%- js("js/smoothscroll") %>
+<%- partial("_partial/footer-option") %>

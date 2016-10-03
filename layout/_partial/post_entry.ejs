@@ -18,7 +18,7 @@
         <%}%>
         &nbsp;&nbsp;&nbsp;
         <span>
-            <a href="<%= url_for(post.path) %>" target="_self"><%= __('post_entry.continue') %></a>
+            <a href="<%= url_for(post.path) %>" target="_self"><%= __('post.continue') %></a>
         </span>
     </div>
     <!-- Post_entry Info-->
@@ -48,11 +48,11 @@
                 <% if(theme.comment.use == "duoshuo"){ %>
                     <span class="ds-thread-count" data-thread-key="<%= post.id %>" data-count-type="comments"></span>
                 <% } %>
-            </span>|
+            </span>
             
             <!-- Post Views -->
             <span class="post_entry-views">
-                <%= _p('post_entry.views', 3) %>
+                
             </span>
         </div>
     </div>

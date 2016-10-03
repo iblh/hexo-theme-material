@@ -14,12 +14,10 @@ sidebar:
     help: "Help & Support"
     feedback: "Feedback"
     about_theme: "About Theme"
-post_entry:
+post:
+    visitor: "Visitors"
+    views: "Views"
     continue: "Continue Reading"
-    views:
-        zero: "No Views"
-        one: "1 View"
-        other: "%d Views"
 share:
     article_rss: "Article RSS"
     comment_rss: "Comment RSS"

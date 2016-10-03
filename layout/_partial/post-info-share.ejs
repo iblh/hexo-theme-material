@@ -3,26 +3,45 @@
     <span class="visuallyhidden">share</span>
 </button>
 <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
-    <!-- Views -->
+    
+    <% if(theme.leancloud.enable == true){ %>
+    <!-- Leancloud Views -->
     <a class="post_share-link" href="#">
         <li class="mdl-menu__item">
-            <%= _p('post_entry.views', 3) %>
+            <span id="<%= url_for(page.path) %>"class="leancloud" data-flag-title="<%= page.title %>">
+                 &nbsp;<%= __('post.views') %>
+            </span>
         </li>
     </a>
+    <% } %>
+    
+    <% if(theme.busuanzi.post_pv == true){ %>
+    <!-- Busuanzi Views -->
+    <a class="post_share-link" href="#">
+        <li class="mdl-menu__item">
+            <span id="busuanzi_container_page_pv">
+                <span id="busuanzi_value_page_pv"></span>&nbsp;<%= __("post.views") %>
+            </span>
+        </li>
+    </a>
+    <% } %>
+    
     <!-- Share Twitter -->
-    <a class="post_share-link" href="https://twitter.com/intent/tweet?text=<%= page.title %>&url=<%- config.url + config.root + url_for(path) %>&via=<%= config.author %>" target="_blank">
+    <a class="post_share-link" href="https://twitter.com/intent/tweet?text=<%= page.title %>&url=<%= config.url + config.root + url_for(path) %>&via=<%= config.author %>" target="_blank">
         <li class="mdl-menu__item">
             <%= __('share.toTwitter') %>
         </li>
     </a>
+    
     <!-- Share Google+ -->
-    <a class="post_share-link" href="https://plus.google.com/share?url=<%- config.url + config.root + url_for(path) %>" target="_blank">
+    <a class="post_share-link" href="https://plus.google.com/share?url=<%= config.url + config.root + url_for(path) %>" target="_blank">
         <li class="mdl-menu__item">
             <%= __('share.toGplus') %>
         </li>
     </a>
+    
     <!-- Share Weibo -->
-    <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=<%= page.title %>&url=<%- config.url + config.root + url_for(path) %>&pic=&searchPic=false&style=simple" target="_blank">
+    <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=<%= page.title %>&url=<%= config.url + config.root + url_for(path) %>&pic=&searchPic=false&style=simple" target="_blank">
         <li class="mdl-menu__item">
             <%= __('share.toWeibo') %>
         </li>

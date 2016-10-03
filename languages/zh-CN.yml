@@ -14,12 +14,10 @@ sidebar:
 	help: "帮助 & 支持"
 	feedback: "意见反馈"
 	about_theme: "关于主题"
-post_entry:
+post:
+	visitor: "访客"	
+	views: "浏览量"
 	continue: "继续阅读"
-	views:
-		zero: "暂无浏览"
-		one: "1 浏览量"
-		other: "%d 浏览量"
 share:
 	article_rss: "文章 RSS"
 	comment_rss: "评论 RSS"
