@@ -18,6 +18,8 @@ post:
     visitor: "Visitantes"
     views: "Vista"
     continue: "Sigue leyendo"
+    older: "Mayor"
+    newer: "Más nuevo"
 share:
     article_rss: "Artículo RSS"
     comment_rss: "Comentario RSS"
@@ -27,3 +29,5 @@ share:
 title:
     category: "Categoría"
     tag: "Etiqueta"
+misc:
+    search: "Enter para buscar"

@@ -18,6 +18,8 @@ post:
 	visitor: "访客"	
 	views: "浏览量"
 	continue: "继续阅读"
+	older: "旧篇"
+	newer: "新篇"
 share:
 	article_rss: "文章 RSS"
 	comment_rss: "评论 RSS"
@@ -27,3 +29,5 @@ share:
 title:
 	category: "分类"
 	tag: "标签"
+misc:
+	search: "回车以搜索"

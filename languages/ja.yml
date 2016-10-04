@@ -18,6 +18,8 @@ post:
     visitor: "訪問者"    
     views: "ビュー"
     continue: "読み続けて"
+    older: "より古い"
+    newer: "新しいです"
 share:
     article_rss: "記事 RSS"
     comment_rss: "コメント RSS"
@@ -27,3 +29,5 @@ share:
 title:
     category: "カテゴリー"
     tag: "タグ"
+misc:
+    search: "検索するには、Enter"

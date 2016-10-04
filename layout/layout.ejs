@@ -1,24 +1,8 @@
 <!DOCTYPE html>
+<html>
     <%- partial('_partial/head') %>
 
-    <% if(theme.background.bgimg == undefined){ %>
-    <body style="background-color: <%= theme.background.purecolor %>;">
-        <style>
-            .demo-blog .something-else .mdl-card__supporting-text{
-                background-color: #fff;
-            }
-            .MD-burger-layer {
-                background-color: #666;
-            }
-            .demo-back{
-                color: #666;
-            }
-        </style>
-    <% } else{ %>
-    <body style="background-image: url(<%= theme.background.bgimg %>);">
-    <% } %>
-        
-
+    <body>
         <div class="demo-blog mdl-layout mdl-js-layout has-drawer is-upgraded">
             <!-- Main Container -->
             <main class="mdl-layout__content" id="main">

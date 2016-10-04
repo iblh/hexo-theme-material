@@ -6,9 +6,10 @@
         <!-- For modern browsers. -->
         <i class="material-icons mdl-color-text--white" role="presentation">search</i>
     </label>
-        <form id="search-form" method="post" action="" class="mdl-textfield__expandable-holder">
-            <input class="mdl-textfield__input search-input" type="text" name="s" id="search">
-            <label id="search-form-label" class="mdl-textfield__label" for="search">Enter your query...</label>
+        <form id="search-form" method="get" action="//google.com/search" accept-charset="UTF-8" class="mdl-textfield__expandable-holder">
+            <input class="mdl-textfield__input search-input" type="search" name="q" id="search" placeholder="<%= __("misc.search") %>">
+            <label id="search-form-label" class="mdl-textfield__label" for="search"></label>
+            <input type="hidden" name="sitesearch" value="<%= config.url %>">
         </form>
     </div>
 

@@ -8,9 +8,7 @@
     <!-- Leancloud Views -->
     <a class="post_share-link" href="#">
         <li class="mdl-menu__item">
-            <span id="<%= url_for(page.path) %>"class="leancloud" data-flag-title="<%= page.title %>">
-                 &nbsp;<%= __('post.views') %>
-            </span>
+            <%- partial("_widget/leancloud-views_num") %>
         </li>
     </a>
     <% } %>

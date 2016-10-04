@@ -59,24 +59,32 @@
             <b class="caret"></b>
         </a>
         <ul class="dropdown-menu">
-
-            <li>
-                <a href="#" tabindex="-1">
-                    This is the second in a series of interviews about web compatibility with web practitioners.
-                </a>
-            </li>
-
-            <li>
-                <a href="#" tabindex="-1">
-                    This week we caught up with Chris Coyier (@chriscoyier)
-                </a>
-            </li>
-
-            <li>
-                <a href="#" tabindex="-1">
-                    Digging Into WordPress, and the ShopTalk Show
-                </a>
-            </li>
+            <% if(theme.comment.use == "duoshuo"){ %>
+            <!-- 使用多说评论 -->
+            <ul class="ds-recent-comments" data-num-items="5" data-show-avatars="0" data-show-time="0" data-show-title="0" data-show-admin="0" data-excerpt-length="15"></ul>
+            <style>
+                .ds-recent-comments {
+                    padding: 0;
+                }
+                .ds-recent-comments .ds-meta {
+                    display: none;
+                }
+                #ds-recent-comments li.ds-comment {
+                    padding: 0 !important;
+                    height: 48px;
+                    line-height: 48px;
+                }
+                #ds-recent-comments li.ds-comment a {
+                    padding-top: 16px;
+                    padding-bottom: 16px;
+                    padding-right:0;
+                    background: rgba(0, 0, 0, 0);
+                }
+                #ds-recent-comments li.ds-comment:hover {
+                    background-color: #cecece;
+                }
+            </style>
+            <% } %>
         </ul>
     </li>
     <!-- Archives  -->

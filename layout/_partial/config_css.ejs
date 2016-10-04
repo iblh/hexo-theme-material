@@ -1,19 +1,48 @@
+<% if(theme.background.bgimg == undefined){ %>
+    <style>
+        body{
+            background-color: <%= theme.background.purecolor %>
+        }
+        .demo-blog .something-else .mdl-card__supporting-text{
+            background-color: #fff;
+        }
+        .MD-burger-layer {
+            background-color: #666;
+        }
+        .demo-back{
+            color: #666;
+        }
+        .demo-blog .demo-blog__posts>.demo-nav,
+        .demo-nav a,
+        .demo-blog--blogpost .demo-back{
+            color: #666;
+        }
+    </style>
+<% } else{ %>
+    <style>
+        body{
+            background-image: url(<%= theme.background.bgimg %>);
+        }
+    </style>
+<% } %>
+
+<!-- Fade Effect -->
 <% if(theme.uiux.fade_effect == true){ %>
-<style>
-    .fade {
-        transition: all <%= theme.uiux.nprogress_buffer %>ms linear;
-        -webkit-transform: translate3d(0,0,0);
-        -moz-transform: translate3d(0,0,0);
-        -ms-transform: translate3d(0,0,0);
-        -o-transform: translate3d(0,0,0);
-        transform: translate3d(0,0,0);
-        opacity: 1;
-    }
-    
-    .fade.out{
-        opacity: 0;
-    }
-</style>
+    <style>
+        .fade {
+            transition: all <%= theme.uiux.nprogress_buffer %>ms linear;
+            -webkit-transform: translate3d(0,0,0);
+            -moz-transform: translate3d(0,0,0);
+            -ms-transform: translate3d(0,0,0);
+            -o-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+            opacity: 1;
+        }
+
+        .fade.out{
+            opacity: 0;
+        }
+    </style>
 <% } %>
 
 <style>

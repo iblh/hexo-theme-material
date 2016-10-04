@@ -4,6 +4,25 @@
         <i class="material-icons">expand_less</i>
     </a>
     
+    <% if( is_post()){ %>
+        <!-- Post Nav -->
+        <% if (page.prev){ %>
+            <a class="prev-content fab" href="<%- config.root %><%- page.prev.path %>" title="<%= page.prev.title %>"><i class="material-icons">keyboard_arrow_left</i></a>
+        <% } %>
+
+        <% if (page.next){ %>
+            <a class="prev-content fab" href="<%- config.root %><%- page.next.path %>" title="<%= page.next.title %>"><i class="material-icons">keyboard_arrow_right</i></a>
+        <% } %>
+    <% } %>
+    
+    <% if( is_home()){ %>
+        <!-- Home Nav -->
+        <%- paginator({
+            prev_text: __('<i class="material-icons">keyboard_arrow_left</i>'),
+            next_text: __('<i class="material-icons">keyboard_arrow_right</i>')
+        }) %>
+    <% } %>
+    
     <a href="#bottom" class="fab toBottom">
         <i class="material-icons">keyboard_arrow_down</i>
     </a>
