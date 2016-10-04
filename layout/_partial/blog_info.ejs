@@ -15,7 +15,7 @@
 
     <!-- LOGO -->
     <div class="something-else-logo mdl-color--white mdl-color-text--grey-600">
-        <a href="#">
+        <a href="<%= theme.url.logo %>">
             <img src="<%= theme.img.logo %>" alt="logo" />
         </a>
     </div>
@@ -28,34 +28,27 @@
         </div>
         <div class="section-spacer"></div>
         
-        <!-- Pages Button -->
+        <!-- Pages -->
         <button id="show-pages-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
             <i class="material-icons" role="presentation">view_carousel</i>
             <span class="visuallyhidden">Pages</span>
         </button>
         <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="show-pages-button">
-            <a class="index_share-link" href="#">
+            <a class="index_share-link" href="<%= theme.url.about %>" title="<%= __("misc.about") %>">
                 <li class="mdl-menu__item mdl-js-ripple-effect">
+                    <%= __("misc.about") %>
                 </li>
             </a>
+            <% for (var i in theme.pages){ %>
+                <a class="index_share-link" href="<%= theme.pages[i] %>" title="<%= i %>">
+                    <l class="mdl-menu__item mdl-js-ripple-effect"i>
+                        <%= i %>
+                    </li>
+                </a>
+            <% } %>
         </ul>
         
-        <!-- Category button -->
-        <button id="show-category-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-            <i class="material-icons" role="presentation">apps</i>
-            <span class="visuallyhidden">Category</span>
-        </button>
-        <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="show-category-button">
-            <li class="mdl-menu__item">
-            <%- list_categories({
-                show_count: false,
-                class: 'index_category',
-                style: 'none',
-                separator: '<li class="mdl-menu__item">'
-            }) %>
-        </ul>
-        
-        <!--  Menu button-->
+        <!-- Menu -->
         <button id="menubtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
             <i class="material-icons" role="presentation">more_vert</i>
             <span class="visuallyhidden">show menu</span>

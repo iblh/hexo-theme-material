@@ -27,7 +27,7 @@
 
     <!-- I'm Feeling Lucky -->
     <li class="dropdown">
-        <a href="#" target="_self">
+        <a href="" target="_self">
             <i class="material-icons sidebar-material-icons">explore</i>
              <%= __('sidebar.imlucky') %>
         </a>
@@ -106,7 +106,7 @@
         </ul>
     </li>
 
-    <!-- divider -->
+    <!-- Divider -->
     <li class="divider"></li>
 
     <!-- Pages  -->
@@ -117,20 +117,17 @@
         </a>
         <ul class="dropdown-menu">
             <li>
-                <a href="#" title="友情链接" tabindex="-1">
-                    友情链接
+                <a href="<%= theme.url.about %>" target="_blank" title="<%= __("misc.about") %>">
+                    <%= __("misc.about") %>
                 </a>
             </li>
-            <li>
-                <a href="#" title="独立归档" tabindex="-1">
-                    独立归档
-                </a>
-            </li>
-            <li>
-                <a href="#" title="About" tabindex="-1">
-                    About
-                </a>
-            </li>
+            <% for (var i in theme.pages){ %>
+                <li>
+                    <a href="<%= theme.pages[i] %>" target="_blank" title="<%= i %>">
+                        <%= i %>
+                    </a>
+                </li>
+            <% } %>
         </ul>
     </li>
 
@@ -145,7 +142,7 @@
             <%- list_tags({
                 orderby: 'count',
                 show_count: true,
-                amount: 5,
+                amount: 10,
                 class: 'hot_tags',
                 style: 'none',
                 separator: '</li><li>'
@@ -160,17 +157,15 @@
             <b class="caret"></b>
         </a>
         <ul class="dropdown-menu">
-            <li>
-                <a href="https://viosey.com" target="_blank" itle="">
-                    Viosey
-                </a>
-            </li>
-
-            <li>
-                <a href="https://viosey.com" target="_blank" itle="">
-                    Viosey
-                </a>
-            </li>
+            <% if (site.data.links){ %>
+                <% for (var i in site.data.links){ %>
+                    <li>
+                        <a href="<%= site.data.links[i].link %>" target="_blank" title="<%= i %>">
+                            <%= i %>
+                        </a>
+                    </li>
+                <% } %>
+            <% } %>
         </ul>
     </li>
 

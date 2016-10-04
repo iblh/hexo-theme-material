@@ -5,6 +5,13 @@ head:
     apple_touch_icon: "/img/favicon.png"
     keywords: 
 
+# URL
+url:
+    about: "/about"
+    rss: 
+    daily_pic: "#"
+    logo: "/about"
+
 # UI & UX
 uiux:
     slogan: "Hi, nice to meet you"
@@ -45,6 +52,10 @@ sns:
     instagram: 
     tumblr: 
     github: 
+
+# Pages
+pages:
+    
     
 # Comment
 comment:

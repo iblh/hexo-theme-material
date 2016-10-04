@@ -1,24 +1,36 @@
 <%- partial("_partial/back_button") %>
-
-<!-- Post Module -->
-<div class="post-module demo-blog--blogpost">
-    <div class="demo-blog__posts mdl-grid">
-        <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
-            
-            <!-- Post Header(Thumbnail & Title) -->
-            <%- partial('_partial/post-header') %>
-
-            <!-- Post Info -->
-            <%- partial('_partial/post-info') %>
-
-            <!-- Post Content -->
-            <%- partial('_partial/post-content') %>
-
-            <!-- Post Comments -->
-            <%- partial("_partial/comment") %>
+<% if(page.type == "tags"){ %>
+    <!-- Tags Cloud -->
+    <div class="post-module demo-blog--blogpost">
+        <div class="demo-blog__posts mdl-grid">
+                <!-- Post Content -->
+                <%- partial("_partial/tagcloud") %>
         </div>
-        
-        <!-- Post Prev & Next Nav -->
-        <%- partial("_partial/post-nav") %>
     </div>
-</div>
+<% } else if(page.type == "links") { %>
+    <!-- Sigle Links Page -->
+    <%- partial("_widget/page-links") %>
+<% } else { %>
+    <!-- Post Module -->
+    <div class="post-module demo-blog--blogpost">
+        <div class="demo-blog__posts mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                <%- partial('_partial/post-header') %>
+
+                <!-- Post Info -->
+                <%- partial('_partial/post-info') %>
+
+                <!-- Post Content -->
+                <%- partial('_partial/post-content') %>
+
+                <!-- Post Comments -->
+                <%- partial("_partial/comment") %>
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <%- partial("_partial/post-nav") %>
+        </div>
+    </div>
+<% } %>

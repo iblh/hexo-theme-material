@@ -41,14 +41,15 @@
                     class: 'post_category',
                     style: 'none'
                 }) %>
-            </span>|
-            
-            <!-- Comment Number -->
-            <span class="post_entry-comment" >
-                <% if(theme.comment.use == "duoshuo"){ %>
-                    <span class="ds-thread-count" data-thread-key="<%= post.id %>" data-count-type="comments"></span>
-                <% } %>
             </span>
+            
+            <% if(theme.comment.use == "duoshuo"){ %>
+                <!-- Comment Number -->
+                &nbsp;|&nbsp;
+                <span class="post_entry-comment" >
+                        <span class="ds-thread-count" data-thread-key="<%= post.id %>" data-count-type="comments"></span>
+                </span>
+            <% } %>
             
             <!-- Post Views -->
             <span class="post_entry-views">
