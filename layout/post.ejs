@@ -1,5 +1,5 @@
 <%- partial("_partial/back_button") %>
-<% if(page.type == "tags"){ %>
+<% if(page.layout == "tags"){ %>
     <!-- Tags Cloud -->
     <div class="post-module demo-blog--blogpost">
         <div class="demo-blog__posts mdl-grid">
@@ -7,7 +7,7 @@
                 <%- partial("_partial/tagcloud") %>
         </div>
     </div>
-<% } else if(page.type == "links") { %>
+<% } else if(page.layout == "links") { %>
     <!-- Sigle Links Page -->
     <%- partial("_widget/page-links") %>
 <% } else { %>
