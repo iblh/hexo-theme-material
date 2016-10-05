@@ -116,11 +116,14 @@
             <b class="caret"></b>
         </a>
         <ul class="dropdown-menu">
-            <li>
-                <a href="<%= theme.url.about %>" target="_blank" title="<%= __("misc.about") %>">
-                    <%= __("misc.about") %>
-                </a>
-            </li>
+            <% if(theme.url.about == undefined){ %>
+            <% } else { %>
+                <li>
+                    <a href="<%= theme.url.about %>" target="_blank" title="<%= __("misc.about") %>">
+                        <%= __("misc.about") %>
+                    </a>
+                </li>
+            <% } %>
             <% for (var i in theme.pages){ %>
                 <li>
                     <a href="<%= theme.pages[i] %>" target="_blank" title="<%= i %>">

@@ -7,10 +7,10 @@ head:
 
 # URL
 url:
-    about: "/about"
+    about: #"/about"
     rss: 
     daily_pic: "#"
-    logo: "/about"
+    logo: 
 
 # UI & UX
 uiux:
