@@ -57,11 +57,22 @@
     <meta property="og:title" content="<% if (title){ %><%= title %> | <% } %><%= config.title %>">
     <meta property="og:description" content="<%= config.description %>">
     
+     <!--[if lte IE 10]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+        
+        <% if(config.language == "zh-CN"){ %>
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        <% } else { %>
+            <script src="/js/ie-blocker.en.js"></script>
+        <% } %>
+    <![endif]-->
+    
     <!-- Import CSS & js -->
     <%- css("css/material.min") %>
     <%- css("css/style.min") %>
     <%- js("js/jquery.min") %>
     <%- partial("_partial/config_css") %>
+    
     <!-- Custom Head -->
     <%- partial("_widget/head_custom") %>
 </head>

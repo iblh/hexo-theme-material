@@ -29,23 +29,22 @@ h1{
 }
 
 .ib-modal {
-    width: 592px;
-    height: 360px;
+    height: 288px;
     background: #fff;
-    padding: 20px;
     border-left: 8px solid #4fc1e9;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-left: -320px;
-    margin-top: -200px;
     color: #434a54;
     z-index: 99999;
+    width: 592px;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    padding: 49px 30px 30px;
 }
 
 .ib-header {
     height: 80px;
-    padding-top: 10px;
+    padding: 0;
 }
 
 .ib-header h1 {
@@ -69,18 +68,20 @@ h1{
 }
 
 .ib-browsers {
-    height: 230px;
+    height: 80px;
     list-style: none;
     margin: 0;
     padding: 0;
-    padding-top: 10px;
+    padding-top: 0;
+    margin-top: 49px;
 }
 
 .ib-browsers li {
     float: left;
     width: 148px;
-    height: 210px;
+    height: 80px;
     position: relative;
+    list-style: none;
 }
 
 .ib-browsers li a {
@@ -114,13 +115,13 @@ h1{
     line-height: 18px;
     margin-top: 5px;
     text-align: center;
-    font-size: 14px;
+    font-size: 20px;
 }
 
 .ib-browser-description {
     height: 50px;
     line-height: 14px;
-    font-size: 10px;
+    font-size: 12px;
     margin-top: 10px;
     padding: 0 5px;
 }
@@ -139,6 +140,7 @@ h1{
     line-height: 30px;
     cursor: pointer;
     text-decoration: none;
+    margin-top: 49px;
 }
 
 .ib-try:hover {
