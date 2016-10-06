@@ -57,7 +57,11 @@
     .sidebar_archives-count,
     .sidebar-colored .sidebar-header,
     .sidebar-colored .sidebar-badge{
-        background-color: <%= theme.uiux.theme_color %> !important;
+        background-color: <%= theme.uiux.theme_color %> !important
+    }
+    
+    .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus{
+        color: <%= theme.uiux.theme_sub_color %> !important
     }
     
     #post_entry-right-info,
@@ -68,7 +72,12 @@
     .sidebar-colored .sidebar-nav li > a:focus i,
     .sidebar-colored .sidebar-nav > .open > a,
     .sidebar-colored .sidebar-nav > .open > a:hover,
-    .sidebar-colored .sidebar-nav > .open > a:focus{
-        color: <%= theme.uiux.theme_color %> !important;
+    .sidebar-colored .sidebar-nav > .open > a:focus,
+    #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a{
+        color: <%= theme.uiux.theme_color %> !important
+    }
+    
+    .fab{
+        background: <%= theme.uiux.theme_color %> !important
     }
 </style>
