@@ -11,3 +11,5 @@ _config.yml
 layout/_widget/head_custom.ejs
 
 layout/_widget/head_custom.ejs
+
+source/js/js-org.js
