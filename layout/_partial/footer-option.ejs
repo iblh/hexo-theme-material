@@ -1,6 +1,10 @@
 <% if(theme.leancloud.enable == true){ %>
     <!-- Leancloud -->
-    <%-  partial("_widget/leancloud") %>
+	<script src="<%= theme.leancloud.av_core_mini %>"></script>
+	<script>
+		AV.initialize("<%= theme.leancloud.app_id %>", "<%= theme.leancloud.app_key %>");
+	</script>
+    <%- partial("_widget/leancloud-views") %>
 <% } %>
 
 <% if(theme.busuanzi.enable == true){ %>
@@ -9,7 +13,7 @@
 <% } %>
 
 <% if(theme.comment.use == "duoshuo"){ %>
-    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <!-- 多说公共 js 代码 start -->
     <script type="text/javascript">
     var duoshuoQuery = {short_name:"<%= theme.comment.shortname %>"};
         (function() {
@@ -21,5 +25,10 @@
              || document.getElementsByTagName('body')[0]).appendChild(ds);
         })();
     </script>
-    <!-- 多说公共JS代码 end -->
+    <!-- 多说公共 js 代码 end -->
+<% } %>
+
+<% if(theme.comment.use == "disqus"){ %>
+    <!-- 使用 DISQUS js 代码 -->
+	<script id="dsq-count-scr" src="//<%= theme.comment.shortname %>.disqus.com/count.js" async></script>
 <% } %>

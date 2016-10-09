@@ -1,7 +1,14 @@
 <% if(page.thumbnail == undefined){ %>
-    <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-    <%- partial('_partial/post-thumbnail') %>
+	<% if(theme.thumbnail.purecolor == undefined){%>
+		<!-- Random Thumbnail -->
+    	<div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+			<%- partial('_partial/post-thumbnail') %>
+	<% } else { %>
+		<!-- Pure Thumbnail -->
+		<div class="post_thumbnail-pure mdl-card__media mdl-color-text--grey-50" style="background-color:<%= theme.thumbnail.purecolor %> !important">
+	<% } %>
 <% }else{ %>
+	<!-- Custom Thumbnail -->
     <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(<%- page.thumbnail %>)">
 <% } %>
         <p class="article-headline-p">
