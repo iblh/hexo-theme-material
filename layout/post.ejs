@@ -1,8 +1,8 @@
 <%- partial("_partial/back_button") %>
 <% if(page.layout == "tags"){ %>
     <!-- Tags Cloud -->
-    <div class="post-module demo-blog--blogpost">
-        <div class="demo-blog__posts mdl-grid">
+    <div class="post-module material-tagscloud">
+        <div class="material-post mdl-grid">
                 <!-- Post Content -->
                 <%- partial("_partial/tagcloud") %>
         </div>
@@ -12,8 +12,8 @@
     <%- partial("_widget/page-links") %>
 <% } else { %>
     <!-- Post Module -->
-    <div class="post-module demo-blog--blogpost">
-        <div class="demo-blog__posts mdl-grid">
+    <div class="material-post_container">
+        <div class="material-post mdl-grid">
             <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
 
                 <!-- Post Header(Thumbnail & Title) -->
