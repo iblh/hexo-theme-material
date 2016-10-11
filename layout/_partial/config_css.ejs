@@ -3,19 +3,19 @@
         body{
             background-color: <%= theme.background.purecolor %>
         }
-        .material-layout .something-else .mdl-card__supporting-text{
+        #scheme-Nexus .material-layout .something-else .mdl-card__supporting-text{
             background-color: #fff;
         }
-        .MD-burger-layer {
+        #scheme-Nexus .MD-burger-layer {
             background-color: #666;
         }
-        .demo-back{
+        #scheme-Nexus .material-back{
             color: #666;
         }
-        .material-layout .material-post>.demo-nav,
-		.material-layout .material-index>.demo-nav,
-        .demo-nav a,
-        .material-post_container .demo-back{
+        #scheme-Nexus .material-layout .material-post>.material-nav,
+		#scheme-Nexus .material-layout .material-index>.material-nav,
+        #scheme-Nexus .material-nav a,
+        #scheme-Nexus .material-post_container .material-back{
             color: #666;
         }
     </style>
@@ -30,7 +30,7 @@
 <!-- Fade Effect -->
 <% if(theme.uiux.fade_effect == true){ %>
     <style>
-        .fade {
+        #scheme-Nexus .fade {
             transition: all <%= theme.uiux.nprogress_buffer %>ms linear;
             -webkit-transform: translate3d(0,0,0);
             -moz-transform: translate3d(0,0,0);
@@ -40,7 +40,7 @@
             opacity: 1;
         }
 
-        .fade.out{
+        #scheme-Nexus .fade.out{
             opacity: 0;
         }
     </style>
@@ -51,21 +51,21 @@
         color: <%= theme.uiux.hyperlink_color %>
     }
     
-    .mdl-card__media,
-    #search-label,
-    #search-form-label:after,
-    .hot_tags-count,
-    .sidebar_archives-count,
-    .sidebar-colored .sidebar-header,
-    .sidebar-colored .sidebar-badge{
+    #scheme-Nexus .mdl-card__media,
+    #scheme-Nexus #search-label,
+    #scheme-Nexus #search-form-label:after,
+    #scheme-Nexus .hot_tags-count,
+    #scheme-Nexus .sidebar_archives-count,
+    #scheme-Nexus .sidebar-colored .sidebar-header,
+    #scheme-Nexus .sidebar-colored .sidebar-badge{
         background-color: <%= theme.uiux.theme_color %> !important
     }
     
-    .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus{
+    #scheme-Nexus .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus{
         color: <%= theme.uiux.theme_sub_color %> !important
     }
     
-    #post_entry-right-info,
+    #scheme-Nexus #post_entry-right-info,
     .sidebar-colored .sidebar-nav li:hover > a,
     .sidebar-colored .sidebar-nav li:hover > a i,
     .sidebar-colored .sidebar-nav li > a:hover,
@@ -78,7 +78,7 @@
         color: <%= theme.uiux.theme_color %> !important
     }
     
-    .fab{
+    #scheme-Nexus .fab{
         background: <%= theme.uiux.theme_color %> !important
     }
 </style>
