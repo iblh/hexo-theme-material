@@ -17,7 +17,7 @@
 ## General 概括
 
 - Author 作者：Viosey
-- Version 版本：Gamma 7.0
+- Version 版本：Gamma 7.5
 - Compatibility 兼容：Hexo 3.0 or later
 - [![Gitter](https://img.shields.io/gitter/room/material-theme/hexo.svg?style=flat-square)](https://gitter.im/material-theme/hexo?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
 

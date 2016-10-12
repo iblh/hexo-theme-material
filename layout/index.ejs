@@ -1,7 +1,9 @@
 <!-- Index Module -->
 <div class="material-index mdl-grid">
-    <%- partial("_partial/daily_pic") %>
-    <%- partial("_partial/blog_info") %>
+	<% if(theme.style.scheme == "Nexus"){ %>
+	<%- partial("_partial/daily_pic") %>
+	<%- partial("_partial/blog_info") %>
+	<% } %>
     
     <% page.posts.each(function(post) { %>
         <%- partial('_partial/post_entry', { post: post, index: true }) %>
