@@ -12,6 +12,11 @@ url:
     daily_pic: "#"
     logo: 
 
+# Style
+style:
+    scheme: Nexus
+    markdown: Github
+
 # UI & UX
 uiux:
     slogan: "Hi, nice to meet you"
