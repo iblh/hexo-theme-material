@@ -1,27 +1,29 @@
 <div class="post_entry-module mdl-card mdl-cell mdl-cell--12-col fade out">
     
     <!-- Post Thumbnail -->
-    <% if(post.thumbnail == undefined){ %>
-		<% if(theme.thumbnail.purecolor == undefined){%>
+	<% if(post.thumbnail == undefined){ %>
+		<% if(theme.thumbnail.purecolor == undefined){ %>
 			<!-- Random Thumbnail -->
-    		<div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+			<div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
 		<% } else { %>
 			<!-- Pure Thumbnail -->
 			<div class="post-thumbnail-pure mdl-card__media mdl-color-text--grey-50" style="background-color:<%= theme.thumbnail.purecolor %> !important">
 		<% } %>
-    <% } else { %>
-	<!-- Custom Thumbnail -->
-    <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(<%= post.thumbnail %>)">
-    <% } %>
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="<%= url_for(post.path) %>"><%= post.title %></a></p>
-    </div>
+	<% } else { %>
+		<!-- Custom Thumbnail -->
+		<div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(<%= post.thumbnail %>)">
+	<% } %>
+				
+		<!-- Post Title -->
+		<p class="article-headline-p"><a href="<%= url_for(post.path) %>"><%= post.title %></a></p>
+	</div>
+
     <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text index-article-content">
+    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
         <%if(post.excerpt){%>
           <%- strip_html(post.excerpt) %>
         <%}else{%>
-          <%- strip_html(truncate(post.content,{length:80})) %>
+          <%- strip_html(truncate(post.content,{length: theme.reading.entry_excerpt })) %>
         <%}%>
         &nbsp;&nbsp;&nbsp;
         <span>

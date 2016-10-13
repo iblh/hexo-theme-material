@@ -10,7 +10,6 @@ sidebar:
     tags: "Etiquetas populares"
     links: "Enlaces"
     article_num: "Número de artículo"
-    theme_github: "Theme en Github"
     help: "Ayuda & Apoyo"
     feedback: "Realimentación"
     about_theme: "sobre el tema"
@@ -32,3 +31,4 @@ title:
 misc:
     about: "Acerca de"
     search: "Enter para buscar"
+    theme: "tema"

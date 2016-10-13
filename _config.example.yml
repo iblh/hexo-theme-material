@@ -15,7 +15,7 @@ url:
 # Style
 style:
     scheme: Nexus
-    markdown: Github
+    #scheme: Isolation
 
 # UI & UX
 uiux:
@@ -27,6 +27,11 @@ uiux:
     fade_effect: true
     nprogress_color: "#FF4081"
     nprogress_buffer: "800"
+
+# Reading
+reading:
+    markdown: Github
+    entry_excerpt: 80
 
 # Thumbnail settings
 thumbnail:

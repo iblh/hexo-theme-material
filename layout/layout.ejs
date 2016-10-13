@@ -4,6 +4,12 @@
 
     <body id="scheme-<%= theme.style.scheme %>">
         <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+				
+			<% if(theme.style.scheme == "Isolation"){ %>
+				<!-- Isolation Header -->
+				<%- partial("_partial/isolate_info") %>
+			<% } %>
+			
             <!-- Main Container -->
             <main class="material-layout__content" id="main">
 				

@@ -10,7 +10,6 @@ sidebar:
 	tags: "熱門標籤"
 	links: "友情鏈接"
 	article_num: "文章總數"
-	theme_github: "主题 Github"
 	help: "説明 & 支援"
 	feedback: "意見回饋"
 	about_theme: "關於主題"
@@ -32,3 +31,4 @@ title:
 misc:
 	about: "關於"
 	search: "回車以搜索"
+	theme: "主題"
