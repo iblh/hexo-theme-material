@@ -41,7 +41,7 @@ thumbnail:
 # Background settings
 background:
     purecolor: "#F5F5F5"
-    bgimg: "/img/bg.png"
+    #bgimg: "/img/bg.png"
 
 # Image
 img:

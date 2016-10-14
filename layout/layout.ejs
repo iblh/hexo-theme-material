@@ -26,9 +26,14 @@
                 <%- body %>
 				
 				<% if(theme.style.scheme == "Nexus"){ %>
-				<%- partial('_partial/sidebar') %>
+					<%- partial('_partial/sidebar') %>
 				<% } %>
-                <%- partial('_partial/footer') %>
+				
+				<%- partial("_partial/fab")  %>
+				
+				<%- partial('_partial/footer') %>
+                
+				<%- partial('_partial/import_js') %>
             </main>
         </div>
     </body>

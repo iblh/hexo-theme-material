@@ -21,43 +21,42 @@
 			
 		</div>
 
-		<h1 itemprop="name" class="header-item header-title">
-			<a itemprop="url" href="http://demos.mikedidthis.co.uk/ghost-eston" title="Eston">Eston</a>
-		</h1>
+		<!-- Header Title -->
+		<span class="header-title header-item">
+			<a href="<%= config.root %>" title="<%= config.title %>">
+				<%= config.title %>
+			</a>
+		</span>
 
-		<p itemprop="description" class="header-item header-about">
-			A simple, notebook inspired, theme for Ghost. Includes four colour schemes to kick start your customisation.
+		<p class="header-slogan header-item">
+			<%= theme.uiux.slogan %>
 		</p>
 
-		<nav class="nav header-item header-nav" role="navigation">
+		<nav class="header-nav header-item">
 
-			<span itemscope="" itemtype="http://schema.org/SiteNavigationElement" class="nav-item nav-item-current">
-			<a itemprop="url" href="http://demos.mikedidthis.co.uk/ghost-eston/" title="Home">
-			<span itemprop="name">Home</span>
-			</a>
+			<span class="header-nav-item">
+				<a href="http://demos.mikedidthis.co.uk/ghost-eston/" title="Home">
+					<span>Home</span>
+				</a>
 			</span>
 
-			<span itemscope="" itemtype="http://schema.org/SiteNavigationElement" class="nav-item">
-			<a itemprop="url" href="http://demos.mikedidthis.co.uk/ghost-eston/about/" title="About">
-			<span itemprop="name">About</span>
-			</a>
+			<span class="header-nav-item">
+				<a href="http://demos.mikedidthis.co.uk/ghost-eston/about/" title="About">
+					<span>About</span>
+				</a>
 			</span>
 
-			<span itemscope="" itemtype="http://schema.org/SiteNavigationElement" class="nav-item">
-			<a itemprop="url" href="http://themeforest.net/item/eston-a-simple-notebook-theme/9497657?ref=mikedidthis" title="Purchase">
-			<span itemprop="name">Purchase</span>
-			</a>
+			<span class="header-nav-item">
+				<a href="http://themeforest.net/item/eston-a-simple-notebook-theme/9497657?ref=mikedidthis" title="Purchase">
+					<span itemprop="name">Purchase</span>
+				</a>
 			</span>
 			
 		</nav>
 
 		<div class="nav header-item header-links">
 
-			<a href="https://twitter.com/mikedidthis" target="_blank" class="icon icon-twitter nav-item" title="Twitter">Twitter</a>
-
-			<a href="https://github.com/mikedidthis" target="_blank" class="icon icon-github nav-item" title="Github">Github</a>
-
-			<a href="https://dribbble.com/mikedidthis" target="_blank" class="icon icon-dribbble nav-item" title="Dribbble">Dribbble</a>
+			<%- partial("_partial/isolate-sns_list") %>
 
 		</div>
 	</div>
