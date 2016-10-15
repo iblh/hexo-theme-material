@@ -1,3 +1,15 @@
 <div id="post-content" class="markdown-<%= theme.reading.markdown %> mdl-color-text--grey-700 mdl-card__supporting-text fade out">
-    <%- page.content %>
+	<% if(theme.style.scheme == "Nexus"){ %>
+		<%- page.content %>
+	<% } %>
+	
+	<% if(theme.style.scheme == "Isolation"){ %>
+		<div class="post-content_wrapper">
+			<p class="post-title">
+				<%- page.title %>
+			</p>
+			<%- page.content %>
+		</div>
+	<% } %>
+	
 </div>

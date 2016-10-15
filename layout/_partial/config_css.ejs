@@ -3,18 +3,22 @@
         body{
             background-color: <%= theme.background.purecolor %>
         }
+		
         #scheme-Nexus .material-layout .something-else .mdl-card__supporting-text{
             background-color: #fff;
         }
+		
         #scheme-Nexus .MD-burger-layer {
             background-color: #666;
         }
+		
         #scheme-Nexus .material-back{
             color: #666;
         }
-        #scheme-Nexus .material-layout .material-post>.material-nav,
-		#scheme-Nexus .material-layout .material-index>.material-nav,
-        #scheme-Nexus .material-nav a,
+		
+        .material-layout .material-post>.material-nav,
+		.material-layout .material-index>.material-nav,
+        .material-nav a,
         #scheme-Nexus .material-post_container .material-back{
             color: #666;
         }
@@ -30,7 +34,7 @@
 <!-- Fade Effect -->
 <% if(theme.uiux.fade_effect == true){ %>
     <style>
-        #scheme-Nexus .fade {
+        .fade {
             transition: all <%= theme.uiux.nprogress_buffer %>ms linear;
             -webkit-transform: translate3d(0,0,0);
             -moz-transform: translate3d(0,0,0);
@@ -40,7 +44,7 @@
             opacity: 1;
         }
 
-        #scheme-Nexus .fade.out{
+        .fade.out{
             opacity: 0;
         }
     </style>
@@ -51,9 +55,9 @@
         color: <%= theme.uiux.hyperlink_color %>
     }
     
-    #scheme-Nexus .mdl-card__media,
-    #scheme-Nexus #search-label,
-    #scheme-Nexus #search-form-label:after,
+    .mdl-card__media,
+    #search-label,
+    #search-form-label:after,
     #scheme-Nexus .hot_tags-count,
     #scheme-Nexus .sidebar_archives-count,
     #scheme-Nexus .sidebar-colored .sidebar-header,
@@ -65,7 +69,7 @@
         color: <%= theme.uiux.theme_sub_color %> !important
     }
     
-    #scheme-Nexus #post_entry-right-info,
+    #post_entry-right-info,
     .sidebar-colored .sidebar-nav li:hover > a,
     .sidebar-colored .sidebar-nav li:hover > a i,
     .sidebar-colored .sidebar-nav li > a:hover,
@@ -78,7 +82,7 @@
         color: <%= theme.uiux.theme_color %> !important
     }
     
-    #scheme-Nexus .fab{
+    .fab{
         background: <%= theme.uiux.theme_sub_color %> !important
     }
 </style>

@@ -31,33 +31,37 @@
 		<p class="header-slogan header-item">
 			<%= theme.uiux.slogan %>
 		</p>
-
+		
+		<!-- Header Nav -->
 		<nav class="header-nav header-item">
 
 			<span class="header-nav-item">
-				<a href="http://demos.mikedidthis.co.uk/ghost-eston/" title="Home">
-					<span>Home</span>
+				<a href="<%= config.root %>" title="Home">
+					<span><%= __("misc.home") %></span>
 				</a>
 			</span>
 
-			<span class="header-nav-item">
-				<a href="http://demos.mikedidthis.co.uk/ghost-eston/about/" title="About">
-					<span>About</span>
-				</a>
-			</span>
-
-			<span class="header-nav-item">
-				<a href="http://themeforest.net/item/eston-a-simple-notebook-theme/9497657?ref=mikedidthis" title="Purchase">
-					<span itemprop="name">Purchase</span>
-				</a>
-			</span>
+			<% if(theme.url.about == undefined){ %>
+            <% } else { %>
+                <span class="header-nav-item">
+					<a href="/about/" title="About">
+						<span><%= __("misc.about") %></span>
+					</a>
+				</span>
+            <% } %>
 			
+            <% for (var i in theme.pages){ %>
+				<span class="header-nav-item">
+					<a href="<%= theme.pages[i] %>" title="<%= i %>">
+						<span><%= i %></span>
+					</a>
+				</span>
+            <% } %>
+
 		</nav>
 
-		<div class="nav header-item header-links">
+		<!-- Header SNS -->
+		<%- partial("_partial/isolate-sns_list") %>
 
-			<%- partial("_partial/isolate-sns_list") %>
-
-		</div>
 	</div>
 </header>

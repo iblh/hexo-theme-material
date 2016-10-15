@@ -8,7 +8,7 @@
         </div>
     </div>
 <% } else if(page.layout == "links") { %>
-    <!-- Sigle Links Page -->
+    <!-- Single Links Page -->
     <%- partial("_widget/page-links") %>
 <% } else { %>
     <!-- Post Module -->
@@ -18,12 +18,19 @@
 
                 <!-- Post Header(Thumbnail & Title) -->
                 <%- partial('_partial/post-header') %>
-
-                <!-- Post Info -->
-                <%- partial('_partial/post-info') %>
+				
+				<% if(theme.style.scheme == "Nexus"){ %>
+					<!-- Nexus Post Info -->
+					<%- partial('_partial/Nexus-post-info') %>
+				<% } %>
 
                 <!-- Post Content -->
                 <%- partial('_partial/post-content') %>
+				
+				<% if(theme.style.scheme == "Nexus"){ %>
+					<!-- Nexus Post Info -->
+					<%- partial('_partial/Isolation-post-info') %>
+				<% } %>
 
                 <!-- Post Comments -->
                 <%- partial("_partial/comment") %>
