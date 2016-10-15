@@ -1,49 +1,61 @@
-# Head
+# ---------------------------------------------------------------
+# Site Information Settings
+# ---------------------------------------------------------------
+
+# Head info
 head:
     favicon: "/img/favicon.png"
     high_res_favicon: "/img/favicon.png"
     apple_touch_icon: "/img/favicon.png"
     keywords: 
 
-# URL
+# Jump Links Settings
 url:
     about: #"/about"
     rss: 
     daily_pic: "#"
     logo: 
 
-# Style
-style:
-    scheme: Nexus
-    #scheme: Isolation
 
-# UI & UX
+# ---------------------------------------------------------------
+# Style Settings
+# ---------------------------------------------------------------
+
+# Schemes
+scheme: Paradox
+#scheme: Isolation
+
+# UI & UX: slogan, color, effect
 uiux:
     slogan: "Hi, nice to meet you"
     theme_color: "#039BE5"
     theme_sub_color: "#00BCD4"
     hyperlink_color: "#039BE5"
     android_chrome_color: "#039BE5"
-    fade_effect: true
     nprogress_color: "#FF4081"
     nprogress_buffer: "800"
+    
+# JS Effect Switches
+js_effect:
+    fade: true
+    nprogress: true
 
-# Reading
+# Reading Experience
 reading:
     markdown: Github
     entry_excerpt: 80
 
-# Thumbnail settings
+# Thumbnail Settings
 thumbnail:
     purecolor: 
     random_amount: 5
 
-# Background settings
+# Background Settings
 background:
     purecolor: "#F5F5F5"
     #bgimg: "/img/bg.png"
 
-# Image
+# Images Settings
 img:
     logo: "/img/logo.png"
     avatar: "/img/avatar.png"
@@ -53,7 +65,12 @@ img:
     upyun_logo: #"/img/upyun_logo.png"
     random_thumbnail: "/img/random/"
 
-# SNS
+
+# ---------------------------------------------------------------
+# Menu Settings
+# ---------------------------------------------------------------
+
+# SNS Menu
 sns:
     email: 
     twitter: "https://twitter.com/twitter"
@@ -64,7 +81,7 @@ sns:
     tumblr: 
     github: 
 
-# Pages
+# Pages Menu
 pages:
     
 
@@ -73,7 +90,7 @@ pages:
 # Third Party Services
 # ---------------------------------------------------------------
     
-# Comment
+# Comment Systems
 comment:
     use: 
     shortname: 

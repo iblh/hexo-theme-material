@@ -2,13 +2,12 @@
 
 >原之质，物之渊
 
-![](https://qiniu.viosey.com/img/Material-Phone-Render.png)
-
 
 ## Contents 目录
 
 - [General 概括](#general-概括)
 - [Demo 演示](#demo-演示)
+- [Render 渲染](#render-渲染)
 - [Quick start 快速开始](#quick-start-快速开始)
 - [Contributing 贡献](#contributing-贡献)
 - [License 许可证](#license-许可证)
@@ -20,6 +19,11 @@
 - Version 版本：Gamma 9.0
 - Compatibility 兼容：Hexo 3.0 or later
 - [![Gitter](https://img.shields.io/gitter/room/material-theme/hexo.svg?style=flat-square)](https://gitter.im/material-theme/hexo?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
+
+
+## Render 渲染
+
+![](https://qiniu.viosey.com/img/Material-Phone-Render.png)
 
 
 ## Demo 演示

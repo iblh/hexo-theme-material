@@ -2,5 +2,9 @@
 <%- js("js/jquery.min") %>
 <%- js("js/js.min") %>
 <%- partial("_partial/nprogress") %>
-<%- js("js/smoothscroll") %>
+
+<% if( theme.js_effect.smoothscroll == true ){ %>
+	<%- js("js/smoothscroll") %>
+<% } %>
+
 <%- partial("_partial/footer-option") %>

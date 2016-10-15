@@ -1,10 +1,10 @@
-<% if(theme.style.scheme == "Nexus"){ %>
-	<!-- Nexus Post Header -->
+<% if(theme.scheme == "Paradox"){ %>
+	<!-- Paradox Post Header -->
 	<% if(page.thumbnail == undefined){ %>
 		<% if(theme.thumbnail.purecolor == undefined){%>
 			<!-- Random Thumbnail -->
 			<div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-				<%- partial('_partial/Nexus-post-thumbnail') %>
+				<%- partial('_partial/Paradox-post-thumbnail') %>
 		<% } else { %>
 			<!-- Pure Thumbnail -->
 			<div class="post_thumbnail-pure mdl-card__media mdl-color-text--grey-50" style="background-color:<%= theme.thumbnail.purecolor %> !important">
@@ -19,7 +19,7 @@
     </div>
 <% } %>
 	
-<% if(theme.style.scheme == "Isolation"){ %>
+<% if(theme.scheme == "Isolation"){ %>
 	<!-- Isolation Post Header -->
 	<!-- Post thumbnail -->
 	<% if(page.thumbnail == undefined){ %>

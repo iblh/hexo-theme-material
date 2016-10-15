@@ -2,10 +2,10 @@
 <html>
     <%- partial('_partial/head') %>
 
-    <body id="scheme-<%= theme.style.scheme %>">
+    <body id="scheme-<%= theme.scheme %>">
         <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
 				
-			<% if(theme.style.scheme == "Isolation"){ %>
+			<% if(theme.scheme == "Isolation"){ %>
 				<!-- Isolation Header -->
 				<%- partial("_partial/isolate_info") %>
 			<% } %>
@@ -16,7 +16,7 @@
                 <!-- Top Anchor -->
                 <div id="top"></div>
 				
-				<% if(theme.style.scheme == "Nexus"){ %>
+				<% if(theme.scheme == "Paradox"){ %>
                 <!-- Hamburger Button -->
                 <button class="MD-burger-icon sidebar-toggle">
                     <span class="MD-burger-layer"></span>
@@ -25,7 +25,7 @@
 				
                 <%- body %>
 				
-				<% if(theme.style.scheme == "Nexus"){ %>
+				<% if(theme.scheme == "Paradox"){ %>
 					<%- partial('_partial/sidebar') %>
 				<% } %>
 				

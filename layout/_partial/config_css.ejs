@@ -4,22 +4,22 @@
             background-color: <%= theme.background.purecolor %>
         }
 		
-        #scheme-Nexus .material-layout .something-else .mdl-card__supporting-text{
+        #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
             background-color: #fff;
         }
 		
-        #scheme-Nexus .MD-burger-layer {
+        #scheme-Paradox .MD-burger-layer {
             background-color: #666;
         }
 		
-        #scheme-Nexus .material-back{
+        #scheme-Paradox .material-back{
             color: #666;
         }
 		
         .material-layout .material-post>.material-nav,
 		.material-layout .material-index>.material-nav,
         .material-nav a,
-        #scheme-Nexus .material-post_container .material-back{
+        #scheme-Paradox .material-post_container .material-back{
             color: #666;
         }
     </style>
@@ -32,7 +32,7 @@
 <% } %>
 
 <!-- Fade Effect -->
-<% if(theme.uiux.fade_effect == true){ %>
+<% if(theme.js_effect.fade == true){ %>
     <style>
         .fade {
             transition: all <%= theme.uiux.nprogress_buffer %>ms linear;
@@ -58,14 +58,14 @@
     .mdl-card__media,
     #search-label,
     #search-form-label:after,
-    #scheme-Nexus .hot_tags-count,
-    #scheme-Nexus .sidebar_archives-count,
-    #scheme-Nexus .sidebar-colored .sidebar-header,
-    #scheme-Nexus .sidebar-colored .sidebar-badge{
+    #scheme-Paradox .hot_tags-count,
+    #scheme-Paradox .sidebar_archives-count,
+    #scheme-Paradox .sidebar-colored .sidebar-header,
+    #scheme-Paradox .sidebar-colored .sidebar-badge{
         background-color: <%= theme.uiux.theme_color %> !important
     }
     
-    #scheme-Nexus .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus{
+    #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus{
         color: <%= theme.uiux.theme_sub_color %> !important
     }
     
