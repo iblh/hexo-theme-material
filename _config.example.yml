@@ -40,7 +40,9 @@ js_effect:
     fade: true
     nprogress: true
 
-# Reading Experience
+# Reading experience
+# Available value:
+#     Material | Github
 reading:
     markdown: Github
     entry_excerpt: 80
@@ -91,11 +93,20 @@ pages:
 # ---------------------------------------------------------------
     
 # Comment Systems
+# Available value:
+#     duoshuo | disqus
 comment:
     use: 
     shortname: 
     duoshuo_embed_js_url: "https://static.duoshuo.com/embed.js"
-    
+
+# Search Systems
+# Available value:
+#     swiftype | google
+search:
+    use: "google"
+    swiftype_key: 
+        
 # Leancloud Views
 leancloud:
     enable: false

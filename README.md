@@ -16,14 +16,10 @@
 ## General 概括
 
 - Author 作者：Viosey
-- Version 版本：Gamma 9.0
+- Version 版本：Gamma 10.0
 - Compatibility 兼容：Hexo 3.0 or later
+- QQ 群: 566308505
 - [![Gitter](https://img.shields.io/gitter/room/material-theme/hexo.svg?style=flat-square)](https://gitter.im/material-theme/hexo?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
-
-
-## Render 渲染
-
-![](https://qiniu.viosey.com/img/Material-Phone-Render.png)
 
 
 ## Demo 演示
@@ -31,6 +27,12 @@
 Experience the Material theme in live: [hexo-theme-material Demo](https://blog.viosey.com)
 
 体验 Material 主题: [hexo-theme-material 演示](https://blog.viosey.com)
+
+
+## Render 渲染
+
+![](https://qiniu.viosey.com/img/Material-Phone-Render.png)
+
 
 
 ## Quick start 快速开始
