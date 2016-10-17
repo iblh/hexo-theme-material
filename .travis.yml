@@ -1,6 +1,9 @@
-language: node_js
-node_js: 
-    - "0.1"
-branches:
-    only:
-    - master
+nguage: node_js
+node_js:
+    - "4.1"
+install:
+    - npm install -g gulp mocha bower  
+    - npm install
+    - bower install
+    - cd ./test/hexo && npm install
+    - cd ../../
