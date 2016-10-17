@@ -6,8 +6,6 @@ source/css/style.css
 
 source/css/duoshuo.css
 
-_config.yml
-
 layout/_widget/head_custom.ejs
 
 layout/_widget/head_custom.ejs
