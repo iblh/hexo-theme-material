@@ -20,6 +20,7 @@
 - Compatibility 兼容：Hexo 3.0 or later
 - QQ 群: 566308505
 - [![Gitter](https://img.shields.io/gitter/room/material-theme/hexo.svg?style=flat-square)](https://gitter.im/material-theme/hexo?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
+- 
 
 
 ## Demo 演示
@@ -50,6 +51,8 @@ All kinds of contributions (enhancements, new features, documentation & code imp
 
 
 ## License 许可证
+
+[![license](https://img.shields.io/github/license/viosey/hexo-theme-material.svg?style=flat-square)](https://github.com/viosey/hexo-theme-material/blob/master/LICENSE)
 
 Open sourced under the GPL v3.0 license.
 

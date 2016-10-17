@@ -1,0 +1,23 @@
+{
+  "name": "hexo-material",
+  "version": "0.3.10",
+  "description": "Material Design Theme for Hexo",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/viosey/hexo-theme-material.git"
+  },
+  "keywords": [
+    "hexo",
+    "theme",
+    "material"
+  ],
+  "author": "Viosey",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/viosey/hexo-theme-material/issues"
+  },
+  "homepage": "https://github.com/viosey/hexo-theme-material#readme"
+}
