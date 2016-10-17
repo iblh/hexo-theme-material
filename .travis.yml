@@ -2,7 +2,10 @@ language: node_js
 node_js:
     - "4"
 before_install:
-    - npm install -g hexo-cli
+    - npm install -g hexo
+    - npm install
+install:
+    - hexo generate
 branches:
     only:
     - master
