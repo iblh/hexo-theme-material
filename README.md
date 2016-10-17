@@ -20,7 +20,6 @@
 - Compatibility 兼容：Hexo 3.0 or later
 - QQ 群: 566308505
 - [![Gitter](https://img.shields.io/gitter/room/material-theme/hexo.svg?style=flat-square)](https://gitter.im/material-theme/hexo?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
-- 
 
 
 ## Demo 演示

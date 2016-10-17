@@ -1,0 +1,9 @@
+language: node_js
+node_js:
+    - "4"
+before_install:
+    - npm install -g hexo-cli
+branches:
+    only:
+    - master
+ 
