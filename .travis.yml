@@ -1,9 +1,14 @@
-nguage: node_js
-node_js:
-    - "4.1"
-install:
-    - npm install -g gulp mocha bower  
-    - npm install
-    - bower install
-    - cd ./test/hexo && npm install
-    - cd ../../
+ulanguage: node_js
+node-js: 
+     - "4"
+
+cache: 
+    apt: true
+    directories:
+        - node_modules
+
+before_install: 
+    - npm install lodash --save
+
+script:
+    - npm test
