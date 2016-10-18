@@ -19,6 +19,7 @@ post:
     continue: "Sigue leyendo"
     older: "Mayor"
     newer: "Más nuevo"
+    private: "Mensajes privados, ocultar temporalmente"
 share:
     article_rss: "Artículo RSS"
     comment_rss: "Comentario RSS"

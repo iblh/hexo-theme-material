@@ -19,6 +19,7 @@ post:
 	continue: "繼續閱讀"
 	older: "舊篇"
 	newer: "新篇"
+	private: "私有文章，暫不公開"
 share:
 	article_rss: "文章 RSS"
 	comment_rss: "評論 RSS"

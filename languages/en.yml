@@ -19,6 +19,7 @@ post:
     continue: "Continue Reading"
     older: "Older"
     newer: "Newer"
+    private: "Private post, temporarily hidden"
 share:
     article_rss: "Article RSS"
     comment_rss: "Comment RSS"
