@@ -1,0 +1,108 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/Cellar/node/6.4.0/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'publish' ]
+2 info using npm@3.10.3
+3 info using node@v6.4.0
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   escapedName: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/Users/viosey/hexo/themes/material',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /Users/viosey/.npm/hexo-material/0.5.0-rc/package.tgz not in flight; packing
+9 verbose correctMkdir /Users/viosey/.npm correctMkdir not in flight; initializing
+10 info lifecycle hexo-material@0.5.0-rc~prepublish: hexo-material@0.5.0-rc
+11 silly lifecycle hexo-material@0.5.0-rc~prepublish: no script for prepublish, continuing
+12 verbose tar pack [ '/Users/viosey/.npm/hexo-material/0.5.0-rc/package.tgz',
+12 verbose tar pack   '/Users/viosey/hexo/themes/material' ]
+13 verbose tarball /Users/viosey/.npm/hexo-material/0.5.0-rc/package.tgz
+14 verbose folder /Users/viosey/hexo/themes/material
+15 verbose addLocalTarball adding from inside cache /Users/viosey/.npm/hexo-material/0.5.0-rc/package.tgz
+16 verbose correctMkdir /Users/viosey/.npm correctMkdir not in flight; initializing
+17 silly cache afterAdd hexo-material@0.5.0-rc
+18 verbose afterAdd /Users/viosey/.npm/hexo-material/0.5.0-rc/package/package.json not in flight; writing
+19 verbose correctMkdir /Users/viosey/.npm correctMkdir not in flight; initializing
+20 verbose afterAdd /Users/viosey/.npm/hexo-material/0.5.0-rc/package/package.json written
+21 silly publish { name: 'hexo-material',
+21 silly publish   version: '0.5.0-rc',
+21 silly publish   description: 'Material Design Theme for Hexo',
+21 silly publish   scripts: { test: 'echo "Error: no test specified"' },
+21 silly publish   repository:
+21 silly publish    { type: 'git',
+21 silly publish      url: 'git+https://github.com/viosey/hexo-theme-material.git' },
+21 silly publish   keywords: [ 'hexo', 'theme', 'material' ],
+21 silly publish   author: { name: 'Viosey' },
+21 silly publish   license: 'GPL-3.0',
+21 silly publish   bugs: { url: 'https://github.com/viosey/hexo-theme-material/issues' },
+21 silly publish   homepage: 'https://github.com/viosey/hexo-theme-material#readme',
+21 silly publish   readme: '# Material 原质\n\n>原之质，物之渊\n\n\n## Contents 目录\n\n- [General 概括](#general-概括)\n- [Demo 演示](#demo-演示)\n- [Render 渲染](#render-渲染)\n- [Quick start 快速开始](#quick-start-快速开始)\n- [Contributing 贡献](#contributing-贡献)\n- [License 许可证](#license-许可证)\n\n\n## General 概括\n\n- [![Author](https://img.shields.io/badge/author-Viosey-blue.svg?style=flat-square)](https://viosey.com)\n- [![Version](https://img.shields.io/badge/version-0.5.0--rc-green.svg?style=flat-square)]()\n- [![Hexo](https://img.shields.io/badge/hexo-3.0+-green.svg?style=flat-square)](https://hexo.io)\n- [![Build Status](https://img.shields.io/travis/viosey/hexo-theme-material.svg?style=flat-square)](https://travis-ci.org/viosey/hexo-theme-material)\n- [![QQ Group](https://img.shields.io/badge/QQ%20%E7%BE%A4-566308505-brightgreen.svg?style=flat-square)](http://jq.qq.com/?_wv=1027&k=40Vdy24)\n- [![Gitter](https://img.shields.io/gitter/room/material-theme/hexo.svg?style=flat-square)](https://gitter.im/material-theme/hexo?utm_source=share-link&utm_medium=link&utm_campaign=share-link)\n\n\n## Demo 演示\n\nExperience the Material theme in live: [hexo-theme-material Demo](https://blog.viosey.com)\n\n体验 Material 主题: [hexo-theme-material 演示](https://blog.viosey.com)\n\n\n## Render 渲染\n\n![](https://qiniu.viosey.com/img/Material-Phone-Render.png)\n\n## Quick start 快速开始\n\n[5 Minutes Setup](https://github.com/viosey/hexo-theme-material/wiki/5-Minutes-Setup)\t\n\n[5 分钟设置](https://github.com/viosey/hexo-theme-material/wiki/5-%E5%88%86%E9%92%9F%E8%AE%BE%E7%BD%AE)\n\n\n## Contributing 贡献\n\nAll kinds of contributions (enhancements, new features, documentation & code improvements, issues & bugs reporting) are welcome.\n\n欢迎各种形式的贡献，包括但不限于优化，添加功能，文档 & 代码的改进，问题和 bugs 的报告。期待您的 `Pull Request`。\n\n\n## License 许可证\n\n[![license](https://img.shields.io/github/license/viosey/hexo-theme-material.svg?style=flat-square)](https://github.com/viosey/hexo-theme-material/blob/master/LICENSE)\n\nOpen sourced under the GPL v3.0 license.\n\n根据 GPL V3.0 许可证开源。',
+21 silly publish   readmeFilename: 'README.md',
+21 silly publish   gitHead: 'c5b7c55be7392564918b7be2b828e1d61b586ec1',
+21 silly publish   _id: 'hexo-material@0.5.0-rc',
+21 silly publish   _shasum: '538bcb9b2f53187343201b4512ac37a47b275657',
+21 silly publish   _from: '.' }
+22 verbose getPublishConfig undefined
+23 silly mapToRegistry name hexo-material
+24 silly mapToRegistry using default registry
+25 silly mapToRegistry registry http://registry.npmjs.org/
+26 silly mapToRegistry data Result {
+26 silly mapToRegistry   raw: 'hexo-material',
+26 silly mapToRegistry   scope: null,
+26 silly mapToRegistry   escapedName: 'hexo-material',
+26 silly mapToRegistry   name: 'hexo-material',
+26 silly mapToRegistry   rawSpec: '',
+26 silly mapToRegistry   spec: 'latest',
+26 silly mapToRegistry   type: 'tag' }
+27 silly mapToRegistry uri http://registry.npmjs.org/hexo-material
+28 verbose publish registryBase http://registry.npmjs.org/
+29 silly publish uploading /Users/viosey/.npm/hexo-material/0.5.0-rc/package.tgz
+30 verbose request uri http://registry.npmjs.org/hexo-material
+31 verbose request sending authorization for write operation
+32 info attempt registry request try #1 at 12:13:56 AM
+33 verbose request using bearer token for auth
+34 verbose request id d6770e373bc20922
+35 http request PUT http://registry.npmjs.org/hexo-material
+36 http 403 http://registry.npmjs.org/hexo-material
+37 verbose headers { 'content-type': 'application/json',
+37 verbose headers   'cache-control': 'max-age=300',
+37 verbose headers   'content-length': '98',
+37 verbose headers   'accept-ranges': 'bytes',
+37 verbose headers   date: 'Tue, 18 Oct 2016 16:14:19 GMT',
+37 verbose headers   via: '1.1 varnish',
+37 verbose headers   connection: 'keep-alive',
+37 verbose headers   'x-served-by': 'cache-ams4134-AMS',
+37 verbose headers   'x-cache': 'MISS',
+37 verbose headers   'x-cache-hits': '0',
+37 verbose headers   'x-timer': 'S1476807232.128461,VS0,VE27383',
+37 verbose headers   vary: 'Accept-Encoding' }
+38 verbose request invalidating /Users/viosey/.npm/registry.npmjs.org/hexo-material on PUT
+39 error publish Failed PUT 403
+40 verbose stack Error: "You cannot publish over the previously published version 0.5.0-rc." : hexo-material
+40 verbose stack     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+40 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:252:14)
+40 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+40 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:200:22)
+40 verbose stack     at emitTwo (events.js:106:13)
+40 verbose stack     at Request.emit (events.js:191:7)
+40 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1067:10)
+40 verbose stack     at emitOne (events.js:101:20)
+40 verbose stack     at Request.emit (events.js:188:7)
+40 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:988:12)
+41 verbose statusCode 403
+42 verbose pkgid hexo-material
+43 verbose cwd /Users/viosey/hexo/themes/material
+44 error Darwin 15.6.0
+45 error argv "/usr/local/Cellar/node/6.4.0/bin/node" "/usr/local/bin/npm" "publish"
+46 error node v6.4.0
+47 error npm  v3.10.3
+48 error code E403
+49 error "You cannot publish over the previously published version 0.5.0-rc." : hexo-material
+50 error If you need help, you may report this error at:
+50 error     <https://github.com/npm/npm/issues>
+51 verbose exit [ 1, true ]
