@@ -38,7 +38,7 @@ uiux:
 # JS Effect Switches
 js_effect:
     fade: true
-    nprogress: true
+    smoothscroll: true
 
 # Reading experience
 # Available value:

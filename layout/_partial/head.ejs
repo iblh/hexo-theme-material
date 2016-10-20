@@ -72,6 +72,14 @@
     <%- css("css/style.min") %>
     <%- partial("_partial/config_css") %>
 	<%- js("js/jquery.min") %>
+	
+	<!-- UC Browser Compatible-->
+	<script>
+		var agent = navigator.userAgent.toLowerCase();
+		if(agent.indexOf('ucbrowser')>0) {
+			document.write('<%- css("css/uc") %>');
+		}
+	</script>
     
     <!-- Custom Head -->
     <%- partial("_widget/head_custom") %>
