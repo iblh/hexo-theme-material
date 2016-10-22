@@ -67,6 +67,8 @@ img:
     upyun_logo: #"/img/upyun_logo.png"
     random_thumbnail: "/img/random/"
 
+# Custom Fonts
+fonts: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif
 
 # ---------------------------------------------------------------
 # Menu Settings

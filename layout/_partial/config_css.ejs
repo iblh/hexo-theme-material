@@ -1,4 +1,6 @@
 <!-- Config CSS -->
+
+<!-- Theme Background -->
 <% if(theme.background.bgimg == undefined){ %>
     <style>
         body{
@@ -51,7 +53,12 @@
     </style>
 <% } %>
 
+<!-- Other Styles -->
 <style>
+	body, html{
+		font-family: <%- theme.fonts %>;
+	}
+	
     a{
         color: <%= theme.uiux.hyperlink_color %>
     }
