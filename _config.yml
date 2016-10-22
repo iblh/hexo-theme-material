@@ -41,7 +41,7 @@ js_effect:
     smoothscroll: true
 
 # Reading experience
-# Available value:
+# markdown Available value:
 #     Material | Github
 reading:
     markdown: Github
@@ -87,6 +87,7 @@ sns:
 
 # Pages Menu
 pages:
+    Galley: /gallery/
     
 
 

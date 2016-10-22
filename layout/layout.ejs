@@ -1,8 +1,14 @@
 <!DOCTYPE html>
 <html>
     <%- partial('_partial/head') %>
+	
+	<% if(page.layout == "gallery") { %>
+		<!-- Single Gallery Page -->
+		<%- partial("_widget/page-gallery") %>
+	<% } else { %>
 
     <body id="scheme-<%= theme.scheme %>">
+
 		
         <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
 				
@@ -39,4 +45,6 @@
         </div>
 		
     </body>
+		
+	<% } %>
 </html>

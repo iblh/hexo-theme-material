@@ -15,3 +15,9 @@ source/js/js-org.js
 source/css/material.css
 
 _config.viosey.yml
+
+source/css/gallery.css
+
+source/js/gallery/util.js
+
+source/js/gallery/main.js
