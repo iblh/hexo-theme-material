@@ -41,7 +41,7 @@ js_effect:
     smoothscroll: true
 
 # Reading experience
-# markdown Available value:
+# markdown available value:
 #     Material | Github
 reading:
     markdown: Github
@@ -64,7 +64,7 @@ img:
     daily_pic: "/img/daily_pic.png"
     sidebar_header: "/img/sidebar_header.png"
     footerico: "/img/footer/footer_ico-"
-    upyun_logo: #"/img/upyun_logo.png"
+    #upyun_logo: "/img/upyun_logo.png"
     random_thumbnail: "/img/random/"
 
 # Custom Fonts
@@ -87,7 +87,6 @@ sns:
 
 # Pages Menu
 pages:
-    Galley: /gallery/
     
 
 
@@ -107,7 +106,7 @@ comment:
 # Available value:
 #     swiftype | google
 search:
-    use: "google"
+    use: google
     swiftype_key: 
         
 # Leancloud Views

@@ -21,3 +21,5 @@ source/css/gallery.css
 source/js/gallery/util.js
 
 source/js/gallery/main.js
+
+_config.backup.yml
