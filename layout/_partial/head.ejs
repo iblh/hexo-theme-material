@@ -83,5 +83,10 @@
 	</script>
     
     <!-- Custom Head -->
-    <%- partial("_widget/head_custom") %>
+    <% if (site.data.head){ %>
+        <% for (var i in site.data.head){ %>
+			<!-- <%= i %> -->
+			<%- site.data.head[i] %>
+        <% } %>
+    <% } %>
 </head>
