@@ -39,6 +39,8 @@ uiux:
 js_effect:
     fade: true
     smoothscroll: true
+    fab_hover_in: false
+    fab_hover_out: true
 
 # Reading experience
 # markdown available value:
@@ -104,10 +106,19 @@ comment:
 
 # Search Systems
 # Available value:
-#     swiftype | google
+#     swiftype | google | local
 search:
-    use: google
+    use: local
     swiftype_key: 
+    path: search.xml
+    field: post
+    
+algolia:
+    applicationID: '3YT7Y5NBLB'
+    apiKey: 'b92b7ce75d22338e9dbe5aad88129b04'
+    adminApiKey: 'c90c51cec3a72d8a75665d03ab829295'
+    indexName: 'index'
+    chunkSize: 5000
         
 # Leancloud Views
 leancloud:

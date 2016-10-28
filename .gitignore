@@ -19,3 +19,5 @@ source/js/gallery/util.js
 source/js/gallery/main.js
 
 _config.backup.yml
+
+npm-debug.log

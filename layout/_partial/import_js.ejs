@@ -9,5 +9,42 @@
 <%- partial("_partial/footer-option") %>
 
 <% if( theme.search.use == "swiftype" ){ %>
-	<%- partial("_widget/swiftype") %>
+	<%- partial("_widget/search-swiftype-js") %>
+<% } %>
+
+<% if( theme.search.use == "local" ){ %>
+	<%- partial("_widget/search-local-js") %>
+
+	<script>
+		var search_path = "<%= theme.search.path %>";
+		if (search_path.length == 0) {
+		search_path = "search.xml";
+		}
+		var path = "<%= config.root %>" + search_path;
+		searchFunc(path, 'search', 'local-search-result');
+	</script>
+<% } %>
+
+
+<% if( theme.js_effect.fab_hover_in == true ){ %>
+	<script>
+		$(".fab").mouseenter(function(){
+			if( !$("#prime").hasClass("is-visible") )
+				$("#prime").click();
+		});
+		
+		$(".fabs").mouseleave(function(){
+			if( $("#prime").hasClass("is-visible") )
+				$("#prime").click();
+		});
+	</script>
+<% } %>
+
+<% if( theme.js_effect.fab_hover_out == true ){ %>
+	<script>
+		$(".fabs").mouseleave(function(){
+			if( $("#prime").hasClass("is-visible") )
+				$("#prime").click();
+		});
+	</script>
 <% } %>
