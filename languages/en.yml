@@ -2,7 +2,6 @@ sidebar:
     profile: "Profile"
     setting: "Settings"
     homepage: "Homepage"
-    imlucky: "I'm Feeling Lucky"
     article: "Newest Article"
     comment: "Newest Comments"
     archive: "Archives"
@@ -10,9 +9,6 @@ sidebar:
     tags: "Hot Tags"
     links: "Links"
     article_num: "Article Number"
-    help: "Help & Support"
-    feedback: "Feedback"
-    about_theme: "About Theme"
 post:
     visitor: "Visitors"
     views: "Views"

@@ -2,7 +2,6 @@ sidebar:
 	profile: "使用者概要"
 	setting: "設置外觀"
 	homepage: "網站首頁"
-	imlucky: "手氣不錯"
 	article: "最新文章"
 	comment: "最新評論"
 	archive: "按月歸檔"
@@ -10,9 +9,6 @@ sidebar:
 	tags: "熱門標籤"
 	links: "友情鏈接"
 	article_num: "文章總數"
-	help: "説明 & 支援"
-	feedback: "意見回饋"
-	about_theme: "關於主題"
 post:
 	visitor: "訪客"
 	views: "瀏覽量"

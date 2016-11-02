@@ -2,7 +2,6 @@ sidebar:
     profile: "プロフィール"
     setting: "設定"
     homepage: "ホームページ"
-    imlucky: "私はラッキーを感じています"
     article: "最新記事"
     comment: "最新のコメント"
     archive: "アーカイブズ"
@@ -10,9 +9,6 @@ sidebar:
     tags: "ホットタグ"
     links: "リンクス"
     article_num: "記事番号"
-    help: "助けて & サポート"
-    feedback: "フィードバック"
-    about_theme: "テーマについて"
 post:
     visitor: "訪問者"    
     views: "ビュー"
