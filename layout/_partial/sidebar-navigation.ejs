@@ -35,60 +35,32 @@
     </li>
 -->
 
-    <!-- Newest Article  -->
+    <!-- Pages  -->
     <li class="dropdown">
-        <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
-            <i class="material-icons sidebar-material-icons">library_books</i>
-             <%= __("sidebar.article") %>
+        <a class="ripple-effect dropdown-toggle" href="#" data-toggle="dropdown">
+			<i class="material-icons sidebar-material-icons">view_carousel</i>
+             <%= __("sidebar.pages") %>
             <b class="caret"></b>
         </a>
         <ul class="dropdown-menu">
-            <li>
-            <%- list_posts({
-                amount: 5,
-                class: 'sidebar_posts',
-                style: 'none',
-                separator: '</li><li>'
-            }) %>
-        </ul>
-    </li>
-
-    <!-- Newest Comments  -->
-    <li class="dropdown">
-        <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
-            <i class="material-icons sidebar-material-icons">forum</i>
-             <%= __("sidebar.comment") %>
-            <b class="caret"></b>
-        </a>
-        <ul class="dropdown-menu">
-            <% if(theme.comment.use == "duoshuo"){ %>
-            <!-- 使用多说评论 -->
-            <ul class="ds-recent-comments" data-num-items="5" data-show-avatars="0" data-show-time="0" data-show-title="0" data-show-admin="0" data-excerpt-length="15"></ul>
-            <style>
-                .ds-recent-comments {
-                    padding: 0;
-                }
-                .ds-recent-comments .ds-meta {
-                    display: none;
-                }
-                #ds-recent-comments li.ds-comment {
-                    padding: 0 !important;
-                    height: 48px;
-                    line-height: 48px;
-                }
-                #ds-recent-comments li.ds-comment a {
-                    padding-top: 16px;
-                    padding-bottom: 16px;
-                    padding-right:0;
-                    background: rgba(0, 0, 0, 0);
-                }
-                #ds-recent-comments li.ds-comment:hover {
-                    background-color: #cecece;
-                }
-            </style>
+            <% if(theme.url.about == undefined){ %>
+            <% } else { %>
+                <li>
+                    <a href="<%= theme.url.about %>" target="_blank" title="<%= __("misc.about") %>">
+                        <%= __("misc.about") %>
+                    </a>
+                </li>
+            <% } %>
+            <% for (var i in theme.pages){ %>
+                <li>
+                    <a href="<%= theme.pages[i] %>" target="_blank" title="<%= i %>">
+                        <%= i %>
+                    </a>
+                </li>
             <% } %>
         </ul>
     </li>
+	
     <!-- Archives  -->
     <li class="dropdown">
         <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
@@ -111,30 +83,7 @@
     <!-- Divider -->
     <li class="divider"></li>
 
-    <!-- Pages  -->
-    <li class="dropdown">
-        <a class="ripple-effect dropdown-toggle" href="#" data-toggle="dropdown">
-             <%= __("sidebar.pages") %>
-            <b class="caret"></b>
-        </a>
-        <ul class="dropdown-menu">
-            <% if(theme.url.about == undefined){ %>
-            <% } else { %>
-                <li>
-                    <a href="<%= theme.url.about %>" target="_blank" title="<%= __("misc.about") %>">
-                        <%= __("misc.about") %>
-                    </a>
-                </li>
-            <% } %>
-            <% for (var i in theme.pages){ %>
-                <li>
-                    <a href="<%= theme.pages[i] %>" target="_blank" title="<%= i %>">
-                        <%= i %>
-                    </a>
-                </li>
-            <% } %>
-        </ul>
-    </li>
+
 
     <!-- Hot Tags  -->
     <li class="dropdown">
