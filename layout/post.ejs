@@ -3,12 +3,7 @@
 <!-- Layouts -->
 <% if(page.layout == "tags"){ %>
     <!-- Tags Cloud -->
-    <div class=" material-tagscloud">
-        <div class="material-post mdl-grid">
-                <!-- Post Content -->
-                <%- partial("_partial/tagcloud") %>
-        </div>
-    </div>
+	<%- partial("_widget/page-tagcloud") %>
 
 <% } else if(page.layout == "links") { %>
     <!-- Single Links Page -->

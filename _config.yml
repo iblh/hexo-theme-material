@@ -44,7 +44,7 @@ js_effect:
 
 # Reading experience
 # markdown available value:
-#     Material | Github
+#     Material | Github | Plain
 reading:
     markdown: Github
     entry_excerpt: 80
