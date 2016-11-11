@@ -93,7 +93,7 @@ pages:
 
 
 # ---------------------------------------------------------------
-# Third Party Services
+# Integrated Services
 # ---------------------------------------------------------------
     
 # Comment Systems
@@ -108,17 +108,8 @@ comment:
 # Available value:
 #     swiftype | google | local
 search:
-    use: local
+    use: google
     swiftype_key: 
-    path: search.xml
-    field: post
-    
-algolia:
-    applicationID: '3YT7Y5NBLB'
-    apiKey: 'b92b7ce75d22338e9dbe5aad88129b04'
-    adminApiKey: 'c90c51cec3a72d8a75665d03ab829295'
-    indexName: 'index'
-    chunkSize: 5000
         
 # Leancloud Views
 leancloud:
