@@ -1,10 +1,6 @@
 sidebar:
-    profile: "用户概要"
-    setting: "设置外观"
     homepage: "主页"
-    article: "最新文章"
-    comment: "最新评论"
-    archive: "按月归档"
+    archive: "归档"
     pages: "独立页面"
     tags: "热门标签"
     links: "友情链接"

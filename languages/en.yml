@@ -1,9 +1,5 @@
 sidebar:
-    profile: "Profile"
-    setting: "Settings"
-    homepage: "Homepage"
-    article: "Newest Article"
-    comment: "Newest Comments"
+    homepage: "Home"
     archive: "Archives"
     pages: "Pages"
     tags: "Hot Tags"

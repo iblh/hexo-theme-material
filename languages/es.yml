@@ -1,9 +1,5 @@
 sidebar:
-    profile: "Perfil"
-    setting: "Ajustes"
-    homepage: " Página principal"
-    article: "El más reciente artículo"
-    comment: "Lo nuevo Comentarios"
+    homepage: "Casa"
     archive: "Archivo"
     pages: "Páginas"
     tags: "Etiquetas populares"

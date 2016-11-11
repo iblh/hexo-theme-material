@@ -2,18 +2,14 @@
     <!-- User dropdown  -->
     <li class="dropdown">
         <ul id="settings-dropdown" class="dropdown-menu">
-            <li>
-                <a href="#" tabindex="-1">
-                    <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">account_circle</i>
-                     <%= __("sidebar.profile") %>
-                </a>
-            </li>
-            <li>
-                <a href="#" tabindex="-1">
-                    <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">settings</i>
-                     <%= __("sidebar.setting") %>
-                </a>
-            </li>
+			<% for (var i in theme.dropdown){ %>
+                <li>
+                    <a href="<%= theme.dropdown[i].link %>" target="_blank" title="<%= i %>">
+						<i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element"><%= theme.dropdown[i].icon %></i>
+                        <%= i %>
+                    </a>
+                </li>
+            <% } %>
         </ul>
     </li>
 
@@ -35,31 +31,6 @@
     </li>
 -->
 
-    <!-- Pages  -->
-    <li class="dropdown">
-        <a class="ripple-effect dropdown-toggle" href="#" data-toggle="dropdown">
-			<i class="material-icons sidebar-material-icons">view_carousel</i>
-             <%= __("sidebar.pages") %>
-            <b class="caret"></b>
-        </a>
-        <ul class="dropdown-menu">
-            <% if(theme.url.about == undefined){ %>
-            <% } else { %>
-                <li>
-                    <a href="<%= theme.url.about %>" target="_blank" title="<%= __("misc.about") %>">
-                        <%= __("misc.about") %>
-                    </a>
-                </li>
-            <% } %>
-            <% for (var i in theme.pages){ %>
-                <li>
-                    <a href="<%= theme.pages[i] %>" target="_blank" title="<%= i %>">
-                        <%= i %>
-                    </a>
-                </li>
-            <% } %>
-        </ul>
-    </li>
 	
     <!-- Archives  -->
     <li class="dropdown">
@@ -84,44 +55,22 @@
     <li class="divider"></li>
 
 
-
-    <!-- Hot Tags  -->
-    <li class="dropdown">
-        <a class="ripple-effect dropdown-toggle" href="#" data-toggle="dropdown">
-             <%= __("sidebar.tags") %>
-            <b class="caret"></b>
-        </a>
-        <ul class="dropdown-menu">
-            <li>
-            <%- list_tags({
-                orderby: 'count',
-                show_count: true,
-                amount: 10,
-                class: 'hot_tags',
-                style: 'none',
-                separator: '</li><li>'
-            }) %>
-        </ul>
-    </li>
-
-    <!-- Links -->
-    <li class="dropdown">
-        <a class="ripple-effect dropdown-toggle" href="#" data-toggle="dropdown">
-            <%= __("sidebar.links") %>
-            <b class="caret"></b>
-        </a>
-        <ul class="dropdown-menu">
-            <% if (site.data.links){ %>
-                <% for (var i in site.data.links){ %>
-                    <li>
-                        <a href="<%= site.data.links[i].link %>" target="_blank" title="<%= i %>">
-                            <%= i %>
-                        </a>
-                    </li>
-                <% } %>
-            <% } %>
-        </ul>
-    </li>
+    <!-- Pages  -->
+	<% if(theme.url.about == undefined){ %>
+	<% } else { %>
+		<li>
+			<a href="<%= theme.url.about %>" target="_blank" title="<%= __("misc.about") %>">
+				<%= __("misc.about") %>
+			</a>
+		</li>
+	<% } %>
+	<% for (var i in theme.pages){ %>
+		<li>
+			<a href="<%= theme.pages[i] %>" target="_blank" title="<%= i %>">
+				<%= i %>
+			</a>
+		</li>
+	<% } %>
 
     <!-- Article Numebr  -->
     <li>

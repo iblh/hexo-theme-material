@@ -1,10 +1,6 @@
 sidebar:
-    profile: "使用者概要"
-    setting: "設置外觀"
-    homepage: "網站首頁"
-    article: "最新文章"
-    comment: "最新評論"
-    archive: "按月歸檔"
+    homepage: "首頁"
+    archive: "歸檔"
     pages: "獨立頁面"
     tags: "熱門標籤"
     links: "友情鏈接"

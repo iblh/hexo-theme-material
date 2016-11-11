@@ -1,9 +1,5 @@
 sidebar:
-    profile: "プロフィール"
-    setting: "設定"
-    homepage: "ホームページ"
-    article: "最新記事"
-    comment: "最新のコメント"
+    homepage: "ホーム"
     archive: "アーカイブズ"
     pages: "ページ"
     tags: "ホットタグ"
