@@ -36,7 +36,9 @@
 					<%- partial('_partial/sidebar') %>
 				<% } %>
 				
-				<%- partial("_partial/fab")  %>
+				<% if(theme.uiux.fab == true){ %>
+					<%- partial("_partial/fab")  %>
+				<% } %>
 				
 				<%- partial('_partial/footer') %>
                 

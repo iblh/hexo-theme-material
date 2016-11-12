@@ -27,6 +27,8 @@ scheme: Paradox
 
 # UI & UX: slogan, color, effect
 uiux:
+    fab: true
+    fab_icon: add
     slogan: "Hi, nice to meet you"
     theme_color: "#039BE5"
     theme_sub_color: "#00BCD4"
