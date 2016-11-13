@@ -1,16 +1,13 @@
 sidebar:
     homepage: "首頁"
-    archive: "文章歸檔"
-    pages: "頁面"
-    tags: "熱門標籤"
-    links: "交換連接"
+    archive: "彙整"
     article_num: "文章總數"
 post:
     visitor: "訪客"
     views: "瀏覽量"
     continue: "繼續閱讀"
-    older: "前一篇"
-    newer: "後一篇"
+    older: "舊篇"
+    newer: "新篇"
     private: "私有文章，暫不公開"
 share:
     article_rss: "文章 RSS"
