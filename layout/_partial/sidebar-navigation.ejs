@@ -56,14 +56,6 @@
 
 
     <!-- Pages  -->
-	<% if(theme.url.about == undefined){ %>
-	<% } else { %>
-		<li>
-			<a href="<%= theme.url.about %>" title="<%= __("misc.about") %>">
-				<%= __("misc.about") %>
-			</a>
-		</li>
-	<% } %>
 	<% for (var i in theme.pages){ %>
 		<li>
 			<a href="<%= theme.pages[i] %>" title="<%= i %>">

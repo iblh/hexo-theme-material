@@ -1,8 +1,6 @@
 sidebar:
     homepage: "Casa"
     archive: "Archivo"
-    tags: "Etiquetas populares"
-    links: "Enlaces"
     article_num: "Número de artículo"
 post:
     visitor: "Visitantes"

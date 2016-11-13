@@ -40,16 +40,8 @@
 					<span><%= __("misc.home") %></span>
 				</a>
 			</span>
-
-			<% if(theme.url.about == undefined){ %>
-            <% } else { %>
-                <span class="header-nav-item">
-					<a href="/about/" title="About">
-						<span><%= __("misc.about") %></span>
-					</a>
-				</span>
-            <% } %>
 			
+			<!-- Independent Pages -->
             <% for (var i in theme.pages){ %>
 				<span class="header-nav-item">
 					<a href="<%= theme.pages[i] %>" title="<%= i %>">

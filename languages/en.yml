@@ -1,8 +1,6 @@
 sidebar:
     homepage: "Home"
     archive: "Archives"
-    tags: "Hot Tags"
-    links: "Links"
     article_num: "Article Number"
 post:
     visitor: "Visitors"

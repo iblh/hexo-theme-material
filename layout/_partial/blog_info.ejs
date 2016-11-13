@@ -25,14 +25,6 @@
             <span class="visuallyhidden">Pages</span>
         </button>
         <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="show-pages-button">
-            <% if(theme.url.about == undefined){ %>
-            <% } else { %>
-                <a class="index_share-link" href="<%= theme.url.about %>" title="<%= __("misc.about") %>">
-                    <li class="mdl-menu__item mdl-js-ripple-effect">
-                        <%= __("misc.about") %>
-                    </li>
-                </a>
-            <% } %>
             <% for (var i in theme.pages){ %>
                 <a class="index_share-link" href="<%= theme.pages[i] %>" title="<%= i %>">
                     <l class="mdl-menu__item mdl-js-ripple-effect"i>
