@@ -1,8 +1,6 @@
 sidebar:
     homepage: "首頁"
-    archive: "歸檔"
-    tags: "熱門標籤"
-    links: "友情鏈接"
+    archive: "彙整"
     article_num: "文章總數"
 post:
     visitor: "訪客"
@@ -23,5 +21,5 @@ title:
 misc:
     home: "主頁"
     about: "關於"
-    search: "回車以搜索"
+    search: "Enter 以搜索"
     theme: "主題"
