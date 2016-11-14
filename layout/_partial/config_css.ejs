@@ -34,6 +34,14 @@
     </style>
 <% } %>
 
+<% if(theme.background.bing.enable == true){ %>
+	<style>
+		body{
+            background-image: url(https://api.i-meto.com/bing?<%= theme.background.bgimg %>);
+        }
+	</style>
+<%  } %>
+
 <!-- Fade Effect -->
 <% if(theme.js_effect.fade == true){ %>
     <style>
@@ -73,8 +81,10 @@
         background-color: <%= theme.uiux.theme_color %> !important
     }
     
+	/* Sidebar User Drop Down Menu Text Color */
+	#scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
     #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus{
-        color: <%= theme.uiux.theme_sub_color %> !important
+        color: <%= theme.uiux.theme_color %> !important
     }
     
     #post_entry-right-info,
@@ -90,7 +100,7 @@
         color: <%= theme.uiux.theme_color %> !important
     }
     
-    .fab{
+    .toTop{
         background: <%= theme.uiux.theme_sub_color %> !important
     }
 </style>

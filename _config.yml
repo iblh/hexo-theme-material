@@ -26,8 +26,6 @@ scheme: Paradox
 
 # UI & UX: slogan, color, effect
 uiux:
-    fab: true
-    fab_icon: add
     slogan: "Hi, nice to meet you"
     theme_color: "#039BE5"
     theme_sub_color: "#00BCD4"
@@ -39,9 +37,7 @@ uiux:
 # JS Effect Switches
 js_effect:
     fade: true
-    smoothscroll: true
-    fab_hover_in: false
-    fab_hover_out: true
+    smoothscroll: false
 
 # Reading experience
 # markdown available value:
@@ -56,9 +52,17 @@ thumbnail:
     random_amount: 5
 
 # Background Settings
+# bing available parameter:
+#     new | color= | type=
+#         color available value: black, blue, brown, green, multi, orange, pink, purple, red, white, yellow
+#         type available value: A (animal), C (culture), N (nature), S (space), T (travel)
 background:
     purecolor: "#F5F5F5"
     #bgimg: "/img/bg.png"
+    bing: 
+        enable: true
+        parameter: 
+    
 
 # Images Settings
 img:
@@ -108,8 +112,8 @@ pages:
 # Available value:
 #     duoshuo | disqus
 comment:
-    use: 
-    shortname: 
+    use: duoshuo
+    shortname: vlab
     duoshuo_embed_js_url: "https://static.duoshuo.com/embed.js"
 
 # Search Systems

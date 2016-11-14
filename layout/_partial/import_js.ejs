@@ -24,27 +24,3 @@
 		searchFunc(path, 'search', 'local-search-result');
 	</script>
 <% } %>
-
-
-<% if( theme.js_effect.fab_hover_in == true ){ %>
-	<script>
-		$(".fab").mouseenter(function(){
-			if( !$("#prime").hasClass("is-visible") )
-				$("#prime").click();
-		});
-		
-		$(".fabs").mouseleave(function(){
-			if( $("#prime").hasClass("is-visible") )
-				$("#prime").click();
-		});
-	</script>
-<% } %>
-
-<% if( theme.js_effect.fab_hover_out == true ){ %>
-	<script>
-		$(".fabs").mouseleave(function(){
-			if( $("#prime").hasClass("is-visible") )
-				$("#prime").click();
-		});
-	</script>
-<% } %>
