@@ -17,7 +17,7 @@ share:
     toWeibo: "Weibo での共有"
 title:
     category: "カテゴリー"
-    tag: "タグ"
+    tag: "ラベル"
 misc:
     home: "ホーム"
     about: "について"
