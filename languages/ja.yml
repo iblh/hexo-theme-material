@@ -6,8 +6,8 @@ post:
     visitor: "訪問者"    
     views: "ビュー"
     continue: "読み続けて"
-    older: "前のページ"
-    newer: "次のページ"
+    older: "古い"
+    newer: "新しい"
     private: "プライベート記事、一時的に非表示にします"
 share:
     article_rss: "記事 RSS"
