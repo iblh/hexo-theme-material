@@ -27,10 +27,11 @@ scheme: Paradox
 # UI & UX: slogan, color, effect
 uiux:
     slogan: "Hi, nice to meet you"
-    theme_color: "#039BE5"
-    theme_sub_color: "#00BCD4"
-    hyperlink_color: "#039BE5"
-    android_chrome_color: "#039BE5"
+    theme_color: "#0097A7"
+    theme_sub_color: "#00838F"
+    hyperlink_color: "#00838F"
+    button_color: "#757575"
+    android_chrome_color: "#0097A7"
     nprogress_color: "#FF4081"
     nprogress_buffer: "800"
     

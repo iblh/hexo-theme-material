@@ -1,4 +1,4 @@
-<%- partial("_partial/back_button") %>
+<%- partial("_partial/toc_button") %>
 
 <!-- Layouts -->
 <% if(page.layout == "tags"){ %>
@@ -45,6 +45,7 @@
 <% } else { %>
     <!-- Post Module -->
     <div class="material-post_container">
+		
         <div class="material-post mdl-grid">
             <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
 
@@ -66,8 +67,6 @@
 
                 <!-- Post Comments -->
                 <%- partial("_partial/comment") %>
-				
-
             </div>
 
             <!-- Post Prev & Next Nav -->

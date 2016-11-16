@@ -8,10 +8,12 @@
 
 <%- partial("_partial/footer-option") %>
 
+<!-- Swiftye -->
 <% if( theme.search.use == "swiftype" ){ %>
 	<%- partial("_widget/search-swiftype-js") %>
 <% } %>
 
+<!-- Local Search-->
 <% if( theme.search.use == "local" ){ %>
 	<%- partial("_widget/search-local-js") %>
 
@@ -22,5 +24,15 @@
 		}
 		var path = "<%= config.root %>" + search_path;
 		searchFunc(path, 'search', 'local-search-result');
+        
+        
 	</script>
 <% } %>
+
+<!-- Window Load-->
+<script>
+    // Post_Toc parent position fixed
+    $(window).load(function() {
+        $(".post-toc-wrap").parent(".mdl-menu__container").css("position", "fixed");
+    });
+</script>

@@ -1,65 +1,5 @@
 <!-- Config CSS -->
 
-<!-- Theme Background -->
-<% if(theme.background.bgimg == undefined){ %>
-    <style>
-        body{
-            background-color: <%= theme.background.purecolor %>
-        }
-		
-        #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
-            background-color: #fff;
-        }
-		
-        #scheme-Paradox .MD-burger-layer {
-            background-color: #666;
-        }
-		
-        #scheme-Paradox .material-back{
-            color: #666;
-        }
-		
-        .material-layout .material-post>.material-nav,
-		.material-layout .material-index>.material-nav,
-        .material-nav a,
-        #scheme-Paradox .material-post_container .material-back{
-            color: #666;
-        }
-    </style>
-<% } else{ %>
-    <style>
-        body{
-            background-image: url(<%= theme.background.bgimg %>);
-        }
-    </style>
-<% } %>
-
-<% if(theme.background.bing.enable == true){ %>
-	<style>
-		body{
-            background-image: url(https://api.i-meto.com/bing?<%= theme.background.bgimg %>);
-        }
-	</style>
-<%  } %>
-
-<!-- Fade Effect -->
-<% if(theme.js_effect.fade == true){ %>
-    <style>
-        .fade {
-            transition: all <%= theme.uiux.nprogress_buffer %>ms linear;
-            -webkit-transform: translate3d(0,0,0);
-            -moz-transform: translate3d(0,0,0);
-            -ms-transform: translate3d(0,0,0);
-            -o-transform: translate3d(0,0,0);
-            transform: translate3d(0,0,0);
-            opacity: 1;
-        }
-
-        .fade.out{
-            opacity: 0;
-        }
-    </style>
-<% } %>
 
 <!-- Other Styles -->
 <style>
@@ -101,6 +41,73 @@
     }
     
     .toTop{
-        background: <%= theme.uiux.theme_sub_color %> !important
+        background: <%= theme.uiux.button_color %> !important
     }
+		
+	.material-layout .material-post>.material-nav,
+	.material-layout .material-index>.material-nav,
+	.material-nav a{
+		color: <%= theme.uiux.button_color %>;
+	}
+		
+	#scheme-Paradox .MD-burger-layer {
+		background-color: <%= theme.uiux.button_color %>;
+	}
+
+	#scheme-Paradox #post-toc-trigger-btn{
+		color: <%= theme.uiux.button_color %>;
+	}
+	
+	.post-toc a:hover{
+		color: <%= theme.uiux.hyperlink_color %>;
+		text-decoration: underline;
+	}
 </style>
+
+
+<!-- Theme Background Related-->
+<% if(theme.background.bing.enable == true){ %>
+	<style>
+		body{
+            background-image: url(https://api.i-meto.com/bing?<%= theme.background.bgimg %>);
+        }
+	</style>
+<% } else if(theme.background.bgimg == undefined){ %>
+    <style>
+        body{
+            background-color: <%= theme.background.purecolor %>
+        }
+		
+		/* blog_info bottom background */
+        #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+            background-color: #fff;
+        }
+    </style>
+<% } else { %>
+    <style>
+        body{
+            background-image: url(<%= theme.background.bgimg %>);
+        }
+    </style>
+<% } %>
+
+
+
+<!-- Fade Effect -->
+<% if(theme.js_effect.fade == true){ %>
+    <style>
+        .fade {
+            transition: all <%= theme.uiux.nprogress_buffer %>ms linear;
+            -webkit-transform: translate3d(0,0,0);
+            -moz-transform: translate3d(0,0,0);
+            -ms-transform: translate3d(0,0,0);
+            -o-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+            opacity: 1;
+        }
+
+        .fade.out{
+            opacity: 0;
+        }
+    </style>
+<% } %>
