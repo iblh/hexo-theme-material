@@ -1,6 +1,6 @@
 sidebar:
     homepage: "首頁"
-    archive: "彙整"
+    archive: "過往"
     article_num: "文章總數"
 post:
     visitor: "訪客"
@@ -20,6 +20,4 @@ title:
     tag: "標籤"
 misc:
     home: "主頁"
-    about: "關於"
-    search: "Enter 以搜索"
     theme: "主題"

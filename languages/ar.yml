@@ -1,8 +1,6 @@
 sidebar:
     homepage: "الرئيسية"
     archive: "أرشيف"
-    tags: "الوسوم الساخنة"
-    links: "روابط"
     article_num: "رقم المقالة"
 post:
     visitor: "زوار"
@@ -22,6 +20,4 @@ title:
     tag: "وسم"
 misc:
     home: "رئيسية"
-    about: "عن الموقع"
-    search: "أدخل البحث"
     theme: "سمة"

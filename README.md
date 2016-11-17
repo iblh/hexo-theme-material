@@ -2,7 +2,7 @@
 
 >原之质，物之渊
 
->[Material Theme](https://material.vss.im)
+>[About Material Theme](https://material.vss.im)
 
 ## Contents 目录
 
@@ -18,7 +18,7 @@
 ## General 概括
 
 [![Author](https://img.shields.io/badge/author-Viosey-blue.svg?style=flat-square)](https://viosey.com)
-[![Version](https://img.shields.io/badge/version-1.0.3-green.svg?style=flat-square)]()
+[![Version](https://img.shields.io/badge/version-1.1.0-green.svg?style=flat-square)]()
 [![Hexo](https://img.shields.io/badge/hexo-3.0+-green.svg?style=flat-square)](https://hexo.io)
 [![Build Status](https://img.shields.io/travis/viosey/hexo-theme-material.svg?style=flat-square)](https://travis-ci.org/viosey/hexo-theme-material)
 [![QQ Group](https://img.shields.io/badge/QQ%20%E7%BE%A4-566308505-brightgreen.svg?style=flat-square)](http://jq.qq.com/?_wv=1027&k=40Vdy24)
@@ -26,9 +26,9 @@
 
 ## Demo 演示
 
-Experience the Material theme in live: [hexo-theme-material Demo](https://blog.viosey.com)
+Experience the Material theme `Paradox scheme` in live: [Viosey's Blog](https://blog.viosey.com)
 
-体验 Material 主题: [hexo-theme-material 演示](https://blog.viosey.com)
+体验 Material主题 `Paradox scheme` : [Viosey's Blog](https://blog.viosey.com)
 
 ## Quick start 快速开始
 
