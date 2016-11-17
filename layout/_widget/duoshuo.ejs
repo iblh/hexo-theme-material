@@ -12,6 +12,9 @@
 </style>
 <div id="comments">
     <!-- 多说评论框 start -->
-        <div class="ds-thread" data-thread-key="<% if(theme.comment.duoshuo_thread_key == "id"){ %><%= page.id %><% } else { %><%= page.title %><% } %>" data-url="<%= config.url+ config.root + url_for(path) %>"></div>
+        <div class="ds-thread" 
+            data-thread-key="<% if(theme.comment.duoshuo_thread_key == "id"){ %><%= page.id %><% } else { %><%= page.path %><% } %>" 
+            data-url="<%- config.url+ config.root + url_for(path) %>"
+            data-title="<%= page.title %>"></div>
     <!-- 多说评论框 end -->
 </div>

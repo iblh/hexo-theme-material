@@ -114,7 +114,7 @@ pages:
 comment:
     use: 
     shortname: 
-    duoshuo_thread_key: title
+    duoshuo_thread_key: path
     duoshuo_embed_js_url: "https://static.duoshuo.com/embed.js"
 
 # Search Systems
