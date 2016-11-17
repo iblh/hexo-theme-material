@@ -7,7 +7,7 @@ head:
     favicon: "/img/favicon.png"
     high_res_favicon: "/img/favicon.png"
     apple_touch_icon: "/img/favicon.png"
-    keywords: 
+    keywords: CCG
 
 # Jump Links Settings
 url:
@@ -28,7 +28,8 @@ scheme: Paradox
 uiux:
     fab: true
     fab_icon: add
-    slogan: "Hi, nice to meet you"
+    slogan: "Every flight begins with a fall."
+    # slogan: "每一次飞行都始于堕落"
     theme_color: "#039BE5"
     theme_sub_color: "#00BCD4"
     hyperlink_color: "#039BE5"
@@ -63,15 +64,16 @@ background:
 # Images Settings
 img:
     logo: "/img/logo.png"
-    avatar: "/img/avatar.png"
-    daily_pic: "/img/daily_pic.png"
+    avatar: "/img/avatar.jpeg"
+    daily_pic: "/img/pic.jpg"
     sidebar_header: "/img/sidebar_header.png"
     footerico: "/img/footer/footer_ico-"
     #upyun_logo: "/img/upyun_logo.png"
     random_thumbnail: "/img/random/"
 
 # Custom Fonts
-fonts: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif
+fonts: Roboto, "SF Compact Display", "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif
+# fonts: "SF Compact Display", "SF UI Display", -apple-system, "BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", "Helvetica", "HanHei SC", "PingFang SC", "Microsoft YaHei UI", "Microsoft YaHei", sans-serif
 
 # ---------------------------------------------------------------
 # Menu Settings
@@ -79,7 +81,7 @@ fonts: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "
 
 # SNS Menu
 sns:
-    email: youremail@email.com
+    email: guancheng.hong@gmail.com
     twitter: "https://twitter.com/twitter"
     facebook: "https://www.facebook.com/facebook"
     googleplus: "https://www.google.com/"
@@ -108,15 +110,15 @@ pages:
 # Available value:
 #     duoshuo | disqus
 comment:
-    use: 
-    shortname: 
+    use: duoshuo
+    shortname: ccg
     duoshuo_embed_js_url: "https://static.duoshuo.com/embed.js"
 
 # Search Systems
 # Available value:
 #     swiftype | google | local
 search:
-    use: google
+    use: local
     swiftype_key: 
         
 # Leancloud Views
