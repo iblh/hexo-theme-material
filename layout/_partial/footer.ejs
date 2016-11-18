@@ -6,7 +6,20 @@
 		<%- partial("_partial/footer-left") %>
 
 		<!--Copyright-->
-		<div id="copyright">Copyright&nbsp;©&nbsp;<script type="text/javascript">var fd = new Date();document.write(fd.getFullYear());</script>&nbsp;<%- config.title %></div>
+		<div id="copyright">Copyright&nbsp;©&nbsp;<script type="text/javascript">var fd = new Date();document.write(fd.getFullYear());</script>&nbsp;<%- config.title %>
+
+		<div>
+	    <!-- Busuanzi -->
+		<% if(theme.busuanzi.enable == true){ %>
+	    <script src="<%= theme.busuanzi.busuanzi_pure_mini_js %>"></script>
+		<% } %>
+		<div>
+		总访问量 <span id="busuanzi_value_site_pv"></span> 
+		你是第<span id="busuanzi_value_site_uv"></span>个来到的小伙伴
+		</div>
+		</div>
+
+		</div>
 
 		<!-- Paradox Footer Right Section -->
 
@@ -25,5 +38,5 @@
 			</div>
 		</div>
 	<% } %>
-    
+
 </footer>

@@ -40,16 +40,6 @@
             <span class="visuallyhidden">show menu</span>
         </button>
         <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="menubtn">
-            <% if(theme.busuanzi.all_site_uv == true){ %>
-            <!-- All Site UV -->
-            <a class="index_share-link" href="#">
-                <li class="mdl-menu__item mdl-js-ripple-effect">
-                    <span id="busuanzi_container_site_uv">
-                        <span id="busuanzi_value_site_uv"></span>&nbsp;<%= __("post.views") %>
-                    </span>
-                </li>
-            </a>
-            <% } %>
             <a class="index_share-link" href="<%= theme.url.rss %>">
                 <li class="mdl-menu__item mdl-js-ripple-effect">
                     <%= __('share.article_rss') %>
