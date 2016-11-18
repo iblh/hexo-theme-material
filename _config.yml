@@ -2,18 +2,18 @@
 # Site Information Settings
 # ---------------------------------------------------------------
 
-# Head 
+# Head info
 head:
     favicon: "/img/favicon.png"
     high_res_favicon: "/img/favicon.png"
     apple_touch_icon: "/img/favicon.png"
-    keywords: "Android"
+    keywords: 
 
 # Jump Links Settings
 url:
-    rss: /atom.xml
+    rss: 
     daily_pic: "#"
-    logo: "http://www.github.com/w4lle"
+    logo: 
 
 
 # ---------------------------------------------------------------
@@ -26,7 +26,7 @@ scheme: Paradox
 
 # UI & UX: slogan, color, effect
 uiux:
-    slogan: "Read the Fucking Source Code :-)"
+    slogan: "Hi, nice to meet you"
     theme_color: "#0097A7"
     theme_sub_color: "#00838F"
     hyperlink_color: "#00838F"
@@ -48,7 +48,7 @@ reading:
     entry_excerpt: 80
 
 # Thumbnail Settings
-thumbnail: 
+thumbnail:
     purecolor: 
     random_amount: 5
 
@@ -59,10 +59,10 @@ thumbnail:
 #         type available value: A (animal), C (culture), N (nature), S (space), T (travel)
 background:
     purecolor: "#F5F5F5"
-    bgimg: 
-    bing:
-        parameter: color=white
+    #bgimg: "/img/bg.png"
+    bing: 
         enable: false
+        parameter: 
 
 # Images Settings
 img:
@@ -83,26 +83,23 @@ fonts: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "
 
 # SNS Menu
 sns:
-    email: "wanglinglong.me@gmail.com"
-    twitter: 
-    facebook: 
-    googleplus: 
+    email: youremail@email.com
+    twitter: "https://twitter.com/twitter"
+    facebook: "https://www.facebook.com/facebook"
+    googleplus: "https://www.google.com/"
+    weibo: 
     instagram: 
     tumblr: 
-    github: "https://github.com/w4lle"
-    csdn: "http://blog.csdn.net/hlglinglong"
-    weibo: "http://weibo.com/u/2274417881"
+    github: 
 
 # Sidebar User Dropdown
 dropdown: 
     Email Me: 
-        link: "mailto:wanglinglong.me@gmail.com"
+        link: "#"
         icon: email
 
 # Pages Menu
 pages:
-    #文章列表: /archives
-    最近访客: /guestbook
     #about: "/about"
     
 
@@ -115,8 +112,8 @@ pages:
 # Available value:
 #     duoshuo | disqus
 comment:
-    use: duoshuo
-    shortname: w4lle
+    use: 
+    shortname: 
     duoshuo_thread_key: path
     duoshuo_embed_js_url: "https://static.duoshuo.com/embed.js"
 
@@ -136,7 +133,7 @@ leancloud:
     
 # Busuanzi 不蒜子 Views
 busuanzi:
-    enable: true
-    all_site_uv: true
-    post_pv: true
+    enable: false
+    all_site_uv: false
+    post_pv: false
     busuanzi_pure_mini_js: "https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"
