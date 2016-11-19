@@ -16,14 +16,14 @@ tags:
 
 First of all check if you have already a **personal access token**.
 
-![GitHub personal access tokens](github_personal_access_tokens.png "GitHub personal access tokens")
+![GitHub personal access tokens](/github_personal_access_tokens.png "GitHub personal access tokens")
 
 If not, you can follow these [instructions]({% post_url 2013-10-08-github-jekyll-travis %})
 
 
 On Travis we need to grant access to the GitHub repository. Login to Travis and in your account settings under repositories you can enable a project.
 
-![Travis grant access to GitHub repository](travis_grant_repository_access.png "Travis grant access to GitHub repository")
+![Travis grant access to GitHub repository](/travis_grant_repository_access.png "Travis grant access to GitHub repository")
 
 The next thing is to generate a new secure string for your `.travis.yml` file. First we need to get the GitHub personal access token, which you generated beforehand. Run the following command to get a list of all your access tokens.
 
