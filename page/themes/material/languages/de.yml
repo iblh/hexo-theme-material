@@ -8,7 +8,7 @@ post:
     continue: "Weiterlesen"
     older: "Älteren"
     newer: "Neuren"
-    private: "Private Beiträge temporär verborgen"
+    private: "Private Beiträge sind temporär verborgen"
 share:
     article_rss: "Artikel als RSS"
     comment_rss: "Kommentare als RSS"
