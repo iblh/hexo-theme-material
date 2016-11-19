@@ -1,6 +1,6 @@
 language: nodejs
 node_js:
-  - "4.1"
+  - "6.1"
 
 sudo: false
 
