@@ -1,0 +1,33 @@
+<% if(page.layout == "cheatsheet"){ %>
+
+      <p>cheatsheet</p>
+
+<% } else { %>
+
+  <div class="material-post_container">
+
+      <div class="material-post mdl-grid">
+          <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+              <!-- Post Header(Thumbnail & Title) -->
+              <%- partial('_partial/post-header') %>
+
+      <% if(theme.scheme == "Paradox"){ %>
+        <!-- Paradox Post Info -->
+        <%- partial('_partial/Paradox-post-info') %>
+      <% } %>
+
+              <!-- Post Content -->
+              <%- partial('_partial/post-content') %>
+
+      <% if(theme.scheme == "Isolation"){ %>
+        <!-- Paradox Post Info -->
+        <%- partial('_partial/Isolation-post-info') %>
+      <% } %>
+
+          </div>
+      </div>
+  </div>
+
+
+<% }%>
