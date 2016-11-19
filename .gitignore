@@ -1,7 +1,9 @@
-.git/
-node_modules/
+.DS_Store
 
-*.log
+source/css/duoshuo.css
 
-page/db.json
-page/public/
+source/js/js-org.js
+
+source/css/gallery.css
+
+npm-debug.log

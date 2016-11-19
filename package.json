@@ -1,5 +1,23 @@
 {
-  "devDependencies": {
-    "hexo-cli": "^0.1.9"
-  }
+  "name": "hexo-material",
+  "version": "1.1.1",
+  "description": "Material Design Theme for Hexo",
+  "scripts": {
+    "test": "echo \"Error: no test specified\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/viosey/hexo-theme-material.git"
+  },
+  "keywords": [
+    "hexo",
+    "theme",
+    "material"
+  ],
+  "author": "Viosey",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/viosey/hexo-theme-material/issues"
+  },
+  "homepage": "https://github.com/viosey/hexo-theme-material#readme"
 }
