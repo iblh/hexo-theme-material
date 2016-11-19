@@ -1,7 +1,0 @@
-.git/
-node_modules/
-
-*.log
-
-page/db.json
-page/public/

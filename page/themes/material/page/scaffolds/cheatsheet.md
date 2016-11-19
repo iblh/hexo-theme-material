@@ -1,5 +1,0 @@
----
-title:
-date:  
-layout: cheatsheet
----
