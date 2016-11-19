@@ -119,9 +119,12 @@ comment:
 
 # Search Systems
 # Available value:
-#     swiftype | google | local
+#   use: [ swiftype | google | local ]
+#   field: [ post | page | all ]
 search:
     use: local
+    path: search.xml
+    field: all
     swiftype_key:
 
 # Leancloud Views
