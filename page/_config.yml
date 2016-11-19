@@ -69,7 +69,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: http://hexo.io/plugins/
 ## Themes: http://hexo.io/themes/
-theme: mission-control
+theme: material
 
 
 disqus_shortname: iocast-blog
