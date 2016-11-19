@@ -83,7 +83,7 @@ fonts: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "
 
 # SNS Menu
 sns:
-    email:
+    email: iocast@me.com
     twitter:
     facebook:
     googleplus:
@@ -112,8 +112,8 @@ pages:
 # Available value:
 #     duoshuo | disqus
 comment:
-    use:
-    shortname:
+    use: disqus
+    shortname: iocast-blog
     duoshuo_thread_key: path
     duoshuo_embed_js_url: "https://static.duoshuo.com/embed.js"
 

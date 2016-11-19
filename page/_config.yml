@@ -70,13 +70,3 @@ pagination_dir: page
 ## Themes: http://hexo.io/themes/
 theme: material
 deploy:
-
-
-# Material Theme
-
-sns:
-    email: iocast@me.com
-
-comment:
-    use: disqus
-    shortname: iocast-blog
