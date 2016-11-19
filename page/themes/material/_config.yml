@@ -100,7 +100,7 @@ dropdown:
 
 # Pages Menu
 pages:
-    #about: "/about"
+    about: "/about"
 
 
 
