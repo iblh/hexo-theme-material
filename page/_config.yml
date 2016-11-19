@@ -10,14 +10,14 @@ author: iocast
 language:
   - en
   - de
-timezone:
+timezone: Europe/Zurich
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://iocast.github.io
 root: /
 permalink: :lang/:year/:month/:day/:title.html
-permalink_defaults:
+permalink_default:
   lang: en
 
 # Directory
@@ -27,7 +27,6 @@ public_dir: public
 tag_dir: tags
 archive_dir: archives
 category_dir: categories
-cheatsheet_dir: cheatsheets
 
 code_dir: downloads/code
 i18n_dir: :lang
@@ -42,7 +41,7 @@ filename_case: 0
 render_drafts: false
 post_asset_folder: true
 relative_link: true
-future: true
+future: false
 highlight:
   enable: true
   line_number: false
@@ -70,11 +69,7 @@ pagination_dir: page
 ## Plugins: http://hexo.io/plugins/
 ## Themes: http://hexo.io/themes/
 theme: material
-
-
-disqus_shortname: iocast-blog
-
-# Deployment
-## Docs: http://hexo.io/docs/deployment.html
 deploy:
-  type:
+
+
+  

@@ -1,0 +1,17 @@
+<% if(theme.comment.use == "duoshuo"){ %>
+    <!-- 使用多说评论 -->
+    <%- partial("_widget/duoshuo") %>
+<% } %>
+
+<% if(theme.comment.use == "disqus"){ %>
+    <!-- 使用 DISQUS -->
+	<div id="disqus-comment">
+		<%- partial("_widget/disqus") %>
+	</div>
+	<style>
+		#disqus-comment{
+			background-color:#eee;
+			padding:2pc;
+		}
+	</style>
+<% } %>

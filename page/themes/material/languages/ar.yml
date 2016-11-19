@@ -1,0 +1,23 @@
+sidebar:
+    homepage: "الرئيسية"
+    archive: "أرشيف"
+    article_num: "رقم المقالة"
+post:
+    visitor: "زوار"
+    views: "مشاهدات"
+    continue: "واصل القراءة"
+    older: "أقدم"
+    newer: "أحدث"
+    private: "منشور خاص, مخفي مؤقتا"
+share:
+    article_rss: "مقالات RSS"
+    comment_rss: "تعليقات RSS"
+    toTwitter: "شارك على Twitter"
+    toGplus: "شارك على Google+"
+    toWeibo: "شارك على Weibo"
+title:
+    category: "فئة"
+    tag: "وسم"
+misc:
+    home: "رئيسية"
+    theme: "سمة"
