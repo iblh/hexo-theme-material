@@ -83,7 +83,7 @@ fonts: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "
 
 # SNS Menu
 sns:
-    email: iocast@me.com
+    email: iocast [at] me.com
     twitter:
     facebook:
     googleplus:
@@ -95,7 +95,7 @@ sns:
 # Sidebar User Dropdown
 dropdown:
     Email Me:
-        link: "#"
+        link: "mailto:iocast@me.com?subject=Blog: "
         icon: email
 
 # Pages Menu
