@@ -121,7 +121,7 @@ comment:
 # Available value:
 #     swiftype | google | local
 search:
-    use: google
+    use: local
     swiftype_key:
 
 # Leancloud Views
