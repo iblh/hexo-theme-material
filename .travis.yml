@@ -1,0 +1,45 @@
+language: nodejs
+node_js:
+  - "6.1"
+
+sudo: false
+
+cache:
+  apt: true
+  directories:
+    - node_modules
+
+env:
+  global:
+    - GH_REF: github.com/iocast/iocast.github.io.git
+    - secure: aIXkqfPLYW9ljCdNFBakSI+UjmkxjgCEUfjj9K9aQJilrs08Bdef6MOrkh0QjPawgJyTeVX26yylzCfuXeKqgFS9WMVJvDmhCK6eNh7uMJVQDFGHUv+/VwY/qhCLQw1qmdXB2HvyVUEbYplZY+jy2sBU76XSe5L19oL1KlaHcjo=
+
+branches:
+  except:
+  - master
+
+branches:
+  only:
+  - develop
+
+before_install:
+- npm install -g hexo-cli
+
+install:
+- npm install
+
+#after_install:
+
+before_script:
+- cd page
+- npm install
+
+script:
+- hexo generate
+
+#after_script:
+
+after_success:
+- cd ..
+- chmod a+x ./script/update-gh-pages.sh
+- ./script/update-gh-pages.sh

@@ -1,0 +1,23 @@
+sidebar:
+    homepage: "首頁"
+    archive: "過往"
+    article_num: "文章總數"
+post:
+    visitor: "訪客"
+    views: "瀏覽量"
+    continue: "繼續閱讀"
+    older: "舊篇"
+    newer: "新篇"
+    private: "私有文章，暫不公開"
+share:
+    article_rss: "文章 RSS"
+    comment_rss: "評論 RSS"
+    toTwitter: "分享到 Twitter"
+    toGplus: "分享到 Google+"
+    toWeibo: "分享到微博"
+title:
+    category: "分類"
+    tag: "標籤"
+misc:
+    home: "主頁"
+    theme: "主題"

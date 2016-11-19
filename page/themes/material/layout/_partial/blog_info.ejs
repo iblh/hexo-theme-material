@@ -1,0 +1,75 @@
+<!-- Blog info -->
+<div class="mdl-card something-else mdl-cell mdl-cell--8-col mdl-cell--4-col-desktop index-top-block">
+	
+    <!-- Search -->
+	<%- partial("_partial/Paradox-search") %>
+
+    <!-- LOGO -->
+    <div class="something-else-logo mdl-color--white mdl-color-text--grey-600">
+        <a href="<%= theme.url.logo %>">
+            <img src="<%= theme.img.logo %>" alt="logo" />
+        </a>
+    </div>
+
+    <!-- Infomation -->
+    <div class="mdl-card__supporting-text meta meta--fill mdl-color-text--grey-600">
+        <!-- Blog Title -->
+        <div>
+            <strong><%= config.title %></strong>
+        </div>
+        <div class="section-spacer"></div>
+        
+        <!-- Pages -->
+        <button id="show-pages-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+            <i class="material-icons" role="presentation">view_carousel</i>
+            <span class="visuallyhidden">Pages</span>
+        </button>
+        <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="show-pages-button">
+            <% for (var i in theme.pages){ %>
+                <a class="index_share-link" href="<%= theme.pages[i] %>" title="<%= i %>">
+                    <l class="mdl-menu__item mdl-js-ripple-effect"i>
+                        <%= i %>
+                    </li>
+                </a>
+            <% } %>
+        </ul>
+        
+        <!-- Menu -->
+        <button id="menubtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+            <i class="material-icons" role="presentation">more_vert</i>
+            <span class="visuallyhidden">show menu</span>
+        </button>
+        <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="menubtn">
+            <% if(theme.busuanzi.all_site_uv == true){ %>
+            <!-- All Site UV -->
+            <a class="index_share-link" href="#">
+                <li class="mdl-menu__item mdl-js-ripple-effect">
+                    <span id="busuanzi_container_site_uv">
+                        <span id="busuanzi_value_site_uv"></span>&nbsp;<%= __("post.views") %>
+                    </span>
+                </li>
+            </a>
+            <% } %>
+            <a class="index_share-link" href="<%= theme.url.rss %>">
+                <li class="mdl-menu__item mdl-js-ripple-effect">
+                    <%= __('share.article_rss') %>
+                </li>
+            </a>
+            <a class="index_share-link" href="https://twitter.com/intent/tweet?text=<%= config.title %>&url=<%- config.url + config.root %>&via=<%= config.author %>" target="_blank">
+                <li class="mdl-menu__item mdl-js-ripple-effect">
+                    <%= __('share.toTwitter') %>
+                </li>
+            </a>
+            <a class="index_share-link" href="https://plus.google.com/share?url=<%- config.url + config.root %>" target="_blank">
+                <li class="mdl-menu__item mdl-js-ripple-effect">
+                    <%= __('share.toGplus') %>
+                </li>
+            </a>
+            <a class="index_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=<%= config.title %>&url=<%- config.url + config.root %>&pic=&searchPic=false&style=simple" target="_blank">
+                <li class="mdl-menu__item mdl-js-ripple-effect">
+                    <%= __('share.toWeibo') %>
+                </li>
+            </a>
+        </ul>
+    </div>
+</div>

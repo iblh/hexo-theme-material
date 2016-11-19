@@ -1,0 +1,116 @@
+@import "includes/variables"
+@import "includes/highlight"
+
+.label.default {
+	background-color: #999;
+}
+.label {
+	display: inline;
+	padding: .2em .6em .3em;
+	font-size: 75%;
+	font-weight: 700;
+	line-height: 1;
+	color: #fff;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: baseline;
+	border-radius: .25em;
+}
+
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+  background-color: #F5F7FA;
+  line-height: 1.2;
+}
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
+.wrapper {
+  width: 100vw;
+  max-width: $post-width
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 60px;
+  margin-bottom: 200px;
+}
+.content {
+  padding: 0 15px;
+  width: "calc(%s - %s);" % ($post-width $post-sidebar-width)
+}
+.content h1 {
+  margin-top: 0;
+}
+.content p,
+.sidebar p{
+  font-family: "BLOKKNeue-Regular";
+}
+.sidebar {
+  padding: 20px;
+  width: $post-sidebar-width;
+  background-color: #434A54;
+  color: #fff;
+}
+.sidebar h3 {
+  margin: 0;
+}
+.content,
+.sidebar {
+  float: left;
+}
+
+
+/* The sticky */
+.sidebar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 15px;
+}
+
+
+header > small {
+	font-size: 13px;
+	line-height: 20px;
+}
+
+
+.label.light {
+    color: #888;
+    background-color: #eee;
+}
+.label {
+    display: inline-block;
+    margin: 6px 1px 0 0;
+    padding: 5px 6px;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}

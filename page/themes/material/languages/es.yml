@@ -1,0 +1,23 @@
+sidebar:
+    homepage: "Casa"
+    archive: "Archivo"
+    article_num: "Número de artículo"
+post:
+    visitor: "Visitantes"
+    views: "Vista"
+    continue: "Sigue leyendo"
+    older: "Mayor"
+    newer: "Más nuevo"
+    private: "Mensajes privados, ocultar temporalmente"
+share:
+    article_rss: "Artículo RSS"
+    comment_rss: "Comentario RSS"
+    toTwitter: "Compartir en Twitter"
+    toGplus: "Compartir en Google+"
+    toWeibo: "Compartir en Weibo"
+title:
+    category: "Categoría"
+    tag: "Etiqueta"
+misc:
+    home: "Casa"
+    theme: "tema"

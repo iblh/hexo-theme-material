@@ -1,0 +1,23 @@
+sidebar:
+    homepage: "ホーム"
+    archive: "過去の投稿"
+    article_num: "記事番号"
+post:
+    visitor: "訪問者"    
+    views: "ビュー"
+    continue: "読み続けて"
+    older: "古い"
+    newer: "新しい"
+    private: "プライベート記事、一時的に非表示にします"
+share:
+    article_rss: "記事 RSS"
+    comment_rss: "論評 RSS"
+    toTwitter: "Twitter での共有"
+    toGplus: "Google+ での共有"
+    toWeibo: "Weibo での共有"
+title:
+    category: "カテゴリー"
+    tag: "ラベル"
+misc:
+    home: "ホーム"
+    theme: "テーマ"

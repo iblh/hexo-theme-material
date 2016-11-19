@@ -1,0 +1,51 @@
+<style>
+	#bottom{
+		position: relative;
+	}
+	
+	@media screen and (max-width: 480px){
+		.material-tagscloud{
+			margin: 6em 2em 0;
+		}
+	}
+	
+	.material-tagscloud a{
+		padding: 10px;
+		line-height: 40px;
+		white-space: nowrap;
+		transition: .6s;
+	}
+	.material-tagscloud a:hover{
+		transition: .6s;
+		color: #FAFAFA !important;
+    	background: #9E9E9E;
+	}
+</style>
+
+<div class=" material-tagscloud">
+	<div class="material-post mdl-grid">
+		<%- tagcloud({
+			min_font: 16, 
+			max_font: 35, 
+			amount: 9999, 
+			color: true, 
+			start_color: '#757575', 
+			end_color: '#212121',
+		}) %>
+	</div>
+</div>
+
+
+<script>
+	var adjustFooter = function(){
+		if( ($("#bottom").offset().top + $("#bottom").outerHeight() ) < $(window).height() ){
+			var footerBottom = $(window).height() - $("#bottom").outerHeight() - $("#bottom").offset().top;
+//			console.log(footerBottom);
+			$("#bottom").css("bottom", "-" + footerBottom + "px");
+		}
+	};
+	
+	$(document).ready(function(){
+		adjustFooter();
+	});
+</script>
