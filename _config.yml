@@ -91,7 +91,7 @@ sns:
     weibo:
     instagram:
     tumblr:
-    github:
+    github: "http://github.com/iocast"
 
 # Sidebar User Dropdown
 dropdown:
