@@ -17,7 +17,7 @@ timezone: Europe/Zurich
 url: http://iocast.github.io
 root: /
 permalink: :lang/:year/:month/:day/:title.html
-permalink_default:
+permalink_defaults:
   lang: en
 
 # Directory
