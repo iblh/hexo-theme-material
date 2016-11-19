@@ -41,7 +41,7 @@ Now that we have a `master` and `develop` branch, former for the [jekyll][] comp
 
 In addition we need to setup a `_config.yml` file to tell [jekyll][] the compilation options. A example could look like the following:
 
-```yaml
+```
 destination: ./_site
 lsi:         true
 pygments:    true
@@ -63,7 +63,7 @@ For that we need first to get [travis][] access to our Github repository. If you
 
 The next step is to configure the build process. For that create a new file called `.travis.yml` in the root directory of the `develop` branch and add the `master` branch to the blacklist and the `develop` branch to the whitelist.
 
-```yaml
+```
 language: ruby
 rvm: 1.9.3
 
@@ -142,7 +142,7 @@ fi
 
 and add the following lines to the end of the `.travis.yml` file:
 
-```yaml
+```
 after_success: ./update-gh-pages.sh
 ```
 
