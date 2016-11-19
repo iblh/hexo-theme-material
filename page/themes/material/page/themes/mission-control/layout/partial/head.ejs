@@ -1,0 +1,39 @@
+	<meta charset="utf-8" />
+  <title><%= page_title() %></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+	<% if (theme.favicon){ %>
+		<link rel="icon" href="<%- theme.favicon %>">
+	<% } %>
+
+
+	<%- js(['js/jquery.min.js', 'js/jquery.mixitup.min.js', 'js/stickyfill.js']) %>
+
+	<!--CDN links for the latest TweenLite, CSSPlugin, and EasePack-->
+	<script src="http://www.greensock.com/js/src/utils/SplitText.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/easing/EasePack.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineLite.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.4/hammer.min.js"></script>
+
+
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+	<%- css(['css/font-awesome.min.css']) %>
+
+
+	<% if(page.layout == 'post') { %>
+		<%- css('fancybox/jquery.fancybox') %>
+		<%- js('fancybox/jquery.fancybox.pack') %>
+
+		<%- css(['css/post']) %>
+		<%- js(['js/post.js']) %>
+	<% } else { %>
+		<%- css(['css/mission-control']) %>
+		<%- js(['js/mission-control.js', 'js/blog.js']) %>
+	<% } %>
+
+	<%- css(['css/style']) %>

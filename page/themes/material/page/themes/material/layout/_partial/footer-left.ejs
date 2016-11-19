@@ -1,0 +1,57 @@
+<div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    <% if(theme.sns.twitter == undefined){ %>
+    <% } else{ %>
+    <a href="<%= theme.sns.twitter %>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(<%= theme.img.footerico %>twitter.png);">
+        <span class="visuallyhidden">Twitter</span>
+    </button></a>
+    <% } %>
+    
+    <!-- Facebook -->
+    <% if(theme.sns.facebook == undefined){ %>
+    <% }else{ %>
+    <a href="<%= theme.sns.facebook %>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(<%= theme.img.footerico %>facebook.png);">
+        <span class="visuallyhidden">Facebook</span>
+    </button></a>
+    <% } %>
+    
+    <!-- Google + -->
+    <% if(theme.sns.googleplus == undefined){ %>
+    <% }else{ %>
+    <a href="<%= theme.sns.googleplus %>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(<%= theme.img.footerico %>gplus.png);">
+        <span class="visuallyhidden">Google Plus</span>
+    </button></a>
+    <% } %>
+    
+    <!-- Weibo -->
+    <% if(theme.sns.weibo == undefined){ %>
+    <% }else{ %>
+    <a href="<%= theme.sns.weibo %>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(<%= theme.img.footerico %>weibo.png);">
+        <span class="visuallyhidden">Weibo</span>
+    </button></a>
+    <% } %>
+    
+    <!-- Instagram -->
+    <% if(theme.sns.instagram == undefined){ %>
+    <% }else{ %>
+    <a href="<%= theme.sns.instagram %>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(<%= theme.img.footerico %>instagram.png);">
+        <span class="visuallyhidden">Instagram</span>
+    </button></a>
+    <% } %>
+    
+    <!-- Tumblr -->
+    <% if(theme.sns.tumblr == undefined){ %>
+    <% }else{ %>
+    <a href="<%= theme.sns.tumblr %>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(<%= theme.img.footerico %>tumblr.png);">
+        <span class="visuallyhidden">Tumblr</span>
+    </button></a>
+    <% } %>
+    
+    <!-- Github -->
+    <% if(theme.sns.github == undefined){ %>
+    <% }else{ %>
+    <a href="<%= theme.sns.github %>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(<%= theme.img.footerico %>github.png);">
+        <span class="visuallyhidden">Github</span>
+    </button></a>
+    <% } %>
+</div>

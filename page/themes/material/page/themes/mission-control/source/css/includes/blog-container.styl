@@ -1,0 +1,58 @@
+@import 'mixitup';
+
+
+.blog-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  .blog-item {
+    position: relative;
+    width: 350px;
+    margin: 5px;
+    box-shadow: 5px 5px 20px 0px rgb(203, 203, 203);
+    background-color: #003944;
+    border: 1px solid rgb(50, 50, 50);
+
+    * {
+      padding: 5px;
+    }
+
+    header:first-of-type {
+      min-height: 0vh;
+    }
+
+    header {
+      h1 {
+        font-size: 1em;
+      }
+    }
+
+    p {
+      font-size: 1em;
+      margin-bottom: calc(1em + 20px);
+    }
+
+    div:last-of-type {
+      position: absolute;
+      bottom: 5px;
+      width: 100%;
+
+      a {
+        text-transform: uppercase;
+        font-family: 'open Sans';
+        white-space: nowrap;
+        cursor: pointer;
+        text-decoration: none;
+        color: black;
+
+        border: 1px solid black;
+        padding: 5px;
+        font-size: 0.8em;
+        font-weight: bold;
+      }
+    }
+  }
+
+}

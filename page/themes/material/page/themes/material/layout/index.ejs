@@ -1,0 +1,35 @@
+<!-- Index Module -->
+<div class="material-index mdl-grid">
+	<% if(theme.scheme == "Paradox"){ %>
+		<!-- Paradox Header -->
+		<%- partial("_partial/daily_pic") %>
+		<%- partial("_partial/blog_info") %>
+	<% } %>
+    
+    <% page.posts.each(function(post) { %>
+		<% if(theme.scheme == "Paradox"){ %>
+			<!-- Paradox Thumbnail -->
+        	<%- partial('_partial/Paradox-post_entry', { post: post, index: true }) %>
+		<% } %>
+		<% if(theme.scheme == "Isolation"){ %>
+			<!-- Isolation Thumbnail -->
+        	<%- partial('_partial/Isolation-post_entry', { post: post, index: true }) %>
+		<% } %>
+    <% });
+    
+    if (page.total > 1) { %>
+		<!-- Index nav -->
+        <nav class="material-nav mdl-cell mdl-cell--12-col">
+            <%- paginator({
+                prev_text: __('<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons" role="presentation">arrow_back</i></button>'),
+                next_text: __('<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons" role="presentation">arrow_forward</i></button>'),
+                space: ''
+            }) %>
+        </nav>
+    <% } %>
+    
+	<% if(theme.scheme == "Paradox"){ %>
+		<%- partial('_partial/Paradox-post_entry-thumbnail') %>
+	<% } %>
+
+</div>

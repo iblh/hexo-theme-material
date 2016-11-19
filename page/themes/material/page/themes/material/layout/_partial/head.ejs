@@ -1,0 +1,92 @@
+<head>
+    <!-- Title -->
+    <%
+        var title = page.title;
+
+        if (is_archive()){
+            title = __('archive_a');
+
+            if (is_month()){
+                title += ': ' + page.year + '/' + page.month;
+            } else if (is_year()){
+                title += ': ' + page.year;
+            }
+        } else if (is_category()){
+            title = __("title.category") + ': ' + page.category;
+        } else if (is_tag()){
+            title = __("title.tag") + ': ' + page.tag;
+        }
+    %>
+    <title>
+        <% if (title){ %><%= title %> | <% } %><%= config.title %>
+    </title>
+    
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="<%= theme.head.favicon %>">
+    <link rel="icon" sizes="192x192" href="<%= theme.head.high_res_favicon %>">
+    <link rel="apple-touch-icon" href="<%= theme.head.apple_touch_icon %>">
+    
+    <!-- Meta & INfo -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="<%= theme.uiux.android_chrome_color %>">
+    <meta name="author" content="<%= config.author %>">
+    <meta name="description" content="<%= config.description %>">
+    <meta name="keywords" content="<%= theme.head.keywords %>">
+    
+    <!--iOS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-title" content="Title">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="480">
+    
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="<%= config.title %>">
+    
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="<%= config.url %>">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="<% if (title){ %><%= title %> | <% } %><%= config.title %>">
+    <meta property="og:description" content="<%= config.description %>">
+    
+     <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+        
+        <% if(config.language == "zh-CN"){ %>
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        <% } else { %>
+            <script src="/js/ie-blocker.en.js"></script>
+        <% } %>
+    <![endif]-->
+    
+    <!-- Import CSS -->
+    <%- css("css/material.min") %>
+    <%- css("css/style.min") %>
+    <%- partial("_partial/config_css") %>
+	<%- js("js/jquery.min") %>
+	
+	<!-- UC Browser Compatible-->
+	<script>
+		var agent = navigator.userAgent.toLowerCase();
+		if(agent.indexOf('ucbrowser')>0) {
+			document.write('<%- css("css/uc") %>');
+		   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+		}
+	</script>
+    
+    <!-- Custom Head -->
+    <% if (site.data.head){ %>
+        <% for (var i in site.data.head){ %>
+			<!-- <%= i %> -->
+			<%- site.data.head[i] %>
+        <% } %>
+    <% } %>
+</head>

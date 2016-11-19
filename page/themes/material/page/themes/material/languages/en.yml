@@ -1,0 +1,23 @@
+sidebar:
+    homepage: "Home"
+    archive: "Archives"
+    article_num: "Article Number"
+post:
+    visitor: "Visitors"
+    views: "Views"
+    continue: "Continue Reading"
+    older: "Older"
+    newer: "Newer"
+    private: "Private post, temporarily hidden"
+share:
+    article_rss: "Article RSS"
+    comment_rss: "Comment RSS"
+    toTwitter: "Share to Twitter"
+    toGplus: "Share to Google+"
+    toWeibo: "Share to Weibo"
+title:
+    category: "Category"
+    tag: "Tag"
+misc:
+    home: "Home"
+    theme: "Theme"
