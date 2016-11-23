@@ -1,7 +1,8 @@
 # Material 原质
 
 >原之质，物之渊
-Nature, Source
+
+>Nature, Source
 
 >[About Material Theme](https://material.vss.im)
 
@@ -14,12 +15,12 @@ Nature, Source
 - [Contributing 贡献](#contributing-贡献)
 - [License 许可证](#license-许可证)
 - [Render 渲染](#render-渲染)
-
+- [Changelog 开发日志](https://material.vss.im/changelog/)
 
 ## General 概括
 
 [![Author](https://img.shields.io/badge/author-Viosey-blue.svg?style=flat-square)](https://viosey.com)
-[![Version](https://img.shields.io/badge/version-1.1.1-green.svg?style=flat-square)]()
+[![Version](https://img.shields.io/badge/version-1.1.2-green.svg?style=flat-square)]()
 [![Hexo](https://img.shields.io/badge/hexo-3.0+-green.svg?style=flat-square)](https://hexo.io)
 [![Build Status](https://img.shields.io/travis/viosey/hexo-theme-material.svg?style=flat-square)](https://travis-ci.org/viosey/hexo-theme-material)
 [![QQ Group](https://img.shields.io/badge/QQ%20%E7%BE%A4-566308505-brightgreen.svg?style=flat-square)](http://jq.qq.com/?_wv=1027&k=40Vdy24)
@@ -43,6 +44,9 @@ Experience the Material theme `Paradox scheme` in live: [Viosey's Blog](https://
 [Material Theme Docs](https://material.vss.im)
 
 [Material 主题文档](https://material.vss.im)
+
+>[Docs Markdown Files](https://github.com/viosey/material-theme-docs)
+
 
 ## Contributing 贡献
 

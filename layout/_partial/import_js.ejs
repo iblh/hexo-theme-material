@@ -18,14 +18,13 @@
 	<%- partial("_widget/search-local-js") %>
 
 	<script>
-		var search_path = "<%= config.search.path %>";
-		if (search_path.length == 0) {
-		search_path = "search.xml";
-		}
-		var path = "<%= config.root %>" + search_path;
-		searchFunc(path, 'search', 'local-search-result');
-        
-        
+        var inputArea = document.querySelector("#search");
+        var getSearchFile = function(){
+            var path = "<%= config.search.path %>";
+            searchFunc(path, 'search', 'local-search-result');
+        }
+
+        inputArea.onfocus = function(){ getSearchFile() }
 	</script>
 <% } %>
 

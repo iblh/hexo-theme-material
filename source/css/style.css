@@ -415,6 +415,11 @@ a {
 #post-content.markdown-Github blockquote >:last-child {
 	margin-bottom: 0px;
 }
+#post-content.markdown-Github .gutter,
+#post-content.markdown-Github .code{
+    padding: 0;
+    border: none;
+}
 #post-content.markdown-Github table {
 	width: 100%;
 	overflow: auto;
@@ -427,7 +432,8 @@ a {
 }
 #post-content.markdown-Github table th,
 #post-content.markdown-Github table td {
-	padding:0;
+    padding: 6px 13px;
+    border: 1px solid #ddd;
 }
 #post-content.markdown-Github table tr {
 	background-color: #fff;
