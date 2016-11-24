@@ -4,16 +4,16 @@
 
 # Head info
 head:
-    favicon: "/img/favicon.png"
-    high_res_favicon: "/img/favicon.png"
-    apple_touch_icon: "/img/favicon.png"
-    keywords: 
+    favicon: "https://cdn.viosey.com/img/blog/favicon.ico"
+    high_res_favicon: "https://cdn.viosey.com/img/blog/favicon-highres.png"
+    apple_touch_icon: "https://cdn.viosey.com/img/blog/favicon-highres.png"
+    keywords: "Viosey, viosey blog, blog"
 
 # Jump Links Settings
 url:
-    rss: 
+    rss: "/atom.xml"
     daily_pic: "#"
-    logo: 
+    logo: "https://viosey.com"
 
 
 # ---------------------------------------------------------------
@@ -26,14 +26,14 @@ scheme: Paradox
 
 # UI & UX: slogan, color, effect
 uiux:
-    slogan: "Hi, nice to meet you"
-    theme_color: "#0097A7"
-    theme_sub_color: "#00838F"
-    hyperlink_color: "#00838F"
-    button_color: "#757575"
-    android_chrome_color: "#0097A7"
-    nprogress_color: "#FF4081"
-    nprogress_buffer: "800"
+    slogan: "我怕永不再见，我也怕再次重逢。"
+    theme_color: "#607D8B"
+    theme_sub_color: "#90A4AE"
+    hyperlink_color: "#607D8B"
+    button_color: "#607D8B"
+    android_chrome_color: "#607D8B"
+    nprogress_color: "#000"
+    nprogress_buffer: "200"
     
 # JS Effect Switches
 js_effect:
@@ -46,6 +46,7 @@ js_effect:
 reading:
     markdown: Github
     entry_excerpt: 80
+    code_highlight: solarized-white
 
 # Thumbnail Settings
 thumbnail:
@@ -58,20 +59,20 @@ thumbnail:
 #         color available value: black, blue, brown, green, multi, orange, pink, purple, red, white, yellow
 #         type available value: A (animal), C (culture), N (nature), S (space), T (travel)
 background:
-    purecolor: "#F5F5F5"
+    purecolor: "#e9ebec"
     #bgimg: "/img/bg.png"
     bing: 
         enable: false
         parameter: 
 
-# Images Settings
+# Image Settings
 img:
-    logo: "/img/logo.png"
-    avatar: "/img/avatar.png"
-    daily_pic: "/img/daily_pic.png"
-    sidebar_header: "/img/sidebar_header.png"
+    logo: "https://cdn.viosey.com/img/logo/viosey_logo-blue.png"
+    avatar: "https://cdn.viosey.com/img/avatar/Natsume-blog-tiny.jpg"
+    daily_pic: "https://cdn.viosey.com/img/blog/unsplash-man-face-mountain.jpg!blogtop"
+    sidebar_header: "https://cdn.viosey.com/img/blog/snow_square.png"
     footerico: "/img/footer/footer_ico-"
-    #upyun_logo: "/img/upyun_logo.png"
+    upyun_logo: "/img/upyun_logo.png"
     random_thumbnail: "/img/random/"
 
 # Custom Fonts
@@ -83,57 +84,65 @@ fonts: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "
 
 # SNS Menu
 sns:
-    email: youremail@email.com
-    twitter: "https://twitter.com/twitter"
-    facebook: "https://www.facebook.com/facebook"
-    googleplus: "https://www.google.com/"
+    email: "hiviosey@gmail.com"
+    twitter: "https://twitter.com/viosey"
+    facebook: "https://www.facebook.com/viosey"
+    googleplus: 
     weibo: 
     instagram: 
     tumblr: 
-    github: 
-
+    github: "https://github.com/viosey"
+    
 # Sidebar User Dropdown
 dropdown: 
-    Email Me: 
-        link: "#"
+    viosey.com: 
+        link: "https://viosey.com"
+        icon: map
+    email me:
+        link: "mailto:hiviosey@gmail.com"
         icon: email
 
 # Pages Menu
 pages:
-    #about: "/about"
+    映像: "/gallery/"
+    关于我: "/about/"
+    标签云: "/tags/"
+    友情链接: "/links/"
     
-
+    
 
 # ---------------------------------------------------------------
 # Integrated Services
 # ---------------------------------------------------------------
-    
+
 # Comment Systems
 # Available value:
 #     duoshuo | disqus
 comment:
-    use: 
-    shortname: 
-    duoshuo_thread_key: path
-    duoshuo_embed_js_url: "https://static.duoshuo.com/embed.js"
-
+    use: duoshuo
+    shortname: viosey
+    duoshuo_thread_key: id
+    duoshuo_embed_js_url: "https://cdn.viosey.com/static/js/dsembed.js"
+    
 # Search Systems
 # Available value:
 #     swiftype | google | local
 search:
-    use: google
+    use: local
     swiftype_key: 
-        
+    path: search.xml
+    field: post
+
 # Leancloud Views
 leancloud:
-    enable: false
-    app_id: #你的app_id
-    app_key: #你的app_key
-    av_core_mini: "https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"
+    enable: true
+    app_id: hhuSWbeGtVDeME8mtNXXzYp9-gzGzoHsz
+    app_key: GeXInHwpP9i56MNX9U2lLci9
+    av_core_mini: "https://cdn.viosey.com/static/js/av-core-mini-0.6.1.js"
     
 # Busuanzi 不蒜子 Views
 busuanzi:
     enable: false
     all_site_uv: false
     post_pv: false
-    busuanzi_pure_mini_js: "https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"
+    busuanzi_pure_mini_js: "https://cdn.viosey.com/static/js/busuanzi.pure.mini.js"

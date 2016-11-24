@@ -1,4 +1,5 @@
 <!-- Import File -->
+<%- js("js/highlight.min") %>
 <%- js("js/js.min") %>
 <%- partial("_partial/nprogress") %>
 
@@ -30,8 +31,8 @@
 
 <!-- Window Load-->
 <script>
-    // Post_Toc parent position fixed
     $(window).load(function() {
+        // Post_Toc parent position fixed
         $(".post-toc-wrap").parent(".mdl-menu__container").css("position", "fixed");
     });
 </script>

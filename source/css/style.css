@@ -2,6 +2,8 @@
 
 /* Local_Search */
 
+/* Markdown_Plain & Highlightjs */
+
 /* Markdown_Material_CSS */
 
 /* Markdown_Github_CSS*/
@@ -60,15 +62,6 @@ a {
     font-weight: 300
 }
 
-/******************/
-/* Markdown_Plain */
-/******************/
-
-#post-content.markdown-Plain figure {
-	overflow: auto;
-}
-
-
 /****************/
 /* Local_Search */
 /****************/
@@ -115,9 +108,23 @@ a {
 	color: #333;
 }
 
-/*******************************/
-/* Markdown_Solarized_Dark_CSS */
-/*******************************/
+
+
+/********************************/
+/* Markdown_Plain & Highlightjs */
+/********************************/
+.highlight tr{
+    display: flex;
+}
+#post-content tbody{
+/*    display: block;*/
+}
+#post-content .line{
+    height: 19px;
+}
+#post-content.markdown-Plain figure {
+	overflow: auto;
+}
 
 
 
@@ -356,8 +363,7 @@ a {
 #post-content.markdown-Github ul,
 #post-content.markdown-Github ol,
 #post-content.markdown-Github dl,
-#post-content.markdown-Github table,
-#post-content.markdown-Github pre {
+#post-content.markdown-Github table {
 	margin: 15px 0;
 }
 #post-content.markdown-Github hr {
@@ -415,11 +421,6 @@ a {
 #post-content.markdown-Github blockquote >:last-child {
 	margin-bottom: 0px;
 }
-#post-content.markdown-Github .gutter,
-#post-content.markdown-Github .code{
-    padding: 0;
-    border: none;
-}
 #post-content.markdown-Github table {
 	width: 100%;
 	overflow: auto;
@@ -436,6 +437,7 @@ a {
     border: 1px solid #ddd;
 }
 #post-content.markdown-Github table tr {
+/*    display: table;*/
 	background-color: #fff;
 }
 #post-content.markdown-Github table tr:nth-child(2n) {
@@ -539,12 +541,29 @@ a {
 }
 #post-content.markdown-Github .highlight pre,
 #post-content.markdown-Github pre {
-	background-color: #f7f7f7;
+}
+#post-content.markdown-Github .gutter,
+#post-content.markdown-Github .code{
+/*	background: #f7f7f7;*/
 	font-size: 13px;
 	line-height: 19px;
 	overflow: auto;
-	padding: 6px 10px;
-	border-radius: 3px;
+	padding: 16px;
+    border: none;
+    display: block
+}
+#post-content.markdown-Github .code{
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+#post-content.markdown-Github .gutter{
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+#post-content.markdown-Github .gutter pre,
+#post-content.markdown-Github .code pre{
+    margin: 0;
+    display: block;
 }
 #post-content.markdown-Github pre code,
 #post-content.markdown-Github pre tt {

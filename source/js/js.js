@@ -14,6 +14,11 @@
 //**********************************
 //**********************************
 $(document).ready(function() {
+    // Highlight js
+    $('.code').each(function(i, block) {
+        hljs.highlightBlock(block);
+    });
+    
     Array.prototype.forEach.call(document.querySelectorAll('.mdl-card__media'), function(el) {
         var link = el.querySelector('a');
         if (!link) {
@@ -88,7 +93,14 @@ $(document).ready(function() {
     $(document).click(function() {
         $("#local-search-result ul").css("display", "none");
     });
-
+    
+    // Set code gutter backgronud & color
+    var hljsbgc = $(".hljs").css('background');
+    var hljsc = $(".hljs").css('color');
+    $(".gutter").css({
+        "background": hljsbgc,
+        "color": hljsc
+    })
 });
 
 //**********************************
