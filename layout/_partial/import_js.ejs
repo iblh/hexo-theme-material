@@ -36,3 +36,8 @@
         $(".post-toc-wrap").parent(".mdl-menu__container").css("position", "fixed");
     });
 </script>
+
+<!-- MathJax Load-->
+<% if (page.mathjax){ %>
+    <%- partial('_widget/mathjax') %>
+<% } %>
