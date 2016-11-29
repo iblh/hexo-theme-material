@@ -56,7 +56,7 @@
                 <!-- Comment Number -->
                 &nbsp;|&nbsp;
                 <span class="post_entry-comment" >
-                        <span class="ds-thread-count" data-thread-key="<%= post.id %>" data-count-type="comments"></span>
+                        <span class="ds-thread-count" data-thread-key="<% if(theme.comment.duoshuo_thread_key == "id"){ %><%= post.id %><% } else { %><%= post.path %><% } %>" data-count-type="comments"></span>
                 </span>
             <% } %>
             
