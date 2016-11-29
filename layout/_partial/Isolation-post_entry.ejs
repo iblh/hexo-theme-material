@@ -64,7 +64,7 @@
 			<div class="post_entry-footer-comment">
 				<% if(theme.comment.use == "duoshuo"){ %>
 					<!-- Comment Number -->
-					<span class="ds-thread-count" data-thread-key="<%= post.id %>" data-count-type="comments"></span>
+					<span class="ds-thread-count" data-thread-key="<% if(theme.comment.duoshuo_thread_key == "id"){ %><%= post.id %><% } else { %><%= post.path %><% } %>" data-count-type="comments"></span>
 				<% } %>
 			</div>
 		</div>
