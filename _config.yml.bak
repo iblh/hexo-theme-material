@@ -68,7 +68,7 @@ background:
 # Images Settings
 img:
     logo: "/img/logo.png"
-    avatar: "/img/avatar.gif"
+    avatar: "/img/avatar.png"
     daily_pic: "/img/daily_pic.png"
     sidebar_header: "/img/sidebar_header.png"
     footerico: "/img/footer/footer_ico-"
