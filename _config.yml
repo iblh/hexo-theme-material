@@ -60,7 +60,7 @@ thumbnail:
 #         type available value: A (animal), C (culture), N (nature), S (space), T (travel)
 background:
     purecolor: "#F5F5F5"
-    #bgimg: "/img/bg.png"
+    # bgimg: "/img/bg.png"
     bing: 
         enable: false
         parameter: 
@@ -70,7 +70,7 @@ img:
     logo: "/img/logo.png"
     avatar: "/img/avatar.jpeg"
     daily_pic: "/img/pic.jpg"
-    sidebar_header: "/img/sidebar_header.png"
+    sidebar_header: "/img/daily_pic.png"
     footerico: "/img/footer/footer_ico-"
     #upyun_logo: "/img/upyun_logo.png"
     random_thumbnail: "/img/random/"
@@ -86,13 +86,13 @@ fonts: Roboto, "SF Compact Display", "Helvetica Neue", Helvetica, "PingFang SC",
 # SNS Menu
 sns:
     email: guancheng.hong@gmail.com
-    twitter: "https://twitter.com/twitter"
-    facebook: "https://www.facebook.com/facebook"
-    googleplus: "https://www.google.com/"
+    # twitter: "https://twitter.com/twitter"
+    # facebook: "https://www.facebook.com/facebook"
+    # googleplus: "https://www.google.com/"
     weibo: 
     instagram: 
     tumblr: 
-    github: 
+    github: https://github.com/hongguancheng
 
 # Sidebar User Dropdown
 dropdown: 
