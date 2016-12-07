@@ -2449,13 +2449,6 @@ a {
     height: 32px;
     width: 32px
 }
-@media only screen and (max-width:480px) {
-    .MD-burger-icon {
-        background: rgba(255, 255, 255, 0);
-        border-radius: 0;
-        border: 1px solid rgba(51, 51, 51, .3)
-    }
-}
 .MD-burger-layer {
     width: 20px;
     background: #eee;

@@ -50,11 +50,14 @@
                 </li>
             </a>
             <% } %>
-            <a class="index_share-link" href="<%= theme.url.rss %>">
-                <li class="mdl-menu__item mdl-js-ripple-effect">
-                    <%= __('share.article_rss') %>
-                </li>
-            </a>
+            
+            <% if(theme.url.rss != undefined){ %>
+                <a class="index_share-link" href="<%= theme.url.rss %>">
+                    <li class="mdl-menu__item mdl-js-ripple-effect">
+                        <%= __('share.article_rss') %>
+                    </li>
+                </a>
+            <% } %>
             <a class="index_share-link" href="https://twitter.com/intent/tweet?text=<%= config.title %>&url=<%- config.url + config.root %>&via=<%= config.author %>" target="_blank">
                 <li class="mdl-menu__item mdl-js-ripple-effect">
                     <%= __('share.toTwitter') %>

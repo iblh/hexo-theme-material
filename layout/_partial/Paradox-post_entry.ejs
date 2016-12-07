@@ -21,9 +21,9 @@
     <!-- Post Excerpt -->
     <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
         <%if(post.excerpt){%>
-          <%- strip_html(post.excerpt) %>
+            <%- strip_html(post.excerpt) %>
         <%}else{%>
-          <%- strip_html(truncate(post.content,{length: theme.reading.entry_excerpt })) %>
+            <%- strip_html(truncate(post.content,{length: theme.reading.entry_excerpt })) %>
         <%}%>
         &nbsp;&nbsp;&nbsp;
         <span>

@@ -1,10 +1,10 @@
 # Material 原质
 
->原之质，物之渊
+[Material Theme](https://material.vss.im)
 
 >Nature, Source
 
->[About Material Theme](https://material.vss.im)
+>原之质，物之渊
 
 ## Contents 目录
 
@@ -28,20 +28,18 @@
 
 ## Demo 演示
 
-Experience the Material theme `Paradox scheme` in live: [Viosey's Blog](https://blog.viosey.com)
-
-体验 Material主题 `Paradox scheme` : [Viosey's Blog](https://blog.viosey.com)
+[Viosey's Blog](https://blog.viosey.com)
 
 ## Quick start 快速开始
 
-[Install Material](https://material.vss.im/start/#install-material)	
+[Install Material](https://material.vss.im/en/start/#install-material)	
 
 [安装 Material](https://material.vss.im/start/#install-material)
 
 
 ## Docs 文档
 
-[Material Theme Docs](https://material.vss.im)
+[Material Theme Docs](https://material.vss.im/en/)
 
 [Material 主题文档](https://material.vss.im)
 

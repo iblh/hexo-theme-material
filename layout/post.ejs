@@ -1,4 +1,7 @@
-<%- partial("_partial/toc_button") %>
+<!-- Post TOC -->
+<% if(page.toc != false){ %>
+    <%- partial("_partial/toc_button") %>
+<% } %>
 
 <!-- Layouts -->
 <% if(page.layout == "tags"){ %>

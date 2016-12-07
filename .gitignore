@@ -1,7 +1,5 @@
 .DS_Store
 
-source/css/gallery.css
-
 npm-debug.log
 
 _config.viosey.yml
