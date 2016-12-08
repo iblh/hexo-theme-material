@@ -1,5 +1,5 @@
 <!-- Post TOC -->
-<% if(page.toc != false){ %>
+<% if( (page.toc == true) || (is_post() && page.toc != false) ){ %>
     <%- partial("_partial/toc_button") %>
 <% } %>
 
