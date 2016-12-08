@@ -1,0 +1,23 @@
+sidebar:
+    homepage: "Laman"
+    archive: "Arkib"
+    article_num: "Bilangan Artikel"
+post:
+    visitor: "Pelawat"
+    views: "Paparan"
+    continue: "Teruskan Membaca"
+    older: "Lama"
+    newer: "Baru"
+    private: "Siaran peribadi, disembunyikan buat sementara"
+share:
+    article_rss: "RSS Artikel"
+    comment_rss: "RSS Ulasan"
+    toTwitter: "Kongsi ke Twitter"
+    toGplus: "Kongsi ke Google+"
+    toWeibo: "Kongsi ke Weibo"
+title:
+    category: "Kategori"
+    tag: "Tag"
+misc:
+    home: "Laman"
+    theme: "Tema"
