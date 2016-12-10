@@ -69,7 +69,9 @@
 				<% } %>
 
                 <!-- Post Comments -->
-                <%- partial("_partial/comment") %>
+                <% if(page.comment !== false){ %>
+                    <%- partial("_partial/comment") %>
+                <% } %>
             </div>
 
             <!-- Post Prev & Next Nav -->

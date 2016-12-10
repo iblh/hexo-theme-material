@@ -4,8 +4,6 @@
 
 /* Markdown_Plain & Highlightjs */
 
-/* Markdown_Material_CSS */
-
 /* Markdown_Github_CSS*/
 
 /* Scheme_Paradox */
@@ -32,7 +30,11 @@
 /*************/
 /* Global_CSS */
 /*************/
+html {
+    display: block;
+}
 body {
+    display: block;
     margin: 0;
     padding: 0;
     top: 0;
@@ -119,136 +121,29 @@ a {
 #post-content tbody{
 /*    display: block;*/
 }
+
 #post-content .line{
     height: 19px;
 }
+
+#post-content.markdown-Plain blockquote{
+    border-left: 10px solid #F5F5F5;
+    margin-left: 0px;
+    padding-left: 10px;
+}
+
 #post-content.markdown-Plain figure {
 	overflow: auto;
 }
 
-
-
-/*************************/
-/* Markdown_Material_CSS */
-/*************************/
-#post-content.markdown-Material figure {
-	overflow: auto;
-}
-#post-content.markdown-Material code {
-    background-color: #EEEEEE;
-    border-radius: 4px;
-    padding: 2px 5px;
-}
-#post-content.markdown-Material pre code {
-    background: none;
-    border-radius: 0;
+#post-content.markdown-Plain .code {
     padding: 0;
 }
-#post-content.markdown-Material blockquote,
-#post-content.markdown-Material pre {
-    word-break: break-all;
-    white-space: pre-wrap;
-    word-wrap: break-word
-}
-#post-content.markdown-Material pre {
-    font-size: 13px;
-    line-height: 21px;
-    margin: 0;
-    white-space: -moz-pre-wrap;
-    white-space: -pre-wrap;
-    white-space: -o-pre-wrap;
-    max-width: 100%;
-    border: 0 solid rgba(102, 128, 153, .075);
-    border-left: 2px solid #455A64;
-    border-radius: 0;
-    padding: 10px 16px;
-    background: #607D8B;
-    color: #FFF;
-    min-width: 100%;
-    width: 100%;
-}
-#post-content.markdown-Material blockquote {
-    white-space: -moz-pre-wrap;
-    white-space: -pre-wrap;
-    white-space: -o-pre-wrap;
-    font-size: 14px;
-    line-height: 0;
-    padding: 0;
-    color: #777;
-    border-left: .5em solid #ddd
-}
-#post-content.markdown-Material h1,
-#post-content.markdown-Material h2,
-#post-content.markdown-Material h3,
-#post-content.markdown-Material h4,
-#post-content.markdown-Material h5,
-#post-content.markdown-Material h6 {
-    background-color: #F6F6F6;
-    line-height: 1em;
-    font-weight: 400;
-    display: block;
-    width: 100%;
-    margin: 1pc 0;
-    padding: 5px 0 5px 15px
-}
-#post-content.markdown-Material h1 {
-    z-index: 0;
-    font-size: 2.8em;
-    border-left: 7px solid #009688
-}
-#post-content.markdown-Material h2 {
-    z-index: 0;
-    font-size: 2.5em;
-    border-left: 6px solid #00BCD4
-}
-#post-content.markdown-Material h3 {
-    font-size: 2.2em;
-    border-left: 5px solid #8BC34A
-}
-#post-content.markdown-Material h4 {
-    font-size: 1.9em;
-    border-left: 4px solid #E91E63
-}
-#post-content.markdown-Material h5 {
-    font-size: 1.6em;
-    border-left: 3px solid #9C27B0
-}
-#post-content.markdown-Material h6 {
-    font-size: 1.3em;
-    border-left: 2px solid #CDDC39
-}
-@media screen and (max-width:480px) {
-    #post-content.markdown-Material h1 {
-        font-size: 2em
-    }
-    #post-content.markdown-Material h2 {
-        font-size: 1.85em
-    }
-    #post-content.markdown-Material h3 {
-        font-size: 1.7em
-    }
-    #post-content.markdown-Material h4 {
-        font-size: 1.55em
-    }
-    #post-content.markdown-Material h5 {
-        font-size: 1.4em
-    }
-    #post-content.markdown-Material h6 {
-        font-size: 1.25em
-    }
+
+#post-content.markdown-Plain .gutter {
+    padding-right: 10px;
 }
 
-#post-content.markdown-Material ul li {
-    list-style-type: circle
-}
-#post-content.markdown-Material ol li {
-    list-style-type: decimal
-}
-#post-content.markdown-Material hr {
-    margin: 2.4em 30px;
-    border: 1px solid #E9E9E6;
-    border-width: 2px 0 0
-}
 
 /***********************/
 /* Markdown_Github_CSS */
