@@ -1,4 +1,7 @@
-<%- partial("_partial/toc_button") %>
+<!-- Post TOC -->
+<% if( (page.toc == true) || (is_post() && page.toc != false) ){ %>
+    <%- partial("_partial/toc_button") %>
+<% } %>
 
 <!-- Layouts -->
 <% if(page.layout == "tags"){ %>
@@ -66,7 +69,9 @@
 				<% } %>
 
                 <!-- Post Comments -->
-                <%- partial("_partial/comment") %>
+                <% if(page.comment !== false){ %>
+                    <%- partial("_partial/comment") %>
+                <% } %>
             </div>
 
             <!-- Post Prev & Next Nav -->

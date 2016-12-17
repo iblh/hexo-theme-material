@@ -244,7 +244,7 @@
     background: #fff
 }
 #ds-wrapper #ds-reset .ds-dialog-body {
-    padding: 20px;
+    padding: 0;
 }
 #ds-thread #ds-reset .ds-powered-by {
     display: none

@@ -2204,8 +2204,6 @@ $(document).ready(function() {
 
     // Hide toggle buttons on default position
     toggleButtons.css('display', 'initial');
-    $('body').css('display', 'initial');
-
 
     // Sidebar position
     $('#sidebar-position').change(function() {

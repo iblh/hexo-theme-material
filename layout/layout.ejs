@@ -36,7 +36,7 @@
 					<%- partial('_partial/sidebar') %>
 				<% } %>
 				
-				<% if(theme.scheme == "Paradox"){ %>
+				<% if( (theme.scheme == "Paradox") && (is_post() || is_home() || is_archive() || is_category() || (page.totop == true) ) ){ %>
 					<!-- Footer Top Button -->
 					<%- partial("_partial/footer_top")  %>
 				<% } %>
