@@ -1,6 +1,6 @@
 <!-- Blog info -->
 <div class="mdl-card something-else mdl-cell mdl-cell--8-col mdl-cell--4-col-desktop index-top-block">
-	
+
     <!-- Search -->
 	<%- partial("_partial/Paradox-search") %>
 
@@ -18,7 +18,7 @@
             <strong><%= config.title %></strong>
         </div>
         <div class="section-spacer"></div>
-        
+
         <!-- Pages -->
         <button id="show-pages-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
             <i class="material-icons" role="presentation">view_carousel</i>
@@ -33,7 +33,7 @@
                 </a>
             <% } %>
         </ul>
-        
+
         <!-- Menu -->
         <button id="menubtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
             <i class="material-icons" role="presentation">more_vert</i>
@@ -50,7 +50,7 @@
                 </li>
             </a>
             <% } %>
-            
+
             <% if(theme.url.rss != undefined){ %>
                 <a class="index_share-link" href="<%= theme.url.rss %>">
                     <li class="mdl-menu__item mdl-js-ripple-effect">
@@ -71,6 +71,11 @@
             <a class="index_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=<%= config.title %>&url=<%- config.url + config.root %>&pic=&searchPic=false&style=simple" target="_blank">
                 <li class="mdl-menu__item mdl-js-ripple-effect">
                     <%= __('share.toWeibo') %>
+                </li>
+            </a>
+            <a class="index_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=<%- config.url + config.root %>&title=<%= config.title %>" target="_blank">
+                <li class="mdl-menu__item mdl-js-ripple-effect">
+                    <%= __('share.toLinkedIn') %>
                 </li>
             </a>
         </ul>
