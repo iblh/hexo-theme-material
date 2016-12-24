@@ -13,6 +13,7 @@ share:
     article_rss: "Flux RSS articles"
     comment_rss: "Flux RSS commentaires"
     toTwitter: "Partager sur Twitter"
+    toLinkedIn: "Partager sur LinkedIn"
     toGplus: "Partager sur Google+"
     toWeibo: "Partager sur Weibo"
 title:

@@ -6,7 +6,7 @@
         <span class="visuallyhidden">Twitter</span>
     </button></a>
     <% } %>
-    
+
     <!-- Facebook -->
     <% if(theme.sns.facebook == undefined){ %>
     <% }else{ %>
@@ -14,7 +14,7 @@
         <span class="visuallyhidden">Facebook</span>
     </button></a>
     <% } %>
-    
+
     <!-- Google + -->
     <% if(theme.sns.googleplus == undefined){ %>
     <% }else{ %>
@@ -22,7 +22,7 @@
         <span class="visuallyhidden">Google Plus</span>
     </button></a>
     <% } %>
-    
+
     <!-- Weibo -->
     <% if(theme.sns.weibo == undefined){ %>
     <% }else{ %>
@@ -30,7 +30,7 @@
         <span class="visuallyhidden">Weibo</span>
     </button></a>
     <% } %>
-    
+
     <!-- Instagram -->
     <% if(theme.sns.instagram == undefined){ %>
     <% }else{ %>
@@ -38,7 +38,7 @@
         <span class="visuallyhidden">Instagram</span>
     </button></a>
     <% } %>
-    
+
     <!-- Tumblr -->
     <% if(theme.sns.tumblr == undefined){ %>
     <% }else{ %>
@@ -46,12 +46,20 @@
         <span class="visuallyhidden">Tumblr</span>
     </button></a>
     <% } %>
-    
+
     <!-- Github -->
     <% if(theme.sns.github == undefined){ %>
     <% }else{ %>
     <a href="<%= theme.sns.github %>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(<%= theme.img.footerico %>github.png);">
         <span class="visuallyhidden">Github</span>
+    </button></a>
+    <% } %>
+
+    <!-- LinkedIn -->
+    <% if(theme.sns.linkedin == undefined){ %>
+    <% }else{ %>
+    <a href="<%= theme.sns.linkedin %>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(<%= theme.img.footerico %>linkedin.png);">
+        <span class="visuallyhidden">LinkedIn</span>
     </button></a>
     <% } %>
 </div>

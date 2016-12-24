@@ -13,6 +13,7 @@ share:
     article_rss: "Article RSS"
     comment_rss: "Comment RSS"
     toTwitter: "Share to Twitter"
+    toLinkedIn: "Share to LinkedIn"
     toGplus: "Share to Google+"
     toWeibo: "Share to Weibo"
 title:
