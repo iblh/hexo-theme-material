@@ -51,4 +51,11 @@
             <%= __('share.toLinkedIn') %>
         </li>
     </a>
+
+    <!-- Share QQ -->
+    <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=<%= config.title %>&title=<%= page.title %>&summary=<%= config.description %>&pics=<%- config.url + theme.head.favicon %>&url=<%- config.url +  url_for(path) %>" target="_blank">
+        <li class="mdl-menu__item">
+            <%= __('share.toQQ') %>
+        </li>
+    </a>
 </ul>

@@ -16,6 +16,7 @@ share:
     toLinkedIn: "Share to LinkedIn"
     toGplus: "Share to Google+"
     toWeibo: "Share to Weibo"
+    toQQ: "Share to QQ"
 title:
     category: "Category"
     tag: "Tag"
