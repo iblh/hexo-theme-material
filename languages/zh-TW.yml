@@ -17,6 +17,7 @@ share:
     toGplus: "分享到 Google+"
     toWeibo: "分享到微博"
     toQQ: "分享到 QQ"
+    toTelegram: "分享到 Telegram"
 title:
     category: "分類"
     tag: "標籤"

@@ -17,6 +17,7 @@ share:
     toGplus: "Share to Google+"
     toWeibo: "Share to Weibo"
     toQQ: "Share to QQ"
+    toTelegram: "Share to Telegram"
 title:
     category: "Category"
     tag: "Tag"
