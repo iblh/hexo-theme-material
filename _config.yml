@@ -104,7 +104,7 @@ dropdown:
 pages:
     #about: "/about"
 
-
+qrcode: false
 
 # ---------------------------------------------------------------
 # Integrated Services
