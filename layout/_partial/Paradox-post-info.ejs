@@ -19,7 +19,22 @@
         <span class="visuallyhidden">favorites</span>
     </button>
 -->
-    
+
+    <!-- Qrcode -->
+    <% if(theme.qrcode == true){ %>
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+            <i class="material-icons" role="presentation">explore</i>
+            <span class="visuallyhidden">explore</span>
+        </button>
+        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+            <li class="mdl-menu__item"><%= __('post.qrcode') %></li>
+            <img src="<%- qrcode(url, {
+                 margin: 2
+            }) %>">
+            </ul>
+    <% } %>
+
+
     <!-- Tags (bookmark) -->
     <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
         <i class="material-icons" role="presentation">bookmark</i>
