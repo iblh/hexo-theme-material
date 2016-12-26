@@ -78,6 +78,16 @@
                     <%= __('share.toLinkedIn') %>
                 </li>
             </a>
+            <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=<%= config.title %>&title=<%= config.title %>&summary=<%= config.description %>&pics=<%- config.url + theme.head.favicon %>&url=<%- config.url + config.root %>" target="_blank">
+                <li class="mdl-menu__item">
+                    <%= __('share.toQQ') %>
+                </li>
+            </a>
+            <a class="post_share-link" href="https://telegram.me/share/url?url=<%- config.url + config.root %>&text=<%= config.title %>" target="_blank">
+                <li class="mdl-menu__item">
+                    <%= __('share.toTelegram') %>
+                </li>
+            </a>
         </ul>
     </div>
 </div>
