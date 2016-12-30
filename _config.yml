@@ -11,9 +11,11 @@ head:
 
 # Jump Links Settings
 url:
-    rss:
-    daily_pic: "#"
-    logo:
+    rss: 
+    daily_pic: "404.html"
+    #标语后的图片
+    logo: "404.html"
+    #搜索键下的图片
 
 
 # ---------------------------------------------------------------
@@ -26,13 +28,13 @@ scheme: Paradox
 
 # UI & UX: slogan, color, effect
 uiux:
-    slogan: "Hi, nice to meet you"
-    theme_color: "#0097A7"
-    theme_sub_color: "#00838F"
-    hyperlink_color: "#00838F"
-    button_color: "#757575"
-    android_chrome_color: "#0097A7"
-    nprogress_color: "#FF4081"
+    #slogan: "在daily_pic.ejs中定义为自动获取网络数据"
+    theme_color: "#2196F3"
+    theme_sub_color: "#FF5722"
+    hyperlink_color: "#3F51B5"
+    button_color: "#4CAF50"
+    android_chrome_color: "#2196F3"
+    nprogress_color: "#009688"
     nprogress_buffer: "800"
 
 # JS Effect Switches
@@ -46,7 +48,7 @@ js_effect:
 reading:
     markdown: Github
     entry_excerpt: 80
-    code_highlight: solarized-white
+    code_highlight: github
 
 # Thumbnail Settings
 thumbnail:
@@ -63,7 +65,7 @@ background:
     #bgimg: "/img/bg.png"
     bing:
         enable: false
-        parameter:
+        parameter: 
 
 # Images Settings
 img:
@@ -84,25 +86,25 @@ fonts: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "
 
 # SNS Menu
 sns:
-    email: youremail@email.com
+    email: xuhaoyuforever@gmail.com
     twitter: "https://twitter.com/twitter"
     facebook: "https://www.facebook.com/facebook"
     googleplus: "https://www.google.com/"
-    weibo:
+    weibo: "https://www.google.com/"
     instagram:
     tumblr:
-    github:
+    github: "https://www.github.com/halyul"
     linkedin:
 
 # Sidebar User Dropdown
 dropdown:
     Email Me:
-        link: "#"
+        link: "mailto:xuhaoyuforever@gmail.com"
         icon: email
-
+        
 # Pages Menu
 pages:
-    #about: "/about"
+    关于: "http://halyul.cc/about.html"
 
 qrcode: false
 
