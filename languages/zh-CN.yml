@@ -9,7 +9,7 @@ post:
     older: "旧篇"
     newer: "新篇"
     private: "私有文章，暂不公开"
-    qrcode: "本页二维码"
+    qrcode: "在其它设备中阅读本文章"
 share:
     article_rss: "文章 RSS"
     comment_rss: "评论 RSS"
