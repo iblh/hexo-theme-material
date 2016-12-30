@@ -40,7 +40,7 @@ uiux:
 # JS Effect Switches
 js_effect:
     fade: true
-    smoothscroll: false
+    smoothscroll: true
 
 # Reading experience
 # markdown available value:
@@ -98,15 +98,21 @@ sns:
 
 # Sidebar User Dropdown
 dropdown:
+    Halyul的小站:
+        link: "//halyul.cc"
+        icon: home
     Email Me:
         link: "mailto:xuhaoyuforever@gmail.com"
         icon: email
         
 # Pages Menu
 pages:
+    标签云: "/tags/"
+    图库: "/galleries/"
+    友情链接: "/links/"
     关于: "http://halyul.cc/about.html"
 
-qrcode: false
+qrcode: true
 
 # ---------------------------------------------------------------
 # Integrated Services
@@ -116,17 +122,17 @@ qrcode: false
 # Available value:
 #     duoshuo | disqus
 comment:
-    use:
-    shortname:
-    duoshuo_thread_key: path
+    use: duoshuo
+    shortname: halyul
+    duoshuo_thread_key: 9e76659f5dc4a488cc9e71ee940e44ff
     duoshuo_embed_js_url: "https://static.duoshuo.com/embed.js"
 
 # Search Systems
 # Available value:
 #     swiftype | google | local
 search:
-    use: google
-    swiftype_key:
+    use: local
+    swiftype_key: 
 
 # Leancloud Views
 leancloud:
@@ -137,7 +143,7 @@ leancloud:
 
 # Busuanzi 不蒜子 Views
 busuanzi:
-    enable: false
-    all_site_uv: false
-    post_pv: false
+    enable: true
+    all_site_uv: true
+    post_pv: true
     busuanzi_pure_mini_js: "https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"

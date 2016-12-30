@@ -12,6 +12,11 @@
     <!-- Single Links Page -->
     <%- partial("_widget/page-links") %>
 
+<!-- Galleries start -->	
+	<% } else if(page.layout == "galleries") { %>
+    <%- partial("_widget/page-galleries") %>
+<!-- Galleries end -->
+
 <% } else if(page.layout == "private") { %>
     <!-- Hidden Page -->
 	<div class="material-post_container">
