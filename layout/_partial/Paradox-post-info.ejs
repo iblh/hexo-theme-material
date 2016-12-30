@@ -36,6 +36,7 @@
 
 
     <!-- Tags (bookmark) -->
+    <% if(page.notag != true){ %>
     <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
         <i class="material-icons" role="presentation">bookmark</i>
         <span class="visuallyhidden">bookmark</span>
@@ -49,6 +50,7 @@
             separator: '</li><li class="mdl-menu__item">'
         }) %>
     </ul>
+    <% } %>
     
     <!-- Share -->
     <%- partial("_partial/post-info-share") %>
