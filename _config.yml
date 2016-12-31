@@ -106,7 +106,7 @@ dropdown:
         icon: email
 
 
-sidebar_categories: false
+sidebar_categories: true
 
 
 # Pages Menu
