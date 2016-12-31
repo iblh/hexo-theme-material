@@ -28,7 +28,7 @@ scheme: Paradox
 
 # UI & UX: slogan, color, effect
 uiux:
-    #slogan: "在daily_pic.ejs中定义为自动获取网络数据"
+    slogan: "在daily_pic.ejs中定义为自动获取网络数据"
     theme_color: "#2196F3"
     theme_sub_color: "#FF5722"
     hyperlink_color: "#3F51B5"
@@ -86,11 +86,11 @@ fonts: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "
 
 # SNS Menu
 sns:
-    email: xuhaoyuforever@gmail.com
-    twitter: "https://twitter.com/twitter"
-    facebook: "https://www.facebook.com/facebook"
-    googleplus: "https://www.google.com/"
-    weibo: "https://www.google.com/"
+    email: halyul@halyul.cc
+    twitter: "https://twitter.com/HalyulXu"
+    facebook: "https://www.facebook.com/halyul"
+    googleplus: "https://plus.google.com/u/0/109529410449534581819"
+    weibo: "http://weibo.com/halyul"
     instagram:
     tumblr:
     github: "https://www.github.com/halyul"
@@ -102,7 +102,7 @@ dropdown:
         link: "//halyul.cc"
         icon: home
     Email Me:
-        link: "mailto:xuhaoyuforever@gmail.com"
+        link: "mailto:halyul@halyul.cc"
         icon: email
         
 # Pages Menu
