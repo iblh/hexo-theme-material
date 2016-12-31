@@ -1,6 +1,6 @@
 {
   "name": "hexo-material",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "description": "Material Design Theme for Hexo",
   "scripts": {
     "test": "echo \"Error: no test specified\""
