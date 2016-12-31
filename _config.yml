@@ -104,7 +104,11 @@ dropdown:
     Email Me:
         link: "mailto:halyul@halyul.cc"
         icon: email
-        
+
+
+sidebar_categories: false
+
+
 # Pages Menu
 pages:
     标签云: "/tags/"
