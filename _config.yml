@@ -119,6 +119,7 @@ sidebar_categories: true
 
 # Pages Menu
 pages:
+    Todo List: "/todo/"
     标签云: "/tags/"
     图库: "/galleries/"
     友情链接: "/links/"
