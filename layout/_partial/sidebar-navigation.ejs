@@ -31,7 +31,7 @@
     </li>
 -->
 
-	
+
     <!-- Archives  -->
     <li class="dropdown">
         <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
@@ -50,12 +50,12 @@
             }) %>
         </ul>
     </li>
-	
+
     <!-- Categories  -->
-<!--
+    <% if(theme.sidebar_categories == true){ %>
     <li class="dropdown">
         <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
-            <i class="material-icons sidebar-material-icons">view_list</i>
+            <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
              <%= __("title.category") %>
             <b class="caret"></b>
         </a>
@@ -70,7 +70,7 @@
             }) %>
         </ul>
     </li>
--->
+    <% } %>
 
     <!-- Divider -->
     <li class="divider"></li>
