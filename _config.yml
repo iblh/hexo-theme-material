@@ -94,6 +94,15 @@ sns:
     github:
     linkedin:
 
+# ShareSNS Settings
+sns_share:
+  twitter: true
+  googleplus: true
+  weibo: false
+  linkedin: false
+  qq: false
+  telegram: true
+
 # Sidebar User Dropdown
 dropdown:
     Email Me:
@@ -106,6 +115,7 @@ sidebar_categories: false
 pages:
     #about: "/about"
 
+# Posts Qrcode
 qrcode: false
 
 # ---------------------------------------------------------------
