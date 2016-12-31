@@ -11,6 +11,11 @@
 		<%- partial("_widget/page-cagallery") %>
 	<!-- Canada gallery end-->
 	
+	<!-- Japan gallery start-->
+	<% } else if(page.layout == "jpgallery") { %>
+		<%- partial("_widget/page-jpgallery") %>
+	<!-- Japan gallery end-->
+	
 	<% } else { %>
 
     <body id="scheme-<%= theme.scheme %>">
