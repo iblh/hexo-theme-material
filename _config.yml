@@ -96,6 +96,15 @@ sns:
     github: "https://www.github.com/halyul"
     linkedin:
 
+# ShareSNS Settings
+sns_share:
+  twitter: true
+  googleplus: true
+  weibo: false
+  linkedin: false
+  qq: false
+  telegram: true
+
 # Sidebar User Dropdown
 dropdown:
     Halyul的小站:
@@ -104,7 +113,6 @@ dropdown:
     Email Me:
         link: "mailto:halyul@halyul.cc"
         icon: email
-
 
 sidebar_categories: true
 
@@ -116,6 +124,7 @@ pages:
     友情链接: "/links/"
     关于: "http://halyul.cc/about.html"
 
+# Posts Qrcode
 qrcode: true
 
 # ---------------------------------------------------------------
