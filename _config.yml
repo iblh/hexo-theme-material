@@ -122,10 +122,10 @@ qrcode: true
 # Available value:
 #     duoshuo | disqus
 comment:
-    use: duoshuo
+    use: disqus
     shortname: halyul
-    duoshuo_thread_key: 9e76659f5dc4a488cc9e71ee940e44ff
-    duoshuo_embed_js_url: "https://static.duoshuo.com/embed.js"
+    duoshuo_thread_key: 
+    duoshuo_embed_js_url: ""
 
 # Search Systems
 # Available value:
