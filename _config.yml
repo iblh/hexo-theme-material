@@ -100,9 +100,9 @@ sns:
 sns_share:
   twitter: true
   googleplus: true
-  weibo: false
+  weibo: true
   linkedin: false
-  qq: false
+  qq: true
   telegram: true
 
 # Sidebar User Dropdown
