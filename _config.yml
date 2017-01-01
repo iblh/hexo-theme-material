@@ -117,6 +117,14 @@ dropdown:
 sidebar_categories: true
 
 
+# Icon changing
+icon:
+    #Homepage: home
+    #Lucky: explore
+    #Archives: inbox
+    #Categories: chrome_reader_mode
+    
+
 # Pages Menu
 pages:
     Todo List: "/todo/"
