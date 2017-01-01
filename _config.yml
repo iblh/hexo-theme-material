@@ -121,8 +121,9 @@ sidebar_categories: true
 icon:
     #Homepage: home
     #Lucky: explore
-    #Archives: inbox
+    Archives: archive
     #Categories: chrome_reader_mode
+    Article: local_library
     
 
 # Pages Menu

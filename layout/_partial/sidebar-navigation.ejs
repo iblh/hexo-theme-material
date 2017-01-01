@@ -47,7 +47,13 @@
 	<!-- Article Numebr  -->
     <li>
         <a href="/archives">
-			<i class="material-icons sidebar-material-icons">library_books</i>
+			<i class="material-icons sidebar-material-icons">
+			<% if(typeof theme.icon.Article == "string") { %>
+				<%- theme.icon.Article %>
+			<% } else { %>
+				library_books
+			<% } %>
+			</i>
              <%= __("sidebar.article_num") %>
              <span class="sidebar-badge"><%= site.posts.length  %></span>
         </a>
