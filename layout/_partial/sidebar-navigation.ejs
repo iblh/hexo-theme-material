@@ -16,7 +16,7 @@
     <!-- Homepage -->
     <li id="sidebar-first-li">
         <a href="<%= config.root %>" target="_self">
-            <i class="material-icons sidebar-material-icons">home</i>
+            <i class="material-icons sidebar-material-icons"><%- theme.icon.Homepage %></i>
              <%= __("sidebar.homepage") %>
         </a>
     </li>
@@ -25,7 +25,7 @@
 <!--
     <li class="dropdown">
         <a href="" target="_self">
-            <i class="material-icons sidebar-material-icons">explore</i>
+            <i class="material-icons sidebar-material-icons"><%- theme.icon.Lucky %></i>
              <%= __("sidebar.imlucky") %>
         </a>
     </li>
@@ -35,7 +35,7 @@
     <!-- Archives  -->
     <li class="dropdown">
         <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
-            <i class="material-icons sidebar-material-icons">inbox</i>
+            <i class="material-icons sidebar-material-icons"><%- theme.icon.Archives %></i>
              <%= __("sidebar.archive") %>
             <b class="caret"></b>
         </a>
@@ -55,7 +55,7 @@
     <% if(theme.sidebar_categories == true){ %>
     <li class="dropdown">
         <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
-            <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+            <i class="material-icons sidebar-material-icons"><%- theme.icon.Categories %></i>
              <%= __("title.category") %>
             <b class="caret"></b>
         </a>
