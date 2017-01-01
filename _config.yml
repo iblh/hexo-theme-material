@@ -113,10 +113,10 @@ sidebar_categories: false
 
 # Icon changing
 icon:
-    Homepage: home
-    Lucky: explore
-    Archives: inbox
-    Categories: chrome_reader_mode
+    #Homepage: home
+    #Lucky: explore
+    #Archives: inbox
+    #Categories: chrome_reader_mode
     
 
 # Pages Menu
