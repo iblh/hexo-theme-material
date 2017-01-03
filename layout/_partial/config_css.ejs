@@ -67,11 +67,21 @@
 
 <!-- Theme Background Related-->
 <% if(theme.background.bing.enable == true){ %>
-	<style>
-		body{
-            background-image: url(https://api.i-meto.com/bing?<%= theme.background.bing.parameter %>);
+    <style>
+        body{
+            background-color: <%= theme.background.purecolor %>
         }
-	</style>
+        
+        /* blog_info bottom background */
+        #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+            background-color: #fff;
+        }
+    </style>
+    <script type="text/javascript">
+        window.onload=function() {
+            setTimeout(function(){document.body.background="https://api.i-meto.com/bing?<%= theme.background.bing.parameter %>";},2000);
+        }
+    </script>
 <% } else if(theme.background.bgimg == undefined){ %>
     <style>
         body{
