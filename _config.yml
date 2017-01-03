@@ -96,7 +96,7 @@ sns:
     github: "https://www.github.com/halyul"
     linkedin:
 
-# ShareSNS Settings
+# SNS Share Switch
 sns_share:
   twitter: true
   googleplus: true
@@ -104,6 +104,9 @@ sns_share:
   linkedin: false
   qq: true
   telegram: true
+  qq: false
+  telegram: false
+
 
 # Sidebar User Dropdown
 dropdown:
@@ -114,7 +117,6 @@ dropdown:
         link: "mailto:halyul@halyul.cc"
         icon: email
 
-sidebar_categories: true
 
 
 # Icon changing
@@ -125,6 +127,9 @@ icon:
     #Categories: chrome_reader_mode
     Article: local_library
     
+# Sidebar Categories Switch
+sidebar_categories: true
+
 
 # Pages Menu
 pages:
@@ -134,7 +139,8 @@ pages:
     友情链接: "/links/"
     关于: "//halyul.cc/about.html"
 
-# Posts Qrcode
+
+# Qrcode for redirect at other device
 qrcode: true
 
 # ---------------------------------------------------------------

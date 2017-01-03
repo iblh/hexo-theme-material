@@ -1,6 +1,6 @@
 # Material 原质
 
-[Material Theme](https://material.vss.im)
+[Material Theme](https://material.viosey.com)
 
 >Nature, Source
 
@@ -15,7 +15,7 @@
 - [Contributing 贡献](#contributing-贡献)
 - [License 许可证](#license-许可证)
 - [Render 渲染](#render-渲染)
-- [Changelog 开发日志](https://material.vss.im/changelog/)
+- [Changelog 开发日志](https://material.viosey.com/changelog/)
 
 ## General 概括
 
@@ -31,16 +31,16 @@
 
 ## Quick start 快速开始
 
-[Install Material](https://material.vss.im/en/start/#install-material)
+[Install Material](https://material.viosey.com/en/start/#install-material)
 
-[安装 Material](https://material.vss.im/start/#install-material)
+[安装 Material](https://material.viosey.com/start/#install-material)
 
 
 ## Docs 文档
 
-[Material Theme Docs](https://material.vss.im/en/)
+[Material Theme Docs](https://material.viosey.com/en/)
 
-[Material 主题文档](https://material.vss.im)
+[Material 主题文档](https://material.viosey.com)
 
 >[Docs Markdown Files](https://github.com/viosey/material-theme-docs)
 
