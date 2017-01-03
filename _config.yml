@@ -104,9 +104,6 @@ sns_share:
   linkedin: false
   qq: true
   telegram: true
-  qq: false
-  telegram: false
-
 
 # Sidebar User Dropdown
 dropdown:
