@@ -94,14 +94,14 @@ sns:
     github:
     linkedin:
 
-# ShareSNS Settings
+# SNS Share Switch
 sns_share:
   twitter: true
   googleplus: true
-  weibo: false
+  weibo: true
   linkedin: false
   qq: false
-  telegram: true
+  telegram: false
 
 # Sidebar User Dropdown
 dropdown:
@@ -109,6 +109,7 @@ dropdown:
         link: "#"
         icon: email
 
+# Sidebar Categories Switch
 sidebar_categories: false
 
 # Icon changing
@@ -123,7 +124,7 @@ icon:
 pages:
     #about: "/about"
 
-# Posts Qrcode
+# Qrcode for redirect at other device
 qrcode: false
 
 # ---------------------------------------------------------------
