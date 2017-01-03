@@ -28,7 +28,7 @@ scheme: Paradox
 
 # UI & UX: slogan, color, effect
 uiux:
-    slogan: "在daily_pic.ejs中定义为自动获取网络数据"
+    slogan: "Never do a dreamer."
     theme_color: "#2196F3"
     theme_sub_color: "#FF5722"
     hyperlink_color: "#3F51B5"
@@ -128,11 +128,11 @@ icon:
 
 # Pages Menu
 pages:
-    Todo List: "/todo/"
+    Todo List: "//halyul.cc/about.html"
     标签云: "/tags/"
     图库: "/galleries/"
     友情链接: "/links/"
-    关于: "http://halyul.cc/about.html"
+    关于: "//halyul.cc/about.html"
 
 # Posts Qrcode
 qrcode: true
@@ -145,10 +145,10 @@ qrcode: true
 # Available value:
 #     duoshuo | disqus
 comment:
-    use: disqus
+    use: duoshuo
     shortname: halyul
-    duoshuo_thread_key: 
-    duoshuo_embed_js_url: ""
+    duoshuo_thread_key: path
+    duoshuo_embed_js_url: "https://cdn.halyul.cc/js/dsembed.js"
 
 # Search Systems
 # Available value:

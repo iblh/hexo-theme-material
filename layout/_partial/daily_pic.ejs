@@ -3,8 +3,8 @@
     
     <!-- Pic & Slogan -->
     <div class="mdl-card__media mdl-color-text--grey-50" style="background-image:url(<%= theme.img.daily_pic %>)">
-		<script type="text/javascript" src="https://api.lwl12.com/hitokoto/main/get?encode=js&amp;charset=utf-8"></script>
         <p class="index-top-block-slogan"><a href="<%= theme.url.daily_pic %>">&nbsp;&nbsp;&nbsp;&emsp;
+		<script type="text/javascript" src="https://api.lwl12.com/hitokoto/main/get?encode=js&amp;charset=utf-8"></script>
         <% if(theme.uiux.slogan !=null) { %>
           <% if(typeof theme.uiux.slogan == "string") { %>
             <script>lwlhitokoto()</script>
