@@ -93,6 +93,7 @@ sns:
     tumblr:
     github:
     linkedin:
+    zhihu:
 
 # SNS Share Switch
 sns_share:
