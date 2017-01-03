@@ -62,4 +62,12 @@
         <span class="visuallyhidden">LinkedIn</span>
     </button></a>
     <% } %>
+
+    <!-- Zhihu -->
+    <% if(theme.sns.zhihu == undefined){ %>
+    <% }else{ %>
+    <a href="<%= theme.sns.zhihu %>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(<%= theme.img.footerico %>zhihu.png);">
+        <span class="visuallyhidden">Zhihu</span>
+    </button></a>
+    <% } %>
 </div>
