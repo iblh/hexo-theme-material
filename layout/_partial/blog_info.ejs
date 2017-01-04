@@ -75,6 +75,14 @@
             </a>
 			<% } %>
 
+			<% if(theme.sns_share.facebook == true){ %>
+						<a class="index_share-link" href="https://www.facebook.com/sharer/sharer.php?u=<%= config.url + config.root + url_for(path) %>" target="_blank">
+								<li class="mdl-menu__item mdl-js-ripple-effect">
+										<%= __('share.toFacebook') %>
+								</li>
+						</a>
+			<% } %>
+
 			<% if(theme.sns_share.googleplus == true){ %>
             <a class="index_share-link" href="https://plus.google.com/share?url=<%- config.url + config.root %>" target="_blank">
                 <li class="mdl-menu__item mdl-js-ripple-effect">
