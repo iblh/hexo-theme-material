@@ -98,6 +98,7 @@ sns:
 # SNS Share Switch
 sns_share:
   twitter: true
+  facebook: true
   googleplus: true
   weibo: true
   linkedin: false
