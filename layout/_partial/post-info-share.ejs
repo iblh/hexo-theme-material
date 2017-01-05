@@ -25,7 +25,7 @@
       </a>
       <% } %>
     <% } %>
-    
+
     <!-- Share Weibo -->
     <% if(theme.sns_share.weibo == true){ %>
     <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=<%= page.title %>&url=<%= config.url + config.root + url_for(path) %>&pic=&searchPic=false&style=simple" target="_blank">
@@ -40,6 +40,15 @@
     <a class="post_share-link" href="https://twitter.com/intent/tweet?text=<%= page.title %>&url=<%= config.url + config.root + url_for(path) %>&via=<%= config.author %>" target="_blank">
         <li class="mdl-menu__item">
             <%= __('share.toTwitter') %>
+        </li>
+    </a>
+    <% } %>
+
+    <!-- Share Facebook -->
+    <% if(theme.sns_share.facebook == true){ %>
+    <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=<%= config.url + config.root + url_for(path) %>" target="_blank">
+        <li class="mdl-menu__item">
+            <%= __('share.toFacebook') %>
         </li>
     </a>
     <% } %>

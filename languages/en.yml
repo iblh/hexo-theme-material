@@ -14,6 +14,7 @@ share:
     article_rss: "Article RSS"
     comment_rss: "Comment RSS"
     toTwitter: "Share to Twitter"
+    toFacebook: "Share to Facebook"
     toLinkedIn: "Share to LinkedIn"
     toGplus: "Share to Google+"
     toWeibo: "Share to Weibo"
