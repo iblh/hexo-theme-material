@@ -51,7 +51,7 @@ reading:
 # Thumbnail Settings
 thumbnail:
     purecolor:
-    random_amount: 5
+    random_amount: 19
 
 # Background Settings
 # bing available parameter:
@@ -73,7 +73,7 @@ img:
     sidebar_header: "/img/sidebar_header.png"
     footerico: "/img/footer/footer_ico-"
     #upyun_logo: "/img/upyun_logo.png"
-    random_thumbnail: "/img/random/"
+    random_thumbnail: "/img/random/material-"
 
 # Custom Fonts
 fonts: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif
@@ -97,12 +97,13 @@ sns:
 
 # SNS Share Switch
 sns_share:
-  twitter: true
-  googleplus: true
-  weibo: true
-  linkedin: false
-  qq: false
-  telegram: false
+    twitter: true
+    facebook: true
+    googleplus: true
+    weibo: true
+    linkedin: false
+    qq: false
+    telegram: false
 
 # Sidebar User Dropdown
 dropdown:
