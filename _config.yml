@@ -114,6 +114,14 @@ dropdown:
 # Sidebar Categories Switch
 sidebar_categories: false
 
+# Icon changing
+icon:
+    #Homepage: home
+    #Lucky: explore
+    #Archives: inbox
+    #Categories: chrome_reader_mode
+    
+
 # Pages Menu
 pages:
     #about: "/about"
