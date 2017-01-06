@@ -126,12 +126,12 @@ qrcode: false
 # ---------------------------------------------------------------
 
 # Comment Systems
-# Available value:
+# Available value of "use":
 #     duoshuo | disqus
 comment:
     use:
     shortname:
-    duoshuo_thread_key: path
+    duoshuo_thread_key_type: path
     duoshuo_embed_js_url: "https://static.duoshuo.com/embed.js"
 
 # Search Systems
