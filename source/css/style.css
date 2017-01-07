@@ -425,7 +425,7 @@ a {
 	border-radius: 3px;
 }
 #post-content.markdown-Github code {
-	white-space: nowrap;
+/*	white-space: nowrap;*/
 }
 #post-content.markdown-Github pre > code {
 	margin: 0;
