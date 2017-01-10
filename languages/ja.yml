@@ -14,6 +14,7 @@ share:
     comment_rss: "論評 RSS"
     toTwitter: "Twitter での共有"
     toLinkedIn: "LinkedIn での共有"
+    toTelegram: "Telegram での共有"
     toGplus: "Google+ での共有"
     toWeibo: "Weibo での共有"
 title:

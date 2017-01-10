@@ -1645,7 +1645,7 @@ a {
 
 @media screen and (min-width: 1183px){
 	#scheme-Isolation .header-title{
-	
+
 	}
 }
 
@@ -1683,16 +1683,16 @@ a {
 		padding-top: 24px;
 		border-top: 1px solid #c7ced1;
 	}
-	
+
 	#scheme-Isolation .header-nav span{
 		margin-right: 8px;
 	    margin-left: 8px;
 	}
-	
+
 	#scheme-Isolation .header-nav span:first-child{
 		margin-left: 0;
 	}
-	
+
 	#scheme-Isolation .header-nav span:last-child{
 		margin-right: 0;
 	}
@@ -3376,6 +3376,9 @@ a {
 .fa-linkedin-square:before {
     content: "\f08c"
 }
+.fa-telegram-square:before {
+    content: "\f2c6"
+}
 .fa-thumb-tack:before {
     content: "\f08d"
 }
@@ -3588,6 +3591,9 @@ a {
 }
 .fa-linkedin:before {
     content: "\f0e1"
+}
+.fa-telegram:before {
+    content: "\f2c6"
 }
 .fa-rotate-left:before,
 .fa-undo:before {

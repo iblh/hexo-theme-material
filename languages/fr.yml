@@ -14,6 +14,7 @@ share:
     comment_rss: "Flux RSS commentaires"
     toTwitter: "Partager sur Twitter"
     toLinkedIn: "Partager sur LinkedIn"
+    toTelegram: "Partager sur Telegram"
     toGplus: "Partager sur Google+"
     toWeibo: "Partager sur Weibo"
 title:
