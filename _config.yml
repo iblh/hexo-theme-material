@@ -94,6 +94,7 @@ sns:
     github:
     linkedin:
     zhihu:
+    telegram:
 
 # SNS Share Switch
 sns_share:
