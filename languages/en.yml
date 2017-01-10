@@ -9,12 +9,17 @@ post:
     older: "Older"
     newer: "Newer"
     private: "Private post, temporarily hidden"
+    qrcode: "Read this article on other device"
 share:
     article_rss: "Article RSS"
     comment_rss: "Comment RSS"
     toTwitter: "Share to Twitter"
+    toFacebook: "Share to Facebook"
+    toLinkedIn: "Share to LinkedIn"
     toGplus: "Share to Google+"
     toWeibo: "Share to Weibo"
+    toQQ: "Share to QQ"
+    toTelegram: "Share to Telegram"
 title:
     category: "Category"
     tag: "Tag"

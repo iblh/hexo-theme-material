@@ -7,13 +7,13 @@ head:
     favicon: "/img/favicon.png"
     high_res_favicon: "/img/favicon.png"
     apple_touch_icon: "/img/favicon.png"
-    keywords: 
+    keywords:
 
 # Jump Links Settings
 url:
-    rss: 
+    rss:
     daily_pic: "#"
-    logo: 
+    logo:
 
 
 # ---------------------------------------------------------------
@@ -34,7 +34,7 @@ uiux:
     android_chrome_color: "#0097A7"
     nprogress_color: "#FF4081"
     nprogress_buffer: "800"
-    
+
 # JS Effect Switches
 js_effect:
     fade: true
@@ -50,8 +50,8 @@ reading:
 
 # Thumbnail Settings
 thumbnail:
-    purecolor: 
-    random_amount: 5
+    purecolor:
+    random_amount: 19
 
 # Background Settings
 # bing available parameter:
@@ -61,9 +61,9 @@ thumbnail:
 background:
     purecolor: "#F5F5F5"
     #bgimg: "/img/bg.png"
-    bing: 
+    bing:
         enable: false
-        parameter: 
+        parameter:
 
 # Images Settings
 img:
@@ -73,7 +73,7 @@ img:
     sidebar_header: "/img/sidebar_header.png"
     footerico: "/img/footer/footer_ico-"
     #upyun_logo: "/img/upyun_logo.png"
-    random_thumbnail: "/img/random/"
+    random_thumbnail: "/img/random/material-"
 
 # Custom Fonts
 fonts: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif
@@ -88,33 +88,49 @@ sns:
     twitter: "https://twitter.com/twitter"
     facebook: "https://www.facebook.com/facebook"
     googleplus: "https://www.google.com/"
-    weibo: 
-    instagram: 
-    tumblr: 
-    github: 
+    weibo:
+    instagram:
+    tumblr:
+    github:
+    linkedin:
+    zhihu:
+
+# SNS Share Switch
+sns_share:
+    twitter: true
+    facebook: true
+    googleplus: true
+    weibo: true
+    linkedin: false
+    qq: false
+    telegram: false
 
 # Sidebar User Dropdown
-dropdown: 
-    Email Me: 
+dropdown:
+    Email Me:
         link: "#"
         icon: email
+
+# Sidebar Categories Switch
+sidebar_categories: false
 
 # Pages Menu
 pages:
     #about: "/about"
-    
 
+# Qrcode for redirect at other device
+qrcode: false
 
 # ---------------------------------------------------------------
 # Integrated Services
 # ---------------------------------------------------------------
-    
+
 # Comment Systems
 # Available value:
 #     duoshuo | disqus
 comment:
-    use: 
-    shortname: 
+    use:
+    shortname:
     duoshuo_thread_key: path
     duoshuo_embed_js_url: "https://static.duoshuo.com/embed.js"
 
@@ -123,15 +139,15 @@ comment:
 #     swiftype | google | local
 search:
     use: google
-    swiftype_key: 
-        
+    swiftype_key:
+
 # Leancloud Views
 leancloud:
     enable: false
     app_id: #你的app_id
     app_key: #你的app_key
     av_core_mini: "https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"
-    
+
 # Busuanzi 不蒜子 Views
 busuanzi:
     enable: false
