@@ -9,14 +9,17 @@ post:
     older: "Ancien"
     newer: "Récent"
     private: "Post privé, caché temporairement"
+    qrcode: "Lire cet article sur un autre appareil"
 share:
     article_rss: "Flux RSS articles"
     comment_rss: "Flux RSS commentaires"
     toTwitter: "Partager sur Twitter"
+    toFacebook: "Partager sur Facebook"
     toLinkedIn: "Partager sur LinkedIn"
     toTelegram: "Partager sur Telegram"
     toGplus: "Partager sur Google+"
     toWeibo: "Partager sur Weibo"
+    toQQ: "Partager sur QQ"
 title:
     category: "Categorie"
     tag: "Tag"
