@@ -62,4 +62,12 @@
 		<i class="fa fa-linkedin fa-lg" aria-hidden="true"></i>
 	</a>
     <% } %>
+
+    <!-- Telegram -->
+    <% if(theme.sns.telegram == undefined){ %>
+    <% }else{ %>
+    <a href="<%= theme.sns.telegram %>" target="view_window">
+		<i class="fa fa-telegram fa-lg" aria-hidden="true"></i>
+	</a>
+    <% } %>
 </div>
