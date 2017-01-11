@@ -14,6 +14,7 @@ share:
     comment_rss: "Kommentare als RSS"
     toTwitter: "Auf Twitter teilen"
     toLinkedIn: "Auf LinkedIn teilen"
+    toTelegram: "Auf Telegram teilen"
     toGplus: "Auf Google+ teilen"
     toWeibo: "Auf Weibo teilen"
 title:
