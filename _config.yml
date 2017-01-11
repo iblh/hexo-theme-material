@@ -13,7 +13,7 @@ head:
 url:
     rss:
     daily_pic: "#"
-    logo:
+    logo: "#"
 
 
 # ---------------------------------------------------------------
@@ -85,15 +85,16 @@ fonts: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "
 # SNS Menu
 sns:
     email: youremail@email.com
-    twitter: "https://twitter.com/twitter"
     facebook: "https://www.facebook.com/facebook"
-    googleplus: "https://www.google.com/"
+    twitter: 
+    googleplus: 
     weibo:
     instagram:
     tumblr:
     github:
     linkedin:
     zhihu:
+    bilibili:
 
 # SNS Share Switch
 sns_share:
@@ -126,12 +127,12 @@ qrcode: false
 # ---------------------------------------------------------------
 
 # Comment Systems
-# Available value:
+# Available value of "use":
 #     duoshuo | disqus
 comment:
     use:
     shortname:
-    duoshuo_thread_key: path
+    duoshuo_thread_key_type: path
     duoshuo_embed_js_url: "https://static.duoshuo.com/embed.js"
 
 # Search Systems
