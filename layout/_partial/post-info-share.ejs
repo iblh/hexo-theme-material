@@ -82,7 +82,7 @@
 
     <!-- Share Telegram -->
     <% if(theme.sns_share.telegram == true){ %>
-    <a class="post_share-link" href="https://telegram.me/share/url?url=<%- config.url + url_for(path) %>&text=<%= page.title %>" target="_blank">
+    <a class="post_share-link" href="https://telegram.me/share/url?url=<%- config.url + config.root + url_for(path) %>&text=<%= page.title %>" target="_blank">
         <li class="mdl-menu__item">
             <%= __('share.toTelegram') %>
         </li>
