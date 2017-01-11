@@ -149,6 +149,7 @@ a {
 /* Markdown_Github_CSS */
 /***********************/
 #post-content.markdown-Github figure {
+    margin-right: 0;
 	margin-left: 0;
 }
 #post-content.markdown-Github,
