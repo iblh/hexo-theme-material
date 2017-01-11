@@ -2,10 +2,10 @@
     <!-- User dropdown  -->
     <li class="dropdown">
         <ul id="settings-dropdown" class="dropdown-menu">
-			<% for (var i in theme.dropdown){ %>
+            <% for (var i in theme.dropdown){ %>
                 <li>
                     <a href="<%= theme.dropdown[i].link %>" target="_blank" title="<%= i %>">
-						<i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element"><%= theme.dropdown[i].icon %></i>
+                        <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element"><%= theme.dropdown[i].icon %></i>
                         <%= i %>
                     </a>
                 </li>
@@ -77,13 +77,16 @@
 
 
     <!-- Pages  -->
-	<% for (var i in theme.pages){ %>
-		<li>
-			<a href="<%= theme.pages[i] %>" title="<%= i %>">
-				<%= i %>
-			</a>
-		</li>
-	<% } %>
+  	<% for (var i in theme.pages){ %>
+        <li>
+            <a href="<%= theme.pages[i].link %>" target="_blank" title="<%= i %>">
+                <% if(theme.pages[i].icon){ %>
+                    <i class="material-icons sidebar-material-icons"><%= theme.pages[i].icon %></i>
+                <% } %>
+                <%= i %>
+            </a>
+        </li>
+  	<% } %>
 
     <!-- Article Numebr  -->
     <li>
