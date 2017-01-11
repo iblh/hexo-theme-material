@@ -133,11 +133,11 @@ sidebar_categories: true
 
 # Pages Menu
 pages:
-    Todo List: "//halyul.cc/about.html"
+    Todo List: "//halyul.cc/#about"
     标签云: "/tags/"
     图库: "/galleries/"
-    友情链接: "/links/"
-    关于: "//halyul.cc/about.html"
+    友情链接: "//halyul.cc/#links"
+    关于: "//halyul.cc/#about"
 
 
 # Qrcode for redirect at other device
