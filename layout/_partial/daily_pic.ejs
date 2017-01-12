@@ -1,15 +1,15 @@
 <!-- Daily pic -->
 <div class="mdl-card daily-pic mdl-cell mdl-cell--8-col index-top-block">
-    
+
     <!-- Pic & Slogan -->
     <div class="mdl-card__media mdl-color-text--grey-50" style="background-image:url(<%= theme.img.daily_pic %>)">
         <p class="index-top-block-slogan"><a href="<%= theme.url.daily_pic %>">
-        <% if(theme.uiux.slogan !=null) { %>
-          <% if(typeof theme.uiux.slogan == "string") { %>
-            <%- theme.uiux.slogan %>
-          <% } else { %>
-            <%- theme.uiux.slogan.join("<br>") %>
-          <% } %>
+        <% if(theme.uiux.slogan) { %>
+            <% if(Array.isArray(theme.uiux.slogan)) { %>
+                <%- theme.uiux.slogan.join('<br>') %>
+            <% } else { %>
+                <%- theme.uiux.slogan %>
+            <% } %>
         <% } %>
         </a></p>
     </div>

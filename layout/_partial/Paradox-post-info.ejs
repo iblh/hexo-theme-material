@@ -13,15 +13,15 @@
     <div class="section-spacer"></div>
 
     <!-- Favorite -->
-<!--
-    <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
-        <i class="material-icons" role="presentation">favorite</i>
-        <span class="visuallyhidden">favorites</span>
-    </button>
--->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
 
     <!-- Qrcode -->
-    <% if(theme.qrcode == true){ %>
+    <% if(theme.qrcode == true) { %>
         <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
             <i class="material-icons" role="presentation">devices other</i>
             <span class="visuallyhidden">devices other</span>
@@ -31,12 +31,11 @@
             <img src="<%- qrcode(url, {
                  margin: 2
             }) %>">
-            </ul>
+        </ul>
     <% } %>
 
-
     <!-- Tags (bookmark) -->
-    <% if(page.notag != true){ %>
+    <% if(page.notag != true) { %>
     <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
         <i class="material-icons" role="presentation">bookmark</i>
         <span class="visuallyhidden">bookmark</span>
@@ -53,5 +52,5 @@
     <% } %>
 
     <!-- Share -->
-    <%- partial("_partial/post-info-share") %>
+    <%- partial('_partial/post-info-share') %>
 </div>
