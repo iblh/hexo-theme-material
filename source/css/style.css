@@ -425,9 +425,6 @@ a {
 	background-color: rgba(0,0,0,0.04);
 	border-radius: 3px;
 }
-#post-content.markdown-Github code {
-/*	white-space: nowrap;*/
-}
 #post-content.markdown-Github pre > code {
 	margin: 0;
 	padding: 0;
