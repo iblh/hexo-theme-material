@@ -86,16 +86,16 @@ fonts: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "
 sns:
     email: youremail@email.com
     facebook: "https://www.facebook.com/facebook"
-    twitter:
-    googleplus:
-    weibo:
-    instagram:
-    tumblr:
-    github:
-    linkedin:
-    zhihu:
-    bilibili:
-    telegram:
+    twitter: "https://twitter.com/twitter"
+    googleplus: "https://www.google.com/"
+    weibo: 
+    instagram: 
+    tumblr: 
+    github: 
+    linkedin: 
+    zhihu: 
+    bilibili: 
+    telegram: 
 
 # SNS Share Switch
 sns_share:
