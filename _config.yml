@@ -118,7 +118,9 @@ sidebar_categories: false
 
 # Pages Menu
 pages:
-    #about: "/about"
+    #About:
+        #link: "/about"
+        #icon: person
 
 # Qrcode for redirect at other device
 qrcode: false
