@@ -1,43 +1,47 @@
 <!-- Import File -->
-<%- js("js/highlight.min") %>
-<%- js("js/js.min") %>
-<%- partial("_partial/nprogress") %>
+<%- js('js/highlight.min') %>
+<%- js('js/js.min') %>
+<%- partial('_partial/nprogress') %>
 
-<% if( theme.js_effect.smoothscroll == true ){ %>
-	<%- js("js/smoothscroll") %>
+<% if( theme.js_effect.smoothscroll === true ) { %>
+    <%- js('js/smoothscroll') %>
 <% } %>
 
-<%- partial("_partial/footer-option") %>
+<%- partial('_partial/footer-option') %>
 
 <!-- Swiftye -->
-<% if( theme.search.use == "swiftype" ){ %>
-	<%- partial("_widget/search-swiftype-js") %>
+<% if( theme.search.use === 'swiftype' ) { %>
+    <%- partial('_widget/search-swiftype-js') %>
 <% } %>
 
 <!-- Local Search-->
-<% if( theme.search.use == "local" ){ %>
-	<%- partial("_widget/search-local-js") %>
+<% if( theme.search.use === 'local' ) { %>
+    <%- partial('_widget/search-local-js') %>
 
-	<script>
-        var inputArea = document.querySelector("#search");
-        var getSearchFile = function(){
-            var path = "<%= config.search.path %>";
+    <script>
+        var inputArea = document.querySelector('#search');
+        var getSearchFile = function() {
+            var path = '<%= config.search.path %>';
             searchFunc(path, 'search', 'local-search-result');
         }
 
-        if(inputArea != null) inputArea.onfocus = function(){ getSearchFile() }
-	</script>
+        if(inputArea) {
+            inputArea.onfocus = function() {
+                getSearchFile();
+            }
+        }
+    </script>
 <% } %>
 
 <!-- Window Load-->
 <script>
     $(window).load(function() {
         // Post_Toc parent position fixed
-        $(".post-toc-wrap").parent(".mdl-menu__container").css("position", "fixed");
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
     });
 </script>
 
 <!-- MathJax Load-->
-<% if (page.mathjax){ %>
+<% if (page.mathjax) { %>
     <%- partial('_widget/mathjax') %>
 <% } %>
