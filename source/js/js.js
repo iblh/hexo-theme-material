@@ -80,7 +80,7 @@ $(document).ready(function() {
 
     // Click anywhere to close the FAB menu
     $(document).click(function() {
-        if( $("#prime").hasClass("is-visible") ){
+        if( $("#prime").hasClass("is-visible") ) {
             $("#prime").click();
         }
     });
@@ -2175,12 +2175,12 @@ $(document).ready(function() {
             overlay.addClass('active');
             $('.MD-burger-layer').remove('MD-burger-line');
             $('.MD-burger-layer').add('MD-burger-arrow');
-			document.documentElement.style.overflow = "hidden";
+      document.documentElement.style.overflow = "hidden";
         } else {
             overlay.removeClass('active');
             $('.MD-burger-layer').removeClass('MD-burger-arrow');
             $('.MD-burger-layer').addClass('MD-burger-line');
-			document.documentElement.style.overflow = "auto";
+      document.documentElement.style.overflow = "auto";
         }
     });
 
@@ -2189,7 +2189,7 @@ $(document).ready(function() {
         $('#sidebar').removeClass('open');
         $('.MD-burger-layer').removeClass('MD-burger-arrow');
         $('.MD-burger-layer').addClass('MD-burger-line');
-		document.documentElement.style.overflow = "auto";
+    document.documentElement.style.overflow = "auto";
     });
 
 });
