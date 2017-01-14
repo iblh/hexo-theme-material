@@ -13,7 +13,7 @@ head:
 url:
     rss: /atom.xml
     daily_pic: "#"
-    logo: 
+    logo: "http://blog.edreamoon.com/"
 
 
 # ---------------------------------------------------------------
@@ -46,7 +46,7 @@ js_effect:
 reading:
     markdown: Github
     entry_excerpt: 80
-    code_highlight: solarized-white
+    code_highlight: Androidstudio
 
 # Thumbnail Settings
 thumbnail:
@@ -70,7 +70,7 @@ img:
     logo: "/img/logo.png"
     avatar: "/img/avatar.gif"
     daily_pic: "/img/daily_pic.png"
-    sidebar_header: "/img/sidebar_header.png"
+    #sidebar_header: "/img/sidebar_header.png"
     footerico: "/img/footer/footer_ico-"
     #upyun_logo: "/img/upyun_logo.png"
     random_thumbnail: "/img/random/"
@@ -101,7 +101,8 @@ dropdown:
 
 # Pages Menu
 pages:
-    #about: "/about"
+  关于我: "/about"
+  标签云: "/tags"
     
 
 
@@ -136,7 +137,7 @@ leancloud:
     
 # Busuanzi 不蒜子 Views
 busuanzi:
-    enable: true
+    enable: false
     all_site_uv: false
-    post_pv: true
-    busuanzi_pure_mini_js: "https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"
+    post_pv: false
+    #busuanzi_pure_mini_js: "https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"
