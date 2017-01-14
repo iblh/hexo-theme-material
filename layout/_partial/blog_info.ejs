@@ -26,7 +26,7 @@
         </button>
         <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="show-pages-button">
             <% for (var i in theme.pages) { %>
-                <a class="index_share-link" href="<%= theme.pages[i] || '#' %>" title="<%= i %>">
+                <a class="index_share-link" href="<%= theme.pages[i].link || '#' %>" title="<%= i %>">
                     <li class="mdl-menu__item mdl-js-ripple-effect">
                         <%= i %>
                     </li>
