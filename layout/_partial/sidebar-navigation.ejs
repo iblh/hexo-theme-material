@@ -16,13 +16,7 @@
     <!-- Homepage -->
     <li id="sidebar-first-li">
         <a href="<%= config.root %>" target="_self">
-          <i class="material-icons sidebar-material-icons">
-            <% if(typeof theme.icon.Homepage == "string") { %>
-              <%- theme.icon.Homepage %>
-            <% } else { %>
-              home
-            <% } %>
-          </i>
+            <i class="material-icons sidebar-material-icons">home</i>
             <%= __('sidebar.homepage') %>
         </a>
     </li>
@@ -31,45 +25,17 @@
     <!--
     <li class="dropdown">
         <a href="" target="_self">
-        <i class="material-icons sidebar-material-icons">
-          <% if(typeof theme.icon.Lucky == "string") { %>
-            <%- theme.icon.Lucky %>
-          <% } else { %>
-            explore
-          <% } %>
-        </i>
+            <i class="material-icons sidebar-material-icons">explore</i>
              <%= __("sidebar.imlucky") %>
         </a>
     </li>
     -->
 
-    <!-- Article Numebr  -->
-    <li>
-        <a href="/archives">
-          <i class="material-icons sidebar-material-icons">
-    			<% if(typeof theme.icon.Article == "string") { %>
-    				<%- theme.icon.Article %>
-    			<% } else { %>
-    				library_books
-    			<% } %>
-    			</i>
-            <%= __('sidebar.article_num') %>
-            <span class="sidebar-badge"><%= site.posts.length %></span>
-        </a>
-    </li>
-  </ul>
-
     <!-- Archives  -->
     <li class="dropdown">
         <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
-          <i class="material-icons sidebar-material-icons">
-            <% if(typeof theme.icon.Archives == "string") { %>
-              <%- theme.icon.Archives %>
-            <% } else { %>
-              inbox
-            <% } %>
-          </i>
-            <%= __('sidebar.archive') %>
+            <i class="material-icons sidebar-material-icons">inbox</i>
+             <%= __('sidebar.archive') %>
             <b class="caret"></b>
         </a>
         <ul class="dropdown-menu">
@@ -88,13 +54,7 @@
     <% if(theme.sidebar_categories === true) { %>
         <li class="dropdown">
             <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
-              <i class="material-icons sidebar-material-icons">
-                <% if(typeof theme.icon.Categories == "string") { %>
-                  <%- theme.icon.Categories %>
-                <% } else { %>
-                  chrome_reader_mode
-                <% } %>
-              </i>
+                <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
                 <%= __('title.category') %>
                 <b class="caret"></b>
             </a>
@@ -126,3 +86,12 @@
             </a>
         </li>
   	<% } %>
+
+    <!-- Article Numebr  -->
+    <li>
+        <a href="/archives">
+            <%= __('sidebar.article_num') %>
+            <span class="sidebar-badge"><%= site.posts.length %></span>
+        </a>
+    </li>
+</ul>

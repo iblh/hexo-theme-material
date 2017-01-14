@@ -123,11 +123,21 @@ sidebar_categories: true
 
 # Pages Menu
 pages:
-    Todo List: "//halyul.cc/#about"
-    标签云: "/tags/"
-    图库: "/galleries/"
-    友情链接: "//halyul.cc/#links"
-    关于: "//halyul.cc/#about"
+    Todo List:
+        link: "//halyul.cc/#about"
+        icon: person
+    标签云:
+        link: "/tags"
+        icon: person
+    图库:
+        link: "/galleries"
+        icon: person
+    友情链接:
+        link: "//halyul.cc/#links"
+        icon: person
+    关于:
+        link: "//halyul.cc/#about"
+        icon: person
 
 # Icon changing
 icon:

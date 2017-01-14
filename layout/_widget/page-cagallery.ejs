@@ -18,14 +18,19 @@
 									</li>
 							</ul>
 					</nav>
+					<script type="text/javascript" charset="utf-8">
+						$(function() {
+							$("img.lazy").lazyload({effect: "fadeIn"});
+						});
+					</script>
 			</header>
-			
+
 		<!-- Main -->
 		<div id="main">
 			<% if (site.data.cagallery){ %>
 				<% for (var i in site.data.cagallery){ %>
 					<article class="thumb">
-						<a href="<%= site.data.cagallery[i].full_link %>" class="image"><img src="<%= site.data.cagallery[i].thumb_link %>" alt="<%= i %>" /></a>
+						<a href="<%= site.data.cagallery[i].full_link %>" class="image"><img class="lazy" data-original="<%= site.data.cagallery[i].thumb_link %>" alt="<%= i %>" /></a>
 						<h2><%= i %></h2>
 						<p><%= site.data.cagallery[i].descr %></p>
 					</article>
@@ -89,4 +94,5 @@
 	<%- js("js/gallery/skel.min") %>
 	<%- js("js/gallery/util.min") %>
 	<%- js("js/gallery/main.min") %>
+	<%- js('js/gallery/jquery.lazyload.min') %>
 </body>
