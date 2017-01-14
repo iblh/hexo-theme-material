@@ -9,12 +9,17 @@ post:
     older: "Mayor"
     newer: "Más nuevo"
     private: "Mensajes privados, ocultar temporalmente"
+    qrcode: "Lea este artículo en otro dispositivo"
 share:
     article_rss: "Artículo RSS"
     comment_rss: "Comentario RSS"
     toTwitter: "Compartir en Twitter"
+    toFacebook: "Compartir en Facebook"
+    toLinkedIn: "Compartir en LinkedIn"
+    toTelegram: "Compartir en Telegram"
     toGplus: "Compartir en Google+"
     toWeibo: "Compartir en Weibo"
+    toQQ: "Compartir en QQ"
 title:
     category: "Categoría"
     tag: "Etiqueta"

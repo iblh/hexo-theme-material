@@ -1,53 +1,53 @@
 #scheme-Paradox .mdl-grid{
-	display: block !important;
+  display: block !important;
 }
 
 #scheme-Paradox .material-layout .mdl-card{
-	margin-left: 0;
-	margin-right: 0;
-	width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
 }
 
 #scheme-Paradox .material-layout .mdl-card{
-	display: block;
+  display: block;
 }
 
 #scheme-Paradox .material-layout .mdl-card__media{
-	display: block;
+  display: block;
 }
 
 #scheme-Paradox .index-top-block,
 #scheme-Paradox footer{
-	display: none !important;
+  display: none !important;
 }
 
 #scheme-Paradox .material-index{
-	padding-top: 80px !important;
+  padding-top: 80px !important;
 }
 
 #scheme-Paradox .material-layout .mdl-card__media{
-	height: 223px;
+  height: 223px;
 }
 
 #scheme-Paradox .post_entry-content {
-	display: block !important;
+  display: block !important;
 }
 
 #scheme-Paradox .material-layout .meta{
-	display: block !important;
+  display: block !important;
 }
 
 #scheme-Paradox .article-headline-p{
-	position: relative;
-	top: 140px;
+  position: relative;
+  top: 140px;
 }
 
 #scheme-Paradox #author-avatar{
-	width: 44px;
-	height: 44px;
-	float: left;
+  width: 44px;
+  height: 44px;
+  float: left;
 }
 
 .fabs{
-	width: 56px;
+  width: 56px;
 }

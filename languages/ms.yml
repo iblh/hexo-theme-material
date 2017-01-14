@@ -9,12 +9,17 @@ post:
     older: "Lama"
     newer: "Baru"
     private: "Siaran peribadi, disembunyikan buat sementara"
+    qrcode: "Baca artikel ini pada peranti lain"
 share:
     article_rss: "RSS Artikel"
     comment_rss: "RSS Ulasan"
     toTwitter: "Kongsi ke Twitter"
+    toFacebook: "Kongsi ke Facebook"
+    toLinkedIn: "Kongsi ke LinkedIn"
+    toTelegram: "Kongsi ke Telegram"
     toGplus: "Kongsi ke Google+"
     toWeibo: "Kongsi ke Weibo"
+    toQQ: "Kongsi ke QQ"
 title:
     category: "Kategori"
     tag: "Tag"

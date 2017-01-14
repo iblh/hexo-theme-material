@@ -9,12 +9,17 @@ post:
     older: "أقدم"
     newer: "أحدث"
     private: "منشور خاص, مخفي مؤقتا"
+    qrcode: "اقرأ هذا المقال على جهاز آخر"
 share:
     article_rss: "مقالات RSS"
     comment_rss: "تعليقات RSS"
     toTwitter: "شارك على Twitter"
+    toFacebook: "شارك على Facebook"
+    toLinkedIn: "شارك على LinkedIn"
+    toTelegram: "شارك على Telegram"
     toGplus: "شارك على Google+"
     toWeibo: "شارك على Weibo"
+    toQQ: "شارك على QQ"
 title:
     category: "فئة"
     tag: "وسم"

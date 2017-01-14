@@ -9,12 +9,17 @@ post:
     older: "Älteren"
     newer: "Neuren"
     private: "Private Beiträge sind temporär verborgen"
+    qrcode: "Lesen Sie diesen Artikel auf anderem Gerät"
 share:
     article_rss: "Artikel als RSS"
     comment_rss: "Kommentare als RSS"
     toTwitter: "Auf Twitter teilen"
+    toFacebook: "Auf Facebook teilen"
+    toLinkedIn: "Auf LinkedIn teilen"
+    toTelegram: "Auf Telegram teilen"
     toGplus: "Auf Google+ teilen"
     toWeibo: "Auf Weibo teilen"
+    toQQ: "Auf QQ teilen"
 title:
     category: "Kategorie"
     tag: "Tag"

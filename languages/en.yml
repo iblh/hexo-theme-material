@@ -1,7 +1,7 @@
 sidebar:
     homepage: "Home"
     archive: "Archives"
-    article_num: "Article Number"
+    article_num: "Number of articles"
 post:
     visitor: "Visitors"
     views: "Views"
@@ -9,14 +9,19 @@ post:
     older: "Older"
     newer: "Newer"
     private: "Private post, temporarily hidden"
+    qrcode: "Read this article on other device"
 share:
     article_rss: "Article RSS"
     comment_rss: "Comment RSS"
     toTwitter: "Share to Twitter"
+    toFacebook: "Share to Facebook"
+    toLinkedIn: "Share to LinkedIn"
+    toTelegram: "Share to Telegram"
     toGplus: "Share to Google+"
     toWeibo: "Share to Weibo"
+    toQQ: "Share to QQ"
 title:
-    category: "Category"
+    category: "Categories"
     tag: "Tag"
 misc:
     home: "Home"

@@ -34,7 +34,7 @@ uiux:
     android_chrome_color: "#0097A7"
     nprogress_color: "#FF4081"
     nprogress_buffer: "800"
-    
+
 # JS Effect Switches
 js_effect:
     fade: true
@@ -50,8 +50,8 @@ reading:
 
 # Thumbnail Settings
 thumbnail:
-    purecolor: 
-    random_amount: 5
+    purecolor:
+    random_amount: 19
 
 # Background Settings
 # bing available parameter:
@@ -61,9 +61,9 @@ thumbnail:
 background:
     purecolor: "#F5F5F5"
     #bgimg: "/img/bg.png"
-    bing: 
+    bing:
         enable: false
-        parameter: 
+        parameter:
 
 # Images Settings
 img:
@@ -73,7 +73,7 @@ img:
     #sidebar_header: "/img/sidebar_header.png"
     footerico: "/img/footer/footer_ico-"
     #upyun_logo: "/img/upyun_logo.png"
-    random_thumbnail: "/img/random/"
+    random_thumbnail: "/img/random/material-"
 
 # Custom Fonts
 fonts: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif
@@ -85,38 +85,57 @@ fonts: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "
 # SNS Menu
 sns:
     email: lijfbest@gmail.com
-    #twitter: "https://twitter.com/twitter"
     #facebook: "https://www.facebook.com/facebook"
+    #twitter: "https://twitter.com/twitter"
     #googleplus: "https://www.google.com/"
     weibo: "http://weibo.com/u/5789528518"
     instagram: 
     tumblr: 
     github: "https://github.com/edreamoon"
+    linkedin: 
+    zhihu: 
+    bilibili: 
+    telegram: 
+
+# SNS Share Switch
+sns_share:
+    twitter: true
+    facebook: true
+    googleplus: true
+    weibo: true
+    linkedin: false
+    qq: false
+    telegram: false
 
 # Sidebar User Dropdown
-dropdown: 
-    Email Me: 
+dropdown:
+    Email Me:
         link: "mailto:lijfbest@gmail.com"
         icon: email
 
+# Sidebar Categories Switch
+sidebar_categories: false
+
 # Pages Menu
 pages:
+  #About:
   关于我: "/about"
   标签云: "/tags"
-    
 
+# Qrcode for redirect at other device
+qrcode: false
 
 # ---------------------------------------------------------------
 # Integrated Services
 # ---------------------------------------------------------------
-    
+
 # Comment Systems
-# Available value:
+# Available value of "use":
 #     duoshuo | disqus
 comment:
     use: duoshuo
     shortname: edreamoon
-    duoshuo_thread_key: path
+    duoshuo_thread_key_type: path
     duoshuo_embed_js_url: "https://static.duoshuo.com/embed.js"
 
 # Search Systems
@@ -124,17 +143,15 @@ comment:
 #     swiftype | google | local
 search:
     use: google
-    swiftype_key: 
-    path: search.xml
-    field: post
-        
+    swiftype_key:
+
 # Leancloud Views
 leancloud:
     enable: true
     app_id: aJ0c2CrzbpeNErEbQCGFWjaK-gzGzoHsz
     app_key: ctzcIg5cTpvpUnAUO6wJ6WNn
     av_core_mini: "https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"
-    
+
 # Busuanzi 不蒜子 Views
 busuanzi:
     enable: false
