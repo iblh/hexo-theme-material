@@ -1,4 +1,3 @@
-
 .DS_Store
 
 npm-debug.log
@@ -6,4 +5,3 @@ npm-debug.log
 _config.viosey.yml
 
 node_modules
-

@@ -12,10 +12,8 @@ head:
 # Jump Links Settings
 url:
     rss:
-    daily_pic: "404.html"
-    #标语后的图片
-    logo: "404.html"
-    #搜索键下的图片
+    daily_pic: "#"
+    logo: "#"
 
 
 # ---------------------------------------------------------------
@@ -28,27 +26,27 @@ scheme: Paradox
 
 # UI & UX: slogan, color, effect
 uiux:
-    slogan: "Never do a dreamer."
-    theme_color: "#2196F3"
-    theme_sub_color: "#FF5722"
-    hyperlink_color: "#3F51B5"
-    button_color: "#4CAF50"
-    android_chrome_color: "#2196F3"
-    nprogress_color: "#009688"
+    slogan: "Hi, nice to meet you"
+    theme_color: "#0097A7"
+    theme_sub_color: "#00838F"
+    hyperlink_color: "#00838F"
+    button_color: "#757575"
+    android_chrome_color: "#0097A7"
+    nprogress_color: "#FF4081"
     nprogress_buffer: "800"
 
 # JS Effect Switches
 js_effect:
     fade: true
-    smoothscroll: true
+    smoothscroll: false
 
 # Reading experience
 # markdown available value:
 #     Material | Github | Plain
 reading:
-    markdown: Material
+    markdown: Github
     entry_excerpt: 80
-    code_highlight: github
+    code_highlight: solarized-white
 
 # Thumbnail Settings
 thumbnail:
@@ -86,18 +84,18 @@ fonts: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "
 
 # SNS Menu
 sns:
-    email: halyul@halyul.cc
-    twitter: "https://twitter.com/HalyulXu"
-    facebook: "https://www.facebook.com/halyul"
-    googleplus: "https://plus.google.com/u/0/109529410449534581819"
-    weibo: "http://weibo.com/halyul"
-    instagram:
-    tumblr:
-    github: "https://www.github.com/halyul"
-    linkedin:
-    zhihu: "https://www.zhihu.com/people/halyul-xu"
-    bilibili: "http://space.bilibili.com/2020504"
-    telegram:
+    email: youremail@email.com
+    facebook: "https://www.facebook.com/facebook"
+    twitter: "https://twitter.com/twitter"
+    googleplus: "https://www.google.com/"
+    weibo: 
+    instagram: 
+    tumblr: 
+    github: 
+    linkedin: 
+    zhihu: 
+    bilibili: 
+    telegram: 
 
 # SNS Share Switch
 sns_share:
@@ -105,50 +103,27 @@ sns_share:
     facebook: true
     googleplus: true
     weibo: true
-    linkedin: true
-    qq: true
-    telegram: true
+    linkedin: false
+    qq: false
+    telegram: false
 
 # Sidebar User Dropdown
 dropdown:
-    Halyul的小站:
-        link: "//halyul.cc"
-        icon: home
     Email Me:
-        link: "mailto:halyul@halyul.cc"
+        link: "#"
         icon: email
 
 # Sidebar Categories Switch
-sidebar_categories: true
+sidebar_categories: false
 
 # Pages Menu
 pages:
-    Todo List:
-        link: "//halyul.cc/#about"
-        icon: person
-    标签云:
-        link: "/tags"
-        icon: person
-    图库:
-        link: "/galleries"
-        icon: person
-    友情链接:
-        link: "//halyul.cc/#links"
-        icon: person
-    关于:
-        link: "//halyul.cc/#about"
-        icon: person
-
-# Icon changing
-icon:
-    #Homepage: home
-    #Lucky: explore
-    Archives: archive
-    #Categories: chrome_reader_mode
-    Article: local_library
+    #About:
+        #link: "/about"
+        #icon: person
 
 # Qrcode for redirect at other device
-qrcode: true
+qrcode: false
 
 # ---------------------------------------------------------------
 # Integrated Services
@@ -158,17 +133,16 @@ qrcode: true
 # Available value of "use":
 #     duoshuo | disqus
 comment:
-    use: duoshuo
-    shortname: halyul
-    duoshuo_thread_key: path
-    duoshuo_embed_js_url: "https://cdn.halyul.cc/js/dsembed.js"
+    use:
+    shortname:
+    duoshuo_thread_key_type: path
+    duoshuo_embed_js_url: "https://static.duoshuo.com/embed.js"
 
 # Search Systems
 # Available value:
 #     swiftype | google | local
 search:
-    search:
-    use: local
+    use: google
     swiftype_key:
 
 # Leancloud Views
@@ -180,7 +154,7 @@ leancloud:
 
 # Busuanzi 不蒜子 Views
 busuanzi:
-    enable: true
-    all_site_uv: true
-    post_pv: true
+    enable: false
+    all_site_uv: false
+    post_pv: false
     busuanzi_pure_mini_js: "https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"

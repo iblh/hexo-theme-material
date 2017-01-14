@@ -5,17 +5,6 @@
     <% if(page.layout === 'gallery') { %>
         <!-- Single Gallery Page -->
         <%- partial('_widget/page-gallery') %>
-
-        <!-- Canada gallery start-->
-      	<% } else if(page.layout == "cagallery") { %>
-      	<%- partial("_widget/page-cagallery") %>
-      	<!-- Canada gallery end-->
-
-      	<!-- Japan gallery start-->
-      	<% } else if(page.layout == "jpgallery") { %>
-      	<%- partial("_widget/page-jpgallery") %>
-      	<!-- Japan gallery end-->
-
     <% } else { %>
         <body id="scheme-<%= theme.scheme %>">
             <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
