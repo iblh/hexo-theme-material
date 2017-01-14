@@ -1,45 +1,50 @@
 <!--Footer-->
 <footer class="mdl-mini-footer" id="bottom">
-	
-	<% if(theme.scheme == "Paradox"){ %>
-		<!-- Paradox Footer Left Section -->
-		<%- partial("_partial/footer-left") %>
+    <% if(theme.scheme === 'Paradox') { %>
+        <!-- Paradox Footer Left Section -->
+        <%- partial('_partial/footer-left') %>
 
-		<!--Copyright-->
-		<div id="copyright">Copyright&nbsp;©&nbsp;<script type="text/javascript">var fd = new Date();document.write(fd.getFullYear());</script>&nbsp;<%- config.title %></div>
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;
+            <script type="text/javascript">
+                var fd = new Date();
+                document.write(fd.getFullYear());
+            </script>
+            &nbsp;<%- config.title %>
+        </div>
 
-		<!-- Paradox Footer Right Section -->
+        <!-- Paradox Footer Right Section -->
 
-		<!-- 
-		I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright.
-		It will not impact the appearance and can give developers a lot of support :)
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
 
-		很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
-		它不会影响美观并可以给开发者很大的支持。 :) 
-		-->
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
 
-		<div class="mdl-mini-footer--right-section">
-			<div>
-				<div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
-				<div class="footer-develop-div">Hosted by <a href="http://halyul.cc" target="_blank" class="footer-develop-a">Halyul</a></div>
-				<div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
-			</div>
-		</div>
-	<% } %>
-    <!-- Piwik -->
-	<script type="text/javascript">
-	var _paq = _paq || [];
-	// tracker methods like "setCustomDimension" should be called before "trackPageView"
-	_paq.push(['trackPageView']);
-	_paq.push(['enableLinkTracking']);
-	(function() {
-		var u="//piwik.halyul.cc/";
-		_paq.push(['setTrackerUrl', u+'piwik.php']);
-		_paq.push(['setSiteId', '3']);
-		var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-		g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-	})();
+				<div class="mdl-mini-footer--right-section">
+					<div>
+						<div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+						<div class="footer-develop-div">Hosted by <a href="http://halyul.cc" target="_blank" class="footer-develop-a">Halyul</a></div>
+						<div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+					</div>
+				</div>
+    <% } %>
+		<!-- Piwik -->
+		<script type="text/javascript">
+			var _paq = _paq || [];
+			// tracker methods like "setCustomDimension" should be called before "trackPageView"
+			_paq.push(['trackPageView']);
+			_paq.push(['enableLinkTracking']);
+			(function() {
+					var u="//piwik.halyul.cc/";
+					_paq.push(['setTrackerUrl', u+'piwik.php']);
+					_paq.push(['setSiteId', '3']);
+					var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+					g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+				})();
 	</script>
 	<!-- End Piwik Code -->
-
 </footer>

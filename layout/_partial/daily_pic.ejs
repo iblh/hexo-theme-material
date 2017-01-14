@@ -1,16 +1,16 @@
 <!-- Daily pic -->
 <div class="mdl-card daily-pic mdl-cell mdl-cell--8-col index-top-block">
-    
+
     <!-- Pic & Slogan -->
     <div class="mdl-card__media mdl-color-text--grey-50" style="background-image:url(<%= theme.img.daily_pic %>)">
-        <p class="index-top-block-slogan"><a href="<%= theme.url.daily_pic %>">&nbsp;&nbsp;&nbsp;&emsp;
-		<script type="text/javascript" src="https://api.lwl12.com/hitokoto/main/get?encode=js&amp;charset=utf-8"></script>
-        <% if(theme.uiux.slogan !=null) { %>
-          <% if(typeof theme.uiux.slogan == "string") { %>
-            <script>lwlhitokoto()</script>
-          <% } else { %>
-            <%- theme.uiux.slogan.join("<br>") %>
-          <% } %>
+        <p class="index-top-block-slogan"><a href="<%= theme.url.daily_pic %>">
+          <script type="text/javascript" src="https://api.lwl12.com/hitokoto/main/get?encode=js&amp;charset=utf-8"></script>
+        <% if(theme.uiux.slogan) { %>
+            <% if(Array.isArray(theme.uiux.slogan)) { %>
+                <%- theme.uiux.slogan.join('<br>') %>
+            <% } else { %>
+                <script>lwlhitokoto()</script>
+            <% } %>
         <% } %>
         </a></p>
     </div>

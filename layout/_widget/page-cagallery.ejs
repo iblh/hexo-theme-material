@@ -3,23 +3,23 @@
 <body>
 	<!-- Wrapper -->
 	<div id="wrapper">
-		
-		<!-- Header -->
-		<header id="header">
-			<h1>
-				<a href="<%= config.root %>"><strong><%- config.title %></strong></a> - <%= page.title %>
-			</h1>
-			<nav>
-				<ul>
-					<li>
-						<a href="//halyul.cc" class="icon fa-info-circle">
-							©&nbsp;<%- config.author %>
-						</a>
-					</li>
-				</ul>
-			</nav>
-		</header>
 
+			<!-- Header -->
+			<header id="header">
+					<h1>
+							<a href="<%= config.root %>"><strong><%- config.title %></strong></a> - <%= page.title %>
+					</h1>
+					<nav>
+							<ul>
+									<li>
+											<a href="#footer" class="icon fa-info-circle">
+													©&nbsp;<%- config.author %>
+											</a>
+									</li>
+							</ul>
+					</nav>
+			</header>
+			
 		<!-- Main -->
 		<div id="main">
 			<% if (site.data.cagallery){ %>
@@ -32,7 +32,7 @@
 				<% } %>
 			<% } %>
 		</div>
-		
+
 		<!-- Footer -->
 <!--
 		<footer id="footer" class="panel">

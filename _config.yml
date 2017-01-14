@@ -11,7 +11,7 @@ head:
 
 # Jump Links Settings
 url:
-    rss: 
+    rss:
     daily_pic: "404.html"
     #标语后的图片
     logo: "404.html"
@@ -46,7 +46,7 @@ js_effect:
 # markdown available value:
 #     Material | Github | Plain
 reading:
-    markdown: Github
+    markdown: Material
     entry_excerpt: 80
     code_highlight: github
 
@@ -65,7 +65,7 @@ background:
     #bgimg: "/img/bg.png"
     bing:
         enable: false
-        parameter: 
+        parameter:
 
 # Images Settings
 img:
@@ -95,7 +95,9 @@ sns:
     tumblr:
     github: "https://www.github.com/halyul"
     linkedin:
-    zhihu:
+    zhihu: "https://www.zhihu.com/people/halyul-xu"
+    bilibili: "http://space.bilibili.com/2020504"
+    telegram:
 
 # SNS Share Switch
 sns_share:
@@ -103,10 +105,9 @@ sns_share:
     facebook: true
     googleplus: true
     weibo: true
-    linkedin: false
-    qq: false
-    telegram: false
-
+    linkedin: true
+    qq: true
+    telegram: true
 
 # Sidebar User Dropdown
 dropdown:
@@ -117,19 +118,8 @@ dropdown:
         link: "mailto:halyul@halyul.cc"
         icon: email
 
-
-
-# Icon changing
-icon:
-    #Homepage: home
-    #Lucky: explore
-    Archives: archive
-    #Categories: chrome_reader_mode
-    Article: local_library
-    
 # Sidebar Categories Switch
 sidebar_categories: true
-
 
 # Pages Menu
 pages:
@@ -139,6 +129,13 @@ pages:
     友情链接: "//halyul.cc/#links"
     关于: "//halyul.cc/#about"
 
+# Icon changing
+icon:
+    #Homepage: home
+    #Lucky: explore
+    Archives: archive
+    #Categories: chrome_reader_mode
+    Article: local_library
 
 # Qrcode for redirect at other device
 qrcode: true
@@ -148,7 +145,7 @@ qrcode: true
 # ---------------------------------------------------------------
 
 # Comment Systems
-# Available value:
+# Available value of "use":
 #     duoshuo | disqus
 comment:
     use: duoshuo
@@ -160,8 +157,9 @@ comment:
 # Available value:
 #     swiftype | google | local
 search:
+    search:
     use: local
-    swiftype_key: 
+    swiftype_key:
 
 # Leancloud Views
 leancloud:

@@ -1,7 +1,7 @@
 sidebar:
     homepage: "Home"
     archive: "Archives"
-    article_num: "Article Number"
+    article_num: "Number of articles"
 post:
     visitor: "Visitors"
     views: "Views"
@@ -16,12 +16,12 @@ share:
     toTwitter: "Share to Twitter"
     toFacebook: "Share to Facebook"
     toLinkedIn: "Share to LinkedIn"
+    toTelegram: "Share to Telegram"
     toGplus: "Share to Google+"
     toWeibo: "Share to Weibo"
     toQQ: "Share to QQ"
-    toTelegram: "Share to Telegram"
 title:
-    category: "Category"
+    category: "Categories"
     tag: "Tag"
 misc:
     home: "Home"

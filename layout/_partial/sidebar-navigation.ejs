@@ -2,10 +2,10 @@
     <!-- User dropdown  -->
     <li class="dropdown">
         <ul id="settings-dropdown" class="dropdown-menu">
-			<% for (var i in theme.dropdown){ %>
+            <% for (var i in theme.dropdown) { %>
                 <li>
                     <a href="<%= theme.dropdown[i].link %>" target="_blank" title="<%= i %>">
-						<i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element"><%= theme.dropdown[i].icon %></i>
+                        <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element"><%= theme.dropdown[i].icon %></i>
                         <%= i %>
                     </a>
                 </li>
@@ -16,61 +16,60 @@
     <!-- Homepage -->
     <li id="sidebar-first-li">
         <a href="<%= config.root %>" target="_self">
-            <i class="material-icons sidebar-material-icons">
-			<% if(typeof theme.icon.Homepage == "string") { %>
-				<%- theme.icon.Homepage %>
-			<% } else { %>
-				home
-			<% } %>
-			</i>
-             <%= __("sidebar.homepage") %>
+          <i class="material-icons sidebar-material-icons">
+            <% if(typeof theme.icon.Homepage == "string") { %>
+              <%- theme.icon.Homepage %>
+            <% } else { %>
+              home
+            <% } %>
+          </i>
+            <%= __('sidebar.homepage') %>
         </a>
     </li>
 
     <!-- I'm Feeling Lucky -->
-<!--
+    <!--
     <li class="dropdown">
         <a href="" target="_self">
-            <i class="material-icons sidebar-material-icons">
-			<% if(typeof theme.icon.Lucky == "string") { %>
-				<%- theme.icon.Lucky %>
-			<% } else { %>
-				explore
-			<% } %>
-			</i>
+        <i class="material-icons sidebar-material-icons">
+          <% if(typeof theme.icon.Lucky == "string") { %>
+            <%- theme.icon.Lucky %>
+          <% } else { %>
+            explore
+          <% } %>
+        </i>
              <%= __("sidebar.imlucky") %>
         </a>
     </li>
--->
+    -->
 
-
-	<!-- Article Numebr  -->
+    <!-- Article Numebr  -->
     <li>
         <a href="/archives">
-			<i class="material-icons sidebar-material-icons">
-			<% if(typeof theme.icon.Article == "string") { %>
-				<%- theme.icon.Article %>
-			<% } else { %>
-				library_books
-			<% } %>
-			</i>
-             <%= __("sidebar.article_num") %>
-             <span class="sidebar-badge"><%= site.posts.length  %></span>
+          <i class="material-icons sidebar-material-icons">
+    			<% if(typeof theme.icon.Article == "string") { %>
+    				<%- theme.icon.Article %>
+    			<% } else { %>
+    				library_books
+    			<% } %>
+    			</i>
+            <%= __('sidebar.article_num') %>
+            <span class="sidebar-badge"><%= site.posts.length %></span>
         </a>
     </li>
-	
+  </ul>
 
     <!-- Archives  -->
     <li class="dropdown">
         <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
-            <i class="material-icons sidebar-material-icons">
-			<% if(typeof theme.icon.Archives == "string") { %>
-				<%- theme.icon.Archives %>
-			<% } else { %>
-				inbox
-			<% } %>
-			</i>
-             <%= __("sidebar.archive") %>
+          <i class="material-icons sidebar-material-icons">
+            <% if(typeof theme.icon.Archives == "string") { %>
+              <%- theme.icon.Archives %>
+            <% } else { %>
+              inbox
+            <% } %>
+          </i>
+            <%= __('sidebar.archive') %>
             <b class="caret"></b>
         </a>
         <ul class="dropdown-menu">
@@ -85,43 +84,45 @@
         </ul>
     </li>
 
-
     <!-- Categories  -->
-    <% if(theme.sidebar_categories == true){ %>
-    <li class="dropdown">
-        <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
-            <i class="material-icons sidebar-material-icons">
-			<% if(typeof theme.icon.Categories == "string") { %>
-				<%- theme.icon.Categories %>
-			<% } else { %>
-				chrome_reader_mode
-			<% } %>
-			</i>
-             <%= __("title.category") %>
-            <b class="caret"></b>
-        </a>
-        <ul class="dropdown-menu">
-            <li>
-            <%- list_categories({
-                show_count: true,
-                amount: 5,
-                class: 'sidebar_archives',
-                style: 'none',
-                separator: '</li><li>'
-            }) %>
-        </ul>
-    </li>
-	
+    <% if(theme.sidebar_categories === true) { %>
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+              <i class="material-icons sidebar-material-icons">
+                <% if(typeof theme.icon.Categories == "string") { %>
+                  <%- theme.icon.Categories %>
+                <% } else { %>
+                  chrome_reader_mode
+                <% } %>
+              </i>
+                <%= __('title.category') %>
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <%- list_categories({
+                    show_count: true,
+                    amount: 5,
+                    class: 'sidebar_archives',
+                    style: 'none',
+                    separator: '</li><li>'
+                }) %>
+            </ul>
+        </li>
     <% } %>
+
     <!-- Divider -->
     <li class="divider"></li>
 
-    <!-- Pages  -->
-	<% for (var i in theme.pages){ %>
-		<li>
-			<a href="<%= theme.pages[i] %>" title="<%= i %>">
-				<%= i %>
-			</a>
-		</li>
-	<% } %>
 
+    <!-- Pages  -->
+  	<% for (var i in theme.pages){ %>
+        <li>
+            <a href="<%= theme.pages[i].link %>" title="<%= i %>">
+                <% if(theme.pages[i].icon){ %>
+                    <i class="material-icons sidebar-material-icons"><%= theme.pages[i].icon %></i>
+                <% } %>
+                <%= i %>
+            </a>
+        </li>
+  	<% } %>
