@@ -46,7 +46,7 @@ js_effect:
 reading:
     markdown: Github
     entry_excerpt: 80
-    code_highlight: Androidstudio
+    code_highlight: solarized-dark
 
 # Thumbnail Settings
 thumbnail:
@@ -119,8 +119,11 @@ sidebar_categories: false
 # Pages Menu
 pages:
   #About:
-  关于我: "/about"
-  标签云: "/tags"
+  关于我:
+     link: "/about"
+  标签云: 
+     link: "/tags"
+ 
 
 # Qrcode for redirect at other device
 qrcode: false
