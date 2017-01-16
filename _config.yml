@@ -73,7 +73,8 @@ img:
     sidebar_header: "/img/sidebar_header.png"
     footerico: "/img/footer/footer_ico-"
     random_thumbnail: "/img/random/material-"
-    sponsor: false
+    sponsor: 
+        enable: false
         #upyun_logo: "/img/upyun_logo.png"
         cc_by: "/img/cc_by.png"
 
