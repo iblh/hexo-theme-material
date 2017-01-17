@@ -2,7 +2,7 @@
 IF YOU DON'T FILL OUT THE FOLLOWING INFORMATION WE MIGHT CLOSE YOUR ISSUE WITHOUT INVESTIGATING
 -->
 
-**I certified that I have first consulted** (check all with "x")
+**I certify that I have first consulted** (check all with "x")
 
 - [ ] [Hexo documentation](https://hexo.io/docs/)
 - [ ] [Material theme documentation](https://material.viosey.com/)

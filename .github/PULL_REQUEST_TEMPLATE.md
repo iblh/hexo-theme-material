@@ -2,6 +2,8 @@
 IF YOU DON'T FILL OUT THE FOLLOWING INFORMATION WE MIGHT CLOSE YOUR PULL REQUESTS WITHOUT INVESTIGATING
 -->
 
+Please be sure to put the `canary` branch as the target for your pull request.
+
 **What kind of change does this PR introduce?** (check one with "x")
 
 - [ ] Bug fix
