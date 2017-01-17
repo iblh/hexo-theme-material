@@ -4,7 +4,6 @@
     "subject_cannot_be_empty": true,
     "subject_must_be_longer_than": 4,
     "subject_must_be_in_tense": "imperative",
-    "subject_must_start_with_case": "lower",
     "subject_must_not_end_with_dot": true
   },
   "pull_request": {
