@@ -67,6 +67,7 @@
     <meta property="og:type" content="blog">
     <meta property="og:title" content="<% if (title) { %><%= title %> | <% } %><%= config.title %>">
     <meta property="og:description" content="<%= config.description %>">
+    <% if(page.tags) { page.tags.each(function(tag){ %><meta property="og:article:tag" content="<%= tag.name %>"> <% })} %>
 
     <!--[if lte IE 9]>
         <link rel="stylesheet" href="/css/ie-blocker.css">
