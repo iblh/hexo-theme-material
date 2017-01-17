@@ -44,7 +44,7 @@
     <meta name="theme-color" content="<%= theme.uiux.android_chrome_color %>">
     <meta name="author" content="<%= config.author %>">
     <meta name="description" content="<%= config.description %>">
-    <meta name="keywords" content="<%= theme.head.keywords %><% if(page.tags) { page.tags.each(function(tag) { %><%- ',' + tag.name %><% })} %>">
+    <meta name="keywords" content="<%= theme.head.keywords %><% if(page.tags && page.tags.each) { page.tags.each(function(tag) { %><%- ',' + tag.name %><% })} %>">
 
     <!--iOS -->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -67,7 +67,7 @@
     <meta property="og:type" content="blog">
     <meta property="og:title" content="<% if (title) { %><%= title %> | <% } %><%= config.title %>">
     <meta property="og:description" content="<%= config.description %>">
-    <% if(page.tags) { page.tags.each(function(tag){ %><meta property="og:article:tag" content="<%= tag.name %>"> <% })} %>
+    <% if(page.tags && page.tags.each) { page.tags.each(function(tag){ %><meta property="og:article:tag" content="<%= tag.name %>"> <% })} %>
 
     <!--[if lte IE 9]>
         <link rel="stylesheet" href="/css/ie-blocker.css">
