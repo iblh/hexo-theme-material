@@ -145,6 +145,11 @@ search:
     use: google
     swiftype_key:
 
+# Analytics Systems
+analytics:
+    baidu_id: 
+    google_id: 
+
 # Leancloud Views
 leancloud:
     enable: false
