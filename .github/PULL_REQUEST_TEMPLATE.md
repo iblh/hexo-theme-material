@@ -5,7 +5,12 @@ IF YOU DON'T FILL OUT THE FOLLOWING INFORMATION WE MIGHT CLOSE YOUR PULL REQUEST
 **Contributing rules**
 
 - Fork the repo and create your branch from `canary`. Then be sure to put the `canary` branch as the target for your pull request.
-- Please be sure to follow the [contributing guidelines](https://github.com/viosey/hexo-theme-material/blob/master/CONTRIBUTING.md)
+- Please be sure to follow the [contributing guidelines](https://github.com/viosey/hexo-theme-material/blob/master/CONTRIBUTING.md), especially for commit message
+- Remove the `Contributing rules` part from this description
+- Fill out the other parts from this description
+
+
+<!-- ----------- -->
 
 **What kind of change does this PR introduce?** (check one with "x")
 
@@ -22,4 +27,15 @@ IF YOU DON'T FILL OUT THE FOLLOWING INFORMATION WE MIGHT CLOSE YOUR PULL REQUEST
 - [ ] Yes
 - [ ] No
 
-<!-- ----------- -->
+
+____
+
+**Description**
+
+No description.
+
+____
+
+**Verification steps**
+
+No verification steps.
