@@ -126,7 +126,7 @@ pages:
 qrcode: false
 
 # Support Pin posts on the top of the list
-pin_post: false
+topPost: false
 
 # ---------------------------------------------------------------
 # Integrated Services
