@@ -1,45 +1,51 @@
 <head>
     <!--
-        © Material Theme 
+        © Material Theme
         https://github.com/viosey/hexo-theme-material
-        Version: Canary 1.2.5.1
-    
+        Version: 1.2.6 -->
+
     <!-- Title -->
     <%
         var title = page.title;
 
-        if (is_archive()){
-            title = __("sidebar.archive");
+        if (is_archive()) {
+            title = __('sidebar.archive');
 
-            if (is_month()){
+            if (is_month()) {
                 title += ': ' + page.year + '/' + page.month;
-            } else if (is_year()){
+            }
+            else if (is_year()) {
                 title += ': ' + page.year;
             }
-        } else if (is_category()){
-            title = __("title.category") + ': ' + page.category;
-        } else if (is_tag()){
-            title = __("title.tag") + ': ' + page.tag;
+        }
+        else if (is_category()) {
+            title = __('title.category') + ': ' + page.category;
+        }
+        else if (is_tag()) {
+            title = __('title.tag') + ': ' + page.tag;
         }
     %>
     <title>
-        <% if (title){ %><%= title %> | <% } %><%= config.title %>
+        <% if (title) { %>
+            <%= title + ' | ' %>
+        <% } %>
+        <%= config.title %>
     </title>
-    
+
     <!-- Favicons -->
     <link rel="icon shortcut" type="image/ico" href="<%= theme.head.favicon %>">
     <link rel="icon" sizes="192x192" href="<%= theme.head.high_res_favicon %>">
     <link rel="apple-touch-icon" href="<%= theme.head.apple_touch_icon %>">
-    
-    <!-- Meta & INfo -->
+
+    <!-- Meta & Info -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="<%= theme.uiux.android_chrome_color %>">
     <meta name="author" content="<%= config.author %>">
     <meta name="description" content="<%= config.description %>">
-    <meta name="keywords" content="<%= theme.head.keywords %>">
-    
+    <meta name="keywords" content="<%= theme.head.keywords %><% if(page.tags) { page.tags.each(function(tag) { %><%- ',' + tag.name %><% })} %>">
+
     <!--iOS -->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-title" content="Title">
@@ -47,53 +53,75 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="480">
-    
+
     <!-- Add to homescreen for Chrome on Android -->
     <meta name="mobile-web-app-capable" content="yes">
-    
+
     <!-- Add to homescreen for Safari on iOS -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="<%= config.title %>">
-    
+
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="<%= config.url %>">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="<% if (title){ %><%= title %> | <% } %><%= config.title %>">
+    <meta property="og:title" content="<% if (title) { %><%= title %> | <% } %><%= config.title %>">
     <meta property="og:description" content="<%= config.description %>">
-    
-     <!--[if lte IE 9]>
+
+    <!--[if lte IE 9]>
         <link rel="stylesheet" href="/css/ie-blocker.css">
-        
-        <% if(config.language == "zh-CN"){ %>
+
+        <% if(config.language == "zh-CN") { %>
             <script src="/js/ie-blocker.zhCN.js"></script>
         <% } else { %>
             <script src="/js/ie-blocker.en.js"></script>
         <% } %>
     <![endif]-->
-    
+
     <!-- Import CSS -->
     <%- css("css/material.min") %>
     <%- css("css/style.min") %>
     <%- partial("_partial/config_css") %>
-	<%- js("js/jquery.min") %>
-	
-	<%- css("css/highlight/" + theme.reading.code_highlight ) %>
-	
-	<!-- UC Browser Compatible-->
-	<script>
-		var agent = navigator.userAgent.toLowerCase();
-		if(agent.indexOf('ucbrowser')>0) {
-			document.write('<%- css("css/uc") %>');
-		   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
-		}
-	</script>
-    
+    <%- js("js/jquery.min") %>
+
+    <%- css("css/highlight/" + theme.reading.code_highlight ) %>
+
+    <!-- UC Browser Compatible -->
+    <script>
+        var agent = navigator.userAgent.toLowerCase();
+        if(agent.indexOf('ucbrowser')>0) {
+            document.write('<%- css("css/uc") %>');
+            alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+        }
+    </script>
+
+    <% if(theme.analytics.baidu_id) { %>
+    <!-- Baidu Analytics -->
+    <script>
+        var _hmt = _hmt || [];
+        (function() {var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?<%= theme.analytics.baidu_id %>";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <% } %>
+
+    <% if(theme.analytics.google_id) { %>
+    <!-- Google Analytics -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', '<%= theme.analytics.google_id %>', 'auto');ga('send', 'pageview');
+    </script>
+    <% } %>
+
     <!-- Custom Head -->
-    <% if (site.data.head){ %>
-        <% for (var i in site.data.head){ %>
-			<!-- <%= i %> -->
-			<%- site.data.head[i] %>
+    <% if (site.data.head) { %>
+        <% for (var i in site.data.head) { %>
+            <%- site.data.head[i] %>
         <% } %>
     <% } %>
 </head>

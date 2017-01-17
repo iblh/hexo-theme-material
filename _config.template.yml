@@ -86,16 +86,16 @@ fonts: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "
 sns:
     email: youremail@email.com
     facebook: "https://www.facebook.com/facebook"
-    twitter:
-    googleplus:
-    weibo:
-    instagram:
-    tumblr:
-    github:
-    linkedin:
-    zhihu:
-    bilibili:
-    telegram:
+    twitter: "https://twitter.com/twitter"
+    googleplus: "https://www.google.com/"
+    weibo: 
+    instagram: 
+    tumblr: 
+    github: 
+    linkedin: 
+    zhihu: 
+    bilibili: 
+    telegram: 
 
 # SNS Share Switch
 sns_share:
@@ -118,7 +118,9 @@ sidebar_categories: false
 
 # Pages Menu
 pages:
-    #about: "/about"
+    #About:
+        #link: "/about"
+        #icon: person
 
 # Qrcode for redirect at other device
 qrcode: false
@@ -142,6 +144,11 @@ comment:
 search:
     use: google
     swiftype_key:
+
+# Analytics Systems
+analytics:
+    baidu_id: 
+    google_id: 
 
 # Leancloud Views
 leancloud:
