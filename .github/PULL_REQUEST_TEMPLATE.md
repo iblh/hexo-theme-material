@@ -2,7 +2,10 @@
 IF YOU DON'T FILL OUT THE FOLLOWING INFORMATION WE MIGHT CLOSE YOUR PULL REQUESTS WITHOUT INVESTIGATING
 -->
 
-Please be sure to put the `canary` branch as the target for your pull request.
+**Contributing rules**
+
+- Fork the repo and create your branch from `canary`. Then be sure to put the `canary` branch as the target for your pull request.
+- Please be sure to follow the [contributing guidelines](https://github.com/viosey/hexo-theme-material/blob/master/CONTRIBUTING.md)
 
 **What kind of change does this PR introduce?** (check one with "x")
 
