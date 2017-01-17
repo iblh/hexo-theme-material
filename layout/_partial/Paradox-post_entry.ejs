@@ -14,7 +14,7 @@
     <% } %>
 
         <!-- Post Title -->
-        <p class="article-headline-p"><a href="<%= url_for(post.path) %>"><%= post.title %></a></p>
+        <p class="article-headline-p"><a href="<%= url_for(post.path) %>"><% if(pin) { %><span>[Top]</span><% } %><%= post.title %></a></p>
     </div>
 
     <!-- Post Excerpt -->
