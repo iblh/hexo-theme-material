@@ -145,6 +145,14 @@ search:
     use: google
     swiftype_key:
 
+# Analytics Systems
+# Available value:
+#     baidu | google
+analytics:
+    use: 
+    baidu_id: "12345678901234567890123456789012"
+    google_id: "UA-12345678-9"
+
 # Leancloud Views
 leancloud:
     enable: false

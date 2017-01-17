@@ -44,7 +44,7 @@
     <meta name="theme-color" content="<%= theme.uiux.android_chrome_color %>">
     <meta name="author" content="<%= config.author %>">
     <meta name="description" content="<%= config.description %>">
-    <meta name="keywords" content="<%= theme.head.keywords %><% if(page.tags) { page.tags.each(function(tag) { %><%- ',' + tag.name %><% })} %>">
+    <meta name="keywords" content="<%= theme.head.keywords %>">
 
     <!--iOS -->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -86,7 +86,7 @@
 
     <%- css("css/highlight/" + theme.reading.code_highlight ) %>
 
-    <!-- UC Browser Compatible-->
+    <!-- UC Browser Compatible -->
     <script>
         var agent = navigator.userAgent.toLowerCase();
         if(agent.indexOf('ucbrowser')>0) {
@@ -94,6 +94,29 @@
             alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
         }
     </script>
+
+    <% if(theme.analytics.use === 'baidu') { %>
+    <!-- Baidu Analytics -->
+    <script>
+        var _hmt = _hmt || [];
+        (function() {var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?<%= theme.analytics.baidu_id %>";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <% } %>
+
+    <% if(theme.analytics.use === 'google') { %>
+    <!-- Google Analytics -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', '<%= theme.analytics.google_id %>', 'auto');ga('send', 'pageview');
+    </script>
+    <% } %>
 
     <!-- Custom Head -->
     <% if (site.data.head) { %>
