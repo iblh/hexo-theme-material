@@ -28,7 +28,7 @@
     <div class="post_entry-content mdl-color-text--grey-600 mdl-card__supporting-text">
         <!-- Post Title -->
         <p class="post_entry-title">
-            <a href="<%= url_for(post.path) %>"><%= post.title %></a>
+            <a href="<%= url_for(post.path) %>"><% if(pin) { %><span>[Top]</span><% } %><%= post.title %></a>
         </p>
 
         <!-- Post Excerpt -->
