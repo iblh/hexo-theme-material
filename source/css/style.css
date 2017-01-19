@@ -552,7 +552,7 @@ a {
     min-height: 400px;
     flex-direction: column;
     align-items: stretch;
-  border-radius: 5px;
+  border-radius: 2px;
 }
 @media screen and (max-width: 480px) {
   #scheme-Paradox .material-post .mdl-card {
@@ -1287,7 +1287,7 @@ a {
 #scheme-Isolation .post_entry-module {
   margin-bottom: 24px;
   width: 100%;
-    border-radius: 5px;
+    border-radius: 2px;
     box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
     -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
 }
@@ -1812,7 +1812,7 @@ a {
 
 #scheme-Isolation .material-post .mdl-card{
   width: 100%;
-  border-radius: 5px;
+  border-radius: 2px;
 }
 
 #scheme-Isolation .material-nav a{
