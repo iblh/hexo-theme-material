@@ -29,12 +29,10 @@
   "issue": {
     "subject_cannot_be_empty": true,
     "subject_must_be_longer_than": 4,
-    "subject_must_be_in_tense": "imperative",
     "subject_must_start_with_case": "upper",
     "subject_must_not_end_with_dot": true,
     "body_cannot_be_empty": true,
-    "body_must_include_reproduction_steps": ["bug"],
-    "label_must_be_set": true
+    "body_must_include_reproduction_steps": ["bug"]
   },
   "branch": {
     "name_must_be_longer_than": 4,
