@@ -84,6 +84,7 @@
     <%- css("css/style.min") %>
     <%- partial("_partial/config_css") %>
     <%- js("js/jquery.min") %>
+    <%- js("js/queue") %>
 
     <%- css("css/highlight/" + theme.reading.code_highlight ) %>
 
@@ -117,6 +118,13 @@
         })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
         ga('create', '<%= theme.analytics.google_id %>', 'auto');ga('send', 'pageview');
     </script>
+    <% } %>
+
+    <!-- Bing Background -->
+    <% if(theme.background.bing.enable) { %>
+        <script type="text/javascript">
+            queue.offer(function(){document.body.background="https://api.i-meto.com/bing?<%= theme.background.bing.parameter %>"});
+        </script>
     <% } %>
 
     <!-- Custom Head -->
