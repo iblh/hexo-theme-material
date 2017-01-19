@@ -85,6 +85,7 @@
     <%- partial("_partial/config_css") %>
     <%- js("js/jquery.min") %>
     <%- js("js/queue") %>
+    <%- js("js/lazyload.min") %>
 
     <%- css("css/highlight/" + theme.reading.code_highlight ) %>
 
@@ -123,7 +124,10 @@
     <!-- Bing Background -->
     <% if(theme.background.bing.enable) { %>
         <script type="text/javascript">
-            queue.offer(function(){document.body.background="https://api.i-meto.com/bing?<%= theme.background.bing.parameter %>"});
+            queue.offer(function(){
+                $('body').attr("data-original","https://api.i-meto.com/bing?<%= theme.background.bing.parameter %>");
+                $('body.lazy').lazyload();
+            });
         </script>
     <% } %>
 
