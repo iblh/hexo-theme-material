@@ -2,10 +2,10 @@
     <!-- User dropdown  -->
     <li class="dropdown">
         <ul id="settings-dropdown" class="dropdown-menu">
-            <% for (var i in theme.dropdown) { %>
+            <% for (var i in theme.sidebar.dropdown) { %>
                 <li>
-                    <a href="<%= theme.dropdown[i].link %>" target="_blank" title="<%= i %>">
-                        <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element"><%= theme.dropdown[i].icon %></i>
+                    <a href="<%= theme.sidebar.dropdown[i].link %>" target="_blank" title="<%= i %>">
+                        <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element"><%= theme.sidebar.dropdown[i].icon %></i>
                         <%= i %>
                     </a>
                 </li>
@@ -14,44 +14,38 @@
     </li>
 
     <!-- Homepage -->
-    <li id="sidebar-first-li">
-        <a href="<%= config.root %>" target="_self">
-            <i class="material-icons sidebar-material-icons">home</i>
-            <%= __('sidebar.homepage') %>
-        </a>
-    </li>
-
-    <!-- I'm Feeling Lucky -->
-    <!--
-    <li class="dropdown">
-        <a href="" target="_self">
-            <i class="material-icons sidebar-material-icons">explore</i>
-             <%= __("sidebar.imlucky") %>
-        </a>
-    </li>
-    -->
+    <% if(theme.sidebar.homepage === true) { %>
+            <li id="sidebar-first-li">
+                <a href="<%= config.root %>" target="_self">
+                    <i class="material-icons sidebar-material-icons"><%= theme.sidebar.homepage.icon %></i>
+                <%= __('sidebar.homepage') %>
+            </a>
+        </li>
+    <% } %>
 
     <!-- Archives  -->
-    <li class="dropdown">
-        <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
-            <i class="material-icons sidebar-material-icons">inbox</i>
-             <%= __('sidebar.archive') %>
-            <b class="caret"></b>
-        </a>
-        <ul class="dropdown-menu">
+    <% if(theme.sidebar.archives === true) { %>
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                <i class="material-icons sidebar-material-icons"><%= theme.sidebar.archive.icon %></i>
+                    <%= __('sidebar.archive') %>
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
             <li>
-            <%- list_archives({
-                show_count: true,
-                amount: 5,
-                class: 'sidebar_archives',
-                style: 'none',
-                separator: '</li><li>'
-            }) %>
-        </ul>
-    </li>
+                <%- list_archives({
+                    show_count: true,
+                    amount: 5,
+                    class: 'sidebar_archives',
+                    style: 'none',
+                    separator: '</li><li>'
+                }) %>
+            </ul>
+        </li>
+    <% } %>
 
     <!-- Categories  -->
-    <% if(theme.sidebar_categories === true) { %>
+    <% if(theme.sidebar.categories === true) { %>
         <li class="dropdown">
             <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
                 <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
@@ -76,16 +70,16 @@
 
 
     <!-- Pages  -->
-  	<% for (var i in theme.pages){ %>
+    <% for (var i in theme.sidebar.pages){ %>
         <li>
-            <a href="<%= theme.pages[i].link %>" title="<%= i %>">
-                <% if(theme.pages[i].icon){ %>
-                    <i class="material-icons sidebar-material-icons"><%= theme.pages[i].icon %></i>
+            <a href="<%= theme.sidebar.pages[i].link %>" title="<%= i %>">
+                <% if(theme.sidebar.pages[i].icon){ %>
+                    <i class="material-icons sidebar-material-icons"><%= theme.sidebar.pages[i].icon %></i>
                 <% } %>
                 <%= i %>
             </a>
         </li>
-  	<% } %>
+    <% } %>
 
     <!-- Article Numebr  -->
     <li>
