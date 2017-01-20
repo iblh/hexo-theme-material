@@ -1,0 +1,9 @@
+<% if(theme.img.footer_image) { %>
+    <div id="footer-image">
+        <% for (var i in theme.img.footer_image) { %>
+            <a href="<%= theme.img.footer_image[i].link %>" target="_blank" title="<%= i %>">
+                <img src="<%= theme.img.footer_image[i].src %>" alt="<%= i %>">
+            </a>
+        <% } %>
+    </div>
+<% } %>
