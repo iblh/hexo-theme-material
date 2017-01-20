@@ -16,7 +16,7 @@
     <!-- Hidden Page -->
     <div class="material-post_container">
         <div class="material-post mdl-grid">
-            <div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col">
+            <div class="mdl-card <% if(theme.card_elevation) { %>mdl-shadow--<%= theme.card_elevation %>dp<% } %> mdl-cell mdl-cell--12-col">
                 <!-- Post Header(Thumbnail & Title) -->
                 <%- partial('_partial/post-header') %>
 

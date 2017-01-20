@@ -116,8 +116,8 @@ dropdown:
 # Sidebar Categories Switch
 sidebar_categories: false
 
-# Card Elevation Switch
-card_elevation: false
+# Card Elevation Level
+card_elevation: 2
 
 # Pages Menu
 pages:
