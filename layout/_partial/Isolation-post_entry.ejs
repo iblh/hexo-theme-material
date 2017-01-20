@@ -1,6 +1,6 @@
-<div class="post_entry-module mdl-card <% if(theme.card_elevation) { %>mdl-shadow--<%= theme.card_elevation %>dp<% } %> mdl-cell mdl-cell--12-col fade out">
+<div class="post_entry-module mdl-card <% if(theme.card_elevation) { %><%= 'mdl-shadow--' + theme.card_elevation + 'dp' %><% } %> mdl-cell mdl-cell--12-col fade out">
     <!-- Post_entry Header -->
-    <% if(post.thumbnail == undefined) { %>
+    <% if(!post.thumbnail) { %>
         <!-- Post Header Info -->
         <div class="post_entry-header_info without-thumbnail">
             <!-- Author Avatar & Name -->
