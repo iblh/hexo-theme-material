@@ -32,8 +32,7 @@ uiux:
     hyperlink_color: "#00838F"
     button_color: "#757575"
     android_chrome_color: "#0097A7"
-    nprogress_color: "#FF4081"
-    nprogress_buffer: "800"
+    buffer: "800"
 
 # JS Effect Switches
 js_effect:
@@ -77,6 +76,14 @@ img:
 
 # Custom Fonts
 fonts: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif
+
+# Pace Settings
+# Pace is automatic page load progress bar
+#  You can find demos on http://github.hubspot.com/pace/docs/welcome
+#     style available values:
+#       barber-shop, big-counter, bounce, center-circle,
+# 		center-simple, corner-indicator, fill-left, flash, flat-top, loading-bar, macosx
+pace: macosx
 
 # ---------------------------------------------------------------
 # Menu Settings
