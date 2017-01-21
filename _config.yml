@@ -83,7 +83,7 @@ fonts: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "
 #     style available values:
 #       barber-shop, big-counter, bounce, center-circle,
 # 		center-simple, corner-indicator, fill-left, flash, flat-top, loading-bar, macosx
-pace: macosx
+pace: 
 
 # ---------------------------------------------------------------
 # Menu Settings
