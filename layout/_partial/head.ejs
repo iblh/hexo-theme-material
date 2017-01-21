@@ -83,10 +83,6 @@
     <%- css("css/style.min") %>
     <%- partial("_partial/config_css") %>
     <%- js("js/jquery.min") %>
-	<!--Import pace -->
-	<%- partial("_partial/import_pace") %>
-	
-
     <%- css("css/highlight/" + theme.reading.code_highlight ) %>
 
     <!-- UC Browser Compatible-->
@@ -97,6 +93,9 @@
             alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
         }
     </script>
+
+    <!--Import Pace -->
+    <%- partial("_partial/import_pace") %>
 
     <!-- Custom Head -->
     <% if (site.data.head) { %>

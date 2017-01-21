@@ -79,11 +79,13 @@ fonts: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "
 
 # Pace Settings
 # Pace is automatic page load progress bar
-#  You can find demos on http://github.hubspot.com/pace/docs/welcome
+# You can find demos on http://github.hubspot.com/pace/docs/welcome
 #     style available values:
-#       barber-shop, big-counter, bounce, center-circle,
-# 		center-simple, corner-indicator, fill-left, flash, flat-top, loading-bar, macosx
-pace: 
+#       barber-shop, big-counter, bounce, center-circle, center-simple,
+# 	    corner-indicator, fill-left, fill-left-nocolor, flat-top, loading-bar, macosx
+pace:
+     style:
+     color: "#29d"
 
 # ---------------------------------------------------------------
 # Menu Settings
@@ -95,14 +97,14 @@ sns:
     facebook: "https://www.facebook.com/facebook"
     twitter: "https://twitter.com/twitter"
     googleplus: "https://www.google.com/"
-    weibo: 
-    instagram: 
-    tumblr: 
-    github: 
-    linkedin: 
-    zhihu: 
-    bilibili: 
-    telegram: 
+    weibo:
+    instagram:
+    tumblr:
+    github:
+    linkedin:
+    zhihu:
+    bilibili:
+    telegram:
 
 # SNS Share Switch
 sns_share:

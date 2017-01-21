@@ -16,7 +16,6 @@
   height: 5px;
   width: 200px;
   background: #fff;
-  border: 1px solid #29d;
 
   overflow: hidden;
 }
@@ -43,7 +42,6 @@
   right: 100%;
   height: 100%;
   width: 100%;
-  background: #29d;
 }
 
 .pace.pace-inactive {
