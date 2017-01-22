@@ -87,14 +87,14 @@ sns:
     facebook: "https://www.facebook.com/facebook"
     twitter: "https://twitter.com/twitter"
     googleplus: "https://www.google.com/"
-    weibo: 
-    instagram: 
-    tumblr: 
-    github: 
-    linkedin: 
-    zhihu: 
-    bilibili: 
-    telegram: 
+    weibo:
+    instagram:
+    tumblr:
+    github:
+    linkedin:
+    zhihu:
+    bilibili:
+    telegram:
 
 # SNS Share Switch
 sns_share:
@@ -108,30 +108,23 @@ sns_share:
 
 # Sidebar Customize
 sidebar:
-    dropdown: 
-        Email Me: 
+    dropdown:
+        Email Me:
             link: "#"
             icon: email
     homepage: true
-        icon: 
+        icon:
     archives: true
-        icon: 
+        icon:
     categories: false
-        icon: 
-    pages: 
-        #About: 
+        icon:
+    pages:
+        #About:
             #link: "/about"
             #icon: person
 
-
 # Card Elevation Level
 card_elevation: 2
-
-# Pages Menu
-pages:
-    #About:
-        #link: "/about"
-        #icon: person
 
 # Qrcode for redirect at other device
 qrcode: false
