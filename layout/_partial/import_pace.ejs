@@ -1,0 +1,30 @@
+<%- js('js/pace.min') %>
+<% if(theme.pace.style === 'barber-shop') { %>
+    <%- css('css/pace/barber-shop') %>
+  <% } else if(theme.pace.style === 'big-counter') { %>
+    <%- css('css/pace/big-counter') %>
+	<% } else if(theme.pace.style === 'bounce') { %>
+ 	  <%- css('css/pace/bounce') %>
+	<% } else if(theme.pace.style === 'center-atom') { %>
+ 	  <%- css('css/pace/center-atom') %>
+	<% } else if(theme.pace.style === 'center-circle') { %>
+    <%- css('css/pace/center-circle') %>
+	<% } else if(theme.pace.style === 'center-radar') { %>
+	  <%- css('css/pace/center-radar') %>
+	<% } else if(theme.pace.style === 'center-simple') { %>
+    <%- css('css/pace/center-simple') %>
+	<% } else if(theme.pace.style === 'corner-indicator') { %>
+    <%- css('css/pace/corner-indicator') %>
+	<% } else if(theme.pace.style === 'fill-left') { %>
+ 		<%- css('css/pace/fill-left') %>
+  <% } else if(theme.pace.style === 'fill-left-nocolor') { %>
+   	<%- css('css/pace/fill-left-nocolor') %>
+	<% } else if(theme.pace.style === 'flat-top') { %>
+  	<%- css('css/pace/flat-top') %>
+	<% } else if(theme.pace.style === 'loading-bar') { %>
+   	<%- css('css/pace/loading-bar') %>
+	<% } else if(theme.pace.style === 'macosx') { %>
+   	<%- css('css/pace/macosx') %>
+	<% } else { %>
+		<%- css('css/pace/minimal') %>
+<% } %>
