@@ -41,12 +41,8 @@ js_effect:
     smoothscroll: false
 
 # Reading experience
-# markdown available value:
-#     Material | Github | Plain
 reading:
-    markdown: Github
     entry_excerpt: 80
-    code_highlight: solarized-white
 
 # Thumbnail Settings
 thumbnail:
