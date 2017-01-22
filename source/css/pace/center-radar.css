@@ -41,19 +41,6 @@
   animation: spin 1s linear infinite;
 }
 
-.pace .pace-activity:before {
-  content: ' ';
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  height: 50px;
-  width: 50px;
-  display: block;
-  border-width: 10px;
-  border-style: solid;
-  border-radius: 50%;
-}
-
 @-webkit-keyframes spin {
   100% { -webkit-transform: rotate(359deg); }
 }
