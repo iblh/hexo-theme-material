@@ -115,16 +115,29 @@ sidebar:
     homepage:
         use: true
         icon:
+        divider: false
     archives:
         use: true
         icon:
+        divider: false
     categories:
         use: false
         icon:
+        divider: false
     pages:
         #About:
             #link: "/about"
             #icon: person
+            #divider: false
+    article_num:
+        use: false
+        divider: false
+    footer:
+        divider: true
+        theme: true
+        support: false
+        feedback: false
+        material: false
 
 # Card Elevation Level
 card_elevation: 2
