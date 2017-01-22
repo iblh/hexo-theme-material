@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/viosey/hexo-theme-material#readme",
   "devDependencies": {
-    "ejs-lint": "^0.2.0"
+    "ejs-lint": "^0.2.0",
+    "sass-lint": "^1.10.2"
   }
 }
