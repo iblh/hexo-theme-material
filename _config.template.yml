@@ -107,20 +107,25 @@ sns_share:
     qq: false
     telegram: false
 
-# Sidebar User Dropdown
-dropdown:
-    Email Me:
-        link: "#"
-        icon: email
+# Sidebar Customize
+sidebar:
+    dropdown: 
+        Email Me: 
+            link: "#"
+            icon: email
+    homepage: true
+        icon: 
+    archives: true
+        icon: 
+    categories: false
+        icon: 
+    pages: 
+        #About: 
+            #link: "/about"
+            #icon: person
 
-# Sidebar Categories Switch
-sidebar_categories: false
 
-# Pages Menu
-pages:
-    #About:
-        #link: "/about"
-        #icon: person
+
 
 # Qrcode for redirect at other device
 qrcode: false
@@ -150,14 +155,14 @@ search:
 
 # Analytics Systems
 analytics:
-    baidu_id: 
-    google_id: 
+    baidu_id:
+    google_id:
 
 # Leancloud Views
 leancloud:
     enable: false
-    app_id: #你的app_id
-    app_key: #你的app_key
+    app_id: #你的 app_id
+    app_key: #你的 app_key
     av_core_mini: "https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"
 
 # Busuanzi 不蒜子 Views
