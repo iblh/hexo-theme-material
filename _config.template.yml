@@ -112,11 +112,14 @@ sidebar:
         Email Me:
             link: "#"
             icon: email
-    homepage: true
+    homepage:
+        use: true
         icon:
-    archives: true
+    archives:
+        use: true
         icon:
-    categories: false
+    categories:
+        use: false
         icon:
     pages:
         #About:

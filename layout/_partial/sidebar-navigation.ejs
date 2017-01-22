@@ -16,7 +16,7 @@
     </li>
 
     <!-- Homepage -->
-    <% if(theme.sidebar.homepage === true) { %>
+    <% if(theme.sidebar.homepage.use === true) { %>
         <li id="sidebar-first-li">
             <a href="<%= config.root %>" target="_self">
                 <% if(theme.sidebar.homepage.icon) { %>
@@ -28,7 +28,7 @@
     <% } %>
 
     <!-- Archives  -->
-    <% if(theme.sidebar.archives === true) { %>
+    <% if(theme.sidebar.archives.use === true) { %>
         <li class="dropdown">
             <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
                 <% if(theme.sidebar.archives.icon) { %>
@@ -51,7 +51,7 @@
     <% } %>
 
     <!-- Categories  -->
-    <% if(theme.sidebar.categories === true) { %>
+    <% if(theme.sidebar.categories.use === true) { %>
         <li class="dropdown">
             <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
                 <% if(theme.sidebar.categories.icon) { %>
