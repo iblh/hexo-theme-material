@@ -68,8 +68,11 @@ img:
     daily_pic: "/img/daily_pic.png"
     sidebar_header: "/img/sidebar_header.png"
     footerico: "/img/footer/footer_ico-"
-    #upyun_logo: "/img/upyun_logo.png"
     random_thumbnail: "/img/random/material-"
+    footer_image:
+        #upyun_logo:
+            #link: "https://www.upyun.com/"
+            #src: "/img/upyun_logo.png"
 
 # Custom Fonts
 fonts: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif
