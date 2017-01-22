@@ -5,7 +5,9 @@
             <% for (var i in theme.sidebar.dropdown) { %>
                 <li>
                     <a href="<%= theme.sidebar.dropdown[i].link %>" target="_blank" title="<%= i %>">
-                        <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element"><%= theme.sidebar.dropdown[i].icon %></i>
+                        <% if(theme.sidebar.dropdown[i].icon) { %>
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element"><%= theme.sidebar.dropdown[i].icon %></i>
+                        <% } %>
                         <%= i %>
                     </a>
                 </li>
@@ -15,9 +17,11 @@
 
     <!-- Homepage -->
     <% if(theme.sidebar.homepage === true) { %>
-            <li id="sidebar-first-li">
-                <a href="<%= config.root %>" target="_self">
+        <li id="sidebar-first-li">
+            <a href="<%= config.root %>" target="_self">
+                <% if(theme.sidebar.homepage.icon) { %>
                     <i class="material-icons sidebar-material-icons"><%= theme.sidebar.homepage.icon %></i>
+                <% } %>
                 <%= __('sidebar.homepage') %>
             </a>
         </li>
@@ -27,7 +31,9 @@
     <% if(theme.sidebar.archives === true) { %>
         <li class="dropdown">
             <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
-                <i class="material-icons sidebar-material-icons"><%= theme.sidebar.archive.icon %></i>
+                <% if(theme.sidebar.archives.icon) { %>
+                    <i class="material-icons sidebar-material-icons"><%= theme.sidebar.archives.icon %></i>
+                <% } %>
                     <%= __('sidebar.archive') %>
                 <b class="caret"></b>
             </a>
@@ -48,7 +54,9 @@
     <% if(theme.sidebar.categories === true) { %>
         <li class="dropdown">
             <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
-                <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                <% if(theme.sidebar.categories.icon) { %>
+                    <i class="material-icons sidebar-material-icons"><%= theme.sidebar.categories.icon %></i>
+                <% } %>
                 <%= __('title.category') %>
                 <b class="caret"></b>
             </a>

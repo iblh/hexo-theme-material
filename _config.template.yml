@@ -109,8 +109,8 @@ sns_share:
 
 # Sidebar Customize
 sidebar:
-    dropdown:
-        Email Me:
+    dropdown: 
+        Email Me: 
             link: "#"
             icon: email
     homepage: true
@@ -120,7 +120,7 @@ sidebar:
     categories: false
         icon: 
     pages: 
-        #About:
+        #About: 
             #link: "/about"
             #icon: person
 
