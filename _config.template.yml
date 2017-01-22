@@ -99,13 +99,13 @@ sns:
     twitter: "https://twitter.com/twitter"
     googleplus: "https://www.google.com/"
     weibo: 
-    instagram:
-    tumblr:
-    github:
-    linkedin:
-    zhihu:
-    bilibili:
-    telegram:
+    instagram: 
+    tumblr: 
+    github: 
+    linkedin: 
+    zhihu: 
+    bilibili: 
+    telegram: 
 
 # SNS Share Switch
 sns_share:
@@ -160,8 +160,8 @@ search:
 
 # Analytics Systems
 analytics:
-    baidu_id:
-    google_id:
+    baidu_id: 
+    google_id: 
 
 # Leancloud Views
 leancloud:
