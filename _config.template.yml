@@ -41,12 +41,8 @@ js_effect:
     smoothscroll: false
 
 # Reading experience
-# markdown available value:
-#     Material | Github | Plain
 reading:
-    markdown: Github
     entry_excerpt: 80
-    code_highlight: solarized-white
 
 # Thumbnail Settings
 thumbnail:
@@ -72,8 +68,11 @@ img:
     daily_pic: "/img/daily_pic.png"
     sidebar_header: "/img/sidebar_header.png"
     footerico: "/img/footer/footer_ico-"
-    #upyun_logo: "/img/upyun_logo.png"
     random_thumbnail: "/img/random/material-"
+    footer_image:
+        #upyun_logo:
+            #link: "https://www.upyun.com/"
+            #src: "/img/upyun_logo.png"
 
 # Custom Fonts
 fonts: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif
@@ -107,14 +106,23 @@ sns_share:
     qq: false
     telegram: false
 
-# Sidebar User Dropdown
-dropdown:
-    Email Me:
-        link: "#"
-        icon: email
+# Sidebar Customize
+sidebar:
+    dropdown: 
+        Email Me: 
+            link: "#"
+            icon: email
+    homepage: true
+        icon: 
+    archives: true
+        icon: 
+    categories: false
+        icon: 
+    pages: 
+        #About: 
+            #link: "/about"
+            #icon: person
 
-# Sidebar Categories Switch
-sidebar_categories: false
 
 # Card Elevation Level
 card_elevation: 2
@@ -153,14 +161,14 @@ search:
 
 # Analytics Systems
 analytics:
-    baidu_id: 
-    google_id: 
+    baidu_id:
+    google_id:
 
 # Leancloud Views
 leancloud:
     enable: false
-    app_id: #你的app_id
-    app_key: #你的app_key
+    app_id: #你的 app_id
+    app_key: #你的 app_key
     av_core_mini: "https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"
 
 # Busuanzi 不蒜子 Views

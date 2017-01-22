@@ -2,9 +2,7 @@
 
 /* Local_Search */
 
-/* Markdown_Plain & Highlightjs */
-
-/* Markdown_Github_CSS*/
+/* Markdown_CSS*/
 
 /* Scheme_Paradox */
 
@@ -111,63 +109,35 @@ a {
 }
 
 
-
-/********************************/
-/* Markdown_Plain & Highlightjs */
-/********************************/
+/****************/
+/* Markdown_CSS */
+/****************/
 .highlight tr{
     display: flex;
 }
-#post-content tbody{
-/*    display: block;*/
-}
-
 #post-content .line{
     height: 19px;
 }
-
-#post-content.markdown-Plain blockquote{
-    border-left: 10px solid #F5F5F5;
-    margin-left: 0px;
-    padding-left: 10px;
-}
-
-#post-content.markdown-Plain figure {
-  overflow: auto;
-}
-
-#post-content.markdown-Plain .code {
-    padding: 0;
-}
-
-#post-content.markdown-Plain .gutter {
-    padding-right: 10px;
-}
-
-
-/***********************/
-/* Markdown_Github_CSS */
-/***********************/
-#post-content.markdown-Github figure {
-    margin-right: 0;
+#post-content figure {
+  margin-right: 0;
   margin-left: 0;
 }
-#post-content.markdown-Github,
-#post-content.markdown-Github p{
+#post-content,
+#post-content p{
   font-size: 15px;
   line-height: 1.7;
   overflow: hidden;
 }
-#post-content.markdown-Github > *:first-child {
+#post-content > *:first-child {
   margin-top: 0 !important;
 }
-#post-content.markdown-Github > *:last-child {
+#post-content > *:last-child {
   margin-bottom: 0 !important;
 }
-#post-content.markdown-Github a.absent {
+#post-content a.absent {
   color: #c00;
 }
-#post-content.markdown-Github a.anchor {
+#post-content a.anchor {
   display: block;
   padding-left: 30px;
   margin-left: -30px;
@@ -177,12 +147,12 @@ a {
   left: 0;
   bottom: 0;
 }
-#post-content.markdown-Github h1,
-#post-content.markdown-Github h2,
-#post-content.markdown-Github h3,
-#post-content.markdown-Github h4,
-#post-content.markdown-Github h5,
-#post-content.markdown-Github h6 {
+#post-content h1,
+#post-content h2,
+#post-content h3,
+#post-content h4,
+#post-content h5,
+#post-content h6 {
   margin: 1em 0 15px;
   padding: 0;
   font-weight: bold;
@@ -190,165 +160,165 @@ a {
   cursor: text;
   position: relative;
 }
-#post-content.markdown-Github h1 .octicon-link,
-#post-content.markdown-Github h2 .octicon-link,
-#post-content.markdown-Github h3 .octicon-link,
-#post-content.markdown-Github h4 .octicon-link,
-#post-content.markdown-Github h5 .octicon-link,
-#post-content.markdown-Github h6 .octicon-link {
+#post-content h1 .octicon-link,
+#post-content h2 .octicon-link,
+#post-content h3 .octicon-link,
+#post-content h4 .octicon-link,
+#post-content h5 .octicon-link,
+#post-content h6 .octicon-link {
   display: none;
   color: #000;
 }
-#post-content.markdown-Github h1:hover a.anchor,
-#post-content.markdown-Github h2:hover a.anchor,
-#post-content.markdown-Github h3:hover a.anchor,
-#post-content.markdown-Github h4:hover a.anchor,
-#post-content.markdown-Github h5:hover a.anchor,
-#post-content.markdown-Github h6:hover a.anchor {
+#post-content h1:hover a.anchor,
+#post-content h2:hover a.anchor,
+#post-content h3:hover a.anchor,
+#post-content h4:hover a.anchor,
+#post-content h5:hover a.anchor,
+#post-content h6:hover a.anchor {
   text-decoration: none;
   line-height: 1;
   padding-left: 0;
   margin-left: -22px;
   top: 15%;
 }
-#post-content.markdown-Github h1:hover a.anchor .octicon-link,
-#post-content.markdown-Github h2:hover a.anchor .octicon-link,
-#post-content.markdown-Github h3:hover a.anchor .octicon-link,
-#post-content.markdown-Github h4:hover a.anchor .octicon-link,
-#post-content.markdown-Github h5:hover a.anchor .octicon-link,
-#post-content.markdown-Github h6:hover a.anchor .octicon-link {
+#post-content h1:hover a.anchor .octicon-link,
+#post-content h2:hover a.anchor .octicon-link,
+#post-content h3:hover a.anchor .octicon-link,
+#post-content h4:hover a.anchor .octicon-link,
+#post-content h5:hover a.anchor .octicon-link,
+#post-content h6:hover a.anchor .octicon-link {
   display: inline-block;
 }
-#post-content.markdown-Github h1 tt,
-#post-content.markdown-Github h1 code,
-#post-content.markdown-Github h2 tt,
-#post-content.markdown-Github h2 code,
-#post-content.markdown-Github h3 tt,
-#post-content.markdown-Github h3 code,
-#post-content.markdown-Github h4 tt,
-#post-content.markdown-Github h4 code,
-#post-content.markdown-Github h5 tt,
-#post-content.markdown-Github h5 code,
-#post-content.markdown-Github h6 tt,
-#post-content.markdown-Github h6 code {
+#post-content h1 tt,
+#post-content h1 code,
+#post-content h2 tt,
+#post-content h2 code,
+#post-content h3 tt,
+#post-content h3 code,
+#post-content h4 tt,
+#post-content h4 code,
+#post-content h5 tt,
+#post-content h5 code,
+#post-content h6 tt,
+#post-content h6 code {
   font-size: inherit;
 }
-#post-content.markdown-Github h1 {
+#post-content h1 {
   font-size: 2.5em;
   border-bottom: 1px solid #ddd;
 }
-#post-content.markdown-Github h2 {
+#post-content h2 {
   font-size: 2em;
   border-bottom: 1px solid #eee;
 }
-#post-content.markdown-Github h3 {
+#post-content h3 {
   font-size: 1.5em;
 }
-#post-content.markdown-Github h4 {
+#post-content h4 {
   font-size: 1.2em;
 }
-#post-content.markdown-Github h5 {
+#post-content h5 {
   font-size: 1em;
 }
-#post-content.markdown-Github h6 {
+#post-content h6 {
   color: #777;
   font-size: 1em;
 }
-#post-content.markdown-Github p,
-#post-content.markdown-Github blockquote,
-#post-content.markdown-Github ul,
-#post-content.markdown-Github ol,
-#post-content.markdown-Github dl,
-#post-content.markdown-Github table {
+#post-content p,
+#post-content blockquote,
+#post-content ul,
+#post-content ol,
+#post-content dl,
+#post-content table {
   margin: 15px 0;
 }
-#post-content.markdown-Github hr {
+#post-content hr {
   height: 0.25em;
     padding: 0;
     margin: 24px 0;
     background-color: #e7e7e7;
     border: 0;
 }
-#post-content.markdown-Github li p.first {
+#post-content li p.first {
   display: inline-block;
 }
-#post-content.markdown-Github ul,
-#post-content.markdown-Github ol {
+#post-content ul,
+#post-content ol {
   padding-left: 30px;
   font-size: 15px;
     line-height: 1.7;
     overflow: hidden;
 }
-#post-content.markdown-Github ul.no-list,
-#post-content.markdown-Github ol.no-list {
+#post-content ul.no-list,
+#post-content ol.no-list {
   list-style-type: none;
   padding: 0;
 }
-#post-content.markdown-Github ul ul,
-#post-content.markdown-Github ul ol,
-#post-content.markdown-Github ol ol,
-#post-content.markdown-Github ol ul {
+#post-content ul ul,
+#post-content ul ol,
+#post-content ol ol,
+#post-content ol ul {
   margin-top: 0;
   margin-bottom: 0;
 }
-#post-content.markdown-Github dl {
+#post-content dl {
   padding: 0;
 }
-#post-content.markdown-Github dl dt {
+#post-content dl dt {
   font-size: 14px;
   font-weight: bold;
   font-style: italic;
   padding: 0;
   margin-top: 15px;
 }
-#post-content.markdown-Github dl dd {
+#post-content dl dd {
   margin-bottom: 15px;
   padding: 0 15px;
 }
-#post-content.markdown-Github blockquote {
+#post-content blockquote {
   border-left: 4px solid #DDD;
   padding: 0 15px;
   color: #777;
   font-style: normal;
 }
-#post-content.markdown-Github blockquote >:first-child {
+#post-content blockquote >:first-child {
   margin-top: 0px;
 }
-#post-content.markdown-Github blockquote >:last-child {
+#post-content blockquote >:last-child {
   margin-bottom: 0px;
 }
-#post-content.markdown-Github table {
+#post-content table {
   width: 100%;
   overflow: auto;
   display: block;
   border-spacing: 0;
   border-collapse: collapse;
 }
-#post-content.markdown-Github table th {
+#post-content table th {
   font-weight: bold;
 }
-#post-content.markdown-Github table th,
-#post-content.markdown-Github table td {
+#post-content table th,
+#post-content table td {
     padding: 6px 13px;
     border: 1px solid #ddd;
 }
-#post-content.markdown-Github table tr {
+#post-content table tr {
 /*    display: table;*/
   background-color: #fff;
 }
-#post-content.markdown-Github table tr:nth-child(2n) {
+#post-content table tr:nth-child(2n) {
   background-color: #f8f8f8;
 }
-#post-content.markdown-Github img {
+#post-content img {
   max-width: 100%;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-#post-content.markdown-Github span.frame {
+#post-content span.frame {
   display: block;
   overflow: hidden;
 }
-#post-content.markdown-Github span.frame > span {
+#post-content span.frame > span {
   border: 1px solid #ddd;
   display: block;
   float: left;
@@ -357,110 +327,116 @@ a {
   padding: 7px;
   width: auto;
 }
-#post-content.markdown-Github span.frame span img {
+#post-content span.frame span img {
   display: block;
   float: left;
 }
-#post-content.markdown-Github span.frame span span {
+#post-content span.frame span span {
   clear: both;
   color: #333;
   display: block;
   padding: 5px 0 0;
 }
-#post-content.markdown-Github span.align-center {
+#post-content span.align-center {
   display: block;
   overflow: hidden;
   clear: both;
 }
-#post-content.markdown-Github span.align-center > span {
+#post-content span.align-center > span {
   display: block;
   overflow: hidden;
   margin: 13px auto 0;
   text-align: center;
 }
-#post-content.markdown-Github span.align-center span img {
+#post-content span.align-center span img {
   margin: 0 auto;
   text-align: center;
 }
-#post-content.markdown-Github span.align-right {
+#post-content span.align-right {
   display: block;
   overflow: hidden;
   clear: both;
 }
-#post-content.markdown-Github span.align-right > span {
+#post-content span.align-right > span {
   display: block;
   overflow: hidden;
   margin: 13px 0 0;
   text-align: right;
 }
-#post-content.markdown-Github span.align-right span img {
+#post-content span.align-right span img {
   margin: 0;
   text-align: right;
 }
-#post-content.markdown-Github span.float-left {
+#post-content span.float-left {
   display: block;
   margin-right: 13px;
   overflow: hidden;
   float: left;
 }
-#post-content.markdown-Github span.float-left span {
+#post-content span.float-left span {
   margin: 13px 0 0;
 }
-#post-content.markdown-Github span.float-right {
+#post-content span.float-right {
   display: block;
   margin-left: 13px;
   overflow: hidden;
   float: right;
 }
-#post-content.markdown-Github span.float-right > span {
+#post-content span.float-right > span {
   display: block;
   overflow: hidden;
   margin: 13px auto 0;
   text-align: right;
 }
-#post-content.markdown-Github code,
-#post-content.markdown-Github tt {
+#post-content code,
+#post-content tt {
   margin: 0 2px;
   padding: 0px 5px;
   background-color: rgba(0,0,0,0.04);
   border-radius: 3px;
 }
 
-#post-content.markdown-Github pre > code {
+#post-content pre > code {
   margin: 0;
   padding: 0;
   white-space: pre;
   border: none;
   background: transparent;
 }
-#post-content.markdown-Github .highlight pre,
-#post-content.markdown-Github pre {
-}
-#post-content.markdown-Github .gutter,
-#post-content.markdown-Github .code{
-/*  background: #f7f7f7;*/
+#post-content pre {
+  background-color: #f7f7f7;
   font-size: 13px;
   line-height: 19px;
   overflow: auto;
   padding: 16px;
-    border: none;
-    display: block
+  border-radius: 3px;
 }
-#post-content.markdown-Github .code{
+#post-content .gutter,
+#post-content .code{
+/*  background: #f7f7f7;*/
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 0;
+  border: none;
+  display: block;
+  border-radius: 0;
+}
+#post-content .code{
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
 }
-#post-content.markdown-Github .gutter{
+#post-content .gutter{
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
 }
-#post-content.markdown-Github .gutter pre,
-#post-content.markdown-Github .code pre{
+#post-content .gutter pre,
+#post-content .code pre{
     margin: 0;
     display: block;
 }
-#post-content.markdown-Github pre code,
-#post-content.markdown-Github pre tt {
+#post-content pre code,
+#post-content pre tt {
   margin: 0;
   padding: 0;
   background-color: transparent;
@@ -2322,8 +2298,8 @@ a {
     margin-bottom: 55px;
 }
 
-#scheme-Paradox #upyun-logo {
-    padding-left: 16px;
+#scheme-Paradox #footer-image {
+    padding-left: 8px;
     position: relative;
 }
 
