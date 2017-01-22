@@ -162,6 +162,30 @@
         background: <%= theme.pace.color %>;
       }
     </style>
+  <% } else if(theme.pace.style === 'center-atom') { %>
+    <style>
+    .pace .pace-progress:before {
+      background: <%= theme.pace.color %>;
+    }
+    .pace .pace-activity {
+      border: 5px solid <%= theme.pace.color %>;
+    }
+    .pace .pace-activity:after {
+      border: 5px solid <%= theme.pace.color %>;
+    }
+    .pace .pace-activity:before {
+      border: 5px solid <%= theme.pace.color %>;
+    }
+    </style>
+  <% } else if(theme.pace.style === 'center-radar') { %>
+    <style>
+    .pace .pace-activity {
+      border-color: <%= theme.pace.color %> transparent transparent;
+    }
+    .pace .pace-activity:before {
+      border-color: <%= theme.pace.color %> transparent transparent;
+    }
+    </style>
   <% } else { %>
     <style>
       .pace .pace-progress {
