@@ -1,5 +1,5 @@
 <!-- Blog info -->
-<div class="mdl-card something-else mdl-cell mdl-cell--8-col mdl-cell--4-col-desktop index-top-block">
+<div class="mdl-card <% if(theme.card_elevation) { %><%= 'mdl-shadow--' + theme.card_elevation + 'dp' %><% } %> something-else mdl-cell mdl-cell--8-col mdl-cell--4-col-desktop index-top-block">
 
     <!-- Search -->
     <%- partial('_partial/Paradox-search') %>
