@@ -78,7 +78,7 @@
     <!-- Pages  -->
   	<% for (var i in theme.pages){ %>
         <li>
-            <a href="<%= theme.pages[i].link %>" title="<%= i %>">
+            <a href="<%= theme.pages[i] || '#' %>" title="<%= i %>">
                 <% if(theme.pages[i].icon){ %>
                     <i class="material-icons sidebar-material-icons"><%= theme.pages[i].icon %></i>
                 <% } %>
