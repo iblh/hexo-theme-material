@@ -81,7 +81,7 @@ fonts: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "
 # You can find demos on http://github.hubspot.com/pace/docs/welcome
 # Warning: Line color mustn't delete or not define!
 #     style available values:
-#       barber-shop, big-counter, bounce, center-circle, center-radar, center-simple,
+#       barber-shop, big-counter, bounce, center-atom, center-circle, center-radar, center-simple,
 # 	    corner-indicator, fill-left, fill-left-nocolor, flat-top, loading-bar, macosx
 # Or you can use your own style,just set the style value to "mycss",
 # and put your own css style to source/css/pace/my.css
