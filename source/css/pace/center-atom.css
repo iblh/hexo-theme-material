@@ -24,8 +24,8 @@
 .pace .pace-progress {
   z-index: 2000;
   position: absolute;
-  height: 60px;
-  width: 100px;
+  height: 100px;
+  width: 83px;
 
   -webkit-transform: translate3d(0, 0, 0) !important;
   -ms-transform: translate3d(0, 0, 0) !important;
@@ -41,7 +41,7 @@
   font-size: 14px;
   font-weight: 100;
   line-height: 1;
-  padding: 20% 0 7px;
+  padding: 16% 0 7px;
   width: 50%;
   height: 40%;
   margin: 10px 0 0 30px;
