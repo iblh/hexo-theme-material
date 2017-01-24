@@ -84,11 +84,11 @@ fonts: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "
 #     style available values:
 #       barber-shop, big-counter, bounce, center-atom, center-circle, center-radar, center-simple,
 # 	    corner-indicator, fill-left, fill-left-nocolor, flat-top, loading-bar, macosx
-# Or you can use your own style,just set the style value to "mycss",
-# and put your own css style to source/css/pace/my.css
+# Or you can use your own style,just set the style value to "custom",
+# and put your own css style to source/css/pace/custom.css
 # document can be find on:
 pace:
-     style: 
+     style:
      color: "#29d"
 
 # ---------------------------------------------------------------
@@ -101,14 +101,14 @@ sns:
     facebook: "https://www.facebook.com/facebook"
     twitter: "https://twitter.com/twitter"
     googleplus: "https://www.google.com/"
-    weibo: 
-    instagram: 
-    tumblr: 
-    github: 
-    linkedin: 
-    zhihu: 
-    bilibili: 
-    telegram: 
+    weibo:
+    instagram:
+    tumblr:
+    github:
+    linkedin:
+    zhihu:
+    bilibili:
+    telegram:
 
 # SNS Share Switch
 sns_share:
@@ -163,8 +163,8 @@ search:
 
 # Analytics Systems
 analytics:
-    baidu_id: 
-    google_id: 
+    baidu_id:
+    google_id:
 
 # Leancloud Views
 leancloud:
