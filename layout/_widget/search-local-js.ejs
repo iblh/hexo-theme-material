@@ -18,7 +18,7 @@
                 $input.addEventListener('input', function() {
                     var str='<ul class=\"search-result-list\">';
                     var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
-                    $resultContent.innerHTML = "";
+                    $resultContent.innerHTML = '';
                     if (this.value.trim().length <= 0) {
                         return;
                     }
@@ -27,7 +27,7 @@
                         var isMatch = true;
                         var content_index = [];
                         var data_title = data.title.trim().toLowerCase();
-                        var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g,'').toLowerCase();
                         var data_url = data.url;
                         var index_title = -1;
                         var index_content = -1;
@@ -72,7 +72,7 @@
                                     var regS = new RegExp(keyword, 'gi');
                                     match_content = match_content.replace(regS, '<em class="search-keyword">'+keyword+'</em>');
                                 })
-                                str += '<p class="search-result">' + match_content +'...</p>' +'</a>';
+                                str += '<p class="search-result">' + match_content + '...</p>' +'</a>';
                             }
                         }
                     });
