@@ -114,17 +114,30 @@ sidebar:
             icon: email
     homepage:
         use: true
-        icon:
+        icon: home
+        divider: false
     archives:
         use: true
-        icon:
+        icon: inbox
+        divider: false
     categories:
         use: false
-        icon:
+        icon: chrome_reader_mode
+        divider: false
     pages:
         #About:
             #link: "/about"
             #icon: person
+            #divider: false
+    article_num:
+        use: false
+        divider: false
+    footer:
+        divider: true
+        theme: true
+        support: false
+        feedback: false
+        material: false
 
 # Card Elevation Level
 card_elevation: 2

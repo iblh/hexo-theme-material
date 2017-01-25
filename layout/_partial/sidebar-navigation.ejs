@@ -25,6 +25,9 @@
                 <%= __('sidebar.homepage') %>
             </a>
         </li>
+        <% if(theme.sidebar.homepage.divider === true) { %>
+            <li class="divider"></li>
+        <% } %>
     <% } %>
 
     <!-- Archives  -->
@@ -48,6 +51,9 @@
                 }) %>
             </ul>
         </li>
+        <% if(theme.sidebar.archives.divider === true) { %>
+            <li class="divider"></li>
+        <% } %>
     <% } %>
 
     <!-- Categories  -->
@@ -71,11 +77,10 @@
                 }) %>
             </ul>
         </li>
+        <% if(theme.sidebar.categories.divider === true) { %>
+            <li class="divider"></li>
+        <% } %>
     <% } %>
-
-    <!-- Divider -->
-    <li class="divider"></li>
-
 
     <!-- Pages  -->
     <% for (var i in theme.sidebar.pages){ %>
@@ -87,13 +92,21 @@
                 <%= i %>
             </a>
         </li>
+        <% if(theme.sidebar.pages[i].divider === true) { %>
+            <li class="divider"></li>
+        <% } %>
     <% } %>
 
-    <!-- Article Numebr  -->
-    <li>
-        <a href="/archives">
-            <%= __('sidebar.article_num') %>
-            <span class="sidebar-badge"><%= site.posts.length %></span>
-        </a>
-    </li>
+    <!-- Article Number  -->
+    <% if(theme.sidebar.article_num.use === true) { %>
+        <li>
+            <a href="/archives">
+                <%= __('sidebar.article_num') %>
+                <span class="sidebar-badge"><%= site.posts.length %></span>
+            </a>
+        </li>
+        <% if(theme.sidebar.article_num.divider === true) { %>
+            <li class="divider"></li>
+        <% } %>
+    <% } %>
 </ul>
