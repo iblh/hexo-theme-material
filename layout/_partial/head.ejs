@@ -83,9 +83,13 @@
     <%- css('css/material.min') %>
     <%- css('css/style.min') %>
     <%- partial('_partial/config_css') %>
+    <%- css('css/pace/' + (theme.pace.style || 'minimal')) %>
+
+    <!-- Import JS -->
     <%- js('js/jquery.min') %>
     <%- js('js/queue') %>
     <%- js('js/lazyload.min') %>
+    <%- js('js/pace.min') %>
 
     <!-- UC Browser Compatible -->
     <script>
@@ -128,9 +132,6 @@
             });
         </script>
     <% } %>
-
-    <!--Import Pace -->
-    <%- partial("_partial/import_pace") %>
 
     <!-- Custom Head -->
     <% if (site.data.head) { %>
