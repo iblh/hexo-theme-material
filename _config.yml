@@ -131,7 +131,10 @@ qrcode: false
 
 # Comment Systems
 # Available value of "use":
-#     duoshuo | disqus
+#     duoshuo | disqus | disqus_click
+#"disqus_click" means using disqus but you need to click the button
+#to load the comments. Useful as it is,it help improve Chinese
+#users' experience(G-F-W)so that avoid to loading Disqus very slow.
 comment:
     use:
     shortname:
