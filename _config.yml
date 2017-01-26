@@ -135,6 +135,7 @@ qrcode: false
 #"disqus_click" means using disqus but you need to click the button
 #to load the comments. Useful as it is,it help improve Chinese
 #users' experience(G-F-W)so that avoid to loading Disqus very slow.
+#you can choose to turn on
 comment:
     use:
     shortname:
