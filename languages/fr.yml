@@ -10,6 +10,7 @@ post:
     newer: "Récent"
     private: "Article privé, caché temporairement"
     qrcode: "Lire cet article depuis un autre appareil"
+    comments_load_button: "Lire les commentaires 「Assurez-vous que 'disq.us & disquscdn.com & disqus.com' peut être chargé 」"    
 share:
     article_rss: "Flux RSS des articles"
     comment_rss: "Flux RSS des commentaires"
