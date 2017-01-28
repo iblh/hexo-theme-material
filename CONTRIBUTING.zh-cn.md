@@ -2,7 +2,7 @@
 
 # Commit message format
 
-*其他语言版本: [English](README.md), [简体中文](README.zh-cn.md).*
+*其他语言版本: [English](CONTRIBUTING.md), [简体中文](CONTRIBUTING.zh-cn.md).*
 
 ## 1. Title (Header)
 
