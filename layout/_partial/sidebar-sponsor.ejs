@@ -1,7 +1,14 @@
-<% if(theme.img.upyun_logo) { %>
-    <div id="upyun-logo">
+<% if(theme.img.sponsor.enable === true) { %>
+    <div id="sponsor">
+        <% if(theme.img.sponsor.upyun_logo) { %>
         <a href="https://www.upyun.com/" target="_blank">
-            <img src="<%= theme.img.upyun_logo %>" alt="upyun_league">
+            <img src="<%= theme.img.sponsor.upyun_logo %>" alt="upyun_league">
         </a>
+        <% } %>
+        <% if(theme.img.sponsor.cc_by) { %>
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" target="_blank">
+            <img src="<%= theme.img.sponsor.ccby_logo %>" alt="Creative Commons License" >
+        </a>
+        <% } %>
     </div>
 <% } %>
