@@ -3,103 +3,96 @@
 
 <!-- Other Styles -->
 <style>
-    body, html {
-        font-family: <%- theme.fonts %>;
-    }
+  body, html {
+    font-family: <%- theme.fonts %>;
+  }
 
-    a {
-        color: <%= theme.uiux.hyperlink_color %>;
-    }
+  a {
+    color: <%= theme.uiux.hyperlink_color %>;
+  }
 
-    .mdl-card__media,
-    #search-label,
-    #search-form-label:after,
-    #scheme-Paradox .hot_tags-count,
-    #scheme-Paradox .sidebar_archives-count,
-    #scheme-Paradox .sidebar-colored .sidebar-header,
-    #scheme-Paradox .sidebar-colored .sidebar-badge{
-        background-color: <%= theme.uiux.theme_color %> !important;
-    }
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: <%= theme.uiux.theme_color %> !important;
+  }
 
-    /* Sidebar User Drop Down Menu Text Color */
-    #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
-    #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
-        color: <%= theme.uiux.theme_color %> !important;
-    }
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: <%= theme.uiux.theme_color %> !important;
+  }
 
-    #post_entry-right-info,
-    .sidebar-colored .sidebar-nav li:hover > a,
-    .sidebar-colored .sidebar-nav li:hover > a i,
-    .sidebar-colored .sidebar-nav li > a:hover,
-    .sidebar-colored .sidebar-nav li > a:hover i,
-    .sidebar-colored .sidebar-nav li > a:focus i,
-    .sidebar-colored .sidebar-nav > .open > a,
-    .sidebar-colored .sidebar-nav > .open > a:hover,
-    .sidebar-colored .sidebar-nav > .open > a:focus,
-    #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
-        color: <%= theme.uiux.theme_color %> !important;
-    }
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: <%= theme.uiux.theme_color %> !important;
+  }
 
-    .toTop {
-        background: <%= theme.uiux.button_color %> !important;
-    }
+  .toTop {
+    background: <%= theme.uiux.button_color %> !important;
+  }
 
-    .material-layout .material-post>.material-nav,
-    .material-layout .material-index>.material-nav,
-    .material-nav a {
-        color: <%= theme.uiux.button_color %>;
-    }
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: <%= theme.uiux.button_color %>;
+  }
 
-    #scheme-Paradox .MD-burger-layer {
-        background-color: <%= theme.uiux.button_color %>;
-    }
+  #scheme-Paradox .MD-burger-layer {
+    background-color: <%= theme.uiux.button_color %>;
+  }
 
-    #scheme-Paradox #post-toc-trigger-btn {
-        color: <%= theme.uiux.button_color %>;
-    }
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: <%= theme.uiux.button_color %>;
+  }
 
-    .post-toc a:hover {
-        color: <%= theme.uiux.hyperlink_color %>;
-        text-decoration: underline;
-    }
+  .post-toc a:hover {
+    color: <%= theme.uiux.hyperlink_color %>;
+    text-decoration: underline;
+  }
 </style>
 
 
 <!-- Theme Background Related-->
 <% if(theme.background.bing.enable === true) { %>
     <style>
-        body {
-            background-color: <%= theme.background.purecolor %>;
-        }
+      body {
+        background-color: <%= theme.background.purecolor %>;
+      }
 
-        /* blog_info bottom background */
-        #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text {
-            background-color: #fff;
-        }
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text {
+        background-color: #fff;
+      }
     </style>
-    <script type="text/javascript">
-        window.onload = function () {
-            setTimeout(function () {
-                document.body.background="https://api.i-meto.com/bing?<%= theme.background.bing.parameter %>";
-            }, 2000);
-        }
-    </script>
 <% } else if(!theme.background.bgimg) { %>
     <style>
-        body{
-            background-color: <%= theme.background.purecolor %>;
-        }
+      body{
+        background-color: <%= theme.background.purecolor %>;
+      }
 
-        /* blog_info bottom background */
-        #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
-            background-color: #fff;
-        }
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
     </style>
 <% } else { %>
     <style>
-        body{
-            background-image: url(<%= theme.background.bgimg %>);
-        }
+      body{
+        background-image: url(<%= theme.background.bgimg %>);
+      }
     </style>
 <% } %>
 
@@ -108,18 +101,96 @@
 <!-- Fade Effect -->
 <% if(theme.js_effect.fade === true) { %>
     <style>
-        .fade {
-            transition: all <%= theme.uiux.nprogress_buffer %>ms linear;
-            -webkit-transform: translate3d(0,0,0);
-            -moz-transform: translate3d(0,0,0);
-            -ms-transform: translate3d(0,0,0);
-            -o-transform: translate3d(0,0,0);
-            transform: translate3d(0,0,0);
-            opacity: 1;
-        }
+      .fade {
+        transition: all <%= theme.uiux.buffer %>ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
 
-        .fade.out{
-            opacity: 0;
-        }
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+<% } %>
+
+<!--Pace color -->
+<% if(theme.pace.style === 'big-counter') { %>
+<% } else if(theme.pace.style === 'barber-shop') { %>
+    <style>
+      .pace .pace-progress {
+        background-color: <%= theme.pace.color %>;
+      }
+    </style>
+<% } else if(theme.pace.style === 'bounce') { %>
+    <style>
+      .pace .pace-activity {
+        background: <%= theme.pace.color %>;
+      }
+    </style>
+<% } else if(theme.pace.style === 'corner-indicator') { %>
+    <style>
+      .pace .pace-activity {
+        background: <%= theme.pace.color %>;
+      }
+    </style>
+<% } else if(theme.pace.style === 'center-simple') { %>
+    <style>
+      .pace .pace-progress {
+        background: <%= theme.pace.color %>;
+      }
+      .pace {
+        border: 1px solid <%= theme.pace.color %>;
+      }
+    </style>
+<% } else if(theme.pace.style === 'loading-bar') { %>
+    <style>
+      .pace .pace-progress {
+        background: <%= theme.pace.color %>;
+        color: <%= theme.pace.color %>;
+      }
+      .pace .pace-activity {
+        box-shadow: inset 0 0 0 2px <%= theme.pace.color %>, inset 0 0 0 7px #FFF;
+      }
+    </style>
+<% } else if(theme.pace.style === 'loading-bar') { %>
+    <style>
+      .pace .pace-progress {
+        background: <%= theme.pace.color %>;
+      }
+    </style>
+<% } else if(theme.pace.style === 'center-atom') { %>
+    <style>
+      .pace .pace-progress:before {
+        background: <%= theme.pace.color %>;
+      }
+      .pace .pace-activity {
+        border: 5px solid <%= theme.pace.color %>;
+      }
+      .pace .pace-activity:after {
+        border: 5px solid <%= theme.pace.color %>;
+      }
+      .pace .pace-activity:before {
+        border: 5px solid <%= theme.pace.color %>;
+      }
+    </style>
+<% } else if(theme.pace.style === 'center-radar') { %>
+    <style>
+      .pace .pace-activity {
+        border-color: <%= theme.pace.color %> transparent transparent;
+      }
+      .pace .pace-activity:before {
+        border-color: <%= theme.pace.color %> transparent transparent;
+      }
+    </style>
+<% } else if(theme.pace.style === 'custom') { %>
+<% } else { %>
+    <style>
+      .pace .pace-progress {
+        background-color: <%= theme.pace.color %>;
+      }
     </style>
 <% } %>

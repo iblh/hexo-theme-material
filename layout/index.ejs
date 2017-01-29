@@ -1,20 +1,39 @@
 <!-- Index Module -->
 <div class="material-index mdl-grid">
-    <% if( (theme.scheme == "Paradox") && (page.current == 1) && (is_home()) ) { %>
+    <% if( (theme.scheme === 'Paradox') && (page.current === 1) && (is_home()) ) { %>
         <!-- Paradox Header -->
         <%- partial('_partial/daily_pic') %>
         <%- partial('_partial/blog_info') %>
     <% } %>
     <div class="locate-thumbnail-symbol"></div>
 
+    <!-- Pin on top -->
+    <% if(theme.topPost) { %>
+        <% if(hasposttop(page.posts)) { %>
+            <% getposttop(page.posts).each(function(toppost){ %>
+                <% if(theme.scheme === 'Paradox'){ %>
+                    <!-- Paradox Thumbnail -->
+                    <%- partial('_partial/Paradox-post_entry', { post: toppost, index: true, pin: true }) %>
+                <% } %>
+                <% if(theme.scheme === 'Isolation'){ %>
+                    <!-- Isolation Thumbnail -->
+                    <%- partial('_partial/Isolation-post_entry', { post: toppost, index: true, pin: true }) %>
+                <% } %>
+            <% }); %>
+        <% } %>
+    <% } %>
+
+    <!-- Normal Post -->
     <% page.posts.each(function(post) { %>
+        <% if(!(theme.topPost && post.top)) { %>
         <% if(theme.scheme === 'Paradox') { %>
             <!-- Paradox Thumbnail -->
-            <%- partial('_partial/Paradox-post_entry', { post: post, index: true }) %>
+            <%- partial('_partial/Paradox-post_entry', { post: post, index: true, pin: false }) %>
         <% } %>
         <% if(theme.scheme === 'Isolation') { %>
             <!-- Isolation Thumbnail -->
-            <%- partial('_partial/Isolation-post_entry', { post: post, index: true }) %>
+            <%- partial('_partial/Isolation-post_entry', { post: post, index: true, pin: false }) %>
+        <% } %>
         <% } %>
     <% }); %>
 

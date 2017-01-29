@@ -1,4 +1,4 @@
-<div class="post_entry-module mdl-card mdl-cell mdl-cell--12-col fade out">
+<div class="post_entry-module mdl-card <% if(theme.card_elevation) { %><%= 'mdl-shadow--' + theme.card_elevation + 'dp' %><% } %> mdl-cell mdl-cell--12-col fade out">
     <!-- Post Thumbnail -->
     <% if(!post.thumbnail) { %>
         <% if(!theme.thumbnail.purecolor) { %>
@@ -14,7 +14,7 @@
     <% } %>
 
         <!-- Post Title -->
-        <p class="article-headline-p"><a href="<%= url_for(post.path) %>"><%= post.title %></a></p>
+        <p class="article-headline-p"><a href="<%= url_for(post.path) %>"><% if(pin) { %><span>[Top]</span><% } %><%= post.title %></a></p>
     </div>
 
     <!-- Post Excerpt -->
@@ -51,7 +51,7 @@
                 }) %>
             </span>
 
-            <% if(theme.comment.use == "duoshuo") { %>
+            <% if(theme.comment.use === 'duoshuo') { %>
                 <!-- Comment Number -->
                 &nbsp;|&nbsp;
                 <span class="post_entry-comment" >
