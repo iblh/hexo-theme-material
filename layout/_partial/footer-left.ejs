@@ -35,6 +35,24 @@
      --></a>
     <% } %>
 
+    <!-- Cloudmusic -->
+    <% if(theme.sns.cloudmusic) { %>
+        <a href="<%= theme.sns.cloudmusic %>" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(<%= theme.img.footerico %>cloudmusic.png);">
+                <span class="visuallyhidden">Cloudmusic</span>
+            </button><!--
+     --></a>
+    <% } %>
+    
+    <!-- Steam -->
+    <% if(theme.sns.steam) { %>
+        <a href="<%= theme.sns.steam %>" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(<%= theme.img.footerico %>steam.png);">
+                <span class="visuallyhidden">Steam</span>
+            </button><!--
+     --></a>
+    <% } %>
+    
     <!-- Instagram -->
     <% if(theme.sns.instagram) { %>
         <a href="<%= theme.sns.instagram %>" target="_blank">
