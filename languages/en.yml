@@ -10,6 +10,7 @@ post:
     newer: "Newer"
     private: "Private post, temporarily hidden"
     qrcode: "Read this article on other device"
+    comments_load_button: "Read Comments 「Be sure 'disq.us & disquscdn.com & disqus.com' can be loaded 」"    
 share:
     article_rss: "Article RSS"
     comment_rss: "Comment RSS"

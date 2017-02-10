@@ -155,7 +155,7 @@ topPost: false
 
 # Comment Systems
 # Available value of "use":
-#     duoshuo | disqus
+#     duoshuo | disqus | disqus_click
 comment:
     use:
     shortname:
