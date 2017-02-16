@@ -1,38 +1,28 @@
-index:
-    home: 'خانه'
-    search: 'جستجو'
-    archive: 'آرشیو'
-    category: 'دسته ها'
-    uncategorized: 'ناکجا!'
-    tag: 'تگ'
-nav:
-    next: 'بعدی'
-    prev: 'قبلی'
-    older: 'قدیمی‌تر'
-    newer: 'جدیدتر'
-widget:
-    recents: 'اخیر'
-    archives: 'آرشیو'
-    categories: 'دسته ها'
-    links: 'لینک ها'
-    tags: 'تگ ها'
-    tag_cloud: 'تگ دسته بندی شده'
-article:
-    more: 'ادامه مطلب'
-    comments: 'نظرات'
-    share: 'اشتراک گذاری'
-    catalogue: 'Catalogue'
-profile:
-    follow: 'دنبال کردن'
-    post: 'پست'
-    tag: 'تگ'
-    posts: 'پست ها'
-    tags: 'تگ ها'
-insight:
-    hint: 'چیزی بنویسین!'
-    posts: 'پست ها'
-    pages: 'صفحات'
-    categories: 'دسته ها'
-    tags: 'تگ ها'
-    untitled: '(بدون نام!)'
-
+sidebar:
+    homepage: "خانه"
+    archive: "آرشیو"
+    article_num: "تعداد مقالات"
+post:
+    visitor: "بازدید کننده"
+    views: "نمایش"
+    continue: "ادامه مقاله"
+    older: "قبلی"
+    newer: "بعدی"
+    private: "مقاله قبلی فعلا غیر‌قابل نمایش شده است."
+    qrcode: "مطالعه مقاله بر روی دوایس همراه!"
+share:
+    article_rss: "مقالات به شکل‌ RSS"
+    comment_rss: "کامنت‌ها"
+    toTwitter: "اشتراک گذاری در تویتر"
+    toFacebook: "اشتراک گذاری در فیس‌بوک"
+    toLinkedIn: "اشتراک گذاری در لینک‌دین"
+    toTelegram: "اشتراک گذاری در تلگرام"
+    toGplus: "اشتراک گذاری در گوگل‌پلاس"
+    toWeibo: "اشتراک گذاری در وی‌بو"
+    toQQ: "اشتراک گذاری در کی‌کی"
+title:
+    category: "دسته‌ها"
+    tag: "تگ"
+misc:
+    home: "خانه"
+    theme: "پوسته"
