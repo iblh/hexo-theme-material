@@ -84,10 +84,10 @@ fonts: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "
 
 # SNS Menu
 sns:
-    email: youremail@email.com
-    facebook: "https://www.facebook.com/facebook"
-    twitter: "https://twitter.com/twitter"
-    googleplus: "https://www.google.com/"
+    email: javagostaran@email.com
+    facebook: 
+    twitter: 
+    googleplus: 
     weibo: 
     instagram: 
     tumblr: 
@@ -95,15 +95,15 @@ sns:
     linkedin: 
     zhihu: 
     bilibili: 
-    telegram: 
+    telegram: https://t.me/javagostaran
 
 # SNS Share Switch
 sns_share:
-    twitter: true
-    facebook: true
+    twitter: false
+    facebook: false
     googleplus: true
-    weibo: true
-    linkedin: false
+    weibo: false
+    linkedin: true
     qq: false
     telegram: false
 
@@ -114,7 +114,7 @@ dropdown:
         icon: email
 
 # Sidebar Categories Switch
-sidebar_categories: false
+sidebar_categories: true
 
 # Pages Menu
 pages:

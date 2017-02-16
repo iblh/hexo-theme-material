@@ -1,0 +1,38 @@
+index:
+    home: 'خانه'
+    search: 'جستجو'
+    archive: 'آرشیو'
+    category: 'دسته ها'
+    uncategorized: 'ناکجا!'
+    tag: 'تگ'
+nav:
+    next: 'بعدی'
+    prev: 'قبلی'
+    older: 'قدیمی‌تر'
+    newer: 'جدیدتر'
+widget:
+    recents: 'اخیر'
+    archives: 'آرشیو'
+    categories: 'دسته ها'
+    links: 'لینک ها'
+    tags: 'تگ ها'
+    tag_cloud: 'تگ دسته بندی شده'
+article:
+    more: 'ادامه مطلب'
+    comments: 'نظرات'
+    share: 'اشتراک گذاری'
+    catalogue: 'Catalogue'
+profile:
+    follow: 'دنبال کردن'
+    post: 'پست'
+    tag: 'تگ'
+    posts: 'پست ها'
+    tags: 'تگ ها'
+insight:
+    hint: 'چیزی بنویسین!'
+    posts: 'پست ها'
+    pages: 'صفحات'
+    categories: 'دسته ها'
+    tags: 'تگ ها'
+    untitled: '(بدون نام!)'
+
