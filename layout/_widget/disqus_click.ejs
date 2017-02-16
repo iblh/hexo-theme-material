@@ -22,7 +22,7 @@
                 opacity: 0;
             }
         }
-		button {
+		.disqus_click_btn {
             background-color: dodgerblue;
             color: white;
             padding: 10px 20px;
@@ -34,7 +34,7 @@
 	
 <!-- add data-ripple attribute -->
 <div class="btn_click_load"> 
-    <button data-ripple><%= __('post.comments_load_button') %></button>
+    <button class="disqus_click_btn" data-ripple><%= __('post.comments_load_button') %></button>
 </div>
 	
 <script>
