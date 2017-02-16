@@ -747,6 +747,9 @@ a {
 #scheme-Paradox .material-layout .mdl-card h3.quote:after {
     content: '”'
 }
+#scheme-Paradox .material-post_container {
+direction:rtl;
+}
 #scheme-Paradox .material-post_container .custom-header {
     background-color: transparent
 }

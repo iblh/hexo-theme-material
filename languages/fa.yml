@@ -1,0 +1,28 @@
+sidebar:
+    homepage: "خانه"
+    archive: "آرشیو"
+    article_num: "تعداد مقالات"
+post:
+    visitor: "بازدید کننده"
+    views: "نمایش"
+    continue: "ادامه مقاله"
+    older: "قبلی"
+    newer: "بعدی"
+    private: "مقاله قبلی فعلا غیر‌قابل نمایش شده است."
+    qrcode: "مطالعه مقاله بر روی دوایس همراه!"
+share:
+    article_rss: "مقالات به شکل‌ RSS"
+    comment_rss: "کامنت‌ها"
+    toTwitter: "اشتراک گذاری در تویتر"
+    toFacebook: "اشتراک گذاری در فیس‌بوک"
+    toLinkedIn: "اشتراک گذاری در لینک‌دین"
+    toTelegram: "اشتراک گذاری در تلگرام"
+    toGplus: "اشتراک گذاری در گوگل‌پلاس"
+    toWeibo: "اشتراک گذاری در وی‌بو"
+    toQQ: "اشتراک گذاری در کی‌کی"
+title:
+    category: "دسته‌ها"
+    tag: "تگ"
+misc:
+    home: "خانه"
+    theme: "پوسته"
