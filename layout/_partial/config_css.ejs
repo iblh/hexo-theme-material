@@ -3,14 +3,14 @@
 
 <!-- Other Styles -->
 <style>
-	body, html{
-		font-family: <%- theme.fonts %>;
-	}
-	
-    a{
-        color: <%= theme.uiux.hyperlink_color %>
+    body, html {
+        font-family: <%- theme.fonts %>;
     }
-    
+
+    a {
+        color: <%= theme.uiux.hyperlink_color %>;
+    }
+
     .mdl-card__media,
     #search-label,
     #search-form-label:after,
@@ -18,15 +18,15 @@
     #scheme-Paradox .sidebar_archives-count,
     #scheme-Paradox .sidebar-colored .sidebar-header,
     #scheme-Paradox .sidebar-colored .sidebar-badge{
-        background-color: <%= theme.uiux.theme_color %> !important
+        background-color: <%= theme.uiux.theme_color %> !important;
     }
-    
-	/* Sidebar User Drop Down Menu Text Color */
-	#scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
-    #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus{
-        color: <%= theme.uiux.theme_color %> !important
+
+    /* Sidebar User Drop Down Menu Text Color */
+    #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+    #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+        color: <%= theme.uiux.theme_color %> !important;
     }
-    
+
     #post_entry-right-info,
     .sidebar-colored .sidebar-nav li:hover > a,
     .sidebar-colored .sidebar-nav li:hover > a i,
@@ -36,49 +36,61 @@
     .sidebar-colored .sidebar-nav > .open > a,
     .sidebar-colored .sidebar-nav > .open > a:hover,
     .sidebar-colored .sidebar-nav > .open > a:focus,
-    #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a{
-        color: <%= theme.uiux.theme_color %> !important
+    #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+        color: <%= theme.uiux.theme_color %> !important;
     }
-    
-    .toTop{
-        background: <%= theme.uiux.button_color %> !important
-    }
-		
-	.material-layout .material-post>.material-nav,
-	.material-layout .material-index>.material-nav,
-	.material-nav a{
-		color: <%= theme.uiux.button_color %>;
-	}
-		
-	#scheme-Paradox .MD-burger-layer {
-		background-color: <%= theme.uiux.button_color %>;
-	}
 
-	#scheme-Paradox #post-toc-trigger-btn{
-		color: <%= theme.uiux.button_color %>;
-	}
-	
-	.post-toc a:hover{
-		color: <%= theme.uiux.hyperlink_color %>;
-		text-decoration: underline;
-	}
+    .toTop {
+        background: <%= theme.uiux.button_color %> !important;
+    }
+
+    .material-layout .material-post>.material-nav,
+    .material-layout .material-index>.material-nav,
+    .material-nav a {
+        color: <%= theme.uiux.button_color %>;
+    }
+
+    #scheme-Paradox .MD-burger-layer {
+        background-color: <%= theme.uiux.button_color %>;
+    }
+
+    #scheme-Paradox #post-toc-trigger-btn {
+        color: <%= theme.uiux.button_color %>;
+    }
+
+    .post-toc a:hover {
+        color: <%= theme.uiux.hyperlink_color %>;
+        text-decoration: underline;
+    }
 </style>
 
 
 <!-- Theme Background Related-->
-<% if(theme.background.bing.enable == true){ %>
-	<style>
-		body{
-            background-image: url(https://api.i-meto.com/bing?<%= theme.background.bing.parameter %>);
+<% if(theme.background.bing.enable === true) { %>
+    <style>
+        body {
+            background-color: <%= theme.background.purecolor %>;
         }
-	</style>
-<% } else if(theme.background.bgimg == undefined){ %>
+
+        /* blog_info bottom background */
+        #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text {
+            background-color: #fff;
+        }
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            setTimeout(function () {
+                document.body.background="https://api.i-meto.com/bing?<%= theme.background.bing.parameter %>";
+            }, 2000);
+        }
+    </script>
+<% } else if(!theme.background.bgimg) { %>
     <style>
         body{
-            background-color: <%= theme.background.purecolor %>
+            background-color: <%= theme.background.purecolor %>;
         }
-		
-		/* blog_info bottom background */
+
+        /* blog_info bottom background */
         #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
             background-color: #fff;
         }
@@ -94,7 +106,7 @@
 
 
 <!-- Fade Effect -->
-<% if(theme.js_effect.fade == true){ %>
+<% if(theme.js_effect.fade === true) { %>
     <style>
         .fade {
             transition: all <%= theme.uiux.nprogress_buffer %>ms linear;

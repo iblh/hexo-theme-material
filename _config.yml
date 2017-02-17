@@ -13,7 +13,7 @@ head:
 url:
     rss:
     daily_pic: "#"
-    logo:
+    logo: "#"
 
 
 # ---------------------------------------------------------------
@@ -51,7 +51,7 @@ reading:
 # Thumbnail Settings
 thumbnail:
     purecolor:
-    random_amount: 5
+    random_amount: 19
 
 # Background Settings
 # bing available parameter:
@@ -73,7 +73,7 @@ img:
     sidebar_header: "/img/sidebar_header.png"
     footerico: "/img/footer/footer_ico-"
     #upyun_logo: "/img/upyun_logo.png"
-    random_thumbnail: "/img/random/"
+    random_thumbnail: "/img/random/material-"
 
 # Custom Fonts
 fonts: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif
@@ -85,14 +85,27 @@ fonts: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "
 # SNS Menu
 sns:
     email: youremail@email.com
-    twitter: "https://twitter.com/twitter"
     facebook: "https://www.facebook.com/facebook"
+    twitter: "https://twitter.com/twitter"
     googleplus: "https://www.google.com/"
-    weibo:
-    instagram:
-    tumblr:
-    github:
-    linkedin:
+    weibo: 
+    instagram: 
+    tumblr: 
+    github: 
+    linkedin: 
+    zhihu: 
+    bilibili: 
+    telegram: 
+
+# SNS Share Switch
+sns_share:
+    twitter: true
+    facebook: true
+    googleplus: true
+    weibo: true
+    linkedin: false
+    qq: false
+    telegram: false
 
 # Sidebar User Dropdown
 dropdown:
@@ -100,10 +113,16 @@ dropdown:
         link: "#"
         icon: email
 
+# Sidebar Categories Switch
+sidebar_categories: false
+
 # Pages Menu
 pages:
-    #about: "/about"
+    #About:
+        #link: "/about"
+        #icon: person
 
+# Qrcode for redirect at other device
 qrcode: false
 
 # ---------------------------------------------------------------
@@ -111,12 +130,12 @@ qrcode: false
 # ---------------------------------------------------------------
 
 # Comment Systems
-# Available value:
+# Available value of "use":
 #     duoshuo | disqus
 comment:
     use:
     shortname:
-    duoshuo_thread_key: path
+    duoshuo_thread_key_type: path
     duoshuo_embed_js_url: "https://static.duoshuo.com/embed.js"
 
 # Search Systems
