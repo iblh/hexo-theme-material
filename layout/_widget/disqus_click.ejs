@@ -22,7 +22,7 @@
                 opacity: 0;
             }
         }
-		button {
+		.disqus_click_btn {
             background-color: dodgerblue;
             color: white;
             padding: 10px 20px;
@@ -33,8 +33,8 @@
 </style>
 	
 <!-- add data-ripple attribute -->
-<div class="btn1"> 
-    <button data-ripple><%= __('post.comments_load_button') %></button>
+<div class="btn_click_load"> 
+    <button class="disqus_click_btn" data-ripple><%= __('post.comments_load_button') %></button>
 </div>
 	
 <script>
@@ -46,21 +46,19 @@
 </script>
 
 <script>
-    $('html').ready(function() {
-        $(".btn1").click(function() {  //click to load comments
-            var disqus_config = function () {
-                this.page.url = '<%- config.url + url_for(path) %>';  // Replace PAGE_URL with your page's canonical URL variable
-                this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-            };
-
-            (function() { // DON'T EDIT BELOW THIS LINE
-                var d = document;
-                var s = d.createElement('script');
-                s.src = '//<%= theme.comment.shortname %>.disqus.com/embed.js';
-                s.setAttribute('data-timestamp', + new Date());
-                (d.head || d.body).appendChild(s);
-            })();
-       });
+    $('.btn_click_load').click(function() {  //click to load comments
+        var disqus_config = function () {
+            this.page.url = '<%- config.url + url_for(path) %>';  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//<%= theme.comment.shortname %>.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.btn_click_load').css('display','none');
     });
 </script>
   	

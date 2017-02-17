@@ -77,6 +77,9 @@ img:
 # Custom Fonts
 fonts: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif
 
+# Card Elevation Level
+card_elevation: 2
+
 
 # ---------------------------------------------------------------
 # Menu Settings
@@ -139,9 +142,6 @@ sidebar:
         support: false
         feedback: false
         material: false
-
-# Card Elevation Level
-card_elevation: 2
 
 # Qrcode for redirect at other device
 qrcode: false

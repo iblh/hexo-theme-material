@@ -2012,7 +2012,11 @@ a {
 .sidebar .sidebar-nav li a .caret {
     position: absolute;
     right: 24px;
-    top: 24px
+    top: 24px;
+    transition: .3s;
+}
+.sidebar .sidebar-nav li.open a .caret {
+  transform:rotate(-180deg);
 }
 .sidebar .sidebar-nav li a .sidebar-badge,
 .hot_tags-count,
