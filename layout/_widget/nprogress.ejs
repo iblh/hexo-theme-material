@@ -5,7 +5,6 @@
         showSpinner: true
     });
     NProgress.start();
-
     $('#nprogress .bar').css({
         'background': '<%= theme.uiux.nprogress_color %>'
     });
@@ -16,7 +15,6 @@
         'border-top-color': '<%= theme.uiux.nprogress_color %>',
         'border-left-color': '<%= theme.uiux.nprogress_color %>'
     });
-
     setTimeout(function() {
         NProgress.done();
         $('.fade').removeClass('out');

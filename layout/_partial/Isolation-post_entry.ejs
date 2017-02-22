@@ -1,6 +1,6 @@
-<div class="post_entry-module mdl-card mdl-cell mdl-cell--12-col fade out">
+<div class="post_entry-module mdl-card <% if(theme.card_elevation) { %><%= 'mdl-shadow--' + theme.card_elevation + 'dp' %><% } %> mdl-cell mdl-cell--12-col fade out">
     <!-- Post_entry Header -->
-    <% if(post.thumbnail == undefined) { %>
+    <% if(!post.thumbnail) { %>
         <!-- Post Header Info -->
         <div class="post_entry-header_info without-thumbnail">
             <!-- Author Avatar & Name -->
@@ -28,7 +28,7 @@
     <div class="post_entry-content mdl-color-text--grey-600 mdl-card__supporting-text">
         <!-- Post Title -->
         <p class="post_entry-title">
-            <a href="<%= url_for(post.path) %>"><%= post.title %></a>
+            <a href="<%= url_for(post.path) %>"><% if(pin) { %><span>[Top]</span><% } %><%= post.title %></a>
         </p>
 
         <!-- Post Excerpt -->

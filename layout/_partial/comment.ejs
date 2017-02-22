@@ -15,3 +15,16 @@
         }
     </style>
 <% } %>
+
+<% if(theme.comment.use === 'disqus_click') { %>
+    <!-- 使用 DISQUS_CLICK -->
+    <div id="disqus-comment">	
+        <%- partial('_widget/disqus_click') %>
+    </div>
+    <style>
+        #disqus-comment{
+            background-color: #eee;
+            padding: 2pc;
+        }
+    </style>
+<% } %>

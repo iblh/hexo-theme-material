@@ -2,10 +2,12 @@
     <!-- User dropdown  -->
     <li class="dropdown">
         <ul id="settings-dropdown" class="dropdown-menu">
-            <% for (var i in theme.dropdown) { %>
+            <% for (var i in theme.sidebar.dropdown) { %>
                 <li>
-                    <a href="<%= theme.dropdown[i].link %>" target="_blank" title="<%= i %>">
-                        <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element"><%= theme.dropdown[i].icon %></i>
+                    <a href="<%= theme.sidebar.dropdown[i].link %>" target="_blank" title="<%= i %>">
+                        <% if(theme.sidebar.dropdown[i].icon) { %>
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element"><%= theme.sidebar.dropdown[i].icon %></i>
+                        <% } %>
                         <%= i %>
                     </a>
                 </li>
@@ -14,47 +16,53 @@
     </li>
 
     <!-- Homepage -->
-    <li id="sidebar-first-li">
-        <a href="<%= config.root %>" target="_self">
-            <i class="material-icons sidebar-material-icons">home</i>
-            <%= __('sidebar.homepage') %>
-        </a>
-    </li>
-
-    <!-- I'm Feeling Lucky -->
-    <!--
-    <li class="dropdown">
-        <a href="" target="_self">
-            <i class="material-icons sidebar-material-icons">explore</i>
-             <%= __("sidebar.imlucky") %>
-        </a>
-    </li>
-    -->
+    <% if(theme.sidebar.homepage.use === true) { %>
+        <li id="sidebar-first-li">
+            <a href="<%= config.root %>" target="_self">
+                <% if(theme.sidebar.homepage.icon) { %>
+                    <i class="material-icons sidebar-material-icons"><%= theme.sidebar.homepage.icon %></i>
+                <% } %>
+                <%= __('sidebar.homepage') %>
+            </a>
+        </li>
+        <% if(theme.sidebar.homepage.divider === true) { %>
+            <li class="divider"></li>
+        <% } %>
+    <% } %>
 
     <!-- Archives  -->
-    <li class="dropdown">
-        <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
-            <i class="material-icons sidebar-material-icons">inbox</i>
-             <%= __('sidebar.archive') %>
-            <b class="caret"></b>
-        </a>
-        <ul class="dropdown-menu">
-            <li>
-            <%- list_archives({
-                show_count: true,
-                amount: 5,
-                class: 'sidebar_archives',
-                style: 'none',
-                separator: '</li><li>'
-            }) %>
-        </ul>
-    </li>
-
-    <!-- Categories  -->
-    <% if(theme.sidebar_categories === true) { %>
+    <% if(theme.sidebar.archives.use === true) { %>
         <li class="dropdown">
             <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
-                <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                <% if(theme.sidebar.archives.icon) { %>
+                    <i class="material-icons sidebar-material-icons"><%= theme.sidebar.archives.icon %></i>
+                <% } %>
+                    <%= __('sidebar.archive') %>
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <%- list_archives({
+                    show_count: true,
+                    amount: 5,
+                    class: 'sidebar_archives',
+                    style: 'none',
+                    separator: '</li><li>'
+                }) %>
+            </ul>
+        </li>
+        <% if(theme.sidebar.archives.divider === true) { %>
+            <li class="divider"></li>
+        <% } %>
+    <% } %>
+
+    <!-- Categories  -->
+    <% if(theme.sidebar.categories.use === true) { %>
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                <% if(theme.sidebar.categories.icon) { %>
+                    <i class="material-icons sidebar-material-icons"><%= theme.sidebar.categories.icon %></i>
+                <% } %>
                 <%= __('title.category') %>
                 <b class="caret"></b>
             </a>
@@ -69,29 +77,36 @@
                 }) %>
             </ul>
         </li>
+        <% if(theme.sidebar.categories.divider === true) { %>
+            <li class="divider"></li>
+        <% } %>
     <% } %>
 
-    <!-- Divider -->
-    <li class="divider"></li>
-
-
     <!-- Pages  -->
-  	<% for (var i in theme.pages){ %>
+    <% for (var i in theme.sidebar.pages){ %>
         <li>
-            <a href="<%= theme.pages[i].link %>" title="<%= i %>">
-                <% if(theme.pages[i].icon){ %>
-                    <i class="material-icons sidebar-material-icons"><%= theme.pages[i].icon %></i>
+            <a href="<%= theme.sidebar.pages[i].link %>" title="<%= i %>">
+                <% if(theme.sidebar.pages[i].icon){ %>
+                    <i class="material-icons sidebar-material-icons"><%= theme.sidebar.pages[i].icon %></i>
                 <% } %>
                 <%= i %>
             </a>
         </li>
-  	<% } %>
+        <% if(theme.sidebar.pages[i].divider === true) { %>
+            <li class="divider"></li>
+        <% } %>
+    <% } %>
 
-    <!-- Article Numebr  -->
-    <li>
-        <a href="/archives">
-            <%= __('sidebar.article_num') %>
-            <span class="sidebar-badge"><%= site.posts.length %></span>
-        </a>
-    </li>
+    <!-- Article Number  -->
+    <% if(theme.sidebar.article_num.use === true) { %>
+        <li>
+            <a href="/archives">
+                <%= __('sidebar.article_num') %>
+                <span class="sidebar-badge"><%= site.posts.length %></span>
+            </a>
+        </li>
+        <% if(theme.sidebar.article_num.divider === true) { %>
+            <li class="divider"></li>
+        <% } %>
+    <% } %>
 </ul>

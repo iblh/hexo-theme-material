@@ -1,5 +1,5 @@
 <!-- Blog info -->
-<div class="mdl-card something-else mdl-cell mdl-cell--8-col mdl-cell--4-col-desktop index-top-block">
+<div class="mdl-card <% if(theme.card_elevation) { %><%= 'mdl-shadow--' + theme.card_elevation + 'dp' %><% } %> something-else mdl-cell mdl-cell--8-col mdl-cell--4-col-desktop index-top-block">
 
     <!-- Search -->
     <%- partial('_partial/Paradox-search') %>
@@ -25,8 +25,8 @@
             <span class="visuallyhidden">Pages</span>
         </button>
         <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="show-pages-button">
-            <% for (var i in theme.pages) { %>
-                <a class="index_share-link" href="<%= theme.pages[i].link || '#' %>" title="<%= i %>">
+            <% for (var i in theme.sidebar.pages) { %>
+                <a class="index_share-link" href="<%= theme.sidebar.pages[i].link || '#' %>" title="<%= i %>">
                     <li class="mdl-menu__item mdl-js-ripple-effect">
                         <%= i %>
                     </li>
@@ -45,7 +45,7 @@
                 <a class="index_share-link" href="#">
                     <li class="mdl-menu__item mdl-js-ripple-effect">
                         <span id="busuanzi_container_site_uv">
-                            <span id="busuanzi_value_site_uv"></span>&nbsp;<%= __("post.views") %>
+                            <span id="busuanzi_value_site_uv"></span>&nbsp;<%= __('post.views') %>
                         </span>
                     </li>
                 </a>
