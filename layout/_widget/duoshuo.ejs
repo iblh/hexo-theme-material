@@ -1,4 +1,4 @@
-<%- css("css/duoshuo.min") %>
+<%- css('css/duoshuo.min') %>
 <style>
     #ds-thread #ds-reset .ds-post-button{
         background-color: <%= theme.uiux.theme_color %> !important;
@@ -13,7 +13,7 @@
 <div id="comments">
     <!-- 多说评论框 start -->
     <div class="ds-thread"
-        data-thread-key="<% theme.comment.duoshuo_thread_key_type === 'id' ? page.id : page.path %>"
+        data-thread-key="<%= theme.comment.duoshuo_thread_key_type === 'id' ? page.id : page.path %>"
         data-url="<%- config.url + config.root + page.path %>"
         data-title="<%= page.title %>">
     </div>

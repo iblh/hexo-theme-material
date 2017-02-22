@@ -4,19 +4,19 @@
 <% } %>
 
 <!-- Layouts -->
-<% if(page.layout == 'tags') { %>
+<% if(page.layout === 'tags') { %>
     <!-- Tags Cloud -->
     <%- partial('_widget/page-tagcloud') %>
 
-<% } else if(page.layout == 'links') { %>
+<% } else if(page.layout === 'links') { %>
     <!-- Single Links Page -->
     <%- partial('_widget/page-links') %>
 
-<% } else if(page.layout == 'private') { %>
+<% } else if(page.layout === 'private') { %>
     <!-- Hidden Page -->
     <div class="material-post_container">
         <div class="material-post mdl-grid">
-            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+            <div class="mdl-card <% if(theme.card_elevation) { %><%= 'mdl-shadow--' + theme.card_elevation + 'dp' %><% } %> mdl-cell mdl-cell--12-col">
                 <!-- Post Header(Thumbnail & Title) -->
                 <%- partial('_partial/post-header') %>
 
