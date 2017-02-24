@@ -111,31 +111,29 @@ sns_share:
     telegram: false
 
 # Sidebar Customize
+sidebar_order:
+    homepage:
+        icon: home
+        divider: false
+    categories:
+        icon: chrome_reader_mode
+        divider: false
+    archives:
+        icon: inbox
+        divider: false
+    #pages:
+        #About:
+            #link: "/about"
+            #icon: person
+            #divider: false
+    #article_num:
+        #divider: false
+
 sidebar:
     dropdown:
         Email Me:
             link: "#"
             icon: email
-    homepage:
-        use: true
-        icon: home
-        divider: false
-    archives:
-        use: true
-        icon: inbox
-        divider: false
-    categories:
-        use: false
-        icon: chrome_reader_mode
-        divider: false
-    pages:
-        #About:
-            #link: "/about"
-            #icon: person
-            #divider: false
-    article_num:
-        use: false
-        divider: false
     footer:
         divider: true
         theme: true
