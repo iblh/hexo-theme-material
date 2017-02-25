@@ -99,6 +99,7 @@ sns:
     zhihu:
     bilibili:
     telegram:
+    segmentfault: https://segmentfault.com
 
 # SNS Share Switch
 sns_share:
