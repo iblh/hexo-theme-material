@@ -15,26 +15,26 @@
         </ul>
     </li>
 
-    <% for (var i in theme.sidebar_order) { %>
+    <% for (var i in theme.sidebar.main) { %>
       <% if(i === 'homepage') { %>
         <!-- Homepage -->
           <li id="sidebar-first-li">
               <a href="<%= config.root %>" target="_self">
-                  <% if(theme.sidebar_order[i].icon) { %>
-                      <i class="material-icons sidebar-material-icons"><%= theme.sidebar_order[i].icon %></i>
+                  <% if(theme.sidebar.main[i].icon) { %>
+                      <i class="material-icons sidebar-material-icons"><%= theme.sidebar.main[i].icon %></i>
                   <% } %>
                   <%= __('sidebar.homepage') %>
               </a>
           </li>
-          <% if(theme.sidebar_order[i].divider === true) { %>
+          <% if(theme.sidebar.main[i].divider === true) { %>
               <li class="divider"></li>
           <% } %>
       <% } else if (i === 'archives') { %>
         <!-- Archives  -->
           <li class="dropdown">
               <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
-                  <% if(theme.sidebar_order[i].icon) { %>
-                      <i class="material-icons sidebar-material-icons"><%= theme.sidebar_order[i].icon %></i>
+                  <% if(theme.sidebar.main[i].icon) { %>
+                      <i class="material-icons sidebar-material-icons"><%= theme.sidebar.main[i].icon %></i>
                   <% } %>
                       <%= __('sidebar.archive') %>
                   <b class="caret"></b>
@@ -50,15 +50,15 @@
                   }) %>
               </ul>
           </li>
-          <% if(theme.sidebar_order[i].divider === true) { %>
+          <% if(theme.sidebar.main[i].divider === true) { %>
               <li class="divider"></li>
           <% } %>
       <% } else if (i === 'categories') { %>
         <!-- Categories  -->
           <li class="dropdown">
               <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
-                  <% if(theme.sidebar_order[i].icon) { %>
-                      <i class="material-icons sidebar-material-icons"><%= theme.sidebar_order[i].icon %></i>
+                  <% if(theme.sidebar.main[i].icon) { %>
+                      <i class="material-icons sidebar-material-icons"><%= theme.sidebar.main[i].icon %></i>
                   <% } %>
                   <%= __('title.category') %>
                   <b class="caret"></b>
@@ -74,21 +74,21 @@
                   }) %>
               </ul>
           </li>
-          <% if(theme.sidebar_order[i].divider === true) { %>
+          <% if(theme.sidebar.main[i].divider === true) { %>
               <li class="divider"></li>
           <% } %>
       <% } else if (i === 'pages') { %>
       <!-- Pages  -->
-      <% for (var x in theme.sidebar_order.pages){ %>
+      <% for (var x in theme.sidebar.main.pages){ %>
           <li>
-              <a href="<%= theme.sidebar_order.pages[x].link %>" title="<%= x %>">
-                  <% if(theme.sidebar_order.pages[x].icon){ %>
-                      <i class="material-icons sidebar-material-icons"><%= theme.sidebar_order.pages[x].icon %></i>
+              <a href="<%= theme.sidebar.main.pages[x].link %>" title="<%= x %>">
+                  <% if(theme.sidebar.main.pages[x].icon){ %>
+                      <i class="material-icons sidebar-material-icons"><%= theme.sidebar.main.pages[x].icon %></i>
                   <% } %>
                   <%= x %>
               </a>
           </li>
-          <% if(theme.sidebar_order.pages[x].divider === true) { %>
+          <% if(theme.sidebar.main.pages[x].divider === true) { %>
               <li class="divider"></li>
           <% } %>
         <% } %>
@@ -100,7 +100,7 @@
                   <span class="sidebar-badge"><%= site.posts.length %></span>
               </a>
           </li>
-          <% if(theme.sidebar_order[i].divider === true) { %>
+          <% if(theme.sidebar.main[i].divider === true) { %>
               <li class="divider"></li>
           <% } %>
       <% } %>
