@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html 
-    <% if(typeof config.language === "undefinded") { %>
+    <% if(typeof config.language !== "string") { %>
         lang="<%- config.language.substring(0,2) %>" 
     <% } %>>
     
