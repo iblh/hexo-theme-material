@@ -1,5 +1,9 @@
 <!DOCTYPE html>
-<html lang="<%- config.language.substring(0,2) %>">
+<html 
+    <% if(typeof config.language === "undefinded") { %>
+        lang="<%- config.language.substring(0,2) %>" 
+    <% } %>>
+    
     <%- partial('_partial/head') %>
 
     <% if(page.layout === 'gallery') { %>
