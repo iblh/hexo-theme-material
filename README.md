@@ -1,4 +1,4 @@
-# Material 原质
+# Material 原质[^note]
 
 [Material Theme](https://material.viosey.com)
 
@@ -65,8 +65,4 @@ Open sourced under the GPL v3.0 license.
 根据 GPL V3.0 许可证开源。
 
 
-## Render 渲染
-
-![](https://qiniu.viosey.com/img/Material-Phone-Render.png)
-
-![](https://qiniu.viosey.com/img/Materia-overview-tiny.png)
+[^note]: 安装后,把_config.template.yml复制为_config.yml，同时设置主配置文件language：zh-CN
