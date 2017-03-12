@@ -67,7 +67,7 @@ $(document).ready(function() {
         $("html, body").animate({
             scrollTop: $($(this).attr("href")).offset().top + "px"
         }, {
-            duration: 500,
+            duration: 50,
             easing: "swing"
         });
         return false;
@@ -649,6 +649,7 @@ window.addEventListener("load", function() {
                 t === e || this.closing_ || (document.removeEventListener("click", r), this.hide())
             }.bind(this);
             document.addEventListener("click", r)
+            this.container_.style.overflow = "scroll"
         }
     }, MaterialMenu.prototype.hide = function() {
         "use strict";
@@ -657,6 +658,7 @@ window.addEventListener("load", function() {
             var s = this.element_.getBoundingClientRect().height,
                 i = this.element_.getBoundingClientRect().width;
             this.element_.classList.add(this.CssClasses_.IS_ANIMATING), this.applyClip_(s, i), this.container_.classList.remove(this.CssClasses_.IS_VISIBLE), this.addAnimationEndListener_()
+            this.container_.style.overflow = "hidden"
         }
     }, MaterialMenu.prototype.toggle = function(e) {
         "use strict";

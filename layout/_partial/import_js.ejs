@@ -1,6 +1,6 @@
 <!-- Import File -->
 <%- js('js/lazyload.min') %>
-<%- js('js/js.min') %>
+<%- js('js/js') %>
 <%- partial('_widget/nprogress') %>
 
 <% if( theme.js_effect.smoothscroll === true ) { %>
@@ -37,7 +37,7 @@
 <script>
     $(window).load(function() {
         // Post_Toc parent position fixed
-        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed').css('overflow',"scroll").css('max-height','70%');
     });
 </script>
 

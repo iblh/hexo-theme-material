@@ -130,6 +130,10 @@ sidebar:
         use: true
         icon: chrome_reader_mode
         divider: false
+    tags:
+        use: true
+        icon: bookmark
+        divider: false
     pages:
         About Me:
             link: "/about.html"

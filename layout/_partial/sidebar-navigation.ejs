@@ -82,6 +82,32 @@
         <% } %>
     <% } %>
 
+     <!-- tags  -->
+    <% if(theme.sidebar.tags.use === true) { %>
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                <% if(theme.sidebar.tags.icon) { %>
+                    <i class="material-icons sidebar-material-icons"><%= theme.sidebar.tags.icon %></i>
+                <% } %>
+                <%= __('title.tag') %>
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <%- list_tags({
+                    show_count: true,
+                    amount: 5,
+                    class: 'sidebar_archives',
+                    style: 'none',
+                    separator: '</li><li>'
+                }) %>
+            </ul>
+        </li>
+        <% if(theme.sidebar.categories.divider === true) { %>
+            <li class="divider"></li>
+        <% } %>
+    <% } %>
+
     <!-- Pages  -->
     <% for (var i in theme.sidebar.pages){ %>
         <li>
