@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="<%- config.language.substring(0,2) %>">
     <%- partial('_partial/head') %>
 
     <% if(page.layout === 'gallery') { %>
         <!-- Single Gallery Page -->
         <%- partial('_widget/page-gallery') %>
     <% } else { %>
-        <body id="scheme-<%= theme.scheme %>">
+        <body id="scheme-<%= theme.scheme %>" class="lazy">
             <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
                 <% if(theme.scheme === 'Isolation') { %>
                     <!-- Isolation Header -->

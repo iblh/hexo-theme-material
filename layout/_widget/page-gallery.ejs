@@ -1,4 +1,5 @@
-<%- css("css/gallery.min") %>
+<%- css('css/gallery.min') %>
+
 
 <body>
     <!-- Wrapper -->
@@ -25,14 +26,13 @@
             <% if (site.data.gallery) { %>
                 <% for (var i in site.data.gallery) { %>
                     <article class="thumb">
-                        <a href="<%= site.data.gallery[i].full_link %>" class="image"><img src="<%= site.data.gallery[i].thumb_link %>" alt="<%= i %>" /></a>
+                        <a href="<%= site.data.gallery[i].full_link %>" class="image lazy" data-original="<%= site.data.gallery[i].thumb_link %>"><img class="lazy" data-original="<%= site.data.gallery[i].thumb_link %>" alt="<%= i %>" /></a>
                         <h2><%= i %></h2>
                         <p><%= site.data.gallery[i].descr %></p>
                     </article>
                 <% } %>
             <% } %>
         </div>
-
         <!-- Footer -->
         <!--
         <footer id="footer" class="panel">
@@ -86,8 +86,15 @@
 
     <!-- Scripts -->
     <%- js('js/jquery.min') %>
-    <%- js('js/gallery/jquery.poptrox.min') %>
-    <%- js('js/gallery/skel.min') %>
-    <%- js('js/gallery/util.min') %>
-    <%- js('js/gallery/main.min') %>
+    <%- js('js/gallery/gallery') %>
+    <%- js('js/lazyload.min') %>
+
+    <script type="text/javascript">
+        queue.offer(function(){
+            $('.lazy').lazyload({
+              effect: 'fadeIn',
+              event: 'scrollstop'
+            });
+        })
+    </script>
 </body>

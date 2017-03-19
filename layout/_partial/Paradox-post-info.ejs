@@ -21,7 +21,7 @@
     -->
 
     <!-- Qrcode -->
-    <% if(theme.qrcode == true) { %>
+    <% if(theme.qrcode === true) { %>
         <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
             <i class="material-icons" role="presentation">devices other</i>
             <span class="visuallyhidden">devices other</span>
@@ -35,7 +35,7 @@
     <% } %>
 
     <!-- Tags (bookmark) -->
-    <% if(page.notag != true) { %>
+    <% if(page.notag !== true) { %>
     <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
         <i class="material-icons" role="presentation">bookmark</i>
         <span class="visuallyhidden">bookmark</span>
