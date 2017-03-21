@@ -6,3 +6,5 @@ npm-debug.log
 node_modules
 
 .idea
+
+gulpfile.js
