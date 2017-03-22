@@ -161,7 +161,9 @@ comment:
     shortname:
     duoshuo_thread_key_type: path
     duoshuo_embed_js_url: "https://static.duoshuo.com/embed.js"
-
+    changyan_appid:
+    changyan_conf:
+    changyan_thread_key_type: path
 # Search Systems
 # Available value:
 #     swiftype | google | local

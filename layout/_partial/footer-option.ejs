@@ -32,6 +32,12 @@
     </script>
     <!-- 多说公共 js 代码 end -->
 <% } %>
+<% if(theme.comment.use == "changyan"){ %>
+    <!-- 畅言公共 js 代码 start -->
+		<script id="cy_cmt_num" src="https://changyan.sohu.com/upload/plugins/plugins.list.count.js?clientId=<%=theme.comment.changyan_appid%>">
+</script>
+    <!-- 畅言公共 js 代码 end -->
+<% } %>
 
 <% if(theme.comment.use === 'disqus') { %>
     <!-- 使用 DISQUS js 代码 -->
