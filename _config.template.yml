@@ -72,7 +72,7 @@ img:
     footer_image:
         #upyun_logo:
             #link: "https://www.upyun.com/"
-            #src: "/img/upyun_logo.png"
+            #src: "/img/upyun_logo.svg"
 
 # Custom Fonts
 fonts: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif
