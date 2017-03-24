@@ -649,7 +649,7 @@ window.addEventListener("load", function() {
                 t === e || this.closing_ || (document.removeEventListener("click", r), this.hide())
             }.bind(this);
             document.addEventListener("click", r)
-            this.container_.style.overflow = "scroll"
+            this.container_.style.overflow = "auto"
         }
     }, MaterialMenu.prototype.hide = function() {
         "use strict";
