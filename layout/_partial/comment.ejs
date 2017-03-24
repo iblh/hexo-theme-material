@@ -5,11 +5,11 @@
 
 <% if(theme.comment.use === 'changyan') { %>
     <!-- 使用 changyan -->
-    <div id="disqus-comment">
+    <div id="changyan-comment">
         <%- partial('_widget/changyan') %>
     </div>
     <style>
-        #disqus-comment{
+        #changyan-comment{
             background-color: #eee;
             padding: 2pc;
         }
@@ -31,7 +31,7 @@
 
 <% if(theme.comment.use === 'disqus_click') { %>
     <!-- 使用 DISQUS_CLICK -->
-    <div id="disqus-comment">	
+    <div id="disqus-comment">
         <%- partial('_widget/disqus_click') %>
     </div>
     <style>
