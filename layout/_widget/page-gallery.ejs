@@ -1,4 +1,4 @@
-<% if(theme.sidebar.materialcdn.use === true) { %>
+<% if(theme.materialcdn.use === true) { %>
     <link rel="stylesheet" href="<%= theme.materialcdn.base %>/css/gallery.min.css">
 <%}else{%>
     <%- css('css/gallery.min') %>
@@ -88,7 +88,7 @@
     </div>
 
     <!-- Scripts -->
-    <% if(theme.sidebar.materialcdn.use === true) { %>
+    <% if(theme.materialcdn.use === true) { %>
         <script src="<%= theme.materialcdn.base %>/js/jquery.min.js"></script>
         <script src="<%= theme.materialcdn.base %>/js/gallery/gallery.js"></script>
         <script src="<%= theme.materialcdn.base %>/js/lazyload.min.js"></script>
