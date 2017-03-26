@@ -1,5 +1,8 @@
-<%- css('css/gallery.min') %>
-
+<% if(theme.sidebar.materialcdn.use === true) { %>
+    <link rel="stylesheet" href="<%= theme.materialcdn.base %>/css/gallery.min.css">
+<%}else{%>
+    <%- css('css/gallery.min') %>
+<%}%>
 
 <body>
     <!-- Wrapper -->
@@ -85,9 +88,15 @@
     </div>
 
     <!-- Scripts -->
-    <%- js('js/jquery.min') %>
-    <%- js('js/gallery/gallery') %>
-    <%- js('js/lazyload.min') %>
+    <% if(theme.sidebar.materialcdn.use === true) { %>
+        <script src="<%= theme.materialcdn.base %>/js/jquery.min.js"></script>
+        <script src="<%= theme.materialcdn.base %>/js/gallery/gallery.js"></script>
+        <script src="<%= theme.materialcdn.base %>/js/lazyload.min.js"></script>
+    <%}else{%>
+        <%- js('js/jquery.min') %>
+        <%- js('js/gallery/gallery') %>
+        <%- js('js/lazyload.min') %>
+    <%}%>
 
     <script type="text/javascript">
         queue.offer(function(){
