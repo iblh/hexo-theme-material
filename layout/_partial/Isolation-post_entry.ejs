@@ -65,6 +65,12 @@
                     <!-- Comment Number -->
                     <span class="ds-thread-count" data-thread-key="<% theme.comment.duoshuo_thread_key_type === 'id' ? page.id : page.path %>" data-count-type="comments"></span>
                 <% } %>
+                <% if(theme.comment.use === 'changyan') { %>
+                    <!-- Comment Number -->
+                    <span class="post_entry-comment" >
+                            <span id = "sourceId::<%= theme.comment.changyan_thread_key_type === 'id' ? page.id : page.path  %>" class = "cy_cmt_count" ></span>条评论
+                    </span>
+                <% } %>
             </div>
         </div>
     </div>

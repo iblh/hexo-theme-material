@@ -59,6 +59,14 @@
                 </span>
             <% } %>
 
+            <% if(theme.comment.use === 'changyan') { %>
+                <!-- Comment Number -->
+                &nbsp;|&nbsp;
+                <span class="post_entry-comment" >
+                        <span id = "sourceId::<%= theme.comment.changyan_thread_key_type === 'id' ? post.id : post.path  %>" class = "cy_cmt_count" ></span>条评论
+                </span>
+            <% } %>
+
             <!-- Post Views -->
             <span class="post_entry-views">
             </span>

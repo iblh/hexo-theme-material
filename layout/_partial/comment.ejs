@@ -3,6 +3,19 @@
     <%- partial('_widget/duoshuo') %>
 <% } %>
 
+<% if(theme.comment.use === 'changyan') { %>
+    <!-- 使用 changyan -->
+    <div id="changyan-comment">
+        <%- partial('_widget/changyan') %>
+    </div>
+    <style>
+        #changyan-comment{
+            background-color: #eee;
+            padding: 2pc;
+        }
+    </style>
+<% } %>
+
 <% if(theme.comment.use === 'disqus') { %>
     <!-- 使用 DISQUS -->
     <div id="disqus-comment">
@@ -18,7 +31,7 @@
 
 <% if(theme.comment.use === 'disqus_click') { %>
     <!-- 使用 DISQUS_CLICK -->
-    <div id="disqus-comment">	
+    <div id="disqus-comment">
         <%- partial('_widget/disqus_click') %>
     </div>
     <style>
