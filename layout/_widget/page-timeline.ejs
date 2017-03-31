@@ -44,8 +44,11 @@
 	.md-timeline-info-span {
 		float: right;
 		margin-right: 10px;
+		text-align: right;
 	}
-	.md-timeline-excerpt {}
+	.md-timeline-excerpt {
+	    	clear: right; 
+	}
 	@media only screen and (min-width: 1170px) {
 		#md-timeline {
 			margin-top: 3em;
@@ -399,26 +402,27 @@
                 		<div class="md-timeline-content">
                     			<div class="md-timeline-title"><a href="<%- url_for(post.path) %>"><%= post.title %></a></div>
 					<div class="md-timeline-info">
+						<span class="md-timeline-info-span">Categories:
+							<%- list_categories(post.categories, {
+								show_count: false, 
+								style: 'none'
+							}) %>
+						</span>
 						<span class="md-timeline-info-span">Tags:
 							<%- list_tags(post.tags, {
 								show_count: false,
 								style: 'none'
 							}) %>
 						</span>
-						<span class="md-timeline-info-span">Categorias:
-							<%- list_categories(post.categories, {
-								show_count: false, 
-								style: 'none'
-							}) %>
-						</span>
+						
 					</div>
-					<div class="md-timeline-excerpt">
+					<p class="md-timeline-excerpt">
 						<% if(post.excerpt) { %>
 							<%- strip_html(post.excerpt) %>
 						<% }else{ %>
 							<%- strip_html(truncate(post.content,{length: theme.reading.entry_excerpt })) %>
-						<% } %>
-					</div>
+						<% } %>...
+					</p>
                     		</div>
 			</div>	
    		<% }) %>	   	  		
