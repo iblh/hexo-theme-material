@@ -133,10 +133,6 @@ sidebar:
             #link: "/about"
             #icon: person
             #divider: false
-        timeline: #can use different languages
-            link: "/timeline" #create a folder named 'timeline'(due to you) within the 'source' folder
-            icon: timeline #then create a file named 'index.md' inside this folder and set 'layout' to 'timeline' in front-matter
-            divider: false
     article_num:
         use: false
         divider: false
