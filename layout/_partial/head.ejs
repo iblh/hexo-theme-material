@@ -2,7 +2,7 @@
     <!-- 
         © Material Theme
         https://github.com/viosey/hexo-theme-material
-        Version: 1.3.0 -->
+        Version: 1.3.2 -->
 
     <!-- Title -->
     <%
@@ -79,13 +79,20 @@
         <% } %>
     <![endif]-->
 
-    <!-- Import CSS -->
-    <%- css('css/material.min') %>
-    <%- css('css/style.min') %>
-    <%- partial('_partial/config_css') %>
-
-    <%- js('js/jquery.min') %>
-    <%- js('js/queue') %>
+    <!-- Import CSS & jQuery -->
+    <% if(theme.materialcdn.use === true) { %>
+        <link rel="stylesheet" href="<%= theme.materialcdn.base %>/css/material.min.css">
+        <link rel="stylesheet" href="<%= theme.materialcdn.base %>/css/style.min.css">
+        <%- partial('_partial/config_css') %>
+        <script src="<%= theme.materialcdn.base %>/js/jquery.min.js"></script>
+        <script src="<%= theme.materialcdn.base %>/js/queue.js"></script>
+    <%}else{%>
+        <%- css('css/material.min') %>
+        <%- css('css/style.min') %>
+        <%- partial('_partial/config_css') %>
+        <%- js('js/jquery.min') %>
+        <%- js('js/queue') %>
+    <%}%>
 
     <!-- UC Browser Compatible -->
     <script>

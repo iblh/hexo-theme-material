@@ -9,6 +9,7 @@ IF YOU DON'T FILL OUT THE FOLLOWING INFORMATION WE MIGHT CLOSE YOUR PULL REQUEST
 - Remove the `Contributing rules` part from this description
 - Fill out the other parts from this description
 
+> If you don't do so, we might change your pull request's title and using `squash` to merge your changed.
 
 <!-- ----------- -->
 
