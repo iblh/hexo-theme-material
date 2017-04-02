@@ -146,9 +146,6 @@ sidebar:
 # Qrcode for redirect at other device
 qrcode: false
 
-# Support Pin posts on the top of the list
-topPost: false
-
 # ---------------------------------------------------------------
 # Integrated Services
 # ---------------------------------------------------------------
