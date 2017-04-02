@@ -163,7 +163,7 @@ materialcdn:
 
 # Comment Systems
 # Available value of "use":
-#     duoshuo | disqus | disqus_click
+#     duoshuo | disqus | disqus_click | changyan
 comment:
     use:
     shortname:
