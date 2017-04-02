@@ -25,15 +25,15 @@
 
     <!-- Normal Post -->
     <% page.posts.each(function(post) { %>
-        <% if(!(theme.topPost && post.top)) { %>
-        <% if(theme.scheme === 'Paradox') { %>
-            <!-- Paradox Thumbnail -->
-            <%- partial('_partial/Paradox-post_entry', { post: post, index: true, pin: false }) %>
-        <% } %>
-        <% if(theme.scheme === 'Isolation') { %>
-            <!-- Isolation Thumbnail -->
-            <%- partial('_partial/Isolation-post_entry', { post: post, index: true, pin: false }) %>
-        <% } %>
+        <% if(!((typeof hasposttop === 'function') && post.top)) { %>
+            <% if(theme.scheme === 'Paradox') { %>
+                <!-- Paradox Thumbnail -->
+                <%- partial('_partial/Paradox-post_entry', { post: post, index: true, pin: false }) %>
+            <% } %>
+            <% if(theme.scheme === 'Isolation') { %>
+                <!-- Isolation Thumbnail -->
+                <%- partial('_partial/Isolation-post_entry', { post: post, index: true, pin: false }) %>
+            <% } %>
         <% } %>
     <% }); %>
 
