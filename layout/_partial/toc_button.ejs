@@ -21,10 +21,11 @@
         <i class="material-icons">format_list_numbered</i>
     </button>
 
-    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn">
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="height:80vh; overflow-y:scroll;">
         <%- toc(page.content, {
             class: 'post-toc',
-            list_number: true
+            list_number: true,
+            style: 'height:80vh;overflow-y:scroll;'
         }) %>
 
         <!--
