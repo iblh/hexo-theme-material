@@ -66,6 +66,7 @@ Open sourced under the GPL v3.0 license.
 根据 GPL V3.0 许可证开源。
 
 ## Support 支持
+![BrowserStack Status](https://www.browserstack.com/automate/badge.svg?badge_key=V1VkWmJMRjJqcHBjN1BIVFRlNzExM05XUk5hemcydEpZTHRBdGd5V244ST0tLTlvNklDT1NuVXFDaTh0RDBnQ3RCdXc9PQ==--c986c45d7c10a3264f46b414944d6393ba74ea22%)
 
 Proudly using BrowserStack.
 
