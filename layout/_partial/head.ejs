@@ -40,6 +40,21 @@
     <% if(theme.materialcdn.use === true) { %>
         <link rel="dns-prefetch" href="<%= theme.materialcdn.base %>"/>
     <%}%>
+    <% if(theme.leancloud.enable === true) { %>
+        <link rel="dns-prefetch" href="<%= theme.leancloud.av_core_mini %>"/>
+    <% } %>
+    <% if(theme.comment.use == "changyan"){ %>
+        <link rel="dns-prefetch" href="https://changyan.sohu.com"/>
+    <% } %>
+    <% if(theme.analytics.baidu_id) { %>
+        <link rel="dns-prefetch" href="https://hm.baidu.com"/>
+    <% } %>
+    <% if(theme.analytics.google_id) { %>
+        <link rel="dns-prefetch" href="https://www.google-analytics.com"/>
+    <% } %>
+    <% if(theme.busuanzi.enable === true) { %>
+        <link rel="dns-prefetch" href="https://busuanzi.ibruce.info"/>
+    <% } %>
 
     <meta http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1">
