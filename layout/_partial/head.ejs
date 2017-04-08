@@ -126,12 +126,12 @@
     </script>
     <% } %>
 
+
     <!-- Bing Background -->
     <% if(theme.background.bing.enable) { %>
         <script type="text/javascript">
             queue.offer(function(){
                 $('body').attr('data-original', 'https://api.i-meto.com/bing?<%= theme.background.bing.parameter %>');
-                $('body.lazy').lazyload();
             });
         </script>
     <% } %>

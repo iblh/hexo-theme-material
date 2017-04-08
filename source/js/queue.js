@@ -42,10 +42,3 @@ function Queue() {
 }
 
 var queue = new Queue();
-$(document).ready(function(){
-    setTimeout(function(){
-        setInterval(function(){
-            queue.execNext();
-        },500);
-    },3000);
-});
