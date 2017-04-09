@@ -10,7 +10,7 @@
         <% } %>
     <% } else { %>
         <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(<%= post.thumbnail %>)">
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50 lazy" data-original="<%= post.thumbnail %>">
     <% } %>
 
         <!-- Post Title -->

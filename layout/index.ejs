@@ -8,9 +8,9 @@
     <div class="locate-thumbnail-symbol"></div>
 
     <!-- Pin on top -->
-    <% if(theme.topPost) { %>
-        <% if(hasposttop(page.posts)) { %>
-            <% getposttop(page.posts).each(function(toppost){ %>
+    <% if(typeof hasposttop === 'function') { %>
+        <% if(hasposttop(site.posts)) { %>
+            <% getposttop(site.posts).each(function(toppost){ %>
                 <% if(theme.scheme === 'Paradox'){ %>
                     <!-- Paradox Thumbnail -->
                     <%- partial('_partial/Paradox-post_entry', { post: toppost, index: true, pin: true }) %>
@@ -25,15 +25,15 @@
 
     <!-- Normal Post -->
     <% page.posts.each(function(post) { %>
-        <% if(!(theme.topPost && post.top)) { %>
-        <% if(theme.scheme === 'Paradox') { %>
-            <!-- Paradox Thumbnail -->
-            <%- partial('_partial/Paradox-post_entry', { post: post, index: true, pin: false }) %>
-        <% } %>
-        <% if(theme.scheme === 'Isolation') { %>
-            <!-- Isolation Thumbnail -->
-            <%- partial('_partial/Isolation-post_entry', { post: post, index: true, pin: false }) %>
-        <% } %>
+        <% if(!((typeof hasposttop === 'function') && post.top)) { %>
+            <% if(theme.scheme === 'Paradox') { %>
+                <!-- Paradox Thumbnail -->
+                <%- partial('_partial/Paradox-post_entry', { post: post, index: true, pin: false }) %>
+            <% } %>
+            <% if(theme.scheme === 'Isolation') { %>
+                <!-- Isolation Thumbnail -->
+                <%- partial('_partial/Isolation-post_entry', { post: post, index: true, pin: false }) %>
+            <% } %>
         <% } %>
     <% }); %>
 

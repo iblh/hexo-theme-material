@@ -13,5 +13,8 @@
         }
     });
 </script>
-<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
+<% if(theme.materialcdn.use === true) { %>
+    <script src="<%= theme.materialcdn.base %>/js/mathjax.js"></script>
+<%}else{%>
+    <script type="text/javascript" src="/js/mathjax.js"></script>
+<%}%>
