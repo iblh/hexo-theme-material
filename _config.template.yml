@@ -153,7 +153,6 @@ qrcode: false
 # MaterialCDN
 # When you set 'use' as true, the needed css, js, font file will have a new src.
 # The new src will have the base domain you configured in 'base'.
-
 materialcdn: 
     use: 
     base: 
