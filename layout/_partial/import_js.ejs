@@ -67,10 +67,8 @@
 
     <!-- Start Queue -->
     $(document).ready(function(){
-        setTimeout(function(){
-            setInterval(function(){
-                queue.execNext();
-            },200);
-        },3000);
+        setInterval(function(){
+            queue.execNext();
+        },200);
     });
 </script>
