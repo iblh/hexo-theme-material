@@ -22,7 +22,7 @@
 
 [![Author](https://img.shields.io/badge/author-Viosey-blue.svg?style=flat-square)](https://viosey.com)
 [![QQ Group](https://img.shields.io/badge/QQ%20%E7%BE%A4-566308505-blue.svg?style=flat-square)](http://jq.qq.com/?_wv=1027&k=40Vdy24)
-[![Version](https://img.shields.io/badge/version-1.3.2-green.svg?style=flat-square)]()
+[![Version](https://img.shields.io/badge/version-1.3.3-green.svg?style=flat-square)]()
 [![Hexo](https://img.shields.io/badge/hexo-3.0+-green.svg?style=flat-square)](https://hexo.io)
 [![Build Status](https://img.shields.io/travis/viosey/hexo-theme-material.svg?style=flat-square)](https://travis-ci.org/viosey/hexo-theme-material)
 
