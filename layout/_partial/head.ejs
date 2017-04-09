@@ -32,19 +32,41 @@
         <%= config.title %>
     </title>
 
-    <!-- Favicons -->
-    <link rel="icon shortcut" type="image/ico" href="<%= theme.head.favicon %>">
-    <link rel="icon" sizes="192x192" href="<%= theme.head.high_res_favicon %>">
-    <link rel="apple-touch-icon" href="<%= theme.head.apple_touch_icon %>">
-
     <!-- Meta & Info -->
     <meta charset="utf-8">
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    <% if(theme.materialcdn.use === true) { %>
+        <link rel="dns-prefetch" href="<%= theme.materialcdn.base %>"/>
+    <%}%>
+    <% if(theme.leancloud.enable === true) { %>
+        <link rel="dns-prefetch" href="<%= theme.leancloud.av_core_mini %>"/>
+    <% } %>
+    <% if(theme.comment.use == "changyan"){ %>
+        <link rel="dns-prefetch" href="https://changyan.sohu.com"/>
+    <% } %>
+    <% if(theme.analytics.baidu_id) { %>
+        <link rel="dns-prefetch" href="https://hm.baidu.com"/>
+    <% } %>
+    <% if(theme.analytics.google_id) { %>
+        <link rel="dns-prefetch" href="https://www.google-analytics.com"/>
+    <% } %>
+    <% if(theme.busuanzi.enable === true) { %>
+        <link rel="dns-prefetch" href="https://busuanzi.ibruce.info"/>
+    <% } %>
+
     <meta http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="<%= theme.uiux.android_chrome_color %>">
     <meta name="author" content="<%= config.author %>">
     <meta name="description" content="<%= config.description %>">
     <meta name="keywords" content="<%= theme.head.keywords %><% if(page.tags && page.tags.each) { page.tags.each(function(tag) { %><%- ',' + tag.name %><% })} %>">
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="<%= theme.head.favicon %>">
+    <link rel="icon" sizes="192x192" href="<%= theme.head.high_res_favicon %>">
+    <link rel="apple-touch-icon" href="<%= theme.head.apple_touch_icon %>">
 
     <!--iOS -->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
