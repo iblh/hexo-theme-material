@@ -32,7 +32,13 @@
         </span>
 
         <p class="header-slogan header-item">
-            <%= theme.uiux.slogan %>
+        <% if(theme.uiux.slogan) { %>
+            <% if(Array.isArray(theme.uiux.slogan)) { %>
+                <%- theme.uiux.slogan.join('<br>') %>
+            <% } else { %>
+                <%- theme.uiux.slogan %>
+            <% } %>
+        <% } %>
         </p>
 
         <!-- Header Nav -->
@@ -43,14 +49,15 @@
                 </a>
             </span>
 
-          <!-- Independent Pages -->
-          <% for (var i in theme.pages) { %>
-              <span class="header-nav-item">
-                  <a href="<%= theme.pages[i] || '#' %>" title="<%= i %>">
-                      <span><%= i %></span>
-                  </a>
-              </span>
-          <% } %>
+            <!-- Pages  -->
+            <% for (var i in theme.sidebar.pages) { %>
+                <span class="header-nav-item">
+                    <a href="<%= theme.sidebar.pages[i] || '#' %>" title="<%= i %>">
+                        <span><%= i %></span>
+                    </a>
+                </span>
+            <% } %>
+            
         </nav>
 
         <!-- Header SNS -->
