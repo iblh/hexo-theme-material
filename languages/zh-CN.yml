@@ -2,6 +2,11 @@ sidebar:
     homepage: "主页"
     archive: "归档"
     article_num: "文章总数"
+    about: "关于我"
+    gallery: "图库"
+    links: "友情链接"
+    tags: "标签云"
+    timeline: "时间轴"
 post:
     visitor: "访客"
     views: "浏览量"

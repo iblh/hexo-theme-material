@@ -89,7 +89,7 @@
                 <% if(theme.sidebar.pages[i].icon){ %>
                     <i class="material-icons sidebar-material-icons"><%= theme.sidebar.pages[i].icon %></i>
                 <% } %>
-                <%= i %>
+                <%= __('sidebar.' + i) %> 
             </a>
         </li>
         <% if(theme.sidebar.pages[i].divider === true) { %>
