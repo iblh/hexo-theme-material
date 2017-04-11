@@ -1,4 +1,5 @@
 <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
     <!--
         © Material Theme
         https://github.com/viosey/hexo-theme-material
@@ -32,9 +33,6 @@
         <%= config.title %>
     </title>
 
-    <!-- Meta & Info -->
-    <meta charset="utf-8">
-
     <!-- dns prefetch -->
     <meta http-equiv="x-dns-prefetch-control" content="on">
     <% if(theme.materialcdn.use === true) { %>
@@ -56,8 +54,9 @@
         <link rel="dns-prefetch" href="https://busuanzi.ibruce.info"/>
     <% } %>
 
+    <!-- Meta & Info -->
     <meta http-equiv="X-UA-Compatible">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="theme-color" content="<%= theme.uiux.android_chrome_color %>">
     <meta name="author" content="<%= config.author %>">
     <meta name="description" content="<%= config.description %>">
@@ -68,8 +67,7 @@
     <link rel="icon" sizes="192x192" href="<%= theme.head.high_res_favicon %>">
     <link rel="apple-touch-icon" href="<%= theme.head.apple_touch_icon %>">
 
-    <!--iOS -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--iOS --> 
     <meta name="apple-mobile-web-app-title" content="Title">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
