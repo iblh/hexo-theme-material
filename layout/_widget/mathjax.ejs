@@ -14,7 +14,7 @@
     });
 </script>
 <% if(theme.materialcdn.use === true) { %>
-    <script src="<%= theme.materialcdn.base %>/js/mathjax.js"></script>
+    <script src="<%= theme.materialcdn.base %>/js/mathjax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <%}else{%>
-    <script type="text/javascript" src="/js/mathjax.js"></script>
+    <script type="text/javascript" src="/js/mathjax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <%}%>
