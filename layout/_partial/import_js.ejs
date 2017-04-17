@@ -1,10 +1,11 @@
 <!-- Import File -->
+
 <% if(theme.materialcdn.use === true) { %>
     <script src="<%= theme.materialcdn.base %>/js/lazyload.min.js"></script>
     <script src="<%= theme.materialcdn.base %>/js/js.min.js"></script>
 <%}else{%>
-    <%- js('js/lazyload.min') %>
-    <%- js('js/js.min') %>
+    <%- jsLsload('js/lazyload.min.js') %>
+    <%- jsLsload('js/js.min') %>
 <%}%>
 
 <%- partial('_widget/nprogress') %>
@@ -13,7 +14,7 @@
     <% if(theme.materialcdn.use === true) { %>
         <script src="<%= theme.materialcdn.base %>/js/smoothscroll.js"></script>
     <%}else{%>
-        <%- js('js/smoothscroll') %>
+        <%- jsLsload('js/smoothscroll') %>
     <%}%>
 <% } %>
 
@@ -29,7 +30,7 @@
     <% if( theme.search.use === 'local' ) { %>
         <%- partial('_widget/search-local-js') %>
 
-        <script>
+        <script type="text/ls-javascript" id="search-input">
             var inputArea = document.querySelector('#search');
             var getSearchFile = function() {
                 var path = '<%= config.search.path %>';
@@ -46,7 +47,7 @@
 <% } %>
 
 <!-- Window Load-->
-<script>
+<script type="text/ls-javascript" id="window-load">
     $(window).load(function() {
         // Post_Toc parent position fixed
         $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
@@ -57,7 +58,7 @@
 <% if (page.mathjax) { %>
     <%- partial('_widget/mathjax') %>
 <% } %>
-<script>
+<script type="text/ls-javascript" id="lazy-load">
     <!-- Offer LazyLoad -->
     queue.offer(function(){
         $('.lazy').lazyload({
@@ -71,4 +72,16 @@
             queue.execNext();
         },200);
     });
+</script>
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
 </script>

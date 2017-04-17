@@ -99,6 +99,8 @@
         <% } %>
     <![endif]-->
 
+    <%- jsHex('js/lsloader') %>
+
     <!-- Import CSS & jQuery -->
     <% if(theme.materialcdn.use === true) { %>
         <link rel="stylesheet" href="<%= theme.materialcdn.base %>/css/material.min.css">
@@ -110,8 +112,8 @@
         <%- css('css/material.min') %>
         <%- css('css/style.min') %>
         <%- partial('_partial/config_css') %>
-        <%- js('js/jquery.min') %>
-        <%- js('js/queue') %>
+        <%- jsLsload('js/jquery.min') %>
+        <%- jsLsload('js/queue') %>
     <%}%>
 
     <!-- UC Browser Compatible -->
