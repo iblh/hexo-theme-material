@@ -95,7 +95,6 @@
         var that = this
         if(/\.js?.+$/.test(path)) {
             this.iojs(path,name,function(path,name,code){
-                console.log(name)
                 that.setLS(name,path+'/*codestartv1*/'+code)
                 that.runjs(path,name,code);
             })
@@ -163,7 +162,30 @@
         }catch(e){
             that.cssfallback(path,jsname,cssonload);
         }
+    };
 
+    lsloader.iofonts = function(path,jsname,callback,cssonload){
+        var that = this;
+        try{
+            var xhr = new XMLHttpRequest();
+            xhr.open("get",path,true);
+            xhr.onreadystatechange = function(){
+                if (xhr.readyState == 4){
+                    if((xhr.status >=200 && xhr.status < 300 ) || xhr.status == 304){
+                        if(xhr.response!=''){
+                            callback(xhr.response);
+                            cssonload();
+                            return;
+                        }
+                    }
+                    that.cssfallback(path,jsname,cssonload);
+                }
+            };
+            xhr.send(null);
+
+        }catch(e){
+            that.cssfallback(path,jsname,cssonload);
+        }
     };
 
     /*

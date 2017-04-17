@@ -1,8 +1,8 @@
 <!-- Import File -->
 
 <% if(theme.materialcdn.use === true) { %>
-    <script src="<%= theme.materialcdn.base %>/js/lazyload.min.js"></script>
-    <script src="<%= theme.materialcdn.base %>/js/js.min.js"></script>
+    <%- jsLsload(theme.materialcdn.base + "/js/lazyload.min.js") %>
+    <%- jsLsload(theme.materialcdn.base + "/js/js.min.js") %>
 <%}else{%>
     <%- jsLsload('js/lazyload.min.js') %>
     <%- jsLsload('js/js.min') %>
@@ -12,7 +12,7 @@
 
 <% if( theme.js_effect.smoothscroll === true ) { %>
     <% if(theme.materialcdn.use === true) { %>
-        <script src="<%= theme.materialcdn.base %>/js/smoothscroll.js"></script>
+        j<%- sLsload(theme.materialcdn.base + "/js/smoothscroll.js") %>
     <%}else{%>
         <%- jsLsload('js/smoothscroll') %>
     <%}%>
@@ -46,6 +46,36 @@
     <% } %>
 <% } %>
 
+<!-- UC Browser Compatible -->
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> viosey/canary
+=======
+>>>>>>> viosey/canary
+=======
+>>>>>>> viosey/canary
+<script>
+    var agent = navigator.userAgent.toLowerCase();
+    if(agent.indexOf('ucbrowser')>0) {
+        document.write("<%- css('css/uc').replace(/\"/g,"\\\"") %>");
+        alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+    }
+</script>
+
+<!-- Window Load-->
+>>>>>>> viosey/canary
+<script>
+    var agent = navigator.userAgent.toLowerCase();
+    if(agent.indexOf('ucbrowser')>0) {
+        document.write("<%- css('css/uc').replace(/\"/g,"\\\"") %>");
+        alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+    }
+</script>
+
 <!-- Window Load-->
 <script type="text/ls-javascript" id="window-load">
     $(window).load(function() {
@@ -74,7 +104,6 @@
     });
 </script>
 
-
 <script>
     (function(){
         var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
@@ -84,4 +113,6 @@
             lsloader.runInlineScript(item.id,item.id);
         }
     })()
+    
+console.log('\n %c © Material Theme | Version: 1.3.3 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
 </script>

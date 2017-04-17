@@ -100,6 +100,11 @@ sns:
     bilibili:
     telegram:
 
+# Copyright
+# Specify the date when the site was setup.
+#   For example, if you set it as 2015, then footer will show '© 2015 - 2017'
+copyright_since:
+
 # SNS Share Switch
 sns_share:
     twitter: true
