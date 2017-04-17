@@ -383,6 +383,7 @@
         this.runjs();
     }
 
-})()/**
- * Created by yanghuanyu on 16/3/19.
+})()/** !
+ * Created by EYHN on 2017/4/17.
+ * 修改自 sexdevil/LSLoader https://github.com/sexdevil/LSLoader
  */

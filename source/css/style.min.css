@@ -217,11 +217,7 @@ to{transform:rotate(135deg)}}@keyframes status-inactive{from{transform:rotate(13
 #nprogress .spinner{display:block;position:fixed;z-index:10;top:15px;right:15px}.fa,.fa-stack{display:inline-block}#nprogress .spinner-icon{width:18px;height:18px;box-sizing:border-box;border:2px solid transparent;border-top-color:#29d;border-left-color:#29d;border-radius:50%;-webkit-animation:nprogress-spinner 400ms linear infinite;animation:nprogress-spinner 400ms linear infinite}
 .nprogress-custom-parent{overflow:hidden;position:relative}.nprogress-custom-parent #nprogress .bar,.nprogress-custom-parent #nprogress .spinner{position:absolute}
 @-webkit-keyframes nprogress-spinner{0%{-webkit-transform:rotate(0)}100%{-webkit-transform:rotate(360deg)}}@keyframes nprogress-spinner{0%{transform:rotate(0)}
-100%{transform:rotate(360deg)}}/*!
- *  Font Awesome 4.5.0 by @davegandy - http://fontawesome.io - @fontawesome
- *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
- */@font-face{font-family:'FontAwesome';src:url(./fonts/fontawesome-webfont.eot?v=4.5.0);src:url(./fonts/fontawesome-webfont.eot?#iefix&v=4.5.0) format('embedded-opentype'),url(./fonts/fontawesome-webfont.woff2?v=4.5.0) format('woff2'),url(./fonts/fontawesome-webfont.woff?v=4.5.0) format('woff'),url(./fonts/fontawesome-webfont.ttf?v=4.5.0) format('truetype'),url(./fonts/fontawesome-webfont.svg?v=4.5.0#fontawesomeregular) format('svg');font-weight:400;font-style:normal}
-.fa{font:normal normal normal 14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased}.fa-lg{font-size:1.33333333em;line-height:.75em;vertical-align:-15%}
+100%{transform:rotate(360deg)}}.fa{font:normal normal normal 14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased}.fa-lg{font-size:1.33333333em;line-height:.75em;vertical-align:-15%}
 .fa-2x{font-size:2em}.fa-3x{font-size:3em}.fa-4x{font-size:4em}.fa-5x{font-size:5em}.fa-fw{width:1.28571429em;text-align:center}.fa-ul{padding-left:0;margin-left:2.14285714em;list-style-type:none}
 .fa.fa-pull-right,.fa.pull-right{margin-left:.3em}.fa-ul>li{position:relative}.fa-li{position:absolute;left:-2.14285714em;width:2.14285714em;top:.14285714em;text-align:center}
 .fa-li.fa-lg{left:-1.85714286em}.fa-border{padding:.2em .25em .15em;border:.08em solid #eee;border-radius:.1em}.fa-pull-left{float:left}.fa-pull-right,.pull-right{float:right}
