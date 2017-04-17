@@ -16,7 +16,7 @@
 - [License 许可证](#license-许可证)
 - [Support 支持](#support-支持)
 - [Render 渲染](#render-渲染)
-- [Changelog 开发日志](https://material.viosey.com/changelog/)
+- [Changelog 开发日志](https://github.com/viosey/hexo-theme-material/releases)
 
 ## General 概括
 
