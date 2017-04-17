@@ -7,6 +7,14 @@
     font-family: <%- theme.fonts %>;
   }
 
+  @font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(<%- config.root %>fonts/MaterialIcons-Regular.eot);
+    src: url(<%- config.root %>fonts/MaterialIcons-Regular.woff2) format('woff2'), url(<%- config.root %>fonts/MaterialIcons-Regular.woff) format('woff'), url(<%- config.root %>fonts/MaterialIcons-Regular.ttf) format('truetype')
+  }
+
   a {
     color: <%= theme.uiux.hyperlink_color %>;
   }

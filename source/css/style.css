@@ -2404,13 +2404,6 @@ a {
 /* Material_icon */
 /*****************/
 
-@font-face {
-    font-family: 'Material Icons';
-    font-style: normal;
-    font-weight: 400;
-    src: url(../fonts/MaterialIcons-Regular.eot);
-    src: url(../fonts/MaterialIcons-Regular.woff2) format('woff2'), url(../fonts/MaterialIcons-Regular.woff) format('woff'), url(../fonts/MaterialIcons-Regular.ttf) format('truetype')
-}
 .material-icons {
     font-family: 'Material Icons';
     font-weight: 400;
