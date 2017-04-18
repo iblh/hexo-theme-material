@@ -41,3 +41,16 @@
         }
     </style>
 <% } %>
+
+<% if(theme.comment.use === 'disqus_proxy') { %>
+    <!-- 使用 DISQUS_PROXY -->
+    <div id="disqus-comment">
+        <%- partial('_widget/disqus_proxy') %>
+    </div>
+    <style>
+        #disqus-comment{
+            background-color: #eee;
+            padding: 2pc;
+        }
+    </style>
+<% } %>
