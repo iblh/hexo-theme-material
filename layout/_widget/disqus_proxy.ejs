@@ -35,7 +35,13 @@
 <script src="<%= theme.comment.disqus_proxy_js_url %>/disqus-api.js"></script>
 
 <div class="dsq_click_load">
-    <button class="disqus_click_btn"><%= __('post.comments_load_button') %></button>
+    <button class="disqus_click_btn"><%= __('post.comments_fully_load_button') %></button>
+</div>
+<div class="dsq_click_proxy" style="display: none">
+    <button class="disqus_click_btn"><%= __('post.comments_proxy_load_button') %></button>
+</div>
+<div class="dsq_click_load_again" style="display: none">
+    <button class="disqus_click_btn"><%= __('post.comments_fully_load_button') %></button>
 </div>
 
 <script>
@@ -51,6 +57,20 @@
             s.setAttribute('data-timestamp', + new Date());
             (d.head || d.body).appendChild(s);
         })();
-        $('.btn_click_load').css('display','none');
+        $('.dsq_click_load').css('display','none');
+        $('.disqus_proxy').css('display','none');
+        $('.dsq_click_proxy').css('display','block');
+    });
+    $('.dsq_click_load').click(function() {
+        $('.disqus_normal').css('display','none');
+        $('.disqus_proxy').css('display','block');
+        $('.dsq_click_proxy').css('display','none');
+        $('.dsq_click_load_again').css('display','block');
+    });
+    $('.dsq_click_load_again').click(function() {
+        $('.disqus_normal').css('display','block');
+        $('.disqus_proxy').css('display','none');
+        $('.dsq_click_proxy').css('display','block');
+        $('.dsq_click_load_again').css('display','none');
     });
 </script>
