@@ -67,7 +67,7 @@
     <link rel="icon" sizes="192x192" href="<%= theme.head.high_res_favicon %>">
     <link rel="apple-touch-icon" href="<%= theme.head.apple_touch_icon %>">
 
-    <!--iOS --> 
+    <!--iOS -->
     <meta name="apple-mobile-web-app-title" content="Title">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -107,13 +107,13 @@
         <%- cssLsload(theme.materialcdn.base + '/css/style.min.css') %>
         <%- partial('_partial/config_css') %>
         <%- jsLsload(theme.materialcdn.base + '/js/jquery.min.js') %>
-        <%- jsLsload(theme.materialcdn.base + '/js/queue.js') %>
+        <%- jsLsload(theme.materialcdn.base + '/js/queue.min.js') %>
     <%}else{%>
         <%- cssLsload('css/material.min') %>
         <%- cssLsload('css/style.min') %>
         <%- partial('_partial/config_css') %>
         <%- jsLsload('js/jquery.min') %>
-        <%- jsLsload('js/queue') %>
+        <%- jsLsload('js/queue.min') %>
     <%}%>
 
     <% if(theme.analytics.baidu_id) { %>
