@@ -99,19 +99,21 @@
         <% } %>
     <![endif]-->
 
+    <%- jsHex('js/lsloader.min') %>
+
     <!-- Import CSS & jQuery -->
     <% if(theme.materialcdn.use === true) { %>
-        <link rel="stylesheet" href="<%= theme.materialcdn.base %>/css/material.min.css">
-        <link rel="stylesheet" href="<%= theme.materialcdn.base %>/css/style.min.css">
+        <%- cssLsload(theme.materialcdn.base + '/css/material.min.css') %>
+        <%- cssLsload(theme.materialcdn.base + '/css/style.min.css') %>
         <%- partial('_partial/config_css') %>
-        <script src="<%= theme.materialcdn.base %>/js/jquery.min.js"></script>
-        <script src="<%= theme.materialcdn.base %>/js/queue.js"></script>
+        <%- jsLsload(theme.materialcdn.base + '/js/jquery.min.js') %>
+        <%- jsLsload(theme.materialcdn.base + '/js/queue.js') %>
     <%}else{%>
-        <%- css('css/material.min') %>
-        <%- css('css/style.min') %>
+        <%- cssLsload('css/material.min') %>
+        <%- cssLsload('css/style.min') %>
         <%- partial('_partial/config_css') %>
-        <%- js('js/jquery.min') %>
-        <%- js('js/queue') %>
+        <%- jsLsload('js/jquery.min') %>
+        <%- jsLsload('js/queue') %>
     <%}%>
 
     <% if(theme.analytics.baidu_id) { %>

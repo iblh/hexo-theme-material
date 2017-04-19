@@ -7,6 +7,22 @@
     font-family: <%- theme.fonts %>;
   }
 
+  @font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(<%- config.root %>fonts/MaterialIcons-Regular.eot);
+    src: url(<%- config.root %>fonts/MaterialIcons-Regular.woff2) format('woff2'), url(<%- config.root %>fonts/MaterialIcons-Regular.woff) format('woff'), url(<%- config.root %>fonts/MaterialIcons-Regular.ttf) format('truetype')
+  }
+
+  @font-face {
+    font-family: 'FontAwesome';
+    src: url(<%- config.root %>fonts/fontawesome-webfont.eot?v=4.5.0);
+    src: url(<%- config.root %>fonts/fontawesome-webfont.eot?#iefix&v=4.5.0) format('embedded-opentype'), url(<%- config.root %>fonts/fontawesome-webfont.woff2?v=4.5.0) format('woff2'), url(<%- config.root %>fonts/fontawesome-webfont.woff?v=4.5.0) format('woff'), url(<%- config.root %>fonts/fontawesome-webfont.ttf?v=4.5.0) format('truetype'), url(<%- config.root %>fonts/fontawesome-webfont.svg?v=4.5.0#fontawesomeregular) format('svg');
+    font-weight: 400;
+    font-style: normal
+  }
+
   a {
     color: <%= theme.uiux.hyperlink_color %>;
   }

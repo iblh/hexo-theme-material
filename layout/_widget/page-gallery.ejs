@@ -89,16 +89,16 @@
 
     <!-- Scripts -->
     <% if(theme.materialcdn.use === true) { %>
-        <script src="<%= theme.materialcdn.base %>/js/jquery.min.js"></script>
-        <script src="<%= theme.materialcdn.base %>/js/gallery/gallery.js"></script>
-        <script src="<%= theme.materialcdn.base %>/js/lazyload.min.js"></script>
+        <%- jsLsload(theme.materialcdn.base + "/js/jquery.min.js") %>
+        <%- jsLsload(theme.materialcdn.base + "/js/gallery/gallery.js") %>
+        <%- jsLsload(theme.materialcdn.base + "/js/lazyload.min.js") %>
     <%}else{%>
-        <%- js('js/jquery.min') %>
-        <%- js('js/gallery/gallery') %>
-        <%- js('js/lazyload.min') %>
+        <%- jsLsload('js/jquery.min') %>
+        <%- jsLsload('js/gallery/gallery') %>
+        <%- jsLsload('js/lazyload.min') %>
     <%}%>
 
-    <script type="text/javascript">
+    <script type="text/ls-javascript" id="page-gallery-script">
         queue.offer(function(){
             $('.lazy').lazyload({
               effect: 'fadeIn',
