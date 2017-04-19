@@ -460,12 +460,12 @@
 	opacity: 1
 }
 
-.comment-form-wrapper.editing .tips {
+.comment-form-wrapper.editing {
 	position: relative;
 	display: block
 }
 
-.comment-form-wrapper.editing .tips .comment-tips {
+.comment-form-wrapper.editing .comment-tips {
 	position: absolute;
 	width: 125px;
 	height: 70px;
@@ -482,7 +482,7 @@
 	cursor: text
 }
 
-.comment-form-wrapper.editing .tips .comment-tips:before {
+.comment-form-wrapper.editing .comment-tips:before {
 	content: "";
 	width: 0;
 	height: 0;
@@ -495,7 +495,7 @@
 	border-color: transparent #c2c6cc
 }
 
-.comment-form-wrapper.editing .tips .comment-tips:after {
+.comment-form-wrapper.editing .comment-tips:after {
 	content: "";
 	width: 0;
 	height: 0;
@@ -920,4 +920,8 @@
 	.comment-item .at,.comment-item .comment-avatar,.comment-item .comment-item-children .comment-item-avatar {
 		display: none
 	}
+}
+
+.emojione .tips {
+	display: none!important
 }
