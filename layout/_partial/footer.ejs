@@ -6,7 +6,11 @@
 
         <!--Copyright-->
         <div id="copyright">
-            Copyright&nbsp;©&nbsp;<% if(theme.copyright_since != null) { %><%= theme.copyright_since %>&nbsp;-<% } %>
+            Copyright&nbsp;©&nbsp;
+            <% if(theme.copyright_since) { %>
+                <%= theme.copyright_since %>
+                -&nbsp;
+            <% } %>
             <script type="text/javascript">
                 var fd = new Date();
                 document.write(fd.getFullYear());
