@@ -61,6 +61,8 @@
     <meta name="author" content="<%= config.author %>">
     <meta name="description" content="<%= config.description %>">
     <meta name="keywords" content="<%= theme.head.keywords %><% if(page.tags && page.tags.each) { page.tags.each(function(tag) { %><%- ',' + tag.name %><% })} %>">
+    
+    <meta name="google-site-verification" content="<%= theme.head.google_site_verification %>" />
 
     <!-- Favicons -->
     <link rel="icon shortcut" type="image/ico" href="<%= theme.head.favicon %>">
