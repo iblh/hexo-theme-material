@@ -49,7 +49,7 @@
     <button class="disqus_click_btn"><%= __('post.comments_fully_load_button') %></button>
 </div>
 
-<script>
+<script type="text/ls-javascript" id="disqus-thread-proxy-script">
     var disqus_config = function () {
         this.page.url = '<%= page.permalink %>';  // Replace PAGE_URL with your page's canonical URL variable
         this.page.identifier = '<%= page.permalink %>'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
