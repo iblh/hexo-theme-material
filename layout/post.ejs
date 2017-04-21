@@ -16,38 +16,6 @@
     <!-- Single Timeline Page -->
     <%- partial('_widget/page-timeline') %>
 
-<% } else if(page.layout === 'private') { %>
-    <!-- Hidden Page -->
-    <div class="material-post_container">
-        <div class="material-post mdl-grid">
-            <div class="mdl-card <% if(theme.card_elevation) { %><%= 'mdl-shadow--' + theme.card_elevation + 'dp' %><% } %> mdl-cell mdl-cell--12-col">
-                <!-- Post Header(Thumbnail & Title) -->
-                <%- partial('_partial/post-header') %>
-
-                <% if(theme.scheme === 'Paradox') { %>
-                  <!-- Paradox Post Info -->
-                  <%- partial('_partial/Paradox-post-info') %>
-                <% } %>
-
-                <!-- Post Hidden -->
-                <div id="post-content">
-                    <p><%= __('post.private') %></p>
-                </div>
-
-                <% if(theme.scheme === 'Isolation') { %>
-                    <!-- Paradox Post Info -->
-                    <%- partial('_partial/Isolation-post-info') %>
-                <% } %>
-
-                <!-- Post Comments -->
-                <%- partial('_partial/comment') %>
-            </div>
-
-            <!-- Post Prev & Next Nav -->
-            <%- partial('_partial/post-nav') %>
-        </div>
-    </div>
-
 <% } else { %>
     <!-- Post Module -->
     <div class="material-post_container">

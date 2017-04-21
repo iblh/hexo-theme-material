@@ -8,7 +8,6 @@ post:
     continue: "Sigue leyendo"
     older: "Mayor"
     newer: "Más nuevo"
-    private: "Mensajes privados, ocultar temporalmente"
     qrcode: "Lea este artículo en otro dispositivo"
     comments_load_button: "Leer comentarios 「Asegúrese de que 'disq.us & disquscdn.com & disqus.com' se puede cargar」"    
 share:
