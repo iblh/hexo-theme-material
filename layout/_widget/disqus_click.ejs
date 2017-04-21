@@ -2,24 +2,6 @@
 
 <!-- add animation -->
 <style>
-        .ripple-container {
-        }
-        .ripple-container .ripple{
-            background-color: rgba(255,255,255,0.4);
-            animation: ripple 2s forwards cubic-bezier(0, 0, 0.2, 1);
-        }
-        @keyframes ripple {
-            0% {
-                transform: scale(0);
-                opacity: 1;
-            }
-            80% {
-                transform: scale(1);
-            }
-            100% {
-                opacity: 0;
-            }
-        }
 	.disqus_click_btn {
             line-height: 30px;
             margin: 0;
@@ -48,18 +30,9 @@
         }
 </style>
 	
-<!-- add data-ripple attribute -->
 <div class="btn_click_load"> 
     <button class="disqus_click_btn"><%= __('post.comments_load_button') %></button>
 </div>
-	
-<script type="text/ls-javascript" id="create-ripple-script">
-    // add effect to elements
-    Array.prototype.forEach.call(document.querySelectorAll('[data-ripple]'), function(element){
-        // find all elements and attach effect
-        new RippleEffect(element); // element is instance of javascript element node
-    });
-</script>
 
 <script type="text/ls-javascript" id="disqus-lazy-load-script">
     var disqus_config = function () {
