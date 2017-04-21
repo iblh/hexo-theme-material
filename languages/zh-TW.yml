@@ -8,7 +8,6 @@ post:
     continue: "繼續閱讀"
     older: "舊篇"
     newer: "新篇"
-    private: "私有文章，暫不公開"
     qrcode: "在其他設備中閱讀本文章"
     comments_load_button: "閱讀評論 「請確認 disq.us & disquscdn.com & disqus.com 可正常載入」"    
 share:
