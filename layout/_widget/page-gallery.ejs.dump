@@ -17,7 +17,7 @@
                 <ul>
                     <li>
                         <a href="#footer" class="icon fa-info-circle">
-                            ©&nbsp;<%- config.author %>
+                            漏&nbsp;<%- config.author %>
                         </a>
                     </li>
                 </ul>
