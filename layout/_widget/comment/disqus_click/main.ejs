@@ -34,11 +34,14 @@
     <button class="disqus_click_btn"><%= __('post.comments_load_button') %></button>
 </div>
 
-<script type="text/ls-javascript" id="disqus-lazy-load-script">
+<script type="text/javascript">
     var disqus_config = function () {
         this.page.url = '<%= page.permalink %>';  // Replace PAGE_URL with your page's canonical URL variable
         this.page.identifier = '<%= page.permalink %>'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
+</script>
+
+<script type="text/ls-javascript" id="disqus-lazy-load-script">
     $('.btn_click_load').click(function() {  //click to load comments
         (function() { // DON'T EDIT BELOW THIS LINE
             var d = document;
