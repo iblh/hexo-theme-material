@@ -83,6 +83,15 @@
     });
 </script>
 
+<!-- Bing Background -->
+<% if(theme.background.bing.enable) { %>
+<script type="text/ls-javascript" id="Bing-Background-script">
+    queue.offer(function(){
+        $('body').attr('data-original', 'https://api.i-meto.com/bing?<%= theme.background.bing.parameter %>');
+    });
+</script>
+<% } %>
+
 <script>
     (function(){
         var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')

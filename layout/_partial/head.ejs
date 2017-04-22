@@ -142,16 +142,6 @@
     </script>
     <% } %>
 
-
-    <!-- Bing Background -->
-    <% if(theme.background.bing.enable) { %>
-        <script type="text/javascript">
-            queue.offer(function(){
-                $('body').attr('data-original', 'https://api.i-meto.com/bing?<%= theme.background.bing.parameter %>');
-            });
-        </script>
-    <% } %>
-
     <!-- Custom Head -->
     <% if (site.data.head) { %>
         <% for (var i in site.data.head) { %>
