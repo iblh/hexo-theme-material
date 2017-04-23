@@ -20,7 +20,7 @@
 
 <%- partial('_partial/footer-option') %>
 
-<% if( (page.current === 1) && (is_home()) ) { %>    
+<% if( (page.current === 1) && (is_home()) ) { %>
     <!-- Swiftye -->
     <% if( theme.search.use === 'swiftype' ) { %>
         <%- partial('_widget/search-swiftype-js') %>
@@ -68,14 +68,14 @@
     <%- partial('_widget/mathjax') %>
 <% } %>
 <script type="text/ls-javascript" id="lazy-load">
-    <!-- Offer LazyLoad -->
+    // Offer LazyLoad
     queue.offer(function(){
         $('.lazy').lazyload({
             effect : 'show'
         });
     });
 
-    <!-- Start Queue -->
+    // Start Queue
     $(document).ready(function(){
         setInterval(function(){
             queue.execNext();
@@ -101,5 +101,5 @@
             lsloader.runInlineScript(item.id,item.id);
         }
     })()
-console.log('\n %c © Material Theme | Version: 1.3.3 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+console.log('\n %c © Material Theme | Version: canary | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
 </script>
