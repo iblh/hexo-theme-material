@@ -81,6 +81,14 @@ fonts: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "
 # Card Elevation Level
 card_elevation: 2
 
+# Copyright
+# Specify the date when the site was setup.
+#   For example, if you set it as 2015, then footer will show '© 2015 - 2017'
+copyright_since:
+
+# Qrcode for redirect at other device
+qrcode: false
+
 
 # ---------------------------------------------------------------
 # Menu Settings
@@ -100,11 +108,6 @@ sns:
     zhihu:
     bilibili:
     telegram:
-
-# Copyright
-# Specify the date when the site was setup.
-#   For example, if you set it as 2015, then footer will show '© 2015 - 2017'
-copyright_since:
 
 # SNS Share Switch
 sns_share:
@@ -149,8 +152,6 @@ sidebar:
         feedback: false
         material: false
 
-# Qrcode for redirect at other device
-qrcode: false
 
 # ---------------------------------------------------------------
 # Integrated Services
@@ -175,6 +176,7 @@ comment:
     changyan_appid:
     changyan_conf:
     changyan_thread_key_type: path
+
 # Search Systems
 # Available value:
 #     swiftype | google | local
