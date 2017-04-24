@@ -13,12 +13,11 @@ function cssHelper() {
 
     if (i) result += '\n';
 
-    var localpath = path_for.call(this,path);
-
     if (Array.isArray(path)) {
       result += jsHelper.apply(this, path);
     } else {
       if (path.indexOf('?') < 0 && path.substring(path.length - 4, path.length) !== '.css') path += '.css';
+      var localpath = path_for.call(this,path);
       result += '<style id="' + path + '"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;' +
         'window.lsLoadCSSMaxNums++;' +
         'lsloader.load("' + path + '","' +
