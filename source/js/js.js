@@ -98,39 +98,15 @@ $(document).ready(function() {
 
 $(window).scroll(function (event) {
     var scroll = $(window).scrollTop();
-    var footer_offset = $('footer').offset().top;
-    var footer_position = $('footer').position().top;
-    var btt_offset = $('#back-to-top').offset().top;
-    var docker_distance = footer_offset - btt_offset;
-    var bottom_distance = $(document).height() - btt_offset;
-    var footer_distance = $(document).height() - footer_position;
-    // Do something
-    // if (scroll>500) {
-    //     console.log(bottom_distance);
-    //     console.log(footer_distance);
-    //     $('#back-to-top').addClass('btt-visible');
-    //
-    //     if (docker_distance<25) {
-    //         $('#back-to-top').addClass('btt-docker');
-    //     }
-    //
-    //     if (bottom_distance>150) {
-    //         $('#back-to-top').removeClass('btt-docker');
-    //     }
-    // } else {
-    //     $('#back-to-top').removeClass('btt-visible');
-    // }
-
-    var y = $(window).scrollTop();
-	if (y > 164) {
+	if (scroll > 300) {
 		$('#back-to-top').addClass('btt-visible');
 	} else {
 		$('#back-to-top').removeClass('btt-visible');
 	}
 
-	var wrapFooter = $('.mdl-mini-footer').offset().top;
+	var footerOffset = $('.mdl-mini-footer').offset().top;
 	var windowHeight = $( window ).height();
-	if (y > wrapFooter - windowHeight + 42) {
+	if (scroll > footerOffset - windowHeight + 42) {
 		$('#back-to-top').addClass('btt-docked');
 	} else {
 		$('#back-to-top').removeClass('btt-docked');
