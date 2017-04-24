@@ -95,7 +95,15 @@ $(document).ready(function() {
 //**********************************   Active_Toc_js
 //**********************************
 //**********************************
-
+$(window).scroll(function (event) {
+    var scroll = $(window).scrollTop();
+    // Do something
+    if (scroll>500) {
+        $('#back-to-top').addClass('btt-visible');
+    } else {
+        $('#back-to-top').removeClass('btt-visible');
+    }
+});
 
 //**********************************
 //**********************************

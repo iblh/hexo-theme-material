@@ -2424,6 +2424,16 @@ a {
 /* Footer_Top */
 /**************/
 
+#back-to-top{
+    position: fixed;
+    bottom: 100px;
+    right: -40px;
+    transition: background-color .18s cubic-bezier(.6,0,.1,1),box-shadow .18s cubic-bezier(.6,0,.1,1),transform .18s cubic-bezier(.6,0,.1,1);
+    z-index: 8;
+}
+#back-to-top.btt-visible{
+    transform: translate(-74.61px, 0);
+}
 .toTop-wrap {
     position: absolute;
     bottom: 100px;
@@ -2431,6 +2441,12 @@ a {
     z-index: 8
 }
 @media screen and (max-width: 840px) {
+    #back-to-top{
+        bottom: 180px;
+    }
+    #back-to-top.btt-visible{
+        transform: translate(-68px, 0);
+    }
     .toTop-wrap {
         bottom: 180px;
         right: 28px
