@@ -2,7 +2,7 @@
 /*global $, jQuery, alert*/
 
 // Custom_js
-// Active_Toc_js
+// Back_to_top_js
 // Material_js
 // Bootstrap_js
 // Sidebar_js
@@ -92,17 +92,49 @@ $(document).ready(function() {
 
 //**********************************
 //**********************************
-//**********************************   Active_Toc_js
+//**********************************   Back_to_top_js
 //**********************************
 //**********************************
+
 $(window).scroll(function (event) {
     var scroll = $(window).scrollTop();
+    var footer_offset = $('footer').offset().top;
+    var footer_position = $('footer').position().top;
+    var btt_offset = $('#back-to-top').offset().top;
+    var docker_distance = footer_offset - btt_offset;
+    var bottom_distance = $(document).height() - btt_offset;
+    var footer_distance = $(document).height() - footer_position;
     // Do something
-    if (scroll>500) {
-        $('#back-to-top').addClass('btt-visible');
-    } else {
-        $('#back-to-top').removeClass('btt-visible');
-    }
+    // if (scroll>500) {
+    //     console.log(bottom_distance);
+    //     console.log(footer_distance);
+    //     $('#back-to-top').addClass('btt-visible');
+    //
+    //     if (docker_distance<25) {
+    //         $('#back-to-top').addClass('btt-docker');
+    //     }
+    //
+    //     if (bottom_distance>150) {
+    //         $('#back-to-top').removeClass('btt-docker');
+    //     }
+    // } else {
+    //     $('#back-to-top').removeClass('btt-visible');
+    // }
+
+    var y = $(window).scrollTop();
+	if (y > 164) {
+		$('#back-to-top').addClass('btt-visible');
+	} else {
+		$('#back-to-top').removeClass('btt-visible');
+	}
+
+	var wrapFooter = $('.mdl-mini-footer').offset().top;
+	var windowHeight = $( window ).height();
+	if (y > wrapFooter - windowHeight + 42) {
+		$('#back-to-top').addClass('btt-docked');
+	} else {
+		$('#back-to-top').removeClass('btt-docked');
+	}
 });
 
 //**********************************
