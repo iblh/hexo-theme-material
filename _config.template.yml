@@ -187,6 +187,7 @@ search:
 analytics:
     baidu_id:
     google_id:
+    cnzz_id:
 
 # Leancloud Views
 leancloud:
