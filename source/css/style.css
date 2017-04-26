@@ -254,9 +254,10 @@ a {
     padding: 0 15px;
 }
 #post-content blockquote {
-    border-left: 4px solid #DDD;
-    padding: 0 15px;
-    color: #777;
+    border: 1px solid #eee;
+    border-left: 5px solid #ddd;
+    border-radius: 3px;
+    padding: 15px 20px;
     font-style: normal;
 }
 #post-content blockquote>:first-child {
@@ -264,6 +265,14 @@ a {
 }
 #post-content blockquote>:last-child {
     margin-bottom: 0px;
+}
+#post-content blockquote footer {
+    font-style: italic;
+    font-size: 16px;
+}
+#post-content blockquote footer cite::before {
+    content: "—";
+    padding: 0 0.5em;
 }
 #post-content table {
     width: 100%;
@@ -420,6 +429,109 @@ a {
     padding: 0;
     background-color: transparent;
     border: none;
+}
+
+.bs-callout {
+    padding: 15px 20px;
+    margin: 20px 0;
+    border: 1px solid #eee;
+    border-left-width: 5px;
+    border-radius: 3px;
+}
+.bs-callout h2,
+.bs-callout h3,
+.bs-callout h4,
+.bs-callout h5,
+.bs-callout h6 {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    line-height: 1 !important;
+}
+.bs-callout blockquote:first-child,
+.bs-callout li:first-child,
+.bs-callout p:first-child,
+.bs-callout pre:first-child,
+.bs-callout table:first-child,
+.bs-callout ul:first-child {
+    margin-top: 0 !important;
+}
+.bs-callout blockquote:last-child,
+.bs-callout li:last-child,
+.bs-callout p:last-child,
+.bs-callout pre:last-child,
+.bs-callout table:last-child,
+.bs-callout ul:last-child {
+    margin-bottom: 0 !important;
+}
+.bs-callout-default {
+    border-left-color: #777;
+    background-color: #f7f7f7;
+}
+.bs-callout-default h2,
+.bs-callout-default h3,
+.bs-callout-default h4,
+.bs-callout-default h5,
+.bs-callout-default h6 {
+    color: #777 !important;
+}
+.bs-callout-primary {
+    border-left-color: #428bca;
+    background-color: #e6f3fe;
+}
+.bs-callout-primary h2,
+.bs-callout-primary h3,
+.bs-callout-primary h4,
+.bs-callout-primary h5,
+.bs-callout-primary h6 {
+    color: #428bca !important;
+}
+.bs-callout-success {
+    border-left-color: #5cb85c;
+    background-color: #effaf0;
+}
+.bs-callout-success h2,
+.bs-callout-success h3,
+.bs-callout-success h4,
+.bs-callout-success h5,
+.bs-callout-success h6 {
+    color: #5cb85c !important;
+}
+.bs-callout-danger {
+    border-left-color: #d9534f;
+    background-color: #feecea;
+}
+.bs-callout-danger h2,
+.bs-callout-danger h3,
+.bs-callout-danger h4,
+.bs-callout-danger h5,
+.bs-callout-danger h6 {
+    color: #d9534f !important;
+}
+.bs-callout-warning {
+    border-left-color: #f0ad4e;
+    background-color: #fdf1d8;
+}
+.bs-callout-warning h2,
+.bs-callout-warning h3,
+.bs-callout-warning h4,
+.bs-callout-warning h5,
+.bs-callout-warning h6 {
+    color: #f0ad4e !important;
+}
+.bs-callout-info {
+    border-left-color: #5bc0de;
+    background-color: #ebf9ff;
+}
+.bs-callout-info h2,
+.bs-callout-info h3,
+.bs-callout-info h4,
+.bs-callout-info h5,
+.bs-callout-info h6 {
+    color: #5bc0de !important;
+}
+.bs-callout-title {
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .post-toc-wrap::-webkit-scrollbar{
