@@ -72,7 +72,7 @@ img:
     footer_image:
         #upyun_logo:
             #link: "https://www.upyun.com/"
-            #src: "/img/upyun_logo.png"
+            #src: "/img/upyun_logo.svg"
 
 # Custom Fonts
 fonts: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif
@@ -146,22 +146,28 @@ sidebar:
 # Qrcode for redirect at other device
 qrcode: false
 
-# Support Pin posts on the top of the list
-topPost: false
-
 # ---------------------------------------------------------------
 # Integrated Services
 # ---------------------------------------------------------------
 
+# MaterialCDN
+# When you set 'use' as true, the needed css, js, font file will have a new src.
+# The new src will have the base domain you configured in 'base'.
+materialcdn: 
+    use: 
+    base: 
+
 # Comment Systems
 # Available value of "use":
-#     duoshuo | disqus | disqus_click
+#     duoshuo | disqus | disqus_click | changyan
 comment:
     use:
     shortname:
     duoshuo_thread_key_type: path
     duoshuo_embed_js_url: "https://static.duoshuo.com/embed.js"
-
+    changyan_appid:
+    changyan_conf:
+    changyan_thread_key_type: path
 # Search Systems
 # Available value:
 #     swiftype | google | local

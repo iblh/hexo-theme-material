@@ -12,6 +12,10 @@
     <!-- Single Links Page -->
     <%- partial('_widget/page-links') %>
 
+<% } else if(page.layout === 'timeline') { %>
+    <!-- Single Timeline Page -->
+    <%- partial('_widget/page-timeline') %>
+
 <% } else if(page.layout === 'private') { %>
     <!-- Hidden Page -->
     <div class="material-post_container">

@@ -10,7 +10,7 @@
         <% } %>
     <% } else { %>
         <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(<%= post.thumbnail %>)">
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50 lazy" data-original="<%= post.thumbnail %>">
     <% } %>
 
         <!-- Post Title -->
@@ -53,12 +53,20 @@
 
             <% if(theme.comment.use === 'duoshuo') { %>
                 <!-- Comment Number -->
-                
+
                 <span class="post_entry-comment" >
                         <span class="ds-thread-count" data-thread-key="<%= theme.comment.duoshuo_thread_key_type === 'id' ? post.id : post.path %>" data-count-type="comments"></span>
                 </span>
             <% } %>
 
+
+            <% if(theme.comment.use === 'changyan') { %>
+                <!-- Comment Number -->
+                &nbsp;|&nbsp;
+                <span class="post_entry-comment" >
+                        <span id = "sourceId::<%= theme.comment.changyan_thread_key_type === 'id' ? post.id : post.path  %>" class = "cy_cmt_count" ></span>条评论
+                </span>
+            <% } %>
 
             <!-- Post Views -->
             <span class="post_entry-views">

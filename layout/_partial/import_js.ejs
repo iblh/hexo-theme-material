@@ -1,36 +1,49 @@
 <!-- Import File -->
-<%- js('js/lazyload.min') %>
-<%- js('js/js') %>
+
+<% if(theme.materialcdn.use === true) { %>
+    <script src="<%= theme.materialcdn.base %>/js/lazyload.min.js"></script>
+    <script src="<%= theme.materialcdn.base %>/js/js.js"></script>
+<%}else{%>
+    <%- js('js/lazyload.min') %>
+    <%- js('js/js') %>
+<%}%>
+
 <%- partial('_widget/nprogress') %>
 
 <% if( theme.js_effect.smoothscroll === true ) { %>
-    <%- js('js/smoothscroll') %>
+    <% if(theme.materialcdn.use === true) { %>
+        <script src="<%= theme.materialcdn.base %>/js/smoothscroll.js"></script>
+    <%}else{%>
+        <%- js('js/smoothscroll') %>
+    <%}%>
 <% } %>
 
 <%- partial('_partial/footer-option') %>
 
-<!-- Swiftye -->
-<% if( theme.search.use === 'swiftype' ) { %>
-    <%- partial('_widget/search-swiftype-js') %>
-<% } %>
+<% if( (page.current === 1) && (is_home()) ) { %>
+    <!-- Swiftye -->
+    <% if( theme.search.use === 'swiftype' ) { %>
+        <%- partial('_widget/search-swiftype-js') %>
+    <% } %>
 
-<!-- Local Search-->
-<% if( theme.search.use === 'local' ) { %>
-    <%- partial('_widget/search-local-js') %>
+    <!-- Local Search-->
+    <% if( theme.search.use === 'local' ) { %>
+        <%- partial('_widget/search-local-js') %>
 
-    <script>
-        var inputArea = document.querySelector('#search');
-        var getSearchFile = function() {
-            var path = '<%= config.search.path %>';
-            searchFunc(path, 'search', 'local-search-result');
-        }
-
-        if(inputArea) {
-            inputArea.onfocus = function() {
-                getSearchFile();
+        <script>
+            var inputArea = document.querySelector('#search');
+            var getSearchFile = function() {
+                var path = '<%= config.search.path %>';
+                searchFunc(path, 'search', 'local-search-result');
             }
-        }
-    </script>
+
+            if(inputArea) {
+                inputArea.onfocus = function() {
+                    getSearchFile();
+                }
+            }
+        </script>
+    <% } %>
 <% } %>
 
 <!-- Window Load-->
@@ -45,3 +58,18 @@
 <% if (page.mathjax) { %>
     <%- partial('_widget/mathjax') %>
 <% } %>
+<script>
+    <!-- Offer LazyLoad -->
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    <!-- Start Queue -->
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
