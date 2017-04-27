@@ -431,6 +431,10 @@ a {
     border: none;
 }
 
+/****************/
+/* Callout Style */
+/****************/
+
 .bs-callout {
     padding: 15px 20px;
     margin: 20px 0;
