@@ -118,19 +118,9 @@
         <%- jsLsload('js/jquery.min') %>
         <%- jsLsload('js/queue.min') %>
     <%}%>
-
-    <!-- Baidu Analytics -->
-    <% if(theme.analytics.baidu_id) { %>
-        <%- partial('_widget/analytics/baidu-analytics') %>
-    <% } %>
-    <!-- Google Analytics -->
-    <% if(theme.analytics.google_id) { %>
-        <%- partial('_widget/analytics/google-analytics') %>
-    <% } %>
-    <!-- CNZZ Analytics -->
-    <% if(theme.analytics.google_id) { %>
-        <%- partial('_widget/analytics/cnzz-analytics') %>
-    <% } %>
+    
+    <!-- Analytics -->
+    <%- partial('_widget/analytics/' + theme.analytics.use + '/analytics') %>
 
     <!-- Custom Head -->
     <% if (site.data.head) { %>
