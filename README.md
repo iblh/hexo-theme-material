@@ -20,11 +20,15 @@
 
 ## General 概括
 
-[![Author](https://img.shields.io/badge/author-Viosey-blue.svg?style=flat-square)](https://viosey.com)
-[![QQ Group](https://img.shields.io/badge/QQ%20%E7%BE%A4-566308505-blue.svg?style=flat-square)](http://jq.qq.com/?_wv=1027&k=40Vdy24)
 [![Version](https://img.shields.io/badge/version-1.3.4-green.svg?style=flat-square)]()
 [![Hexo](https://img.shields.io/badge/hexo-3.0+-green.svg?style=flat-square)](https://hexo.io)
+[![node.js](https://img.shields.io/badge/node.js-6.0%2B-green.svg?style=flat-square)](https://nodejs.org/)
+
 [![Build Status](https://img.shields.io/travis/viosey/hexo-theme-material.svg?style=flat-square)](https://travis-ci.org/viosey/hexo-theme-material)
+[![npm](https://img.shields.io/npm/dt/hexo-material.svg?style=flat-square)](https://www.npmjs.com/package/hexo-material)
+
+[![Author](https://img.shields.io/badge/author-Viosey-blue.svg?style=flat-square)](https://viosey.com)
+[![QQ Group](https://img.shields.io/badge/QQ%20%E7%BE%A4-566308505-blue.svg?style=flat-square)](http://jq.qq.com/?_wv=1027&k=40Vdy24)
 
 ## Demo 演示
 
