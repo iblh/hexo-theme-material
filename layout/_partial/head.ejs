@@ -108,12 +108,24 @@
     <% if(theme.materialcdn.use === true) { %>
         <%- cssLsload(theme.materialcdn.base + '/css/material.min.css') %>
         <%- cssLsload(theme.materialcdn.base + '/css/style.min.css') %>
+        <% if(theme.scheme === 'Isolation') { %>
+            <%- cssLsload(theme.materialcdn.base + '/css/fontawesome.slim.css') %>
+        <% } %>
+        <% if(theme.scheme === 'Paradox') { %>
+            <%- cssLsload(theme.materialcdn.base + '/css/footer-sns.css') %>
+        <% } %>
         <%- partial('_partial/config_css') %>
         <%- jsLsload(theme.materialcdn.base + '/js/jquery.min.js') %>
         <%- jsLsload(theme.materialcdn.base + '/js/queue.min.js') %>
     <%}else{%>
         <%- cssLsload('css/material.min') %>
         <%- cssLsload('css/style.min') %>
+        <% if(theme.scheme === 'Isolation') { %>
+            <%- cssLsload(/css/fontawesome.slim) %>
+        <% } %>
+        <% if(theme.scheme === 'Paradox') { %>
+            <%- cssLsload(css/footer-sns) %>
+        <% } %>
         <%- partial('_partial/config_css') %>
         <%- jsLsload('js/jquery.min') %>
         <%- jsLsload('js/queue.min') %>
