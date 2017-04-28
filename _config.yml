@@ -26,7 +26,7 @@ scheme: Paradox
 
 # UI & UX: slogan, color, effect
 uiux:
-    slogan: 
+    slogan:
       - "功到自然成"
       - "壁立千仞，无欲则刚"
     theme_color: "#0097A7"
@@ -163,10 +163,7 @@ topPost: false
 # Available value of "use":
 #     duoshuo | disqus | disqus_click
 comment:
-  use: duoshuo
-  shortname: gdzrch
-  duoshuo_thread_key_type: path
-  duoshuo_embed_js_url: "https://static.duoshuo.com/embed.js"
+  use: youyan
 
 # Search Systems
 # Available value:
@@ -193,3 +190,6 @@ busuanzi:
     all_site_uv: true
     post_pv: true
     busuanzi_pure_mini_js: "https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"
+
+materialcdn:
+    use: false
