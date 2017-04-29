@@ -1,24 +1,2 @@
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
-
-<% if(theme.scheme === 'Isolation') { %>
-    <style>
-    <% if(theme.materialcdn.use === true) { %>
-        @font-face {
-            font-family: 'FontAwesome';
-            src: url(<%= theme.materialcdn.base %>/fonts/fontawesome-webfont.eot?v=4.5.0);
-            src: url(<%= theme.materialcdn.base %>/fonts/fontawesome-webfont.eot?#iefix&v=4.5.0) format('embedded-opentype'), url(<%= theme.materialcdn.base %>/fonts/fontawesome-webfont.woff2?v=4.5.0) format('woff2'), url(<%= theme.materialcdn.base %>/fonts/fontawesome-webfont.woff?v=4.5.0) format('woff'), url(<%= theme.materialcdn.base %>/fonts/fontawesome-webfont.ttf?v=4.5.0) format('truetype'), url(<%= theme.materialcdn.base     %>/fonts/fontawesome-webfont.svg?v=4.5.0#fontawesomeregular) format('svg');
-            font-weight: 400;
-            font-style: normal
-        }
-    <%}else{%>
-        @font-face {
-            font-family: 'FontAwesome';
-            src: url(<%- config.root %>fonts/fontawesome-webfont.eot?v=4.5.0);
-            src: url(<%- config.root %>fonts/fontawesome-webfont.eot?#iefix&v=4.5.0) format('embedded-opentype'), url(<%- config.root %>fonts/fontawesome-webfont.woff2?v=4.5.0) format('woff2'), url(<%- config.root %>fonts/fontawesome-webfont.woff?v=4.5.0) format('woff'), url(<%- config.root     %>fonts/fontawesome-webfont.ttf?v=4.5.0) format('truetype'), url(<%- config.root %>fonts/fontawesome-webfont.svg?v=4.5.0#fontawesomeregular) format('svg');
-            font-weight: 400;
-            font-style: normal
-        }
-    <%}%>
-    </style>
-<% } %>
