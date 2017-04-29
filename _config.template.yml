@@ -184,9 +184,11 @@ search:
     swiftype_key:
 
 # Analytics Systems
+# Available value:
+#     baidu | google | cnzz
 analytics:
-    baidu_id:
-    google_id:
+    use:
+    site_id:
 
 # Leancloud Views
 leancloud:
