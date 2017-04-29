@@ -53,6 +53,13 @@
     <% if(theme.busuanzi.enable === true) { %>
         <link rel="dns-prefetch" href="https://busuanzi.ibruce.info"/>
     <% } %>
+    <% if(theme.fonts.host === google) { %>
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com"/>
+        <link rel="dns-prefetch" href="https://fonts.gstatic.com"/>
+    <% } %>
+    <% if(theme.fonts.host === baomitu) { %>
+        <link rel="dns-prefetch" href="https://lib.baomitu.com"/>
+    <% } %>
 
     <!-- Meta & Info -->
     <meta http-equiv="X-UA-Compatible">
@@ -109,7 +116,7 @@
         <%- cssLsload(theme.materialcdn.base + '/css/material.min.css') %>
         <%- cssLsload(theme.materialcdn.base + '/css/style.min.css') %>
         <% if(theme.scheme === 'Isolation') { %>
-            <%- cssLsload(theme.materialcdn.base + '/css/fontawesome.slim.css') %>
+            <%- cssLsload(theme.materialcdn.base + '/css/fontawesome.min.css') %>
         <% } %>
         <% if(theme.scheme === 'Paradox') { %>
             <%- cssLsload(theme.materialcdn.base + '/css/footer-sns.css') %>
@@ -121,7 +128,7 @@
         <%- cssLsload('css/material.min') %>
         <%- cssLsload('css/style.min') %>
         <% if(theme.scheme === 'Isolation') { %>
-            <%- cssLsload(/css/fontawesome.slim) %>
+            <%- cssLsload(/css/fontawesome.min) %>
         <% } %>
         <% if(theme.scheme === 'Paradox') { %>
             <%- cssLsload(css/footer-sns) %>

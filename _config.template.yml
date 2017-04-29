@@ -75,7 +75,13 @@ img:
             #src: "/img/upyun_logo.svg"
 
 # Custom Fonts
-fonts: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif
+#   family: the font-family which will be used in the theme
+#   host: uri of fonts host.
+#       Available value of "host": google | baomitu
+fonts:
+    family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif
+    host: google
+    #host: baomitu
 
 # Card Elevation Level
 card_elevation: 2
