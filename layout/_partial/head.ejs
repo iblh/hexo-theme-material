@@ -53,6 +53,13 @@
     <% if(theme.busuanzi.enable === true) { %>
         <link rel="dns-prefetch" href="https://busuanzi.ibruce.info"/>
     <% } %>
+    <% if(theme.fonts.host === google) { %>
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com"/>
+        <link rel="dns-prefetch" href="https://fonts.gstatic.com"/>
+    <% } %>
+    <% if(theme.fonts.host === baomitu) { %>
+        <link rel="dns-prefetch" href="https://lib.baomitu.com"/>
+    <% } %>
 
     <!-- Meta & Info -->
     <meta http-equiv="X-UA-Compatible">
