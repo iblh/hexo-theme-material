@@ -7,9 +7,16 @@ var fs = require('fs');
 function cssHelper() {
   var result = '';
   var path = '';
+  var key = ''
 
   for (var i = 0, len = arguments.length; i < len; i++) {
-    path = arguments[i];
+    if (typeof arguments[i] === 'string'){
+      path = arguments[i];
+      key = path;
+    }else{
+      path = arguments[i].path;
+      key = arguments[i].key
+    }
 
     if (i) result += '\n';
 
@@ -18,9 +25,9 @@ function cssHelper() {
     } else {
       if (path.indexOf('?') < 0 && path.substring(path.length - 4, path.length) !== '.css') path += '.css';
       var localpath = path_for.call(this,path);
-      result += '<style id="' + path + '"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;' +
+      result += '<style id="' + key + '"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;' +
         'window.lsLoadCSSMaxNums++;' +
-        'lsloader.load("' + path + '","' +
+        'lsloader.load("' + key + '","' +
         require("../../../../node_modules/hexo/lib/plugins/helper/url_for").call(this,path) + 
         (fs.existsSync(localpath)?'?' + get_file_hex(localpath):'') + '",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;' +
         'window.lsLoadCSSNums++;' +

@@ -32,7 +32,7 @@
 </style>
 
 <% if(theme.materialcdn.use === true) { %>
-	<%- cssLsload(theme.materialcdn.base + '/css/disqus-proxy.min.css') %>
+    <%- cssLsload({path:(theme.materialcdn.base + '/css/disqus-proxy.min.css'),key:'css/disqus-proxy.min.css'}) %>
 <%}else{%>
 	<%- cssLsload('css/disqus-proxy.min.css') %>
 <%}%>
