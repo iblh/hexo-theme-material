@@ -39,16 +39,19 @@
     versionString = "/*" + materialVersion + "*/";
 
     lsloader.clean = function () {
-        // try {
+        try {
+            var keys = [];
             for (var i = 0; i < localStorage.length; i++) {
-                var key = localStorage.key(i)
+                keys.push(localStorage.key(i))
+            }
+            keys.forEach(function (key) {
                 var data = lsloader.getLS(key);
                 if (data && data.indexOf(versionString) === -1) {
                     lsloader.removeLS(key);
                 }
-            }
-        // } catch (e) {
-        // }
+            })
+        } catch (e) {
+        }
     }
 
     lsloader.clean();
