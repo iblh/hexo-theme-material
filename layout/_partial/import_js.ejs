@@ -1,20 +1,20 @@
 <!-- Import File -->
 
 <% if(theme.materialcdn.use === true) { %>
-    <%- jsLsload(theme.materialcdn.base + "/js/lazyload.min.js") %>
-    <%- jsLsload(theme.materialcdn.base + "/js/js.min.js") %>
+    <%- jsLsload({path:(theme.materialcdn.base + '/js/lazyload.min.js'),key:'js/lazyload.min.js'}) %>
+    <%- jsLsload({path:(theme.materialcdn.base + '/js/js.min.js'),key:'js/js.min.js'}) %>
 <%}else{%>
     <%- jsLsload('js/lazyload.min.js') %>
-    <%- jsLsload('js/js.min') %>
+    <%- jsLsload('js/js.min.js') %>
 <%}%>
 
 <%- partial('_widget/nprogress') %>
 
 <% if( theme.js_effect.smoothscroll === true ) { %>
     <% if(theme.materialcdn.use === true) { %>
-        <%- jsLsload(theme.materialcdn.base + "/js/smoothscroll.js") %>
+        <%- jsLsload({path:(theme.materialcdn.base + '/js/smoothscroll.js'),key:'js/smoothscroll.js'}) %>
     <%}else{%>
-        <%- jsLsload('js/smoothscroll') %>
+        <%- jsLsload('js/smoothscroll.js') %>
     <%}%>
 <% } %>
 

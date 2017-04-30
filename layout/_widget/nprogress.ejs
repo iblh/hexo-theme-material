@@ -1,7 +1,7 @@
 <% if(theme.materialcdn.use === true) { %>
-    <%- jsLsload(theme.materialcdn.base + "/js/nprogress.js") %>
+    <%- jsLsload({path:(theme.materialcdn.base + '/js/nprogress.js'),key:'js/nprogress.js'}) %>
 <%}else{%>
-    <%- jsLsload('js/nprogress') %>
+    <%- jsLsload('js/nprogress.js') %>
 <%}%>
 
 <script type="text/ls-javascript" id="NProgress-script">
