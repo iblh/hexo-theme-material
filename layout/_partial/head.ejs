@@ -44,11 +44,14 @@
     <% if(theme.comment.use == "changyan"){ %>
         <link rel="dns-prefetch" href="https://changyan.sohu.com"/>
     <% } %>
-    <% if(theme.analytics.baidu_id) { %>
+    <% if(theme.analytics.use === baidu) { %>
         <link rel="dns-prefetch" href="https://hm.baidu.com"/>
     <% } %>
-    <% if(theme.analytics.google_id) { %>
+    <% if(theme.analytics.use === google) { %>
         <link rel="dns-prefetch" href="https://www.google-analytics.com"/>
+    <% } %>
+    <% if(theme.analytics.use === cnzz) { %>
+        <link rel="dns-prefetch" href="https://s95.cnzz.com"/>
     <% } %>
     <% if(theme.busuanzi.enable === true) { %>
         <link rel="dns-prefetch" href="https://busuanzi.ibruce.info"/>
@@ -128,10 +131,10 @@
         <%- cssLsload('css/material.min') %>
         <%- cssLsload('css/style.min') %>
         <% if(theme.scheme === 'Isolation') { %>
-            <%- cssLsload(/css/fontawesome.min) %>
+            <%- cssLsload('/css/fontawesome.min') %>
         <% } %>
         <% if(theme.scheme === 'Paradox') { %>
-            <%- cssLsload(css/footer-sns) %>
+            <%- cssLsload('css/footer-sns') %>
         <% } %>
         <%- partial('_partial/config_css') %>
         <%- jsLsload('js/jquery.min') %>
