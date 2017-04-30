@@ -77,11 +77,11 @@ img:
 # Custom Fonts
 #   family: the font-family which will be used in the theme
 #   host: uri of fonts host.
-#       Available value of "host": google | baomitu
+#       Available value of "host": google | baomitu | ustc | custom
 fonts:
     family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif
-    host: google
-    #host: baomitu
+    use: google
+    custom_font_host:
 
 # Card Elevation Level
 card_elevation: 2
