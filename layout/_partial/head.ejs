@@ -70,7 +70,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="theme-color" content="<%= theme.uiux.android_chrome_color %>">
     <meta name="author" content="<%= config.author %>">
-    <meta name="description" content="<%= config.description %>">
+
+    <% if(page.description) { %>
+        <meta name="description" itemprop="description" content="<%= page.description %>">
+    <% } else if(page.excerpt){ %>
+        <meta name="description" content="<%= strip_html(page.excerpt).replace(/^s*/, '').replace(/s*$/, '') %>">
+    <% } else if (config.description){ %>
+        <meta name="description" content="<%= config.description %>">
+    <% } %>
+    
     <meta name="keywords" content="<%= theme.head.keywords %><% if(page.tags && page.tags.each) { page.tags.each(function(tag) { %><%- ',' + tag.name %><% })} %>">
     
     <% if(theme.head.google_site_verification) { %><meta name="google-site-verification" content="<%= theme.head.google_site_verification %>" /><% } %>
