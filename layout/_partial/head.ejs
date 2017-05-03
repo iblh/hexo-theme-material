@@ -36,6 +36,7 @@
 
     <!-- dns prefetch -->
     <meta http-equiv="x-dns-prefetch-control" content="on">
+    <link rel="dns-prefetch" href="<%= config.url %>"/>
     <% if(theme.materialcdn.use === true) { %>
         <link rel="dns-prefetch" href="<%= theme.materialcdn.base %>"/>
     <%}%>
