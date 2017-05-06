@@ -107,6 +107,7 @@
     <meta property="og:url" content="<%= config.url %>">
     <meta property="og:type" content="blog">
     <meta property="og:title" content="<% if (title) { %><%= title %> | <% } %><%= config.title %>">
+    <meta property="og:image" content="<%= theme.head.high_res_favicon %>" />
     
     <% if(page.description) { %>
         <meta property="og:description" content="<%= page.description %>">
@@ -117,6 +118,7 @@
     <% } %>
     
     <% if(page.tags && page.tags.each) { page.tags.each(function(tag){ %><meta property="og:article:tag" content="<%= tag.name %>"> <% })} %>
+
 
     <!--[if lte IE 9]>
         <link rel="stylesheet" href="/css/ie-blocker.css">
