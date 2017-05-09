@@ -64,7 +64,7 @@
     <% if(theme.fonts.host === "baomitu") { %>
         <link rel="dns-prefetch" href="https://lib.baomitu.com"/>
     <% } %>
-    <% if(theme.qrcode.use === "online") { %>
+    <% if(theme.qrcode.use === "online" && theme.qrcode.enable === "true") { %>
         <link rel="dns-prefetch" href="https://pan.baidu.com"/>
     <% } %>
 
