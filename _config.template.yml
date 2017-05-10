@@ -177,13 +177,10 @@ materialcdn:
 
 # Comment Systems
 # Available value of "use":
-#     duoshuo | disqus | disqus_click | disqus_proxy | changyan
+#     disqus | disqus_click | changyan
 comment:
     use:
     shortname: # duoshuo or disqus shortname
-    duoshuo_thread_key_type: path
-    duoshuo_embed_js_url: "https://static.duoshuo.com/embed.js"
-    disqus_proxy_js_url:
     changyan_appid:
     changyan_conf:
     changyan_thread_key_type: path
