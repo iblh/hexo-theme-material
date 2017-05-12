@@ -1,10 +1,10 @@
+![](https://qiniu.viosey.com/img/Material-Phone-Render.png)
+
 # Material 原质
 
 [Material Theme](https://material.viosey.com)
 
->Nature, Source
-
->原之质，物之渊
+>Nature, Source | 原之质，物之渊
 
 ## Contents 目录
 
@@ -79,7 +79,5 @@ Proudly using BrowserStack.
 >**BrowserStack** is a cloud-based cross-browser testing tool that enables developers to test their websites across various browsers on different operating systems and mobile devices, without requiring users to install virtual machines, devices or emulators.
 
 ## Render 渲染
-
-![](https://qiniu.viosey.com/img/Material-Phone-Render.png)
 
 ![](https://qiniu.viosey.com/img/Materia-overview-tiny.png)
