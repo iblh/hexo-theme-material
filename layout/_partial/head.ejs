@@ -122,6 +122,8 @@
     
     <% if(page.tags && page.tags.each) { page.tags.each(function(tag){ %><meta property="og:article:tag" content="<%= tag.name %>"> <% })} %>
 
+    <!-- Add canonical link for SEO -->
+    <link rel="canonical" href="<%= page.permalink %>" />
 
     <!--[if lte IE 9]>
         <link rel="stylesheet" href="/css/ie-blocker.css">
