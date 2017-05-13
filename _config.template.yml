@@ -105,6 +105,13 @@ qrcode:
 # Menu Settings
 # ---------------------------------------------------------------
 
+# TOC Button
+
+toc:
+#   use: choose whether the line_number of toc will show or not.
+#       Available value of "linenumber": true | false
+    linenumber: true
+
 # SNS Menu
 sns:
     email: youremail@email.com
