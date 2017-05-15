@@ -24,7 +24,7 @@
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
         <%- toc(page.content, {
             class: 'post-toc',
-            list_number: true,
+            list_number: <%= theme.toc.linenumber %>,
             style: 'max-height:80vh; overflow-y:scroll;'
         }) %>
 
@@ -33,5 +33,7 @@
             Some Action
         </li>
         -->
+
     </ul>
+
 <% } %>
