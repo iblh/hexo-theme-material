@@ -177,13 +177,14 @@ materialcdn:
 
 # Comment Systems
 # Available value of "use":
-#     disqus | disqus_click | changyan
+#     disqus | disqus_click | changyan | 163gentie
 comment:
     use:
     shortname: # duoshuo or disqus shortname
     changyan_appid:
     changyan_conf:
     changyan_thread_key_type: path
+    gentie_productKey: 
 
 # Search Systems
 # Available value:
