@@ -126,6 +126,7 @@ sns:
     zhihu:
     bilibili:
     telegram:
+    segmentfault: 
 
 # SNS Share Switch
 sns_share:
