@@ -101,6 +101,9 @@
     <% if(theme.sidebar.article_num.use === true) { %>
         <li>
             <a href="/archives">
+                <% if(theme.sidebar.article_num.icon) { %>
+                    <i class="material-icons sidebar-material-icons"><%= theme.sidebar.article_num.icon %></i>
+                <% } %>
                 <%= __('sidebar.article_num') %>
                 <span class="sidebar-badge"><%= site.posts.length %></span>
             </a>
