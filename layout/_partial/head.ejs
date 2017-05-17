@@ -84,7 +84,9 @@
     
     <meta name="keywords" content="<%= theme.head.keywords %><% if(page.tags && page.tags.each) { page.tags.each(function(tag) { %><%- ',' + tag.name %><% })} %>">
     
-    <% if(theme.head.google_site_verification) { %><meta name="google-site-verification" content="<%= theme.head.google_site_verification %>" /><% } %>
+    <!-- Site Verification -->
+    <% if(theme.head.site_verification.google) { %><meta name="google-site-verification" content="<%= theme.head.site_verification.google %>" /><% } %>
+    <% if(theme.head.site_verification.baidu) { %><meta name="baidu-site-verification" content="<%= theme.head.site_verification.baidu %>" /><% } %>
 
     <!-- Favicons -->
     <link rel="icon shortcut" type="image/ico" href="<%= theme.head.favicon %>">

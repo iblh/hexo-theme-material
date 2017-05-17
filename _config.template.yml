@@ -8,7 +8,9 @@ head:
     high_res_favicon: "/img/favicon.png"
     apple_touch_icon: "/img/favicon.png"
     keywords:
-    google_site_verification:
+    site_verification:
+        google:
+        baidu:
 
 # Jump Links Settings
 url:
