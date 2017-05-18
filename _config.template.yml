@@ -12,6 +12,10 @@ head:
         google:
         baidu:
 
+    # Enable generate structured-data as JSON+LD for SEO or not.
+    #        Set as 'false' if it cause some wrong when `hexo g`.
+    structured_data: true
+
 # Jump Links Settings
 url:
     rss:

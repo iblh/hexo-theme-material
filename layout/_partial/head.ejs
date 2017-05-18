@@ -127,6 +127,11 @@
     <!-- Add canonical link for SEO -->
     <link rel="canonical" href="<%- config.url + url_for(path) %>" />
 
+    <!-- Structured-data for SEO -->
+    <% if(theme.head.structured_data === true) { %>
+        <%- partial('_partial/structured-data') %>
+    <% } %>
+
     <!--[if lte IE 9]>
         <link rel="stylesheet" href="/css/ie-blocker.css">
 
@@ -169,7 +174,7 @@
     
     <!-- Analytics -->
     <% if(theme.analytics.use) { %><%- partial('_widget/analytics/' + theme.analytics.use + '-analytics') %><% } %>
-
+    
     <!-- Custom Head -->
     <% if (site.data.head) { %>
         <% for (var i in site.data.head) { %>
