@@ -979,7 +979,7 @@ a {
 #scheme-Paradox .mdl-mini-footer--right-section {
     margin-right: 60px
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 840px) {
     #scheme-Paradox .mdl-mini-footer--right-section {
         margin-right: 0
     }
