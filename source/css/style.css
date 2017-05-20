@@ -1095,7 +1095,7 @@ a {
 @media screen and (max-width: 840px) {
     .mdl-mini-footer--right-section {
         margin-left: auto;
-        margin-right: auto!important;
+        margin-right: auto;
         text-align: center;
         width: 100%;
     }
