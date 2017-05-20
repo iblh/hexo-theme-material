@@ -73,15 +73,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="theme-color" content="<%= theme.uiux.android_chrome_color %>">
     <meta name="author" content="<%= config.author %>">
-
-    <% if(page.description) { %>
-        <meta name="description" itemprop="description" content="<%= page.description %>">
-    <% } else if(page.excerpt){ %>
-        <meta name="description" content="<%= strip_html(page.excerpt).replace(/^s*/, '').replace(/s*$/, '') %>">
-    <% } else if (config.description){ %>
-        <meta name="description" content="<%= config.description %>">
-    <% } %>
-    
+    <meta name="description" itemprop="description" content="<% if(page.description) { %><%= page.description %><% } else if(page.excerpt){ %><%= strip_html(page.excerpt).replace(/^s*/, '').replace(/s*$/, '') %><% } else if (config.description){ %><%= config.description %><% } %>">
     <meta name="keywords" content="<%= theme.head.keywords %><% if(page.tags && page.tags.each) { page.tags.each(function(tag) { %><%- ',' + tag.name %><% })} %>">
     
     <!-- Site Verification -->
@@ -113,19 +105,27 @@
     <meta property="og:type" content="blog">
     <meta property="og:title" content="<% if (title) { %><%= title %> | <% } %><%= config.title %>">
     <meta property="og:image" content="<%= theme.head.high_res_favicon %>" />
+    <meta property="og:description" content="<% if(page.description) { %><%= page.description %><% } else if(page.excerpt){ %><%= strip_html(page.excerpt).replace(/^s*/, '').replace(/s*$/, '') %><% } else if (config.description){ %><%= config.description %><% } %>">
+    <% if(page.tags && page.tags.each) { page.tags.each(function(tag){ %><meta property="og:article:tag" content="<%= tag.name %>"> <% })} %>
     
-    <% if(page.description) { %>
-        <meta property="og:description" content="<%= page.description %>">
-    <% } else if(page.excerpt){ %>
-        <meta property="og:description" content="<%= strip_html(page.excerpt).replace(/^s*/, '').replace(/s*$/, '') %>">
-    <% } else if (config.description){ %>
-        <meta property="og:description" content="<%= config.description %>">
+    <% if( (is_post()) ) { %>
+        <meta property="article:published_time" content="<%= date(page.date, 'MMM DD, YYYY') %>" />
+        <meta property="article:modified_time" content="<%= date(page.updated, 'MMM DD, YYYY') %>" />
     <% } %>
     
-    <% if(page.tags && page.tags.each) { page.tags.each(function(tag){ %><meta property="og:article:tag" content="<%= tag.name %>"> <% })} %>
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:title" content="<% if (title) { %><%= title %> | <% } %><%= config.title %>">
+    <meta name="twitter:description" content="<% if(page.description) { %><%= page.description %><% } else if(page.excerpt){ %><%= strip_html(page.excerpt).replace(/^s*/, '').replace(/s*$/, '') %><% } else if (config.description){ %><%= config.description %><% } %>">
+    <meta name="twitter:image" content="<%= theme.head.high_res_favicon %>">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="<%= config.url %>" />
 
     <!-- Add canonical link for SEO -->
-    <link rel="canonical" href="<%- config.url + url_for(path) %>" />
+    <% if( (page.current === 1) && (is_home()) ) { %>
+        <link rel="canonical" href="<%- config.url %>" />
+    <% } else { %>
+        <link rel="canonical" href="<%- config.url + url_for(path) %>" />
+    <% } %>
 
     <!-- Structured-data for SEO -->
     <% if(theme.head.structured_data === true) { %>
