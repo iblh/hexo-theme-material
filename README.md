@@ -20,7 +20,8 @@
 
 ## General 概括
 
-[![Version](https://img.shields.io/badge/version-1.3.4-green.svg?style=flat-square)]()
+[![Version](https://img.shields.io/badge/version-1.4.0-green.svg?style=flat-square)]()
+
 [![Hexo](https://img.shields.io/badge/hexo-3.0+-green.svg?style=flat-square)](https://hexo.io)
 [![node.js](https://img.shields.io/badge/node.js-6.0%2B-green.svg?style=flat-square)](https://nodejs.org/)
 

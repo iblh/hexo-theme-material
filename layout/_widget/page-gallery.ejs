@@ -89,21 +89,27 @@
 
     <!-- Scripts -->
     <% if(theme.materialcdn.use === true) { %>
-        <script src="<%= theme.materialcdn.base %>/js/jquery.min.js"></script>
-        <script src="<%= theme.materialcdn.base %>/js/gallery/gallery.js"></script>
-        <script src="<%= theme.materialcdn.base %>/js/lazyload.min.js"></script>
+        <%- js(theme.materialcdn.base + "/js/jquery.min.js") %>
+        <%- js(theme.materialcdn.base + "/js/gallery/gallery.js") %>
+        <%- js(theme.materialcdn.base + "/js/lazyload.min.js") %>
     <%}else{%>
         <%- js('js/jquery.min') %>
         <%- js('js/gallery/gallery') %>
         <%- js('js/lazyload.min') %>
     <%}%>
 
-    <script type="text/javascript">
+    <script>
         queue.offer(function(){
             $('.lazy').lazyload({
               effect: 'fadeIn',
               event: 'scrollstop'
             });
         })
+        <!-- Start Queue -->
+        $(document).ready(function(){
+            setInterval(function(){
+                queue.execNext();
+            },200);
+        });
     </script>
 </body>

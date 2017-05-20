@@ -21,17 +21,27 @@
         <i class="material-icons">format_list_numbered</i>
     </button>
 
+    <% if(theme.toc.linenumber === true) { %>
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
         <%- toc(page.content, {
             class: 'post-toc',
             list_number: true,
             style: 'max-height:80vh; overflow-y:scroll;'
         }) %>
-
         <!--
         <li class="mdl-menu__item">
             Some Action
         </li>
         -->
     </ul>
+    <% } else { %>
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <%- toc(page.content, {
+            class: 'post-toc',
+            list_number: false,
+            style: 'max-height:80vh; overflow-y:scroll;'
+        }) %>
+    </ul>
+    <% } %>
+
 <% } %>
