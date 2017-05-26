@@ -27,7 +27,7 @@
 
     <!-- Share Weibo -->
     <% if(theme.sns_share.weibo === true) { %>
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=<%= page.title %>&url=<%= config.url + config.root + url_for(path) %>&pic=&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=<%= page.title %>&url=<%= config.url + url_for(path) %>&pic=&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 <%= __('share.toWeibo') %>
             </li>
@@ -36,7 +36,7 @@
 
     <!-- Share Twitter -->
     <% if(theme.sns_share.twitter === true) { %>
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=<%= page.title %>&url=<%= config.url + config.root + url_for(path) %>&via=<%= config.author %>" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=<%= page.title %>&url=<%= config.url + url_for(path) %>&via=<%= config.author %>" target="_blank">
             <li class="mdl-menu__item">
                 <%= __('share.toTwitter') %>
             </li>
@@ -45,7 +45,7 @@
 
     <!-- Share Facebook -->
     <% if(theme.sns_share.facebook === true) { %>
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=<%= config.url + config.root + url_for(path) %>" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=<%= config.url + url_for(path) %>" target="_blank">
             <li class="mdl-menu__item">
                 <%= __('share.toFacebook') %>
             </li>
@@ -54,7 +54,7 @@
 
     <!-- Share Google+ -->
     <% if(theme.sns_share.googleplus === true) { %>
-        <a class="post_share-link" href="https://plus.google.com/share?url=<%= config.url + config.root + url_for(path) %>" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=<%= config.url + url_for(path) %>" target="_blank">
             <li class="mdl-menu__item">
                 <%= __('share.toGplus') %>
             </li>
@@ -63,7 +63,7 @@
 
     <!-- Share LinkedIn -->
     <% if(theme.sns_share.linkedin === true) { %>
-        <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=<%- config.url + config.root + url_for(path) %>&title=<%= page.title %>" target="_blank">
+        <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=<%- config.url + url_for(path) %>&title=<%= page.title %>" target="_blank">
             <li class="mdl-menu__item">
                 <%= __('share.toLinkedIn') %>
             </li>
@@ -81,7 +81,7 @@
 
     <!-- Share Telegram -->
     <% if(theme.sns_share.telegram === true) { %>
-        <a class="post_share-link" href="https://telegram.me/share/url?url=<%- config.url + config.root + url_for(path) %>&text=<%= page.title %>" target="_blank">
+        <a class="post_share-link" href="https://telegram.me/share/url?url=<%- config.url + url_for(path) %>&text=<%= page.title %>" target="_blank">
             <li class="mdl-menu__item">
                 <%= __('share.toTelegram') %>
             </li>
