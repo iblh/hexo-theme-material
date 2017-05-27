@@ -75,7 +75,7 @@
     <meta name="author" content="<%= config.author %>">
     <meta name="description" itemprop="description" content="<% if(page.description) { %><%= page.description %><% } else if(page.excerpt){ %><%= strip_html(page.excerpt).replace(/^s*/, '').replace(/s*$/, '') %><% } else if (config.description){ %><%= config.description %><% } %>">
     <meta name="keywords" content="<%= theme.head.keywords %><% if(page.tags && page.tags.each) { page.tags.each(function(tag) { %><%- ',' + tag.name %><% })} %>">
-    
+
     <!-- Site Verification -->
     <% if(theme.head.site_verification.google) { %><meta name="google-site-verification" content="<%= theme.head.site_verification.google %>" /><% } %>
     <% if(theme.head.site_verification.baidu) { %><meta name="baidu-site-verification" content="<%= theme.head.site_verification.baidu %>" /><% } %>
@@ -107,12 +107,12 @@
     <meta property="og:image" content="<%= theme.head.high_res_favicon %>" />
     <meta property="og:description" content="<% if(page.description) { %><%= page.description %><% } else if(page.excerpt){ %><%= strip_html(page.excerpt).replace(/^s*/, '').replace(/s*$/, '') %><% } else if (config.description){ %><%= config.description %><% } %>">
     <% if(page.tags && page.tags.each) { page.tags.each(function(tag){ %><meta property="og:article:tag" content="<%= tag.name %>"> <% })} %>
-    
+
     <% if( (is_post()) ) { %>
         <meta property="article:published_time" content="<%= date(page.date, 'MMM DD, YYYY') %>" />
         <meta property="article:modified_time" content="<%= date(page.updated, 'MMM DD, YYYY') %>" />
     <% } %>
-    
+
     <!-- The Twitter Card protocol -->
     <meta name="twitter:title" content="<% if (title) { %><%= title %> | <% } %><%= config.title %>">
     <meta name="twitter:description" content="<% if(page.description) { %><%= page.description %><% } else if(page.excerpt){ %><%= strip_html(page.excerpt).replace(/^s*/, '').replace(/s*$/, '') %><% } else if (config.description){ %><%= config.description %><% } %>">
@@ -153,7 +153,7 @@
             <%- cssLsload({path:(theme.materialcdn.base + '/css/fontawesome.min.css'),key:'css/fontawesome.min.css'}) %>
         <% } %>
         <% if(theme.scheme === 'Paradox') { %>
-            <%- cssLsload({path:(theme.materialcdn.base + '/css/footer-sns.css'),key:'css/footer-sns.css'}) %>
+            <%- partial('_partial/config_footer') %>
         <% } %>
         <%- partial('_partial/config_css') %>
         <%- jsLsload({path:(theme.materialcdn.base + '/js/jquery.min.js'),key:'js/jquery.min.js'}) %>
@@ -165,16 +165,16 @@
             <%- cssLsload('/css/fontawesome.min.css') %>
         <% } %>
         <% if(theme.scheme === 'Paradox') { %>
-            <%- cssLsload('css/footer-sns.css') %>
+            <%- partial('_partial/config_footer') %>
         <% } %>
         <%- partial('_partial/config_css') %>
         <%- jsLsload('js/jquery.min.js') %>
         <%- jsLsload('js/queue.min.js') %>
     <%}%>
-    
+
     <!-- Analytics -->
     <% if(theme.analytics.use) { %><%- partial('_widget/analytics/' + theme.analytics.use + '-analytics') %><% } %>
-    
+
     <!-- Custom Head -->
     <% if (site.data.head) { %>
         <% for (var i in site.data.head) { %>
