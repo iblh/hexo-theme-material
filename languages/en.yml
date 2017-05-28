@@ -5,7 +5,7 @@ sidebar:
 post:
     visitor: "Visitors"
     views: "Views"
-    continue: "Full Context"
+    continue: "Read more"
     older: "Older"
     newer: "Newer"
     qrcode: "Read this article on other devices"
