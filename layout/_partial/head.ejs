@@ -157,7 +157,6 @@
         <% } %>
         <%- partial('_partial/config_css') %>
         <%- jsLsload({path:(theme.materialcdn.base + '/js/jquery.min.js'),key:'js/jquery.min.js'}) %>
-        <%- jsLsload({path:(theme.materialcdn.base + '/js/queue.min.js'),key:'js/queue.min.js'}) %>
     <%}else{%>
         <%- cssLsload('css/material.min.css') %>
         <%- cssLsload('css/style.min.css') %>
@@ -169,8 +168,9 @@
         <% } %>
         <%- partial('_partial/config_css') %>
         <%- jsLsload('js/jquery.min.js') %>
-        <%- jsLsload('js/queue.min.js') %>
     <%}%>
+    
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
 
     <!-- Analytics -->
     <% if(theme.analytics.use) { %><%- partial('_widget/analytics/' + theme.analytics.use + '-analytics') %><% } %>
