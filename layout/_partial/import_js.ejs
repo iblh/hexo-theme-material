@@ -57,7 +57,7 @@
 
 <!-- Window Load-->
 <script type="text/ls-javascript" id="window-load">
-    $(window).load(function() {
+    $(window).on('load', function() {
         // Post_Toc parent position fixed
         $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
     });
