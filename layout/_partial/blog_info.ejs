@@ -6,7 +6,7 @@
 
     <!-- LOGO -->
     <div class="something-else-logo mdl-color--white mdl-color-text--grey-600">
-        <a href="<%= theme.url.logo || '#' %>">
+        <a href="<%= theme.url.logo || '#' %>" target="_blank">
             <img src="<%= theme.img.logo %>" alt="logo" />
         </a>
     </div>
@@ -76,7 +76,7 @@
             <% } %>
 
             <% if(theme.sns_share.facebook === true) { %>
-                <a class="index_share-link" href="https://www.facebook.com/sharer/sharer.php?u=<%= config.url + config.root + url_for(path) %>" target="_blank">
+                <a class="index_share-link" href="https://www.facebook.com/sharer/sharer.php?u=<%= config.url + url_for(path) %>" target="_blank">
                     <li class="mdl-menu__item mdl-js-ripple-effect">
                         <%= __('share.toFacebook') %>
                     </li>

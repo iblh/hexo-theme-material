@@ -8,7 +8,6 @@ post:
     continue: "読み続けて"
     older: "古い"
     newer: "新しい"
-    private: "プライベート記事、一時的に非表示にします"
     qrcode: "他のデバイスでこの記事を読む"
     comments_load_button: "論評を読む「 あなたは disqus & disquscdn.com & disqus.com をロードできることを確認します」"    
 share:

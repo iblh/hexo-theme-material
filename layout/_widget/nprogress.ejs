@@ -1,10 +1,10 @@
 <% if(theme.materialcdn.use === true) { %>
-    <script src="<%= theme.materialcdn.base %>/js/nprogress.js"></script>
+    <%- jsLsload({path:(theme.materialcdn.base + '/js/nprogress.js'),key:'js/nprogress.js'}) %>
 <%}else{%>
-    <%- js('js/nprogress') %>
+    <%- jsLsload('js/nprogress.js') %>
 <%}%>
 
-<script type="text/javascript">
+<script type="text/ls-javascript" id="NProgress-script">
     NProgress.configure({
         showSpinner: true
     });

@@ -1,10 +1,9 @@
 <!-- Config CSS -->
 
-
 <!-- Other Styles -->
 <style>
   body, html {
-    font-family: <%- theme.fonts %>;
+    font-family: <%- theme.fonts.family %>;
   }
 
   a {
@@ -117,3 +116,6 @@
       }
     </style>
 <% } %>
+
+<!-- Import Font -->
+<%- partial('_partial/config_font') %>

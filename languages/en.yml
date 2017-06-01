@@ -5,12 +5,11 @@ sidebar:
 post:
     visitor: "Visitors"
     views: "Views"
-    continue: "Continue Reading"
+    continue: "Read more"
     older: "Older"
     newer: "Newer"
-    private: "Private post, temporarily hidden"
-    qrcode: "Read this article on other device"
-    comments_load_button: "Read Comments (Be sure disq.us, disquscdn.com and disqus.com can load properly)"    
+    qrcode: "Read this article on other devices"
+    comments_load_button: "Read Comments (Make sure disq.us, disquscdn.com and disqus.com can load properly)"    
 share:
     article_rss: "Article RSS"
     comment_rss: "Comment RSS"

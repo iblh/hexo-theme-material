@@ -52,7 +52,7 @@
             <!-- Pages  -->
             <% for (var i in theme.sidebar.pages) { %>
                 <span class="header-nav-item">
-                    <a href="<%= theme.sidebar.pages[i] || '#' %>" title="<%= i %>">
+                    <a href="<%= theme.sidebar.pages[i].link || '#' %>" title="<%= i %>">
                         <span><%= i %></span>
                     </a>
                 </span>

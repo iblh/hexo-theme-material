@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="<%- config.language.substring(0,2) %>">
+<html style="display: none;" <% if(config.language !== null) { %>lang="<%- config.language.substring(0,2) %>"<% } %>>
     <%- partial('_partial/head') %>
 
     <% if(page.layout === 'gallery') { %>
