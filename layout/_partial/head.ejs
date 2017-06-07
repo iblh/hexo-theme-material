@@ -117,8 +117,8 @@
     <% if(page.tags && page.tags.each) { page.tags.each(function(tag){ %><meta property="og:article:tag" content="<%= tag.name %>"> <% })} %>
 
     <% if( (is_post()) ) { %>
-        <meta property="article:published_time" content="<%= date(page.date, 'MMM DD, YYYY') %>" />
-        <meta property="article:modified_time" content="<%= date(page.updated, 'MMM DD, YYYY') %>" />
+        <meta property="article:published_time" content="<%= page.date %>" />
+        <meta property="article:modified_time" content="<%= page.updated %>" />
     <% } %>
 
     <!-- The Twitter Card protocol -->

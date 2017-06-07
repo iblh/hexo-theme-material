@@ -43,8 +43,8 @@
     },
     "headline": "<%- page.title %>",
     "url": "<%- config.url + url_for(path) %>",
-    "datePublished": "<%= date(page.date, 'MMM DD, YYYY') %>",
-    "dateModified": "<%= date(page.updated, 'MMM DD, YYYY') %>",
+    "datePublished": "<%= page.date %>",
+    "dateModified": "<%= page.updated %>",
     "description": "<% if(page.description) { %><%= page.description %><% } else if(page.excerpt){ %><%= strip_html(page.excerpt).replace(/^s*/, '').replace(/s*$/, '') %><% } else if (config.description){ %><%= config.description %><% } %>",
     "mainEntityOfPage": {
         "@type": "WebPage",
