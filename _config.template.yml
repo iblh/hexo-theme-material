@@ -190,14 +190,16 @@ materialcdn:
 
 # Comment Systems
 # Available value of "use":
-#     disqus | disqus_click | changyan | 163gentie
+#     disqus | disqus_click | changyan | 163gentie | livere(laibili)
 comment:
     use:
     shortname: # duoshuo or disqus shortname
     changyan_appid:
     changyan_conf:
     changyan_thread_key_type: path
-    gentie_productKey: 
+    gentie_productKey:
+    livere_type: # city or premium
+    livere_data_uid:
 
 # Search Systems
 # Available value:
