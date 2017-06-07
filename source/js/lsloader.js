@@ -46,8 +46,13 @@
             }
             keys.forEach(function (key) {
                 var data = lsloader.getLS(key);
-                if (data && data.indexOf(versionString) === -1) {
-                    lsloader.removeLS(key);
+                if (window.oldVersion) {
+                    var remove = window.oldVersion.reduce(function(p,c) {
+                        return p || data.indexOf(c) !== -1
+                    }, false)
+                    if (remove) {
+                        lsloader.removeLS(key);
+                    }
                 }
             })
         } catch (e) {
