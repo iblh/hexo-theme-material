@@ -193,7 +193,7 @@ materialcdn:
 #     disqus | disqus_click | changyan | 163gentie | livere(laibili)
 comment:
     use:
-    shortname: # duoshuo or disqus shortname
+    shortname: # disqus shortname
     changyan_appid:
     changyan_conf:
     changyan_thread_key_type: path
