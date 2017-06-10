@@ -13,8 +13,8 @@
         }
     });
 </script>
-<% if(theme.materialcdn.use === true) { %>
-    <script src="<%= theme.materialcdn.base %>/js/mathjax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<% if(theme.vendors.mathjax) { %>
+    <script src="<%= theme.vendors.mathjax %>?config=TeX-AMS-MML_HTMLorMML"></script>
 <%}else{%>
-    <script type="text/javascript" src="/js/mathjax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="<%= config.root %>js/mathjax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <%}%>

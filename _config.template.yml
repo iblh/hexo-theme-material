@@ -234,7 +234,7 @@ vendors:
     style_css:
     gallery_css:
     js_js:
-    lazyloader_js:
+    lazyload_js:
     smoothscroll_js:
     gallery_js:
 # Third party library
@@ -246,5 +246,3 @@ vendors:
     fontawesome:
     # MathJax 2.7.0-2.7.1
     mathjax:
-    # Material Icons 3.0.1
-    material_icons:
