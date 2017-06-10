@@ -181,13 +181,6 @@ sidebar:
 # Integrated Services
 # ---------------------------------------------------------------
 
-# MaterialCDN
-# When you set 'use' as true, the needed css, js, font file will have a new src.
-# The new src will have the base domain you configured in 'base'.
-materialcdn: 
-    use: 
-    base: 
-
 # Comment Systems
 # Available value of "use":
 #     disqus | disqus_click | changyan | 163gentie | livere(laibili)
@@ -228,3 +221,30 @@ busuanzi:
     all_site_uv: false
     post_pv: false
     busuanzi_pure_mini_js: "https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"
+
+
+# Files Vendors
+# Set a CDN for the files src you want to customize. The url should with protocol.
+# Default(empty) will load the files from the origin server, with root you config in site.config file.
+# For example
+#    jquery: https://cdn.bootcss.com/jquery/2.2.1/jquery.js
+vendors:
+# Theme unique files
+    material_css:
+    style_css:
+    gallery_css:
+    js_js:
+    lazyloader_js:
+    smoothscroll_js:
+    gallery_js:
+# Third party library
+    # jQuery 2.2.0
+    jquery:
+    # nprogress 0.2.0
+    nprogress:
+    # FontAwesome 4.5.0
+    fontawesome:
+    # MathJax 2.7.0-2.7.1
+    mathjax:
+    # Material Icons 3.0.1
+    material_icons:
