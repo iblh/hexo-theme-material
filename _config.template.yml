@@ -225,19 +225,19 @@ busuanzi:
 
 # Files Vendors
 # Set a CDN for the files src you want to customize. The url should with protocol.
-# Default(empty) will load the files from the origin server, with root you config in site.config file.
-# For example
-#    jquery: https://cdn.bootcss.com/jquery/2.2.1/jquery.js
+# Default(empty) will load the files from the origin server.
 vendors:
-# Theme unique files
-    material_css:
-    style_css:
-    gallery_css:
-    js_js:
-    lazyload_js:
-    smoothscroll_js:
-    gallery_js:
+# MaterialCDN
+#   You can load theme unique files from your private cdn or oss.
+#   The new src will have the base domain you configured below.
+#   For example
+#       materialcdn: https://cdn.example.com
+    materialcdn:
+
 # Third party library
+#   You can load these files from public cdn.
+#   For example
+#       jquery: https://cdn.bootcss.com/jquery/2.2.1/jquery.js
     # jQuery 2.2.0
     jquery:
     # nprogress 0.2.0

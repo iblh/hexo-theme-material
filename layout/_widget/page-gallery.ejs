@@ -1,5 +1,5 @@
-<% if(theme.vendors.gallery_css) { %>
-    <link rel="preload" as="style" href="<%= theme.vendors.gallery_css %>" onload="this.rel='stylesheet'">
+<% if(theme.vendors.materialcdn) { %>
+    <link rel="preload" as="style" href="<%= theme.vendors.materialcdn %>/css/gallery.min.css" onload="this.rel='stylesheet'">
 <% } else { %>
     <link rel="preload" as="style" href="<%= config.root %>css/gallery.min.css" onload="this.rel='stylesheet'">
 <% } %>
@@ -88,14 +88,14 @@
     </div>
 
     <!-- Scripts -->
-    <% if(theme.vendors.gallery_js) { %>
-        <script src="<%= theme.vendors.gallery_js %>"></script>
+    <% if(theme.vendors.materialcdn) { %>
+        <script src="<%= theme.vendors.materialcdn %>/js/gallery/gallery.js"></script>
     <% } else { %>
         <script src="<%= config.root %>js/gallery/gallery.js"></script>
     <% } %>
 
-    <% if(theme.vendors.lazyloader_js) { %>
-        <%- jsLsload({path:(theme.vendors.lazyloader_js),key:'lazyload_js'}) %>
+    <% if(theme.vendors.materialcdn) { %>
+        <%- jsLsload({path:(theme.vendors.materialcdn + '/js/lazyload.min.js'),key:'lazyload_js'}) %>
     <% } else { %>
         <%- jsLsload({path:(config.root + 'js/lazyload.min.js'),key:'lazyload_js'}) %>
     <% } %>

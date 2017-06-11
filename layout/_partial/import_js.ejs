@@ -1,21 +1,21 @@
 <!-- Import JS File -->
-<% if(theme.vendors.lazyloader_js) { %>
-    <%- jsLsload({path:(theme.vendors.lazyloader_js),key:'lazyload_js'}) %>
+<% if(theme.vendors.materialcdn) { %>
+    <%- jsLsload({path:(theme.vendors.materialcdn + '/js/lazyload.min.js'),key:'lazyload_js'}) %>
 <% } else { %>
     <%- jsLsload({path:(config.root + 'js/lazyload.min.js'),key:'lazyload_js'}) %>
 <% } %>
 
-<% if(theme.vendors.js_js) { %>
-    <%- jsLsload({path:(theme.vendors.js_js),key:'js_js'}) %>
+<% if(theme.vendors.materialcdn) { %>
+    <%- jsLsload({path:(theme.vendors.materialcdn + '/js/js.min.js'),key:'js_js'}) %>
 <% } else { %>
-    <%- jsLsload({path:(config.root + 'js/js.min.js'),key:'js_js'}) %>
+    <%- jsLsload({path:(theme.vendors.materialcdn + 'js/js.min.js'),key:'js_js'}) %>
 <% } %>
 
 <%- partial('_widget/nprogress') %>
 
 <% if( theme.js_effect.smoothscroll === true ) { %>
-    <% if(theme.vendors.smoothscroll_js) { %>
-        <%- jsLsload({path:(theme.vendors.smoothscroll_js),key:'sm_js'}) %>
+    <% if(theme.vendors.materialcdn) { %>
+        <%- jsLsload({path:(theme.vendors.materialcdn + '/js/smoothscroll.js'),key:'sm_js'}) %>
     <% } else { %>
         <%- jsLsload({path:(config.root + 'js/smoothscroll.js'),key:'sm_js'}) %>
     <% } %>
