@@ -9,6 +9,6 @@
             margin: 2
         }) %>">
     <% } else if(theme.qrcode.use === "online") { %>
-        <img src="https://pan.baidu.com/share/qrcode?w=246&h=246&url=<%= page.permalink %>">
+        <img src="<% if(config.language === "zh-CN") { %>https://pan.baidu.com/share/qrcode?w=246&h=246&url=<%= page.permalink %><% } else { %>https://chart.googleapis.com/chart?cht=qr&chs=246x246&chl=<%= page.permalink %>&chld=M|2<% } %>">
     <% } %>
 </ul>
