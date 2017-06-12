@@ -97,6 +97,14 @@ card_elevation: 2
 #   For example, if you set it as 2015, then footer will show '© 2015 - 2017'
 copyright_since:
 
+# Footer Text
+# You can specify the text you want to show in footer, HTML tag is supported.
+#   For example, you can setup ICP license number as:
+#       '<a href="http://www.miitbeian.gov.cn" rel="nofollow">某ICP备xxxxxxxx号-x</a>'
+#   Or you can set up a CC license as:
+#       'This blog is under a <a href="/creativecommons.html" target="_blank" class="footer-develop-a">CC BY-NC-SA 3.0 Unported License</a>'
+footer_text:
+
 # Qrcode for redirect at other device
 #   use: choose which method to generate the qrcode for each posts.
 #       Available value of "use": plugin | online
