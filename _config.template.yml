@@ -191,7 +191,7 @@ comment:
     changyan_conf:
     changyan_thread_key_type: path
     gentie_productKey:
-    livere_type: # city or premium
+    gentie_thread_key_type: path # path | id
     livere_data_uid:
 
 # Search Systems
