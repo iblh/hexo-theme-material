@@ -95,6 +95,14 @@
 </script>
 <% } %>
 
+<!-- Custom Footer -->
+
+<% if (site.data.footer) { %>
+    <% for (var i in site.data.footer) { %>
+        <%- site.data.footer[i] %>
+    <% } %>
+<% } %>
+
 <script>
     (function(){
         var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
