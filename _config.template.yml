@@ -226,3 +226,18 @@ busuanzi:
     all_site_uv: false
     post_pv: false
     busuanzi_pure_mini_js: "https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"
+
+# enable value:
+#     true | false
+# theme value:
+#     theme-name  # /vendors/prettify/themes/[theme-name].css
+prettify:
+    enable: false
+    theme: "vibrant-ink" # default value: "vibrant-ink"   # "theme-name without .css"
+
+# custom css
+customcss:
+    enable: false
+    csspath: [  # css file path
+        # "/css/custom-prettify.min.css"
+    ]
