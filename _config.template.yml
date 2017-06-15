@@ -231,13 +231,17 @@ busuanzi:
 #     true | false
 # theme value:
 #     theme-name  # /vendors/prettify/themes/[theme-name].css
+#     
+# if true, check highlight option in _config.yml. Make sure that default code highlight plugin is disabled.
+#       highlight:
+#         enable: false
 prettify:
-    enable: false
+    enable: false   # if true, customcss.enable must be true
     theme: "vibrant-ink" # default value: "vibrant-ink"   # "theme-name without .css"
 
 # custom css
 customcss:
     enable: false
     csspath: [  # css file path
-        # "/css/custom-prettify.min.css"
+        "/css/custom-prettify.min.css"
     ]
