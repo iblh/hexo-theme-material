@@ -43,44 +43,7 @@
     </title>
 
     <!-- dns prefetch -->
-    <meta http-equiv="x-dns-prefetch-control" content="on">
-    <% if(theme.materialcdn.use === true) { %>
-        <link rel="dns-prefetch" href="<%= theme.materialcdn.base %>"/>
-    <%}%>
-    <% if(theme.leancloud.enable === true) { %>
-        <link rel="dns-prefetch" href="<%= theme.leancloud.av_core_mini %>"/>
-    <% } %>
-    <% if(theme.comment.use == "changyan"){ %>
-        <link rel="dns-prefetch" href="https://changyan.sohu.com"/>
-    <% } %>
-    <% if(theme.comment.use == "163gentie"){ %>
-        <link rel="dns-prefetch" href="https://img1.cache.netease.com"/>
-    <% } %>
-    <% if(theme.comment.use == "livere"){ %>
-        <link rel="dns-prefetch" href="https://cdn-city.livere.com"/>
-    <% } %>
-    <% if(theme.analytics.use === "baidu") { %>
-        <link rel="dns-prefetch" href="https://hm.baidu.com"/>
-    <% } %>
-    <% if(theme.analytics.use === "google") { %>
-        <link rel="dns-prefetch" href="https://www.google-analytics.com"/>
-    <% } %>
-    <% if(theme.analytics.use === "cnzz") { %>
-        <link rel="dns-prefetch" href="https://s95.cnzz.com"/>
-    <% } %>
-    <% if(theme.busuanzi.enable === true) { %>
-        <link rel="dns-prefetch" href="https://busuanzi.ibruce.info"/>
-    <% } %>
-    <% if(theme.fonts.host === "google") { %>
-        <link rel="dns-prefetch" href="https://fonts.googleapis.com"/>
-        <link rel="dns-prefetch" href="https://fonts.gstatic.com"/>
-    <% } %>
-    <% if(theme.fonts.host === "baomitu") { %>
-        <link rel="dns-prefetch" href="https://lib.baomitu.com"/>
-    <% } %>
-    <% if(theme.qrcode.use === "online" && theme.qrcode.enable === "true") { %>
-        <link rel="dns-prefetch" href="https://pan.baidu.com"/>
-    <% } %>
+    <%- partial('_partial/config_dnsprefetch') %>
 
     <!-- Meta & Info -->
     <meta http-equiv="X-UA-Compatible">
