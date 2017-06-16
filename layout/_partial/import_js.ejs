@@ -58,25 +58,31 @@
 	}
 </script>
 
-<!-- prettify代码高亮js引入 -->
+<!-- Import prettify js  -->
 <% if (theme.prettify.enable){ %>
-    <script src="/vendors/prettify/prettify.js" type="text/javascript"></script>
-<%}%>
+    <% if(theme.vendors.prettify) { %>
+        <%- jsLsload({path:(theme.vendors.prettify),key:'prettify_js'}) %>
+    <% } else { %>
+        <%- jsLsload({path:(config.root + 'js/prettify.min.js'),key:'prettify_js'}) %>
+    <% } %>
+<% } %>
 
-<!-- Window Load-->
+<!-- Window Load -->
+<!-- add class for prettify -->
 <script type="text/ls-javascript" id="window-load">
     $(window).on('load', function() {
         // Post_Toc parent position fixed
         $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
     });
 
-    $(function() {
-        <!-- prettify代码高亮js引入 -->
-        <% if (theme.prettify.enable){ %>
-            $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
-            prettyPrint();
-        <%}%>
-    })
+    <% if (theme.prettify.enable) { %>
+        <% if ( (is_post()) ) { %>
+            $(function() {
+                $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+                prettyPrint();
+                })
+        <% } %>
+    <% } %>
 </script>
 
 <!-- MathJax Load-->
