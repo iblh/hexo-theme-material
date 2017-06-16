@@ -97,6 +97,14 @@ card_elevation: 2
 #   For example, if you set it as 2015, then footer will show '© 2015 - 2017'
 copyright_since:
 
+# Footer Text
+# You can specify the text you want to show in footer, HTML tag is supported.
+#   For example, you can setup ICP license number as:
+#       '<a href="http://www.miitbeian.gov.cn" rel="nofollow">某ICP备xxxxxxxx号-x</a>'
+#   Or you can set up a CC license as:
+#       'This blog is under a <a href="/creativecommons.html" target="_blank" class="footer-develop-a">CC BY-NC-SA 3.0 Unported License</a>'
+footer_text:
+
 # Qrcode for redirect at other device
 #   use: choose which method to generate the qrcode for each posts.
 #       Available value of "use": plugin | online
@@ -106,6 +114,19 @@ qrcode:
     enable: false
     use: plugin
 
+# Code 
+# Available value: true | false
+# theme value:
+#     theme-name  # /vendors/prettify/themes/[theme-name].css
+# if true, check highlight option in _config.yml. Make sure that default code highlight plugin is disabled.
+#       highlight:
+#         enable: false
+prettify:
+    enable: false   # if true, customcss.enable must be true
+    theme: "vibrant-ink" # default value: "vibrant-ink"   # "theme-name without .css"
+    customcss:
+        enable: false
+        csspath: "/css/custom-prettify.min.css"
 
 # ---------------------------------------------------------------
 # Menu Settings
@@ -181,23 +202,18 @@ sidebar:
 # Integrated Services
 # ---------------------------------------------------------------
 
-# MaterialCDN
-# When you set 'use' as true, the needed css, js, font file will have a new src.
-# The new src will have the base domain you configured in 'base'.
-materialcdn: 
-    use: 
-    base: 
-
 # Comment Systems
 # Available value of "use":
-#     disqus | disqus_click | changyan | 163gentie
+#     disqus | disqus_click | changyan | 163gentie | livere(laibili)
 comment:
     use:
     shortname: # duoshuo or disqus shortname
     changyan_appid:
     changyan_conf:
     changyan_thread_key_type: path
-    gentie_productKey: 
+    gentie_productKey:
+    gentie_thread_key_type: path # path | id
+    livere_data_uid:
 
 # Search Systems
 # Available value:
@@ -227,21 +243,26 @@ busuanzi:
     post_pv: false
     busuanzi_pure_mini_js: "https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"
 
-# enable value:
-#     true | false
-# theme value:
-#     theme-name  # /vendors/prettify/themes/[theme-name].css
-#     
-# if true, check highlight option in _config.yml. Make sure that default code highlight plugin is disabled.
-#       highlight:
-#         enable: false
-prettify:
-    enable: false   # if true, customcss.enable must be true
-    theme: "vibrant-ink" # default value: "vibrant-ink"   # "theme-name without .css"
+# Files Vendors
+# Set a CDN for the files src you want to customize. The url should with protocol.
+# Default(empty) will load the files from the origin server.
+vendors:
+# MaterialCDN
+#   You can load theme unique files from your private cdn or oss.
+#   The new src will have the base domain you configured below.
+#   For example
+#       materialcdn: https://cdn.example.com
+    materialcdn:
 
-# custom css
-customcss:
-    enable: false
-    csspath: [  # css file path
-        "/css/custom-prettify.min.css"
-    ]
+# Third party library
+#   You can load these files from public cdn.
+#   For example
+#       jquery: https://cdn.bootcss.com/jquery/2.2.1/jquery.js
+    # jQuery 2.2.0
+    jquery:
+    # nprogress 0.2.0
+    nprogress:
+    # FontAwesome 4.5.0
+    fontawesome:
+    # MathJax 2.7.0-2.7.1
+    mathjax:

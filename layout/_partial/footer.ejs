@@ -7,6 +7,14 @@
         <!--Copyright-->
         <div id="copyright">
             Copyright&nbsp;©<% if(theme.copyright_since) { %>&nbsp;<%= theme.copyright_since %>&nbsp;-<% } %><script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script><%- config.title %>
+            <% if(theme.footer_text) { %>
+                <br>
+                <% if(Array.isArray(theme.footer_text)) { %>
+                    <%- theme.footer_text.join('<br>') %>
+                <% } else { %>
+                    <%- theme.footer_text %>
+                <% } %>
+            <% } %>
         </div>
 
         <!-- Paradox Footer Right Section -->
