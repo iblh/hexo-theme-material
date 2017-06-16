@@ -114,6 +114,19 @@ qrcode:
     enable: false
     use: plugin
 
+# Code 
+# Available value: true | false
+# theme value:
+#     theme-name  # /vendors/prettify/themes/[theme-name].css
+# if true, check highlight option in _config.yml. Make sure that default code highlight plugin is disabled.
+#       highlight:
+#         enable: false
+prettify:
+    enable: false   # if true, customcss.enable must be true
+    theme: "vibrant-ink" # default value: "vibrant-ink"   # "theme-name without .css"
+    customcss:
+        enable: false
+        csspath: "/css/custom-prettify.min.css"
 
 # ---------------------------------------------------------------
 # Menu Settings
@@ -229,7 +242,6 @@ busuanzi:
     all_site_uv: false
     post_pv: false
     busuanzi_pure_mini_js: "https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"
-
 
 # Files Vendors
 # Set a CDN for the files src you want to customize. The url should with protocol.

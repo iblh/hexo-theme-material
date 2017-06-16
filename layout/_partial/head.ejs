@@ -200,4 +200,18 @@
             <%- site.data.head[i] %>
         <% } %>
     <% } %>
+
+    <% if (theme.prettify.enable){ %>
+        <!-- prettify代码高亮主题css引入 -->
+        <link href="/vendors/prettify/themes/<%= theme.prettify.theme %>.css" rel="stylesheet">
+    <% } %>
+
+    <!-- 自定义css引入 -->
+    <% if (theme.customcss.enable){ %>
+        <% if (theme.customcss.csspath) { %>
+            <% for (var i in theme.customcss.csspath) { %>
+                <link href="<%= theme.customcss.csspath[i] %>" rel="stylesheet">
+            <% } %>
+        <% } %>
+    <% } %>
 </head>
