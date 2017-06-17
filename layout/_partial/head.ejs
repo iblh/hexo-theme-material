@@ -135,6 +135,7 @@
         <% if (theme.prettify.enable){ %>
             <% if ( (is_post()) ) { %>
                 <%- cssLsload({path:(theme.vendors.materialcdn + '/css/prettify.min.css'),key:'prettify_css'}) %>
+                <%- cssLsload({path:(theme.vendors.materialcdn + '/css/' + theme.prettify.theme + '.min.css'),key:'prettify_theme'}) %>
             <% } %>
         <% } %>
 
@@ -145,6 +146,7 @@
         <% if (theme.prettify.enable){ %>
             <% if ( (is_post()) ) { %>
                 <%- cssLsload({path:(config.root + 'css/prettify.min.css'),key:'prettify_css'}) %>
+                <%- cssLsload({path:(config.root + 'css/' + theme.prettify.theme + '.min.css'),key:'prettify_theme'}) %>
             <% } %>
         <% } %>
 
@@ -213,11 +215,6 @@
         <% for (var i in site.data.head) { %>
             <%- site.data.head[i] %>
         <% } %>
-    <% } %>
-
-    <% if (theme.prettify.enable){ %>
-        <!-- prettify代码高亮主题css引入 -->
-        <link href="/vendors/prettify/themes/<%= theme.prettify.theme %>.css" rel="stylesheet">
     <% } %>
 
 </head>
