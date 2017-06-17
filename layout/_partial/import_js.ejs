@@ -8,7 +8,7 @@
 <% if(theme.vendors.materialcdn) { %>
     <%- jsLsload({path:(theme.vendors.materialcdn + '/js/js.min.js'),key:'js_js'}) %>
 <% } else { %>
-    <%- jsLsload({path:(theme.vendors.materialcdn + 'js/js.min.js'),key:'js_js'}) %>
+    <%- jsLsload({path:(config.root + 'js/js.min.js'),key:'js_js'}) %>
 <% } %>
 
 <%- partial('_widget/nprogress') %>
