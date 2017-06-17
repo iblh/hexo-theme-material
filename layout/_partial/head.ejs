@@ -131,9 +131,23 @@
     <% if(theme.vendors.materialcdn) { %>
         <%- cssLsload({path:(theme.vendors.materialcdn + '/css/material.min.css'),key:'material_css'}) %>
         <%- cssLsload({path:(theme.vendors.materialcdn + '/css/style.min.css'),key:'style_css'}) %>
+
+        <% if (theme.prettify.enable){ %>
+            <% if ( (is_post()) ) { %>
+                <%- cssLsload({path:(theme.vendors.materialcdn + '/css/prettify.min.css'),key:'prettify_css'}) %>
+            <% } %>
+        <% } %>
+
     <% } else { %>
         <%- cssLsload({path:(config.root + 'css/material.min.css'),key:'material_css'}) %>
         <%- cssLsload({path:(config.root + 'css/style.min.css'),key:'style_css'}) %>
+
+        <% if (theme.prettify.enable){ %>
+            <% if ( (is_post()) ) { %>
+                <%- cssLsload({path:(config.root + 'css/prettify.min.css'),key:'prettify_css'}) %>
+            <% } %>
+        <% } %>
+
     <% } %>
 
     <% if(theme.scheme === 'Isolation') { %>
@@ -206,12 +220,4 @@
         <link href="/vendors/prettify/themes/<%= theme.prettify.theme %>.css" rel="stylesheet">
     <% } %>
 
-    <!-- 自定义css引入 -->
-    <% if (theme.customcss.enable){ %>
-        <% if (theme.customcss.csspath) { %>
-            <% for (var i in theme.customcss.csspath) { %>
-                <link href="<%= theme.customcss.csspath[i] %>" rel="stylesheet">
-            <% } %>
-        <% } %>
-    <% } %>
 </head>
