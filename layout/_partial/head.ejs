@@ -135,7 +135,7 @@
         <% if (theme.prettify.enable){ %>
             <% if ( (is_post()) ) { %>
                 <%- cssLsload({path:(theme.vendors.materialcdn + '/css/prettify.min.css'),key:'prettify_css'}) %>
-                <%- cssLsload({path:(theme.vendors.materialcdn + '/css/' + theme.prettify.theme + '.min.css'),key:'prettify_theme'}) %>
+                <%- cssLsload({path:(theme.vendors.materialcdn + '/css/prettify/' + theme.prettify.theme + '.min.css'),key:'prettify_theme'}) %>
             <% } %>
         <% } %>
 
@@ -146,7 +146,7 @@
         <% if (theme.prettify.enable){ %>
             <% if ( (is_post()) ) { %>
                 <%- cssLsload({path:(config.root + 'css/prettify.min.css'),key:'prettify_css'}) %>
-                <%- cssLsload({path:(config.root + 'css/' + theme.prettify.theme + '.min.css'),key:'prettify_theme'}) %>
+                <%- cssLsload({path:(config.root + 'css/prettify/' + theme.prettify.theme + '.min.css'),key:'prettify_theme'}) %>
             <% } %>
         <% } %>
 
