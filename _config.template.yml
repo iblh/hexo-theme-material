@@ -84,6 +84,7 @@ img:
 #   family: the font-family which will be used in the theme
 #   host: uri of fonts host.
 #       Available value of "host": google | baomitu | ustc | custom
+#       When you configured 'use' as 'custom', you should fill in the value of 'custom_font_host', which should be a mirror of google fonts.
 fonts:
     family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif
     use: google
@@ -265,3 +266,5 @@ vendors:
     mathjax:
     # Prettify r298 (only prettify.js)
     prettify:
+    # Material Icons 3.0.1
+    material_icons:
