@@ -122,11 +122,8 @@ qrcode:
 #       highlight:
 #         enable: false
 prettify:
-    enable: false   # if true, customcss.enable must be true
-    theme: "vibrant-ink" # default value: "vibrant-ink"   # "theme-name without .css"
-    customcss:
-        enable: false
-        csspath: "/css/custom-prettify.min.css"
+    enable: false
+    theme: "vibrant-ink" # default value: "vibrant-ink"   # theme-name without '.css'
 
 # ---------------------------------------------------------------
 # Menu Settings
@@ -266,3 +263,5 @@ vendors:
     fontawesome:
     # MathJax 2.7.0-2.7.1
     mathjax:
+    # Prettify r298 (only prettify.js)
+    prettify:
