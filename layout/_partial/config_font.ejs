@@ -35,7 +35,7 @@
 
 <!-- Import Material Icon -->
 <% if(theme.vendors.material_icons) { %>
-    <%- cssLsload({path:(theme.vendors.material_icons),key:'material_icons'}) %>
+    <link rel="preload" href="<%= theme.vendors.material_icons %>" as="style" onload="this.rel='stylesheet'">
 <% } else { %>
     <style>
         @font-face {
