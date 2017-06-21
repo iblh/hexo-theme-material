@@ -2,15 +2,15 @@
     <% if(theme.scheme === 'Paradox') { %>
         <%- page.content %>
         <% if (theme.license || page.license) { %>
-                <blockquote>
-                    <p>
+                <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
+                    <p><strong>
                         <% if (page.license) { %>
                             <%- page.license %>
                         <% } else { %> 
                             <%- theme.license %>
-                        <% } %>
+                        <% } %></strong>
                         <br>
-                        <%- __('post.permalink') %> <%= page.permalink %>
+                        <strong><%- __('post.permalink') %></strong><a href="<%= page.permalink %>"><%= page.permalink %></a>
                     </p>
                 </blockquote>
         <% } %>
