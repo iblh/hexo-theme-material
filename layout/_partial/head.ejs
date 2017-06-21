@@ -127,9 +127,9 @@
 
     <% if(theme.scheme === 'Isolation') { %>
         <% if(theme.vendors.fontawesome) { %>
-            <%- cssLsload({path:(theme.vendors.fontawesome),key:'fontawesome'}) %>
+            <link rel="preload" href="<%= theme.vendors.fontawesome %>" as="style" onload="this.rel='stylesheet'">
         <% } else { %>
-            <%- cssLsload({path:(config.root + 'css/fontawesome.min.css'),key:'fontawesome'}) %>
+            <link rel="preload" href="<%= config.root + 'css/fontawesome.min.css' %>" as="style" onload="this.rel='stylesheet'">
         <% } %>
     <% } %>
 
