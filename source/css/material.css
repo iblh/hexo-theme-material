@@ -36,13 +36,6 @@ textarea {
   resize: vertical
 }
 
-.browsehappy {
-  margin: .2em 0;
-  background: #ccc;
-  color: #000;
-  padding: .2em 0
-}
-
 .hidden {
   display: none !important;
   visibility: hidden
