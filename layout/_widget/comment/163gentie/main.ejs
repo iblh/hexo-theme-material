@@ -1,7 +1,7 @@
 <script>
   var cloudTieConfig = {
     url: document.location.href, 
-    sourceId: "<% if(gentie_thread_key_type === "id") { %><% if(page.id) { %><%= page.id %><% } %><% } %>",
+    sourceId: "<% if(theme.comment.gentie_thread_key_type === "id") { %><% if(page.id) { %><%= page.id %><% } %><% } %>",
     productKey: "<%= theme.comment.gentie_productKey %>",
     target: "cloud-tie-wrapper"
   };
