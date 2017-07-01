@@ -27,7 +27,7 @@
 
     <!-- Share Weibo -->
     <% if(theme.sns_share.weibo === true) { %>
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=<%= page.title %>&url=<%= config.url + url_for(path) %>&pic=&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=<%= page.title %>&url=<%= config.url + url_for(path) %>&pic=<%- config.url + theme.head.favicon %>&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 <%= __('share.toWeibo') %>
             </li>

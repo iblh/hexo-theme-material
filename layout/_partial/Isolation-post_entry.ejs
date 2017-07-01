@@ -4,7 +4,7 @@
         <!-- Post Header Info -->
         <div class="post_entry-header_info without-thumbnail">
             <!-- Author Avatar & Name -->
-            <img src="<%= theme.img.avatar %>" class="avatar-img" width="44px" height="44px" alt="<%= config.author %>'s avatar">
+            <img src="<%= url_for(theme.img.avatar) %>" class="avatar-img" width="44px" height="44px" alt="<%= config.author %>'s avatar">
             <span class="name-span"><%= config.author %></span>
         </div>
 
@@ -14,7 +14,7 @@
         <!-- Post Header Info -->
         <div class="post_entry-header_info with-thumbnail">
             <!-- Author Avatar & Name -->
-            <img src="<%= theme.img.avatar %>" class="avatar-img" width="44px" height="44px" alt="<%= config.author %>'s avatar">
+            <img src="<%= url_for(theme.img.avatar) %>" class="avatar-img" width="44px" height="44px" alt="<%= config.author %>'s avatar">
             <span class="name-span"><%= config.author %></span>
         </div>
 
