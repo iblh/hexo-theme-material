@@ -1,7 +1,7 @@
 <% if(theme.vendors.nprogress) { %>
     <%- jsLsload({path:(theme.vendors.nprogress),key:'np_js'}) %>
 <% } else { %>
-    <%- jsLsload({path:(config.root + 'js/nprogress.js'),key:'np_js'}) %>
+    <%- jsLsload({path:('js/nprogress.js'),key:'np_js'}) %>
 <% } %>
 
 <script type="text/ls-javascript" id="NProgress-script">

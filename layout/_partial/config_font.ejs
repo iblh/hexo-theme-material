@@ -44,9 +44,9 @@
             font-weight: 400;
             src: local('Material Icons'),
             local('MaterialIcons-Regular'),
-            url(<%- config.root %>fonts/MaterialIcons-Regular.woff2) format('woff2'),
-            url(<%- config.root %>fonts/MaterialIcons-Regular.woff) format('woff'),
-            url(<%- config.root %>fonts/MaterialIcons-Regular.ttf) format('truetype');
+            url(<%- url_for('fonts/MaterialIcons-Regular.woff2') %>) format('woff2'),
+            url(<%- url_for('fonts/MaterialIcons-Regular.woff') %>) format('woff'),
+            url(<%- url_for('fonts/MaterialIcons-Regular.ttf') %>) format('truetype');
         }
     </style>
 <% } %>

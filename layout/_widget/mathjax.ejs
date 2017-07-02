@@ -14,7 +14,7 @@
     });
 </script>
 <% if(theme.vendors.mathjax) { %>
-    <script src="<%= theme.vendors.mathjax %>?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="<%= theme.vendors.mathjax + '?config=TeX-AMS-MML_HTMLorMML' %>"></script>
 <%}else{%>
-    <script type="text/javascript" src="<%= config.root %>js/mathjax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="<%= url_for('js/mathjax.js?config=TeX-AMS-MML_HTMLorMML') %>"></script>
 <%}%>
