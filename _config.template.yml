@@ -254,7 +254,7 @@ vendors:
 #   You can load theme unique files from your private cdn or oss.
 #   The new src will have the base domain you configured below.
 #   For example
-#       materialcdn: https://cdn.example.com
+#       materialcdn: https://cdn.jsdelivr.net/npm/hexo-material@1.4.0/source
     materialcdn:
 
 # Third party library
