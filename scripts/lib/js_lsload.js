@@ -28,7 +28,7 @@ function jsHelper() {
       var localpath = path_for.call(this,path);
       result += '<script>lsloader.load("' + key + '","' +
         require("../../../../node_modules/hexo/lib/plugins/helper/url_for").call(this,path) +
-        (fs.existsSync(localpath)?'?' + get_file_hex(localpath):'') + '")</script>'
+        (fs.existsSync(localpath)?'?' + get_file_hex(localpath):'') + '", true)</script>'
     }
   }
   return result;

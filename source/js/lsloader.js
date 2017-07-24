@@ -36,7 +36,7 @@
         return val
     }
 
-    versionString = "/*" + materialVersion + "*/";
+    versionString = "/*" + (window.materialVersion || 'unknownVersion') + "*/";
 
     lsloader.clean = function () {
         try {
@@ -70,7 +70,12 @@
      * jspath 文件线上路径,带md5版本号,用于加载资源,区分资源版本
      * cssonload css加载成功时候调用,用于配合页面展现
      * */
-    lsloader.load = function (jsname, jspath, cssonload) {
+    lsloader.load = function (jsname, jspath, cssonload, isJs) {
+        if (typeof cssonload === 'boolean') {
+            cssonload = undefined;
+            isJs = cssonload;
+        }
+        isJs = isJs || false;
         cssonload = cssonload || function () { };
         var code;
         code = this.getLS(jsname);
@@ -89,7 +94,7 @@
                 return
             }
             code = code.split(versionString)[1];
-            if (/\.js?.+$/.test(versionNumber)) {
+            if (isJs) {
                 this.jsRunSequence.push({ name: jsname, code: code })
                 this.runjs(jspath, jsname, code);
             } else {
