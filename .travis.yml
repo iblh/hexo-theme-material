@@ -1,3 +1,40 @@
 language: node_js
-node_js: 
-    - "4"
+node_js:
+  - "7"
+install:
+  - npm install gulp -g
+  - npm install hexo-cli -g
+before_script:
+  - git clone https://github.com/neko-dev/hexo-theme-test-ci.git
+  - cd hexo-theme-test-ci
+  - rm -rf .git
+  - cd _hexo
+  - npm install
+  - git clone https://github.com/viosey/hexo-theme-material.git themes/material
+  - cd themes/material
+  - git checkout -t origin/canary
+  - git pull
+  - rm -rf .git
+  - cd ..
+  - cd ..
+  - cd ..
+  - cp -i _config.theme.yml _hexo/themes/material/_config.yml
+  - cd _hexo
+script:
+  - hexo clean
+  - hexo g
+  - mkdir ./deploy-git
+  - cd ./deploy-git
+  - git init
+  - git config --global push.default matching
+  - git config --global user.email "${GitHubEmail}"
+  - git config --global user.name "${GitHubUser}"
+  - git remote add origin https://${GitHubKEY}@github.com/${GitHubRepo}.git
+  - git pull origin ${DeployBranch}
+  - rm -rf ./*
+  - cp -rf ../public/* ./
+  - git add --all .
+  - git commit -m "Travis Auto Tester for Material Theme"
+  - git push --quiet --force https://${GitHubKEY}@github.com/${GitHubRepo}.git
+
+
