@@ -72,8 +72,8 @@
      * */
     lsloader.load = function (jsname, jspath, cssonload, isJs) {
         if (typeof cssonload === 'boolean') {
-            cssonload = undefined;
             isJs = cssonload;
+            cssonload = undefined;
         }
         isJs = isJs || false;
         cssonload = cssonload || function () { };
@@ -103,7 +103,7 @@
             }
         } else {
             //null xhr获取资源
-            this.requestResource(jsname, jspath, cssonload);
+            this.requestResource(jsname, jspath, cssonload, isJs);
         }
     };
 
@@ -115,14 +115,14 @@
      * 保证css能正确覆盖规则 css 加载成功后调用cssonload 帮助控制
      * 异步加载样式造车的dom树渲染错乱问题
      * */
-    lsloader.requestResource = function (name, path, cssonload) {
+    lsloader.requestResource = function (name, path, cssonload, isJs) {
         var that = this
-        if (/\.js?.+$/.test(path)) {
+        if (isJs) {
             this.iojs(path, name, function (path, name, code) {
                 that.setLS(name, path + versionString + code)
                 that.runjs(path, name, code);
             })
-        } else if (/\.css?.+$/.test(path)) {
+        } else {
             this.iocss(path, name, function (code) {
                 document.getElementById(name).appendChild(document.createTextNode(code));
                 that.setLS(name, path + versionString + code)
