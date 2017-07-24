@@ -183,7 +183,15 @@
     <% } %>
 
     <!-- Analytics -->
-    <% if(theme.analytics.use) { %><%- partial('_widget/analytics/' + theme.analytics.use + '-analytics') %><% } %>
+    <% if(theme.analytics.google_site_id) { %>
+        <%- partial('_widget/analytics/google-analytics') %>
+    <% } %>
+    <% if(theme.analytics.baidu_site_id) { %>
+        <%- partial('_widget/analytics/baidu-analytics') %>
+    <% } %>
+    <% if(theme.analytics.cnzz_site_id) { %>
+        <%- partial('_widget/analytics/cnzz-analytics') %>
+    <% } %>
 
     <!-- Custom Head -->
     <% if (site.data.head) { %>

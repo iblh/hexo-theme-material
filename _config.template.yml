@@ -227,8 +227,9 @@ search:
 # Available value:
 #     baidu | google | cnzz
 analytics:
-    use:
-    site_id:
+    google_site_id:
+    baidu_site_id:
+    cnzz_site_id:
 
 # Leancloud Views
 leancloud:
