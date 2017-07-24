@@ -91,6 +91,16 @@
 <% if (page.mathjax) { %>
     <%- partial('_widget/mathjax') %>
 <% } %>
+
+<!-- Bing Background -->
+<% if(theme.background.bing.enable) { %>
+<script type="text/ls-javascript" id="Bing-Background-script">
+    queue.offer(function(){
+        $('body').attr('data-original', 'https://api.i-meto.com/bing?<%= theme.background.bing.parameter %>');
+    });
+</script>
+<% } %>
+
 <script type="text/ls-javascript" id="lazy-load">
     // Offer LazyLoad
     queue.offer(function(){
@@ -106,15 +116,6 @@
         },200);
     });
 </script>
-
-<!-- Bing Background -->
-<% if(theme.background.bing.enable) { %>
-<script type="text/ls-javascript" id="Bing-Background-script">
-    queue.offer(function(){
-        $('body').attr('data-original', 'https://api.i-meto.com/bing?<%= theme.background.bing.parameter %>');
-    });
-</script>
-<% } %>
 
 <!-- Custom Footer -->
 
