@@ -2,15 +2,14 @@ language: node_js
 node_js:
   - "7"
 install:
-  - npm install gulp -g
   - npm install hexo-cli -g
 before_script:
-  - git clone https://github.com/neko-dev/hexo-theme-test-ci.git
+  - git clone https://github.com/neko-dev/hexo-theme-test-ci.git --depth=5
   - cd hexo-theme-test-ci
   - rm -rf .git
   - cd _hexo
   - npm install
-  - git clone https://github.com/viosey/hexo-theme-material.git themes/material
+  - git clone https://github.com/viosey/hexo-theme-material.git themes/material --depth=10
   - cd themes/material
   - git checkout -t origin/canary
   - git pull
