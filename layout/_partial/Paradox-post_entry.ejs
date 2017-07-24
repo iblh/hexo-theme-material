@@ -42,14 +42,16 @@
             </div>
         </div>
         <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                <%- list_categories(post.categories, {
-                    show_count: false,
-                    class: 'post_category',
-                    style: 'none'
-                }) %>
-            </span>
+          <% if (post.categories && post.categories.length) { %>
+              <!-- Category -->
+              <span class="post_entry-category">
+                  <%- list_categories(post.categories, {
+                      show_count: false,
+                      class: 'post_category',
+                      style: 'none'
+                  }) %>
+              </span>
+            <% } %>
 
             <% if(theme.comment.use === 'duoshuo') { %>
                 <!-- Comment Number -->
