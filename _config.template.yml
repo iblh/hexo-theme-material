@@ -207,7 +207,7 @@ sidebar:
 
 # Comment Systems
 # Available value of "use":
-#     disqus | disqus_click | changyan | livere(laibili)
+#     disqus | disqus_click | changyan | livere
 comment:
     use:
     shortname: # duoshuo or disqus shortname
