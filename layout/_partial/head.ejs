@@ -132,9 +132,11 @@
 
     <% if(theme.scheme === 'Isolation') { %>
         <% if(theme.vendors.fontawesome) { %>
-            <link rel="preload" href="<%= theme.vendors.fontawesome %>" as="style" onload="this.rel='stylesheet'">
+            <link rel="stylesheet" href="<%= theme.vendors.fontawesome %>">
+        <% } else if(theme.vendors.materialcdn) { % >
+            <link rel="stylesheet" href="<%= url_for(theme.vendors.materialcdn + '/css/fontawesome.min.css') %>">
         <% } else { %>
-            <link rel="preload" href="<%= url_for('css/fontawesome.min.css') %>" as="style" onload="this.rel='stylesheet'">
+            <link rel="stylesheet" href="<%= url_for('css/fontawesome.min.css') %>">
         <% } %>
     <% } %>
 
@@ -147,6 +149,8 @@
     <!-- Import jQuery -->
     <% if(theme.vendors.jquery) { %>
         <%- jsLsload({path:(theme.vendors.jquery),key:'jq_js'}) %>
+    <% } else if(theme.vendors.materialcdn) { %>
+        <%- jsLsload({path:(theme.vendors.materialcdn + '/js/jquery.min.js'),key:'jq_js'}) %>
     <% } else { %>
         <%- jsLsload({path:('js/jquery.min.js'),key:'jq_js'}) %>
     <% } %>
