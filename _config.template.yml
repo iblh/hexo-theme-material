@@ -156,6 +156,7 @@ sns:
     zhihu:
     bilibili:
     telegram:
+    v2ex:
 
 # SNS Share Switch
 sns_share:
