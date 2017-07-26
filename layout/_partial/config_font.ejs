@@ -35,7 +35,24 @@
 
 <!-- Import Material Icon -->
 <% if(theme.vendors.material_icons) { %>
-    <link rel="preload" href="<%= theme.vendors.material_icons %>" as="style" onload="this.rel='stylesheet'">
+    <link rel="stylesheet" href="<%= theme.vendors.material_icons %>">
+<% } else if(theme.vendors.materialcdn) { % >
+<style>
+        @font-face {
+            font-family: 'Material Icons';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Material Icons'),
+            local('MaterialIcons-Regular'),
+            url(<%- url_for(theme.vendors.materialcdn + '/fonts/MaterialIcons-Regular.woff2') %>) format('woff2'),
+            url(<%- url_for(theme.vendors.materialcdn + '/fonts/MaterialIcons-Regular.woff') %>) format('woff'),
+            url(<%- url_for(theme.vendors.materialcdn + '/fonts/MaterialIcons-Regular.ttf') %>) format('truetype');
+        }
+    </style>
+<% } else if(theme.fonts.use === "google") { % >
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<% } else if(theme.fonts.use === "ustc") { %>
+    <link href="https://fonts.proxy.ustclug.org/icon?family=Material+Icons" rel="stylesheet">
 <% } else { %>
     <style>
         @font-face {
