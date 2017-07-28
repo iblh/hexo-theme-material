@@ -208,7 +208,8 @@ sidebar:
 
 # Comment Systems
 # Available value of "use":
-#     disqus | disqus_click | changyan | livere
+#     disqus | disqus_click | changyan | livere | gitment
+# If you want to use gitment,you should get the client_id and client_secret form https://github.com/settings/applications/new
 comment:
     use:
     shortname: # duoshuo or disqus shortname
@@ -216,6 +217,10 @@ comment:
     changyan_conf:
     changyan_thread_key_type: path
     livere_data_uid:
+    gitment_repo:   # git repo of the hexo
+    gitment_owner:  # git repo's owner
+    gitment_client_id:  # github app client id 
+    gitment_client_secret :  # github app client secret 
 
 # Search Systems
 # Available value:
