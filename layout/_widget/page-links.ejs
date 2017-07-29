@@ -109,5 +109,85 @@
     };
     $(document).ready(function() {
         adjustFooter();
+        <% if (page.github && page.github.name) { %>
+                var friends=[];
+        <% if (page.github.self){ %>
+            $.ajax({
+                url:'https://api.github.com/users/<%= page.github.name %>',
+                jsonp:'callback',
+                success:function(userData){
+                    friends.push(userData);
+                        $('.md-links').prepend(`
+                               <li class="md-links-item">
+                                    <a href="${userData.html_url}" title="${userData.login}" target="_blank">
+                                        <img src="${userData.avatar_url}" alt="${userData.login}" width="72px"/>
+                                        <span class="md-links-title">${userData.name||userData.login}</span><br />
+                                        <span>${userData.bio|| userData.public_repos +' repos'}</span>
+                                        </a>
+                                    </li>`);
+                        }
+        })
+        <% } %>
+        <% if (page.github.followers){ %>
+        $.ajax({
+            url: 'https://api.github.com/users/<%= page.github.name %>/followers',
+            jsonp:'callback',
+            success:function(data){
+               
+                data.forEach(function(item){
+                    if (friends.find(x=>x.id==item.id)==null){
+                        friends.push(item);
+                    $.ajax({
+                        url:'https://api.github.com/users/'+item.login,
+                        jsonp:'callback',
+                        success:function(userData){
+                                 $('.md-links').append(`
+                                    <li class="md-links-item">
+                                        <a href="${item.html_url}" title="${item.login}" target="_blank">
+                                            <img src="${item.avatar_url}" alt="${item.login}" width="72px"/>
+                                            <span class="md-links-title">${userData.name||userData.login}</span><br />
+                                            <span>${userData.bio|| userData.public_repos +' repos'}</span>
+                                        </a>
+                                     </li>`);
+                        }
+                    });
+                    }
+                });
+                
+            }
+        });
+        <% } %>
+        <% if (page.github.following) { %>
+
+        $.ajax({
+            url: 'https://api.github.com/users/<%= page.github.name %>/following',
+            jsonp:'callback',
+            success:function(data){
+               
+                data.forEach(function(item){
+                      if (friends.find(x=>x.id==item.id)==null) {
+                        friends.push(item);
+                    $.ajax({
+                        url:'https://api.github.com/users/'+item.login,
+                        jsonp:'callback',
+                        success:function(userData){
+                                 $('.md-links').append(`
+                                    <li class="md-links-item">
+                                        <a href="${item.html_url}" title="${item.login}" target="_blank">
+                                            <img src="${item.avatar_url}" alt="${item.login}" width="72px"/>
+                                            <span class="md-links-title">${userData.name||userData.login}</span><br />
+                                            <span>${userData.bio|| userData.public_repos +' repos'}</span>
+                                        </a>
+                                     </li>`);      
+                        }
+                    });
+                      }
+                });
+            }
+        
+        });
+        <% } %>
+
+        <% } %>
     });
 </script>
