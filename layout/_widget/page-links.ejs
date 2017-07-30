@@ -119,87 +119,78 @@
             $('#bottom').css('bottom', '-' + footerBottom + 'px');
         }
     };
+
+    var addGithubLink = function(userData,self=false){
+       var linkstr = `
+            <li class="md-links-item">
+                <a href="${userData.html_url}" title="${userData.login}\n${(userData.bio? (userData.bio+'\n') :'') + userData.public_repos +' repos' + ' && ' + userData.followers + ' followers'}" target="_blank">
+                    <img src="${userData.avatar_url}" alt="${userData.login}" width="72px"/>
+                    <span class="md-links-title">${userData.name||userData.login}</span><br />
+                    <span class="md-links-desc">${userData.bio || userData.public_repos +' repos' + ' && '+userData.followers+' followers' }</span>
+                </a>
+            </li>`;
+
+        if (self) 
+            $('.md-links').prepend(linkstr);
+        else
+            $('.md-links').append(linkstr);
+    }
     $(document).ready(function() {
         adjustFooter();
         <% if (page.github && page.github.name) { %>
-                var friends=[];
-        <% if (page.github.self){ %>
-            $.ajax({
-                url:'https://api.github.com/users/<%= page.github.name %>',
-                jsonp:'callback',
-                success:function(userData){
-                    friends.push(userData);
-                        $('.md-links').prepend(`
-                               <li class="md-links-item">
-                                    <a href="${userData.html_url}" title="${userData.login}\n${(userData.bio? (userData.bio+'\n') :'')+ userData.public_repos +' repos' + ' && '+userData.followers+' followers' }" target="_blank">
-                                        <img src="${userData.avatar_url}" alt="${userData.login}" width="72px"/>
-                                        <span class="md-links-title">${userData.name||userData.login}</span><br />
-                                        <span class="md-links-desc">${userData.bio|| userData.public_repos +' repos' + ' && '+userData.followers+' followers' }</span>
-                                        </a>
-                                    </li>`);
-                        }
-        })
-        <% } %>
-        <% if (page.github.followers){ %>
-        $.ajax({
-            url: 'https://api.github.com/users/<%= page.github.name %>/followers',
-            jsonp:'callback',
-            success:function(data){
-               
-                data.forEach(function(item){
-                    if (friends.find(x=>x.id==item.id)==null){
-                        friends.push(item);
-                    $.ajax({
-                        url:'https://api.github.com/users/'+item.login,
-                        jsonp:'callback',
-                        success:function(userData){
-                                 $('.md-links').append(`
-                                    <li class="md-links-item">
-                                        <a href="${item.html_url}" title="${userData.login}\n${(userData.bio? (userData.bio+'\n') :'')+ userData.public_repos +' repos' + ' && '+userData.followers+' followers' }"  target="_blank">
-                                            <img src="${item.avatar_url}" alt="${item.login}" width="72px"/>
-                                            <span class="md-links-title">${userData.name||userData.login}</span><br />
-                                            <span class="md-links-desc">${userData.bio|| userData.public_repos +' repos' + ' && '+userData.followers+' followers' }</span>
-                                        </a>
-                                     </li>`);
-                        }
-                    });
+            var friends=[];
+            <% if (page.github.self){ %>
+                $.ajax({
+                    url:'https://api.github.com/users/<%= page.github.name %>',
+                    jsonp:'callback',
+                    success:function(userData){
+                        friends.push(userData);
+                        addGithubLink(userData,true);
+                    }
+                })
+            <% } %>
+
+            <% if (page.github.followers){ %>
+                 $.ajax({
+                    url: 'https://api.github.com/users/<%= page.github.name %>/followers',
+                    jsonp:'callback',
+                    success:function(data){
+                        data.forEach(function(item){
+                            if (!friends.some(x=>x.id==item.id)){
+                                friends.push(item);
+                                $.ajax({
+                                    url:'https://api.github.com/users/'+item.login,
+                                    jsonp:'callback',
+                                    success:function(userData){
+                                        addGithubLink(userData); 
+                                    }
+                                });
+                            }
+                        }); 
                     }
                 });
-                
-            }
-        });
-        <% } %>
-        <% if (page.github.following) { %>
+            <% } %>
 
-        $.ajax({
-            url: 'https://api.github.com/users/<%= page.github.name %>/following',
-            jsonp:'callback',
-            success:function(data){
-               
-                data.forEach(function(item){
-                      if (friends.find(x=>x.id==item.id)==null) {
-                        friends.push(item);
-                    $.ajax({
-                        url:'https://api.github.com/users/'+item.login,
-                        jsonp:'callback',
-                        success:function(userData){
-                                 $('.md-links').append(`
-                                    <li class="md-links-item">
-                                        <a href="${item.html_url}" title="${userData.login}\n${(userData.bio? (userData.bio+'\n') :'')+ userData.public_repos +' repos' + ' && '+userData.followers+' followers' }"  target="_blank">
-                                            <img src="${item.avatar_url}" alt="${item.login}" width="72px"/>
-                                            <span class="md-links-title">${userData.name||userData.login}</span><br />
-                                            <span class="md-links-desc">${userData.bio|| userData.public_repos +' repos' + ' && '+userData.followers+' followers' }</span>
-                                        </a>
-                                     </li>`);      
-                        }
-                    });
-                      }
+            <% if (page.github.following) { %>
+                $.ajax({
+                    url: 'https://api.github.com/users/<%= page.github.name %>/following',
+                    jsonp:'callback',
+                    success: function(data){
+                        data.forEach(function(item){
+                            if (!friends.some(x=>x.id==item.id)) {
+                                friends.push(item);
+                                $.ajax({
+                                    url:'https://api.github.com/users/'+item.login,
+                                    jsonp:'callback',
+                                    success: function(userData){
+                                        addGithubLink(userData);
+                                    }
+                                });
+                            }
+                        });
+                    }
                 });
-            }
-        
-        });
-        <% } %>
-
+            <% } %>
         <% } %>
     });
 </script>
