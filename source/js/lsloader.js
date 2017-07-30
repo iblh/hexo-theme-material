@@ -48,7 +48,7 @@
                 var data = lsloader.getLS(key);
                 if (window.oldVersion) {
                     var remove = window.oldVersion.reduce(function(p,c) {
-                        return p || data.indexOf(c) !== -1
+                        return p || data.indexOf('/*' + c + '*/') !== -1
                     }, false)
                     if (remove) {
                         lsloader.removeLS(key);
@@ -81,7 +81,7 @@
         code = this.getLS(jsname);
         if (code && code.indexOf(versionString) === -1) {   //ls 版本 codestartv* 每次换这个版本 所有ls作废
             this.removeLS(jsname);
-            this.requestResource(jsname, jspath, cssonload);
+            this.requestResource(jsname, jspath, cssonload, isJs);
             return
         }
         //取出对应文件名下的code
@@ -90,7 +90,7 @@
             if (versionNumber != jspath) {
                 console.log("reload:" + jspath)
                 this.removeLS(jsname);
-                this.requestResource(jsname, jspath, cssonload);
+                this.requestResource(jsname, jspath, cssonload, isJs);
                 return
             }
             code = code.split(versionString)[1];
