@@ -142,10 +142,6 @@
 
     <%- partial('_partial/config_css') %>
 
-    <% if(theme.scheme === 'Paradox') { %>
-        <%- partial('_partial/config_footer') %>
-    <% } %>
-
     <!-- Import jQuery -->
     <% if(theme.vendors.jquery) { %>
         <%- jsLsload({path:(theme.vendors.jquery),key:'jq_js'}) %>
