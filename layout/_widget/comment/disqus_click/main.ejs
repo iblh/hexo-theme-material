@@ -31,7 +31,7 @@
 </style>
 	
 <div class="btn_click_load"> 
-    <button class="disqus_click_btn"><%= __('post.comments_load_button') %></button>
+    <button class="disqus_click_btn" style="display: none"><%= __('post.comments_load_button') %></button>
 </div>
 
 <script type="text/javascript">
@@ -42,6 +42,22 @@
 </script>
 
 <script type="text/ls-javascript" id="disqus-lazy-load-script">
+    $.ajax({
+        url: 'https://disqus.com/next/config.json',
+        timeout: 4000,
+        type: 'GET',
+        success: (function() {
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//<%= theme.comment.shortname %>.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+            $('.btn_click_load').css('display','none');
+        })(),
+        error: function() {
+          $('.btn_click_load').css('display','block');
+        }
+    });
     $('.btn_click_load').click(function() {  //click to load comments
         (function() { // DON'T EDIT BELOW THIS LINE
             var d = document;
