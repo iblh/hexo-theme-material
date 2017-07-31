@@ -113,13 +113,6 @@
 </ul>
 
 <script type="text/ls-javascript" id="page-links-script">
-    var adjustFooter = function() {
-        if( ($('#bottom').offset().top + $('#bottom').outerHeight() )<$(window).height() ) {
-            var footerBottom = $(window).height() - $('#bottom').outerHeight() - $('#bottom').offset().top;
-            $('#bottom').css('bottom', '-' + footerBottom + 'px');
-        }
-    };
-
     var addGithubLink = function(userData,self=false){
        var linkstr = `
             <li class="md-links-item">
@@ -136,7 +129,6 @@
             $('.md-links').append(linkstr);
     }
     $(document).ready(function() {
-        adjustFooter();
         <% if (page.github && page.github.name) { %>
             var friends=[];
             <% if (page.github.self){ %>
