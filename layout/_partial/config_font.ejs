@@ -44,9 +44,9 @@
             font-weight: 400;
             src: local('Material Icons'),
             local('MaterialIcons-Regular'),
-            url(<%- url_for(theme.vendors.materialcdn + '/fonts/MaterialIcons-Regular.woff2') %>) format('woff2'),
-            url(<%- url_for(theme.vendors.materialcdn + '/fonts/MaterialIcons-Regular.woff') %>) format('woff'),
-            url(<%- url_for(theme.vendors.materialcdn + '/fonts/MaterialIcons-Regular.ttf') %>) format('truetype');
+            url(<%=theme.vendors.materialcdn %>/fonts/MaterialIcons-Regular.woff2) format('woff2'),
+            url(<%=theme.vendors.materialcdn %>/fonts/MaterialIcons-Regular.woff) format('woff'),
+            url(<%=theme.vendors.materialcdn %>/fonts/MaterialIcons-Regular.ttf) format('truetype');
         }
     </style>
 <% } else if(theme.fonts.use === "google") { %>

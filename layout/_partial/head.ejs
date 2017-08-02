@@ -134,7 +134,7 @@
         <% if(theme.vendors.fontawesome) { %>
             <link rel="stylesheet" href="<%= theme.vendors.fontawesome %>">
         <% } else if(theme.vendors.materialcdn) { %>
-            <link rel="stylesheet" href="<%= url_for(theme.vendors.materialcdn + '/css/fontawesome.min.css') %>">
+            <link rel="stylesheet" href="<%= theme.vendors.materialcdn %>/css/fontawesome.min.css">
         <% } else { %>
             <link rel="stylesheet" href="<%= url_for('css/fontawesome.min.css') %>">
         <% } %>
