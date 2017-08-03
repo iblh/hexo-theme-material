@@ -134,6 +134,7 @@
             <% if (page.github.self){ %>
                 $.ajax({
                     url:'https://api.github.com/users/<%= page.github.name %>',
+                    <% if (page.github.access_token){ %> data: {access_token: '<%= page.github.access_token %>' }, <% } %>
                     jsonp:'callback',
                     success:function(userData){
                         friends.push(userData);
@@ -145,6 +146,7 @@
             <% if (page.github.followers){ %>
                  $.ajax({
                     url: 'https://api.github.com/users/<%= page.github.name %>/followers',
+                    <% if (page.github.access_token){ %> data: {access_token: '<%= page.github.access_token %>' }, <% } %>
                     jsonp:'callback',
                     success:function(data){
                         data.forEach(function(item){
@@ -152,6 +154,7 @@
                                 friends.push(item);
                                 $.ajax({
                                     url:'https://api.github.com/users/'+item.login,
+                                    <% if (page.github.access_token){ %> data: {access_token: '<%= page.github.access_token %>' }, <% } %>
                                     jsonp:'callback',
                                     success:function(userData){
                                         addGithubLink(userData); 
@@ -166,6 +169,7 @@
             <% if (page.github.following) { %>
                 $.ajax({
                     url: 'https://api.github.com/users/<%= page.github.name %>/following',
+                    <% if (page.github.access_token){ %> data: {access_token: '<%= page.github.access_token %>' }, <% } %>
                     jsonp:'callback',
                     success: function(data){
                         data.forEach(function(item){
@@ -173,6 +177,7 @@
                                 friends.push(item);
                                 $.ajax({
                                     url:'https://api.github.com/users/'+item.login,
+                                    <% if (page.github.access_token){ %> data: {access_token: '<%= page.github.access_token %>' }, <% } %>
                                     jsonp:'callback',
                                     success: function(userData){
                                         addGithubLink(userData);
