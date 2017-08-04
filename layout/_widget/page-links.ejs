@@ -1,6 +1,6 @@
 <style>
     .md-links {
-        min-height: calc(100% - 120px - 5pc - 6em);
+        min-height: calc(100% - 120px - 5pc);
         text-align: center;
         overflow: auto;
         padding: 0;
@@ -34,8 +34,7 @@
 
     @media screen and (max-width: 480px) {
         .md-links {
-            min-height: calc(100% - 200px - 5pc - 6em);
-            margin-top: 6em;
+            min-height: calc(100% - 200px - 5pc);
         }
     }
 
@@ -69,19 +68,32 @@
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     }
 
-    .md-links-item a:hover{
+    .md-links-item a:hover {
         cursor: pointer;
+    }
+
+    .md-links-item .md-links-desc {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        position: relative;
+        line-height: 15px;
+        height: 30px;
+        overflow: hidden;
     }
 
     .md-links-title {
         font-size: 20px;
-        line-height: 50px;
+        line-height: 40px;
     }
 
-    #scheme-Paradox .mdl-mini-footer{
+    #scheme-Paradox .mdl-mini-footer {
         clear: left;
     }
-    #bottom{
+
+    #bottom {
         position: relative;
     }
 </style>
@@ -93,7 +105,7 @@
                 <a href="<%= site.data.links[i].link %>" title="<%= i %>" target="_blank">
                     <img src="<%= site.data.links[i].avatar %>" alt="<%= i %>" width="72px"/>
                     <span class="md-links-title"><%= i %></span><br />
-                    <span><%= site.data.links[i].descr %></span>
+                    <span class="md-links-desc"><%= site.data.links[i].descr %></span>
                 </a>
             </li>
         <% } %>
@@ -101,13 +113,81 @@
 </ul>
 
 <script type="text/ls-javascript" id="page-links-script">
-    var adjustFooter = function() {
-        if( ($('#bottom').offset().top + $('#bottom').outerHeight() )<$(window).height() ) {
-            var footerBottom = $(window).height() - $('#bottom').outerHeight() - $('#bottom').offset().top;
-            $('#bottom').css('bottom', '-' + footerBottom + 'px');
-        }
-    };
+    var addGithubLink = function(userData,self=false){
+       var linkstr = `
+            <li class="md-links-item">
+                <a href="${userData.html_url}" title="${userData.login}\n${(userData.bio? (userData.bio+'\n') :'') + userData.public_repos +' repos' + ' && ' + userData.followers + ' followers'}" target="_blank">
+                    <img src="${userData.avatar_url}" alt="${userData.login}" width="72px"/>
+                    <span class="md-links-title">${userData.name||userData.login}</span><br />
+                    <span class="md-links-desc">${userData.bio || userData.public_repos +' repos' + ' && '+userData.followers+' followers' }</span>
+                </a>
+            </li>`;
+
+        if (self) 
+            $('.md-links').prepend(linkstr);
+        else
+            $('.md-links').append(linkstr);
+    }
     $(document).ready(function() {
-        adjustFooter();
+        <% if (page.github && page.github.name) { %>
+            var friends=[];
+            <% if (page.github.self){ %>
+                $.ajax({
+                    url:'https://api.github.com/users/<%= page.github.name %>',
+                    <% if (page.github.access_token){ %> data: {access_token: '<%= page.github.access_token %>' }, <% } %>
+                    jsonp:'callback',
+                    success:function(userData){
+                        friends.push(userData);
+                        addGithubLink(userData,true);
+                    }
+                })
+            <% } %>
+
+            <% if (page.github.followers){ %>
+                 $.ajax({
+                    url: 'https://api.github.com/users/<%= page.github.name %>/followers',
+                    <% if (page.github.access_token){ %> data: {access_token: '<%= page.github.access_token %>' }, <% } %>
+                    jsonp:'callback',
+                    success:function(data){
+                        data.forEach(function(item){
+                            if (!friends.some(x=>x.id==item.id)){
+                                friends.push(item);
+                                $.ajax({
+                                    url:'https://api.github.com/users/'+item.login,
+                                    <% if (page.github.access_token){ %> data: {access_token: '<%= page.github.access_token %>' }, <% } %>
+                                    jsonp:'callback',
+                                    success:function(userData){
+                                        addGithubLink(userData); 
+                                    }
+                                });
+                            }
+                        }); 
+                    }
+                });
+            <% } %>
+
+            <% if (page.github.following) { %>
+                $.ajax({
+                    url: 'https://api.github.com/users/<%= page.github.name %>/following',
+                    <% if (page.github.access_token){ %> data: {access_token: '<%= page.github.access_token %>' }, <% } %>
+                    jsonp:'callback',
+                    success: function(data){
+                        data.forEach(function(item){
+                            if (!friends.some(x=>x.id==item.id)) {
+                                friends.push(item);
+                                $.ajax({
+                                    url:'https://api.github.com/users/'+item.login,
+                                    <% if (page.github.access_token){ %> data: {access_token: '<%= page.github.access_token %>' }, <% } %>
+                                    jsonp:'callback',
+                                    success: function(userData){
+                                        addGithubLink(userData);
+                                    }
+                                });
+                            }
+                        });
+                    }
+                });
+            <% } %>
+        <% } %>
     });
 </script>

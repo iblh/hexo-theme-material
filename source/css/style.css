@@ -500,6 +500,7 @@ a {
 }
 #scheme-Paradox .material-layout .material-post,
 #scheme-Paradox .material-layout .material-index {
+    min-height: calc(100% - 120px - 5pc);
     display: flex;
     margin: 0 auto;
     padding: 0;
@@ -512,6 +513,8 @@ a {
     padding-top: 165px;
     margin: 0 auto;
     width: 100%;
+    height: 100%;
+    min-height: 100%;
 }
 @media screen and (max-width: 480px) {
     #scheme-Paradox .material-layout .material-layout__content {
