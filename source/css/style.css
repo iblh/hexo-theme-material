@@ -1838,23 +1838,14 @@ a {
     text-align: left;
     text-transform: none
 }
+.sidebar::-webkit-scrollbar-track {		
+    border-radius: 2px
+}
 .sidebar::-webkit-scrollbar {
     width: 5px;
     background-color: #F7F7F7;
 }
-::-webkit-scrollbar {
-    width: 5px;
-    background: transparent;
-}
-:hover::-webkit-scrollbar{
-    background-color: #F7F7F7
-}
-.sidebar::-webkit-scrollbar-track,
-:hover::-webkit-scrollbar-track {
-    border-radius: 2px
-}
-.sidebar::-webkit-scrollbar-thumb,
-:hover::-webkit-scrollbar-thumb {
+.sidebar::-webkit-scrollbar-thumb {
     border-radius: 10px;
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
     background-color: #BFBFBF;
