@@ -36,5 +36,10 @@ script:
   - git add --all .
   - git commit -m "Travis Auto Tester for Material Theme"
   - git push --quiet --force https://${GitHubKEY}@github.com/${GitHubRepo}.git
+  - npm install selenium-webdriver
+  - wget "https://raw.githubusercontent.com/neko-dev/hexo-theme-test-ci/master/test.js" -O test.js
+  - sed -i "s/{bs_user}/${BrowserstackUser}/g" test.js
+  - sed -i "s/{bs_key}/${BrowserstackKey}/g" test.js
+  - node test.js
 
 
