@@ -82,6 +82,9 @@ script:
   - sed -i "s/{platfrom_browser}/iOS_iPhone6SPlus/g" iOS_iPhone6SPlus.md
   - rm base.md
   - git init
+  - git remote add origin https://${GitHubKEY}@github.com/${GitHubRepoBrowserstack}.git
+  - git pull origin ${DeployBranch}
+  - rm -rf ./*
   - git add --all .
   - git commit -m "Travis Auto Generate for Material Theme"
   - git push --quiet --force https://${GitHubKEY}@github.com/${GitHubRepoBrowserstack}.git
