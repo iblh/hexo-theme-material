@@ -40,6 +40,9 @@ script:
   - wget "https://raw.githubusercontent.com/neko-dev/hexo-theme-test-ci/master/test.js" -O test.js
   - sed -i "s/{bs_user}/${BrowserstackUser}/g" test.js
   - sed -i "s/{bs_key}/${BrowserstackKey}/g" test.js
+  - sed -i "s/{bs_project}/${BrowserstackProject}/g" test.js
+  - sed -i "s/{bs_build_number}/${TRAVIS_BUILD_NUMBER}/g" test.js
+  - sed -i "s/{bs_commit}/${TRAVIS_COMMIT}/g" test.js
   - node test.js
 
 
