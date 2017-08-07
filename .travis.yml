@@ -59,6 +59,8 @@ script:
   - mkdir -p ./_output/img/iOS_iPhone6SPlus
   - node test.js _config/iOS_iPhone6SPlus iOS_iPhone6SPlus
   - cd ./_output
+  - git init
+  - git remote add origin https://${GitHubKEY}@github.com/${GitHubRepoBrowserstack}.git
   - cp base.md OSX_Safari_10.0.md
   - sed -i "s/{platfrom_browser_name}/OSX Safari 10.0/g" OSX_Safari_10.0.md
   - sed -i "s/{platfrom_browser}/OSX_Safari_10.0/g" OSX_Safari_10.0.md
@@ -81,10 +83,6 @@ script:
   - sed -i "s/{platfrom_browser_name}/iPhone 6S Plus/g" iOS_iPhone6SPlus.md
   - sed -i "s/{platfrom_browser}/iOS_iPhone6SPlus/g" iOS_iPhone6SPlus.md
   - rm base.md
-  - git init
-  - git remote add origin https://${GitHubKEY}@github.com/${GitHubRepoBrowserstack}.git
-  - git pull origin ${DeployBranch}
-  - rm -rf ./*
   - git add --all .
   - git commit -m "Travis Auto Generate for Material Theme"
   - git push --quiet --force https://${GitHubKEY}@github.com/${GitHubRepoBrowserstack}.git
