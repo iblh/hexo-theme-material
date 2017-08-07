@@ -43,12 +43,6 @@ script:
   - sed -i "s/{bs_project}/${BrowserstackProject}/g" test.js
   - sed -i "s/{bs_build_number}/${TRAVIS_BUILD_NUMBER}/g" test.js
   - sed -i "s/{bs_commit}/${TRAVIS_COMMIT}/g" test.js
-  - wget "https://raw.githubusercontent.com/neko-dev/hexo-theme-test-ci/master/config/Android_GoogleNexus9_5.1.js" -O Android_GoogleNexus9_5.1.js
-  - node test.js Android_GoogleNexus9_5.1
-  - wget "https://raw.githubusercontent.com/neko-dev/hexo-theme-test-ci/master/config/Android_SamsungGalaxyS7_6.0.js" -O Android_SamsungGalaxyS7_6.0.js
-  - node test.js Android_SamsungGalaxyS7_6.0
-  - wget "https://raw.githubusercontent.com/neko-dev/hexo-theme-test-ci/master/config/iOS_iPhone7Plus_10.0.js" -O iOS_iPhone7Plus_10.0.js
-  - node test.js iOS_iPhone7Plus_10.0
   - wget "https://raw.githubusercontent.com/neko-dev/hexo-theme-test-ci/master/config/OSX_Opera_12.15.js" -O OSX_Opera_12.15.js
   - node test.js OSX_Opera_12.15
   - wget "https://raw.githubusercontent.com/neko-dev/hexo-theme-test-ci/master/config/OSX_Safari_10.0.js" -O OSX_Safari_10.0.js
@@ -61,5 +55,11 @@ script:
   - node test.js w10_Firefox_54.0
   - wget "https://raw.githubusercontent.com/neko-dev/hexo-theme-test-ci/master/config/w10_IE_11.0.js" -O w10_IE_11.0.js
   - node test.js w10_IE_11.0
+#  - wget "https://raw.githubusercontent.com/neko-dev/hexo-theme-test-ci/master/config/Android_GoogleNexus9_5.1.js" -O Android_GoogleNexus9_5.1.js
+#  - node test.js Android_GoogleNexus9_5.1
+#  - wget "https://raw.githubusercontent.com/neko-dev/hexo-theme-test-ci/master/config/Android_SamsungGalaxyS7_6.0.js" -O Android_SamsungGalaxyS7_6.0.js
+#  - node test.js Android_SamsungGalaxyS7_6.0
+#  - wget "https://raw.githubusercontent.com/neko-dev/hexo-theme-test-ci/master/config/iOS_iPhone7Plus_10.0.js" -O iOS_iPhone7Plus_10.0.js
+#  - node test.js iOS_iPhone7Plus_10.0
 
 
