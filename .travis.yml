@@ -49,8 +49,8 @@ script:
   - node test.js config/w10_Edge_15
   - node test.js config/w10_Firefox_54.0
   - node test.js config/w10_IE_11.0
-  - node test.js config/Android_GoogleNexus9_5.1
-  - node test.js config/Android_SamsungGalaxyS7_6.0
-  - node test.js config/iOS_iPhone7Plus_10.0
+  - node test.js config/Android_HTCOneX
+  - node test.js config/Android_SamsungGalaxyS5
+  - node test.js config/iOS_iPhone6SPlus
 
 
