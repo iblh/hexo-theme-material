@@ -208,8 +208,9 @@ sidebar:
 
 # Comment Systems
 # Available value of "use":
-#     disqus | disqus_click | changyan | livere | gitment
+#     disqus | disqus_click | changyan | livere | gitment | valine
 # If you want to use gitment,you should get the client_id and client_secret form https://github.com/settings/applications/new
+# If you want to use valine,you should get the app_id and app_key form https://leancloud.cn ,more setting please see https://github.com/xCss/Valine
 comment:
     use:
     shortname: # duoshuo or disqus shortname
@@ -221,6 +222,8 @@ comment:
     gitment_owner:  # git repo's owner
     gitment_client_id:  # github app client id 
     gitment_client_secret :  # github app client secret 
+    valine_leancloud_appId: # leancloud application app id
+    valine_leancloud_appKey: # leancloud application app key
 
 # Search Systems
 # Available value:
