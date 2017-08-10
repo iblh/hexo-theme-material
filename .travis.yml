@@ -86,4 +86,5 @@ script:
   - git add --all .
   - git commit -m "Travis Auto Generate for Material Theme"
   - git push --quiet --force https://${GitHubKEY}@github.com/${GitHubRepoBrowserstack}.git
-
+notifications:
+  webhooks: https://fathomless-fjord-24024.herokuapp.com/notify
