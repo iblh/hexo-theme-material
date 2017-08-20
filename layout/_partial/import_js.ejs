@@ -70,6 +70,9 @@
         <% } %>
     <% } %>
 <% } %>
+<% if (theme.hanabi.enable) { %>
+    <%- jsLsload({path:('js/hanabi-browser-bundle.js'),key:'hanabi_browser_bundle'}) %>
+<% } %>
 
 <!-- Window Load -->
 <!-- add class for prettify -->
@@ -86,6 +89,9 @@
                 prettyPrint();
                 })
         <% } %>
+    <% } %>
+    <% if (theme.hanabi.enable) { %>
+        HanabiBrowser.start('pre code',<%= theme.hanabi.line_number %>);
     <% } %>
 </script>
 

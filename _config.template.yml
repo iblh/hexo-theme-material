@@ -125,6 +125,10 @@ prettify:
     enable: false
     theme: "vibrant-ink" # default value: "vibrant-ink"   # theme-name without '.css'
 
+hanabi:
+    enable: false
+    line_number: true
+
 # Post License
 # You can specify the text you want to show in the end of your posts and pages, HTML tag is supported.
 #   For example, you can setup a CC license as:
