@@ -91,6 +91,18 @@
         <% } %>
     <% } %>
     <% if (theme.hanabi.enable) { %>
+        <% if (!theme.hanabi.includeDefaultColors) { %>
+            HanabiBrowser.clearColors();
+        <% } %>
+        <% if (theme.hanabi.customColors) { %>
+            <% if (typeof theme.hanabi.customColors === 'string') { %>
+                HanabiBrowser.putColor('<%= theme.hanabi.customColors %>');
+            <% } else { %>
+                <% theme.hanabi.customColors.forEach(function(elements) { %>
+                    HanabiBrowser.putColor('<%= elements %>');
+                <% }); %>
+            <% } %>
+        <% } %>
         HanabiBrowser.start('pre code',<%= theme.hanabi.line_number %>);
     <% } %>
 </script>
