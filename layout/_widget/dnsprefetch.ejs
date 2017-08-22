@@ -2,7 +2,7 @@
 <% if(theme.vendors.materialcdn) { %>
     <link rel="dns-prefetch" href="<%= theme.vendors.materialcdn %>"/>
 <% } %>
-<% if(theme.leancloud.enable === true) || (theme.comment.use == "valine") { %>
+<% if( (theme.leancloud.enable === true) || (theme.comment.use == "valine") ) { %>
     <link rel="dns-prefetch" href="https://cdn1.lncld.net"/>
 <% } %>
 <% if(theme.busuanzi.enable === true) { %>

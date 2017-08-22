@@ -114,16 +114,33 @@ qrcode:
     enable: false
     use: plugin
 
-# Code 
-# Available value: true | false
-# theme value:
-#     theme-name  # /vendors/prettify/themes/[theme-name].css
-# if true, check highlight option in _config.yml. Make sure that default code highlight plugin is disabled.
-#       highlight:
-#         enable: false
+# Code highlight
+# Available value for `prettify` or `hanabi`: true | false
+# You can only enable one of them to avoid issues. Also you need to check highlight option in _config.yml. Make sure that default hexo built in highlight plugin is disabled.
+#        highlight:
+#            enable: false
+#
+#     Prettify
+#         theme value:
+#         theme-name  # /vendors/prettify/themes/[theme-name].css
 prettify:
     enable: false
     theme: "vibrant-ink" # default value: "vibrant-ink"   # theme-name without '.css'
+
+#     Hanabi
+#         hanabi © egoist, Released under the MIT License
+#         https://github.com/egoist/hanabi
+#     
+#     line_number: [true/false] # Show line number for code block
+#     includeDefaultColors: [true/false] # Use default hanabi colors
+#     customColors:     # This value accept a string or am array to setting for hanabi colors.
+#                       # If `includeDefaultColors` is true, this will append colors to the color pool
+#                       # If `includeDefaultColors` is false, this will instead default color pool
+hanabi:
+    enable: false
+    line_number: true
+    includeDefaultColors: true
+    customColors: 
 
 # Post License
 # You can specify the text you want to show in the end of your posts and pages, HTML tag is supported.
