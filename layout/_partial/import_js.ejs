@@ -71,7 +71,11 @@
     <% } %>
 <% } %>
 <% if (theme.hanabi.enable) { %>
-    <%- jsLsload({path:('js/hanabi-browser-bundle.js'),key:'hanabi_browser_bundle'}) %>
+    <% if(theme.vendors.materialcdn) { %>
+        <%- jsLsload({path:(theme.vendors.materialcdn + '/js/hanabi-browser-bundle.js'),key:'hanabi'}) %>
+    <% } else { %>
+        <%- jsLsload({path:('js/hanabi-browser-bundle.js'),key:'hanabi'}) %>
+    <% } %>
 <% } %>
 
 <!-- Window Load -->
