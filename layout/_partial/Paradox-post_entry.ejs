@@ -34,7 +34,7 @@
         <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
             <!-- Author Avatar -->
             <div id="author-avatar">
-                <img src="<%= theme.img.avatar %>" width="44px" height="44px" alt="<%= config.author %>'s avatar">
+                <img src="<%= url_for(theme.img.avatar) %>" width="44px" height="44px" alt="<%= config.author %>'s avatar">
             </div>
             <div>
                 <strong><%= config.author %></strong>
@@ -42,14 +42,16 @@
             </div>
         </div>
         <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                <%- list_categories(post.categories, {
-                    show_count: false,
-                    class: 'post_category',
-                    style: 'none'
-                }) %>
-            </span>
+          <% if (post.categories && post.categories.length) { %>
+              <!-- Category -->
+              <span class="post_entry-category">
+                  <%- list_categories(post.categories, {
+                      show_count: false,
+                      class: 'post_category',
+                      style: 'none'
+                  }) %>
+              </span>
+            <% } %>
 
             <% if(theme.comment.use === 'duoshuo') { %>
                 <!-- Comment Number -->

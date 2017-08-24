@@ -1,0 +1,11 @@
+<script>
+    window.onload = function() {
+        new Valine({
+            av: AV, // source from av-min.js
+            el: '.comment',
+            app_id: "<%= theme.comment.valine_leancloud_appId %>",
+            app_key: "<%= theme.comment.valine_leancloud_appKey %>",
+            placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!'
+        });
+    }
+</script>

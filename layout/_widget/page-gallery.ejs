@@ -1,8 +1,8 @@
-<% if(theme.materialcdn.use === true) { %>
-    <link rel="stylesheet" href="<%= theme.materialcdn.base %>/css/gallery.min.css">
-<%}else{%>
-    <%- css('css/gallery.min') %>
-<%}%>
+<% if(theme.vendors.materialcdn) { %>
+    <link rel="preload" as="style" href="<%= theme.vendors.materialcdn + '/css/gallery.min.css' %>" onload="this.rel='stylesheet'">
+<% } else { %>
+    <link rel="preload" as="style" href="<%= url_for('css/gallery.min.css') %>" onload="this.rel='stylesheet'">
+<% } %>
 
 <body>
     <!-- Wrapper -->
@@ -88,15 +88,17 @@
     </div>
 
     <!-- Scripts -->
-    <% if(theme.materialcdn.use === true) { %>
-        <%- js(theme.materialcdn.base + "/js/jquery.min.js") %>
-        <%- js(theme.materialcdn.base + "/js/gallery/gallery.js") %>
-        <%- js(theme.materialcdn.base + "/js/lazyload.min.js") %>
-    <%}else{%>
-        <%- js('js/jquery.min') %>
-        <%- js('js/gallery/gallery') %>
-        <%- js('js/lazyload.min') %>
-    <%}%>
+    <% if(theme.vendors.materialcdn) { %>
+        <script src="<%= theme.vendors.materialcdn + '/js/gallery/gallery.js' %>"></script>
+    <% } else { %>
+        <script src="<%= url_for('js/gallery/gallery.js') %>"></script>
+    <% } %>
+
+    <% if(theme.vendors.materialcdn) { %>
+        <%- jsLsload({path:(theme.vendors.materialcdn + '/js/lazyload.min.js'),key:'lazyload_js'}) %>
+    <% } else { %>
+        <%- jsLsload({path:('js/lazyload.min.js'),key:'lazyload_js'}) %>
+    <% } %>
 
     <script>
         queue.offer(function(){

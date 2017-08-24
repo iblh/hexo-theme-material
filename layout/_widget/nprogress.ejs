@@ -1,8 +1,10 @@
-<% if(theme.materialcdn.use === true) { %>
-    <%- jsLsload({path:(theme.materialcdn.base + '/js/nprogress.js'),key:'js/nprogress.js'}) %>
-<%}else{%>
-    <%- jsLsload('js/nprogress.js') %>
-<%}%>
+<% if(theme.vendors.nprogress) { %>
+    <%- jsLsload({path:(theme.vendors.nprogress),key:'np_js'}) %>
+<% } else if(theme.vendors.materialcdn) { %>
+    <%- jsLsload({path:(theme.vendors.materialcdn + '/js/nprogress.js'),key:'np_js'}) %>
+<% } else { %>
+    <%- jsLsload({path:('js/nprogress.js'),key:'np_js'}) %>
+<% } %>
 
 <script type="text/ls-javascript" id="NProgress-script">
     NProgress.configure({

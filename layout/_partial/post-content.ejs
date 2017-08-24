@@ -1,6 +1,19 @@
 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     <% if(theme.scheme === 'Paradox') { %>
         <%- page.content %>
+        <% if (theme.license || page.license) { %>
+                <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
+                    <p><strong>
+                        <% if (page.license) { %>
+                            <%- page.license %>
+                        <% } else { %> 
+                            <%- theme.license %>
+                        <% } %></strong>
+                        <br>
+                        <strong><%- __('post.permalink') %></strong><a href="<%= page.permalink %>"><%= page.permalink %></a>
+                    </p>
+                </blockquote>
+        <% } %>
     <% } %>
 
     <% if(theme.scheme === 'Isolation') { %>
@@ -9,6 +22,19 @@
                 <%- page.title %>
             </p>
             <%- page.content %>
+            <% if (page.license || theme.license) { %>
+                <blockquote>
+                    <p>
+                        <% if (page.license) { %>
+                            <%- page.license %>
+                        <% } else { %> 
+                            <%- theme.license %>
+                        <% } %>
+                        <br>
+                        <%- __('post.permalink') %> <%= page.permalink %>
+                    </p>
+                </blockquote>
+            <% } %>
         </div>
     <% } %>
 </div>

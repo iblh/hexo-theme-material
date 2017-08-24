@@ -83,7 +83,9 @@ img:
 # Custom Fonts
 #   family: the font-family which will be used in the theme
 #   host: uri of fonts host.
-#       Available value of "host": google | baomitu | ustc | custom
+#       Available value of "host": google | baomitu | ustc | custom | catnet
+#       When you configured 'use' as 'custom', you should fill in the value of 'custom_font_host', which should be a mirror of google fonts.
+#        If you have setup your custom font-family, don't forget to add style tag with @font-face or link.tag with font css to /source/data/head.yml as custom code, to load custom font files.
 fonts:
     family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif
     use: google
@@ -97,6 +99,12 @@ card_elevation: 2
 #   For example, if you set it as 2015, then footer will show '© 2015 - 2017'
 copyright_since:
 
+# Footer Text
+# You can specify the text you want to show in footer, HTML tag is supported.
+#   For example, you can setup ICP license number as:
+#       '<a href="http://www.miitbeian.gov.cn" rel="nofollow">某ICP备xxxxxxxx号-x</a>'
+footer_text:
+
 # Qrcode for redirect at other device
 #   use: choose which method to generate the qrcode for each posts.
 #       Available value of "use": plugin | online
@@ -106,6 +114,40 @@ qrcode:
     enable: false
     use: plugin
 
+# Code highlight
+# Available value for `prettify` or `hanabi`: true | false
+# You can only enable one of them to avoid issues. Also you need to check highlight option in _config.yml. Make sure that default hexo built in highlight plugin is disabled.
+#        highlight:
+#            enable: false
+#
+#     Prettify
+#         theme value:
+#         theme-name  # /vendors/prettify/themes/[theme-name].css
+prettify:
+    enable: false
+    theme: "vibrant-ink" # default value: "vibrant-ink"   # theme-name without '.css'
+
+#     Hanabi
+#         hanabi © egoist, Released under the MIT License
+#         https://github.com/egoist/hanabi
+#     
+#     line_number: [true/false] # Show line number for code block
+#     includeDefaultColors: [true/false] # Use default hanabi colors
+#     customColors:     # This value accept a string or am array to setting for hanabi colors.
+#                       # If `includeDefaultColors` is true, this will append colors to the color pool
+#                       # If `includeDefaultColors` is false, this will instead default color pool
+hanabi:
+    enable: false
+    line_number: true
+    includeDefaultColors: true
+    customColors: 
+
+# Post License
+# You can specify the text you want to show in the end of your posts and pages, HTML tag is supported.
+#   For example, you can setup a CC license as:
+#       'This blog is under a <a href="/creativecommons.html" target="_blank">CC BY-NC-SA 3.0 Unported License</a>'
+# You can also use Front-Matter `license` to override this setting.
+license: 
 
 # ---------------------------------------------------------------
 # Menu Settings
@@ -132,6 +174,7 @@ sns:
     zhihu:
     bilibili:
     telegram:
+    v2ex:
 
 # SNS Share Switch
 sns_share:
@@ -181,23 +224,24 @@ sidebar:
 # Integrated Services
 # ---------------------------------------------------------------
 
-# MaterialCDN
-# When you set 'use' as true, the needed css, js, font file will have a new src.
-# The new src will have the base domain you configured in 'base'.
-materialcdn: 
-    use: 
-    base: 
-
 # Comment Systems
 # Available value of "use":
-#     disqus | disqus_click | changyan | 163gentie
+#     disqus | disqus_click | changyan | livere | gitment | valine
+# If you want to use gitment,you should get the client_id and client_secret form https://github.com/settings/applications/new
+# If you want to use valine,you should get the app_id and app_key form https://leancloud.cn ,more setting please see https://github.com/xCss/Valine
 comment:
     use:
     shortname: # duoshuo or disqus shortname
     changyan_appid:
     changyan_conf:
     changyan_thread_key_type: path
-    gentie_productKey: 
+    livere_data_uid:
+    gitment_repo:   # git repo of the hexo
+    gitment_owner:  # git repo's owner
+    gitment_client_id:  # github app client id 
+    gitment_client_secret :  # github app client secret 
+    valine_leancloud_appId: # leancloud application app id
+    valine_leancloud_appKey: # leancloud application app key
 
 # Search Systems
 # Available value:
@@ -210,8 +254,9 @@ search:
 # Available value:
 #     baidu | google | cnzz
 analytics:
-    use:
-    site_id:
+    google_site_id:
+    baidu_site_id:
+    cnzz_site_id:
 
 # Leancloud Views
 leancloud:
@@ -226,3 +271,31 @@ busuanzi:
     all_site_uv: false
     post_pv: false
     busuanzi_pure_mini_js: "https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"
+
+# Files Vendors
+# Set a CDN for the files src you want to customize. The url should with protocol.
+# Default(empty) will load the files from the origin server.
+vendors:
+# MaterialCDN
+#   You can load theme unique files from your private cdn or oss.
+#   The new src will have the base domain you configured below.
+#   For example
+#       materialcdn: https://cdn.jsdelivr.net/npm/hexo-material@1.4.0/source
+    materialcdn:
+
+# Third party library
+#   You can load these files from public cdn.
+#   For example
+#       jquery: https://cdn.bootcss.com/jquery/2.2.1/jquery.js
+    # jQuery 2.2.0
+    jquery:
+    # nprogress 0.2.0
+    nprogress:
+    # FontAwesome 4.5.0
+    fontawesome:
+    # MathJax 2.7.0-2.7.1
+    mathjax:
+    # Prettify r298 (only prettify.js)
+    prettify:
+    # Material Icons 3.0.1
+    material_icons:

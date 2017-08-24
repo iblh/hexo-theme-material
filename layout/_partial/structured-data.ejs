@@ -8,7 +8,7 @@
         "name": "<%= config.title %>",
         "logo": "<%= theme.head.high_res_favicon %>"
     },
-    "url": "<%- config.url + url_for(path) %>",
+    "url": "<%- config.url %>",
     "image": {
         "@type": "ImageObject",
         "url": "<%= theme.head.apple_touch_icon %>"
@@ -26,30 +26,30 @@
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",
-    "@type": "Article",
-    "publisher": {
-        "@type": "Organization",
-        "name": "<%= config.title %>",
-        "logo": "<%= theme.head.high_res_favicon %>"
-    },
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "<%- config.url + url_for(path) %>",
+    "headline": "<%- page.title %>",
+    "datePublished": "<%= page.date %>",
+    "dateModified": "<%= page.updated %>",
     "author": {
         "@type": "Person",
         "name": "<%= config.author %>",
         "image": {
             "@type": "ImageObject",
-            "url": "<%= theme.head.apple_touch_icon %>"
+            "url": "<%= theme.img.avatar %>"
         },
         "description": "<%- theme.uiux.slogan %>"
     },
-    "headline": "<%- page.title %>",
-    "url": "<%- config.url + url_for(path) %>",
-    "datePublished": "<%= page.date %>",
-    "dateModified": "<%= page.updated %>",
+    "publisher": {
+        "@type": "Organization",
+        "name": "<%= config.title %>",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "<%= theme.head.high_res_favicon %>"
+        }
+    },
+    "keywords": "<% if(page.tags && page.tags.each) { page.tags.each(function(tag) { %><%- ',' + tag.name %><% })} %><%= theme.head.keywords %>",
     "description": "<% if(page.description) { %><%= page.description %><% } else if(page.excerpt){ %><%= strip_html(page.excerpt).replace(/^s*/, '').replace(/s*$/, '') %><% } else if (config.description){ %><%= config.description %><% } %>",
-    "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "<%= config.url %>"
-    }
 }
 </script>
 <% } %>
