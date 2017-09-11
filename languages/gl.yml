@@ -1,0 +1,29 @@
+sidebar:
+    homepage: "Principal"
+    archive: "Arquivo"
+    article_num: "Artigo nº."
+post:
+    visitor: "Visitantes"
+    views: "Visión"
+    continue: "Seguir lendo"
+    older: "Anterior"
+    newer: "Posterior"
+    qrcode: "Ler noutro dispositivo"
+    comments_load_button: "Ler comentarios 「Asegúrese de que pódese cargar 'disq.us & disquscdn.com & disqus.com'」"    
+    permalink: "Ligazón ao artigo: "
+share:
+    article_rss: "Artigo RSS"
+    comment_rss: "Comentario RSS"
+    toTwitter: "Compartir no Twitter"
+    toFacebook: "Compartir no Facebook"
+    toLinkedIn: "Compartir no LinkedIn"
+    toTelegram: "Compartir no Telegram"
+    toGplus: "Compartir no Google+"
+    toWeibo: "Compartir no Weibo"
+    toQQ: "Compartir no QQ"
+title:
+    category: "Categoría"
+    tag: "Etiqueta"
+misc:
+    home: "Principal"
+    theme: "tema"
