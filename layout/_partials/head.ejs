@@ -13,6 +13,7 @@
     <%- partial('_partial/head/meta') %>
 
     <!-- Import File -->
+    <%- partial('_partial/source/head') %>
 
     <!-- Site Verification -->
     <%- partial('_partial/head/site-verification') %>
@@ -24,6 +25,15 @@
     <%- partial('_partial/head/open-graph') %>
 
     <!-- Analytics -->
+    <% if(theme.analytics.google_site_id) { %>
+        <%- partial('_widget/analytics/google') %>
+    <% } %>
+    <% if(theme.analytics.baidu_site_id) { %>
+        <%- partial('_widget/analytics/baidu') %>
+    <% } %>
+    <% if(theme.analytics.cnzz_site_id) { %>
+        <%- partial('_widget/analytics/cnzz') %>
+    <% } %>
 
     <!-- Canonical link -->
     <link rel="canonical" href="<%= config.url + url_for(page.path).replace('index.html', '') %>">
