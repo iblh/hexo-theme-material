@@ -26,7 +26,6 @@
 <!-- Favicons -->
 <link rel="icon shortcut" type="image/ico" href="<%= url_for(theme.head.favicon) %>">
 <link rel="icon" href="<%= url_for(theme.head.high_res_favicon) %>">
-<link rel="apple-touch-icon" href="<%= url_for(theme.head.apple_touch_icon) %>">
 
 <meta name="format-detection" content="telephone=no"/>
 <meta name="description" itemprop="description" content="<% if(page.description) { %><%= page.description %><% } else if(page.excerpt){ %><%= strip_html(page.excerpt).replace(/^s*/, '').replace(/s*$/, '') %><% } else if (config.description){ %><%= config.description %><% } %>">

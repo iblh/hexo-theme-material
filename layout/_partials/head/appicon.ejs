@@ -1,0 +1,8 @@
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="application-name" content="<%= config.title %>">
+<meta name="msapplication-starturl" content="<%= config.url + url_for(page.path).replace('index.html', '') %>">
+<meta name="msapplication-navbutton-color" content="<%= theme.uiux.android_chrome_color %>">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="<%= config.title %>">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="apple-touch-icon" href="<%= url_for(theme.head.apple_touch_icon) %>">

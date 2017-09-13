@@ -1,4 +1,4 @@
-<meta property="og:url" content="<%= config.url %>">
+<meta property="og:url" content="<%= config.url + url_for(page.path).replace('index.html', '') %>">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="<% if (title) { %><%= title %> | <% } %><%= config.title %>">
 <meta property="og:image" content="<%= url_for(theme.head.high_res_favicon) %>">
