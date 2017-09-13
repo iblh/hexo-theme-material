@@ -10,8 +10,4 @@
     <meta property="article:modified_time" content="<%= page.updated %>">
 <% } %>
 
-<meta name="twitter:title" content="<% if (title) { %><%= title %> | <% } %><%= config.title %>">
-<meta name="twitter:description" content="<% if(page.description) { %><%= page.description %><% } else if(page.excerpt){ %><%= strip_html(page.excerpt).replace(/^s*/, '').replace(/s*$/, '') %><% } else if (config.description){ %><%= config.description %><% } %>">
-<meta name="twitter:image" content="<%= url_for(theme.head.high_res_favicon) %>">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:url" content="<%= config.url %>">
