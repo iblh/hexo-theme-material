@@ -1,0 +1,33 @@
+<head>
+    <meta charset="utf-8">
+    <!--
+        © Neko Dev
+        GitHub: https://github.com/viosey/hexo-theme-material
+        Version: 1.5.0
+    -->
+
+    <!-- DNS Prefetch -->
+    <%- partial('_partial/head/dns-prefetch') %>
+
+    <!-- Meta & Title & Info -->
+    <%- partial('_partial/head/meta') %>
+
+    <!-- Import File -->
+
+    <!-- Site Verification -->
+    <%- partial('_partial/head/site-verification') %>
+
+    <!-- RSS -->
+    <%- partial('_partial/head/rss') %>
+
+    <!-- The Open Graph & Twitter Card Protocol -->
+    <%- partial('_partial/head/open-graph') %>
+
+    <!-- Analytics -->
+
+    <!-- Canonical link -->
+    <link rel="canonical" href="<%= config.url + url_for(page.path).replace('index.html', '') %>">
+
+    <!-- Custom Head -->
+
+</head>

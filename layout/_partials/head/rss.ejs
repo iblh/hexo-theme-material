@@ -1,0 +1,8 @@
+<% if(theme.url.rss) { %>
+    <% if(config.feed.type == "atom"){ %>
+        <link rel="alternate" type="application/atom+xml" href="<%= theme.url.rss || '#' %>">
+    <% } else if(config.feed.type == "rss2") { %>
+        <link rel="alternate" type="application/rss+xml" href="<%= theme.url.rss || '#' %>">
+    <% } else { %>
+    <% } %>
+<% } %>
