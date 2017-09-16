@@ -1,0 +1,20 @@
+<% if(theme.vendors.materialcdn) { %>
+    <%- jsLsload({path:(theme.vendors.materialcdn + '/js/hanabi-browser-bundle.js'),key:'hanabi'}) %>
+<% } else { %>
+    <%- jsLsload({path:('js/hanabi-browser-bundle.js'),key:'hanabi'}) %>
+<% } %>
+<script type="text/ls-javascript" id="window-load">
+    <% if (!theme.hanabi.includeDefaultColors) { %>
+        HanabiBrowser.clearColors();
+    <% } %>
+    <% if (theme.hanabi.customColors) { %>
+        <% if (typeof theme.hanabi.customColors === 'string') { %>
+            HanabiBrowser.putColor('<%= theme.hanabi.customColors %>');
+        <% } else { %>
+            <% theme.hanabi.customColors.forEach(function(elements) { %>
+                HanabiBrowser.putColor('<%= elements %>');
+            <% }); %>
+        <% } %>
+    <% } %>
+    HanabiBrowser.start('pre code',<%= theme.hanabi.line_number %>);
+</script>
