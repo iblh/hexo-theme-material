@@ -27,6 +27,10 @@
     "eslint": "^3.14.0",
     "eslint-config-airbnb-base": "^11.0.1",
     "eslint-plugin-import": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.8.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^3.0.0",
     "sass-lint": "^1.10.2"
   }
 }
