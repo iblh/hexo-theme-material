@@ -31,6 +31,8 @@
 ## Demo 演示
 
 [Viosey's Blog](https://blog.viosey.com)
+[neoFelhz's Blog](https://blog.nfz.moe)
+[Cubesky's Blog](https://liyin.date)
 
 ## Docs 文档
 
@@ -38,7 +40,7 @@
 
 [Material 主题文档](https://material.viosey.com/docs/)
 
-> [Docs Markdown Files](https://github.com/viosey/material-theme-docs)
+> [Docs Markdown Files](https://github.com/neko-dev/material-theme-docs)
 
 
 ## Contributing 贡献
