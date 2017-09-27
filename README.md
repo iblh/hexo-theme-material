@@ -4,7 +4,7 @@
 
 <h1 align="center"><a href="https://material.viosey.com" target="_blank">Material Theme</a></h1>
 
-> Nature, Source | 原之质，物之渊
+> Nature, Pure | 原质，纯粹
 
 <p align="center">
 <img alt="Version" src="https://img.shields.io/badge/version-1.5.0-757575.svg?style=flat-square"/>
@@ -16,23 +16,44 @@
 <a href="https://www.jsdelivr.com/package/gh/viosey/hexo-theme-material"><img alt="" src="https://data.jsdelivr.com/v1/package/gh/viosey/hexo-theme-material/badge"/></a>
 </p>
 
-
-
 ## Contents 目录
 
+- [Introduction 介绍](#introduction-介绍)
 - [Demo 演示](#demo-演示)
+- [Download 下载](#download-下载)
 - [Docs 文档](#docs-文档)
 - [Contributing 贡献](#contributing-贡献)
 - [License 许可证](#license-许可证)
+- [Changelog 更新日志](#changelog-更新日志)
 - [Support 支持](#support-支持)
 - [Render 渲染](#render-渲染)
-- [Changelog 开发日志](https://github.com/viosey/hexo-theme-material/releases)
+
+
+## Introduction 介绍
+
+An elegant, Pure & Material Design Theme for Hexo.
+
+优雅、纯粹、质感的 Hexo 主题。
+
 
 ## Demo 演示
 
-[Viosey's Blog](https://blog.viosey.com)
-[neoFelhz's Blog](https://blog.nfz.moe)
-[Cubesky's Blog](https://liyin.date)
+- [Viosey's Blog](https://blog.viosey.com)
+- [neoFelhz's Blog](https://blog.nfz.moe)
+- [liyin's Blog](https://liyin.date)
+
+
+# Download 下载
+
+[Download latest release version](https://github.com/viosey/hexo-theme-material/releases/latest)
+
+> Recommended for most users.
+> 适合所有的用户。
+
+[Download other version](https://github.com/viosey/hexo-theme-material/releases)
+
+> You can decide which version to use.
+> 你可以自己决定想要使用的版本。
 
 ## Docs 文档
 
@@ -40,7 +61,7 @@
 
 [Material 主题文档](https://material.viosey.com/docs/)
 
-> [Docs Markdown Files](https://github.com/neko-dev/material-theme-docs)
+> [Docs Source Code](https://github.com/neko-dev/material-theme-docs)
 
 
 ## Contributing 贡献
@@ -52,6 +73,12 @@ Before you start your contributing, please read the [Contributing Rules Wiki](ht
 欢迎各种形式的贡献，包括但不限于优化，添加功能，文档 & 代码的改进，问题和 bugs 的报告。期待您的 `Pull Request`。
 
 在参与贡献之前，请阅读[项目贡献 Wiki](https://github.com/viosey/hexo-theme-material/wiki)，了解如何为 Material 主题贡献。
+
+## Changelog 更新日志
+
+[View our release notes](https://github.com/viosey/hexo-theme-material/releases)
+
+[阅读我们的更新日志](https://github.com/viosey/hexo-theme-material/releases)
 
 
 ## License 许可证
