@@ -13,8 +13,8 @@
 <a href="https://nodejs.org/"><img alt="node.js" src="https://img.shields.io/badge/node.js-6.0%2B-43853d.svg?style=flat-square"/></a>
 <a href="https://travis-ci.org/viosey/hexo-theme-material"><img alt="Build Status" src="https://img.shields.io/travis/viosey/hexo-theme-material.svg?style=flat-square"/></a>
 <a href="https://www.npmjs.com/package/hexo-material"><img alt="npm" src="https://img.shields.io/npm/dt/hexo-material.svg?style=flat-square"/></a>
-<a href="https://www.jsdelivr.com/package/gh/viosey/hexo-theme-material"><img alt="" src="https://data.jsdelivr.com/v1/package/gh/viosey/hexo-theme-material/badge"/></a>
 </p>
+
 
 ## Contents 目录
 
@@ -43,17 +43,32 @@ An elegant, Pure & Material Design Theme for Hexo.
 - [liyin's Blog](https://liyin.date)
 
 
-# Download 下载
+## Download 下载
 
 [Download latest release version](https://github.com/viosey/hexo-theme-material/releases/latest)
 
-> Recommended for most users.
-> 适合所有的用户。
+> Should be the most stable. Recommended for most users.
+> 最稳定的版本，适合所有的用户。
+
+[Download latest canary branch](https://github.com/viosey/hexo-theme-material/archive/canary.zip)
+
+> Maybe unstable, but includes latest features. Recommended for developers.
+> 包含最新的、尚在开发中的特性，可能不稳定；适合进阶用户。
 
 [Download other version](https://github.com/viosey/hexo-theme-material/releases)
 
-> You can decide which version to use.
-> 你可以自己决定想要使用的版本。
+> You can decide which version to use. May no longer provide support.
+> 你可以自己决定想要使用的版本；部分版本可能不再提供技术支持。
+
+[Download using git](https://github.com/viosey/hexo-theme-material/releases)
+
+> You can using git to choose which branch you want. For developer only.
+> 你可以自己决定想要使用的分支；仅限开发者使用。
+
+```bash
+cd theme
+git clone https://github.com/viosey/hexo-theme-material.git material
+```
 
 ## Docs 文档
 
@@ -91,13 +106,23 @@ Open sourced under the GPL v3.0 license.
 
 ## Support 支持
 
+### BroswerStack
+
 ![BrowserStack Status](https://www.browserstack.com/automate/badge.svg?badge_key=V1VkWmJMRjJqcHBjN1BIVFRlNzExM05XUk5hemcydEpZTHRBdGd5V244ST0tLTlvNklDT1NuVXFDaTh0RDBnQ3RCdXc9PQ==--c986c45d7c10a3264f46b414944d6393ba74ea22%)
 
 Proudly using BrowserStack.
 
-[![](https://qiniu.viosey.com/img/browserstack_logo.png)](https://www.browserstack.com/)
+[![](https://i.loli.net/2017/09/27/59cbc16b0f8b4.png)](https://www.browserstack.com/)
 
 > **BrowserStack** is a cloud-based cross-browser testing tool that enables developers to test their websites across various browsers on different operating systems and mobile devices, without requiring users to install virtual machines, devices or emulators.
+
+### jsDelivr
+
+[![](https://data.jsdelivr.com/v1/package/gh/viosey/hexo-theme-material/badge)](https://www.jsdelivr.com/package/gh/viosey/hexo-theme-material)
+
+Thanks jsDelivr for providing CDN service.
+
+> **jsDelivr** – Open Source CDN. free, fast, and reliable.
 
 ## Render 渲染
 
