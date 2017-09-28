@@ -1,52 +1,83 @@
-![phone-render](https://i.loli.net/2017/09/07/59b1367f76fdb.png)
+<p align="center">
+<img src="https://i.loli.net/2017/09/07/59b1367f76fdb.png" alt="Material Render Phone">
+</p>
 
-# Material 原质
+<h1 align="center"><a href="https://material.viosey.com" target="_blank">Material Theme</a></h1>
 
-[Material Theme](https://material.viosey.com)
+> Nature, Pure | 原质，纯粹
 
->Nature, Source | 原之质，物之渊
+<p align="center">
+<img alt="Version" src="https://img.shields.io/badge/version-1.5.0-757575.svg?style=flat-square"/>
+<a href="https://viosey.com"><img alt="Author" src="https://img.shields.io/badge/author-Viosey-red.svg?style=flat-square"/></a>
+<a href="https://hexo.io"><img alt="Hexo" src="https://img.shields.io/badge/hexo-3.0+-0e83cd.svg?style=flat-square"/></a>
+<a href="https://nodejs.org/"><img alt="node.js" src="https://img.shields.io/badge/node.js-6.0%2B-43853d.svg?style=flat-square"/></a>
+<a href="https://travis-ci.org/viosey/hexo-theme-material"><img alt="Build Status" src="https://img.shields.io/travis/viosey/hexo-theme-material.svg?style=flat-square"/></a>
+<a href="https://www.npmjs.com/package/hexo-material"><img alt="npm" src="https://img.shields.io/npm/dt/hexo-material.svg?style=flat-square"/></a>
+</p>
+
 
 ## Contents 目录
 
-- [General 概括](#general-概括)
+- [Introduction 介绍](#introduction-介绍)
 - [Demo 演示](#demo-演示)
-- [Quick start 快速开始](#quick-start-快速开始)
+- [Download 下载](#download-下载)
 - [Docs 文档](#docs-文档)
 - [Contributing 贡献](#contributing-贡献)
 - [License 许可证](#license-许可证)
+- [Changelog 更新日志](#changelog-更新日志)
 - [Support 支持](#support-支持)
 - [Render 渲染](#render-渲染)
-- [Changelog 开发日志](https://github.com/viosey/hexo-theme-material/releases)
 
-## General 概括
 
-[![Version](https://img.shields.io/badge/version-1.5.0-blue.svg?style=flat-square)]()
-[![Author](https://img.shields.io/badge/author-Viosey-blue.svg?style=flat-square)](https://viosey.com)
+## Introduction 介绍
 
-[![Hexo](https://img.shields.io/badge/hexo-3.0+-green.svg?style=flat-square)](https://hexo.io)
-[![node.js](https://img.shields.io/badge/node.js-6.0%2B-green.svg?style=flat-square)](https://nodejs.org/)
+An elegant, pure & Material Design theme for Hexo.  
+优雅、纯粹、质感的 Hexo 主题。
 
-[![Build Status](https://img.shields.io/travis/viosey/hexo-theme-material.svg?style=flat-square)](https://travis-ci.org/viosey/hexo-theme-material)
-[![npm](https://img.shields.io/npm/dt/hexo-material.svg?style=flat-square)](https://www.npmjs.com/package/hexo-material)
 
 ## Demo 演示
 
-[Viosey's Blog](https://blog.viosey.com)
+- [Viosey's Blog](https://blog.viosey.com)
+- [neoFelhz's Blog](https://blog.nfz.moe)
+- [liyin's Blog](https://liyin.date)
 
-## Quick start 快速开始
 
-[Install Material](https://material.viosey.com/en/start/#install-material)
+## Download 下载
 
-[安装 Material](https://material.viosey.com/start/#install-material)
+#### [Download latest release version](https://github.com/viosey/hexo-theme-material/releases/latest)
 
+> Should be the most stable. Recommended for most users.  
+> 最稳定的版本，适合所有的用户。
+
+#### [Download latest canary branch](https://github.com/viosey/hexo-theme-material/archive/canary.zip)
+
+> Maybe unstable, but includes latest features. Recommended for developers.  
+> 包含最新的、尚在开发中的特性，可能不稳定；适合进阶用户。
+
+#### [Download other version](https://github.com/viosey/hexo-theme-material/releases)
+
+> You can decide which version to use. May no longer provide support.  
+> 你可以自己决定想要使用的版本；部分版本可能不再提供技术支持。
+
+#### [Download using git](https://github.com/viosey/hexo-theme-material/releases)
+
+> You can using git to choose which branch you want. For developer only.  
+> 你可以自己决定想要使用的分支；仅限开发者使用。
+
+```bash
+cd themes
+git clone https://github.com/viosey/hexo-theme-material.git material
+cd material
+git checkout {branch/tags name}
+```
 
 ## Docs 文档
 
-[Material Theme Docs](https://material.viosey.com/en/)
+[Material Theme Docs](https://material.viosey.com/docs/)
 
-[Material 主题文档](https://material.viosey.com)
+[Material 主题文档](https://material.viosey.com/docs/)
 
->[Docs Markdown Files](https://github.com/viosey/material-theme-docs)
+> [Docs Source Code](https://github.com/neko-dev/material-theme-docs)
 
 
 ## Contributing 贡献
@@ -59,6 +90,12 @@ Before you start your contributing, please read the [Contributing Rules Wiki](ht
 
 在参与贡献之前，请阅读[项目贡献 Wiki](https://github.com/viosey/hexo-theme-material/wiki)，了解如何为 Material 主题贡献。
 
+## Changelog 更新日志
+
+[View our release notes](https://github.com/viosey/hexo-theme-material/releases)
+
+[阅读我们的更新日志](https://github.com/viosey/hexo-theme-material/releases)
+
 
 ## License 许可证
 
@@ -69,13 +106,28 @@ Open sourced under the GPL v3.0 license.
 根据 GPL V3.0 许可证开源。
 
 ## Support 支持
+
+### BroswerStack
+
 ![BrowserStack Status](https://www.browserstack.com/automate/badge.svg?badge_key=V1VkWmJMRjJqcHBjN1BIVFRlNzExM05XUk5hemcydEpZTHRBdGd5V244ST0tLTlvNklDT1NuVXFDaTh0RDBnQ3RCdXc9PQ==--c986c45d7c10a3264f46b414944d6393ba74ea22%)
 
 Proudly using BrowserStack.
 
-[![](https://qiniu.viosey.com/img/browserstack_logo.png)](https://www.browserstack.com/)
+[![](https://i.loli.net/2017/09/27/59cbc16b0f8b4.png)](https://www.browserstack.com/)
 
->**BrowserStack** is a cloud-based cross-browser testing tool that enables developers to test their websites across various browsers on different operating systems and mobile devices, without requiring users to install virtual machines, devices or emulators.
+> **BrowserStack** is a cloud-based cross-browser testing tool that enables developers to test their websites across various browsers on different operating systems and mobile devices, without requiring users to install virtual machines, devices or emulators.
+
+### jsDelivr
+
+[![](https://data.jsdelivr.com/v1/package/npm/hexo-material/badge)](https://www.jsdelivr.com/package/npm/hexo-material) 
+
+Thanks jsDelivr for providing MaterialCDN service.
+
+> **jsDelivr** – Open Source CDN. free, fast, and reliable. You can using the files from GitHub or NPM and serve them using jsDelivr.
+
+[`
+https://cdn.jsdelivr.net/gh/viosey/hexo-theme-material/source/
+`](https://cdn.jsdelivr.net/gh/viosey/hexo-theme-material/source/)
 
 ## Render 渲染
 
