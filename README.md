@@ -31,8 +31,7 @@
 
 ## Introduction 介绍
 
-An elegant, Pure & Material Design Theme for Hexo.
-
+An elegant, Pure & Material Design Theme for Hexo.  
 优雅、纯粹、质感的 Hexo 主题。
 
 
@@ -45,29 +44,31 @@ An elegant, Pure & Material Design Theme for Hexo.
 
 ## Download 下载
 
-[Download latest release version](https://github.com/viosey/hexo-theme-material/releases/latest)
+#### [Download latest release version](https://github.com/viosey/hexo-theme-material/releases/latest)
 
-> Should be the most stable. Recommended for most users.
+> Should be the most stable. Recommended for most users.  
 > 最稳定的版本，适合所有的用户。
 
-[Download latest canary branch](https://github.com/viosey/hexo-theme-material/archive/canary.zip)
+#### [Download latest canary branch](https://github.com/viosey/hexo-theme-material/archive/canary.zip)
 
-> Maybe unstable, but includes latest features. Recommended for developers.
+> Maybe unstable, but includes latest features. Recommended for developers.  
 > 包含最新的、尚在开发中的特性，可能不稳定；适合进阶用户。
 
-[Download other version](https://github.com/viosey/hexo-theme-material/releases)
+#### [Download other version](https://github.com/viosey/hexo-theme-material/releases)
 
-> You can decide which version to use. May no longer provide support.
+> You can decide which version to use. May no longer provide support.  
 > 你可以自己决定想要使用的版本；部分版本可能不再提供技术支持。
 
-[Download using git](https://github.com/viosey/hexo-theme-material/releases)
+#### [Download using git](https://github.com/viosey/hexo-theme-material/releases)
 
-> You can using git to choose which branch you want. For developer only.
+> You can using git to choose which branch you want. For developer only.  
 > 你可以自己决定想要使用的分支；仅限开发者使用。
 
 ```bash
-cd theme
+cd themes
 git clone https://github.com/viosey/hexo-theme-material.git material
+cd material
+git checkout {branch/tags name}
 ```
 
 ## Docs 文档
@@ -118,11 +119,15 @@ Proudly using BrowserStack.
 
 ### jsDelivr
 
-[![](https://data.jsdelivr.com/v1/package/gh/viosey/hexo-theme-material/badge)](https://www.jsdelivr.com/package/gh/viosey/hexo-theme-material)
+[![](https://data.jsdelivr.com/v1/package/npm/hexo-material/badge)](https://www.jsdelivr.com/package/npm/hexo-material) 
 
-Thanks jsDelivr for providing CDN service.
+Thanks jsDelivr for providing MaterialCDN service.
 
-> **jsDelivr** – Open Source CDN. free, fast, and reliable.
+> **jsDelivr** – Open Source CDN. free, fast, and reliable. You can using the files from GitHub or NPM and serve them using jsDelivr.
+
+[`
+https://cdn.jsdelivr.net/gh/viosey/hexo-theme-material/source/
+`](https://cdn.jsdelivr.net/gh/viosey/hexo-theme-material/source/)
 
 ## Render 渲染
 
