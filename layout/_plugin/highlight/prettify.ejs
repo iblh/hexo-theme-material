@@ -1,31 +1,30 @@
-<% if (theme.prettify.enable){ %>
-    <% if ( (is_post()) ) { %>
+<% if ( (is_post()) ) { %>
 
-        <!-- Import Prettify js -->
-        <% if(theme.vendors.prettify) { %>
-            <%- jsLsload({path:(theme.vendors.prettify),key:'prettify_js'}) %>
-        <% } else if(theme.vendors.materialcdn) { %>
-            <%- jsLsload({path:(theme.vendors.materialcdn + '/js/prettify.min.js'),key:'prettify_js'}) %>
-        <% } else { %>
-            <%- jsLsload({path:('js/prettify.min.js'),key:'prettify_js'}) %>
-        <% } %>
-
-        <!-- Import Prettify css -->
-        <% if(theme.vendors.materialcdn) { %>
-            <%- cssLsload({path:(theme.vendors.materialcdn + '/css/prettify/' + theme.prettify.theme + '.min.css'),key:'prettify_theme'}) %>
-        <% } else { %>
-            <%- cssLsload({path:('css/prettify/' + theme.prettify.theme + '.min.css'),key:'prettify_theme'}) %>
-        <% } %>
-
+    <!-- Import Prettify css -->
+    <% if(theme.vendors.materialcdn) { %>
+        <%- cssLsload({path:(theme.vendors.materialcdn + '/css/prettify/' + theme.prettify.theme + '.min.css'),key:'prettify_theme'}) %>
+    <% } else { %>
+        <%- cssLsload({path:('css/prettify/' + theme.prettify.theme + '.min.css'),key:'prettify_theme'}) %>
     <% } %>
-<% } %>
-<script type="text/ls-javascript" id="code-highlight-prettify">
-    <% if (theme.prettify.enable) { %>
-        <% if ( (is_post()) ) { %>
-            $(function() {
-                $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
-                prettyPrint();
+
+    <!-- Import Prettify js -->
+    <% if(theme.vendors.prettify) { %>
+        <%- jsLsload({path:(theme.vendors.prettify),key:'prettify_js'}) %>
+    <% } else if(theme.vendors.materialcdn) { %>
+        <%- jsLsload({path:(theme.vendors.materialcdn + '/js/prettify.min.js'),key:'prettify_js'}) %>
+    <% } else { %>
+        <%- jsLsload({path:('js/prettify.min.js'),key:'prettify_js'}) %>
+    <% } %>
+
+    <script type="text/ls-javascript" id="code-highlight-prettify">
+        <% if (theme.prettify.enable) { %>
+            <% if ( (is_post()) ) { %>
+                $(function() {
+                    $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+                    prettyPrint();
                 })
+            <% } %>
         <% } %>
-    <% } %>
-</script>
+    </script>
+
+<% } %>

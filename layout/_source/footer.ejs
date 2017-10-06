@@ -5,10 +5,15 @@
     <%- partial('_plugin/mathjax') %>
 <% } %>
 
+<!-- Prettify -->
+<% if (theme.prettify.enable){ %>
+    <%- partial('_plugin/highlight/prettify') %>
+<% } %>
+
 <!-- Hanabi -->
 <% if (theme.hanabi.enable) { %>
     <%- partial('_plugin/highlight/hanabi') %>
 <% } %>
 
 <!-- Console log -->
-<%- partial('_widget/console') %>
+<%- partial('_widget/console_runjs') %>
