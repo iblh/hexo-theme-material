@@ -43,5 +43,7 @@
     <% } %>
 
     <!-- Share -->
-    <%- partial('_partial/post-info-share') %>
+    <% if(page.hide_share !== true) { %>
+        <%- partial('_partial/post-info-share') %>
+    <% } %>
 </div>
