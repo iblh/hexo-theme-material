@@ -124,15 +124,17 @@ Proudly using BrowserStack.
 
 ### jsDelivr
 
-[![](https://data.jsdelivr.com/v1/package/npm/hexo-material/badge)](https://www.jsdelivr.com/package/npm/hexo-material) 
-
 Thanks jsDelivr for providing MaterialCDN service.
 
 > **jsDelivr** – Open Source CDN. free, fast, and reliable. You can using the files from GitHub or NPM and serve them using jsDelivr.
 
-[`
-https://cdn.jsdelivr.net/gh/viosey/hexo-theme-material/source/
-`](https://cdn.jsdelivr.net/gh/viosey/hexo-theme-material/source/)
+[![](https://data.jsdelivr.com/v1/package/npm/hexo-material/badge)](https://www.jsdelivr.com/package/npm/hexo-material) 
+
+[`http://cdn.jsdelivr.net/npm/hexo-material/source/`](http://cdn.jsdelivr.net/npm/hexo-material/source/)
+
+[![](https://data.jsdelivr.com/v1/package/gh/viosey/hexo-theme-material/badge)](https://www.jsdelivr.com/package/gh/viosey/hexo-theme-material)
+
+[`https://cdn.jsdelivr.net/gh/viosey/hexo-theme-material/source/`](https://cdn.jsdelivr.net/gh/viosey/hexo-theme-material/source/)
 
 ## Render 渲染
 
