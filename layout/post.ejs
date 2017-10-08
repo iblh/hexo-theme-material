@@ -26,7 +26,7 @@
                 <!-- Post Header(Thumbnail & Title) -->
                 <%- partial('_partial/post-header') %>
 
-                <% if(theme.scheme === 'Paradox') { %>
+                <% if(page.hide_post_info !== true && theme.scheme === 'Paradox') { %>
                     <!-- Paradox Post Info -->
                     <%- partial('_partial/Paradox-post-info') %>
                 <% } %>
@@ -34,7 +34,7 @@
                 <!-- Post Content -->
                 <%- partial('_partial/post-content') %>
 
-                <% if(theme.scheme === 'Isolation') { %>
+                <% if(page.hide_post_info !== true && theme.scheme === 'Isolation') { %>
                     <!-- Paradox Post Info -->
                     <%- partial('_partial/Isolation-post-info') %>
                 <% } %>
