@@ -240,10 +240,10 @@ comment:
     valine_notify: false # valine mail notify (true/false) https://github.com/xCss/Valine/wiki
     valine_verify: false # valine verify code (true/false)
     valine_placeholder: # valine comment input placeholder(like: Please leave your footprints )
-    gitalk_owner: # git repo of the hexo
-    gitalk_repo: # git repo's owner
+    gitalk_repo: # git repo of the hexo
+    gitalk_owner: # git repo's owner
     gitalk_client_id: # github app client id 
-    gitalk_client_secret : # github app client secret
+    gitalk_client_secret: # github app client secret
 
 # Search Systems
 # Available value:
