@@ -223,9 +223,9 @@ sidebar:
 # Available value of "use":
 #     disqus | disqus_click | changyan | livere | gitment | gitalk | valine
 # If you want to use gitment or gitalk,you should get the client_id and client_secret form https://github.com/settings/applications/new
-# If you want to use valine,you should get the app_id and app_key form https://leancloud.cn ,more setting please see https://github.com/xCss/Valine
+# If you want to use valine,you should get the app_id and app_key form https://leancloud.cn ,more setting please see https://valine.js.org
 comment:
-    use:
+    use: 
     shortname: # duoshuo or disqus shortname
     changyan_appid:
     changyan_conf:
@@ -235,11 +235,15 @@ comment:
     gitment_owner:  # git repo's owner
     gitment_client_id:  # github app client id 
     gitment_client_secret :  # github app client secret 
-    valine_leancloud_appId: # leancloud application app id
-    valine_leancloud_appKey: # leancloud application app key
+    valine_leancloud_appId:  # leancloud application app id
+    valine_leancloud_appKey:  # leancloud application app key
     valine_notify: false # valine mail notify (true/false) https://github.com/xCss/Valine/wiki
     valine_verify: false # valine verify code (true/false)
-    valine_placeholder: # valine comment input placeholder(like: Please leave your footprints )
+    valine_pageSize: 10 # comment list page size
+    valine_avatar: identicon # gravatar style https://valine.js.org/#/avatar
+    valine_lang: zh-cn # i18n
+    valine_placeholder: Just go go # valine comment input placeholder(like: Please leave your footprints )
+    valine_guest_info: nick,mail,link #valine comment header info
     gitalk_repo: # git repo of the hexo
     gitalk_owner: # git repo's owner
     gitalk_client_id: # github app client id 
