@@ -7,7 +7,7 @@
 > Nature, Pure | 原质，纯粹
 
 <p align="center">
-<img alt="Version" src="https://img.shields.io/badge/version-1.5.0-757575.svg?style=flat-square"/>
+<img alt="Version" src="https://img.shields.io/badge/version-1.5.2-757575.svg?style=flat-square"/>
 <a href="https://viosey.com"><img alt="Author" src="https://img.shields.io/badge/author-Viosey-red.svg?style=flat-square"/></a>
 <a href="https://hexo.io"><img alt="Hexo" src="https://img.shields.io/badge/hexo-3.0+-0e83cd.svg?style=flat-square"/></a>
 <a href="https://nodejs.org/"><img alt="node.js" src="https://img.shields.io/badge/node.js-6.0%2B-43853d.svg?style=flat-square"/></a>
@@ -31,7 +31,7 @@
 
 ## Introduction 介绍
 
-An elegant, pure & Material Design theme for Hexo.  
+An elegant, Pure & Material Design Theme for Hexo.  
 优雅、纯粹、质感的 Hexo 主题。
 
 
@@ -71,6 +71,11 @@ cd material
 git checkout {branch/tags name}
 ```
 
+----
+
+> ATTENTION! As the theme is developing, the theme config template will changes. To avoid conflict for users who are using `git pull` to upgrade the theme, we save the theme config template as `_config.template.yml`. You should make a copy of it and rename to `_config.yml`, then configure `_config.yml` when using the theme.  
+> **注意！** 在主题的开发迭代过程中，主题的配置文件模板 可能会改动。为了避免使用 `git pull` 更新主题的用户出现冲突，我们将 主题配置文件模板 命名为 `_config.template.yml`。配置主题时，你应该拷贝一份 `_config.template.yml` 并将其重命名为 `_config.yml`。
+
 ## Docs 文档
 
 [Material Theme Docs](https://material.viosey.com/docs/)
@@ -86,7 +91,7 @@ All kinds of contributions (enhancements, new features, documentation & code imp
 
 Before you start your contributing, please read the [Contributing Rules Wiki](https://github.com/viosey/hexo-theme-material/wiki) first.
 
-欢迎各种形式的贡献，包括但不限于优化，添加功能，文档 & 代码的改进，问题和 bugs 的报告。期待您的 `Pull Request`。
+欢迎各种形式的贡献，包括但不限于优化，添加功能，文档 & 代码的改进，问题和 bugs 的报告。期待你的 `Pull Request`。
 
 在参与贡献之前，请阅读[项目贡献 Wiki](https://github.com/viosey/hexo-theme-material/wiki)，了解如何为 Material 主题贡献。
 
@@ -119,16 +124,18 @@ Proudly using BrowserStack.
 
 ### jsDelivr
 
-[![](https://data.jsdelivr.com/v1/package/npm/hexo-material/badge)](https://www.jsdelivr.com/package/npm/hexo-material) 
-
 Thanks jsDelivr for providing MaterialCDN service.
 
 > **jsDelivr** – Open Source CDN. free, fast, and reliable. You can using the files from GitHub or NPM and serve them using jsDelivr.
 
-[`
-https://cdn.jsdelivr.net/gh/viosey/hexo-theme-material/source/
-`](https://cdn.jsdelivr.net/gh/viosey/hexo-theme-material/source/)
+[![](https://data.jsdelivr.com/v1/package/npm/hexo-material/badge)](https://www.jsdelivr.com/package/npm/hexo-material)
+
+[`http://cdn.jsdelivr.net/npm/hexo-material/source/`](http://cdn.jsdelivr.net/npm/hexo-material/source/)
+
+[![](https://data.jsdelivr.com/v1/package/gh/viosey/hexo-theme-material/badge)](https://www.jsdelivr.com/package/gh/viosey/hexo-theme-material)
+
+[`https://cdn.jsdelivr.net/gh/viosey/hexo-theme-material/source/`](https://cdn.jsdelivr.net/gh/viosey/hexo-theme-material/source/)
 
 ## Render 渲染
 
-![](https://qiniu.viosey.com/img/Materia-overview-tiny.png)
+![Materia-overview-tiny.png](https://i.loli.net/2017/09/28/59cccb0b25520.png)

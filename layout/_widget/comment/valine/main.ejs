@@ -1,13 +1,10 @@
 <script>
-    window.onload = function() {
-        new Valine({
-            av: AV, // source from av-min.js
-            el: '.comment',
-            notify: <%= theme.comment.valine_notify %>,
-            verify: <%= theme.comment.valine_verify %>,
-            app_id: "<%= theme.comment.valine_leancloud_appId %>",
-            app_key: "<%= theme.comment.valine_leancloud_appKey %>",
-            placeholder: "<%= theme.comment.valine_placeholder %>"
-        });
-    }
+    new Valine({
+        el: '.vcomment',
+        notify: <%= theme.comment.valine_notify %>,
+        verify: <%= theme.comment.valine_verify %>,
+        app_id: "<%= theme.comment.valine_leancloud_appId %>",
+        app_key: "<%= theme.comment.valine_leancloud_appKey %>",
+        placeholder: "<%= theme.comment.valine_placeholder %>"
+    });
 </script>
