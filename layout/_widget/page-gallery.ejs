@@ -1,7 +1,7 @@
 <% if(theme.vendors.materialcdn) { %>
-    <link rel="preload" as="style" href="<%= theme.vendors.materialcdn + '/css/gallery.min.css' %>" onload="this.rel='stylesheet'">
+    <link rel="stylesheet" href="<%= theme.vendors.materialcdn + '/css/gallery.min.css' %>">
 <% } else { %>
-    <link rel="preload" as="style" href="<%= url_for('css/gallery.min.css') %>" onload="this.rel='stylesheet'">
+    <link rel="stylesheet" href="<%= url_for('css/gallery.min.css') %>">
 <% } %>
 
 <body>
