@@ -26,12 +26,13 @@
             box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
             color: #fff;
             background-color: <%= theme.uiux.button_color %>;
-            text-shadow: 0
+            text-shadow: 0;
+            display: none
         }
 </style>
 	
 <div class="btn_click_load"> 
-    <button class="disqus_click_btn" style="display: none"><%= __('post.comments_load_button') %></button>
+    <button class="disqus_click_btn"><%= __('post.comments_load_button') %></button>
 </div>
 
 <script type="text/javascript">
@@ -52,10 +53,10 @@
             s.src = '//<%= theme.comment.shortname %>.disqus.com/embed.js';
             s.setAttribute('data-timestamp', + new Date());
             (d.head || d.body).appendChild(s);
-            $('.btn_click_load').css('display','none');
+            $('.disqus_click_btn').css('display','none');
         })(),
         error: function() {
-          $('.btn_click_load').css('display','block');
+          $('.disqus_click_btn').css('display','block');
         }
     });
     $('.btn_click_load').click(function() {  //click to load comments
@@ -66,7 +67,7 @@
             s.setAttribute('data-timestamp', + new Date());
             (d.head || d.body).appendChild(s);
         })();
-        $('.btn_click_load').css('display','none');
+        $('.disqus_click_btn').css('display','none');
     });
 </script>
   	

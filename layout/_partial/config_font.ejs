@@ -69,51 +69,13 @@
             font-weight: 500;
             src: local('Roboto MediumItalic'), local('Roboto-MediumItalic'), url('https://cdnjs.cat.net/ajax/libs/mdui/0.2.1/fonts/roboto/Roboto-MediumItalic.woff2') format('woff2'), url('https://cdnjs.cat.net/ajax/libs/mdui/0.2.1/fonts/roboto/Roboto-MediumItalic.woff') format('woff');
         }
-        @font-face {
-            font-family: 'Material Icons';
-            font-style: normal;
-            font-weight: 400;
-            src: local('Material Icons'),
-            local('MaterialIcons-Regular'),
-            url(https://cdnjs.cat.net/ajax/libs/material-design-icons/3.0.1/iconfont/MaterialIcons-Regular.woff2) format('woff2'),
-            url(https://cdnjs.cat.net/ajax/libs/material-design-icons/3.0.1/iconfont/MaterialIcons-Regular.woff) format('woff'),
-            url(https://cdnjs.cat.net/ajax/libs/material-design-icons/3.0.1/iconfont/MaterialIcons-Regular.ttf) format('truetype');
-        }
     </style>
 <% } %>
 
-<!-- Import Material Icon -->
-<% if(theme.vendors.material_icons) { %>
-    <link rel="stylesheet" href="<%= theme.vendors.material_icons %>">
-<% } else if(theme.fonts.use === "catnet") { %>
-<% } else if(theme.vendors.materialcdn) { %>
-    <style>
-        @font-face {
-            font-family: 'Material Icons';
-            font-style: normal;
-            font-weight: 400;
-            src: local('Material Icons'),
-            local('MaterialIcons-Regular'),
-            url(<%=theme.vendors.materialcdn %>/fonts/MaterialIcons-Regular.woff2) format('woff2'),
-            url(<%=theme.vendors.materialcdn %>/fonts/MaterialIcons-Regular.woff) format('woff'),
-            url(<%=theme.vendors.materialcdn %>/fonts/MaterialIcons-Regular.ttf) format('truetype');
-        }
-    </style>
-<% } else if(theme.fonts.use === "google") { %>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<% } else if(theme.fonts.use === "ustc") { %>
-    <link href="https://fonts.proxy.ustclug.org/icon?family=Material+Icons" rel="stylesheet">
+<!-- Import Material Icons -->
+
+<% if(theme.vendors.materialcdn) { %>
+    <%- cssLsload({path:(theme.vendors.materialcdn + '/css/material-icons.css'),key:'material_icons'}) %>
 <% } else { %>
-    <style>
-        @font-face {
-            font-family: 'Material Icons';
-            font-style: normal;
-            font-weight: 400;
-            src: local('Material Icons'),
-            local('MaterialIcons-Regular'),
-            url(<%- url_for('fonts/MaterialIcons-Regular.woff2') %>) format('woff2'),
-            url(<%- url_for('fonts/MaterialIcons-Regular.woff') %>) format('woff'),
-            url(<%- url_for('fonts/MaterialIcons-Regular.ttf') %>) format('truetype');
-        }
-    </style>
+    <%- cssLsload({path:('css/material-icons.css'),key:'material_icons'}) %>
 <% } %>
