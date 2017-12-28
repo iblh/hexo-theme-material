@@ -1,0 +1,11 @@
+<% var post_list = recommended_posts(page, site) %>
+<% if(post_list.length > 0) { %>
+    <div class="recommended_posts">
+        <h1><%= __('post.recommended_posts') %></h1>
+        <ul>
+            <% post_list.forEach(function(link) { %>
+                <li><a href="<%= link.permalink %>"><%= link.title %></a></li>
+            <% }) %>
+        </ul>
+    </div>
+<% } %>
