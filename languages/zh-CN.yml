@@ -13,6 +13,7 @@ post:
     comments_fully_load_button: "加载完整评论（请确保 disqus 可以正常加载）" 
     comments_proxy_load_button: "加载评论基本模式"   
     permalink: "本文链接："
+    recommended_posts: "推荐文章"
 share:
     article_rss: "文章 RSS"
     comment_rss: "评论 RSS"

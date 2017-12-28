@@ -305,3 +305,8 @@ vendors:
     prettify:
     # Material Icons 3.0.1
     material_icons:
+
+# Recommended posts
+# Dependency: https://github.com/huiwang/hexo-recommended-posts
+recommended_posts:
+  enabled: true
