@@ -12,7 +12,7 @@
 <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
     var gitment = new Gitment({
-        //id: '页面 ID', // 可选。默认为 location.href
+        id: '<%= page.permalink %>', // 可选。默认为 location.href
         owner: '<%= theme.comment.gitment_owner %>',
         repo: '<%= theme.comment.gitment_repo %>',
         oauth: {
