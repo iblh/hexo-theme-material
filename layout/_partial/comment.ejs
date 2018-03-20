@@ -1,6 +1,15 @@
-<% if(theme.comment.use === 'youyan') { %>
-    <!-- 使用多说评论 -->
-    <%- partial('_widget/youyan') %>
+<% if(theme.comment.use === 'livere') { %>
+   <!-- 使用 livere -->
+    <div id="livere-comment">
+        <%- partial('_widget/livere') %>
+    </div>
+    <style>
+        #livere-comment{
+            background-color: #eee;
+            padding: 2pc;
+        }
+    </style>
+
 <% } %>
 
 <% if(theme.comment.use === 'changyan') { %>

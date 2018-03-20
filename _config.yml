@@ -163,7 +163,8 @@ topPost: false
 # Available value of "use":
 #     duoshuo | disqus | disqus_click
 comment:
-  use: youyan
+  use: livere
+  shortname: gdzrch
 
 # Search Systems
 # Available value:
