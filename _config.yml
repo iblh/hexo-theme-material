@@ -27,8 +27,7 @@ scheme: Paradox
 # UI & UX: slogan, color, effect
 uiux:
     slogan:
-      - "功到自然成"
-      - "壁立千仞，无欲则刚"
+      - "我们可以卑微如尘土，但不可扭曲如蛆虫"
     theme_color: "#0097A7"
     theme_sub_color: "#00838F"
     hyperlink_color: "#00838F"
