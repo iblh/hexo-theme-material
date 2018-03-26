@@ -41,8 +41,8 @@
     <!-- Index nav -->
         <nav class="material-nav mdl-cell mdl-cell--12-col">
             <%- paginator({
-                prev_text: __('<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons" role="presentation">arrow_back</i></button>'),
-                next_text: __('<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons" role="presentation">arrow_forward</i></button>'),
+                prev_text: __('<button aria-label="Last page" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons" role="presentation">arrow_back</i></button>'),
+                next_text: __('<button aria-label="Next page" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons" role="presentation">arrow_forward</i></button>'),
                 space: ''
             }) %>
         </nav>
