@@ -2,24 +2,6 @@
 
 <!-- add animation -->
 <style>
-        .ripple-container {
-        }
-        .ripple-container .ripple{
-            background-color: rgba(255,255,255,0.4);
-            animation: ripple 2s forwards cubic-bezier(0, 0, 0.2, 1);
-        }
-        @keyframes ripple {
-            0% {
-                transform: scale(0);
-                opacity: 1;
-            }
-            80% {
-                transform: scale(1);
-            }
-            100% {
-                opacity: 0;
-            }
-        }
 	.disqus_click_btn {
             line-height: 30px;
             margin: 0;
@@ -44,28 +26,39 @@
             box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
             color: #fff;
             background-color: <%= theme.uiux.button_color %>;
-            text-shadow: 0
+            text-shadow: 0;
+            display: none
         }
 </style>
 	
-<!-- add data-ripple attribute -->
 <div class="btn_click_load"> 
     <button class="disqus_click_btn"><%= __('post.comments_load_button') %></button>
 </div>
-	
-<script>
-    // add effect to elements
-    Array.prototype.forEach.call(document.querySelectorAll('[data-ripple]'), function(element){
-        // find all elements and attach effect
-        new RippleEffect(element); // element is instance of javascript element node
-    });
-</script>
 
-<script>
+<script type="text/javascript">
     var disqus_config = function () {
         this.page.url = '<%= page.permalink %>';  // Replace PAGE_URL with your page's canonical URL variable
         this.page.identifier = '<%= page.permalink %>'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
+</script>
+
+<script type="text/ls-javascript" id="disqus-lazy-load-script">
+    $.ajax({
+        url: 'https://disqus.com/next/config.json',
+        timeout: 4000,
+        type: 'GET',
+        success: (function() {
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//<%= theme.comment.shortname %>.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+            $('.disqus_click_btn').css('display','none');
+        })(),
+        error: function() {
+          $('.disqus_click_btn').css('display','block');
+        }
+    });
     $('.btn_click_load').click(function() {  //click to load comments
         (function() { // DON'T EDIT BELOW THIS LINE
             var d = document;
@@ -74,7 +67,7 @@
             s.setAttribute('data-timestamp', + new Date());
             (d.head || d.body).appendChild(s);
         })();
-        $('.btn_click_load').css('display','none');
+        $('.disqus_click_btn').css('display','none');
     });
 </script>
   	

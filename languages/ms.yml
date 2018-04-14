@@ -8,7 +8,6 @@ post:
     continue: "Teruskan Membaca"
     older: "Lama"
     newer: "Baru"
-    private: "Siaran peribadi, disembunyikan buat sementara"
     qrcode: "Baca artikel ini pada peranti lain"
     comments_load_button: "Read  comments 「Pastikan 'disq.us & disquscdn.com & disqus.com' boleh dimuatkan」"    
 share:

@@ -1,4 +1,4 @@
-<script>
+<script type="text/ls-javascript" id="thumbnail-script">
     var randomNum;
 
     var locatePost = $('.locate-thumbnail-symbol').next();
@@ -6,7 +6,7 @@
         randomNum = Math.floor(Math.random() * <%= theme.thumbnail.random_amount %> + 1);
 
         locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '<%= theme.img.random_thumbnail %>' + randomNum + '.png');
+        locatePost.children('.post_thumbnail-random').attr('data-original', '<%= url_for(theme.img.random_thumbnail) %>' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
 
         locatePost = locatePost.next();

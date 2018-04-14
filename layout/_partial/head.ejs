@@ -1,8 +1,28 @@
 <head>
+    <meta charset="utf-8">
     <!--
         © Material Theme
         https://github.com/viosey/hexo-theme-material
-        Version: 1.3.4 -->
+        Version: 1.5.2 -->
+    <script>
+        window.materialVersion = "1.5.2"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <%- partial('_widget/dnsprefetch') %>
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
     <!-- Title -->
     <%
@@ -31,65 +51,17 @@
         <% } %>
         <%= config.title %>
     </title>
-
-    <!-- Meta & Info -->
-    <meta charset="utf-8">
-
-    <!-- dns prefetch -->
-    <meta http-equiv="x-dns-prefetch-control" content="on">
-    <% if(theme.materialcdn.use === true) { %>
-        <link rel="dns-prefetch" href="<%= theme.materialcdn.base %>"/>
-    <%}%>
-    <% if(theme.leancloud.enable === true) { %>
-        <link rel="dns-prefetch" href="<%= theme.leancloud.av_core_mini %>"/>
-    <% } %>
-    <% if(theme.comment.use == "changyan"){ %>
-        <link rel="dns-prefetch" href="https://changyan.sohu.com"/>
-    <% } %>
-    <% if(theme.analytics.baidu_id) { %>
-        <link rel="dns-prefetch" href="https://hm.baidu.com"/>
-    <% } %>
-    <% if(theme.analytics.google_id) { %>
-        <link rel="dns-prefetch" href="https://www.google-analytics.com"/>
-    <% } %>
-    <% if(theme.busuanzi.enable === true) { %>
-        <link rel="dns-prefetch" href="https://busuanzi.ibruce.info"/>
-    <% } %>
-
-    <meta http-equiv="X-UA-Compatible">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="<%= theme.uiux.android_chrome_color %>">
-    <meta name="author" content="<%= config.author %>">
-    <meta name="description" content="<%= config.description %>">
-    <meta name="keywords" content="<%= theme.head.keywords %><% if(page.tags && page.tags.each) { page.tags.each(function(tag) { %><%- ',' + tag.name %><% })} %>">
-
     <!-- Favicons -->
-    <link rel="icon shortcut" type="image/ico" href="<%= theme.head.favicon %>">
-    <link rel="icon" sizes="192x192" href="<%= theme.head.high_res_favicon %>">
-    <link rel="apple-touch-icon" href="<%= theme.head.apple_touch_icon %>">
+    <link rel="icon shortcut" type="image/ico" href="<%= url_for(theme.head.favicon) %>">
+    <link rel="icon" href="<%= url_for(theme.head.high_res_favicon) %>">
 
-    <!--iOS -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <meta name="apple-mobile-web-app-title" content="Title">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="HandheldFriendly" content="True">
-    <meta name="MobileOptimized" content="480">
-
-    <!-- Add to homescreen for Chrome on Android -->
-    <meta name="mobile-web-app-capable" content="yes">
-
-    <!-- Add to homescreen for Safari on iOS -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="<%= config.title %>">
-
-    <!-- The Open Graph protocol -->
-    <meta property="og:url" content="<%= config.url %>">
-    <meta property="og:type" content="blog">
-    <meta property="og:title" content="<% if (title) { %><%= title %> | <% } %><%= config.title %>">
-    <meta property="og:description" content="<%= config.description %>">
-    <% if(page.tags && page.tags.each) { page.tags.each(function(tag){ %><meta property="og:article:tag" content="<%= tag.name %>"> <% })} %>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" itemprop="description" content="<% if(page.description) { %><%= page.description %><% } else if(page.excerpt){ %><%= strip_html(page.excerpt).replace(/^s*/, '').replace(/s*$/, '') %><% } else if (config.description){ %><%= config.description %><% } %>">
+    <meta name="keywords" content="<%= theme.head.keywords %><% if(page.tags && page.tags.each) { page.tags.each(function(tag) { %><%- ',' + tag.name %><% })} %>">
+    <meta name="theme-color" content="<%= theme.uiux.android_chrome_color %>">
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
 
     <!--[if lte IE 9]>
         <link rel="stylesheet" href="/css/ie-blocker.css">
@@ -101,61 +73,119 @@
         <% } %>
     <![endif]-->
 
-    <!-- Import CSS & jQuery -->
-    <% if(theme.materialcdn.use === true) { %>
-        <link rel="stylesheet" href="<%= theme.materialcdn.base %>/css/material.min.css">
-        <link rel="stylesheet" href="<%= theme.materialcdn.base %>/css/style.min.css">
-        <%- partial('_partial/config_css') %>
-        <script src="<%= theme.materialcdn.base %>/js/jquery.min.js"></script>
-        <script src="<%= theme.materialcdn.base %>/js/queue.js"></script>
-    <%}else{%>
-        <%- css('css/material.min') %>
-        <%- css('css/style.min') %>
-        <%- partial('_partial/config_css') %>
-        <%- js('js/jquery.min') %>
-        <%- js('js/queue') %>
-    <%}%>
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
 
-    <!-- UC Browser Compatible -->
-    <script>
-        var agent = navigator.userAgent.toLowerCase();
-        if(agent.indexOf('ucbrowser')>0) {
-            document.write("<%- css('css/uc').replace(/\"/g,"\\\"") %>");
-            alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
-        }
-    </script>
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
 
-    <% if(theme.analytics.baidu_id) { %>
-    <!-- Baidu Analytics -->
-    <script>
-        var _hmt = _hmt || [];
-        (function() {var hm = document.createElement('script');
-        hm.src = 'https://hm.baidu.com/hm.js?<%= theme.analytics.baidu_id %>';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(hm, s);
-        })();
-    </script>
+    <!-- Import CSS -->
+    <% if(theme.vendors.materialcdn) { %>
+        <%- cssLsload({path:(theme.vendors.materialcdn + '/css/material.min.css'),key:'material_css'}) %>
+        <%- cssLsload({path:(theme.vendors.materialcdn + '/css/style.min.css'),key:'style_css'}) %>
+
+        <% if (theme.prettify.enable){ %>
+            <% if ( (is_post()) ) { %>
+                <%- cssLsload({path:(theme.vendors.materialcdn + '/css/prettify.min.css'),key:'prettify_css'}) %>
+                <%- cssLsload({path:(theme.vendors.materialcdn + '/css/prettify/' + theme.prettify.theme + '.min.css'),key:'prettify_theme'}) %>
+            <% } %>
+        <% } %>
+
+    <% } else { %>
+        <%- cssLsload({path:('css/material.min.css'),key:'material_css'}) %>
+        <%- cssLsload({path:('css/style.min.css'),key:'style_css'}) %>
+
+        <% if (theme.prettify.enable){ %>
+            <% if ( (is_post()) ) { %>
+                <%- cssLsload({path:('css/prettify.min.css'),key:'prettify_css'}) %>
+                <%- cssLsload({path:('css/prettify/' + theme.prettify.theme + '.min.css'),key:'prettify_theme'}) %>
+            <% } %>
+        <% } %>
+
     <% } %>
 
-    <% if(theme.analytics.google_id) { %>
-    <!-- Google Analytics -->
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-        ga('create', '<%= theme.analytics.google_id %>', 'auto');ga('send', 'pageview');
-    </script>
+    <% if(theme.scheme === 'Isolation') { %>
+        <% if(theme.vendors.fontawesome) { %>
+            <link rel="stylesheet" href="<%= theme.vendors.fontawesome %>">
+        <% } else if(theme.vendors.materialcdn) { %>
+            <link rel="stylesheet" href="<%= theme.vendors.materialcdn %>/css/fontawesome.min.css">
+        <% } else { %>
+            <link rel="stylesheet" href="<%= url_for('css/fontawesome.min.css') %>">
+        <% } %>
     <% } %>
 
+    <%- partial('_partial/config_css') %>
 
-    <!-- Bing Background -->
-    <% if(theme.background.bing.enable) { %>
-        <script type="text/javascript">
-            queue.offer(function(){
-                $('body').attr('data-original', 'https://api.i-meto.com/bing?<%= theme.background.bing.parameter %>');
-            });
-        </script>
+    <!-- Import jQuery -->
+    <% if(theme.vendors.jquery) { %>
+        <%- jsLsload({path:(theme.vendors.jquery),key:'jq_js'}) %>
+    <% } else if(theme.vendors.materialcdn) { %>
+        <%- jsLsload({path:(theme.vendors.materialcdn + '/js/jquery.min.js'),key:'jq_js'}) %>
+    <% } else { %>
+        <%- jsLsload({path:('js/jquery.min.js'),key:'jq_js'}) %>
+    <% } %>
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="<%= config.title %>">
+    <meta name="msapplication-starturl" content="<%= config.url + url_for(page.path).replace('index.html', '') %>">
+    <meta name="msapplication-navbutton-color" content="<%= theme.uiux.android_chrome_color %>">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="<%= config.title %>">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="<%= url_for(theme.head.apple_touch_icon) %>">
+
+    <!-- Site Verification -->
+    <% if(theme.head.site_verification.google) { %><meta name="google-site-verification" content="<%= theme.head.site_verification.google %>" /><% } %>
+    <% if(theme.head.site_verification.baidu) { %><meta name="baidu-site-verification" content="<%= theme.head.site_verification.baidu %>" /><% } %>
+
+    <!-- RSS -->
+    <% if(theme.url.rss) { %>
+        <% if(config.feed.type == "atom"){ %>
+            <link rel=alternate type="application/atom+xml" href="<%= theme.url.rss || '#' %>">
+        <% } else if(config.feed.type == "rss2") { %>
+            <link rel=alternate type="application/rss+xml" href="<%= theme.url.rss || '#' %>">
+        <% } else { %>
+        <% } %>
+    <% } %>
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="<%= config.url + url_for(page.path).replace('index.html', '') %>">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="<% if (title) { %><%= title %> | <% } %><%= config.title %>">
+    <meta property="og:image" content="<%= url_for(theme.head.high_res_favicon) %>">
+    <meta property="og:description" content="<% if(page.description) { %><%= page.description %><% } else if(page.excerpt){ %><%= strip_html(page.excerpt).replace(/^s*/, '').replace(/s*$/, '') %><% } else if (config.description){ %><%= config.description %><% } %>">
+    <% if(page.tags && page.tags.each) { page.tags.each(function(tag){ %><meta property="og:article:tag" content="<%= tag.name %>"> <% })} %>
+
+    <% if( (is_post()) ) { %>
+        <meta property="article:published_time" content="<%= page.date %>">
+        <meta property="article:modified_time" content="<%= page.updated %>">
+    <% } %>
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    <% if( (page.current === 1) && (is_home()) ) { %>
+        <link rel="canonical" href="<%- config.url %>" />
+    <% } else { %>
+        <link rel="canonical" href="<%- config.url + url_for(path) %>" />
+    <% } %>
+
+    <!-- Structured-data for SEO -->
+    <% if(theme.head.structured_data === true) { %>
+        <%- partial('_partial/structured-data') %>
+    <% } %>
+
+    <!-- Analytics -->
+    <% if(theme.analytics.google_site_id) { %>
+        <%- partial('_widget/analytics/google-analytics') %>
+    <% } %>
+    <% if(theme.analytics.baidu_site_id) { %>
+        <%- partial('_widget/analytics/baidu-analytics') %>
+    <% } %>
+    <% if(theme.analytics.cnzz_site_id) { %>
+        <%- partial('_widget/analytics/cnzz-analytics') %>
     <% } %>
 
     <!-- Custom Head -->
@@ -164,4 +194,5 @@
             <%- site.data.head[i] %>
         <% } %>
     <% } %>
+
 </head>

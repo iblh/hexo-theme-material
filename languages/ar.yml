@@ -8,9 +8,9 @@ post:
     continue: "واصل القراءة"
     older: "أقدم"
     newer: "أحدث"
-    private: "منشور خاص, مخفي مؤقتا"
     qrcode: "اقرأ هذا المقال على جهاز آخر"
     comments_load_button: "قراءة تعليقات 「تأكد !disq.us & disquscdn.com & disqus.com يمكن تحميل」"
+    permalink: " هذا الرابط "
 share:
     article_rss: "مقالات RSS"
     comment_rss: "تعليقات RSS"

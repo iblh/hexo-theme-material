@@ -8,9 +8,11 @@ post:
     continue: "阅读全文"
     older: "旧篇"
     newer: "新篇"
-    private: "私有文章，暂不公开"
     qrcode: "在其它设备中阅读本文章"
-    comments_load_button: "阅读评论 「请确保 disq.us & disquscdn.com & disqus.com 可以正常加载」"    
+    comments_load_button: "阅读评论（请确保 disqus 可以正常加载）"    
+    comments_fully_load_button: "加载完整评论（请确保 disqus 可以正常加载）" 
+    comments_proxy_load_button: "加载评论基本模式"   
+    permalink: "本文链接："
 share:
     article_rss: "文章 RSS"
     comment_rss: "评论 RSS"
