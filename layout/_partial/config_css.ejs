@@ -1,10 +1,14 @@
 <!-- Config CSS -->
 
-
 <!-- Other Styles -->
 <style>
   body, html {
-    font-family: <%- theme.fonts %>;
+    font-family: <%- theme.fonts.family %>;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
   }
 
   a {
@@ -117,3 +121,6 @@
       }
     </style>
 <% } %>
+
+<!-- Import Font -->
+<%- partial('_partial/config_font') %>

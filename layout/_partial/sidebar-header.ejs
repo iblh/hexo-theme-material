@@ -1,4 +1,4 @@
-<div class="sidebar-header header-cover" style="background-image: url(<%= theme.img.sidebar_header %>);">
+<div class="sidebar-header header-cover" style="background-image: url(<%= url_for(theme.img.sidebar_header) %>);">
     <!-- Top bar -->
     <div class="top-bar"></div>
 
@@ -13,7 +13,7 @@
 
     <!-- Sidebar Avatar -->
     <div class="sidebar-image">
-        <img src="<%= theme.img.avatar %>" alt="<%= config.author %>'s avatar">
+        <img src="<%= url_for(theme.img.avatar) %>" alt="<%= config.author %>'s avatar">
     </div>
 
     <!-- Sidebar Email -->

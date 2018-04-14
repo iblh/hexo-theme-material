@@ -2,7 +2,7 @@
 <div class="mdl-card <% if(theme.card_elevation) { %><%= 'mdl-shadow--' + theme.card_elevation + 'dp' %><% } %> daily-pic mdl-cell mdl-cell--8-col index-top-block">
 
     <!-- Pic & Slogan -->
-    <div class="mdl-card__media mdl-color-text--grey-50" style="background-image:url(<%= theme.img.daily_pic %>)">
+    <div class="mdl-card__media mdl-color-text--grey-50" style="background-image:url(<%= url_for(theme.img.daily_pic) %>)">
         <p class="index-top-block-slogan"><a href="<%= theme.url.daily_pic %>">
         <% if(theme.uiux.slogan) { %>
             <% if(Array.isArray(theme.uiux.slogan)) { %>
@@ -18,7 +18,7 @@
     <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
         <!-- Author Avatar -->
         <div id="author-avatar">
-            <img src="<%= theme.img.avatar %>" width="32px" height="32px" alt="avatar">
+            <img src="<%= url_for(theme.img.avatar) %>" width="32px" height="32px" alt="avatar">
         </div>
         <div>
             <strong><%= config.author %></strong>

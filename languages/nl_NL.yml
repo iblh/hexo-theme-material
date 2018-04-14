@@ -1,0 +1,29 @@
+sidebar:
+    homepage: "Home"
+    archive: "Archief"
+    article_num: "Aantal artikelen"
+post:
+    visitor: "Bezoekers"
+    views: "Bekeken"
+    continue: "Lees meer"
+    older: "Ouder"
+    newer: "Nieuwer"
+    qrcode: "Lees dit artikel op andere apparaten"
+    comments_load_button: "Lees reacties (Zorg dat disq.us, disquscdn.com en disqus.com correct geladen kunnen worden)"
+    permalink: "Link naar dit artikel: "
+share:
+    article_rss: "Artikel RSS"
+    comment_rss: "Reactie RSS"
+    toTwitter: "Deel op Twitter"
+    toFacebook: "Deel op Facebook"
+    toLinkedIn: "Deel op LinkedIn"
+    toTelegram: "Deel via Telegram"
+    toGplus: "Deel op Google+"
+    toWeibo: "Deel op Weibo"
+    toQQ: "Deel via QQ"
+title:
+    category: "Categorieën"
+    tag: "Label"
+misc:
+    home: "Home"
+    theme: "Thema"

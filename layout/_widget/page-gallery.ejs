@@ -1,8 +1,8 @@
-<% if(theme.materialcdn.use === true) { %>
-    <link rel="stylesheet" href="<%= theme.materialcdn.base %>/css/gallery.min.css">
-<%}else{%>
-    <%- css('css/gallery.min') %>
-<%}%>
+<% if(theme.vendors.materialcdn) { %>
+    <link rel="stylesheet" href="<%= theme.vendors.materialcdn + '/css/gallery.min.css' %>">
+<% } else { %>
+    <link rel="stylesheet" href="<%= url_for('css/gallery.min.css') %>">
+<% } %>
 
 <body>
     <!-- Wrapper -->
@@ -88,22 +88,30 @@
     </div>
 
     <!-- Scripts -->
-    <% if(theme.materialcdn.use === true) { %>
-        <script src="<%= theme.materialcdn.base %>/js/jquery.min.js"></script>
-        <script src="<%= theme.materialcdn.base %>/js/gallery/gallery.js"></script>
-        <script src="<%= theme.materialcdn.base %>/js/lazyload.min.js"></script>
-    <%}else{%>
-        <%- js('js/jquery.min') %>
-        <%- js('js/gallery/gallery') %>
-        <%- js('js/lazyload.min') %>
-    <%}%>
+    <% if(theme.vendors.materialcdn) { %>
+        <script src="<%= theme.vendors.materialcdn + '/js/gallery/gallery.js' %>"></script>
+    <% } else { %>
+        <script src="<%= url_for('js/gallery/gallery.js') %>"></script>
+    <% } %>
 
-    <script type="text/javascript">
+    <% if(theme.vendors.materialcdn) { %>
+        <%- jsLsload({path:(theme.vendors.materialcdn + '/js/lazyload.min.js'),key:'lazyload_js'}) %>
+    <% } else { %>
+        <%- jsLsload({path:('js/lazyload.min.js'),key:'lazyload_js'}) %>
+    <% } %>
+
+    <script>
         queue.offer(function(){
             $('.lazy').lazyload({
               effect: 'fadeIn',
               event: 'scrollstop'
             });
         })
+        <!-- Start Queue -->
+        $(document).ready(function(){
+            setInterval(function(){
+                queue.execNext();
+            },200);
+        });
     </script>
 </body>
