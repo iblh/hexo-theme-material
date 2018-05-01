@@ -144,6 +144,16 @@ hanabi:
 # You can also use Front-Matter `license` to override this setting.
 license:
 
+# Gallery Panel
+# You must activate Formspree before using
+gallery:
+    panel_show: false
+    left_show: true
+    left_title: Introduction
+    left_info: This is a Example.
+    right_show: true
+    right_title: Get in touch
+
 # ---------------------------------------------------------------
 # Menu Settings
 # ---------------------------------------------------------------
@@ -222,7 +232,7 @@ sidebar:
 
 # Comment Systems
 # Available value of "use":
-#     disqus | disqus_click | changyan | livere | gitment | gitalk | valine
+#     disqus | disqus_click | changyan | livere | gitment | gitalk | valine | wildfire
 # If you want to use gitment or gitalk,you should get the client_id and client_secret from https://github.com/settings/applications/new
 # If you want to use valine,you should get the app_id and app_key from https://leancloud.cn ,more setting please see https://valine.js.org
 comment:
@@ -249,6 +259,16 @@ comment:
     gitalk_owner: # git repo's owner
     gitalk_client_id: # github app client id
     gitalk_client_secret: # github app client secret
+    wildfire_database_provider: firebase # firebase or wilddog
+    wildfire_wilddog_site_id:
+    wildfire_firebase_api_key:
+    wildfire_firebase_auth_domain:
+    wildfire_firebase_database_url:
+    wildfire_firebase_project_id:
+    wildfire_firebase_storage_bucket:
+    wildfire_firebase_messaging_sender_id:
+    wildfire_theme: light # light or dark
+    wildfire_locale: en # en or zh-CN
 
 # Search Systems
 # Available value:
