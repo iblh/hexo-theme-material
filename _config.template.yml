@@ -144,6 +144,16 @@ hanabi:
 # You can also use Front-Matter `license` to override this setting.
 license:
 
+# Gallery Panel
+# You must activate Formspree before using
+gallery:
+    panel_show: false
+    left_show: true
+    left_title: Introduction
+    left_info: This is a Example.
+    right_show: true
+    right_title: Get in touch
+
 # ---------------------------------------------------------------
 # Menu Settings
 # ---------------------------------------------------------------
