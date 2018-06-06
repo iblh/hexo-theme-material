@@ -10,8 +10,12 @@
     var id = location.pathname;
 
     if (Date.parse('<%= page.date %>') - Date.parse('2018-03-01') > 0 ||
-        '<%= typeof page["gitalk"]!=="undefined"?"true":"false" %>' !== 'true') {
+        '<%=  page.gitalk =="md5" ?"true":"false" %>' === 'true') {
         id = md5(location.pathname)
+    }
+
+    if ('<%= page.gitalk =="plaintext"?"true":"false" %>' === 'true') {
+        id = location.pathname;
     }
 
     var gitalk = new Gitalk({
