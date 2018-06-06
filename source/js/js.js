@@ -2278,7 +2278,7 @@ $(document).ready(function() {
         function() {
             var child;
 
-            child = this.childNodes[0].classList;
+            child = document.getElementById("MD-burger-id").classList;
 
             if (child.contains('MD-burger-arrow')) {
                 child.remove('MD-burger-arrow');
