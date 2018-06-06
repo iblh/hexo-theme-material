@@ -4,16 +4,25 @@
 <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
 
 <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script>
 
 <script>
+    var id = location.pathname;
+
+    if (Date.parse('<%= page.date %>') - Date.parse('2018-03-01') > 0 ||
+        '<%= typeof page["gitalk"]!=="undefined"?"true":"false" %>' !== 'true') {
+        id = md5(location.pathname)
+    }
+
     var gitalk = new Gitalk({
-            clientID: '<%= theme.comment.gitalk_client_id %>',
-            clientSecret: '<%= theme.comment.gitalk_client_secret %>',
-            repo: '<%= theme.comment.gitalk_repo %>',
-            owner: '<%= theme.comment.gitalk_owner %>',
-            admin: ['<%= theme.comment.gitalk_owner %>'],
-            // facebook-like distraction free mode
-            distractionFreeMode: false
-        })
-   gitalk.render('gitalk-container')
+        clientID: '<%= theme.comment.gitalk_client_id %>',
+        clientSecret: '<%= theme.comment.gitalk_client_secret %>',
+        repo: '<%= theme.comment.gitalk_repo %>',
+        owner: '<%= theme.comment.gitalk_owner %>',
+        admin: ['<%= theme.comment.gitalk_owner %>'],
+        id: id,
+        // facebook-like distraction free mode
+        distractionFreeMode: false
+    })
+    gitalk.render('gitalk-container')
 </script>
