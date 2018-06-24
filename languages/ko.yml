@@ -1,0 +1,28 @@
+sidebar:
+    homepage: "홈"
+    archive: "작성목록"
+    article_num: "글번호"
+post:
+    visitor: "방문자"
+    views: "뷰"
+    continue: "더보기"
+    older: "이전"
+    newer: "다음"
+    qrcode: "다른 기기로 글 보기"
+    comments_load_button: "댓글 읽기 (디스커스를 로드합니다.)"
+share:
+    article_rss: "글 RSS"
+    comment_rss: "댓글 RSS"
+    toTwitter: "Twitter로 공유"
+    toFacebook: "Facebook으로 공유"
+    toLinkedIn: "LinkedIn으로 공유"
+    toTelegram: "텔레그램으로 공유"
+    toGplus: "Google+로 공유"
+    toWeibo: "Weibo로 공유"
+    toQQ: "QQ로 공유"
+title:
+    category: "카테고리"
+    tag: "태그"
+misc:
+    home: "홈"
+    theme: "테마"
