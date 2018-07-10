@@ -33,7 +33,7 @@ scheme: Paradox
 
 # UI & UX: slogan, color, effect
 uiux:
-    slogan: "Hi, nice to meet you"
+    slogan: "我们可以卑微如尘土，但不可扭曲如蛆虫"
     theme_color: "#0097A7"
     theme_sub_color: "#00838F"
     hyperlink_color: "#00838F"
@@ -122,8 +122,8 @@ qrcode:
 #    Prettify
 #        theme: # Available value in /source/css/prettify/[theme].min.css
 prettify:
-    enable: false
-    theme: "github-v2"
+    enable: true
+    theme: "tranquil-heart"
 
 #    Hanabi (https://github.com/egoist/hanabi)
 #        line_number: [true/false] # Show line number for code block
@@ -157,14 +157,14 @@ toc:
 
 # SNS Menu
 sns:
-    email: youremail@email.com
-    facebook: "https://www.facebook.com/facebook"
-    twitter: "https://twitter.com/twitter"
-    googleplus: "https://www.google.com/"
+    email: Mybrc91@gmail.com
+    facebook:
+    twitter:
+    googleplus:
     weibo:
     instagram:
     tumblr:
-    github:
+    github: https://github.com/Mybrc91
     linkedin:
     zhihu:
     bilibili:
@@ -185,7 +185,7 @@ sns_share:
 sidebar:
     dropdown:
         Email Me:
-            link: "#"
+            link: "mailto:Mybrc91@gmail.com"
             icon: email
     homepage:
         use: true
@@ -196,16 +196,20 @@ sidebar:
         icon: inbox
         divider: false
     categories:
-        use: false
+        use: true
         icon: chrome_reader_mode
         divider: false
+    tags:
+        use: true
+        icon: bookmark
+        divider: false
     pages:
-        #About:
-            #link: "/about"
-            #icon: person
-            #divider: false
+        About Me:
+            link: "/about.html"
+            icon: person
+            divider: false
     article_num:
-        use: false
+        use: true
         divider: false
     footer:
         divider: true
@@ -232,12 +236,12 @@ materialcdn:
 # If you want to use gitment or gitalk,you should get the client_id and client_secret form https://github.com/settings/applications/new
 # If you want to use valine,you should get the app_id and app_key form https://leancloud.cn ,more setting please see https://valine.js.org
 comment:
-    use:
-    shortname: # duoshuo or disqus shortname
+    use: livere
+    shortname: gdzrch
     changyan_appid:
     changyan_conf:
     changyan_thread_key_type: path
-    livere_data_uid:
+    livere_data_uid: MTAyMC8zNDc1Mi8xMTI4OQ==
     gitment_repo:   # git repo of the hexo
     gitment_owner:  # git repo's owner
     gitment_client_id:  # github app client id

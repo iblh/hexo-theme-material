@@ -2,10 +2,13 @@
 
 npm-debug.log
 
-_config.yml
 
 node_modules
 
 .idea
 
+
+gulpfile.js
+
 .directory
+

@@ -83,7 +83,7 @@
 <script type="text/ls-javascript" id="window-load">
     $(window).on('load', function() {
         // Post_Toc parent position fixed
-        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed').css('overflow',"auto").css('max-height','70%');
     });
 
     <% if (theme.prettify.enable) { %>

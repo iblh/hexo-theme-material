@@ -29,9 +29,11 @@
 - [Render 渲染](#render-渲染)
 
 
+
+
 ## Introduction 介绍
 
-An elegant, Pure & Material Design Theme for Hexo.  
+An elegant, Pure & Material Design Theme for Hexo.
 优雅、纯粹、质感的 Hexo 主题。
 
 
@@ -46,22 +48,22 @@ An elegant, Pure & Material Design Theme for Hexo.
 
 #### [Download latest release version](https://github.com/viosey/hexo-theme-material/releases/latest)
 
-> Should be the most stable. Recommended for most users.  
+> Should be the most stable. Recommended for most users.
 > 最稳定的版本，适合所有的用户。
 
 #### [Download latest canary branch](https://github.com/viosey/hexo-theme-material/archive/canary.zip)
 
-> Maybe unstable, but includes latest features. Recommended for developers.  
+> Maybe unstable, but includes latest features. Recommended for developers.
 > 包含最新的、尚在开发中的特性，可能不稳定；适合进阶用户。
 
 #### [Download other version](https://github.com/viosey/hexo-theme-material/releases)
 
-> You can decide which version to use. May no longer provide support.  
+> You can decide which version to use. May no longer provide support.
 > 你可以自己决定想要使用的版本；部分版本可能不再提供技术支持。
 
 #### [Download using git](https://github.com/viosey/hexo-theme-material/releases)
 
-> You can using git to choose which branch you want. For developer only.  
+> You can using git to choose which branch you want. For developer only.
 > 你可以自己决定想要使用的分支；仅限开发者使用。
 
 ```bash
@@ -73,9 +75,8 @@ git checkout {branch/tags name}
 
 ----
 
-> ATTENTION! As the theme is developing, the theme config template will changes. To avoid conflict for users who are using `git pull` to upgrade the theme, we save the theme config template as `_config.template.yml`. You should make a copy of it and rename to `_config.yml`, then configure `_config.yml` when using the theme.  
+> ATTENTION! As the theme is developing, the theme config template will changes. To avoid conflict for users who are using `git pull` to upgrade the theme, we save the theme config template as `_config.template.yml`. You should make a copy of it and rename to `_config.yml`, then configure `_config.yml` when using the theme.
 > **注意！** 在主题的开发迭代过程中，主题的配置文件模板 可能会改动。为了避免使用 `git pull` 更新主题的用户出现冲突，我们将 主题配置文件模板 命名为 `_config.template.yml`。配置主题时，你应该拷贝一份 `_config.template.yml` 并将其重命名为 `_config.yml`。
-
 ## Docs 文档
 
 [Material Theme Docs](https://material.viosey.com/docs/)
