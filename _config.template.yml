@@ -135,14 +135,24 @@ hanabi:
     enable: false
     line_number: true
     includeDefaultColors: true
-    customColors: 
+    customColors:
 
 # Post License
 # You can specify the text you want to show in the end of your posts and pages, HTML tag is supported.
 #   For example, you can setup a CC license as:
 #       'This blog is under a <a href="/creativecommons.html" target="_blank">CC BY-NC-SA 3.0 Unported License</a>'
 # You can also use Front-Matter `license` to override this setting.
-license: 
+license:
+
+# Gallery Panel
+# You must activate Formspree before using
+gallery:
+    panel_show: false
+    left_show: true
+    left_title: Introduction
+    left_info: This is a Example.
+    right_show: true
+    right_title: Get in touch
 
 # ---------------------------------------------------------------
 # Menu Settings
@@ -170,6 +180,7 @@ sns:
     bilibili:
     telegram:
     v2ex:
+    segmentfault:
 
 # SNS Share Switch
 sns_share:
@@ -221,11 +232,11 @@ sidebar:
 
 # Comment Systems
 # Available value of "use":
-#     disqus | disqus_click | changyan | livere | gitment | gitalk | valine
-# If you want to use gitment or gitalk,you should get the client_id and client_secret form https://github.com/settings/applications/new
-# If you want to use valine,you should get the app_id and app_key form https://leancloud.cn ,more setting please see https://valine.js.org
+#     disqus | disqus_click | changyan | livere | gitment | gitalk | valine | wildfire
+# If you want to use gitment or gitalk,you should get the client_id and client_secret from https://github.com/settings/applications/new
+# If you want to use valine,you should get the app_id and app_key from https://leancloud.cn ,more setting please see https://valine.js.org
 comment:
-    use: 
+    use:
     shortname: # duoshuo or disqus shortname
     changyan_appid:
     changyan_conf:
@@ -233,8 +244,8 @@ comment:
     livere_data_uid:
     gitment_repo:   # git repo of the hexo
     gitment_owner:  # git repo's owner
-    gitment_client_id:  # github app client id 
-    gitment_client_secret :  # github app client secret 
+    gitment_client_id:  # github app client id
+    gitment_client_secret :  # github app client secret
     valine_leancloud_appId:  # leancloud application app id
     valine_leancloud_appKey:  # leancloud application app key
     valine_notify: false # valine mail notify (true/false) https://github.com/xCss/Valine/wiki
@@ -246,8 +257,18 @@ comment:
     valine_guest_info: nick,mail,link #valine comment header info
     gitalk_repo: # git repo of the hexo
     gitalk_owner: # git repo's owner
-    gitalk_client_id: # github app client id 
+    gitalk_client_id: # github app client id
     gitalk_client_secret: # github app client secret
+    wildfire_database_provider: firebase # firebase or wilddog
+    wildfire_wilddog_site_id:
+    wildfire_firebase_api_key:
+    wildfire_firebase_auth_domain:
+    wildfire_firebase_database_url:
+    wildfire_firebase_project_id:
+    wildfire_firebase_storage_bucket:
+    wildfire_firebase_messaging_sender_id:
+    wildfire_theme: light # light or dark
+    wildfire_locale: en # en or zh-CN
 
 # Search Systems
 # Available value:
