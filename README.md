@@ -7,7 +7,7 @@
 > Nature, Pure | 原质，纯粹
 
 <p align="center">
-<img alt="Version" src="https://img.shields.io/badge/version-1.5.2-757575.svg?style=flat-square"/>
+<img alt="Version" src="https://img.shields.io/badge/version-1.5.5-757575.svg?style=flat-square"/>
 <a href="https://viosey.com"><img alt="Author" src="https://img.shields.io/badge/author-Viosey-red.svg?style=flat-square"/></a>
 <a href="https://hexo.io"><img alt="Hexo" src="https://img.shields.io/badge/hexo-3.0+-0e83cd.svg?style=flat-square"/></a>
 <a href="https://nodejs.org/"><img alt="node.js" src="https://img.shields.io/badge/node.js-6.0%2B-43853d.svg?style=flat-square"/></a>
