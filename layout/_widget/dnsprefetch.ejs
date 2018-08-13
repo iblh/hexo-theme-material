@@ -18,7 +18,7 @@
 <% } else if(theme.comment.use === "valine") { %>
     <link rel="dns-prefetch" href="https://cdn1.lncld.net"/>
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net"/>
-<% } else if(theme.comment.use.startsWith("disqus")) { %>
+<% } else if(theme.comment.use && theme.comment.use.startsWith("disqus")) { %>
     <link rel="dns-prefetch" href="https://<%= theme.comment.shortname %>.disqus.com"/>
 <% } %>
 
