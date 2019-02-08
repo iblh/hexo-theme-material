@@ -181,6 +181,7 @@ sns:
     telegram:
     v2ex:
     segmentfault:
+    plurk:
 
 # SNS Share Switch
 sns_share:
