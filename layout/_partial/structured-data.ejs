@@ -48,7 +48,7 @@
             "url": "<%= theme.head.high_res_favicon %>"
         }
     },
-    "keywords": "<% if(page.tags && page.tags.each) { page.tags.each(function(tag) { %><%- ',' + tag.name %><% })} %><%= theme.head.keywords %>",
+    "keywords": "<% if(page.tags && page.tags.each) { page.tags.each(function(tag) { %><%- tag.name + ',' %><% })} %><%= theme.head.keywords %>",
     "description": "<% if(page.description) { %><%= page.description %><% } else if(page.excerpt){ %><%= strip_html(page.excerpt).replace(/^s*/, '').replace(/s*$/, '') %><% } else if (config.description){ %><%= config.description %><% } %>"
 }
 </script>
