@@ -48,6 +48,10 @@
             "url": "<%= theme.head.high_res_favicon %>"
         }
     },
+    "image": {
+        "@type": "ImageObject",
+        "url": "<% if(page.thumbnail) { %><%= page.thumbnail %><% } else { %><%= url_for(theme.img.random_thumbnail)+Math.floor(Math.random() * theme.thumbnail.random_amount + 1)+'.png' %><% } %>"
+    },
     "keywords": "<% if(page.tags && page.tags.each) { page.tags.each(function(tag) { %><%- tag.name + ',' %><% })} %><%= theme.head.keywords %>",
     "description": "<% if(page.description) { %><%= page.description %><% } else if(page.excerpt){ %><%= strip_html(page.excerpt).replace(/^s*/, '').replace(/s*$/, '') %><% } else if (config.description){ %><%= config.description %><% } %>"
 }
