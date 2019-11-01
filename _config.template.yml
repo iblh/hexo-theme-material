@@ -269,6 +269,9 @@ comment:
     wildfire_firebase_messaging_sender_id:
     wildfire_theme: light # light or dark
     wildfire_locale: en # en or zh-CN
+    utterances_repo: # your github repo
+    utterances_issue_term: title # how utterances create issue title 
+    utterances_theme: github-light # utterance style
 
 # Search Systems
 # Available value:
