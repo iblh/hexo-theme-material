@@ -236,7 +236,7 @@ sidebar:
 # If you want to use gitment or gitalk,you should get the client_id and client_secret from https://github.com/settings/applications/new
 # If you want to use valine,you should get the app_id and app_key from https://leancloud.cn ,more setting please see https://valine.js.org
 comment:
-    use:
+    use: disqus
     shortname: # duoshuo or disqus shortname
     changyan_appid:
     changyan_conf:

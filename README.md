@@ -20,8 +20,8 @@
 
 - [Introduction 介绍](#introduction-介绍)
 - [Demo 演示](#demo-演示)
-- [Download 下载](#download-下载)
 - [Docs 文档](#docs-文档)
+- [Download 下载](#download-下载)
 - [Contributing 贡献](#contributing-贡献)
 - [License 许可证](#license-许可证)
 - [Changelog 更新日志](#changelog-更新日志)
@@ -37,9 +37,14 @@ An elegant, Pure & Material Design Theme for Hexo.
 
 ## Demo 演示
 
-- [Viosey's Blog](https://blog.viosey.com)
-- [neoFelhz's Blog](https://blog.nfz.moe)
-- [liyin's Blog](https://liyin.date)
+- [Material Demo](https://viosey.github.io/material-demo/)
+
+
+## Docs 文档
+
+[Material Docs 主题文档](https://neko-dev.github.io/material-theme-docs/#/)
+
+> [Docs Source Code 主题源码](https://github.com/neko-dev/material-theme-docs)
 
 
 ## Download 下载
@@ -75,14 +80,6 @@ git checkout {branch/tags name}
 
 > ATTENTION! As the theme is developing, the theme config template will changes. To avoid conflict for users who are using `git pull` to upgrade the theme, we save the theme config template as `_config.template.yml`. You should make a copy of it and rename to `_config.yml`, then configure `_config.yml` when using the theme.  
 > **注意！** 在主题的开发迭代过程中，主题的配置文件模板 可能会改动。为了避免使用 `git pull` 更新主题的用户出现冲突，我们将 主题配置文件模板 命名为 `_config.template.yml`。配置主题时，你应该拷贝一份 `_config.template.yml` 并将其重命名为 `_config.yml`。
-
-## Docs 文档
-
-[Material Theme Docs](https://material.viosey.com/docs/)
-
-[Material 主题文档](https://material.viosey.com/docs/)
-
-> [Docs Source Code](https://github.com/neko-dev/material-theme-docs)
 
 
 ## Contributing 贡献
