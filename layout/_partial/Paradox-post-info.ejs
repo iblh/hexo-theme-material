@@ -2,7 +2,7 @@
 
     <!-- Author Avatar -->
     <div id="author-avatar">
-        <img src="<%- theme.img.avatar %>" width="44px" height="44px" alt="Author Avatar"/>
+        <img src="<%- url_for(theme.img.avatar) %>" width="44px" height="44px" alt="Author Avatar"/>
     </div>
     <!-- Author Name & Date -->
     <div>
@@ -26,7 +26,7 @@
     <% } %>
 
     <!-- Tags (bookmark) -->
-    <% if(page.notag !== true) { %>
+    <% if (page.tags && page.tags.length) { %>
     <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
         <i class="material-icons" role="presentation">bookmark</i>
         <span class="visuallyhidden">bookmark</span>
@@ -43,5 +43,7 @@
     <% } %>
 
     <!-- Share -->
-    <%- partial('_partial/post-info-share') %>
+    <% if(page.hide_share !== true) { %>
+        <%- partial('_partial/post-info-share') %>
+    <% } %>
 </div>

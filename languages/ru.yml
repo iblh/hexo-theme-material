@@ -1,0 +1,29 @@
+sidebar:
+    homepage: "Главная страница"
+    archive: "Архив"
+    article_num: "Количество статей"
+post:
+    visitor: "Посетители"
+    views: "Просмотры"
+    continue: "Читать далее"
+    older: "Старые"
+    newer: "Новые"
+    qrcode: "Читать эту статью на другом устройстве"
+    comments_load_button: "Читать комментарии (Убедитесь, что disq.us, disquscdn.com и disqus.com могут корректно загрузиться)"    
+    permalink: "Ссылка на эту статью: "
+share:
+    article_rss: "RSS статьи"
+    comment_rss: "RSS комментариев"
+    toTwitter: "Поделиться на Twitter"
+    toFacebook: "Поделиться на Facebook"
+    toLinkedIn: "Поделиться на LinkedIn"
+    toTelegram: "Поделиться на Telegram"
+    toGplus: "Поделиться на Google+"
+    toWeibo: "Поделиться на Weibo"
+    toQQ: "Поделиться на QQ"
+title:
+    category: "Категории"
+    tag: "Тег"
+misc:
+    home: "Главная"
+    theme: "Тема"

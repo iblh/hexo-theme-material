@@ -1,8 +1,8 @@
-<% if(theme.materialcdn.use === true) { %>
-    <link rel="stylesheet" href="<%= theme.materialcdn.base %>/css/gallery.min.css">
-<%}else{%>
-    <%- css('css/gallery.min') %>
-<%}%>
+<% if(theme.vendors.materialcdn) { %>
+    <link rel="stylesheet" href="<%= theme.vendors.materialcdn + '/css/gallery.min.css' %>">
+<% } else { %>
+    <link rel="stylesheet" href="<%= url_for('css/gallery.min.css') %>">
+<% } %>
 
 <body>
     <!-- Wrapper -->
@@ -37,42 +37,33 @@
             <% } %>
         </div>
         <!-- Footer -->
-        <!--
+        <% if(theme.gallery.panel_show === true) { %>
         <footer id="footer" class="panel">
           <div class="inner split">
+		  <% if(theme.gallery.left_show === true) { %>
             <div>
               <section>
-                <h2>Magna feugiat sed adipiscing</h2>
-                <p>Nulla consequat, ex ut suscipit rutrum, mi dolor tincidunt erat, et scelerisque turpis ipsum eget quis orci mattis aliquet. Maecenas fringilla et ante at lorem et ipsum. Dolor nulla eu bibendum sapien. Donec non pharetra dui. Nulla consequat, ex ut suscipit rutrum, mi dolor tincidunt erat, et scelerisque turpis ipsum.</p>
+                <h2><%= theme.gallery.left_title %></h2>
+                <p><%= theme.gallery.left_info %></p>
               </section>
-              <section>
-                <h2>Follow me on ...</h2>
-                <ul class="icons">
-                  <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-                  <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-                  <li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-                  <li><a href="#" class="icon fa-github"><span class="label">GitHub</span></a></li>
-                  <li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
-                  <li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
-                  <li><a href="#" class="icon fa-telegram"><span class="label">Telegram</span></a></li>
-                </ul>
-              </section>
-              <p class="copyright">
+              <!-- <p class="copyright">
                 &copy; Design: <a href="#">Gallery</a>.
-              </p>
+              </p> -->
             </div>
+			<% } %>
+			<% if(theme.gallery.right_show === true) { %>
             <div>
               <section>
-                <h2>Get in touch</h2>
-                <form method="post" action="#">
+                <h2><%= theme.gallery.right_title %></h2>
+                <form method="post" action="https://formspree.io/<%= theme.sns.email %>">
                   <div class="field half first">
-                    <input type="text" name="name" id="name" placeholder="Name" />
+                    <input type="text" id="Name" name="name" placeholder="Name" />
                   </div>
                   <div class="field half">
-                    <input type="text" name="email" id="email" placeholder="Email" />
+                    <input pattern="[a-z,0-9,@,.,-,_]*" type="text" id="Email" name="_replyto" placeholder="Email" />
                   </div>
                   <div class="field">
-                    <textarea name="message" id="message" rows="4" placeholder="Message"></textarea>
+                    <textarea id="note" name="message" rows="4" placeholder="Message"></textarea>
                   </div>
                   <ul class="actions">
                     <li><input type="submit" value="Send" class="special" /></li>
@@ -81,22 +72,25 @@
                 </form>
               </section>
             </div>
+			<% } %>
           </div>
         </footer>
-        -->
+        <% } %>
 
     </div>
 
     <!-- Scripts -->
-    <% if(theme.materialcdn.use === true) { %>
-        <%- js(theme.materialcdn.base + "/js/jquery.min.js") %>
-        <%- js(theme.materialcdn.base + "/js/gallery/gallery.js") %>
-        <%- js(theme.materialcdn.base + "/js/lazyload.min.js") %>
-    <%}else{%>
-        <%- js('js/jquery.min') %>
-        <%- js('js/gallery/gallery') %>
-        <%- js('js/lazyload.min') %>
-    <%}%>
+    <% if(theme.vendors.materialcdn) { %>
+        <script src="<%= theme.vendors.materialcdn + '/js/gallery/gallery.js' %>"></script>
+    <% } else { %>
+        <script src="<%= url_for('js/gallery/gallery.js') %>"></script>
+    <% } %>
+
+    <% if(theme.vendors.materialcdn) { %>
+        <%- jsLsload({path:(theme.vendors.materialcdn + '/js/lazyload.min.js'),key:'lazyload_js'}) %>
+    <% } else { %>
+        <%- jsLsload({path:('js/lazyload.min.js'),key:'lazyload_js'}) %>
+    <% } %>
 
     <script>
         queue.offer(function(){

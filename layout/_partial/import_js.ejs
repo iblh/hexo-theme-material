@@ -1,21 +1,24 @@
-<!-- Import File -->
+<!-- Import JS File -->
+<% if(theme.vendors.materialcdn) { %>
+    <%- jsLsload({path:(theme.vendors.materialcdn + '/js/lazyload.min.js'),key:'lazyload_js'}) %>
+<% } else { %>
+    <%- jsLsload({path:('js/lazyload.min.js'),key:'lazyload_js'}) %>
+<% } %>
 
-<% if(theme.materialcdn.use === true) { %>
-    <%- jsLsload({path:(theme.materialcdn.base + '/js/lazyload.min.js'),key:'js/lazyload.min.js'}) %>
-    <%- jsLsload({path:(theme.materialcdn.base + '/js/js.min.js'),key:'js/js.min.js'}) %>
-<%}else{%>
-    <%- jsLsload('js/lazyload.min.js') %>
-    <%- jsLsload('js/js.min.js') %>
-<%}%>
+<% if(theme.vendors.materialcdn) { %>
+    <%- jsLsload({path:(theme.vendors.materialcdn + '/js/js.min.js'),key:'js_js'}) %>
+<% } else { %>
+    <%- jsLsload({path:('js/js.min.js'),key:'js_js'}) %>
+<% } %>
 
 <%- partial('_widget/nprogress') %>
 
 <% if( theme.js_effect.smoothscroll === true ) { %>
-    <% if(theme.materialcdn.use === true) { %>
-        <%- jsLsload({path:(theme.materialcdn.base + '/js/smoothscroll.js'),key:'js/smoothscroll.js'}) %>
-    <%}else{%>
-        <%- jsLsload('js/smoothscroll.js') %>
-    <%}%>
+    <% if(theme.vendors.materialcdn) { %>
+        <%- jsLsload({path:(theme.vendors.materialcdn + '/js/smoothscroll.js'),key:'sm_js'}) %>
+    <% } else { %>
+        <%- jsLsload({path:('js/smoothscroll.js'),key:'sm_js'}) %>
+    <% } %>
 <% } %>
 
 <%- partial('_partial/footer-option') %>
@@ -55,18 +58,73 @@
 	}
 </script>
 
-<!-- Window Load-->
+<!-- Import prettify js  -->
+<% if (theme.prettify.enable){ %>
+    <% if ( (is_post()) ) { %>
+        <% if(theme.vendors.prettify) { %>
+            <%- jsLsload({path:(theme.vendors.prettify),key:'prettify_js'}) %>
+        <% } else if(theme.vendors.materialcdn) { %>
+            <%- jsLsload({path:(theme.vendors.materialcdn + '/js/prettify.min.js'),key:'prettify_js'}) %>
+        <% } else { %>
+            <%- jsLsload({path:('js/prettify.min.js'),key:'prettify_js'}) %>
+        <% } %>
+    <% } %>
+<% } %>
+<% if (theme.hanabi.enable) { %>
+    <% if(theme.vendors.materialcdn) { %>
+        <%- jsLsload({path:(theme.vendors.materialcdn + '/js/hanabi-browser-bundle.js'),key:'hanabi'}) %>
+    <% } else { %>
+        <%- jsLsload({path:('js/hanabi-browser-bundle.js'),key:'hanabi'}) %>
+    <% } %>
+<% } %>
+
+<!-- Window Load -->
+<!-- add class for prettify -->
 <script type="text/ls-javascript" id="window-load">
     $(window).on('load', function() {
         // Post_Toc parent position fixed
         $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
     });
+
+    <% if (theme.prettify.enable) { %>
+        <% if ( (is_post()) ) { %>
+            $(function() {
+                $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+                prettyPrint();
+                })
+        <% } %>
+    <% } %>
+    <% if (theme.hanabi.enable) { %>
+        <% if (!theme.hanabi.includeDefaultColors) { %>
+            HanabiBrowser.clearColors();
+        <% } %>
+        <% if (theme.hanabi.customColors) { %>
+            <% if (typeof theme.hanabi.customColors === 'string') { %>
+                HanabiBrowser.putColor('<%= theme.hanabi.customColors %>');
+            <% } else { %>
+                <% theme.hanabi.customColors.forEach(function(elements) { %>
+                    HanabiBrowser.putColor('<%= elements %>');
+                <% }); %>
+            <% } %>
+        <% } %>
+        HanabiBrowser.start('pre code',<%= theme.hanabi.line_number %>);
+    <% } %>
 </script>
 
 <!-- MathJax Load-->
 <% if (page.mathjax) { %>
     <%- partial('_widget/mathjax') %>
 <% } %>
+
+<!-- Bing Background -->
+<% if(theme.background.bing.enable) { %>
+<script type="text/ls-javascript" id="Bing-Background-script">
+    queue.offer(function(){
+        $('body').attr('data-original', 'https://api.i-meto.com/bing?<%= theme.background.bing.parameter %>');
+    });
+</script>
+<% } %>
+
 <script type="text/ls-javascript" id="lazy-load">
     // Offer LazyLoad
     queue.offer(function(){
@@ -83,16 +141,25 @@
     });
 </script>
 
-<!-- Bing Background -->
-<% if(theme.background.bing.enable) { %>
-<script type="text/ls-javascript" id="Bing-Background-script">
-    queue.offer(function(){
-        $('body').attr('data-original', 'https://api.i-meto.com/bing?<%= theme.background.bing.parameter %>');
-    });
-</script>
+<!-- Custom Footer -->
+
+<% if (site.data.footer) { %>
+    <% for (var i in site.data.footer) { %>
+        <%- site.data.footer[i] %>
+    <% } %>
 <% } %>
 
 <script>
+    var copyrightNow = new Date().getFullYear();
+    var textContent = document.querySelector('span[year]')
+
+    copyrightSince = <% if(theme.copyright_since) { %><%= theme.copyright_since %><% } else { %>0000<% } %>;
+    if (copyrightSince === copyrightNow||copyrightSince === 0000) {
+        textContent.textContent = copyrightNow
+    } else {
+        textContent.textContent = copyrightSince + ' - ' + copyrightNow
+    }
+
     (function(){
         var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
 
@@ -101,5 +168,5 @@
             lsloader.runInlineScript(item.id,item.id);
         }
     })()
-console.log('\n %c © Material Theme | Version: 1.4.0 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
 </script>

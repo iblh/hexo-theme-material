@@ -32,7 +32,7 @@ function cssHelper() {
         (fs.existsSync(localpath)?'?' + get_file_hex(localpath):'') + '",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;' +
         'window.lsLoadCSSNums++;' +
         'if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";' +
-        '})</script>'
+        '}, false)</script>'
     }
   }
   return result;

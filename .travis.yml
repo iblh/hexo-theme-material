@@ -1,3 +1,90 @@
 language: node_js
-node_js: 
-    - "4"
+dist: trusty
+node_js:
+  - "7"
+install:
+  - npm install hexo-cli -g
+before_script:
+  - git clone https://github.com/neko-dev/hexo-theme-test-ci.git --depth=5
+  - cd hexo-theme-test-ci
+  - rm -rf .git
+  - cd _hexo
+  - npm install
+  - git clone https://github.com/viosey/hexo-theme-material.git themes/material
+  - cd themes/material
+  - git checkout -t origin/canary
+  - git pull
+  - rm -rf .git
+  - cd ..
+  - cd ..
+  - cd ..
+  - cp -i _config.theme.yml _hexo/themes/material/_config.yml
+  - cd _hexo
+script:
+  - hexo clean
+  - hexo g
+  - mkdir ./deploy-git
+  - cd ./deploy-git
+  - git init
+  - git config --global push.default matching
+  - git config --global user.email "${GitHubEmail}"
+  - git config --global user.name "${GitHubUser}"
+  - git remote add origin https://${GitHubKEY}@github.com/${GitHubRepo}.git
+  - git pull origin ${DeployBranch}
+  - rm -rf ./*
+  - cp -rf ../public/* ./
+  - git add --all .
+  - git commit -m "Travis Auto Tester for Material Theme"
+  - git push --quiet --force https://${GitHubKEY}@github.com/${GitHubRepo}.git
+  - cd ..
+  - cd ..
+  - npm install selenium-webdriver
+  - sed -i "s/{bs_user}/${BrowserstackUser}/g" test.js
+  - sed -i "s/{bs_key}/${BrowserstackKey}/g" test.js
+  - sed -i "s/{bs_project}/${BrowserstackProject}/g" test.js
+  - sed -i "s/{bs_build_number}/${TRAVIS_BUILD_NUMBER}/g" test.js
+  - sed -i "s/{bs_commit}/${TRAVIS_COMMIT}/g" test.js
+  - mkdir -p ./_output/img/OSX_Safari_10.0
+  - node test.js _config/OSX_Safari_10.0 OSX_Safari_10.0
+  - mkdir -p ./_output/img/w10_chrome_60.0
+  - node test.js _config/w10_chrome_60.0 w10_chrome_60.0
+  - mkdir -p ./_output/img/w10_Edge_15
+  - node test.js _config/w10_Edge_15 w10_Edge_15
+  - mkdir -p ./_output/img/w10_Firefox_54.0
+  - node test.js _config/w10_Firefox_54.0 w10_Firefox_54.0
+  - mkdir -p ./_output/img/w10_IE_11.0
+  - node test.js _config/w10_IE_11.0 w10_IE_11.0
+  - mkdir -p ./_output/img/Android_SamsungGalaxyS5
+  - node test.js _config/Android_SamsungGalaxyS5 Android_SamsungGalaxyS5
+  - mkdir -p ./_output/img/iOS_iPhone6SPlus
+  - node test.js _config/iOS_iPhone6SPlus iOS_iPhone6SPlus
+  - cd ./_output
+  - git init
+  - git remote add origin https://${GitHubKEY}@github.com/${GitHubRepoBrowserstack}.git
+  - cp base.md OSX_Safari_10.0.md
+  - sed -i "s/{platfrom_browser_name}/OSX Safari 10.0/g" OSX_Safari_10.0.md
+  - sed -i "s/{platfrom_browser}/OSX_Safari_10.0/g" OSX_Safari_10.0.md
+  - cp base.md w10_chrome_60.0.md
+  - sed -i "s/{platfrom_browser_name}/Windows10 Chrome 60.0/g" w10_chrome_60.0.md
+  - sed -i "s/{platfrom_browser}/w10_chrome_60.0/g" w10_chrome_60.0.md
+  - cp base.md w10_Edge_15.md
+  - sed -i "s/{platfrom_browser_name}/Windows10 Edge 15/g" w10_Edge_15.md
+  - sed -i "s/{platfrom_browser}/w10_Edge_15/g" w10_Edge_15.md
+  - cp base.md w10_Firefox_54.0.md
+  - sed -i "s/{platfrom_browser_name}/Windows10 Firefox 54/g" w10_Firefox_54.0.md
+  - sed -i "s/{platfrom_browser}/w10_Firefox_54.0/g" w10_Firefox_54.0.md
+  - cp base.md w10_IE_11.0.md
+  - sed -i "s/{platfrom_browser_name}/Windows10 IE 11.0/g" w10_IE_11.0.md
+  - sed -i "s/{platfrom_browser}/w10_IE_11.0/g" w10_IE_11.0.md
+  - cp base.md Android_SamsungGalaxyS5.md
+  - sed -i "s/{platfrom_browser_name}/Android Android Samsung Galaxy S5/g" Android_SamsungGalaxyS5.md
+  - sed -i "s/{platfrom_browser}/Android_SamsungGalaxyS5/g" Android_SamsungGalaxyS5.md
+  - cp base.md iOS_iPhone6SPlus.md
+  - sed -i "s/{platfrom_browser_name}/iPhone 6S Plus/g" iOS_iPhone6SPlus.md
+  - sed -i "s/{platfrom_browser}/iOS_iPhone6SPlus/g" iOS_iPhone6SPlus.md
+  - rm base.md
+  - git add --all .
+  - git commit -m "Travis Auto Generate for Material Theme"
+  - git push --quiet --force https://${GitHubKEY}@github.com/${GitHubRepoBrowserstack}.git
+notifications:
+  webhooks: https://fathomless-fjord-24024.herokuapp.com/notify
