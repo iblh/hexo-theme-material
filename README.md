@@ -2,16 +2,15 @@
 <img src="https://i.loli.net/2017/09/07/59b1367f76fdb.png" alt="Material Render Phone">
 </p>
 
-<h1 align="center"><a href="https://material.viosey.com" target="_blank">Material Theme</a></h1>
+<h1 align="center">Material Theme</h1>
 
 > Nature, Pure | 原质，纯粹
 
 <p align="center">
 <img alt="Version" src="https://img.shields.io/badge/version-1.5.6-757575.svg?style=flat-square"/>
-<a href="https://viosey.com"><img alt="Author" src="https://img.shields.io/badge/author-Viosey-red.svg?style=flat-square"/></a>
+<a href="https://blh.im"><img alt="Author" src="https://img.shields.io/badge/author-bollnh-red.svg?style=flat-square"/></a>
 <a href="https://hexo.io"><img alt="Hexo" src="https://img.shields.io/badge/hexo-3.0+-0e83cd.svg?style=flat-square"/></a>
 <a href="https://nodejs.org/"><img alt="node.js" src="https://img.shields.io/badge/node.js-6.0%2B-43853d.svg?style=flat-square"/></a>
-<a href="https://travis-ci.org/viosey/hexo-theme-material"><img alt="Build Status" src="https://img.shields.io/travis/viosey/hexo-theme-material.svg?style=flat-square"/></a>
 <a href="https://www.npmjs.com/package/hexo-material"><img alt="npm" src="https://img.shields.io/npm/dt/hexo-material.svg?style=flat-square"/></a>
 </p>
 
@@ -37,7 +36,7 @@ An elegant, Pure & Material Design Theme for Hexo.
 
 ## Demo 演示
 
-- [Material Demo](https://viosey.github.io/material-demo/)
+- [Material Demo](https://bollnh.github.io/material-demo/)
 
 
 ## Docs 文档
@@ -49,29 +48,29 @@ An elegant, Pure & Material Design Theme for Hexo.
 
 ## Download 下载
 
-#### [Download latest release version](https://github.com/viosey/hexo-theme-material/releases/latest)
+#### [Download latest release version](https://github.com/bollnh/hexo-theme-material/releases/latest)
 
 > Should be the most stable. Recommended for most users.  
 > 最稳定的版本，适合所有的用户。
 
-#### [Download latest canary branch](https://github.com/viosey/hexo-theme-material/archive/canary.zip)
+#### [Download latest canary branch](https://github.com/bollnh/hexo-theme-material/archive/canary.zip)
 
 > Maybe unstable, but includes latest features. Recommended for developers.  
 > 包含最新的、尚在开发中的特性，可能不稳定；适合进阶用户。
 
-#### [Download other version](https://github.com/viosey/hexo-theme-material/releases)
+#### [Download other version](https://github.com/bollnh/hexo-theme-material/releases)
 
 > You can decide which version to use. May no longer provide support.  
 > 你可以自己决定想要使用的版本；部分版本可能不再提供技术支持。
 
-#### [Download using git](https://github.com/viosey/hexo-theme-material/releases)
+#### [Download using git](https://github.com/bollnh/hexo-theme-material/releases)
 
 > You can using git to choose which branch you want. For developer only.  
 > 你可以自己决定想要使用的分支；仅限开发者使用。
 
 ```bash
 cd themes
-git clone https://github.com/viosey/hexo-theme-material.git material
+git clone https://github.com/bollnh/hexo-theme-material.git material
 cd material
 git checkout {branch/tags name}
 ```
@@ -86,22 +85,22 @@ git checkout {branch/tags name}
 
 All kinds of contributions (enhancements, new features, documentation & code improvements, issues & bugs reporting) are welcome.
 
-Before you start your contributing, please read the [Contributing Rules Wiki](https://github.com/viosey/hexo-theme-material/wiki) first.
+Before you start your contributing, please read the [Contributing Rules Wiki](https://github.com/bollnh/hexo-theme-material/wiki) first.
 
 欢迎各种形式的贡献，包括但不限于优化，添加功能，文档 & 代码的改进，问题和 bugs 的报告。期待你的 `Pull Request`。
 
-在参与贡献之前，请阅读[项目贡献 Wiki](https://github.com/viosey/hexo-theme-material/wiki)，了解如何为 Material 主题贡献。
+在参与贡献之前，请阅读[项目贡献 Wiki](https://github.com/bollnh/hexo-theme-material/wiki)，了解如何为 Material 主题贡献。
 
 ## Changelog 更新日志
 
-[View our release notes](https://github.com/viosey/hexo-theme-material/releases)
+[View our release notes](https://github.com/bollnh/hexo-theme-material/releases)
 
-[阅读我们的更新日志](https://github.com/viosey/hexo-theme-material/releases)
+[阅读我们的更新日志](https://github.com/bollnh/hexo-theme-material/releases)
 
 
 ## License 许可证
 
-[![license](https://img.shields.io/github/license/viosey/hexo-theme-material.svg?style=flat-square)](https://github.com/viosey/hexo-theme-material/blob/master/LICENSE)
+[![license](https://img.shields.io/github/license/bollnh/hexo-theme-material.svg?style=flat-square)](https://github.com/bollnh/hexo-theme-material/blob/master/LICENSE)
 
 Open sourced under the GPL v3.0 license.
 
@@ -129,9 +128,9 @@ Thanks jsDelivr for providing MaterialCDN service.
 
 [`http://cdn.jsdelivr.net/npm/hexo-material/source/`](http://cdn.jsdelivr.net/npm/hexo-material/source/)
 
-[![](https://data.jsdelivr.com/v1/package/gh/viosey/hexo-theme-material/badge)](https://www.jsdelivr.com/package/gh/viosey/hexo-theme-material)
+[![](https://data.jsdelivr.com/v1/package/gh/bollnh/hexo-theme-material/badge)](https://www.jsdelivr.com/package/gh/bollnh/hexo-theme-material)
 
-[`https://cdn.jsdelivr.net/gh/viosey/hexo-theme-material/source/`](https://cdn.jsdelivr.net/gh/viosey/hexo-theme-material/source/)
+[`https://cdn.jsdelivr.net/gh/bollnh/hexo-theme-material/source/`](https://cdn.jsdelivr.net/gh/bollnh/hexo-theme-material/source/)
 
 ## Render 渲染
 
