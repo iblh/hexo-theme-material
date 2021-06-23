@@ -36,7 +36,7 @@
         <script type="text/ls-javascript" id="search-input-script">
             var inputArea = document.querySelector('#search');
             var getSearchFile = function() {
-                var path = '<%= config.search.path %>';
+                var path = '<%= theme.search.path %>';
                 searchFunc(path, 'search', 'local-search-result');
             }
 
