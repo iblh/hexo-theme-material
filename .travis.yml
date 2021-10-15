@@ -10,7 +10,7 @@ before_script:
   - rm -rf .git
   - cd _hexo
   - npm install
-  - git clone https://github.com/viosey/hexo-theme-material.git themes/material
+  - git clone https://github.com/bollnh/hexo-theme-material.git themes/material
   - cd themes/material
   - git checkout -t origin/canary
   - git pull

@@ -17,8 +17,8 @@ ATTENTION: THE DOCS MIGHT UPDATE ANYTIME, AND BEFORE YOU OPEN A NEW ISSUE, CHECK
 **我确认我已经查看了** (使用 "x" 选择)
 
 - [ ] [Hexo documentation | Hexo 文档](https://hexo.io/docs/)
-- [ ] [Material theme documentation | Material 主题文档](https://material.viosey.com/)
-- [ ] [Material theme issues | Material 主题的其它 issue](https://github.com/viosey/hexo-theme-material/issues?utf8=%E2%9C%93&q=is%3Aissue)
+- [ ] [Material theme documentation | Material 主题文档](https://neko-dev.github.io/material-theme-docs/#/)
+- [ ] [Material theme issues | Material 主题的其它 issue](https://github.com/bollnh/hexo-theme-material/issues?utf8=%E2%9C%93&q=is%3Aissue)
 
 ----
 

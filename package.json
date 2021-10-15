@@ -9,19 +9,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/viosey/hexo-theme-material.git"
+    "url": "git+https://github.com/bollnh/hexo-theme-material.git"
   },
   "keywords": [
     "hexo",
     "theme",
     "material"
   ],
-  "author": "Viosey",
+  "author": "Bolin",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/viosey/hexo-theme-material/issues"
+    "url": "https://github.com/bollnh/hexo-theme-material/issues"
   },
-  "homepage": "https://github.com/viosey/hexo-theme-material#readme",
+  "homepage": "https://github.com/bollnh/hexo-theme-material#readme",
   "devDependencies": {
     "ejs-lint": "^0.2.0",
     "eslint": "^3.14.0",
