@@ -4,9 +4,9 @@
 
 # Head info
 head:
-    favicon: "/img/favicon.png"
-    high_res_favicon: "/img/favicon.png"
-    apple_touch_icon: "/img/favicon.png"
+    favicon: "/img/favicon.svg"
+    high_res_favicon: "/img/favicon.svg"
+    apple_touch_icon: "/img/favicon.svg"
     keywords:
     site_verification:
         google:
@@ -72,7 +72,7 @@ background:
 img:
     logo: "/img/logo.png"
     avatar: "/img/avatar.png"
-    daily_pic: "/img/daily_pic.png"
+    daily_pic: "/img/daily_pic.jpg"
     sidebar_header: "/img/sidebar_header.png"
     random_thumbnail: "/img/random/material-"
     footer_image:
